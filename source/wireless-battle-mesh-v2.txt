@@ -1,0 +1,11 @@
++ Pictures
+
+[[gallery order="date"]]
+
++ Report
+
+* Need to test static routing before testing dynamic routing
+* Iperf or a static webserver generates too much CPU, avoid it to test transfer between nodes
+* LaFonera can only output a maximum of 1.5MB/sec in 54mbps
+* Routing loops happened with the patched version of Babel
+* wlanconfig has some output to have SNR to neighboors in adhoc mode

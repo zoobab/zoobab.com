@@ -1,0 +1,76 @@
++ Lsusb
+
+[[code]]
+* 11:55 root@buzek ~# lsusb 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 004 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 005 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 006 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 007 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 008 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 002 Device 002: ID 413c:8147 Dell Computer Corp. F3507g Mobile Broadband Module
+Bus 005 Device 002: ID 0a5c:5801 Broadcom Corp. BCM5880 Secure Applications Processor with fingerprint swipe sensor
+Bus 002 Device 003: ID 12d1:1f01 Huawei Technologies Co., Ltd. 
+* 11:55 root@buzek ~# 
+[[/code]]
+
++ Dmesg
+
+[[code]]
+[  238.232166] usb 3-1.1: USB disconnect, device number 3
+[  238.232744] btusb_bulk_complete: hci0 urb ffff8800b04e2840 failed to resubmit (19)
+[  238.233741] btusb_bulk_complete: hci0 urb ffff8800b04e2cc0 failed to resubmit (19)
+[  238.235739] btusb_intr_complete: hci0 urb ffff8800b04e2e40 failed to resubmit (19)
+[  238.292176] usb 3-1.2: USB disconnect, device number 4
+[  238.320473] usb 3-1.3: USB disconnect, device number 5
+[  238.321280] btusb_send_frame: hci0 urb ffff880096fc5900 submission failed
+[  624.160179] exe (3189): /proc/3189/oom_adj is deprecated, please use /proc/3189/oom_score_adj instead.
+[ 1054.488806] usb 2-4: USB disconnect, device number 3
+[ 1060.308304] usb 2-4: new high speed USB device number 4 using ehci_hcd
+[ 1060.443485] scsi9 : usb-storage 2-4:1.0
+[ 1061.441324] scsi 9:0:0:0: CD-ROM            HUAWEI   Mass Storage     2.31 PQ: 0 ANSI: 2
+[ 1061.473166] sr0: scsi-1 drive
+[ 1061.473483] sr 9:0:0:0: Attached scsi CD-ROM sr0
+[ 1061.478161] sr 9:0:0:0: Attached scsi generic sg1 type 5
+[ 1061.987450] ISO 9660 Extensions: Microsoft Joliet Level 1
+[ 1062.004470] ISOFS: changing to secondary root
+[[/code]]
+
+On another kernel:
+
+[[code]]
+[79339.862406] usb 2-3: USB disconnect, device number 5
+[79339.862537] eth1: unregister 'cdc_ether' usb-0000:00:1d.7-3, CDC Ethernet Device
+[79346.004026] usb 2-3: new high speed USB device number 6 using ehci_hcd
+[79346.119533] usb 2-3: New USB device found, idVendor=12d1, idProduct=1f01
+[79346.119537] usb 2-3: New USB device strings: Mfr=2, Product=1, SerialNumber=0
+[79346.119540] usb 2-3: Product: HUAWEI HiLink
+[79346.119541] usb 2-3: Manufacturer: HUAWEI
+[79346.119612] usb 2-3: configuration #1 chosen from 1 choice
+[79346.120903] scsi6 : SCSI emulation for USB Mass Storage devices
+[79346.121265] usb-storage: device found at 6
+[79346.121267] usb-storage: waiting for device to settle before scanning
+[79346.942188] usb 2-3: USB disconnect, device number 6
+[79348.042025] usb 2-3: new high speed USB device number 7 using ehci_hcd
+[79348.156936] usb 2-3: New USB device found, idVendor=12d1, idProduct=14db
+[79348.156941] usb 2-3: New USB device strings: Mfr=2, Product=1, SerialNumber=0
+[79348.156945] usb 2-3: Product: HUAWEI HiLink
+[79348.156948] usb 2-3: Manufacturer: HUAWEI
+[79348.157011] usb 2-3: configuration #1 chosen from 1 choice
+[79348.158842] eth1: register 'cdc_ether' at usb-0000:00:1d.7-3, CDC Ethernet Device, 58:2c:80:13:92:63
+[[/code]]
+
++ Modeswitch
+
+Install modeswitch, and then check if the USB IDs of the device are in the list:
+
+[[code]]
+* 12:10 root@p72 /home/zoobab# cat /lib/udev/rules.d/40-usb_modeswitch.rules |grep 12d1 | grep 1f01
+ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1f01", RUN+="usb_modeswitch '%b/%k'"
+[[/code]]
+
++ Links
+
+* http://forums.opensuse.org/english/get-technical-help-here/network-internet/476616-setting-up-mobile-broadband-huawei-e3131.html

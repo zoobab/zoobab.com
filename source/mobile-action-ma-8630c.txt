@@ -1,0 +1,53 @@
++ About
+
+I bought this USB serial adaptor at the free market for 1 EUR.
+
++ Dmesg
+
+[[code]]
+[ 4100.601126] usb 7-2: USB disconnect, address 19
+[ 4175.112310] usb 7-2: new low speed USB device using uhci_hcd and address 20
+[ 4175.291294] usb 7-2: New USB device found, idVendor=0df7, idProduct=0800
+[ 4175.291306] usb 7-2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 4175.291316] usb 7-2: Product: USB Data Cable
+[ 4175.291322] usb 7-2: Manufacturer: MobileAction Technology Inc.
+[ 4175.291518] usb 7-2: configuration #1 chosen from 1 choice
+[[/code]]
+
++ Lsusb
+
+[[code]]
+Bus 007 Device 022: ID 0df7:0800 Mobile Action Technology, Inc. Data Cable
+[[/code]]
+
++ ma8280p_us.c
+
+I tried the software from Davy Hollevoet in a while loop, because the device disconnects after some seconds:
+
+[[code]]
+[...]
+Error, device not found
+Error, device not found
+Error, device not found
+Error, device not found
+Error, device not found
+Error, device not found
+Error, device not found
+Error, device not found
+failed to release interface before set_configuration: -22
+claim after set_configuration failed with error -16
+^C
+root@buzek /home/zoobab/soft/ma8280p [62]# 
+[[/code]]
+
++ mobile-action-modeswitch
+
+[[code]]
+$ /lib/udev/mobile-action-modeswitch -v 0x0df7 -p 0x0800 -t mobile-action-8280p
+[[/code]]
+
+It then complains that it did not claim interface 0 before use:
+
+[[code]]
+Apr 17 19:08:49 buzek kernel: [ 2402.046579] usb 7-2: usbfs: process 7923 (mobile-action-m) did not claim interface 0 before use
+[[/code]]

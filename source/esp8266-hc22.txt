@@ -1,0 +1,43 @@
++ Pinout
+
+[[=image esp8266-hc22-pinout.jpg]]
+
+[[=image esp8266-hc22-pinout1.jpg]]
+
+[[=image esp8266-hc22-pinout2.jpg]]
+
+||~ Pin number||~ Function||~ Direction||~ Explanation||
+||1||UART_TX||O||UART data output, 3.3V level; when the power down is prohibited.||
+||2||UART_RX||I||UART data input, 3.3V level.||
+||3||GPIO15||I/O||Universal input and output, internal module connected with pull-down resistors, electrical work on the module; The feet high, the module power does not work.||
+||4||GPIO13||I/O||General Purpose Input Output||
+||5||ADC||I||AD input voltage range is between 0V to 1.024V, thecorresponding values are 0--1024, 10 accuracy.||
+||6||CH_PD||I||Module enable input, the default pull the module to work; then low, Close WIFI chip inside the module, the current is very small (less than 10 Î¼A).||
+||7||GPIO16||I/O||General Purpose Input / Output||
+||8||GPIO14||I/O||General Purpose Input / Output||
+||9||GPIO12||I/O||General Purpose Input / Output||
+||10||NC|| || ||
+||11||NRST||I||Module hardware reset input (active low)||
+||12||VCC||I||Power, 3.3 ± 0.3 V||
+||13||GND||I||Earthing||
+||14||GND||I||Earthing||
+||15||GPIO2||I/O||General-purpose input / output; internal pull, turn on the power to prohibit the hardware pulldown.||
+||16||GPIO4||I/O||General Purpose Input / Output||
+||17||GPIO0||I/O||General-purpose input / output; float mode, drop down to the firmware download mode.||
+||18||GPIO5||I/O||General Purpose Input / Output||
+||19||NC|| || ||
+||20||NC|| || ||
+||21||NC|| || ||
+||22||NC|| || ||
+||23||GPIO4||I/O||General Purpose Input / Output||
+||24||NC|| || ||
+||25||NC|| || ||
+||26||GPIO5||I/O||General Purpose Input / Output||
+||27||VCC||I||Power, 3.3 ± 0.3 V||
+||28||GND||I||Earthing||
+||29||UART_RX||I||UART data input, 3.3V level.||
+||30||UART_TX||O||UART data output, 3.3V level; when the power down is prohibited.||
+
++ Links
+
+* https://www.ex-store.de/treiber/esp8266/hc-22-description.pdf

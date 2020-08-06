@@ -1,0 +1,4481 @@
+Failed.: Unknown error
+Loader:raw Filesys:raw Dev:flash0.os File: Options:(null)
+Loading: .. 4092 bytes read
+Entry at 0x80001000
+Closing network.
+Starting program at 0x80001000
+Linux version 2.6.32.16 (zoobab@buzek) (gcc version 4.3.3 (GCC) ) #1 Sun Aug 22 15:49:13 CEST 2010
+CPU revision is: 00029008 (Broadcom BCM3302)
+ssb: Initializing MIPS core...
+ssb: set_irq: core 0x0806, irq 4 => 4
+ssb: set_irq: core 0x0816, irq 5 => 2
+ssb: set_irq: core 0x0812, irq 2 => 5
+ssb: after irq reconfiguration
+ssb: core 0x0800, irq : 2(S)  3* 4  5  6  D  I 
+ssb: core 0x0806, irq : 2(S)  3  4* 5  6  D  I 
+ssb: core 0x0816, irq : 2(S)* 3  4  5  6  D  I 
+ssb: core 0x0817, irq : 2(S)  3  4  5  6* D  I 
+ssb: core 0x080f, irq : 2(S)  3  4  5  6  D  I*
+ssb: core 0x0812, irq : 2(S)  3  4  5* 6  D  I 
+ssb: core 0x081c, irq : 2(S)  3  4  5  6  D  I*
+ssb: Sonics Silicon Backplane found at address 0x18000000
+Serial init done.
+Determined physical RAM map:
+ memory: 00800000 @ 00000000 (usable)
+Initrd not found or empty - disabling initrd
+Zone PFN ranges:
+  Normal   0x00000000 -> 0x00000800
+Movable zone start PFN for each node
+early_node_map[1] active PFN ranges
+    0: 0x00000000 -> 0x00000800
+Built 1 zonelists in Zone order, mobility grouping off.  Total pages: 2032
+Kernel command line: root=/dev/mtdblock2 rootfstype=squashfs,jffs2 noinitrd console=ttyS0,115200
+PID hash table entries: 32 (order: -5, 128 bytes)
+Dentry cache hash table entries: 1024 (order: 0, 4096 bytes)
+Inode-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Primary instruction cache 16kB, VIPT, 2-way, linesize 16 bytes.
+Primary data cache 8kB, 2-way, VIPT, no aliases, linesize 16 bytes
+Memory: 5248k/8192k available (2222k kernel code, 2944k reserved, 350k data, 136k init, 0k highmem)
+Hierarchical RCU implementation.
+NR_IRQS:128
+console [ttyS0] enabled
+Calibrating delay loop... 199.16 BogoMIPS (lpj=398336)
+Mount-cache hash table entries: 512
+NET: Registered protocol family 16
+bio: create slab <bio-0> at 0
+Switching to clocksource MIPS
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 512 (order: 0, 4096 bytes)
+TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+TCP: Hash tables configured (established 512 bind 512)
+TCP reno registered
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Registering mini_fo version $Id$
+JFFS2 version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+msgmni has been set to 16
+io scheduler noop registered
+io scheduler deadline registered (default)
+Serial: 8250/16550 driver, 2 ports, IRQ sharing enabled
+serial8250: ttyS0 at MMIO 0xb8000300 (irq = 3) is a 16550A
+serial8250: ttyS1 at MMIO 0xb8000400 (irq = 3) is a 16550A
+serial8250.0: ttyS0 at MMIO 0xb8000300 (irq = 3) is a 16550A
+serial8250.0: ttyS1 at MMIO 0xb8000400 (irq = 3) is a 16550A
+flash init: 0x1c000000 0x02000000
+Physically mapped flash: Found 1 x16 devices at 0x0 in 16-bit bank
+ CFI mfr 0x00000001
+ CFI id  0x00002249
+ Amd/Fujitsu Extended Query Table at 0x0040
+  Amd/Fujitsu Extended Query version 1.0.
+number of CFI chips: 1
+cfi_cmdset_0002: Disabling erase-suspend-program due to code brokenness.
+Flash device: 0x200000 at 0x1fc00000
+bootloader size: 262144
+Updating TRX offsets and length:
+old trx = [0x0000001c, 0x00000974, 0x000e0000], len=0x00321000 crc32=0x695fab48
+new trx = [0x0000001c, 0x00000974, 0x000e0000], len=0x000e0000 crc32=0x585a9ed3
+Done
+Creating 4 MTD partitions on "Physically mapped flash":
+0x000000000000-0x000000040000 : "cfe"
+0x000000040000-0x0000001f0000 : "linux"
+0x000000120000-0x0000001f0000 : "rootfs"
+mtd: partition "rootfs" set to be root filesystem
+split_squashfs: no squashfs found in "Physically mapped flash"
+0x0000001f0000-0x000000200000 : "nvram"
+b44.c:v2.0
+eth0: Broadcom 44xx/47xx 10/100BaseT Ethernet 00:90:4c:91:00:01
+BCM47xx Watchdog Timer enabled (30 seconds, nowayout)
+TCP westwood registered
+NET: Registered protocol family 17
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+Node at 0x0000ffd8 with length 0x00000b32 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffdc: 0x0b32 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe0: 0xebbc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe4: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe8: 0x001c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffec: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000fff4: 0xd5ef instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010000: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010004: 0xb000 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010008: 0x0aee instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0001000c: 0x1000 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010010: 0x0006 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010014: 0x7c98 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010018: 0x37b4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0001001c: 0x5e78 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010020: 0x6c6d instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010024: 0x7e15 instead
+Further such events for this erase block will not be printed
+Node at 0x0002f998 with length 0x000009a1 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f99c: 0x09a1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a0: 0x7198 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a4: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a8: 0x004e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9ac: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9b4: 0xd5ef instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9b8: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9bc: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9c0: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9c4: 0xc000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030000: 0x08d3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030004: 0x8f69 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030008: 0x28fd instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0003000c: 0x0464 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030010: 0xf7be instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030014: 0x777d instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030018: 0x6d38 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0003001c: 0x62bc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030020: 0xddf8 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030024: 0x87d2 instead
+Further such events for this erase block will not be printed
+Node at 0x0004f858 with length 0x0000098e would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f85c: 0x098e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f860: 0xcef0 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f864: 0x0031 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f868: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f86c: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f874: 0x28b7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f878: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f87c: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f880: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f884: 0x1000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050000: 0xc7a7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050004: 0xf7ee instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050008: 0x6e76 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0005000c: 0x3939 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050010: 0x307e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050014: 0x4b1f instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050018: 0xd347 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0005001c: 0x3491 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050020: 0x6fa7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050024: 0x60e9 instead
+Further such events for this erase block will not be printed
+Node at 0x0006f810 with length 0x0000087c would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f814: 0x087c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f818: 0x7aeb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f81c: 0x00c5 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f820: 0x0005 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f824: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f82c: 0x7bf2 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f830: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f834: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f838: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f83c: 0x4000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070000: 0xdf34 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070004: 0xb1de instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070008: 0x9ed1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0007000c: 0x19b4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070010: 0xdb32 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070014: 0x85b9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070018: 0xc9e7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0007001c: 0xc6d3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070020: 0x731e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070024: 0xb302 instead
+Further such events for this erase block will not be printed
+Node at 0x0008fb4c with length 0x000009a9 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb50: 0x09a9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb54: 0x5977 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb58: 0x00cb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb5c: 0x0039 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb60: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb68: 0xfdd7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb6c: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb70: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb74: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb78: 0x7000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090000: 0x3b11 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090004: 0x0674 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090008: 0x7066 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0009000c: 0xcbc3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090010: 0xc5d1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090014: 0x57a9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090018: 0xfe4b instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0009001c: 0x8727 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090020: 0xf093 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090024: 0x41e8 instead
+Further such events for this erase block will not be printed
+Node at 0x000afae4 with length 0x00000652 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afae8: 0x0652 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaec: 0x8fec instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf0: 0x00e7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf4: 0x0001 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf8: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb00: 0x09d8 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb04: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb08: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb0c: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb14: 0x060e instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0000: 0xf820 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0004: 0x8ab9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0008: 0xaddb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b000c: 0x4a97 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0010: 0x7c23 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0014: 0x2696 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0018: 0xe7de instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b001c: 0xe8fb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0020: 0x3a11 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0024: 0x0034 instead
+Further such events for this erase block will not be printed
+Node at 0x000cfcb8 with length 0x00000459 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcbc: 0x0459 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc0: 0xdc83 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc4: 0x00fe instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc8: 0x002c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfccc: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcd4: 0xbbe4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcd8: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcdc: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfce0: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfce4: 0xa000 instead
+Further such events for this erase block will not be printed
+VFS: Mounted root (jffs2 filesystem) readonly on device 31:2.
+Freeing unused kernel memory: 136k freed
+Please be patient, while OpenWrt loads ...
+Kernel panic - not syncing: Attempted to kill init!
+
+
+CFE version 1.0.37 for BCM947XX (32bit,SP,LE)
+Build Date: Thu Mar 24 16:31:45 CST 2005 (motoplayer@cvs.gemtek.com.tw)
+Copyright (C) 2000,2001,2002,2003 Broadcom Corporation.
+
+Initializing Arena
+Initializing Devices.
+et0: Broadcom BCM47xx 10/100 Mbps Ethernet Controller 3.90.39.0
+CPU type 0x29008: 200MHz
+Total memory: 8192 KBytes
+
+Total memory used by CFE:  0x80300000 - 0x80399700 (628480)
+Initialized Data:          0x8032F870 - 0x80331F50 (9952)
+BSS Area:                  0x80331F50 - 0x80333700 (6064)
+Local Heap:                0x80333700 - 0x80397700 (409600)
+Stack Area:                0x80397700 - 0x80399700 (8192)
+Text (code) segment:       0x80300000 - 0x8032F870 (194672)
+Boot area (physical):      0x0039A000 - 0x003DA000
+Relocation Factor:         I:00000000 - D:00000000
+
+Device eth0:  hwaddr 00-90-4C-91-00-01, ipaddr 192.168.1.1, mask 255.255.255.0
+        gateway not set, nameserver not set
+Reading :: Failed.: Timeout occured
+Loader:raw Filesys:raw Dev:flash0.os File: Options:(null)
+Loading: .. 4092 bytes read
+Entry at 0x80001000
+Closing network.
+Starting program at 0x80001000
+
+
+CFE version 1.0.37 for BCM947XX (32bit,SP,LE)
+Build Date: Thu Mar 24 16:31:45 CST 2005 (motoplayer@cvs.gemtek.com.tw)
+Copyright (C) 2000,2001,2002,2003 Broadcom Corporation.
+
+Initializing Arena
+Initializing Devices.
+et0: Broadcom BCM47xx 10/100 Mbps Ethernet Controller 3.90.39.0
+CPU type 0x29008: 200MHz
+Total memory: 8192 KBytes
+
+Total memory used by CFE:  0x80300000 - 0x80399700 (628480)
+Initialized Data:          0x8032F870 - 0x80331F50 (9952)
+BSS Area:                  0x80331F50 - 0x80333700 (6064)
+Local Heap:                0x80333700 - 0x80397700 (409600)
+Stack Area:                0x80397700 - 0x80399700 (8192)
+Text (code) segment:       0x80300000 - 0x8032F870 (194672)
+Boot area (physical):      0x0039A000 - 0x003DA000
+Relocation Factor:         I:00000000 - D:00000000
+
+Device eth0:  hwaddr 00-90-4C-91-00-01, ipaddr 192.168.1.1, mask 255.255.255.0
+        gateway not set, nameserver not set
+Reading :: Failed.: Interrupted
+CFE> ^C
+CFE> ^C
+CFE> ^C
+CFE> ^C
+CFE> help
+Available commands:
+
+rndis               Broadcom USB RNDIS utility.
+et                  Broadcom Ethernet utility.
+nvram               NVRAM utility.
+reboot              Reboot.
+flash               Update a flash memory device
+autoboot            Automatic system bootstrap.
+batch               Load a batch file into memory and execute it
+go                  Verify and boot OS image.
+boot                Load an executable file into memory and execute it
+load                Load an executable file into memory without executing it
+save                Save a region of memory to a remote file via TFTP
+ping                Ping a remote IP host.
+arp                 Display or modify the ARP Table
+ifconfig            Configure the Ethernet interface
+unsetenv            Delete an environment variable.
+printenv            Display the environment variables
+setenv              Set an environment variable.
+help                Obtain help for CFE commands
+
+For more information about a command, enter 'help command-name'
+*** command status = 0
+CFE> nvram
+*** command status = -8
+CFE> [A  nvram show
+wl1_wds4_hwaddr=
+wl0.1_radius_port=1812
+wl_mac_deny=
+filter_dport_grp3=
+ses_script=
+http_redirect_port=3128
+oet5_en=0
+wl1_wme=on
+wl0_wds10_ospf=
+wl1_txant=3
+filter_dport_grp4=
+opo=0
+oet2_fragment=0
+filter=off
+filter_dport_grp5=
+wan_unit=0
+NC_Verbosity=2
+wds0.1=
+wl1_wds5_if=
+wl0_net_mode=mixed
+wl1_auth=0
+filter_dport_grp6=
+sv_localdns=0.0.0.0
+wl0.2_ap_isolate=0
+altdns1=
+wds0.2=
+filter_dport_grp7=
+nvram_ver=3
+oet3_fragment=0
+altdns2=
+wds0.3=
+wl0_frameburst=off
+wl_txstreams=0
+filter_dport_grp8=
+oet8_bridged=1
+wds_watchdog_interval_sec=1000
+altdns3=
+wds0.4=
+wl1_net_mode=disabled
+filter_dport_grp9=
+oet9_pt=0
+zebra_log=0
+wds0.5=
+wl1_wds2_ospf=
+ddns_username_2=
+log_ipaddr=0
+oet4_fragment=0
+oet2_shaper=0
+NC_RenewTimeout=0
+wds0.6=
+wl0_wds7_ospf=
+wl0_wds3_desc=
+ddns_username_3=
+boardrev=0x13
+il0macaddr=00:90:4c:91:00:02
+wds0.7=
+ddns_username_4=
+ppp_idletime=5
+ppp_passwd=
+NC_SplashURL=
+zebra_copt=0
+wds0.8=
+wl1_wds3_ipaddr=
+ddns_username_5=
+oet5_fragment=0
+eth2_netmask=0.0.0.0
+wds0.9=
+ddns_username_6=
+oet8_shaper=0
+ddns_username_7=
+qos_done=1
+ddns_username_8=
+ddns_enable=0
+wl0.3_key=1
+wl0_leddc=0x640000
+et0macaddr=00:90:4c:91:00:01
+eth1_nat=1
+oet10_shaper=0
+oet6_fragment=0
+NC_MaxMissedARP=5
+wl1_wds9_ipaddr=
+wl0_ipaddr=0.0.0.0
+wl1_wme_txp_vi=7 3 4 2 0
+NC_MACWhiteList=
+skip_intel_check=0
+ddns_conf=
+wl0.2_radius_port=1812
+wl0_shortslot=auto
+wl0_wep_buf=:::::
+oet3_rem=192.168.90.1
+wl_maxassoc=128
+ddns_hostname_buf=
+wl0_akm=psk2
+wan_get_dns=
+oet7_fragment=0
+syslogd_rem_ip=
+boot_wait=on
+watchdog=3000
+wl0.2_mode=ap
+nas_enable=1
+wl_phytypes=
+filter_web_host1=
+wl0_macmode1=disabled
+wl0_infra=1
+wl0.2_netmask=0.0.0.0
+filter_web_host2=
+eth6_netmask=0.0.0.0
+filter_web_host3=
+fw_disable=0
+et0mdcport=0
+oet8_fragment=0
+oet4_netmask=255.255.255.0
+pptpd_client_srvsub=
+wl1_wme_txp_vo=7 3 4 2 0
+wl0_wds5_ospf=
+wl0_wds1_desc=
+router_name=DD-WRT
+pppoe_keepalive=0
+filter_web_host4=
+oet4_en=0
+wshaper_enable=1
+sh_masq=br0 wds0.2
+filter_web_host5=
+eth0_ipaddr=0.0.0.0
+wl0_wds6_enable=0
+ddns_wildcard=
+wl1_frag=2346
+wl_distance=2000
+filter_web_host6=
+https_enable=
+oet9_fragment=0
+wl1_wds4_if=
+apwatchdog_enable=0
+wl0.2_wpa_psk=
+wl_infra=1
+filter_web_host7=
+af_publish=1
+svqos_port2bw=FULL
+wl0_wds3_netmask=
+telnet_wanport=23
+l2tp_get_ip=
+filter_web_host8=
+ses_event=2
+reset_gpio=7
+wl_btc_mode=0
+dhcpfwd_ip=0.0.0.0
+filter_web_host9=
+radio1_on_time=111111111111111111111111
+pptpd_forcemppe=1
+pptp_server_ip=
+ppp_get_ac=
+pmon_ver=CFE 3.91.39.0
+oet8_pt=0
+eth6_ipaddr=0.0.0.0
+pptpd_bcrelay=1
+ddns_time=
+restore_defaults=0
+oet8_netmask=255.255.255.0
+pptp_use_dhcp=0
+wl0_wds5_hwaddr=00:00:00:00:00:00
+wl0_br1_netmask=255.255.255.0
+wl0_bandlist=b
+wl0.1_hwaddr=02:90:4C:91:00:00
+wshaper_downlink=2800
+wl0.3_radius_key=
+wl0.3_radius_port=1812
+wl0.1_key=1
+oet9_id=1
+pptpd_client_srvip=
+wl0_wds10_hwaddr=00:00:00:00:00:00
+ppp_username=
+af_dnathost=0
+wl0_wme_sta_be=15 1023 3 0 0 off
+sh_rules=
+wl0_nctrlsb=
+wan_lease=600
+filter_port=
+oet3_mssfix=0
+oet1_rem=192.168.90.1
+eth10_bridged=1
+wl_wme_apsd=on
+ddns_enable_buf=
+wl0.3_auth_mode=disabled
+ip_conntrack_tcp_timeouts=300
+wl0_wds3_ospf=
+wl0_wds7_netmask=
+ddns_hostname=
+wl0.2_ssid=dd-wrt_vap
+http_wanport=8080
+filter_ip_grp1=
+filter_ip_grp2=
+lan_gateway=0.0.0.0
+filter_ip_grp3=
+wl0_ifname=eth1
+wl1_wds10_ipaddr=
+dr_lan_rx=0
+filter_ip_grp4=
+lan_domain=
+af_city=
+reconnect_enable=0
+oet9_mssfix=0
+wl0_wme_sta_bk=15 1023 7 0 0 off
+wl1_wds6_enable=0
+wl0_wds4_ipaddr=
+filter_ip_grp5=
+timer_interval=30
+gpio1=ses_led
+gpio2=adm_eecs
+log_accepted=0
+hs_html=
+filter_ip_grp6=
+pptpd_client_srvsec=mppe required
+gpio3=adm_eesk
+pptpd_client_ipparam=
+wshaper_uplink=280
+pppoe_ac=
+filter_ip_grp7=
+filter_rule1=
+hb_server_ip=
+ipsec_pass=1
+filter_ip_grp8=
+filter_rule2=
+ses_button=0
+gpio5=adm_eedi
+wl0_wds0_if=
+pptpd_radserver=0.0.0.0
+rflow_enable=0
+filter_ip_grp9=
+filter_rule3=
+ses_enable=1
+vlan0ports=3 2 1 0 5*
+vlan0_bridged=1
+expert_mode=1
+gpio6=adm_rc
+oet9_ip=1.2.3.4
+oet3_en=0
+schedule_minutes=0
+wl0.2_key1=
+filter_rule4=
+port5vlans=0 1 16
+wl1_wds4_netmask=
+wl1_wds5_hwaddr=
+wl1_txpwr=71
+wl0.2_key2=
+filter_rule5=
+wl1_wds3_if=
+wl0_mrate=0
+wl0.2_key3=
+filter_ip_grp10=
+filter_rule6=
+wol_passwd=
+wl0.2_key4=
+wl0_mode=apstawet
+filter_rule7=
+wan_gateway=10.99.0.1
+wl0_wds1_ospf=
+pptpd_radpass=
+dhcp_start=100
+filter_rule8=
+filter_rule9=
+oet7_pt=0
+pptpd_enable=0
+wl0_ap_isolate=0
+svqos_port4prio=10
+wl_mrate=0
+filter_services_1=
+oet3_shaper=0
+NC_DocumentRoot=/www
+wshaper_nopriohostsrc=
+l2tp_server_ip=
+ddns_force=10
+dist_type=micro
+wl0.2_gtk_rekey=3600
+oet8_id=1
+wl0_wme_no_ack=off
+wl0_gmode=1
+dhcp_lease=1440
+sromrev=2
+af_zip=
+wl1_wds8_netmask=
+wl1_wds4_ipaddr=
+wl1_rts=2347
+eth3_bridged=1
+wds_watchdog_ips=
+remote_ip_any=1
+oet1_bridged=1
+wl0.2_wpa_gtk_rekey=3600
+boardtype=0x0467
+oet9_shaper=0
+dnsmasq_enable=1
+is_default=0
+wl_active_add_mac=0
+eth10_netmask=0.0.0.0
+port3vlans=0
+wl0_nband=2
+ping_ip=help
+
+af_agree=0
+stats_server=
+static_route=
+sip_port=5060
+wl0_nreqd=0
+pptpd_client_mtu=1450
+radvd_conf=
+wl0_security_mode=psk2
+wl0.1_crypto=tkip
+wl0.3_bridged=1
+lan_netmask=255.255.255.0
+eth7_bridged=1
+wl0_wds1_enable=0
+dmz_enable=0
+http_source_network=0.0.0.0
+wifi_display=wl0
+oet5_bridged=1
+wl_wme_sta_vi=7 15 2 6016 3008 off
+wl0_dtim=1
+wl0_ssid=HM_DEMO
+http_username=$1$PkNkV1qE$/FmhZCXYpHiJObetdLwAZ1
+oet8_ip=1.2.3.4
+oet2_en=0
+apd_enable=0
+sh_routestopped=br0 -
+eth0 -
+eth2 -
+wds0.2 -
+wl1_wds9_desc=
+port_trigger=
+eth1_multicast=0
+wl_wme_ap_be=15 63 3 0 0 off
+wl1_wds10_netmask=
+filter_web_host10=
+http_redirect_enable=0
+wl1_wds2_if=
+wl0_dfs_preism=60
+os_date=Jul 21 2009
+eth1_ipaddr=0.0.0.0
+svqos_port2prio=10
+wl0_wds7_enable=0
+cron_enable=1
+http_lanport=80
+wl_wme_sta_vo=3 7 2 3264 1504 off
+wl_plcphdr=long
+filter_mac_grp1=
+oet6_pt=0
+port1vlans=0
+wl_macmode=disabled
+ppp_service=
+ppp_redialperiod=30
+filter_mac_grp2=
+oet10_pt=0
+oet8_comp=0
+eth7_ipaddr=0.0.0.0
+wl1_wme_ap_be=15 63 3 0 0 off
+wl_wme_ap_bk=15 1023 7 0 0 off
+filter_mac_grp3=
+wan_domain=
+wan_hwname=
+oet9_bridged=1
+radiooff_button=0
+wl0_wds6_hwaddr=00:00:00:00:00:00
+wl0_key1=0987654321
+wl_phytype=g
+wl0_web_filter=0
+filter_mac_grp4=
+wan_netmask=255.255.255.224
+lan_lease=86400
+wl0id=0x4318
+oet7_id=1
+wl0_key2=
+wl_lazywds=0
+wl0_vlan_prio_mode=off
+pppoe_static_ip=
+filter_mac_grp5=
+wl0.2_hwaddr=02:90:4C:91:00:01
+oet10_bridged=1
+wl0_txant=3
+ddns_wildcard_6=
+wl_dfs_postism=60
+wl0_key3=
+filter_mac_grp6=
+pptpd_client_srvsubmsk=
+sputnik_mjid_type=0
+wl1_wds10_desc=
+ddns_wildcard_7=
+wl0_key4=
+filter_mac_grp7=
+wshaper_nopriohostdst=
+ddns_url=
+wl0_bridged=1
+filter_mac_grp8=
+filter_client0=
+oet4_mssfix=0
+eth3_netmask=0.0.0.0
+wl1_wme_ap_bk=15 1023 7 0 0 off
+wl1_wds7_desc=
+wl1_wds1_enable=0
+filter_mac_grp9=
+filter_maclist=
+wl0.2_nat=1
+oet1_netmask=255.255.255.0
+pptp_pass=1
+pptp_get_ip=
+ppp_demand=0
+wl0_vifs=wl0.1
+wl1_wds0=
+mtu_enable=0
+wl1_bcn=100
+ppp_keepalive=0
+wl1_wds1=
+sh_interfaces=loc br0
+loc eth0
+loc eth2
+net wds0.2
+wl1_wds2=
+block_activex=0
+wl1_wds3=
+wl1_wds7_enable=0
+wl0_wds5_ipaddr=
+wan_ifname2=vlan1
+wl1_wds4=
+wl0_br1_enable=0
+wl0.1_ipaddr=192.168.1.2
+http_passwd=$1$pkFBe.kq$MLwxcRiNh9hdff23NNTIf/
+ag0=0
+oet6_comp=0
+wl1_wds5=
+wl0_wds10_ipaddr=
+block_wan=0
+oet7_ip=1.2.3.4
+oet1_en=0
+wl1_wds6=
+wl0.3_netmask=0.0.0.0
+lan_stp=1
+eth7_netmask=0.0.0.0
+wl0_wme_ap_vi=7 15 1 6016 3008 off
+wl1_wds7=
+wl0.3_radius_ipaddr=
+wl0.3_akm=disabled
+pppoe_wan_ifname=vlan1
+oet5_netmask=255.255.255.0
+wl1_wds1_if=
+wl1_wds8=
+wl1_wds6_hwaddr=
+skip_amd_check=0
+wl0.1_radius_key=
+wl_mode=apstawet
+router_style=elegant
+pppd_pppifname=
+wl1_wds9=
+forward_spec=
+af_dnatport=0
+bird_ospf=Please read the BIRD setup instructions at http://bird.network.cz/bird.html
+wl1_wds9_ospf=
+wl1_wds5_desc=
+wl0.3_wpa_psk=
+wl0_plcphdr=long
+wl0_rate=0
+wl0_closed=0
+oet5_pt=0
+schedule_enable=0
+wl0_wds4_netmask=
+wl0_macmode=disabled
+wl0gpio0=136
+pptpd_client_srvmru=1450
+wl0_radioids=BCM2050
+wl0_wme_ap_vo=3 7 1 3264 1504 off
+svqos_port1bw=FULL
+pptpd_radius=0
+wl0gpio1=255
+wl_wme_txp_vi=7 3 4 2 0
+wl0_phytype=g
+wl0gpio2=0
+oet6_id=1
+NC_RouteOnly=0
+dr_wan_rx=0
+wl0_lazywds=0
+filter_tod_buf1=
+wl0gpio3=0
+sputnik_rereg=1
+oet10_fragment=0
+oet10_id=1
+oet4_shaper=0
+wds1.10=
+block_proxy=0
+filter_tod_buf2=
+oet9_netmask=255.255.255.0
+NC_GatewayPort=5280
+rflow_port=2055
+wds1.11=
+filter_tod_buf3=
+wl0gpio5=2
+boardflags2=0
+oet4_comp=0
+qos_type=0
+wds1.12=
+wl1_wds5_ipaddr=
+pptpd_rip=
+filter_tod_buf4=
+upnp_ssdp_interval=60
+oet10_netmask=255.255.255.0
+wds1.13=
+filter_tod_buf5=
+http_client_ip=192.168.1.122
+wl_wme_txp_vo=7 3 4 2 0
+wds1.14=
+dr_lan_tx=0
+wl0_afterburner=off
+wl0_netmask=0.0.0.0
+filter_tod_buf6=
+af_serviceid=0
+NC_SplashURLTimeout=21600
+wol_macs=
+wds1.15=
+wl0_wds8_netmask=
+apwatchdog_interval=15
+wl0_antdiv=3
+filter_tod_buf7=
+filter_tod10=
+lan_hwaddr=00:90:4C:91:00:01
+upnpcas=0
+radio1_timer_enable=0
+wds1.16=
+wl1_wds10_ospf=
+wl0.1_auth_mode=none
+filter_tod_buf8=
+wan_dns=
+http_client_mac=00:1F:5B:C0:45:47
+oet8_rem=192.168.90.1
+wl1_wds1_netmask=
+filter_tod_buf9=
+wl1_wds7_ospf=
+wl1_wds3_desc=
+wl0.1_akm=disabled
+action_service=wireless_2
+ip_conntrack_max=1024
+ipv6_enable0=0
+wl0_wds8_desc=
+wl_dtim=1
+wl_ssid=HM_DEMO
+wl_shortslot=auto
+wl0.1_ifname=wl0.1
+forward_entries=0
+log_dropped=0
+dhcpd_usenvram=0
+wl0_wpa_psk=playstation4
+wl1_frameburst=off
+wl0.2_crypto=off
+oet6_ip=1.2.3.4
+wl0_wds2_enable=0
+wait_time=5
+oet10_ip=1.2.3.4
+pptpd_radport=1812
+ppp_mppe=
+wl0.2_wep=disabled
+wl1_wds0_if=
+dns_dnsmasq=1
+macupd_ip=0.0.0.0
+wl_passphrase=
+wl0.2_auth=0
+daylight_time=3
+af_address_2=
+oet2_comp=0
+eth2_ipaddr=0.0.0.0
+security_mode=disabled
+wl1_shortslot=auto
+dhcp_wins=wan
+wl0_mbss=1
+eth0_bridged=1
+upgrade_delay=300
+wl1_wds5_netmask=
+wl0_wds1_hwaddr=00:00:00:00:00:00
+wl0_wds8_enable=0
+filter_tod_buf10=
+os_server=
+oet4_pt=0
+pppoe_static=0
+hb_server_domain=
+wan_proto=dhcp
+port_swap=0
+wl1_afterburner=off
+oet5_id=1
+eth8_ipaddr=0.0.0.0
+mmc_enable=0
+ospfd_conf=
+wl0_unit=0
+wl0X1_security_mode=disabled
+wshaper_noprioportsrc=
+wds0.10=
+wl1_wds5_ospf=
+wl1_wds1_desc=
+wl0_wds7_hwaddr=00:00:00:00:00:00
+NC_IncludePorts=
+wds0.11=
+wl0_wds6_desc=
+wl0_txpwr=251
+ddns_cache=
+wl_hwaddr=
+wl0.3_hwaddr=02:90:4C:91:00:02
+pptpd_client_srvpass=
+enable_jffs2=0
+wds0.12=
+oet6_rem=192.168.90.1
+wds0.13=
+static_route_name=
+oet5_mssfix=0
+eth4_bridged=1
+wds0.14=
+wl1_wds9_netmask=
+oet2_bridged=1
+wds0.15=
+wl1_wds2_enable=0
+wl0_nmode=-1
+wl0.1_multicast=0
+wds0.16=
+ntp_enable=1
+wl_active_mac=
+wl_net_mode=mixed
+pa0itssit=62
+enable_game=0
+remote_ip=0.0.0.0 0
+wl0_wds6_ipaddr=
+ddns_custom_5=
+forward_port=
+wl0.1_wep_buf=:::::
+NC_HomePage=http://www.dd-wrt.com
+smtp_redirect_enable=0
+sys_enable_jffs2=0
+wl1_wds1_hwaddr=
+wl1_wds8_enable=0
+oet5_ip=1.2.3.4
+wshaper_dev=WAN
+wl0.2_ipaddr=0.0.0.0
+eth8_bridged=1
+wl1_wds3_ospf=
+wl_rxstreams=0
+generate_key=0
+oet6_bridged=1
+wl0_wds8_ospf=
+wl0_wds4_desc=
+wl0_wds=
+filter_mac_grp10=
+wanup=0
+pptp_server_name=
+sh_policy=loc net ACCEPT
+net all DROP info
+all all REJECT info
+wl1_wds7_hwaddr=
+ddns_dyndnstype_6=
+wl_rate=0
+ppp_static_ip=
+wl1_wme_sta_be=15 1023 3 0 0 off
+telnetd_enable=1
+block_java=0
+log_level=0
+cctl=0
+oet3_pt=0
+static_leasenum=0
+hs_urls=
+wl0_reg_mode=off
+ntp_server=
+ct_modules=
+wan_hwaddr=00:90:4C:91:00:03
+eth0_netmask=0.0.0.0
+NC_GatewayName=DD-WRT
+oet4_id=1
+oet4_rem=192.168.90.1
+lan_ifnames=vlan0 eth1 eth2 eth3
+clone_wan_mac=0
+eth10_ipaddr=0.0.0.0
+remote_mgt_telnet=1
+wl_macmode1=disabled
+pppoe_ifname=vlan1
+browser_method=USE_LAN
+oet5_shaper=0
+wl1_wme_sta_bk=15 1023 7 0 0 off
+wl0_wme=on
+wl0_radius_port=1812
+wl0_auth=0
+smtp_source_network=0.0.0.0
+af_email=
+wl1_wds6_ipaddr=
+wl0_radius_ipaddr=
+wshaper_noprioportdst=
+cron_jobs=
+pppoe_service=
+wan_default=vlan1
+wl0_wme_sta_vi=7 15 2 6016 3008 off
+svqos_macs=
+wl1_wds1_ospf=
+wl0_wds6_ospf=
+wl0_wds2_desc=
+wl1_antdiv=3
+pa0maxpwr=251
+eth4_netmask=0.0.0.0
+wl0.3_wpa_gtk_rekey=3600
+af_enable=0
+oet2_netmask=255.255.255.0
+schedule_weekdays=00
+wl1_br1_nat=0
+ddns_change=
+remote_management=1
+wan_ifnames=vlan1
+oet10_rem=192.168.90.1
+oet4_ip=1.2.3.4
+radio0_timer_enable=0
+wl0_wme_sta_vo=3 7 2 3264 1504 off
+NC_ExcludePorts=25
+schedule_time=3600
+hs_enable=
+svqos_port4bw=FULL
+block_loopback=0
+wl_rateset=default
+wl_crypto=off
+wl0.2_ifname=wl0.2
+wl0_wds1_netmask=
+wl0.3_crypto=off
+wl1_ap_isolate=0
+wl0_wds3_enable=0
+wl0.2_key=1
+wifi_bonding=0
+svqos_svcs=sip l7 0:0 10 |
+wl_wep_bit=64
+ppp_mru=1500
+http_method=post
+eth8_netmask=0.0.0.0
+wl1_wme_no_ack=off
+hs_exempt=
+wl0.1_mode=ap
+oet6_netmask=255.255.255.0
+oet2_rem=192.168.90.1
+filter_port_grp1=
+lan_proto=static
+upnp_internet_dis=0
+os_name=linux
+clkfreq=200,100
+lan_ipaddr=192.168.1.1
+pptpd_client_srvmtu=1450
+oet2_pt=0
+eth3_ipaddr=0.0.0.0
+wl0_maxassoc=128
+wl0_wds9_enable=0
+filter_port_grp2=
+aa0=3
+vlan1hwname=et0
+wl0_wds2_hwaddr=00:00:00:00:00:00
+ddns_passwd_2=
+filter_port_grp10=
+filter_port_grp3=
+portprio_support=1
+trigger_entries=0
+clean_jffs2=0
+wl0_wds4_ospf=
+ddns_passwd_3=
+dr_wan_tx=0
+wl_unit=0
+wl1_plcphdr=long
+wl0.3_ssid=
+filter_port_grp4=
+filter_id=1
+oet3_id=1
+wl1_maxassoc=128
+wol_enable=0
+ddns_passwd_4=
+wl0_max_unauth_users=0
+wl0_phytypes=g
+filter_port_grp5=
+wl0_wep=disabled
+eth9_ipaddr=0.0.0.0
+wl0_wds5_netmask=
+ddns_passwd_5=
+wl_nmode_protection=auto
+wl0_frag=2346
+filter_port_grp6=
+maskmac=1
+syslogd_enable=0
+ddns_passwd_6=
+ddns_username=
+wl0.1_closed=0
+filter_port_grp7=
+wl0_wds8_hwaddr=00:00:00:00:00:00
+ddns_passwd_7=
+ddns_passwd=
+pppoe_passwd=
+filter_port_grp8=
+wl0.1_ap_isolate=0
+ddns_passwd_8=
+block_ident=0
+wl0_distance=2000
+wl0_nbw=20
+filter_port_grp9=
+auth_dnsmasq=1
+wl1_wme_txp_be=7 3 4 2 0
+dhcpfwd_enable=0
+hs_image=
+ppp_ac=
+log_enable=0
+sdram_config=0x0032
+wl0_btc_mode=0
+sip_domain=192.168.1.1
+filter_web_url10=
+af_registered=0
+oet6_mssfix=0
+wl0_wds1_ipaddr=
+dmz_ipaddr=0
+vlan1ports=4 5
+pptpd_client_enable=0
+schedule_hours=0
+wl1_wds3_enable=0
+rc_startup=
+security_mode_last=
+wl0.3_key1=
+wl_wds=
+wol_interval=86400
+wl1_wds10_if=
+wl0_wds9_netmask=
+ddns_hostname_2=
+wl0.1_radius_ipaddr=0.0.0.0
+wl0.3_key2=
+ddns_hostname_3=
+wl0.3_key3=
+af_category=0
+radiooff_boot_off=0
+wl1_wme_txp_bk=7 3 4 2 0
+ddns_hostname_4=
+wl0.3_key4=
+ccode=0
+oet3_ip=1.2.3.4
+trunking=0
+wl1_wds2_netmask=
+wl1_wds9_enable=0
+wl0_wds2_ospf=
+wl0_wds7_ipaddr=
+ddns_hostname_5=
+wl0_rateset=default
+wl0.1_ssid=Becherry
+wl1_wds2_hwaddr=
+ddns_hostname_6=
+pptpd_client_srvuser=DOMAIN\\Username
+wl0_wme_apsd=on
+macupd_port=2056
+ddns_hostname_7=
+wl0.3_ipaddr=0.0.0.0
+wl0_wep_bit=64
+pptpd_acctport=1813
+ddns_hostname_8=
+wl1_web_filter=0
+wl_wme=on
+wl_radauth=0
+pppoe_idletime=5
+wl0_wchannel=0
+oet9_en=0
+wl1_wme_apsd=on
+ping_times=
+pptpd_client_nat=1
+oet1_pt=0
+fullswitch=0
+wl_wme_ap_vi=7 15 1 6016 3008 off
+wl1_wds8_hwaddr=
+wan_primary=1
+lan_ifname=br0
+wl1_wds9_if=
+filter_services=
+boardflags=0x0758
+overclocking=200
+wl1_wds6_netmask=
+pptp_extraoptions=
+sdram_refresh=0
+wandevs=et0
+oet2_id=1
+eth1_bridged=1
+pptp_reorder=1
+wl0_radius_override=1
+wl0.1_key1=
+dhcp_domain=lan
+port4vlans=0
+wl1_wds1_ipaddr=
+wl0.1_key2=
+wl_auth=0
+sputnik_done=0
+vlans=0
+samba_mount=0
+wl_wep_last=
+wl0.1_key3=
+sdram_ncdl=0x24
+wl1_wme_ap_vi=7 15 1 6016 3008 off
+wl_wme_ap_vo=3 7 1 3264 1504 off
+wan_gateway_buf=0.0.0.0
+wl0.1_key4=
+wan_dial=0
+oet6_shaper=0
+resetbutton_enable=1
+block_cookie=0
+wan_vdsl=0
+wan_iface=vlan1
+wl1_br1_enable=0
+rc_firewall=
+wl_frameburst=off
+ezc_enable=1
+NC_enable=0
+wl1_wds7_ipaddr=
+wl0_nmode_protection=auto
+wl0_br1_ipaddr=0.0.0.0
+wl1_dtim=1
+eth5_bridged=1
+wl0.1_bridged=1
+upnp_wan_proto=
+is_modified=1
+wl1_wme_ap_vo=3 7 1 3264 1504 off
+smtp_redirect_destination=0.0.0.0
+svqos_port3prio=10
+wl0.2_radius_key=
+dhcp_num=50
+filter_web_url1=
+wan_ipaddr=10.99.0.90
+wl0_passphrase=
+oet3_bridged=1
+filter_web_url2=
+reconnect_hours=0
+filter_web_url3=
+af_country=
+oet2_ip=1.2.3.4
+wl0_rts=2347
+filter_web_url4=
+af_ssid_name=AnchorFree WiFi
+ospfd_copt=0
+zebra_conf=
+filter_web_url5=
+fon_enable=0
+port2vlans=0
+wl1_wds10_enable=0
+wl_ifname=
+filter_web_url6=
+wan_wins=0.0.0.0
+wl0.2_wep_buf=:::::
+oet9_comp=0
+wds1.1=
+wl0_wds4_enable=0
+ipv6_enable=0
+ntp_mode=auto
+wl_wep=disabled
+http_enable=1
+filter_web_url7=
+wds1.2=
+wl0_radauth=0
+l2tp_pass=1
+filter_web_url8=
+phyid_num=0x00000000
+oet8_en=0
+eth9_bridged=1
+sputnik_mode=standard
+svqos_ips=
+wds1.3=
+ddns_dyndnstype=
+wl0.2_auth_mode=none
+pppoe_username=
+filter_web_url9=
+os_version=4.150.10.5
+oet7_bridged=1
+wds1.4=
+wl_gmode_protection=auto
+eth4_ipaddr=0.0.0.0
+wds1.5=
+wl1_wds8_if=
+wl0_wpa_gtk_rekey=3600
+wds1.6=
+mac_clone_enable=0
+wl0_sta_retry_time=5
+ppp_get_srv=
+oet1_id=1
+wds1.7=
+wl1_wds8_desc=
+wl0_wds3_hwaddr=00:00:00:00:00:00
+wl_frag=2346
+wds1.8=
+wan_mtu=1500
+wl_wep_gen=
+wl0_key=1
+eth1_netmask=0.0.0.0
+wds1.9=
+filter_macmode=deny
+gpio14=ses_button
+oet1_mssfix=0
+wl0_wds9_hwaddr=00:00:00:00:00:00
+wl0.2_closed=0
+svqos_port1prio=10
+ppp_compression=0
+console_loglevel=1
+et0phyaddr=30
+wl0X2_security_mode=disabled
+probe_blacklist= vlan0 
+NC_LoginTimeout=86400
+port0vlans=1
+dnsmasq_options=
+time_zone=+01
+oet7_comp=0
+reconnect_minutes=0
+wan_get_domain=fugue.com
+af_state=
+ttraff_enable=0
+oet7_mssfix=0
+wl1_wds4_enable=0
+wl0_wds2_ipaddr=
+wl0.1_netmask=255.255.255.0
+wan_ifname=vlan1
+eth5_netmask=0.0.0.0
+wl_wme_sta_be=15 1023 3 0 0 off
+radvd_enable=0
+upnp_max_age=180
+oet3_netmask=255.255.255.0
+oet1_ip=1.2.3.4
+wl_radioids=
+gozila_action=0
+af_ssid=0
+wl1_wds6_desc=
+wl1_rate=0
+wl0_dfs_postism=60
+wan_hostname=
+landevs=vlan0 wl0
+sh_zones=net Net Internet
+loc Local Local Networks
+dmz DMZ Dmz Zone
+wl0_wds8_ipaddr=
+wl0_radio=1
+wl_corerev=
+ppp_mtu=1500
+af_address=
+sv_restore_defaults=0
+zebra_enable=1
+wl0_wds0=*,auto,tkip,psk2,HM_DEMO,playstation4
+wl1_wds3_hwaddr=
+info_passwd=0
+wl0.1_wpa_psk=
+DD_BOARD=Linksys WRT54G/GL/GS
+wl0.1_nat=1
+wl0.1_gtk_rekey=3600
+svqos_port3bw=FULL
+wl0_wds2_netmask=
+wl_channel=0
+oet10_comp=0
+oet7_en=0
+wl_wme_sta_bk=15 1023 7 0 0 off
+manual_boot_nv=0
+wl0_bcn=100
+wl0.2_multicast=0
+pptpd_auth=
+radio0_on_time=111111111111111111111111
+macupd_interval=10
+wl1_wds7_if=
+wl1_wds9_hwaddr=
+block_multicast=0
+wl_afterburner=off
+wl_radio=1
+ppp_static=0
+filter_tod1=
+dtag_vlan8=0
+wl0_hwaddr=00:90:4C:91:00:03
+oet5_comp=0
+eth9_netmask=0.0.0.0
+log_rejected=0
+dyn_default=0
+filter_tod2=
+oet7_netmask=255.255.255.0
+filter_tod3=
+oet1_shaper=0
+filter_tod4=
+ezc_version=2
+dhcpc_done=1
+oet9_rem=192.168.90.1
+ddns_passwd_buf=
+wk_mode=gateway
+wl0_gmode_protection=auto
+filter_tod5=
+pa0b0=0x170c
+wl1_wds2_ipaddr=
+rc_shutdown=
+wl0.2_akm=disabled
+wl0.1_wpa_gtk_rekey=3600
+filter_tod6=
+pa0b1=0xfa24
+NC_GatewayMode=Open
+wl0_wds6_netmask=
+filter_tod7=
+pa0b2=0xfe70
+wl1_wds8_ospf=
+wl1_wds4_desc=
+wl0_radmacpassword=0
+wl_rts=2347
+filter_tod8=
+sdram_init=0x0002
+oet7_shaper=0
+wl0_wds9_desc=
+filter_tod9=
+wl0_abenable=1
+wl_ap_isolate=0
+lan_wins=
+vlan0hwname=et0
+dhcp_dnsmasq=1
+NC_IdleTimeout=0
+ip_conntrack_udp_timeouts=120
+wl1_wds8_ipaddr=
+dhcpd_options=
+wl_mac_list=
+lan_hwnames=
+wl1_abenable=1
+dhcpd_usejffs=
+static_leases=
+wl_wme_no_ack=off
+wds_watchdog_enable=0
+pppoe_demand=0
+local_dns=1
+wl0.3_auth=0
+oet3_comp=0
+wl0_wds10_desc=
+wl0_radius_key=
+wl1_gmode_protection=auto
+filter_dport_grp10=
+wl0_wme_ap_be=15 63 3 0 0 off
+wl0_wds10_netmask=
+ddns_username_buf=
+wl0_corerev=9
+wl0_nmcsidx=-1
+wl0_lazy_wds=
+wl1_wds3_netmask=
+wl1_rateset=default
+refresh_time=3
+wl0_channel=0
+oet6_en=0
+wl0_wds5_enable=0
+pptp_encrypt=0
+oet10_en=0
+NC_ForcedRedirect=0
+wl1_wds6_ospf=
+wl1_wds2_desc=
+oet7_rem=192.168.90.1
+wl0_wme_ap_bk=15 1023 7 0 0 off
+schedule_hour_time=1
+wl1_wds6_if=
+wl0_wds7_desc=
+wl0_wds10_enable=0
+dr_setting=0
+upnp_enable=0
+wl_wme_txp_be=7 3 4 2 0
+hs_redirect=
+http_redirect_destination=0.0.0.0
+eth5_ipaddr=0.0.0.0
+wl1_wds10_hwaddr=
+dhcpc_vendorclass=
+wl1_wme_sta_vi=7 15 2 6016 3008 off
+wol_hostname=
+wl0_wds4_hwaddr=00:00:00:00:00:00
+pptpd_lip=
+filter_rule10=
+eth2_bridged=1
+forwardspec_entries=0
+rflow_if=br0
+wl1_wds7_netmask=
+wl_dfs_preism=60
+wl0.1_auth=0
+wl0.1_wep=disabled
+oet1_comp=0
+wl_wme_txp_bk=7 3 4 2 0
+NC_AllowedWebHosts=
+def_whwaddr=00:00:00:00:00:00
+wl0_auth_mode=none
+oet2_mssfix=0
+dhcpc_requestip=
+status_auth=1
+wl0.3_closed=0
+et1phyaddr=0x1f
+wl1_wme_sta_vo=3 7 2 3264 1504 off
+autofw_port0=
+language=english
+wl0_crypto=tkip
+boardnum=WAP54GV3_8M_0614
+wl1_wds=
+def_hwaddr=00:00:00:00:00:00
+oet8_mssfix=0
+wl1_wds4_ospf=
+wl_bcn=100
+wl1_wds5_enable=0
+wl0_wds9_ospf=
+wl0_wds5_desc=
+wl0_wds3_ipaddr=
+macupd_enable=0
+wl_wep_buf=
+wl_reg_mode=off
+wl0.2_bridged=1
+oet10_mssfix=0
+eth6_bridged=1
+mmc_enable0=0
+oet4_bridged=1
+rflow_ip=0.0.0.0
+upnp_config=1
+wl0.2_radius_ipaddr=0.0.0.0
+filter_dport_grp1=
+oet5_rem=192.168.90.1
+oet1_fragment=0
+pptpd_client_mru=1450
+wl0_wds9_ipaddr=
+rc_custom=
+filter_dport_grp2=
+size: 20229 bytes (12539 left)
+*** command status = 0
+CFE> help ,vram
+No help available for ',vram'.
+
+Type 'help' for a list of commands.
+*** command status = -1
+CFE> help nvram
+
+  SUMMARY
+
+     NVRAM utility.
+
+  USAGE
+
+     nvram [command] [args..]
+     
+     Access NVRAM.
+
+  OPTIONS
+
+     get [name]   Gets the value of the specified variable
+     set [name=va Sets the value of the specified variable
+     unset [name] Deletes the specified variable
+     commit       Commit variables to flash
+     erase        Erase all nvram
+     show         Shows all variables
+
+*** command status = 0
+CFE> nvram re  erase
+*** command status = 0
+CFE> nevram       vram show
+wl1_wds4_hwaddr=
+wl0.1_radius_port=1812
+wl_mac_deny=
+filter_dport_grp3=
+ses_script=
+http_redirect_port=3128
+oet5_en=0
+wl1_wme=on
+wl0_wds10_ospf=
+wl1_txant=3
+filter_dport_grp4=
+opo=0
+oet2_fragment=0
+filter=off
+filter_dport_grp5=
+wan_unit=0
+NC_Verbosity=2
+wds0.1=
+wl1_wds5_if=
+wl0_net_mode=mixed
+wl1_auth=0
+filter_dport_grp6=
+sv_localdns=0.0.0.0
+wl0.2_ap_isolate=0
+altdns1=
+wds0.2=
+filter_dport_grp7=
+nvram_ver=3
+oet3_fragment=0
+altdns2=
+wds0.3=
+wl0_frameburst=off
+wl_txstreams=0
+filter_dport_grp8=
+oet8_bridged=1
+wds_watchdog_interval_sec=1000
+altdns3=
+wds0.4=
+wl1_net_mode=disabled
+filter_dport_grp9=
+oet9_pt=0
+zebra_log=0
+wds0.5=
+wl1_wds2_ospf=
+ddns_username_2=
+log_ipaddr=0
+oet4_fragment=0
+oet2_shaper=0
+NC_RenewTimeout=0
+wds0.6=
+wl0_wds7_ospf=
+wl0_wds3_desc=
+ddns_username_3=
+boardrev=0x13
+il0macaddr=00:90:4c:91:00:02
+wds0.7=
+ddns_username_4=
+ppp_idletime=5
+ppp_passwd=
+NC_SplashURL=
+zebra_copt=0
+wds0.8=
+wl1_wds3_ipaddr=
+ddns_username_5=
+oet5_fragment=0
+eth2_netmask=0.0.0.0
+wds0.9=
+ddns_username_6=
+oet8_shaper=0
+ddns_username_7=
+qos_done=1
+ddns_username_8=
+ddns_enable=0
+wl0.3_key=1
+wl0_leddc=0x640000
+et0macaddr=00:90:4c:91:00:01
+eth1_nat=1
+oet10_shaper=0
+oet6_fragment=0
+NC_MaxMissedARP=5
+wl1_wds9_ipaddr=
+wl0_ipaddr=0.0.0.0
+wl1_wme_txp_vi=7 3 4 2 0
+NC_MACWhiteList=
+skip_intel_check=0
+ddns_conf=
+wl0.2_radius_port=1812
+wl0_shortslot=auto
+wl0_wep_buf=:::::
+oet3_rem=192.168.90.1
+wl_maxassoc=128
+ddns_hostname_buf=
+wl0_akm=psk2
+wan_get_dns=
+oet7_fragment=0
+syslogd_rem_ip=
+boot_wait=on
+watchdog=3000
+wl0.2_mode=ap
+nas_enable=1
+wl_phytypes=
+filter_web_host1=
+wl0_macmode1=disabled
+wl0_infra=1
+wl0.2_netmask=0.0.0.0
+filter_web_host2=
+eth6_netmask=0.0.0.0
+filter_web_host3=
+fw_disable=0
+et0mdcport=0
+oet8_fragment=0
+oet4_netmask=255.255.255.0
+pptpd_client_srvsub=
+wl1_wme_txp_vo=7 3 4 2 0
+wl0_wds5_ospf=
+wl0_wds1_desc=
+router_name=DD-WRT
+pppoe_keepalive=0
+filter_web_host4=
+oet4_en=0
+wshaper_enable=1
+sh_masq=br0 wds0.2
+filter_web_host5=
+eth0_ipaddr=0.0.0.0
+wl0_wds6_enable=0
+ddns_wildcard=
+wl1_frag=2346
+wl_distance=2000
+filter_web_host6=
+https_enable=
+oet9_fragment=0
+wl1_wds4_if=
+apwatchdog_enable=0
+wl0.2_wpa_psk=
+wl_infra=1
+filter_web_host7=
+af_publish=1
+svqos_port2bw=FULL
+wl0_wds3_netmask=
+telnet_wanport=23
+l2tp_get_ip=
+filter_web_host8=
+ses_event=2
+reset_gpio=7
+wl_btc_mode=0
+dhcpfwd_ip=0.0.0.0
+filter_web_host9=
+radio1_on_time=111111111111111111111111
+pptpd_forcemppe=1
+pptp_server_ip=
+ppp_get_ac=
+pmon_ver=CFE 3.91.39.0
+oet8_pt=0
+eth6_ipaddr=0.0.0.0
+pptpd_bcrelay=1
+ddns_time=
+restore_defaults=0
+oet8_netmask=255.255.255.0
+pptp_use_dhcp=0
+wl0_wds5_hwaddr=00:00:00:00:00:00
+wl0_br1_netmask=255.255.255.0
+wl0_bandlist=b
+wl0.1_hwaddr=02:90:4C:91:00:00
+wshaper_downlink=2800
+wl0.3_radius_key=
+wl0.3_radius_port=1812
+wl0.1_key=1
+oet9_id=1
+pptpd_client_srvip=
+wl0_wds10_hwaddr=00:00:00:00:00:00
+ppp_username=
+af_dnathost=0
+wl0_wme_sta_be=15 1023 3 0 0 off
+sh_rules=
+wl0_nctrlsb=
+wan_lease=600
+filter_port=
+oet3_mssfix=0
+oet1_rem=192.168.90.1
+eth10_bridged=1
+wl_wme_apsd=on
+ddns_enable_buf=
+wl0.3_auth_mode=disabled
+ip_conntrack_tcp_timeouts=300
+wl0_wds3_ospf=
+wl0_wds7_netmask=
+ddns_hostname=
+wl0.2_ssid=dd-wrt_vap
+http_wanport=8080
+filter_ip_grp1=
+filter_ip_grp2=
+lan_gateway=0.0.0.0
+filter_ip_grp3=
+wl0_ifname=eth1
+wl1_wds10_ipaddr=
+dr_lan_rx=0
+filter_ip_grp4=
+lan_domain=
+af_city=
+reconnect_enable=0
+oet9_mssfix=0
+wl0_wme_sta_bk=15 1023 7 0 0 off
+wl1_wds6_enable=0
+wl0_wds4_ipaddr=
+filter_ip_grp5=
+timer_interval=30
+gpio1=ses_led
+gpio2=adm_eecs
+log_accepted=0
+hs_html=
+filter_ip_grp6=
+pptpd_client_srvsec=mppe required
+gpio3=adm_eesk
+pptpd_client_ipparam=
+wshaper_uplink=280
+pppoe_ac=
+filter_ip_grp7=
+filter_rule1=
+hb_server_ip=
+ipsec_pass=1
+filter_ip_grp8=
+filter_rule2=
+ses_button=0
+gpio5=adm_eedi
+wl0_wds0_if=
+pptpd_radserver=0.0.0.0
+rflow_enable=0
+filter_ip_grp9=
+filter_rule3=
+ses_enable=1
+vlan0ports=3 2 1 0 5*
+vlan0_bridged=1
+expert_mode=1
+gpio6=adm_rc
+oet9_ip=1.2.3.4
+oet3_en=0
+schedule_minutes=0
+wl0.2_key1=
+filter_rule4=
+port5vlans=0 1 16
+wl1_wds4_netmask=
+wl1_wds5_hwaddr=
+wl1_txpwr=71
+wl0.2_key2=
+filter_rule5=
+wl1_wds3_if=
+wl0_mrate=0
+wl0.2_key3=
+filter_ip_grp10=
+filter_rule6=
+wol_passwd=
+wl0.2_key4=
+wl0_mode=apstawet
+filter_rule7=
+wan_gateway=10.99.0.1
+wl0_wds1_ospf=
+pptpd_radpass=
+dhcp_start=100
+filter_rule8=
+filter_rule9=
+oet7_pt=0
+pptpd_enable=0
+wl0_ap_isolate=0
+svqos_port4prio=10
+wl_mrate=0
+filter_services_1=
+oet3_shaper=0
+NC_DocumentRoot=/www
+wshaper_nopriohostsrc=
+l2tp_server_ip=
+ddns_force=10
+dist_type=micro
+wl0.2_gtk_rekey=3600
+oet8_id=1
+wl0_wme_no_ack=off
+wl0_gmode=1
+dhcp_lease=1440
+sromrev=2
+af_zip=
+wl1_wds8_netmask=
+wl1_wds4_ipaddr=
+wl1_rts=2347
+eth3_bridged=1
+wds_watchdog_ips=
+remote_ip_any=1
+oet1_bridged=1
+wl0.2_wpa_gtk_rekey=3600
+boardtype=0x0467
+oet9_shaper=0
+dnsmasq_enable=1
+is_default=0
+wl_active_add_mac=0
+eth10_netmask=0.0.0.0
+port3vlans=0
+wl0_nband=2
+ping_ip=help
+
+af_agree=0
+stats_server=
+static_route=
+sip_port=5060
+wl0_nreqd=0
+pptpd_client_mtu=1450
+radvd_conf=
+wl0_security_mode=psk2
+wl0.1_crypto=tkip
+wl0.3_bridged=1
+lan_netmask=255.255.255.0
+eth7_bridged=1
+wl0_wds1_enable=0
+dmz_enable=0
+http_source_network=0.0.0.0
+wifi_display=wl0
+oet5_bridged=1
+wl_wme_sta_vi=7 15 2 6016 3008 off
+wl0_dtim=1
+wl0_ssid=HM_DEMO
+http_username=$1$PkNkV1qE$/FmhZCXYpHiJObetdLwAZ1
+oet8_ip=1.2.3.4
+oet2_en=0
+apd_enable=0
+sh_routestopped=br0 -
+eth0 -
+eth2 -
+wds0.2 -
+wl1_wds9_desc=
+port_trigger=
+eth1_multicast=0
+wl_wme_ap_be=15 63 3 0 0 off
+wl1_wds10_netmask=
+filter_web_host10=
+http_redirect_enable=0
+wl1_wds2_if=
+wl0_dfs_preism=60
+os_date=Jul 21 2009
+eth1_ipaddr=0.0.0.0
+svqos_port2prio=10
+wl0_wds7_enable=0
+cron_enable=1
+http_lanport=80
+wl_wme_sta_vo=3 7 2 3264 1504 off
+wl_plcphdr=long
+filter_mac_grp1=
+oet6_pt=0
+port1vlans=0
+wl_macmode=disabled
+ppp_service=
+ppp_redialperiod=30
+filter_mac_grp2=
+oet10_pt=0
+oet8_comp=0
+eth7_ipaddr=0.0.0.0
+wl1_wme_ap_be=15 63 3 0 0 off
+wl_wme_ap_bk=15 1023 7 0 0 off
+filter_mac_grp3=
+wan_domain=
+wan_hwname=
+oet9_bridged=1
+radiooff_button=0
+wl0_wds6_hwaddr=00:00:00:00:00:00
+wl0_key1=0987654321
+wl_phytype=g
+wl0_web_filter=0
+filter_mac_grp4=
+wan_netmask=255.255.255.224
+lan_lease=86400
+wl0id=0x4318
+oet7_id=1
+wl0_key2=
+wl_lazywds=0
+wl0_vlan_prio_mode=off
+pppoe_static_ip=
+filter_mac_grp5=
+wl0.2_hwaddr=02:90:4C:91:00:01
+oet10_bridged=1
+wl0_txant=3
+ddns_wildcard_6=
+wl_dfs_postism=60
+wl0_key3=
+filter_mac_grp6=
+pptpd_client_srvsubmsk=
+sputnik_mjid_type=0
+wl1_wds10_desc=
+ddns_wildcard_7=
+wl0_key4=
+filter_mac_grp7=
+wshaper_nopriohostdst=
+ddns_url=
+wl0_bridged=1
+filter_mac_grp8=
+filter_client0=
+oet4_mssfix=0
+eth3_netmask=0.0.0.0
+wl1_wme_ap_bk=15 1023 7 0 0 off
+wl1_wds7_desc=
+wl1_wds1_enable=0
+filter_mac_grp9=
+filter_maclist=
+wl0.2_nat=1
+oet1_netmask=255.255.255.0
+pptp_pass=1
+pptp_get_ip=
+ppp_demand=0
+wl0_vifs=wl0.1
+wl1_wds0=
+mtu_enable=0
+wl1_bcn=100
+ppp_keepalive=0
+wl1_wds1=
+sh_interfaces=loc br0
+loc eth0
+loc eth2
+net wds0.2
+wl1_wds2=
+block_activex=0
+wl1_wds3=
+wl1_wds7_enable=0
+wl0_wds5_ipaddr=
+wan_ifname2=vlan1
+wl1_wds4=
+wl0_br1_enable=0
+wl0.1_ipaddr=192.168.1.2
+http_passwd=$1$pkFBe.kq$MLwxcRiNh9hdff23NNTIf/
+ag0=0
+oet6_comp=0
+wl1_wds5=
+wl0_wds10_ipaddr=
+block_wan=0
+oet7_ip=1.2.3.4
+oet1_en=0
+wl1_wds6=
+wl0.3_netmask=0.0.0.0
+lan_stp=1
+eth7_netmask=0.0.0.0
+wl0_wme_ap_vi=7 15 1 6016 3008 off
+wl1_wds7=
+wl0.3_radius_ipaddr=
+wl0.3_akm=disabled
+pppoe_wan_ifname=vlan1
+oet5_netmask=255.255.255.0
+wl1_wds1_if=
+wl1_wds8=
+wl1_wds6_hwaddr=
+skip_amd_check=0
+wl0.1_radius_key=
+wl_mode=apstawet
+router_style=elegant
+pppd_pppifname=
+wl1_wds9=
+forward_spec=
+af_dnatport=0
+bird_ospf=Please read the BIRD setup instructions at http://bird.network.cz/bird.html
+wl1_wds9_ospf=
+wl1_wds5_desc=
+wl0.3_wpa_psk=
+wl0_plcphdr=long
+wl0_rate=0
+wl0_closed=0
+oet5_pt=0
+schedule_enable=0
+wl0_wds4_netmask=
+wl0_macmode=disabled
+wl0gpio0=136
+pptpd_client_srvmru=1450
+wl0_radioids=BCM2050
+wl0_wme_ap_vo=3 7 1 3264 1504 off
+svqos_port1bw=FULL
+pptpd_radius=0
+wl0gpio1=255
+wl_wme_txp_vi=7 3 4 2 0
+wl0_phytype=g
+wl0gpio2=0
+oet6_id=1
+NC_RouteOnly=0
+dr_wan_rx=0
+wl0_lazywds=0
+filter_tod_buf1=
+wl0gpio3=0
+sputnik_rereg=1
+oet10_fragment=0
+oet10_id=1
+oet4_shaper=0
+wds1.10=
+block_proxy=0
+filter_tod_buf2=
+oet9_netmask=255.255.255.0
+NC_GatewayPort=5280
+rflow_port=2055
+wds1.11=
+filter_tod_buf3=
+wl0gpio5=2
+boardflags2=0
+oet4_comp=0
+qos_type=0
+wds1.12=
+wl1_wds5_ipaddr=
+pptpd_rip=
+filter_tod_buf4=
+upnp_ssdp_interval=60
+oet10_netmask=255.255.255.0
+wds1.13=
+filter_tod_buf5=
+http_client_ip=192.168.1.122
+wl_wme_txp_vo=7 3 4 2 0
+wds1.14=
+dr_lan_tx=0
+wl0_afterburner=off
+wl0_netmask=0.0.0.0
+filter_tod_buf6=
+af_serviceid=0
+NC_SplashURLTimeout=21600
+wol_macs=
+wds1.15=
+wl0_wds8_netmask=
+apwatchdog_interval=15
+wl0_antdiv=3
+filter_tod_buf7=
+filter_tod10=
+lan_hwaddr=00:90:4C:91:00:01
+upnpcas=0
+radio1_timer_enable=0
+wds1.16=
+wl1_wds10_ospf=
+wl0.1_auth_mode=none
+filter_tod_buf8=
+wan_dns=
+http_client_mac=00:1F:5B:C0:45:47
+oet8_rem=192.168.90.1
+wl1_wds1_netmask=
+filter_tod_buf9=
+wl1_wds7_ospf=
+wl1_wds3_desc=
+wl0.1_akm=disabled
+action_service=wireless_2
+ip_conntrack_max=1024
+ipv6_enable0=0
+wl0_wds8_desc=
+wl_dtim=1
+wl_ssid=HM_DEMO
+wl_shortslot=auto
+wl0.1_ifname=wl0.1
+forward_entries=0
+log_dropped=0
+dhcpd_usenvram=0
+wl0_wpa_psk=playstation4
+wl1_frameburst=off
+wl0.2_crypto=off
+oet6_ip=1.2.3.4
+wl0_wds2_enable=0
+wait_time=5
+oet10_ip=1.2.3.4
+pptpd_radport=1812
+ppp_mppe=
+wl0.2_wep=disabled
+wl1_wds0_if=
+dns_dnsmasq=1
+macupd_ip=0.0.0.0
+wl_passphrase=
+wl0.2_auth=0
+daylight_time=3
+af_address_2=
+oet2_comp=0
+eth2_ipaddr=0.0.0.0
+security_mode=disabled
+wl1_shortslot=auto
+dhcp_wins=wan
+wl0_mbss=1
+eth0_bridged=1
+upgrade_delay=300
+wl1_wds5_netmask=
+wl0_wds1_hwaddr=00:00:00:00:00:00
+wl0_wds8_enable=0
+filter_tod_buf10=
+os_server=
+oet4_pt=0
+pppoe_static=0
+hb_server_domain=
+wan_proto=dhcp
+port_swap=0
+wl1_afterburner=off
+oet5_id=1
+eth8_ipaddr=0.0.0.0
+mmc_enable=0
+ospfd_conf=
+wl0_unit=0
+wl0X1_security_mode=disabled
+wshaper_noprioportsrc=
+wds0.10=
+wl1_wds5_ospf=
+wl1_wds1_desc=
+wl0_wds7_hwaddr=00:00:00:00:00:00
+NC_IncludePorts=
+wds0.11=
+wl0_wds6_desc=
+wl0_txpwr=251
+ddns_cache=
+wl_hwaddr=
+wl0.3_hwaddr=02:90:4C:91:00:02
+pptpd_client_srvpass=
+enable_jffs2=0
+wds0.12=
+oet6_rem=192.168.90.1
+wds0.13=
+static_route_name=
+oet5_mssfix=0
+eth4_bridged=1
+wds0.14=
+wl1_wds9_netmask=
+oet2_bridged=1
+wds0.15=
+wl1_wds2_enable=0
+wl0_nmode=-1
+wl0.1_multicast=0
+wds0.16=
+ntp_enable=1
+wl_active_mac=
+wl_net_mode=mixed
+pa0itssit=62
+enable_game=0
+remote_ip=0.0.0.0 0
+wl0_wds6_ipaddr=
+ddns_custom_5=
+forward_port=
+wl0.1_wep_buf=:::::
+NC_HomePage=http://www.dd-wrt.com
+smtp_redirect_enable=0
+sys_enable_jffs2=0
+wl1_wds1_hwaddr=
+wl1_wds8_enable=0
+oet5_ip=1.2.3.4
+wshaper_dev=WAN
+wl0.2_ipaddr=0.0.0.0
+eth8_bridged=1
+wl1_wds3_ospf=
+wl_rxstreams=0
+generate_key=0
+oet6_bridged=1
+wl0_wds8_ospf=
+wl0_wds4_desc=
+wl0_wds=
+filter_mac_grp10=
+wanup=0
+pptp_server_name=
+sh_policy=loc net ACCEPT
+net all DROP info
+all all REJECT info
+wl1_wds7_hwaddr=
+ddns_dyndnstype_6=
+wl_rate=0
+ppp_static_ip=
+wl1_wme_sta_be=15 1023 3 0 0 off
+telnetd_enable=1
+block_java=0
+log_level=0
+cctl=0
+oet3_pt=0
+static_leasenum=0
+hs_urls=
+wl0_reg_mode=off
+ntp_server=
+ct_modules=
+wan_hwaddr=00:90:4C:91:00:03
+eth0_netmask=0.0.0.0
+NC_GatewayName=DD-WRT
+oet4_id=1
+oet4_rem=192.168.90.1
+lan_ifnames=vlan0 eth1 eth2 eth3
+clone_wan_mac=0
+eth10_ipaddr=0.0.0.0
+remote_mgt_telnet=1
+wl_macmode1=disabled
+pppoe_ifname=vlan1
+browser_method=USE_LAN
+oet5_shaper=0
+wl1_wme_sta_bk=15 1023 7 0 0 off
+wl0_wme=on
+wl0_radius_port=1812
+wl0_auth=0
+smtp_source_network=0.0.0.0
+af_email=
+wl1_wds6_ipaddr=
+wl0_radius_ipaddr=
+wshaper_noprioportdst=
+cron_jobs=
+pppoe_service=
+wan_default=vlan1
+wl0_wme_sta_vi=7 15 2 6016 3008 off
+svqos_macs=
+wl1_wds1_ospf=
+wl0_wds6_ospf=
+wl0_wds2_desc=
+wl1_antdiv=3
+pa0maxpwr=251
+eth4_netmask=0.0.0.0
+wl0.3_wpa_gtk_rekey=3600
+af_enable=0
+oet2_netmask=255.255.255.0
+schedule_weekdays=00
+wl1_br1_nat=0
+ddns_change=
+remote_management=1
+wan_ifnames=vlan1
+oet10_rem=192.168.90.1
+oet4_ip=1.2.3.4
+radio0_timer_enable=0
+wl0_wme_sta_vo=3 7 2 3264 1504 off
+NC_ExcludePorts=25
+schedule_time=3600
+hs_enable=
+svqos_port4bw=FULL
+block_loopback=0
+wl_rateset=default
+wl_crypto=off
+wl0.2_ifname=wl0.2
+wl0_wds1_netmask=
+wl0.3_crypto=off
+wl1_ap_isolate=0
+wl0_wds3_enable=0
+wl0.2_key=1
+wifi_bonding=0
+svqos_svcs=sip l7 0:0 10 |
+wl_wep_bit=64
+ppp_mru=1500
+http_method=post
+eth8_netmask=0.0.0.0
+wl1_wme_no_ack=off
+hs_exempt=
+wl0.1_mode=ap
+oet6_netmask=255.255.255.0
+oet2_rem=192.168.90.1
+filter_port_grp1=
+lan_proto=static
+upnp_internet_dis=0
+os_name=linux
+clkfreq=200,100
+lan_ipaddr=192.168.1.1
+pptpd_client_srvmtu=1450
+oet2_pt=0
+eth3_ipaddr=0.0.0.0
+wl0_maxassoc=128
+wl0_wds9_enable=0
+filter_port_grp2=
+aa0=3
+vlan1hwname=et0
+wl0_wds2_hwaddr=00:00:00:00:00:00
+ddns_passwd_2=
+filter_port_grp10=
+filter_port_grp3=
+portprio_support=1
+trigger_entries=0
+clean_jffs2=0
+wl0_wds4_ospf=
+ddns_passwd_3=
+dr_wan_tx=0
+wl_unit=0
+wl1_plcphdr=long
+wl0.3_ssid=
+filter_port_grp4=
+filter_id=1
+oet3_id=1
+wl1_maxassoc=128
+wol_enable=0
+ddns_passwd_4=
+wl0_max_unauth_users=0
+wl0_phytypes=g
+filter_port_grp5=
+wl0_wep=disabled
+eth9_ipaddr=0.0.0.0
+wl0_wds5_netmask=
+ddns_passwd_5=
+wl_nmode_protection=auto
+wl0_frag=2346
+filter_port_grp6=
+maskmac=1
+syslogd_enable=0
+ddns_passwd_6=
+ddns_username=
+wl0.1_closed=0
+filter_port_grp7=
+wl0_wds8_hwaddr=00:00:00:00:00:00
+ddns_passwd_7=
+ddns_passwd=
+pppoe_passwd=
+filter_port_grp8=
+wl0.1_ap_isolate=0
+ddns_passwd_8=
+block_ident=0
+wl0_distance=2000
+wl0_nbw=20
+filter_port_grp9=
+auth_dnsmasq=1
+wl1_wme_txp_be=7 3 4 2 0
+dhcpfwd_enable=0
+hs_image=
+ppp_ac=
+log_enable=0
+sdram_config=0x0032
+wl0_btc_mode=0
+sip_domain=192.168.1.1
+filter_web_url10=
+af_registered=0
+oet6_mssfix=0
+wl0_wds1_ipaddr=
+dmz_ipaddr=0
+vlan1ports=4 5
+pptpd_client_enable=0
+schedule_hours=0
+wl1_wds3_enable=0
+rc_startup=
+security_mode_last=
+wl0.3_key1=
+wl_wds=
+wol_interval=86400
+wl1_wds10_if=
+wl0_wds9_netmask=
+ddns_hostname_2=
+wl0.1_radius_ipaddr=0.0.0.0
+wl0.3_key2=
+ddns_hostname_3=
+wl0.3_key3=
+af_category=0
+radiooff_boot_off=0
+wl1_wme_txp_bk=7 3 4 2 0
+ddns_hostname_4=
+wl0.3_key4=
+ccode=0
+oet3_ip=1.2.3.4
+trunking=0
+wl1_wds2_netmask=
+wl1_wds9_enable=0
+wl0_wds2_ospf=
+wl0_wds7_ipaddr=
+ddns_hostname_5=
+wl0_rateset=default
+wl0.1_ssid=Becherry
+wl1_wds2_hwaddr=
+ddns_hostname_6=
+pptpd_client_srvuser=DOMAIN\\Username
+wl0_wme_apsd=on
+macupd_port=2056
+ddns_hostname_7=
+wl0.3_ipaddr=0.0.0.0
+wl0_wep_bit=64
+pptpd_acctport=1813
+ddns_hostname_8=
+wl1_web_filter=0
+wl_wme=on
+wl_radauth=0
+pppoe_idletime=5
+wl0_wchannel=0
+oet9_en=0
+wl1_wme_apsd=on
+ping_times=
+pptpd_client_nat=1
+oet1_pt=0
+fullswitch=0
+wl_wme_ap_vi=7 15 1 6016 3008 off
+wl1_wds8_hwaddr=
+wan_primary=1
+lan_ifname=br0
+wl1_wds9_if=
+filter_services=
+boardflags=0x0758
+overclocking=200
+wl1_wds6_netmask=
+pptp_extraoptions=
+sdram_refresh=0
+wandevs=et0
+oet2_id=1
+eth1_bridged=1
+pptp_reorder=1
+wl0_radius_override=1
+wl0.1_key1=
+dhcp_domain=lan
+port4vlans=0
+wl1_wds1_ipaddr=
+wl0.1_key2=
+wl_auth=0
+sputnik_done=0
+vlans=0
+samba_mount=0
+wl_wep_last=
+wl0.1_key3=
+sdram_ncdl=0x24
+wl1_wme_ap_vi=7 15 1 6016 3008 off
+wl_wme_ap_vo=3 7 1 3264 1504 off
+wan_gateway_buf=0.0.0.0
+wl0.1_key4=
+wan_dial=0
+oet6_shaper=0
+resetbutton_enable=1
+block_cookie=0
+wan_vdsl=0
+wan_iface=vlan1
+wl1_br1_enable=0
+rc_firewall=
+wl_frameburst=off
+ezc_enable=1
+NC_enable=0
+wl1_wds7_ipaddr=
+wl0_nmode_protection=auto
+wl0_br1_ipaddr=0.0.0.0
+wl1_dtim=1
+eth5_bridged=1
+wl0.1_bridged=1
+upnp_wan_proto=
+is_modified=1
+wl1_wme_ap_vo=3 7 1 3264 1504 off
+smtp_redirect_destination=0.0.0.0
+svqos_port3prio=10
+wl0.2_radius_key=
+dhcp_num=50
+filter_web_url1=
+wan_ipaddr=10.99.0.90
+wl0_passphrase=
+oet3_bridged=1
+filter_web_url2=
+reconnect_hours=0
+filter_web_url3=
+af_country=
+oet2_ip=1.2.3.4
+wl0_rts=2347
+filter_web_url4=
+af_ssid_name=AnchorFree WiFi
+ospfd_copt=0
+zebra_conf=
+filter_web_url5=
+fon_enable=0
+port2vlans=0
+wl1_wds10_enable=0
+wl_ifname=
+filter_web_url6=
+wan_wins=0.0.0.0
+wl0.2_wep_buf=:::::
+oet9_comp=0
+wds1.1=
+wl0_wds4_enable=0
+ipv6_enable=0
+ntp_mode=auto
+wl_wep=disabled
+http_enable=1
+filter_web_url7=
+wds1.2=
+wl0_radauth=0
+l2tp_pass=1
+filter_web_url8=
+phyid_num=0x00000000
+oet8_en=0
+eth9_bridged=1
+sputnik_mode=standard
+svqos_ips=
+wds1.3=
+ddns_dyndnstype=
+wl0.2_auth_mode=none
+pppoe_username=
+filter_web_url9=
+os_version=4.150.10.5
+oet7_bridged=1
+wds1.4=
+wl_gmode_protection=auto
+eth4_ipaddr=0.0.0.0
+wds1.5=
+wl1_wds8_if=
+wl0_wpa_gtk_rekey=3600
+wds1.6=
+mac_clone_enable=0
+wl0_sta_retry_time=5
+ppp_get_srv=
+oet1_id=1
+wds1.7=
+wl1_wds8_desc=
+wl0_wds3_hwaddr=00:00:00:00:00:00
+wl_frag=2346
+wds1.8=
+wan_mtu=1500
+wl_wep_gen=
+wl0_key=1
+eth1_netmask=0.0.0.0
+wds1.9=
+filter_macmode=deny
+gpio14=ses_button
+oet1_mssfix=0
+wl0_wds9_hwaddr=00:00:00:00:00:00
+wl0.2_closed=0
+svqos_port1prio=10
+ppp_compression=0
+console_loglevel=1
+et0phyaddr=30
+wl0X2_security_mode=disabled
+probe_blacklist= vlan0 
+NC_LoginTimeout=86400
+port0vlans=1
+dnsmasq_options=
+time_zone=+01
+oet7_comp=0
+reconnect_minutes=0
+wan_get_domain=fugue.com
+af_state=
+ttraff_enable=0
+oet7_mssfix=0
+wl1_wds4_enable=0
+wl0_wds2_ipaddr=
+wl0.1_netmask=255.255.255.0
+wan_ifname=vlan1
+eth5_netmask=0.0.0.0
+wl_wme_sta_be=15 1023 3 0 0 off
+radvd_enable=0
+upnp_max_age=180
+oet3_netmask=255.255.255.0
+oet1_ip=1.2.3.4
+wl_radioids=
+gozila_action=0
+af_ssid=0
+wl1_wds6_desc=
+wl1_rate=0
+wl0_dfs_postism=60
+wan_hostname=
+landevs=vlan0 wl0
+sh_zones=net Net Internet
+loc Local Local Networks
+dmz DMZ Dmz Zone
+wl0_wds8_ipaddr=
+wl0_radio=1
+wl_corerev=
+ppp_mtu=1500
+af_address=
+sv_restore_defaults=0
+zebra_enable=1
+wl0_wds0=*,auto,tkip,psk2,HM_DEMO,playstation4
+wl1_wds3_hwaddr=
+info_passwd=0
+wl0.1_wpa_psk=
+DD_BOARD=Linksys WRT54G/GL/GS
+wl0.1_nat=1
+wl0.1_gtk_rekey=3600
+svqos_port3bw=FULL
+wl0_wds2_netmask=
+wl_channel=0
+oet10_comp=0
+oet7_en=0
+wl_wme_sta_bk=15 1023 7 0 0 off
+manual_boot_nv=0
+wl0_bcn=100
+wl0.2_multicast=0
+pptpd_auth=
+radio0_on_time=111111111111111111111111
+macupd_interval=10
+wl1_wds7_if=
+wl1_wds9_hwaddr=
+block_multicast=0
+wl_afterburner=off
+wl_radio=1
+ppp_static=0
+filter_tod1=
+dtag_vlan8=0
+wl0_hwaddr=00:90:4C:91:00:03
+oet5_comp=0
+eth9_netmask=0.0.0.0
+log_rejected=0
+dyn_default=0
+filter_tod2=
+oet7_netmask=255.255.255.0
+filter_tod3=
+oet1_shaper=0
+filter_tod4=
+ezc_version=2
+dhcpc_done=1
+oet9_rem=192.168.90.1
+ddns_passwd_buf=
+wk_mode=gateway
+wl0_gmode_protection=auto
+filter_tod5=
+pa0b0=0x170c
+wl1_wds2_ipaddr=
+rc_shutdown=
+wl0.2_akm=disabled
+wl0.1_wpa_gtk_rekey=3600
+filter_tod6=
+pa0b1=0xfa24
+NC_GatewayMode=Open
+wl0_wds6_netmask=
+filter_tod7=
+pa0b2=0xfe70
+wl1_wds8_ospf=
+wl1_wds4_desc=
+wl0_radmacpassword=0
+wl_rts=2347
+filter_tod8=
+sdram_init=0x0002
+oet7_shaper=0
+wl0_wds9_desc=
+filter_tod9=
+wl0_abenable=1
+wl_ap_isolate=0
+lan_wins=
+vlan0hwname=et0
+dhcp_dnsmasq=1
+NC_IdleTimeout=0
+ip_conntrack_udp_timeouts=120
+wl1_wds8_ipaddr=
+dhcpd_options=
+wl_mac_list=
+lan_hwnames=
+wl1_abenable=1
+dhcpd_usejffs=
+static_leases=
+wl_wme_no_ack=off
+wds_watchdog_enable=0
+pppoe_demand=0
+local_dns=1
+wl0.3_auth=0
+oet3_comp=0
+wl0_wds10_desc=
+wl0_radius_key=
+wl1_gmode_protection=auto
+filter_dport_grp10=
+wl0_wme_ap_be=15 63 3 0 0 off
+wl0_wds10_netmask=
+ddns_username_buf=
+wl0_corerev=9
+wl0_nmcsidx=-1
+wl0_lazy_wds=
+wl1_wds3_netmask=
+wl1_rateset=default
+refresh_time=3
+wl0_channel=0
+oet6_en=0
+wl0_wds5_enable=0
+pptp_encrypt=0
+oet10_en=0
+NC_ForcedRedirect=0
+wl1_wds6_ospf=
+wl1_wds2_desc=
+oet7_rem=192.168.90.1
+wl0_wme_ap_bk=15 1023 7 0 0 off
+schedule_hour_time=1
+wl1_wds6_if=
+wl0_wds7_desc=
+wl0_wds10_enable=0
+dr_setting=0
+upnp_enable=0
+wl_wme_txp_be=7 3 4 2 0
+hs_redirect=
+http_redirect_destination=0.0.0.0
+eth5_ipaddr=0.0.0.0
+wl1_wds10_hwaddr=
+dhcpc_vendorclass=
+wl1_wme_sta_vi=7 15 2 6016 3008 off
+wol_hostname=
+wl0_wds4_hwaddr=00:00:00:00:00:00
+pptpd_lip=
+filter_rule10=
+eth2_bridged=1
+forwardspec_entries=0
+rflow_if=br0
+wl1_wds7_netmask=
+wl_dfs_preism=60
+wl0.1_auth=0
+wl0.1_wep=disabled
+oet1_comp=0
+wl_wme_txp_bk=7 3 4 2 0
+NC_AllowedWebHosts=
+def_whwaddr=00:00:00:00:00:00
+wl0_auth_mode=none
+oet2_mssfix=0
+dhcpc_requestip=
+status_auth=1
+wl0.3_closed=0
+et1phyaddr=0x1f
+wl1_wme_sta_vo=3 7 2 3264 1504 off
+autofw_port0=
+language=english
+wl0_crypto=tkip
+boardnum=WAP54GV3_8M_0614
+wl1_wds=
+def_hwaddr=00:00:00:00:00:00
+oet8_mssfix=0
+wl1_wds4_ospf=
+wl_bcn=100
+wl1_wds5_enable=0
+wl0_wds9_ospf=
+wl0_wds5_desc=
+wl0_wds3_ipaddr=
+macupd_enable=0
+wl_wep_buf=
+wl_reg_mode=off
+wl0.2_bridged=1
+oet10_mssfix=0
+eth6_bridged=1
+mmc_enable0=0
+oet4_bridged=1
+rflow_ip=0.0.0.0
+upnp_config=1
+wl0.2_radius_ipaddr=0.0.0.0
+filter_dport_grp1=
+oet5_rem=192.168.90.1
+oet1_fragment=0
+pptpd_client_mru=1450
+wl0_wds9_ipaddr=
+rc_custom=
+filter_dport_grp2=
+size: 20229 bytes (12539 left)
+*** command status = 0
+CFE> help nvram
+
+  SUMMARY
+
+     NVRAM utility.
+
+  USAGE
+
+     nvram [command] [args..]
+     
+     Access NVRAM.
+
+  OPTIONS
+
+     get [name]   Gets the value of the specified variable
+     set [name=va Sets the value of the specified variable
+     unset [name] Deletes the specified variable
+     commit       Commit variables to flash
+     erase        Erase all nvram
+     show         Shows all variables
+
+*** command status = 0
+CFE> help
+Available commands:
+
+rndis               Broadcom USB RNDIS utility.
+et                  Broadcom Ethernet utility.
+nvram               NVRAM utility.
+reboot              Reboot.
+flash               Update a flash memory device
+autoboot            Automatic system bootstrap.
+batch               Load a batch file into memory and execute it
+go                  Verify and boot OS image.
+boot                Load an executable file into memory and execute it
+load                Load an executable file into memory without executing it
+save                Save a region of memory to a remote file via TFTP
+ping                Ping a remote IP host.
+arp                 Display or modify the ARP Table
+ifconfig            Configure the Ethernet interface
+unsetenv            Delete an environment variable.
+printenv            Display the environment variables
+setenv              Set an environment variable.
+help                Obtain help for CFE commands
+
+For more information about a command, enter 'help command-name'
+*** command status = 0
+CFE> printenv
+Variable Name        Value
+-------------------- --------------------------------------------------
+BOOT_CONSOLE         uart0
+CFE_VERSION          1.0.37
+CFE_BOARDNAME        BCM947XX
+CFE_MEMORYSIZE       8192
+NET_DEVICE           eth0
+NET_IPADDR           192.168.1.1
+NET_NETMASK          255.255.255.0
+NET_GATEWAY          0.0.0.0
+NET_NAMESERVER       0.0.0.0
+STARTUP              go;
+*** command status = 0
+CFE> ar
+Invalid command: "ar"
+Available commands: rndis, et, nvram, reboot, flash, autoboot, batch, go, boot, load, save, ping, arp, ifconfig, unsetenv, printenv, setenv, help
+
+*** command status = -1
+CFE> arp
+No ARP entries.
+*** command status = 0
+CFE> boot
+**Exception 8: EPC=8030E06C, Cause=00008008 (TLBMissRd)
+                RA=803151F8, VAddr=00000000
+
+        0  ($00) = 00000000     AT ($01) = 80330000
+        v0 ($02) = 00000000     v1 ($03) = 8039935C
+        a0 ($04) = 80399258     a1 ($05) = 00000000
+        a2 ($06) = 000000C8     a3 ($07) = 00000003
+        t0 ($08) = 00000000     t1 ($09) = 80333590
+        t2 ($10) = 00000014     t3 ($11) = 00000001
+        t4 ($12) = B8000000     t5 ($13) = 000000A0
+        t6 ($14) = 00000055     t7 ($15) = 000000AA
+        s0 ($16) = 00000000     s1 ($17) = 803336D0
+        s2 ($18) = 80399358     s3 ($19) = 00000003
+        s4 ($20) = 00000002     s5 ($21) = B8000094
+        s6 ($22) = 0AAA0555     s7 ($23) = 00000001
+        t8 ($24) = 00800000     t9 ($25) = 00000000
+        k0 ($26) = 8030DFDC     k1 ($27) = 61697261
+        gp ($28) = 80337870     sp ($29) = 80399240
+        fp ($30) = 00000000     ra ($31) = 803151F8
+
+
+
+CFE version 1.0.37 for BCM947XX (32bit,SP,LE)
+Build Date: Thu Mar 24 16:31:45 CST 2005 (motoplayer@cvs.gemtek.com.tw)
+Copyright (C) 2000,2001,2002,2003 Broadcom Corporation.
+
+Initializing Arena
+Initializing Devices.
+et0: Broadcom BCM47xx 10/100 Mbps Ethernet Controller 3.90.39.0
+CPU type 0x29008: 200MHz
+Total memory: 8192 KBytes
+
+Total memory used by CFE:  0x80300000 - 0x80399700 (628480)
+Initialized Data:          0x8032F870 - 0x80331F50 (9952)
+BSS Area:                  0x80331F50 - 0x80333700 (6064)
+Local Heap:                0x80333700 - 0x80397700 (409600)
+Stack Area:                0x80397700 - 0x80399700 (8192)
+Text (code) segment:       0x80300000 - 0x8032F870 (194672)
+Boot area (physical):      0x0039A000 - 0x003DA000
+Relocation Factor:         I:00000000 - D:00000000
+
+Committing NVRAM...done
+Waiting for reset button release...don�
+
+CFE version 1.0.37 for BCM947XX (32bit,SP,LE)
+Build Date: Thu Mar 24 16:31:45 CST 2005 (motoplayer@cvs.gemtek.com.tw)
+Copyright (C) 2000,2001,2002,2003 Broadcom Corporation.
+
+Initializing Arena
+Initializing Devices.
+et0: Broadcom BCM47xx 10/100 Mbps Ethernet Controller 3.90.39.0
+CPU type 0x29008: 200MHz
+Total memory: 8192 KBytes
+
+Total memory used by CFE:  0x80300000 - 0x80399700 (628480)
+Initialized Data:          0x8032F870 - 0x80331F50 (9952)
+BSS Area:                  0x80331F50 - 0x80333700 (6064)
+Local Heap:                0x80333700 - 0x80397700 (409600)
+Stack Area:                0x80397700 - 0x80399700 (8192)
+Text (code) segment:       0x80300000 - 0x8032F870 (194672)
+Boot area (physical):      0x0039A000 - 0x003DA000
+Relocation Factor:         I:00000000 - D:00000000
+
+Device eth0:  hwaddr 00-90-4C-91-00-01, ipaddr 192.168.1.245, mask 255.255.255.0
+        gateway not set, nameserver not set
+Reading :: Failed.: Timeout occured
+Loader:raw Filesys:raw Dev:flash0.os File: Options:(null)
+Loading: .. 4092 bytes read
+Entry at 0x80001000
+Closing network.
+Starting program at 0x80001000
+Linux version 2.6.32.16 (zoobab@buzek) (gcc version 4.3.3 (GCC) ) #1 Sun Aug 22 15:49:13 CEST 2010
+CPU revision is: 00029008 (Broadcom BCM3302)
+ssb: Initializing MIPS core...
+ssb: set_irq: core 0x0806, irq 4 => 4
+ssb: set_irq: core 0x0816, irq 5 => 2
+ssb: set_irq: core 0x0812, irq 2 => 5
+ssb: after irq reconfiguration
+ssb: core 0x0800, irq : 2(S)  3* 4  5  6  D  I 
+ssb: core 0x0806, irq : 2(S)  3  4* 5  6  D  I 
+ssb: core 0x0816, irq : 2(S)* 3  4  5  6  D  I 
+ssb: core 0x0817, irq : 2(S)  3  4  5  6* D  I 
+ssb: core 0x080f, irq : 2(S)  3  4  5  6  D  I*
+ssb: core 0x0812, irq : 2(S)  3  4  5* 6  D  I 
+ssb: core 0x081c, irq : 2(S)  3  4  5  6  D  I*
+ssb: Sonics Silicon Backplane found at address 0x18000000
+Serial init done.
+Determined physical RAM map:
+ memory: 00800000 @ 00000000 (usable)
+Initrd not found or empty - disabling initrd
+Zone PFN ranges:
+  Normal   0x00000000 -> 0x00000800
+Movable zone start PFN for each node
+early_node_map[1] active PFN ranges
+    0: 0x00000000 -> 0x00000800
+Built 1 zonelists in Zone order, mobility grouping off.  Total pages: 2032
+Kernel command line: root=/dev/mtdblock2 rootfstype=squashfs,jffs2 noinitrd console=ttyS0,115200
+PID hash table entries: 32 (order: -5, 128 bytes)
+Dentry cache hash table entries: 1024 (order: 0, 4096 bytes)
+Inode-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Primary instruction cache 16kB, VIPT, 2-way, linesize 16 bytes.
+Primary data cache 8kB, 2-way, VIPT, no aliases, linesize 16 bytes
+Memory: 5248k/8192k available (2222k kernel code, 2944k reserved, 350k data, 136k init, 0k highmem)
+Hierarchical RCU implementation.
+NR_IRQS:128
+console [ttyS0] enabled
+Calibrating delay loop... 199.16 BogoMIPS (lpj=398336)
+Mount-cache hash table entries: 512
+NET: Registered protocol family 16
+bio: create slab <bio-0> at 0
+Switching to clocksource MIPS
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 512 (order: 0, 4096 bytes)
+TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+TCP: Hash tables configured (established 512 bind 512)
+TCP reno registered
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Registering mini_fo version $Id$
+JFFS2 version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+msgmni has been set to 16
+io scheduler noop registered
+io scheduler deadline registered (default)
+Serial: 8250/16550 driver, 2 ports, IRQ sharing enabled
+serial8250: ttyS0 at MMIO 0xb8000300 (irq = 3) is a 16550A
+serial8250: ttyS1 at MMIO 0xb8000400 (irq = 3) is a 16550A
+serial8250.0: ttyS0 at MMIO 0xb8000300 (irq = 3) is a 16550A
+serial8250.0: ttyS1 at MMIO 0xb8000400 (irq = 3) is a 16550A
+flash init: 0x1c000000 0x02000000
+Physically mapped flash: Found 1 x16 devices at 0x0 in 16-bit bank
+ CFI mfr 0x00000001
+ CFI id  0x00002249
+ Amd/Fujitsu Extended Query Table at 0x0040
+  Amd/Fujitsu Extended Query version 1.0.
+number of CFI chips: 1
+cfi_cmdset_0002: Disabling erase-suspend-program due to code brokenness.
+Flash device: 0x200000 at 0x1fc00000
+bootloader size: 262144
+Creating 4 MTD partitions on "Physically mapped flash":
+0x000000000000-0x000000040000 : "cfe"
+0x000000040000-0x0000001f0000 : "linux"
+0x000000120000-0x0000001f0000 : "rootfs"
+mtd: partition "rootfs" set to be root filesystem
+split_squashfs: no squashfs found in "Physically mapped flash"
+0x0000001f0000-0x000000200000 : "nvram"
+b44.c:v2.0
+eth0: Broadcom 44xx/47xx 10/100BaseT Ethernet 00:90:4c:91:00:01
+BCM47xx Watchdog Timer enabled (30 seconds, nowayout)
+TCP westwood registered
+NET: Registered protocol family 17
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+Node at 0x0000ffd8 with length 0x00000b32 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffdc: 0x0b32 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe0: 0xebbc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe4: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe8: 0x001c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffec: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000fff4: 0xd5ef instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010000: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010004: 0xb000 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010008: 0x0aee instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0001000c: 0x1000 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010010: 0x0006 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010014: 0x7c98 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010018: 0x37b4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0001001c: 0x5e78 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010020: 0x6c6d instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010024: 0x7e15 instead
+Further such events for this erase block will not be printed
+Node at 0x0002f998 with length 0x000009a1 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f99c: 0x09a1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a0: 0x7198 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a4: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a8: 0x004e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9ac: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9b4: 0xd5ef instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9b8: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9bc: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9c0: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9c4: 0xc000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030000: 0x08d3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030004: 0x8f69 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030008: 0x28fd instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0003000c: 0x0464 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030010: 0xf7be instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030014: 0x777d instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030018: 0x6d38 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0003001c: 0x62bc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030020: 0xddf8 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030024: 0x87d2 instead
+Further such events for this erase block will not be printed
+Node at 0x0004f858 with length 0x0000098e would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f85c: 0x098e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f860: 0xcef0 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f864: 0x0031 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f868: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f86c: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f874: 0x28b7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f878: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f87c: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f880: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f884: 0x1000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050000: 0xc7a7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050004: 0xf7ee instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050008: 0x6e76 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0005000c: 0x3939 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050010: 0x307e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050014: 0x4b1f instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050018: 0xd347 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0005001c: 0x3491 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050020: 0x6fa7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050024: 0x60e9 instead
+Further such events for this erase block will not be printed
+Node at 0x0006f810 with length 0x0000087c would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f814: 0x087c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f818: 0x7aeb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f81c: 0x00c5 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f820: 0x0005 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f824: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f82c: 0x7bf2 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f830: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f834: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f838: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f83c: 0x4000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070000: 0xdf34 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070004: 0xb1de instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070008: 0x9ed1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0007000c: 0x19b4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070010: 0xdb32 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070014: 0x85b9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070018: 0xc9e7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0007001c: 0xc6d3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070020: 0x731e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070024: 0xb302 instead
+Further such events for this erase block will not be printed
+Node at 0x0008fb4c with length 0x000009a9 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb50: 0x09a9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb54: 0x5977 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb58: 0x00cb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb5c: 0x0039 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb60: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb68: 0xfdd7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb6c: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb70: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb74: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb78: 0x7000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090000: 0x3b11 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090004: 0x0674 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090008: 0x7066 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0009000c: 0xcbc3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090010: 0xc5d1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090014: 0x57a9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090018: 0xfe4b instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0009001c: 0x8727 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090020: 0xf093 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090024: 0x41e8 instead
+Further such events for this erase block will not be printed
+Node at 0x000afae4 with length 0x00000652 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afae8: 0x0652 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaec: 0x8fec instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf0: 0x00e7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf4: 0x0001 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf8: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb00: 0x09d8 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb04: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb08: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb0c: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb14: 0x060e instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0000: 0xf820 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0004: 0x8ab9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0008: 0xaddb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b000c: 0x4a97 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0010: 0x7c23 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0014: 0x2696 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0018: 0xe7de instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b001c: 0xe8fb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0020: 0x3a11 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0024: 0x0034 instead
+Further such events for this erase block will not be printed
+Node at 0x000cfcb8 with length 0x00000459 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcbc: 0x0459 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc0: 0xdc83 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc4: 0x00fe instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc8: 0x002c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfccc: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcd4: 0xbbe4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcd8: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcdc: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfce0: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfce4: 0xa000 instead
+Further such events for this erase block will not be printed
+VFS: Mounted root (jffs2 filesystem) readonly on device 31:2.
+Freeing unused kernel memory: 136k freed
+Please be patient, while OpenWrt loads ...
+Kernel panic - not syncing: Attempted to kill init!
+
+
+CFE version 1.0.37 for BCM947XX (32bit,SP,LE)
+Build Date: Thu Mar 24 16:31:45 CST 2005 (motoplayer@cvs.gemtek.com.tw)
+Copyright (C) 2000,2001,2002,2003 Broadcom Corporation.
+
+Initializing Arena
+Initializing Devices.
+et0: Broadcom BCM47xx 10/100 Mbps Ethernet Controller 3.90.39.0
+CPU type 0x29008: 200MHz
+Total memory: 8192 KBytes
+
+Total memory used by CFE:  0x80300000 - 0x80399700 (628480)
+Initialized Data:          0x8032F870 - 0x80331F50 (9952)
+BSS Area:                  0x80331F50 - 0x80333700 (6064)
+Local Heap:                0x80333700 - 0x80397700 (409600)
+Stack Area:                0x80397700 - 0x80399700 (8192)
+Text (code) segment:       0x80300000 - 0x8032F870 (194672)
+Boot area (physical):      0x0039A000 - 0x003DA000
+Relocation Factor:         I:00000000 - D:00000000
+
+Device eth0:  hwaddr 00-90-4C-91-00-01, ipaddr 192.168.1.245, mask 255.255.255.0
+        gateway not set, nameserver not set
+Reading :: Failed.: Timeout occured
+Loader:raw Filesys:raw Dev:flash0.os File: Options:(null)
+Loading: .. 4092 bytes read
+Entry at 0x80001000
+Closing network.
+Starting program at 0x80001000
+Linux version 2.6.32.16 (zoobab@buzek) (gcc version 4.3.3 (GCC) ) #1 Sun Aug 22 15:49:13 CEST 2010
+CPU revision is: 00029008 (Broadcom BCM3302)
+ssb: Initializing MIPS core...
+ssb: set_irq: core 0x0806, irq 4 => 4
+ssb: set_irq: core 0x0816, irq 5 => 2
+ssb: set_irq: core 0x0812, irq 2 => 5
+ssb: after irq reconfiguration
+ssb: core 0x0800, irq : 2(S)  3* 4  5  6  D  I 
+ssb: core 0x0806, irq : 2(S)  3  4* 5  6  D  I 
+ssb: core 0x0816, irq : 2(S)* 3  4  5  6  D  I 
+ssb: core 0x0817, irq : 2(S)  3  4  5  6* D  I 
+ssb: core 0x080f, irq : 2(S)  3  4  5  6  D  I*
+ssb: core 0x0812, irq : 2(S)  3  4  5* 6  D  I 
+ssb: core 0x081c, irq : 2(S)  3  4  5  6  D  I*
+ssb: Sonics Silicon Backplane found at address 0x18000000
+Serial init done.
+Determined physical RAM map:
+ memory: 00800000 @ 00000000 (usable)
+Initrd not found or empty - disabling initrd
+Zone PFN ranges:
+  Normal   0x00000000 -> 0x00000800
+Movable zone start PFN for each node
+early_node_map[1] active PFN ranges
+    0: 0x00000000 -> 0x00000800
+Built 1 zonelists in Zone order, mobility grouping off.  Total pages: 2032
+Kernel command line: root=/dev/mtdblock2 rootfstype=squashfs,jffs2 noinitrd console=ttyS0,115200
+PID hash table entries: 32 (order: -5, 128 bytes)
+Dentry cache hash table entries: 1024 (order: 0, 4096 bytes)
+Inode-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Primary instruction cache 16kB, VIPT, 2-way, linesize 16 bytes.
+Primary data cache 8kB, 2-way, VIPT, no aliases, linesize 16 bytes
+Memory: 5248k/8192k available (2222k kernel code, 2944k reserved, 350k data, 136k init, 0k highmem)
+Hierarchical RCU implementation.
+NR_IRQS:128
+console [ttyS0] enabled
+Calibrating delay loop... 199.16 BogoMIPS (lpj=398336)
+Mount-cache hash table entries: 512
+NET: Registered protocol family 16
+bio: create slab <bio-0> at 0
+Switching to clocksource MIPS
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 512 (order: 0, 4096 bytes)
+TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+TCP: Hash tables configured (established 512 bind 512)
+TCP reno registered
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Registering mini_fo version $Id$
+JFFS2 version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+msgmni has been set to 16
+io scheduler noop registered
+io scheduler deadline registered (default)
+Serial: 8250/16550 driver, 2 ports, IRQ sharing enabled
+serial8250: ttyS0 at MMIO 0xb8000300 (irq = 3) is a 16550A
+serial8250: ttyS1 at MMIO 0xb8000400 (irq = 3) is a 16550A
+serial8250.0: ttyS0 at MMIO 0xb8000300 (irq = 3) is a 16550A
+serial8250.0: ttyS1 at MMIO 0xb8000400 (irq = 3) is a 16550A
+flash init: 0x1c000000 0x02000000
+Physically mapped flash: Found 1 x16 devices at 0x0 in 16-bit bank
+ CFI mfr 0x00000001
+ CFI id  0x00002249
+ Amd/Fujitsu Extended Query Table at 0x0040
+  Amd/Fujitsu Extended Query version 1.0.
+number of CFI chips: 1
+cfi_cmdset_0002: Disabling erase-suspend-program due to code brokenness.
+Flash device: 0x200000 at 0x1fc00000
+bootloader size: 262144
+Creating 4 MTD partitions on "Physically mapped flash":
+0x000000000000-0x000000040000 : "cfe"
+0x000000040000-0x0000001f0000 : "linux"
+0x000000120000-0x0000001f0000 : "rootfs"
+mtd: partition "rootfs" set to be root filesystem
+split_squashfs: no squashfs found in "Physically mapped flash"
+0x0000001f0000-0x000000200000 : "nvram"
+b44.c:v2.0
+eth0: Broadcom 44xx/47xx 10/100BaseT Ethernet 00:90:4c:91:00:01
+BCM47xx Watchdog Timer enabled (30 seconds, nowayout)
+TCP westwood registered
+NET: Registered protocol family 17
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+Node at 0x0000ffd8 with length 0x00000b32 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffdc: 0x0b32 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe0: 0xebbc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe4: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe8: 0x001c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffec: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000fff4: 0xd5ef instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010000: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010004: 0xb000 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010008: 0x0aee instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0001000c: 0x1000 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010010: 0x0006 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010014: 0x7c98 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010018: 0x37b4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0001001c: 0x5e78 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010020: 0x6c6d instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010024: 0x7e15 instead
+Further such events for this erase block will not be printed
+Node at 0x0002f998 with length 0x000009a1 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f99c: 0x09a1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a0: 0x7198 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a4: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a8: 0x004e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9ac: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9b4: 0xd5ef instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9b8: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9bc: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9c0: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9c4: 0xc000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030000: 0x08d3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030004: 0x8f69 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030008: 0x28fd instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0003000c: 0x0464 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030010: 0xf7be instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030014: 0x777d instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030018: 0x6d38 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0003001c: 0x62bc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030020: 0xddf8 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030024: 0x87d2 instead
+Further such events for this erase block will not be printed
+Node at 0x0004f858 with length 0x0000098e would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f85c: 0x098e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f860: 0xcef0 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f864: 0x0031 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f868: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f86c: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f874: 0x28b7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f878: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f87c: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f880: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f884: 0x1000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050000: 0xc7a7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050004: 0xf7ee instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050008: 0x6e76 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0005000c: 0x3939 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050010: 0x307e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050014: 0x4b1f instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050018: 0xd347 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0005001c: 0x3491 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050020: 0x6fa7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050024: 0x60e9 instead
+Further such events for this erase block will not be printed
+Node at 0x0006f810 with length 0x0000087c would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f814: 0x087c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f818: 0x7aeb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f81c: 0x00c5 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f820: 0x0005 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f824: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f82c: 0x7bf2 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f830: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f834: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f838: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f83c: 0x4000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070000: 0xdf34 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070004: 0xb1de instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070008: 0x9ed1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0007000c: 0x19b4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070010: 0xdb32 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070014: 0x85b9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070018: 0xc9e7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0007001c: 0xc6d3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070020: 0x731e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070024: 0xb302 instead
+Further such events for this erase block will not be printed
+Node at 0x0008fb4c with length 0x000009a9 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb50: 0x09a9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb54: 0x5977 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb58: 0x00cb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb5c: 0x0039 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb60: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb68: 0xfdd7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb6c: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb70: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb74: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb78: 0x7000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090000: 0x3b11 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090004: 0x0674 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090008: 0x7066 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0009000c: 0xcbc3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090010: 0xc5d1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090014: 0x57a9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090018: 0xfe4b instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0009001c: 0x8727 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090020: 0xf093 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090024: 0x41e8 instead
+Further such events for this erase block will not be printed
+Node at 0x000afae4 with length 0x00000652 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afae8: 0x0652 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaec: 0x8fec instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf0: 0x00e7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf4: 0x0001 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf8: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb00: 0x09d8 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb04: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb08: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb0c: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb14: 0x060e instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0000: 0xf820 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0004: 0x8ab9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0008: 0xaddb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b000c: 0x4a97 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0010: 0x7c23 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0014: 0x2696 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0018: 0xe7de instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b001c: 0xe8fb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0020: 0x3a11 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0024: 0x0034 instead
+Further such events for this erase block will not be printed
+Node at 0x000cfcb8 with length 0x00000459 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcbc: 0x0459 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc0: 0xdc83 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc4: 0x00fe instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc8: 0x002c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfccc: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcd4: 0xbbe4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcd8: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcdc: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfce0: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfce4: 0xa000 instead
+Further such events for this erase block will not be printed
+VFS: Mounted root (jffs2 filesystem) readonly on device 31:2.
+Freeing unused kernel memory: 136k freed
+Please be patient, while OpenWrt loads ...
+Kernel panic - not syncing: Attempted to kill init!
+
+
+CFE version 1.0.37 for BCM947XX (32bit,SP,LE)
+Build Date: Thu Mar 24 16:31:45 CST 2005 (motoplayer@cvs.gemtek.com.tw)
+Copyright (C) 2000,2001,2002,2003 Broadcom Corporation.
+
+Initializing Arena
+Initializing Devices.
+et0: Broadcom BCM47xx 10/100 Mbps Ethernet Controller 3.90.39.0
+CPU type 0x29008: 200MHz
+Total memory: 8192 KBytes
+
+Total memory used by CFE:  0x80300000 - 0x80399700 (628480)
+Initialized Data:          0x8032F870 - 0x80331F50 (9952)
+BSS Area:                  0x80331F50 - 0x80333700 (6064)
+Local Heap:                0x80333700 - 0x80397700 (409600)
+Stack Area:                0x80397700 - 0x80399700 (8192)
+Text (code) segment:       0x80300000 - 0x8032F870 (194672)
+Boot area (physical):      0x0039A000 - 0x003DA000
+Relocation Factor:         I:00000000 - D:00000000
+
+Device eth0:  hwaddr 00-90-4C-91-00-01, ipaddr 192.168.1.245, mask 255.255.255.0
+        gateway not set, nameserver not set
+Reading :: Failed.: Timeout occured
+Loader:raw Filesys:raw Dev:flash0.os File: Options:(null)
+Loading: .. 4092 bytes read
+Entry at 0x80001000
+Closing network.
+Starting program at 0x80001000
+Linux version 2.6.32.16 (zoobab@buzek) (gcc version 4.3.3 (GCC) ) #1 Sun Aug 22 15:49:13 CEST 2010
+CPU revision is: 00029008 (Broadcom BCM3302)
+ssb: Initializing MIPS core...
+ssb: set_irq: core 0x0806, irq 4 => 4
+ssb: set_irq: core 0x0816, irq 5 => 2
+ssb: set_irq: core 0x0812, irq 2 => 5
+ssb: after irq reconfiguration
+ssb: core 0x0800, irq : 2(S)  3* 4  5  6  D  I 
+ssb: core 0x0806, irq : 2(S)  3  4* 5  6  D  I 
+ssb: core 0x0816, irq : 2(S)* 3  4  5  6  D  I 
+ssb: core 0x0817, irq : 2(S)  3  4  5  6* D  I 
+ssb: core 0x080f, irq : 2(S)  3  4  5  6  D  I*
+ssb: core 0x0812, irq : 2(S)  3  4  5* 6  D  I 
+ssb: core 0x081c, irq : 2(S)  3  4  5  6  D  I*
+ssb: Sonics Silicon Backplane found at address 0x18000000
+Serial init done.
+Determined physical RAM map:
+ memory: 00800000 @ 00000000 (usable)
+Initrd not found or empty - disabling initrd
+Zone PFN ranges:
+  Normal   0x00000000 -> 0x00000800
+Movable zone start PFN for each node
+early_node_map[1] active PFN ranges
+    0: 0x00000000 -> 0x00000800
+Built 1 zonelists in Zone order, mobility grouping off.  Total pages: 2032
+Kernel command line: root=/dev/mtdblock2 rootfstype=squashfs,jffs2 noinitrd console=ttyS0,115200
+PID hash table entries: 32 (order: -5, 128 bytes)
+Dentry cache hash table entries: 1024 (order: 0, 4096 bytes)
+Inode-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Primary instruction cache 16kB, VIPT, 2-way, linesize 16 bytes.
+Primary data cache 8kB, 2-way, VIPT, no aliases, linesize 16 bytes
+Memory: 5248k/8192k available (2222k kernel code, 2944k reserved, 350k data, 136k init, 0k highmem)
+Hierarchical RCU implementation.
+NR_IRQS:128
+console [ttyS0] enabled
+Calibrating delay loop... 199.16 BogoMIPS (lpj=398336)
+Mount-cache hash table entries: 512
+NET: Registered protocol family 16
+bio: create slab <bio-0> at 0
+Switching to clocksource MIPS
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 512 (order: 0, 4096 bytes)
+TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+TCP: Hash tables configured (established 512 bind 512)
+TCP reno registered
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Registering mini_fo version $Id$
+JFFS2 version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+msgmni has been set to 16
+io scheduler noop registered
+io scheduler deadline registered (default)
+Serial: 8250/16550 driver, 2 ports, IRQ sharing enabled
+serial8250: ttyS0 at MMIO 0xb8000300 (irq = 3) is a 16550A
+serial8250: ttyS1 at MMIO 0xb8000400 (irq = 3) is a 16550A
+serial8250.0: ttyS0 at MMIO 0xb8000300 (irq = 3) is a 16550A
+serial8250.0: ttyS1 at MMIO 0xb8000400 (irq = 3) is a 16550A
+flash init: 0x1c000000 0x02000000
+Physically mapped flash: Found 1 x16 devices at 0x0 in 16-bit bank
+ CFI mfr 0x00000001
+ CFI id  0x00002249
+ Amd/Fujitsu Extended Query Table at 0x0040
+  Amd/Fujitsu Extended Query version 1.0.
+number of CFI chips: 1
+cfi_cmdset_0002: Disabling erase-suspend-program due to code brokenness.
+Flash device: 0x200000 at 0x1fc00000
+bootloader size: 262144
+Creating 4 MTD partitions on "Physically mapped flash":
+0x000000000000-0x000000040000 : "cfe"
+0x000000040000-0x0000001f0000 : "linux"
+0x000000120000-0x0000001f0000 : "rootfs"
+mtd: partition "rootfs" set to be root filesystem
+split_squashfs: no squashfs found in "Physically mapped flash"
+0x0000001f0000-0x000000200000 : "nvram"
+b44.c:v2.0
+eth0: Broadcom 44xx/47xx 10/100BaseT Ethernet 00:90:4c:91:00:01
+BCM47xx Watchdog Timer enabled (30 seconds, nowayout)
+TCP westwood registered
+NET: Registered protocol family 17
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+Node at 0x0000ffd8 with length 0x00000b32 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffdc: 0x0b32 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe0: 0xebbc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe4: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe8: 0x001c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffec: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000fff4: 0xd5ef instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010000: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010004: 0xb000 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010008: 0x0aee instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0001000c: 0x1000 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010010: 0x0006 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010014: 0x7c98 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010018: 0x37b4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0001001c: 0x5e78 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010020: 0x6c6d instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010024: 0x7e15 instead
+Further such events for this erase block will not be printed
+Node at 0x0002f998 with length 0x000009a1 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f99c: 0x09a1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a0: 0x7198 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a4: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a8: 0x004e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9ac: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9b4: 0xd5ef instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9b8: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9bc: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9c0: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9c4: 0xc000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030000: 0x08d3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030004: 0x8f69 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030008: 0x28fd instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0003000c: 0x0464 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030010: 0xf7be instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030014: 0x777d instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030018: 0x6d38 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0003001c: 0x62bc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030020: 0xddf8 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030024: 0x87d2 instead
+Further such events for this erase block will not be printed
+Node at 0x0004f858 with length 0x0000098e would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f85c: 0x098e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f860: 0xcef0 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f864: 0x0031 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f868: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f86c: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f874: 0x28b7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f878: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f87c: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f880: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f884: 0x1000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050000: 0xc7a7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050004: 0xf7ee instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050008: 0x6e76 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0005000c: 0x3939 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050010: 0x307e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050014: 0x4b1f instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050018: 0xd347 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0005001c: 0x3491 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050020: 0x6fa7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050024: 0x60e9 instead
+Further such events for this erase block will not be printed
+Node at 0x0006f810 with length 0x0000087c would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f814: 0x087c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f818: 0x7aeb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f81c: 0x00c5 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f820: 0x0005 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f824: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f82c: 0x7bf2 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f830: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f834: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f838: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f83c: 0x4000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070000: 0xdf34 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070004: 0xb1de instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070008: 0x9ed1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0007000c: 0x19b4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070010: 0xdb32 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070014: 0x85b9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070018: 0xc9e7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0007001c: 0xc6d3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070020: 0x731e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070024: 0xb302 instead
+Further such events for this erase block will not be printed
+Node at 0x0008fb4c with length 0x000009a9 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb50: 0x09a9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb54: 0x5977 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb58: 0x00cb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb5c: 0x0039 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb60: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb68: 0xfdd7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb6c: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb70: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb74: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb78: 0x7000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090000: 0x3b11 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090004: 0x0674 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090008: 0x7066 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0009000c: 0xcbc3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090010: 0xc5d1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090014: 0x57a9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090018: 0xfe4b instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0009001c: 0x8727 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090020: 0xf093 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090024: 0x41e8 instead
+Further such events for this erase block will not be printed
+Node at 0x000afae4 with length 0x00000652 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afae8: 0x0652 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaec: 0x8fec instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf0: 0x00e7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf4: 0x0001 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf8: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb00: 0x09d8 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb04: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb08: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb0c: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb14: 0x060e instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0000: 0xf820 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0004: 0x8ab9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0008: 0xaddb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b000c: 0x4a97 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0010: 0x7c23 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0014: 0x2696 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0018: 0xe7de instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b001c: 0xe8fb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0020: 0x3a11 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0024: 0x0034 instead
+Further such events for this erase block will not be printed
+Node at 0x000cfcb8 with length 0x00000459 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcbc: 0x0459 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc0: 0xdc83 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc4: 0x00fe instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc8: 0x002c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfccc: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcd4: 0xbbe4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcd8: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcdc: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfce0: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfce4: 0xa000 instead
+Further such events for this erase block will not be printed
+VFS: Mounted root (jffs2 filesystem) readonly on device 31:2.
+Freeing unused kernel memory: 136k freed
+Please be patient, while OpenWrt loads ...
+Kernel panic - not syncing: Attempted to kill init!
+�
+
+CFE version 1.0.37 for BCM947XX (32bit,SP,LE)
+Build Date: Thu Mar 24 16:31:45 CST 2005 (motoplayer@cvs.gemtek.com.tw)
+Copyright (C) 2000,2001,2002,2003 Broadcom Corporation.
+
+Initializing Arena
+Initializing Devices.
+et0: Broadcom BCM47xx 10/100 Mbps Ethernet Controller 3.90.39.0
+CPU type 0x29008: 200MHz
+Total memory: 8192 KBytes
+
+Total memory used by CFE:  0x80300000 - 0x80399700 (628480)
+Initialized Data:          0x8032F870 - 0x80331F50 (9952)
+BSS Area:                  0x80331F50 - 0x80333700 (6064)
+Local Heap:                0x80333700 - 0x80397700 (409600)
+Stack Area:                0x80397700 - 0x80399700 (8192)
+Text (code) segment:       0x80300000 - 0x8032F870 (194672)
+Boot area (physical):      0x0039A000 - 0x003DA000
+Relocation Factor:         I:00000000 - D:00000000
+
+Device eth0:  hwaddr 00-90-4C-91-00-01, ipaddr 192.168.1.245, mask 255.255.255.0
+        gateway not set, nameserver not set
+Reading :: Failed.: Timeout occured
+Loader:raw Filesys:raw Dev:flash0.os File: Options:(null)
+Loading: .. 4092 bytes read
+Entry at 0x80001000
+Closing network.
+Starting program at 0x80001000
+Linux version 2.6.32.16 (zoobab@buzek) (gcc version 4.3.3 (GCC) ) #1 Sun Aug 22 15:49:13 CEST 2010
+CPU revision is: 00029008 (Broadcom BCM3302)
+ssb: Initializing MIPS core...
+ssb: set_irq: core 0x0806, irq 4 => 4
+ssb: set_irq: core 0x0816, irq 5 => 2
+ssb: set_irq: core 0x0812, irq 2 => 5
+ssb: after irq reconfiguration
+ssb: core 0x0800, irq : 2(S)  3* 4  5  6  D  I 
+ssb: core 0x0806, irq : 2(S)  3  4* 5  6  D  I 
+ssb: core 0x0816, irq : 2(S)* 3  4  5  6  D  I 
+ssb: core 0x0817, irq : 2(S)  3  4  5  6* D  I 
+ssb: core 0x080f, irq : 2(S)  3  4  5  6  D  I*
+ssb: core 0x0812, irq : 2(S)  3  4  5* 6  D  I 
+ssb: core 0x081c, irq : 2(S)  3  4  5  6  D  I*
+ssb: Sonics Silicon Backplane found at address 0x18000000
+Serial init done.
+Determined physical RAM map:
+ memory: 00800000 @ 00000000 (usable)
+Initrd not found or empty - disabling initrd
+Zone PFN ranges:
+  Normal   0x00000000 -> 0x00000800
+Movable zone start PFN for each node
+early_node_map[1] active PFN ranges
+    0: 0x00000000 -> 0x00000800
+Built 1 zonelists in Zone order, mobility grouping off.  Total pages: 2032
+Kernel command line: root=/dev/mtdblock2 rootfstype=squashfs,jffs2 noinitrd console=ttyS0,115200
+PID hash table entries: 32 (order: -5, 128 bytes)
+Dentry cache hash table entries: 1024 (order: 0, 4096 bytes)
+Inode-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Primary instruction cache 16kB, VIPT, 2-way, linesize 16 bytes.
+Primary data cache 8kB, 2-way, VIPT, no aliases, linesize 16 bytes
+Memory: 5248k/8192k available (2222k kernel code, 2944k reserved, 350k data, 136k init, 0k highmem)
+Hierarchical RCU implementation.
+NR_IRQS:128
+console [ttyS0] enabled
+Calibrating delay loop... 199.16 BogoMIPS (lpj=398336)
+Mount-cache hash table entries: 512
+NET: Registered protocol family 16
+bio: create slab <bio-0> at 0
+Switching to clocksource MIPS
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 512 (order: 0, 4096 bytes)
+TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+TCP: Hash tables configured (established 512 bind 512)
+TCP reno registered
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Registering mini_fo version $Id$
+JFFS2 version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+msgmni has been set to 16
+io scheduler noop registered
+io scheduler deadline registered (default)
+Serial: 8250/16550 driver, 2 ports, IRQ sharing enabled
+serial8250: ttyS0 at MMIO 0xb8000300 (irq = 3) is a 16550A
+serial8250: ttyS1 at MMIO 0xb8000400 (irq = 3) is a 16550A
+serial8250.0: ttyS0 at MMIO 0xb8000300 (irq = 3) is a 16550A
+serial8250.0: ttyS1 at MMIO 0xb8000400 (irq = 3) is a 16550A
+flash init: 0x1c000000 0x02000000
+Physically mapped flash: Found 1 x16 devices at 0x0 in 16-bit bank
+ CFI mfr 0x00000001
+ CFI id  0x00002249
+ Amd/Fujitsu Extended Query Table at 0x0040
+  Amd/Fujitsu Extended Query version 1.0.
+number of CFI chips: 1
+cfi_cmdset_0002: Disabling erase-suspend-program due to code brokenness.
+Flash device: 0x200000 at 0x1fc00000
+bootloader size: 262144
+Creating 4 MTD partitions on "Physically mapped flash":
+0x000000000000-0x000000040000 : "cfe"
+0x000000040000-0x0000001f0000 : "linux"
+0x000000120000-0x0000001f0000 : "rootfs"
+mtd: partition "rootfs" set to be root filesystem
+split_squashfs: no squashfs found in "Physically mapped flash"
+0x0000001f0000-0x000000200000 : "nvram"
+b44.c:v2.0
+eth0: Broadcom 44xx/47xx 10/100BaseT Ethernet 00:90:4c:91:00:01
+BCM47xx Watchdog Timer enabled (30 seconds, nowayout)
+TCP westwood registered
+NET: Registered protocol family 17
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+Node at 0x0000ffd8 with length 0x00000b32 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffdc: 0x0b32 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe0: 0xebbc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe4: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe8: 0x001c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffec: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000fff4: 0xd5ef instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010000: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010004: 0xb000 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010008: 0x0aee instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0001000c: 0x1000 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010010: 0x0006 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010014: 0x7c98 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010018: 0x37b4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0001001c: 0x5e78 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010020: 0x6c6d instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010024: 0x7e15 instead
+Further such events for this erase block will not be printed
+Node at 0x0002f998 with length 0x000009a1 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f99c: 0x09a1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a0: 0x7198 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a4: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a8: 0x004e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9ac: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9b4: 0xd5ef instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9b8: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9bc: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9c0: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9c4: 0xc000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030000: 0x08d3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030004: 0x8f69 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030008: 0x28fd instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0003000c: 0x0464 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030010: 0xf7be instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030014: 0x777d instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030018: 0x6d38 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0003001c: 0x62bc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030020: 0xddf8 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030024: 0x87d2 instead
+Further such events for this erase block will not be printed
+Node at 0x0004f858 with length 0x0000098e would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f85c: 0x098e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f860: 0xcef0 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f864: 0x0031 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f868: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f86c: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f874: 0x28b7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f878: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f87c: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f880: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f884: 0x1000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050000: 0xc7a7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050004: 0xf7ee instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050008: 0x6e76 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0005000c: 0x3939 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050010: 0x307e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050014: 0x4b1f instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050018: 0xd347 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0005001c: 0x3491 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050020: 0x6fa7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050024: 0x60e9 instead
+Further such events for this erase block will not be printed
+Node at 0x0006f810 with length 0x0000087c would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f814: 0x087c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f818: 0x7aeb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f81c: 0x00c5 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f820: 0x0005 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f824: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f82c: 0x7bf2 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f830: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f834: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f838: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f83c: 0x4000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070000: 0xdf34 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070004: 0xb1de instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070008: 0x9ed1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0007000c: 0x19b4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070010: 0xdb32 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070014: 0x85b9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070018: 0xc9e7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0007001c: 0xc6d3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070020: 0x731e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070024: 0xb302 instead
+Further such events for this erase block will not be printed
+Node at 0x0008fb4c with length 0x000009a9 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb50: 0x09a9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb54: 0x5977 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb58: 0x00cb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb5c: 0x0039 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb60: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb68: 0xfdd7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb6c: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb70: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb74: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb78: 0x7000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090000: 0x3b11 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090004: 0x0674 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090008: 0x7066 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0009000c: 0xcbc3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090010: 0xc5d1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090014: 0x57a9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090018: 0xfe4b instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0009001c: 0x8727 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090020: 0xf093 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090024: 0x41e8 instead
+Further such events for this erase block will not be printed
+Node at 0x000afae4 with length 0x00000652 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afae8: 0x0652 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaec: 0x8fec instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf0: 0x00e7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf4: 0x0001 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf8: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb00: 0x09d8 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb04: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb08: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb0c: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb14: 0x060e instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0000: 0xf820 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0004: 0x8ab9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0008: 0xaddb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b000c: 0x4a97 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0010: 0x7c23 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0014: 0x2696 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0018: 0xe7de instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b001c: 0xe8fb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0020: 0x3a11 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0024: 0x0034 instead
+Further such events for this erase block will not be printed
+Node at 0x000cfcb8 with length 0x00000459 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcbc: 0x0459 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc0: 0xdc83 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc4: 0x00fe instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc8: 0x002c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfccc: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcd4: 0xbbe4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcd8: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcdc: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfce0: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfce4: 0xa000 instead
+Further such events for this erase block will not be printed
+VFS: Mounted root (jffs2 filesystem) readonly on device 31:2.
+Freeing unused kernel memory: 136k freed
+Please be patient, while OpenWrt loads ...
+Kernel panic - not syncing: Attempted to kill init!
+
+
+CFE version 1.0.37 for BCM947XX (32bit,SP,LE)
+Build Date: Thu Mar 24 16:31:45 CST 2005 (motoplayer@cvs.gemtek.com.tw)
+Copyright (C) 2000,2001,2002,2003 Broadcom Corporation.
+
+Initializing Arena
+Initializing Devices.
+et0: Broadcom BCM47xx 10/100 Mbps Ethernet Controller 3.90.39.0
+CPU type 0x29008: 200MHz
+Total memory: 8192 KBytes
+
+Total memory used by CFE:  0x80300000 - 0x80399700 (628480)
+Initialized Data:          0x8032F870 - 0x80331F50 (9952)
+BSS Area:                  0x80331F50 - 0x80333700 (6064)
+Local Heap:                0x80333700 - 0x80397700 (409600)
+Stack Area:                0x80397700 - 0x80399700 (8192)
+Text (code) segment:       0x80300000 - 0x8032F870 (194672)
+Boot area (physical):      0x0039A000 - 0x003DA000
+Relocation Factor:         I:00000000 - D:00000000
+
+Device eth0:  hwaddr 00-90-4C-91-00-01, ipaddr 192.168.1.245, mask 255.255.255.0
+        gateway not set, nameserver not set
+Reading :: Failed.: Timeout occured
+Loader:raw Filesys:raw Dev:flash0.os File: Options:(null)
+Loading: .. 4092 bytes read
+Entry at 0x80001000
+Closing network.
+Starting program at 0x80001000
+Linux version 2.6.32.16 (zoobab@buzek) (gcc version 4.3.3 (GCC) ) #1 Sun Aug 22 15:49:13 CEST 2010
+CPU revision is: 00029008 (Broadcom BCM3302)
+ssb: Initializing MIPS core...
+ssb: set_irq: core 0x0806, irq 4 => 4
+ssb: set_irq: core 0x0816, irq 5 => 2
+ssb: set_irq: core 0x0812, irq 2 => 5
+ssb: after irq reconfiguration
+ssb: core 0x0800, irq : 2(S)  3* 4  5  6  D  I 
+ssb: core 0x0806, irq : 2(S)  3  4* 5  6  D  I 
+ssb: core 0x0816, irq : 2(S)* 3  4  5  6  D  I 
+ssb: core 0x0817, irq : 2(S)  3  4  5  6* D  I 
+ssb: core 0x080f, irq : 2(S)  3  4  5  6  D  I*
+ssb: core 0x0812, irq : 2(S)  3  4  5* 6  D  I 
+ssb: core 0x081c, irq : 2(S)  3  4  5  6  D  I*
+ssb: Sonics Silicon Backplane found at address 0x18000000
+Serial init done.
+Determined physical RAM map:
+ memory: 00800000 @ 00000000 (usable)
+Initrd not found or empty - disabling initrd
+Zone PFN ranges:
+  Normal   0x00000000 -> 0x00000800
+Movable zone start PFN for each node
+early_node_map[1] active PFN ranges
+    0: 0x00000000 -> 0x00000800
+Built 1 zonelists in Zone order, mobility grouping off.  Total pages: 2032
+Kernel command line: root=/dev/mtdblock2 rootfstype=squashfs,jffs2 noinitrd console=ttyS0,115200
+PID hash table entries: 32 (order: -5, 128 bytes)
+Dentry cache hash table entries: 1024 (order: 0, 4096 bytes)
+Inode-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Primary instruction cache 16kB, VIPT, 2-way, linesize 16 bytes.
+Primary data cache 8kB, 2-way, VIPT, no aliases, linesize 16 bytes
+Memory: 5248k/8192k available (2222k kernel code, 2944k reserved, 350k data, 136k init, 0k highmem)
+Hierarchical RCU implementation.
+NR_IRQS:128
+console [ttyS0] enabled
+Calibrating delay loop... 199.16 BogoMIPS (lpj=398336)
+Mount-cache hash table entries: 512
+NET: Registered protocol family 16
+bio: create slab <bio-0> at 0
+Switching to clocksource MIPS
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 512 (order: 0, 4096 bytes)
+TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+TCP: Hash tables configured (established 512 bind 512)
+TCP reno registered
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Registering mini_fo version $Id$
+JFFS2 version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+msgmni has been set to 16
+io scheduler noop registered
+io scheduler deadline registered (default)
+Serial: 8250/16550 driver, 2 ports, IRQ sharing enabled
+serial8250: ttyS0 at MMIO 0xb8000300 (irq = 3) is a 16550A
+serial8250: ttyS1 at MMIO 0xb8000400 (irq = 3) is a 16550A
+serial8250.0: ttyS0 at MMIO 0xb8000300 (irq = 3) is a 16550A
+serial8250.0: ttyS1 at MMIO 0xb8000400 (irq = 3) is a 16550A
+flash init: 0x1c000000 0x02000000
+Physically mapped flash: Found 1 x16 devices at 0x0 in 16-bit bank
+ CFI mfr 0x00000001
+ CFI id  0x00002249
+ Amd/Fujitsu Extended Query Table at 0x0040
+  Amd/Fujitsu Extended Query version 1.0.
+number of CFI chips: 1
+cfi_cmdset_0002: Disabling erase-suspend-program due to code brokenness.
+Flash device: 0x200000 at 0x1fc00000
+bootloader size: 262144
+Creating 4 MTD partitions on "Physically mapped flash":
+0x000000000000-0x000000040000 : "cfe"
+0x000000040000-0x0000001f0000 : "linux"
+0x000000120000-0x0000001f0000 : "rootfs"
+mtd: partition "rootfs" set to be root filesystem
+split_squashfs: no squashfs found in "Physically mapped flash"
+0x0000001f0000-0x000000200000 : "nvram"
+b44.c:v2.0
+eth0: Broadcom 44xx/47xx 10/100BaseT Ethernet 00:90:4c:91:00:01
+BCM47xx Watchdog Timer enabled (30 seconds, nowayout)
+TCP westwood registered
+NET: Registered protocol family 17
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+Node at 0x0000ffd8 with length 0x00000b32 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffdc: 0x0b32 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe0: 0xebbc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe4: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe8: 0x001c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffec: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000fff4: 0xd5ef instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010000: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010004: 0xb000 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010008: 0x0aee instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0001000c: 0x1000 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010010: 0x0006 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010014: 0x7c98 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010018: 0x37b4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0001001c: 0x5e78 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010020: 0x6c6d instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010024: 0x7e15 instead
+Further such events for this erase block will not be printed
+Node at 0x0002f998 with length 0x000009a1 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f99c: 0x09a1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a0: 0x7198 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a4: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a8: 0x004e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9ac: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9b4: 0xd5ef instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9b8: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9bc: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9c0: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9c4: 0xc000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030000: 0x08d3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030004: 0x8f69 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030008: 0x28fd instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0003000c: 0x0464 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030010: 0xf7be instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030014: 0x777d instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030018: 0x6d38 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0003001c: 0x62bc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030020: 0xddf8 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030024: 0x87d2 instead
+Further such events for this erase block will not be printed
+Node at 0x0004f858 with length 0x0000098e would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f85c: 0x098e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f860: 0xcef0 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f864: 0x0031 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f868: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f86c: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f874: 0x28b7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f878: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f87c: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f880: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f884: 0x1000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050000: 0xc7a7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050004: 0xf7ee instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050008: 0x6e76 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0005000c: 0x3939 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050010: 0x307e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050014: 0x4b1f instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050018: 0xd347 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0005001c: 0x3491 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050020: 0x6fa7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050024: 0x60e9 instead
+Further such events for this erase block will not be printed
+Node at 0x0006f810 with length 0x0000087c would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f814: 0x087c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f818: 0x7aeb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f81c: 0x00c5 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f820: 0x0005 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f824: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f82c: 0x7bf2 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f830: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f834: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f838: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f83c: 0x4000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070000: 0xdf34 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070004: 0xb1de instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070008: 0x9ed1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0007000c: 0x19b4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070010: 0xdb32 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070014: 0x85b9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070018: 0xc9e7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0007001c: 0xc6d3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070020: 0x731e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070024: 0xb302 instead
+Further such events for this erase block will not be printed
+Node at 0x0008fb4c with length 0x000009a9 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb50: 0x09a9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb54: 0x5977 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb58: 0x00cb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb5c: 0x0039 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb60: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb68: 0xfdd7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb6c: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb70: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb74: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb78: 0x7000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090000: 0x3b11 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090004: 0x0674 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090008: 0x7066 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0009000c: 0xcbc3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090010: 0xc5d1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090014: 0x57a9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090018: 0xfe4b instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0009001c: 0x8727 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090020: 0xf093 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090024: 0x41e8 instead
+Further such events for this erase block will not be printed
+Node at 0x000afae4 with length 0x00000652 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afae8: 0x0652 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaec: 0x8fec instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf0: 0x00e7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf4: 0x0001 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf8: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb00: 0x09d8 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb04: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb08: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb0c: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb14: 0x060e instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0000: 0xf820 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0004: 0x8ab9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0008: 0xaddb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b000c: 0x4a97 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0010: 0x7c23 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0014: 0x2696 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0018: 0xe7de instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b001c: 0xe8fb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0020: 0x3a11 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0024: 0x0034 instead
+Further such events for this erase block will not be printed
+Node at 0x000cfcb8 with length 0x00000459 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcbc: 0x0459 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc0: 0xdc83 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc4: 0x00fe instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc8: 0x002c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfccc: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcd4: 0xbbe4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcd8: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcdc: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfce0: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfce4: 0xa000 instead
+Further such events for this erase block will not be printed
+VFS: Mounted root (jffs2 filesystem) readonly on device 31:2.
+Freeing unused kernel memory: 136k freed
+Please be patient, while OpenWrt loads ...
+Kernel panic - not syncing: Attempted to kill init!
+
+
+CFE version 1.0.37 for BCM947XX (32bit,SP,LE)
+Build Date: Thu Mar 24 16:31:45 CST 2005 (motoplayer@cvs.gemtek.com.tw)
+Copyright (C) 2000,2001,2002,2003 Broadcom Corporation.
+
+Initializing Arena
+Initializing Devices.
+et0: Broadcom BCM47xx 10/100 Mbps Ethernet Controller 3.90.39.0
+CPU type 0x29008: 200MHz
+Total memory: 8192 KBytes
+
+Total memory used by CFE:  0x80300000 - 0x80399700 (628480)
+Initialized Data:          0x8032F870 - 0x80331F50 (9952)
+BSS Area:                  0x80331F50 - 0x80333700 (6064)
+Local Heap:                0x80333700 - 0x80397700 (409600)
+Stack Area:                0x80397700 - 0x80399700 (8192)
+Text (code) segment:       0x80300000 - 0x8032F870 (194672)
+Boot area (physical):      0x0039A000 - 0x003DA000
+Relocation Factor:         I:00000000 - D:00000000
+
+Device eth0:  hwaddr 00-90-4C-91-00-01, ipaddr 192.168.1.245, mask 255.255.255.0
+        gateway not set, nameserver not set
+Reading :: Failed.: Timeout occured
+Loader:raw Filesys:raw Dev:flash0.os File: Options:(null)
+Loading: .. 4092 bytes read
+Entry at 0x80001000
+Closing network.
+Starting program at 0x80001000
+Linux version 2.6.32.16 (zoobab@buzek) (gcc version 4.3.3 (GCC) ) #1 Sun Aug 22 15:49:13 CEST 2010
+CPU revision is: 00029008 (Broadcom BCM3302)
+ssb: Initializing MIPS core...
+ssb: set_irq: core 0x0806, irq 4 => 4
+ssb: set_irq: core 0x0816, irq 5 => 2
+ssb: set_irq: core 0x0812, irq 2 => 5
+ssb: after irq reconfiguration
+ssb: core 0x0800, irq : 2(S)  3* 4  5  6  D  I 
+ssb: core 0x0806, irq : 2(S)  3  4* 5  6  D  I 
+ssb: core 0x0816, irq : 2(S)* 3  4  5  6  D  I 
+ssb: core 0x0817, irq : 2(S)  3  4  5  6* D  I 
+ssb: core 0x080f, irq : 2(S)  3  4  5  6  D  I*
+ssb: core 0x0812, irq : 2(S)  3  4  5* 6  D  I 
+ssb: core 0x081c, irq : 2(S)  3  4  5  6  D  I*
+ssb: Sonics Silicon Backplane found at address 0x18000000
+Serial init done.
+Determined physical RAM map:
+ memory: 00800000 @ 00000000 (usable)
+Initrd not found or empty - disabling initrd
+Zone PFN ranges:
+  Normal   0x00000000 -> 0x00000800
+Movable zone start PFN for each node
+early_node_map[1] active PFN ranges
+    0: 0x00000000 -> 0x00000800
+Built 1 zonelists in Zone order, mobility grouping off.  Total pages: 2032
+Kernel command line: root=/dev/mtdblock2 rootfstype=squashfs,jffs2 noinitrd console=ttyS0,115200
+PID hash table entries: 32 (order: -5, 128 bytes)
+Dentry cache hash table entries: 1024 (order: 0, 4096 bytes)
+Inode-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Primary instruction cache 16kB, VIPT, 2-way, linesize 16 bytes.
+Primary data cache 8kB, 2-way, VIPT, no aliases, linesize 16 bytes
+Memory: 5248k/8192k available (2222k kernel code, 2944k reserved, 350k data, 136k init, 0k highmem)
+Hierarchical RCU implementation.
+NR_IRQS:128
+console [ttyS0] enabled
+Calibrating delay loop... 199.16 BogoMIPS (lpj=398336)
+Mount-cache hash table entries: 512
+NET: Registered protocol family 16
+bio: create slab <bio-0> at 0
+Switching to clocksource MIPS
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 512 (order: 0, 4096 bytes)
+TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+TCP: Hash tables configured (established 512 bind 512)
+TCP reno registered
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Registering mini_fo version $Id$
+JFFS2 version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+msgmni has been set to 16
+io scheduler noop registered
+io scheduler deadline registered (default)
+Serial: 8250/16550 driver, 2 ports, IRQ sharing enabled
+serial8250: ttyS0 at MMIO 0xb8000300 (irq = 3) is a 16550A
+serial8250: ttyS1 at MMIO 0xb8000400 (irq = 3) is a 16550A
+serial8250.0: ttyS0 at MMIO 0xb8000300 (irq = 3) is a 16550A
+serial8250.0: ttyS1 at MMIO 0xb8000400 (irq = 3) is a 16550A
+flash init: 0x1c000000 0x02000000
+Physically mapped flash: Found 1 x16 devices at 0x0 in 16-bit bank
+ CFI mfr 0x00000001
+ CFI id  0x00002249
+ Amd/Fujitsu Extended Query Table at 0x0040
+  Amd/Fujitsu Extended Query version 1.0.
+number of CFI chips: 1
+cfi_cmdset_0002: Disabling erase-suspend-program due to code brokenness.
+Flash device: 0x200000 at 0x1fc00000
+bootloader size: 262144
+Creating 4 MTD partitions on "Physically mapped flash":
+0x000000000000-0x000000040000 : "cfe"
+0x000000040000-0x0000001f0000 : "linux"
+0x000000120000-0x0000001f0000 : "rootfs"
+mtd: partition "rootfs" set to be root filesystem
+split_squashfs: no squashfs found in "Physically mapped flash"
+0x0000001f0000-0x000000200000 : "nvram"
+b44.c:v2.0
+eth0: Broadcom 44xx/47xx 10/100BaseT Ethernet 00:90:4c:91:00:01
+BCM47xx Watchdog Timer enabled (30 seconds, nowayout)
+TCP westwood registered
+NET: Registered protocol family 17
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+Node at 0x0000ffd8 with length 0x00000b32 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffdc: 0x0b32 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe0: 0xebbc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe4: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffe8: 0x001c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000ffec: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0000fff4: 0xd5ef instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010000: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010004: 0xb000 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010008: 0x0aee instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0001000c: 0x1000 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010010: 0x0006 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010014: 0x7c98 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010018: 0x37b4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0001001c: 0x5e78 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010020: 0x6c6d instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00010024: 0x7e15 instead
+Further such events for this erase block will not be printed
+Node at 0x0002f998 with length 0x000009a1 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f99c: 0x09a1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a0: 0x7198 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a4: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9a8: 0x004e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9ac: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9b4: 0xd5ef instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9b8: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9bc: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9c0: 0x25fc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0002f9c4: 0xc000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030000: 0x08d3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030004: 0x8f69 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030008: 0x28fd instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0003000c: 0x0464 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030010: 0xf7be instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030014: 0x777d instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030018: 0x6d38 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0003001c: 0x62bc instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030020: 0xddf8 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00030024: 0x87d2 instead
+Further such events for this erase block will not be printed
+Node at 0x0004f858 with length 0x0000098e would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f85c: 0x098e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f860: 0xcef0 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f864: 0x0031 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f868: 0x0012 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f86c: 0x81ed instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f874: 0x28b7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f878: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f87c: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f880: 0x2831 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0004f884: 0x1000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050000: 0xc7a7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050004: 0xf7ee instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050008: 0x6e76 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0005000c: 0x3939 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050010: 0x307e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050014: 0x4b1f instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050018: 0xd347 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0005001c: 0x3491 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050020: 0x6fa7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00050024: 0x60e9 instead
+Further such events for this erase block will not be printed
+Node at 0x0006f810 with length 0x0000087c would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f814: 0x087c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f818: 0x7aeb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f81c: 0x00c5 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f820: 0x0005 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f824: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f82c: 0x7bf2 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f830: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f834: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f838: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0006f83c: 0x4000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070000: 0xdf34 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070004: 0xb1de instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070008: 0x9ed1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0007000c: 0x19b4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070010: 0xdb32 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070014: 0x85b9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070018: 0xc9e7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0007001c: 0xc6d3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070020: 0x731e instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00070024: 0xb302 instead
+Further such events for this erase block will not be printed
+Node at 0x0008fb4c with length 0x000009a9 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb50: 0x09a9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb54: 0x5977 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb58: 0x00cb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb5c: 0x0039 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb60: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb68: 0xfdd7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb6c: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb70: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb74: 0x290c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0008fb78: 0x7000 instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090000: 0x3b11 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090004: 0x0674 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090008: 0x7066 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0009000c: 0xcbc3 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090010: 0xc5d1 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090014: 0x57a9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090018: 0xfe4b instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x0009001c: 0x8727 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090020: 0xf093 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x00090024: 0x41e8 instead
+Further such events for this erase block will not be printed
+Node at 0x000afae4 with length 0x00000652 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afae8: 0x0652 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaec: 0x8fec instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf0: 0x00e7 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf4: 0x0001 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afaf8: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb00: 0x09d8 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb04: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb08: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb0c: 0x2902 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000afb14: 0x060e instead
+Further such events for this erase block will not be printed
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0000: 0xf820 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0004: 0x8ab9 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0008: 0xaddb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b000c: 0x4a97 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0010: 0x7c23 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0014: 0x2696 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0018: 0xe7de instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b001c: 0xe8fb instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0020: 0x3a11 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000b0024: 0x0034 instead
+Further such events for this erase block will not be printed
+Node at 0x000cfcb8 with length 0x00000459 would run over the end of the erase block
+Perhaps the file system was created with the wrong erase size?
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcbc: 0x0459 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc0: 0xdc83 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc4: 0x00fe instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcc8: 0x002c instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfccc: 0x81a4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcd4: 0xbbe4 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcd8: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfcdc: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfce0: 0x2901 instead
+jffs2_scan_eraseblock(): Magic bitmask 0x1985 not found at 0x000cfce4: 0xa000 instead
+Further such events for this erase block will not be printed
+VFS: Mounted root (jffs2 filesystem) readonly on device 31:2.
+Freeing unused kernel memory: 136k freed
+Please be patient, while OpenWrt loads ...
+Kernel panic - not syncing: Attempted to kill init!

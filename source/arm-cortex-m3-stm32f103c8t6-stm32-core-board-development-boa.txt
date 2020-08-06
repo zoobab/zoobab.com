@@ -1,0 +1,53 @@
++ About
+
+I bought this devboard for 10USD at [http://www.aliexpress.com/snapshot/232287957.html Aliexpress].
+
++ Picture
+
+[[=image stm32f103c8t6-2.jpg]]
+
++ Description
+
+* on-board STM32F103C8T6Chip
+* board JTAG interface and reset button
+* the board 32.768KHZ and 8MHZ crystal
+* with a 5V to 3.3V chip AMS1117-3.3
+* with a group of UARTSerial Interface
+* all I/O all the leads , and mark the name of I / O
+* onboard Mini USB interface , you can give the board power supply and USB communication
+* board size 52.1 ( mm ) x35.5 ( mm )
+
++ TTL 5V
+
+There is a header with TX RX 5V, if you connect to it at 115200, you will get [https://my.st.com/public/STe2ecommunities/mcu/Lists/cortex_mx_stm32/Flat.aspx?RootFolder=https%3a%2f%2fmy%2est%2ecom%2fpublic%2fSTe2ecommunities%2fmcu%2fLists%2fcortex_mx_stm32%2fUSART%2c%20115200%20not%20work&FolderCTID=0x01200200770978C69A1141439FE559EB459D7580009C4E14902C3CDE46A77F0FFD06506F5B&currentviews=811 an "U" every second]:
+
+[[code]]
+U�U�U�U�U�U�U�U�U�U�U�U�
+[[/code]]
+
++ OpenOCD
+
+Apparently you have to use OpenOCD via a JTAG interface to upload code on this board.
+
++ As a flashrom programmer?
+
+serprog-stm32vcp seems to transform the board in a BIOS flasher.
+
++ As a JTAG flasher?
+
+There seems to be some support in [http://zjtag.sf.net zjtag] for an [http://is.gd/gHSIcK STM32 cable]:
+
+[[code]]
+Hid-Brjtag v2 is working with STM32F103C8TC. The hardware platform could be modified on ST mini 3in1 devlopment kit.
+STM32F.pdf shows the required PINs used by Hid-Brjtag v2, You can make yourself hidbrjtag dongle according to.
+[[/code]]
+
++ Links
+
+* http://libopencm3.org
+* http://www.aliexpress.com/snapshot/232287957.html
+* https://github.com/dword1511/serprog-stm32vcp
+* http://is.gd/gHSIcK
+* http://download.modem-help.co.uk/utilities/JTAG/Software/BrJTAG/v1-9o/brjtag-v1.9o.7z.php?showFile=brjtag1.9o_exe%2FHidBrj_ROM2.01%2Freadme.txt
+* https://github.com/rdiez/JtagDue
+* http://www.sunspot.co.uk/Projects/Arduino/STM32/generic_black_multipin.html

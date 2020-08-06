@@ -1,0 +1,35 @@
+[[toc]]
+
++ About
+
+Cheap board with Allwinner A13 SoC.
+
+[[=image A13-OLinuXino-02.jpg]]
+
++ Specs
+
+* 1GHz ARM cortrex A8
+* 512MB RAM
+* 3xUSB
+* MicroSD slot
+* Wifi
+* VGA
+* Sound
+* Buttons
+* Power
+* Lipo battery controller
+* USB OTG
+
++ Serial port
+
+Serial port is mapped on the UEXT port pins 2,3,4.
+
++ OpenWRT trunk support
+
+There is some support for the board in the latest openwrt trunk.
+
+[[=image openwrt-trunk-olimex-allwinner-a10-a13-a20.png]]
+
++ Links
+
+* https://www.olimex.com/Products/OLinuXino/A13/A13-OLinuXino-WIFI-DEV/

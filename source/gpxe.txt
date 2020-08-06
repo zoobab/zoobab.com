@@ -1,0 +1,20 @@
++ Bugs
+
+I found out that gPXE has a 4KB TCP_WINDOW_SIZE by default. I got speed problems downloading files with gPXE in HTTP (10 times slower then on the same machine with linux+wget), so I am changing the value of TCP_MAX_WINDOW_SIZE to see if it changes something. Describe the bug in details, be able to reproduce the bug with Qemu for example. I cannot reproduce it with Qemu, it goes at full speed inside Qemu (downloading Tinycore 8MB file in 3 seconds). Bug reported on the [http://support.etherboot.org/index.php?do=details&task_id=93 gPXE bug tracker].
+
++ Binary
+
+File [[File gpxe-1.0.0-gpxe.iso]]. Got it from the web interface of [http://rom-o-matic.net/gpxe/gpxe-1.0.0/contrib/rom-o-matic/ Rom-o-matic] (select ISO file and NIC-type: all drivers).
+
++ Qemu
+
+Describe here on how to boot gPXE under qemu with binaries attached.
+
++ Boot Openwrt from Netboot.me?
+
+Download the following [http://static.netboot.me/gpxe/netbootme.iso netbootme.iso], and then boot it with Qemu. Then try to get the Gpxe console, and type:
+
+> imgfree
+> chain http://ur1.ca/0a9zu
+
+The kernel fails to find the right rootfs...

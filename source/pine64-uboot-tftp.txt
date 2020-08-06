@@ -1,0 +1,28 @@
++ Goal
+
+Compile uboot for the Pine64 board to be able to netboot in TFTP. This is one of the requirement for one of those A64 board to appear in the Kernelci.org sunxi list.
+
++ Versions
+
+Download:
+
+* u-boot-2016.09.tar.bz2: ftp://ftp.denx.de/pub/u-boot/u-boot-2016.09.tar.bz2
+
++ Problems
+
+[[code]]
+  LD      arch/arm/mach-sunxi/built-in.o
+  CC      board/sunxi/board.o
+  LD      board/sunxi/built-in.o
+  CC      cmd/boot.o
+  CC      cmd/bootm.o
+cmd/bootm.c: In function 'do_imls_nor':
+cmd/bootm.c:327:7: error: 'CONFIG_SYS_MAX_FLASH_BANKS' undeclared (first use in this function)
+   i < CONFIG_SYS_MAX_FLASH_BANKS; ++i, ++info) {
+       ^
+cmd/bootm.c:327:7: note: each undeclared identifier is reported only once for each function it appears in
+scripts/Makefile.build:280: recipe for target 'cmd/bootm.o' failed
+make[1]: *** [cmd/bootm.o] Error 1
+Makefile:1221: recipe for target 'cmd' failed
+make: *** [cmd] Error 2
+[[/code]]

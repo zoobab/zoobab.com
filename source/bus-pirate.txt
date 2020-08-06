@@ -1,0 +1,100 @@
++ Dmesg
+
+[[code]]
+[25067.543315] ftdi_sio 2-1.2:1.0: FTDI USB Serial Device converter detected
+[25067.543514] usb 2-1.2: Detected FT232RL
+[25067.543521] usb 2-1.2: Number of endpoints 2
+[25067.543526] usb 2-1.2: Endpoint 1 MaxPacketSize 64
+[25067.543532] usb 2-1.2: Endpoint 2 MaxPacketSize 64
+[25067.543537] usb 2-1.2: Setting MaxPacketSize 64
+[25067.543927] usb 2-1.2: FTDI USB Serial Device converter now attached to ttyUSB0
+[[/code]]
+
++ Lsusb
+
+[[code]]
+Bus 002 Device 016: ID 0403:6001 Future Technology Devices International, Ltd FT232 USB-Serial (UART) IC
+[[/code]]
+
++ Use the bus pirate as a simple USB-Serial adaptor
+
+Since the bus pirate is basically an FTDI chip + PIC, it is possible to set the software that runs on the PIC to behave as a simple TTL usb serial adaptor.
+
+With screen, do the following:
+
+[[code]]
+HiZ>?
+General                                 Protocol interaction
+---------------------------------------------------------------------------
+?       This help                       (0)     List current macros
+=X/|X   Converts X/reverse X            (x)     Macro x
+~       Selftest                        [       Start
+#       Reset                           ]       Stop
+$       Jump to bootloader              {       Start with read
+&/%     Delay 1 us/ms                   }       Stop
+a/A/@   AUXPIN (low/HI/READ)            "abc"   Send string
+b       Set baudrate                    123
+c/C     AUX assignment (aux/CS)         0x123
+d/D     Measure ADC (once/CONT.)        0b110   Send value
+f       Measure frequency               r       Read
+g/S     Generate PWM/Servo              /       CLK hi
+h       Commandhistory                  \       CLK lo
+i       Versioninfo/statusinfo          ^       CLK tick
+l/L     Bitorder (msb/LSB)              -       DAT hi
+m       Change mode                     _       DAT lo
+o       Set output type                 .       DAT read
+p/P     Pullup resistors (off/ON)       !       Bit read
+s       Script engine                   :       Repeat e.g. r:10
+v       Show volts/states               .       Bits to read/write e.g. 0x55.2
+w/W     PSU (off/ON)            <x>/<x= >/<0>   Usermacro x/assign x/list all
+HiZ>m
+1. HiZ
+2. 1-WIRE
+3. UART
+4. I2C
+5. SPI
+6. 2WIRE
+7. 3WIRE
+8. LCD
+9. DIO
+x. exit(without change)
+
+(1)>3
+Set serial port speed: (bps)
+ 1. 300
+ 2. 1200
+ 3. 2400
+ 4. 4800
+ 5. 9600
+ 6. 19200
+ 7. 38400
+ 8. 57600
+ 9. 115200
+10. BRG raw value
+
+(1)>9
+Data bits and parity:
+ 1. 8, NONE *default 
+ 2. 8, EVEN 
+ 3. 8, ODD 
+ 4. 9, NONE
+(1)>1
+Stop bits:
+ 1. 1 *default
+ 2. 2
+(1)>1
+Receive polarity:
+ 1. Idle 1 *default
+ 2. Idle 0
+(1)>1
+Select output type:
+ 1. Open drain (H=Hi-Z, L=GND)
+ 2. Normal (H=3.3V, L=GND)
+
+(1)>2
+Ready
+UART>
+UART>
+[[/code]]
+
+Once you have the UART> prompt, just type "(1)", and it will transform itself into a usb-serial bridge.

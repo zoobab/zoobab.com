@@ -1,0 +1,1 @@
+[[module FlickrGallery tags="jtag" tagMode="all"]]

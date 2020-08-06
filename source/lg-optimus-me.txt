@@ -1,0 +1,1876 @@
+[[toc]]
+
++ Price
+
+100EUR in most Belgacom shops.
+
++ Cpuinfo
+
+[[code]]
+$ cat /proc/cpuinfo
+Processor       : ARMv6-compatible processor rev 5 (v6l)
+BogoMIPS        : 245.61
+Features        : swp half thumb fastmult vfp edsp java 
+CPU implementer : 0x41
+CPU architecture: 6TEJ
+CPU variant     : 0x1
+CPU part        : 0xb36
+CPU revision    : 5
+
+Hardware        : PECAN board (LGE LGP350)
+Revision        : 0000
+Serial          : 0000000000000000
+[[/code]]
+
++ Meminfo
+
+[[code]]
+$ cat /proc/meminfo
+MemTotal:         179984 kB
+MemFree:            3224 kB
+Buffers:              40 kB
+Cached:            20784 kB
+SwapCached:            0 kB
+Active:            78004 kB
+Inactive:          70548 kB
+Active(anon):      64628 kB
+Inactive(anon):    65504 kB
+Active(file):      13376 kB
+Inactive(file):     5044 kB
+Unevictable:        1848 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:        129584 kB
+Mapped:            18180 kB
+Shmem:               556 kB
+Slab:               7672 kB
+SReclaimable:       1496 kB
+SUnreclaim:         6176 kB
+KernelStack:        3760 kB
+PageTables:        12792 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:       89992 kB
+Committed_AS:    4673160 kB
+VmallocTotal:     303104 kB
+VmallocUsed:       67448 kB
+VmallocChunk:     198660 kB
+[[/code]]
+
++ df
+
+[[code]]
+$ ./df -h
+Filesystem                Size      Used Available Use% Mounted on
+tmpfs                    87.9M     12.0K     87.9M   0% /dev
+/dev/block/mtdblock1    200.0M    180.8M     19.3M  90% /system
+/dev/block/mtdblock9    189.5M     74.1M    115.4M  39% /data
+/dev/block/mtdblock3      2.8M    800.0K      2.0M  28% /lgdrm
+tmpfs                    87.9M         0     87.9M   0% /mnt/asec
+/dev/block/mtdblock8     64.0M      1.6M     62.4M   3% /cache
+/dev/block/vold/179:0
+                          1.8G    142.0M      1.7G   8% /mnt/sdcard
+df: /mnt/secure/asec: Permission denied
+[[/code]]
+
++ ifconfig
+
+[[code]]
+$ ./ifconfig
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:68 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:68 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:5152 (5.0 KiB)  TX bytes:5152 (5.0 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr 74:A7:22:E3:AB:14  
+          inet6 addr: fe80::76a7:22ff:fee3:ab14/64 Scope:Link
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:9353 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8439 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:2623207 (2.5 MiB)  TX bytes:929332 (907.5 KiB)
+[[/code]]
+
++ Dmesg
+
+[[code]]
+
+$ dmesg
+<5>[    0.000000] Linux version 2.6.32.9 (lg-electronics@lg-desktop) (gcc version 4.4.0 (GCC) ) #1 PREEMPT Fri Feb 4 23:19:07 IST 2011
+<4>[    0.000000] CPU: ARMv6-compatible processor [4117b365] revision 5 (ARMv6TEJ), cr=00c5387f
+<4>[    0.000000] CPU: VIPT aliasing data cache, VIPT aliasing instruction cache
+<4>[    0.000000] Machine: PECAN board (LGE LGP350)
+<6>[    0.000000] Partition (from atag) boot -- Offset:130 Size:22
+<6>[    0.000000] Partition (from atag) system -- Offset:152 Size:640
+<6>[    0.000000] Partition (from atag) recovery -- Offset:792 Size:28
+<6>[    0.000000] Partition (from atag) lgdrm -- Offset:7ba Size:16
+<6>[    0.000000] Partition (from atag) splash -- Offset:7d0 Size:8
+<6>[    0.000000] Partition (from atag) FOTABIN -- Offset:7d8 Size:8
+<6>[    0.000000] Partition (from atag) FOTA -- Offset:7e0 Size:32
+<6>[    0.000000] Partition (from atag) misc -- Offset:812 Size:2
+<6>[    0.000000] Partition (from atag) cache -- Offset:814 Size:200
+<6>[    0.000000] Partition (from atag) userdata -- Offset:a14 Size:5ec
+<4>[    0.000000] Memory policy: ECC disabled, Data cache writeback
+<7>[    0.000000] On node 0 totalpages: 55040
+<7>[    0.000000] free_area_init_node: node 0, pgdat c0636bcc, node_mem_map c0770000
+<7>[    0.000000]   Normal zone: 430 pages used for memmap
+<7>[    0.000000]   Normal zone: 0 pages reserved
+<7>[    0.000000]   Normal zone: 54610 pages, LIFO batch:15
+<6>[    0.000000] allocating 17260544 bytes at c10c8000 (38c8000 physical) for mdp pmem arena
+<6>[    0.000000] allocating 11419648 bytes at c213e000 (493e000 physical) for adsp pmem arena
+<6>[    0.000000] allocating 372736 bytes (at 80000 physical) for audio pmem arena
+<6>[    0.000000] allocating 614400 bytes at c2c22000 (5422000 physical) for fb
+<6>[    0.000000] allocating 114688 bytes at c2d00000 (5500000 physical) for kernel ebi1 pmem arena
+<6>[    0.000000] allocating 2097152 bytes at c2d1c000 (at 551c000 physical) for KGSL
+<6>[    0.000000] L210 cache controller enabled
+<4>[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 54610
+<5>[    0.000000] Kernel command line: mem=215M console=ttyMSM2,115200n8 androidboot.hardware=pecan uart_console=disable lge.rev=rev_10 lge.hreset=off lge.reboot=reboot lge.lcd=off
+<6>[    0.000000] UART CONSOLE : disable
+<6>[    0.000000] BOARD: LGE rev_10
+<6>[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+<6>[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+<6>[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+<6>[    0.000000] Memory: 215MB = 215MB total
+<5>[    0.000000] Memory: 178748KB available (5796K code, 1487K data, 140K init, 0K highmem)
+<6>[    0.000000] Hierarchical RCU implementation.
+<6>[    0.000000] NR_IRQS:261
+<4>[    0.000000] Console: colour dummy device 80x30
+<6>[    0.000000] Calibrating delay loop... 599.65 BogoMIPS (lpj=2998272)
+<4>[    0.220105] Mount-cache hash table entries: 512
+<6>[    0.220613] CPU: Testing write buffer coherency: 
+<1>[    0.220711] Initialized Zero page successfully
+<4>[    0.220766] ok
+<6>[    0.223386] NET: Registered protocol family 16
+<3>[    0.225135] smem_find(137, 64): wrong size 56
+<6>[    0.225466] socinfo_init: v3, id=43, ver=1.2, raw_id=960, raw_ver=2, hw_plat=8
+<6>[    0.225495] acpu_clock_init()
+<6>[    0.225511] Shared PLL control available.
+<6>[    0.225676] L val: PLL0: 50, PLL1: 12, PLL2: 62
+<6>[    0.225808] ACPU running at 600000 KHz
+<6>[    0.225823] Id CPU-KHz PLL DIV AHB-KHz ADIV AXI-KHz D0 D1 D2 U0 U1 U2
+<6>[    0.225851]  0   19200  -1   1   19200    1   30720 -1 -1 -1  1  4  3
+<6>[    0.225876]  1  120000   0   8   60000    2   61440 -1 -1 -1  5  4  3
+<6>[    0.225903]  2  122880   1   2   61440    2   61440  1 -1 -1  5  4  3
+<6>[    0.225928]  3  200000   2   6   66667    3   61440  1  2 -1  5  4  6
+<6>[    0.225955]  4  245760   1   1  122880    2   61440  1  2  3  7 -1  6
+<6>[    0.225980]  5  320000   0   3  160000    2  160000  1  2  3  7 -1  6
+<6>[    0.226006]  6  400000   2   3  133333    3  160000  5  4  3  7 -1  8
+<6>[    0.226031]  7  480000   0   2  160000    3  160000  5  4  6 -1 -1  8
+<6>[    0.226058]  8  600000   2   2  200000    3  200000  7 -1  6 -1 -1 -1
+<6>[    0.226075] 5 scaling frequencies supported.
+<4>[    0.226833] FB START PHYS ADDR : ff40000
+<4>[    0.226848] FB START VIRT ADDR : cd840000
+<4>[    0.226860] FB SIZE : 28000
+<4>[    0.229561] RAM CONSOLE START ADDR : 267386880
+<4>[    0.229578] RAM CONSOLE END ADDR   : 267649023
+<6>[    0.229785] ram_console: got buffer at ff00000, size 40000
+<6>[    0.229893] ram_console: no valid data in buffer (sig = 0x00000000)
+<6>[    0.229920] console [ram-1] enabled
+<4>[    0.263671] bio: create slab <bio-0> at 0
+<5>[    0.265325] SCSI subsystem initialized
+<6>[    0.265926] msm_i2c_probe
+<6>[    0.266040] msm_i2c_probe: clk_ctl 315, 400000 Hz
+<6>[    0.268603] Bluetooth: Core ver 2.15
+<6>[    0.268851] NET: Registered protocol family 31
+<6>[    0.268866] Bluetooth: HCI device and connection manager initialized
+<6>[    0.268888] Bluetooth: HCI socket layer initialized
+<6>[    0.269288] Switching to clocksource dg_timer
+<6>[    0.271523] NET: Registered protocol family 2
+<6>[    0.271715] IP route cache hash table entries: 2048 (order: 1, 8192 bytes)
+<6>[    0.272213] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+<6>[    0.272485] TCP bind hash table entries: 8192 (order: 3, 32768 bytes)
+<6>[    0.272656] TCP: Hash tables configured (established 8192 bind 8192)
+<6>[    0.272675] TCP reno registered
+<6>[    0.272855] NET: Registered protocol family 1
+<6>[    0.273218] RPC: Registered udp transport module.
+<6>[    0.273235] RPC: Registered tcp transport module.
+<6>[    0.273250] RPC: Registered tcp NFSv4.1 backchannel transport module.
+<6>[    0.273471] Trying to unpack rootfs image as initramfs...
+<6>[    0.375360] Freeing initrd memory: 796K
+<6>[    0.378428] smd probe
+<6>[    0.378450] smd_core_init()
+<6>[    0.378541] smd_core_init() done
+<6>[    0.378563] smd_alloc_loopback_channel: 'local_loopback' cid=100
+<6>[    0.378776] smd_alloc_channel() 'DS' cid=0
+<3>[    0.379003] Notify: smsm init
+<6>[    0.379458] smd_alloc_channel() 'DIAG' cid=1
+<6>[    0.380168] smd_alloc_channel() 'RPCCALL' cid=2
+<6>[    0.380633] smd_alloc_channel() 'DATA1' cid=7
+<6>[    0.381040] smd_alloc_channel() 'DATA2' cid=8
+<6>[    0.381466] smd_alloc_channel() 'DATA3' cid=9
+<6>[    0.381888] smd_alloc_channel() 'DATA4' cid=10
+<6>[    0.382293] smd_alloc_channel() 'DATA5' cid=11
+<6>[    0.382630] smd_alloc_channel() 'DATA6' cid=12
+<6>[    0.383025] smd_alloc_channel() 'DATA7' cid=13
+<6>[    0.383433] smd_alloc_channel() 'DATA11' cid=17
+<6>[    0.383865] smd_alloc_channel() 'DAL00' cid=38
+<6>[    0.384270] smd_alloc_channel() 'DATA5_CNTL' cid=39
+<6>[    0.384715] smd_alloc_channel() 'DATA6_CNTL' cid=40
+<6>[    0.385170] smd_alloc_channel() 'DATA7_CNTL' cid=41
+<6>[    0.386130] SMD Packet Port Driver Initialized.
+<6>[    0.387161] SMD: ch 2 0 -> 1
+<6>[    0.387276] SMD: ch 2 1 -> 2
+<6>[    0.388590] [adsp.c:adsp_init] rs3000000a -- 0
+<6>[    0.393846] [audpp.c:audpp_probe] Number of decoder supported 5
+<6>[    0.393878] [audpp.c:audpp_probe] Number of concurrency supported 7
+<6>[    0.393898] [audpp.c:audpp_probe] module_name:AUDPLAY0TASK
+<6>[    0.393915] [audpp.c:audpp_probe] queueid:13
+<6>[    0.393931] [audpp.c:audpp_probe] decid:0
+<6>[    0.393945] [audpp.c:audpp_probe] nr_codec_support:11
+<6>[    0.393966] [audpp.c:audpp_probe] module_name:AUDPLAY1TASK
+<6>[    0.393983] [audpp.c:audpp_probe] queueid:14
+<6>[    0.393998] [audpp.c:audpp_probe] decid:1
+<6>[    0.394013] [audpp.c:audpp_probe] nr_codec_support:5
+<6>[    0.394030] [audpp.c:audpp_probe] module_name:AUDPLAY2TASK
+<6>[    0.394050] [audpp.c:audpp_probe] queueid:15
+<6>[    0.394065] [audpp.c:audpp_probe] decid:2
+<6>[    0.394080] [audpp.c:audpp_probe] nr_codec_support:5
+<6>[    0.394095] [audpp.c:audpp_probe] module_name:AUDPLAY3TASK
+<6>[    0.394111] [audpp.c:audpp_probe] queueid:16
+<6>[    0.394126] [audpp.c:audpp_probe] decid:3
+<6>[    0.394141] [audpp.c:audpp_probe] nr_codec_support:4
+<6>[    0.394161] [audpp.c:audpp_probe] module_name:AUDPLAY4TASK
+<6>[    0.394178] [audpp.c:audpp_probe] queueid:17
+<6>[    0.394193] [audpp.c:audpp_probe] decid:4
+<6>[    0.394206] [audpp.c:audpp_probe] nr_codec_support:1
+<6>[    0.408693] pecan_gpio_earsense_work_func: ear sense detected : ejected
+<6>[    0.408733] __msm_rpc_connect: server not found 30000061:30001
+<6>[    0.408753] __msm_rpc_connect: server not found 30000061:20001
+<6>[    0.409633] pecan_gpio_earsense_work_func: ear sense detected : ejected
+<6>[    0.410903] RPC_TIME_TOD_SET_APPS_BASES:
+<6>[    0.410911]       tick = 118466
+<6>[    0.410918]       stamp = 808464432
+<4>[    0.410943] /home/nc.kumar/EUR_REL_ALL/P350_20110122_V10a_0123_EURO_OPEN/android/kernel/drivers/rtc/hctosys.c: unable to open rtc device (rtc0)
+<4>[    0.412101] [Blue Debug] lge_error_handler_init
+<4>[    0.413596] lge_tempdevice_init
+<6>[    0.414631] lge_mtd_direct_access_init: finished
+<6>[    0.416118] LGE Power Sink Driver Init
+<6>[    0.416193] lge_pwrsink_probe: setting driver data
+<6>[    0.428960] ashmem: initialized
+<4>[    0.430930] yaffs Feb  4 2011 23:18:07 Installing. 
+<6>[    0.430981] msgmni has been set to 351
+<6>[    0.439201] alg: No test for stdrng (krng)
+<6>[    0.439290] io scheduler noop registered
+<6>[    0.439420] io scheduler deadline registered (default)
+<4>[    0.441345] AAT28XX init start
+<6>[    0.441900] msm_fb_probe:  phy_Addr = 0x5422000 virt = 0xcda00000
+<6>[    0.443378] MDP HW Base phy_Address = 0xaa200000 virt = 0xcdb00000
+<4>[    0.445261] kurze-LCD is Ilitek (No END Key Pressed!)
+<4>[    0.470038] Console: switching to colour frame buffer device 40x29
+<6>[    0.470125] FrameBuffer[0] 240x320 size=327680 bytes is registered successfully!
+<6>[    0.487170] diagfwd initializing ..
+<6>[    0.487525] SMD: ch 1 0 -> 1
+<6>[    0.487541] diag opened SMD port ; r = 0
+<6>[    0.487655] SMD: ch 1 1 -> 2
+<6>[    0.487851] diagchar initializing ..
+<6>[    0.488325] diagchar initialized
+<6>[    0.488806] msm_serial: driver initialized
+<6>[    0.489021] msm_serial_hs.0: ttyHS0 at MMIO 0xa0200000 (irq = 45) is a MSM HS UART
+<6>[    0.490468] msm_serial_hs module loaded
+<6>[    0.495371] brd: module loaded
+<6>[    0.500628] loop: module loaded
+<6>[    0.500810] pmem: Initializing pmem_kernel_ebi1 (in-kernel)
+<6>[    0.500916] pmem: Initializing pmem (user-space) as cached
+<6>[    0.502023] pmem: Initializing pmem_adsp (user-space) as non-cached
+<6>[    0.502895] pmem: Initializing pmem_audio (user-space) as non-cached
+<6>[    0.503600] LGE: Android Vibrator Driver Init
+<6>[    0.504211] LGE: Android Vibrator Initialization was done
+<4>[    0.504688] atcmd_probe:alohag_atcmd
+<6>[    0.506573] SCSI Media Changer driver v0.25 
+<6>[    0.507301] msm_nand_probe: phys addr 0xa0a00000 
+<6>[    0.507323] msm_nand_probe: dmac 0x7
+<6>[    0.507381] msm_nand_probe: allocated dma buffer at ffc0b000, dma_addr fbe2000
+<6>[    0.508700] ONFI probe : CRC Check failed on ONFI Parameter data 
+<6>[    0.508760] status: c03120
+<6>[    0.508775] nandid: 5510bcad maker ad device bc
+<6>[    0.508791] Found a supported NAND device
+<6>[    0.508805] NAND Id  : 0x5510bcad
+<6>[    0.508816] Buswidth : 16 Bits 
+<6>[    0.508828] Density  : 512 MByte
+<6>[    0.508840] Pagesize : 2048 Bytes
+<6>[    0.508853] Erasesize: 131072 Bytes
+<6>[    0.508866] Oobsize  : 64 Bytes
+<6>[    0.508878] CFG0 Init  : 0xa85408c0 
+<6>[    0.508891] CFG1 Init  : 0x0004745e 
+<6>[    0.508903] ECCBUFCFG  : 0x00000203 
+<5>[    0.508930] Creating 10 MTD partitions on "msm_nand":
+<5>[    0.508973] 0x000002600000-0x000002a40000 : "boot"
+<5>[    0.510980] 0x000002a40000-0x00000f240000 : "system"
+<5>[    0.511941] 0x00000f240000-0x00000f740000 : "recovery"
+<5>[    0.512890] 0x00000f740000-0x00000fa00000 : "lgdrm"
+<5>[    0.513833] 0x00000fa00000-0x00000fb00000 : "splash"
+<5>[    0.514786] 0x00000fb00000-0x00000fc00000 : "FOTABIN"
+<5>[    0.515746] 0x00000fc00000-0x000010240000 : "FOTA"
+<5>[    0.516746] 0x000010240000-0x000010280000 : "misc"
+<5>[    0.517741] 0x000010280000-0x000014280000 : "cache"
+<5>[    0.518756] 0x000014280000-0x000020000000 : "userdata"
+<6>[    0.520218] PPP generic driver version 2.4.2
+<6>[    0.520741] PPP Deflate Compression module registered
+<6>[    0.520761] PPP BSD Compression module registered
+<6>[    0.521715] PPP MPPE Compression module registered
+<6>[    0.521736] NET: Registered protocol family 24
+<6>[    0.521815] PPPoL2TP kernel driver, V1.0
+<6>[    0.521836] SLIP: version 0.8.4-NET3.019-NEWTTY (dynamic channels, max=256) (6 bit encapsulation enabled).
+<6>[    0.521860] CSLIP: code copyright 1989 Regents of the University of California.
+<4>[    0.523000] brcm_static_buf_init: initialize wifi_alloc_data
+<4>[    0.523051] Section [3] initial allocation success size[139264]!!!
+<4>[    0.523076] Section [2] initial allocation success size[32768]!!!
+<4>[    0.523095] Section [1] initial allocation success size[12288]!!!
+<4>[    0.523118] Section [0] initial allocation success size[12288]!!!
+<4>[    0.523218] rmnet_init
+<6>[    0.525258] msm_hsusb_rpc_connect: rpc connect success vers = 10001
+<6>[    0.525281] msm_otg_probe: rpc_connect(0)
+<6>[    0.530681] msm_hsusb_phy_reset
+<6>[    0.659833] msm72k_probe
+<6>[    0.659866] __msm_rpc_connect: server not found 3000001a:20001
+<6>[    0.660341] peripheral driver registered w/ tranceiver
+<6>[    0.660606] android init
+<6>[    0.660620] adb_function_init
+<6>[    0.661063] android_probe pdata: c0607320
+<6>[    0.661083] android_probe : serial_number is LG_ANDROID_P350****
+<6>[    0.661670] init : LGE Android Gadget USB - INIT PID is 618e
+<6>[    0.661785] do_detect_factory_cable : Using PIF ZIG (0)
+<6>[    0.664185] msm_nv_imei_get: msm_rpc_call success. ver = 0x60001
+<6>[    0.664206] do_get_usb_serial_number : IMEI 80A356525045002090
+<6>[    0.666693] do_detect_factory_cable : Using PIF ZIG (0)
+<6>[    0.668786] msm_nv_imei_get: msm_rpc_call success. ver = 0x60001
+<6>[    0.668805] do_get_usb_serial_number : IMEI 80A356525045002090
+<4>[    0.671611] android_usb gadget: using random self ethernet address
+<4>[    0.671648] android_usb gadget: using random host ethernet address
+<6>[    0.672360] usb0: MAC 26:08:42:be:83:4c
+<6>[    0.672376] usb0: HOST MAC 52:1a:e9:4c:17:5d
+<6>[    0.672431] diag_function_add
+<6>[    0.672476] mass_storage_function_add
+<6>[    0.672920] android_usb gadget: Number of LUNs=1
+<6>[    0.672953] android_usb gadget: android_usb ready
+<6>[    0.672988] msm_hsusb msm_hsusb: registered gadget driver 'android_usb'
+<6>[    0.673265] msm_hsusb msm_hsusb: msm72k_udc: IDLE -> ONLINE
+<4>[    0.673661] [YJ] atcmd_virtual_probe, start!!
+<6>[    0.674193] input: atcmd_virtual_kbd as /devices/platform/atcmd_virtual_kbd/input/input0
+<6>[    0.675133] input: touch_mcs6000 as /devices/virtual/input/input1
+<6>[    0.676186] GPIO Matrix Keypad Driver: Start keypad matrix for pecan_keypad in interrupt mode
+<6>[    0.676686] input: pecan_keypad as /devices/virtual/input/input2
+<6>[    0.677778] KR3DM accelerometer driver
+<6>[    0.677966] KR3DH accelerometer driver
+<6>[    0.678550] msm_hsusb_phy_reset
+<7>[    0.679221] RTC Registering with rs30000048
+<3>[    0.680195] msm_rpc_client_req: RPC call was not successful (3)
+<7>[    0.680220] msmrtc_setup_cb: RPC client registration for PROC:12 failed
+<7>[    0.680238] msmrtc_probe: Could not initialize RPC callback
+<6>[    0.681006] using rtc device, msm_rtc, for alarms
+<7>[    0.681033] msm_rtc: dev (254:0)
+<6>[    0.681080] rs30000048 rs30000048.65536: rtc core: registered msm_rtc as rtc0
+<7>[    0.681423] msm_rtc_secure: dev (254:1)
+<6>[    0.681441] rs30000048 rs30000048.65536: rtc core: registered msm_rtc_secure as rtc1
+<6>[    0.681656] i2c /dev entries driver
+<6>[    0.683563] Registered led device: lcd-backlight
+<3>[    0.683586] aat2870bl:aat28xx_probe: Registering led class dev successfully.
+<3>[    0.684135] aat2870bl:aat28xx_probe: done
+<6>[    0.684473] i2c-gpio i2c-gpio.2: using pins 89 (SDA) and 88 (SCL)
+<4>[    0.685123] [Touch] ts_set_vreg() onoff:0
+<4>[    0.709368] [Touch] ts_set_vreg() onoff:1
+<6>[    0.822498] msm_hsusb msm_hsusb: suspend
+<6>[    0.959330] MCS6000 F/W Version [0xf]
+<6>[    0.979328] MCS6000 H/W Revision [0x11]
+<6>[    0.979738] i2c-gpio i2c-gpio.3: using pins 91 (SDA) and 90 (SCL)
+<4>[    0.980266] [Ecompass] ecom_power_set() : Power On
+<6>[    0.983068] ami304_sensor 4-000f: force operating mode
+<6>[    0.983081] Register input device!
+<6>[    0.983508] input: Acompass as /devices/virtual/input/input3
+<6>[    0.984898] i2c-gpio i2c-gpio.4: using pins 108 (SDA) and 107 (SCL)
+<4>[    0.985426] [Accelerometer] accel_power_on() : Power On
+<6>[    0.992321] input: accelerometer as /devices/virtual/input/input4
+<6>[    0.993256] input: lge_gesture as /devices/virtual/input/input5
+<6>[    0.993545] KR3DH 5-0019: KR3DH kr3dh: Accelerometer chip found
+<6>[    0.993846] i2c-gpio i2c-gpio.5: using pins 3 (SDA) and 2 (SCL)
+<6>[    0.994096] Linux video capture interface: v2.00
+<7>[    0.994285] msm_batt_init: enter
+<6>[    0.994308] __msm_rpc_connect: server not found 3000001a:20002
+<7>[    0.995023] msm_batt_get_charger_api_version: num_of_chg_api_versions = 3. The chg api version = 0x00010003
+<6>[    0.995070] __msm_rpc_connect: server not found 30000089:20001
+<7>[    0.997051] msm_batt_register: got handle = 2
+<7>[    0.997800] msm_batt_enable_filter: enable vbatt filter: OK
+<6>[    1.008801] msm-battery msm-battery: msm_batt_probe : Using PIF ZIG (0)
+<6>[    1.009276] msm_batt_init: Charger/Battery = 0x00010003/0x00010001 (RPC version)
+<6>[    1.009723] device-mapper: uevent: version 1.0.3
+<6>[    1.010335] device-mapper: ioctl: 4.15.0-ioctl (2009-04-01) initialised: dm-devel@redhat.com
+<6>[    1.010421] Bluetooth: HCI UART driver ver 2.2
+<6>[    1.010441] Bluetooth: HCI H4 protocol initialized
+<6>[    1.010458] Bluetooth: HCI BCSP protocol initialized
+<6>[    1.010473] Bluetooth: MSM Sleep Mode Driver Ver 1.1
+<7>[    1.010903] bluetooth_power_init
+<7>[    1.010980] bt_power_probe
+<6>[    1.032333] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[    1.052350] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[    1.072358] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[    1.092365] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[    1.112373] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[    1.112395] [LGE] msmsdcc_check_status (last status): old status - 1,  current status - 1
+<6>[    1.112971] mmc0: Qualcomm MSM SDCC at 0x00000000a0400000 irq 24,113 dma 8
+<6>[    1.112993] mmc0: 8 bit data mode disabled
+<6>[    1.113008] mmc0: 4 bit data mode enabled
+<6>[    1.113023] mmc0: polling status mode disabled
+<6>[    1.113041] mmc0: MMC clock 144000 -> 49152000 Hz, PCLK 100000000 Hz
+<6>[    1.113058] mmc0: Slot eject status = 0
+<6>[    1.113073] mmc0: Power save feature enable = 1
+<6>[    1.113093] mmc0: DM non-cached buffer at ffc0f000, dma_addr 0x0f024000
+<6>[    1.113113] mmc0: DM cmd busaddr 0x0f024000, cmdptr busaddr 0x0f024300
+<3>[    1.113441] bcm432x_sdcc_wlan_slot_status: 93 0
+<6>[    1.113478] [LGE] mmc1 - wifi is detected
+<3>[    1.113495] bcm432x_sdcc_wlan_slot_status: 93 0
+<6>[    1.133658] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[    1.153668] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[    1.173675] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[    1.193683] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[    1.213691] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[    1.213710] [LGE] msmsdcc_check_status (last status): old status - 1,  current status - 1
+<6>[    1.214066] mmc1: Qualcomm MSM SDCC at 0x00000000a0500000 irq 26,157 dma 8
+<6>[    1.214086] mmc1: 8 bit data mode disabled
+<6>[    1.214101] mmc1: 4 bit data mode enabled
+<6>[    1.214115] mmc1: polling status mode disabled
+<6>[    1.214133] mmc1: MMC clock 144000 -> 49152000 Hz, PCLK 100000000 Hz
+<6>[    1.214150] mmc1: Slot eject status = 1
+<6>[    1.214163] mmc1: Power save feature enable = 1
+<6>[    1.214181] mmc1: DM non-cached buffer at ffc10000, dma_addr 0x0f025000
+<6>[    1.214201] mmc1: DM cmd busaddr 0x0f025000, cmdptr busaddr 0x0f025300
+<6>[    1.215000] Registered led device: button-backlight
+<6>[    1.217430] logger: created 64K log 'log_main'
+<6>[    1.217720] logger: created 256K log 'log_events'
+<6>[    1.217996] logger: created 64K log 'log_radio'
+<6>[    1.218266] logger: created 64K log 'log_system'
+<6>[    1.218513] Advanced Linux Sound Architecture Driver Version 1.0.21.
+<4>[    1.219186] No device for DAI CODEC_DAI
+<4>[    1.219208] No device for DAI CPU_DAI
+<3>[    1.219756] msm_soc: create pcms
+<6>[    1.220073] asoc: CODEC_DAI <-> CPU_DAI mapping ok
+<3>[    1.220091] msm_soc: ALSA MSM Mixer Setting
+<6>[    1.221351] ALSA device list:
+<6>[    1.221370]   #0: msm-audio (MSM-CARD)
+<4>[    1.221486] u32 classifier
+<4>[    1.221501] Netfilter messages via NETLINK v0.30.
+<4>[    1.221598] nf_conntrack version 0.5.0 (2810 buckets, 11240 max)
+<4>[    1.222088] ctnetlink v0.93: registering with nfnetlink.
+<6>[    1.222288] xt_time: kernel timezone is -0000
+<6>[    1.222598] ip_tables: (C) 2000-2006 Netfilter Core Team
+<6>[    1.222720] arp_tables: (C) 2002 David S. Miller
+<6>[    1.222785] TCP cubic registered
+<6>[    1.222798] Initializing XFRM netlink socket
+<6>[    1.223141] NET: Registered protocol family 10
+<6>[    1.223846] lo: Disabled Privacy Extensions
+<6>[    1.224898] Mobile IPv6
+<6>[    1.224918] IPv6 over IPv4 tunneling driver
+<6>[    1.225838] sit0: Disabled Privacy Extensions
+<6>[    1.226750] ip6tnl0: Disabled Privacy Extensions
+<6>[    1.226921] NET: Registered protocol family 17
+<6>[    1.226965] NET: Registered protocol family 15
+<6>[    1.227006] Bluetooth: L2CAP ver 2.14
+<6>[    1.227020] Bluetooth: L2CAP socket layer initialized
+<6>[    1.227043] Bluetooth: SCO (Voice Link) ver 0.6
+<6>[    1.227058] Bluetooth: SCO socket layer initialized
+<6>[    1.227225] Bluetooth: RFCOMM TTY layer initialized
+<6>[    1.227251] Bluetooth: RFCOMM socket layer initialized
+<6>[    1.227268] Bluetooth: RFCOMM ver 1.11
+<6>[    1.227283] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+<6>[    1.227298] Bluetooth: BNEP filters: protocol multicast
+<6>[    1.227316] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+<6>[    1.228093] clock_late_init() disabled 17 unused clocks
+<6>[    1.229233] input: 7k_handset as /devices/virtual/input/input6
+<6>[    1.230076] __msm_rpc_connect: server not found 30000091:30001
+<3>[    1.231525] msm_rpc_client_req: RPC call was not successful (4)
+<3>[    1.231546] hs_rpc_cb_init: RPC client request failed for pwr key delay cmd, using normal mode
+<6>[    1.232513] VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5
+<7>[    1.236588] msmrtc_tod_proc_result: 09/12/2011 17:20:15 (00)
+<6>[    1.236645] rs30000048 rs30000048.65536: setting system clock to 2011-09-12 17:20:15 UTC (1315848015)
+<6>[    1.236673] msm_v4l2: msm_v4l2_init
+<6>[    1.239218] Freeing init memory: 140K
+<4>[    1.239275] Warning: unable to open an initial console.
+<3>[    1.512783] init: /init.pecan.rc: 150: ignored duplicate definition of service 'qmuxd'
+<6>[    1.513688] yaffs: dev is 32505857 name is "mtdblock1" rw
+<6>[    1.513708] yaffs: passed flags ""
+<4>[    1.513725] yaffs: Attempting MTD mount on 31.1, "mtdblock1"
+<4>[    1.679538] mmc0: host does not support reading read-only switch. assuming write-enable.
+<6>[    1.679585] mmc0: new high speed SD card at address 1234
+<6>[    1.680793] mmcblk0: mmc0:1234 SA02G 1.83 GiB 
+<6>[    1.681093]  mmcblk0:
+<6>[    1.684811] [LGE] mmc1 - wifi is detected
+<3>[    1.684836] bcm432x_sdcc_wlan_slot_status: 93 0
+<4>[    1.730580] yaffs: restored from checkpoint
+<4>[    1.730950] yaffs_read_super: isCheckpointed 1
+<6>[    1.759468] yaffs: dev is 32505865 name is "mtdblock9" rw
+<6>[    1.759488] yaffs: passed flags ""
+<4>[    1.759504] yaffs: Attempting MTD mount on 31.9, "mtdblock9"
+<4>[    1.811823] yaffs: restored from checkpoint
+<4>[    1.812021] yaffs_read_super: isCheckpointed 1
+<6>[    1.812263] yaffs: dev is 32505859 name is "mtdblock3" rw
+<6>[    1.812281] yaffs: passed flags ""
+<4>[    1.812298] yaffs: Attempting MTD mount on 31.3, "mtdblock3"
+<6>[    1.819468] do_detect_factory_cable : Using PIF ZIG (0)
+<6>[    1.820266] 
+<6>[    1.820273] Charger Type: DEDICATED CHARGER
+<6>[    1.826609] msm_hsusb_phy_reset
+<4>[    1.833113] yaffs_read_super: isCheckpointed 0
+<6>[    1.833271] keychord: using input dev atcmd_virtual_kbd for fevent
+<6>[    1.833299] keychord: using input dev touch_mcs6000 for fevent
+<6>[    1.833321] keychord: using input dev pecan_keypad for fevent
+<6>[    1.833344] keychord: using input dev 7k_handset for fevent
+<3>[    1.833608] init: [get_was_hidden_reset] set ro.hiddenreset 0 --->
+<6>[    1.851003] yaffs: dev is 32505864 name is "mtdblock8" rw
+<6>[    1.851026] yaffs: passed flags ""
+<4>[    1.851044] yaffs: Attempting MTD mount on 31.8, "mtdblock8"
+<4>[    1.853586] yaffs: restored from checkpoint
+<4>[    1.853644] yaffs_read_super: isCheckpointed 1
+<4>[    1.918168] ftm_power: FTM-MODE(0)
+<3>[    1.948414] init: service 'console' requires console
+<6>[    1.969374] msm_otg_suspend: usb in low power mode
+<3>[    2.010359] init: cannot find '/system/etc/install-recovery.sh', disabling 'flash_recovery'
+<3>[    2.031381] init: cannot find '/system/bin/cnd', disabling 'cnd'
+<6>[    2.051843] warning: `adbd' uses 32-bit capabilities (legacy support in use)
+<6>[    2.051963] adb_enable_open: enabling adb - 618e
+<4>[    2.051983] freeing IRQ
+<6>[    2.206269] SMD: ch 39 0 -> 1
+<6>[    2.206376] SMD: ch 39 1 -> 2
+<6>[    2.215524] SMD: ch 40 0 -> 1
+<6>[    2.215598] SMD: ch 40 1 -> 2
+<6>[    2.215881] SMD: ch 41 0 -> 1
+<6>[    2.215988] SMD: ch 41 1 -> 2
+<6>[    2.361409] msm_hsusb msm_hsusb: unregistered gadget driver 'android_usb'
+<6>[    2.361633] do_detect_factory_cable : Using PIF ZIG (0)
+<6>[    2.363959] msm_nv_imei_get: msm_rpc_call success. ver = 0x60001
+<6>[    2.363988] do_get_usb_serial_number : IMEI 80A356525045002090
+<6>[    2.368099] diag_function_add
+<6>[    2.368151] mass_storage_function_add
+<6>[    2.368896] android_usb gadget: Number of LUNs=1
+<6>[    2.368923] android_usb gadget: adb_function_add
+<6>[    2.368991] android_usb gadget: android_usb ready
+<6>[    2.369033] msm_hsusb msm_hsusb: registered gadget driver 'android_usb'
+<6>[    2.369514] msm_hsusb msm_hsusb: msm72k_udc: IDLE -> ONLINE
+<6>[    2.370368] msm_otg_resume: usb exited from low power mode
+<6>[    2.374891] msm_hsusb_phy_reset
+<6>[    2.522556] msm_hsusb msm_hsusb: suspend
+<6>[    3.519484] do_detect_factory_cable : Using PIF ZIG (0)
+<6>[    3.520213] 
+<6>[    3.520219] Charger Type: DEDICATED CHARGER
+<6>[    3.526388] msm_hsusb_phy_reset
+<6>[    3.669429] msm_otg_suspend: usb in low power mode
+<6>[    4.128066] [snd.c:snd_ioctl] snd_avc_ctl 0
+<6>[    4.129191] [snd.c:snd_ioctl] snd_agc_ctl 1
+<6>[    4.135641] [snd.c:snd_ioctl] snd_set_volume 6 0 5
+<6>[    4.136358] [snd.c:snd_ioctl] snd_set_volume 0 0 5
+<6>[    4.136929] [snd.c:snd_ioctl] snd_set_volume 13 0 5
+<6>[    4.137479] [snd.c:snd_ioctl] snd_set_volume 2 0 5
+<6>[    4.138281] [snd.c:snd_ioctl] snd_set_volume 7 0 5
+<6>[    4.138826] [snd.c:snd_ioctl] snd_set_volume 8 0 5
+<6>[    4.139459] [snd.c:snd_ioctl] snd_set_volume 15 0 5
+
+<6>[    4.140004] [snd.c:snd_ioctl] snd_set_volume 17 0 5
+<6>[    4.140641] [snd.c:snd_ioctl] snd_set_volume 16 0 5
+<6>[    4.164754] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[    4.172248] [snd.c:snd_ioctl] snd_set_volume 30 0 5
+<6>[    4.173128] snd_set_fm_radio_volume 1
+<4>[    6.090883] save exit: isCheckpointed 1
+<4>[    6.090923] save exit: isCheckpointed 0
+<4>[    6.094021] save exit: isCheckpointed 1
+<6>[   11.309893] msm_kgsl: initialized dev=0 mmu=on per_process_pagetable=off
+<6>[   11.310053] msm_kgsl kgsl-3d0: firmware: requesting yamato_pm4.fw
+<3>[   11.314833] init: untracked pid 1383 exited
+<6>[   11.315244] msm_kgsl kgsl-3d0: firmware: requesting yamato_pfp.fw
+<3>[   11.317763] init: untracked pid 1386 exited
+<4>[   12.098011] save exit: isCheckpointed 1
+<6>[   21.867086] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[   21.884491] snd_set_fm_radio_volume 11
+<4>[   22.129929] 
+<4>[   22.129939] state_show:0
+<4>[   22.131364] 
+<4>[   22.131373] name_show:alohag_atcmd
+<6>[   22.140308] snd_set_fm_radio_volume 12
+<4>[   22.513674] register_mmc_card_pm: [WiFi] Callbacks registered successfully. 
+<3>[   22.513746] [dhd_hostwakeup_isr] HostWakeup Get GPIO 94: 1
+<3>[   22.513899] [dhd_register_early_suspend] HostWakeup Get GPIO 94: 1
+<4>[   22.513919] 
+<4>[   22.513924] Dongle Host Driver, version 4.220.14.0
+<6>[   22.514003] [LGE] mmc1 - wifi is detected
+<3>[   22.514021] bcm432x_sdcc_wlan_slot_status: 93 1
+<6>[   22.514038] mmc1: Slot status change detected (0 -> 1)
+<3>[   22.514058] [host->plat->status_irq:157:MSM_GPIO_TO_INIT:157:msmsdcc_check_status:1324]
+<6>[   22.651194] [audmgr.c:audmgr_enable] session 0xc0697a68
+<6>[   22.651353] [audmgr.c:audmgr_rpc_thread] start
+<6>[   22.652258] [audmgr.c:process_audmgr_callback] rpc READY handle=0x00000000
+<6>[   22.653763] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<6>[   22.659381] [LGE] mmc1 - wifi is detected
+<3>[   22.659413] bcm432x_sdcc_wlan_slot_status: 93 1
+<6>[   22.710084] request_suspend_state: wakeup (3->0) at 22700746727 (2011-09-12 17:20:36.973426694 UTC)
+<7>[   22.741823] mmc1: queuing CIS tuple 0x91 length 3
+<6>[   22.741868] mmc1: new SDIO card at address 0001
+<4>[   22.753488] mem_prealloc: section [3] size[139264]
+<4>[   22.753514] mem_prealloc: This data is using!!!
+<4>[   22.753758] alloc static buf at cc840000!
+<4>[   22.753774] mem_prealloc: section [4] size[0]
+<4>[   22.757656] mem_prealloc: section [0] size[10312]
+<4>[   22.757678] mem_prealloc: This data is using!!!
+<4>[   22.757914] mem_prealloc: section [1] size[10300]
+<4>[   22.757931] mem_prealloc: This data is using!!!
+<4>[   22.757963] mem_prealloc: section [2] size[32768]
+<4>[   22.757976] mem_prealloc: This data is using!!!
+<6>[   22.813306] CPUFREQ: Per core ondemand sysfs interface is deprecated - up_threshold
+<6>[   22.813909] CPUFREQ: Per core ondemand sysfs interface is deprecated - sampling_rate
+<6>[   22.887598] [audmgr.c:process_audmgr_callback] rpc CODEC_CONFIG volume=0x00000000
+<6>[   22.891108] [adsp.c:handle_adsp_rtos_mtoa_app] INIT_INFO Event
+<6>[   22.891721] [adsp.c:msm_adsp_get] opening module AUDPPTASK
+<6>[   22.892761] [adsp.c:msm_adsp_enable] enable 'AUDPPTASK'state[0] id[17227122]
+<6>[   22.894316] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDPPTASK: READY
+<6>[   22.895858] [audpp.c:audpp_dsp_event] ENABLE
+<4>[   23.016231] [cdc]dhd_preinit_proc:2518 - do control PM (2)
+<4>[   23.160171] wlan0: Broadcom Dongle Host Driver mac=74:a7:22:e3:ab:14
+<4>[   24.105369] save exit: isCheckpointed 1
+<4>[   26.852369] STA connect received 1
+<6>[   27.596926] handle_ats_rpc_call:ONCRPC_LGE_GET_FLEX_ 7
+<6>[   27.596968] ONCRPC_LGE_GET_FLEX_MCC_PROC
+<4>[   27.597054] read data flex.xml fd: 0 iFlexSize : 500 res;231
+<6>[   27.597084] ONCRPC_LGE_GET_FLEX_MCC_PROC return string : 1 , 0
+<6>[   27.597101] lge_ats_handle_flex result : 8 
+<6>[   27.597118] DSAT RPC accept_status = 8
+<6>[   27.597139] ret_string[0] =48, string=48
+<6>[   27.599446] handle_ats_rpc_call:ONCRPC_LGE_GET_FLEX_ 9
+<6>[   27.599469] ONCRPC_LGE_GET_FLEX_OPERATOR_CODE_PROC
+<4>[   27.599543] read data flex.xml fd: 0 iFlexSize : 500 res;231
+<6>[   27.599571] ONCRPC_LGE_GET_FLEX_OPERATOR_CODE_PROC return string : 4 , OPEN
+<6>[   27.599589] lge_ats_handle_flex result : 8 
+<6>[   27.599604] DSAT RPC accept_status = 8
+<6>[   27.599626] ret_string[0] =79, string=79
+<6>[   27.599639] ret_string[1] =80, string=80
+<6>[   27.599654] ret_string[2] =69, string=69
+<6>[   27.599669] ret_string[3] =78, string=78
+<6>[   27.785533] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[   27.797743] snd_set_fm_radio_volume 11
+<4>[   29.099564] wl_iw_set_hostip: Received IP Address: 192.168.42.224
+<4>[   30.092928] save exit: isCheckpointed 1
+<6>[   30.698939] [audpp.c:audpp_dsp_event] DISABLE
+<6>[   30.698996] [audpp.c:audpp_disable] Received CFG_MSG_DISABLE from ADSP
+<6>[   30.699019] [adsp.c:msm_adsp_disable] disable 'AUDPPTASK'
+<6>[   30.700184] [adsp.c:msm_adsp_put] closing module AUDPPTASK
+<6>[   30.700248] [audmgr.c:audmgr_disable] session 0xc0697a68
+<6>[   30.702378] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<3>[   30.712499] [audmgr.c:process_audmgr_callback] DISABLED
+<6>[   30.842663] handle_ats_rpc_call:ONCRPC_LGE_GET_FLEX_ 9
+<6>[   30.842694] ONCRPC_LGE_GET_FLEX_OPERATOR_CODE_PROC
+<4>[   30.899464] read data flex.xml fd: 0 iFlexSize : 500 res;231
+<6>[   30.899509] ONCRPC_LGE_GET_FLEX_OPERATOR_CODE_PROC return string : 4 , OPEN
+<6>[   30.899528] lge_ats_handle_flex result : 8 
+<6>[   30.899546] DSAT RPC accept_status = 8
+<6>[   30.899568] ret_string[0] =79, string=79
+<6>[   30.899583] ret_string[1] =80, string=80
+<6>[   30.899596] ret_string[2] =69, string=69
+<6>[   30.899611] ret_string[3] =78, string=78
+<6>[   30.903128] handle_ats_rpc_call:ONCRPC_LGE_GET_FLEX_ 10
+<6>[   30.903154] ONCRPC_LGE_GET_FLEX_COUNTRY_PROC
+<4>[   30.904969] read data flex.xml fd: 0 iFlexSize : 500 res;231
+<6>[   30.905006] ONCRPC_LGE_GET_FLEX_COUNTRY_PROC return string : 3 , EUR
+<6>[   30.905024] lge_ats_handle_flex result : 8 
+<6>[   30.905041] DSAT RPC accept_status = 8
+<6>[   30.905063] ret_string[0] =69, string=69
+<6>[   30.905076] ret_string[1] =85, string=85
+<6>[   30.905091] ret_string[2] =82, string=82
+<7>[   34.159373] wlan0: no IPv6 routers present
+<4>[   36.108571] save exit: isCheckpointed 1
+<6>[   37.159484] handle_ats_rpc_call:ONCRPC_LGE_GET_FLEX_ 7
+<6>[   37.159514] ONCRPC_LGE_GET_FLEX_MCC_PROC
+<4>[   37.159623] read data flex.xml fd: 0 iFlexSize : 500 res;231
+<6>[   37.159653] ONCRPC_LGE_GET_FLEX_MCC_PROC return string : 1 , 0
+<6>[   37.159669] lge_ats_handle_flex result : 8 
+<6>[   37.159688] DSAT RPC accept_status = 8
+<6>[   37.159708] ret_string[0] =48, string=48
+<6>[   37.160601] handle_ats_rpc_call:ONCRPC_LGE_GET_FLEX_ 9
+<6>[   37.160624] ONCRPC_LGE_GET_FLEX_OPERATOR_CODE_PROC
+<4>[   37.160689] read data flex.xml fd: 0 iFlexSize : 500 res;231
+<6>[   37.160738] ONCRPC_LGE_GET_FLEX_OPERATOR_CODE_PROC return string : 4 , OPEN
+<6>[   37.160756] lge_ats_handle_flex result : 8 
+<6>[   37.160769] DSAT RPC accept_status = 8
+<6>[   37.160789] ret_string[0] =79, string=79
+<6>[   37.160804] ret_string[1] =80, string=80
+<6>[   37.160819] ret_string[2] =69, string=69
+<6>[   37.160833] ret_string[3] =78, string=78
+<4>[   42.154851] save exit: isCheckpointed 1
+<6>[   44.646713] handle_ats_rpc_call:ONCRPC_LGE_GET_FLEX_ 9
+<6>[   44.646746] ONCRPC_LGE_GET_FLEX_OPERATOR_CODE_PROC
+<4>[   44.646889] read data flex.xml fd: 0 iFlexSize : 500 res;231
+<6>[   44.646921] ONCRPC_LGE_GET_FLEX_OPERATOR_CODE_PROC return string : 4 , OPEN
+<6>[   44.646939] lge_ats_handle_flex result : 8 
+<6>[   44.646958] DSAT RPC accept_status = 8
+<6>[   44.646979] ret_string[0] =79, string=79
+<6>[   44.647014] ret_string[1] =80, string=80
+<6>[   44.647029] ret_string[2] =69, string=69
+<6>[   44.647044] ret_string[3] =78, string=78
+<6>[   44.648299] handle_ats_rpc_call:ONCRPC_LGE_GET_FLEX_ 10
+<6>[   44.648323] ONCRPC_LGE_GET_FLEX_COUNTRY_PROC
+<4>[   44.648398] read data flex.xml fd: 0 iFlexSize : 500 res;231
+<6>[   44.648423] ONCRPC_LGE_GET_FLEX_COUNTRY_PROC return string : 3 , EUR
+<6>[   44.648441] lge_ats_handle_flex result : 8 
+<6>[   44.648456] DSAT RPC accept_status = 8
+<6>[   44.648474] ret_string[0] =69, string=69
+<6>[   44.648489] ret_string[1] =85, string=85
+<6>[   44.648504] ret_string[2] =82, string=82
+<6>[   44.651553] handle_ats_rpc_call:ONCRPC_LGE_GET_FLEX_ 9
+<6>[   44.651616] ONCRPC_LGE_GET_FLEX_OPERATOR_CODE_PROC
+<4>[   44.651698] read data flex.xml fd: 0 iFlexSize : 500 res;231
+<6>[   44.651728] ONCRPC_LGE_GET_FLEX_OPERATOR_CODE_PROC return string : 4 , OPEN
+<6>[   44.651748] lge_ats_handle_flex result : 8 
+<6>[   44.651764] DSAT RPC accept_status = 8
+<6>[   44.651784] ret_string[0] =79, string=79
+<6>[   44.651799] ret_string[1] =80, string=80
+<6>[   44.651813] ret_string[2] =69, string=69
+<6>[   44.651828] ret_string[3] =78, string=78
+<6>[   44.652929] handle_ats_rpc_call:ONCRPC_LGE_GET_FLEX_ 10
+<6>[   44.652949] ONCRPC_LGE_GET_FLEX_COUNTRY_PROC
+<4>[   44.653003] read data flex.xml fd: 0 iFlexSize : 500 res;231
+<6>[   44.653028] ONCRPC_LGE_GET_FLEX_COUNTRY_PROC return string : 3 , EUR
+<6>[   44.653046] lge_ats_handle_flex result : 8 
+<6>[   44.653059] DSAT RPC accept_status = 8
+<6>[   44.653079] ret_string[0] =69, string=69
+<6>[   44.653093] ret_string[1] =85, string=85
+<6>[   44.653108] ret_string[2] =82, string=82
+<6>[   44.926409] handle_ats_rpc_call:ONCRPC_LGE_GET_FLEX_ 9
+<6>[   44.926441] ONCRPC_LGE_GET_FLEX_OPERATOR_CODE_PROC
+<4>[   44.926551] read data flex.xml fd: 0 iFlexSize : 500 res;231
+<6>[   44.926581] ONCRPC_LGE_GET_FLEX_OPERATOR_CODE_PROC return string : 4 , OPEN
+<6>[   44.926599] lge_ats_handle_flex result : 8 
+<6>[   44.926616] DSAT RPC accept_status = 8
+<6>[   44.926638] ret_string[0] =79, string=79
+<6>[   44.926653] ret_string[1] =80, string=80
+<6>[   44.926668] ret_string[2] =69, string=69
+<6>[   44.926681] ret_string[3] =78, string=78
+<6>[   44.927934] handle_ats_rpc_call:ONCRPC_LGE_GET_FLEX_ 10
+<6>[   44.927958] ONCRPC_LGE_GET_FLEX_COUNTRY_PROC
+<4>[   44.928051] read data flex.xml fd: 0 iFlexSize : 500 res;231
+<6>[   44.928078] ONCRPC_LGE_GET_FLEX_COUNTRY_PROC return string : 3 , EUR
+<6>[   44.928094] lge_ats_handle_flex result : 8 
+<6>[   44.928109] DSAT RPC accept_status = 8
+<6>[   44.928131] ret_string[0] =69, string=69
+<6>[   44.928144] ret_string[1] =85, string=85
+<6>[   44.928159] ret_string[2] =82, string=82
+<6>[   44.982701] handle_ats_rpc_call:ONCRPC_LGE_GET_FLEX_ 9
+<6>[   44.982731] ONCRPC_LGE_GET_FLEX_OPERATOR_CODE_PROC
+<4>[   44.982844] read data flex.xml fd: 0 iFlexSize : 500 res;231
+<6>[   44.982873] ONCRPC_LGE_GET_FLEX_OPERATOR_CODE_PROC return string : 4 , OPEN
+<6>[   44.982891] lge_ats_handle_flex result : 8 
+<6>[   44.982909] DSAT RPC accept_status = 8
+<6>[   44.982929] ret_string[0] =79, string=79
+<6>[   44.982944] ret_string[1] =80, string=80
+<6>[   44.982959] ret_string[2] =69, string=69
+<6>[   44.982974] ret_string[3] =78, string=78
+<6>[   44.984634] handle_ats_rpc_call:ONCRPC_LGE_GET_FLEX_ 10
+<6>[   44.984658] ONCRPC_LGE_GET_FLEX_COUNTRY_PROC
+<4>[   44.984734] read data flex.xml fd: 0 iFlexSize : 500 res;231
+<6>[   44.984776] ONCRPC_LGE_GET_FLEX_COUNTRY_PROC return string : 3 , EUR
+<6>[   44.984793] lge_ats_handle_flex result : 8 
+<6>[   44.984809] DSAT RPC accept_status = 8
+<6>[   44.984829] ret_string[0] =69, string=69
+<6>[   44.984843] ret_string[1] =85, string=85
+<6>[   44.984858] ret_string[2] =82, string=82
+<4>[   48.104841] save exit: isCheckpointed 1
+<4>[   54.169144] save exit: isCheckpointed 1
+<4>[   60.093778] save exit: isCheckpointed 1
+<4>[   66.111521] save exit: isCheckpointed 1
+<4>[   72.459428] save exit: isCheckpointed 1
+<4>[   78.187634] save exit: isCheckpointed 1
+<4>[   84.127928] save exit: isCheckpointed 1
+<6>[   88.325358] [audmgr.c:audmgr_enable] session 0xc0697a68
+<6>[   88.326259] [audmgr.c:process_audmgr_callback] rpc READY handle=0x00000000
+<6>[   88.326643] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<6>[   88.561358] [audmgr.c:process_audmgr_callback] rpc CODEC_CONFIG volume=0x00000000
+<6>[   88.561411] [adsp.c:msm_adsp_get] opening module AUDPPTASK
+<6>[   88.562598] [adsp.c:msm_adsp_enable] enable 'AUDPPTASK'state[0] id[17227122]
+<6>[   88.563796] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDPPTASK: READY
+<6>[   88.565364] [audpp.c:audpp_dsp_event] ENABLE
+<4>[   90.150744] save exit: isCheckpointed 1
+<6>[   90.240366] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[   93.158114] [audpp.c:audpp_dsp_event] DISABLE
+<6>[   93.158244] [audpp.c:audpp_disable] Received CFG_MSG_DISABLE from ADSP
+<6>[   93.158298] [adsp.c:msm_adsp_disable] disable 'AUDPPTASK'
+<6>[   93.161213] [adsp.c:msm_adsp_put] closing module AUDPPTASK
+<6>[   93.161331] [audmgr.c:audmgr_disable] session 0xc0697a68
+<6>[   93.164538] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<3>[   93.175308] [audmgr.c:process_audmgr_callback] DISABLED
+<4>[   96.102343] save exit: isCheckpointed 1
+<4>[  102.102531] save exit: isCheckpointed 1
+<4>[  108.098289] save exit: isCheckpointed 1
+<4>[  114.137548] save exit: isCheckpointed 1
+<6>[  117.017396] [audmgr.c:audmgr_enable] session 0xc0697a68
+<6>[  117.018319] [audmgr.c:process_audmgr_callback] rpc READY handle=0x00000000
+<6>[  117.019133] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<6>[  117.255308] [audmgr.c:process_audmgr_callback] rpc CODEC_CONFIG volume=0x00000000
+<6>[  117.255511] [adsp.c:msm_adsp_get] opening module AUDPPTASK
+<6>[  117.258946] [adsp.c:msm_adsp_enable] enable 'AUDPPTASK'state[0] id[17227122]
+<6>[  117.262558] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDPPTASK: READY
+<6>[  117.266071] [audpp.c:audpp_dsp_event] ENABLE
+<6>[  117.445668] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  117.710644] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  118.105658] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  118.505639] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  118.935643] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  119.225651] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  119.520583] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<4>[  120.137673] save exit: isCheckpointed 1
+<6>[  120.140579] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  120.620656] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  123.530909] [audpp.c:audpp_dsp_event] DISABLE
+<6>[  123.530968] [audpp.c:audpp_disable] Received CFG_MSG_DISABLE from ADSP
+<6>[  123.530989] [adsp.c:msm_adsp_disable] disable 'AUDPPTASK'
+<6>[  123.532149] [adsp.c:msm_adsp_put] closing module AUDPPTASK
+<6>[  123.532199] [audmgr.c:audmgr_disable] session 0xc0697a68
+<6>[  123.533374] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<3>[  123.543651] [audmgr.c:process_audmgr_callback] DISABLED
+<6>[  125.822834] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  125.824164] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  125.852771] [audmgr.c:audmgr_enable] session 0xc0697a68
+<6>[  125.858448] [audmgr.c:process_audmgr_callback] rpc READY handle=0x00000000
+<6>[  125.860168] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<6>[  125.867484] [audmgr.c:process_audmgr_callback] rpc CODEC_CONFIG volume=0x00000000
+<6>[  125.867599] [adsp.c:msm_adsp_get] opening module AUDPPTASK
+<6>[  125.871688] [adsp.c:msm_adsp_enable] enable 'AUDPPTASK'state[0] id[17227122]
+<6>[  125.881678] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDPPTASK: READY
+<6>[  125.885028] [audpp.c:audpp_dsp_event] ENABLE
+<4>[  126.155594] save exit: isCheckpointed 1
+<6>[  126.516899] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  126.537524] [adsp.c:msm_adsp_get] opening module AUDPREPROCTASK
+<6>[  126.541223] [adsp.c:msm_adsp_get] opening module AUDRECTASK
+<6>[  126.548571] [adsp.c:msm_adsp_put] closing module AUDRECTASK
+<6>[  126.548693] [adsp.c:msm_adsp_put] closing module AUDPREPROCTASK
+<6>[  126.549158] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  126.556966] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  126.581118] [adsp.c:msm_adsp_get] opening module AUDPREPROCTASK
+<6>[  126.581901] [adsp.c:msm_adsp_get] opening module AUDRECTASK
+<6>[  126.582649] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  126.583386] [audmgr.c:audmgr_enable] session 0xc069801c
+<6>[  126.584373] [audmgr.c:process_audmgr_callback] rpc READY handle=0x00000001
+<6>[  126.586263] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<6>[  126.687481] [audmgr.c:process_audmgr_callback] rpc CODEC_CONFIG volume=0x00000000
+<6>[  126.687596] [adsp.c:msm_adsp_enable] enable 'AUDPREPROCTASK'state[0] id[17227132]
+<6>[  126.689524] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDPREPROCTASK: READY
+<6>[  126.689674] [adsp.c:msm_adsp_enable] enable 'AUDRECTASK'state[0] id[17227131]
+<6>[  126.692149] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDRECTASK: READY
+<6>[  126.692308] [audio_in.c:audrec_dsp_event] CFG ENABLED
+<6>[  126.692378] [audio_in.c:audrec_dsp_event] PARAM CFG DONE
+<6>[  126.692463] [audio_in.c:audpre_dsp_event] type 0, status_flag 0
+<6>[  126.692506] [audio_in.c:audpre_dsp_event] type 1, status_flag 0
+<6>[  126.692549] [audio_in.c:audpre_dsp_event] type 2, status_flag 0
+<4>[  132.139931] save exit: isCheckpointed 1
+<4>[  138.106349] save exit: isCheckpointed 1
+<4>[  144.142416] save exit: isCheckpointed 1
+<4>[  150.136763] save exit: isCheckpointed 1
+<6>[  152.272414] [snd.c:snd_ioctl] snd_set_device 30 1 0
+<6>[  152.297044] [adsp.c:msm_adsp_disable] disable 'AUDRECTASK'
+<6>[  152.297113] [audio_in.c:audrec_dsp_event] CFG SLEEP
+<6>[  152.298621] [adsp.c:msm_adsp_disable] disable 'AUDPREPROCTASK'
+<6>[  152.300596] [audmgr.c:audmgr_disable] session 0xc069801c
+<6>[  152.307123] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<3>[  152.311991] [audmgr.c:process_audmgr_callback] DISABLED
+<6>[  152.312089] [adsp.c:msm_adsp_put] closing module AUDRECTASK
+<6>[  152.312158] [adsp.c:msm_adsp_put] closing module AUDPREPROCTASK
+<6>[  152.312489] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  152.318748] [snd.c:snd_ioctl] snd_set_device 0 1 0
+<6>[  152.328179] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  152.331134] [snd.c:snd_ioctl] snd_set_device 0 1 0
+<6>[  153.248774] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  153.439273] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<4>[  156.143133] save exit: isCheckpointed 1
+<6>[  156.354178] [audpp.c:audpp_dsp_event] DISABLE
+<6>[  156.354228] [audpp.c:audpp_disable] Received CFG_MSG_DISABLE from ADSP
+<6>[  156.354249] [adsp.c:msm_adsp_disable] disable 'AUDPPTASK'
+<6>[  156.355458] [adsp.c:msm_adsp_put] closing module AUDPPTASK
+<6>[  156.355499] [audmgr.c:audmgr_disable] session 0xc0697a68
+<6>[  156.356766] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<3>[  156.366984] [audmgr.c:process_audmgr_callback] DISABLED
+<6>[  158.556701] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  158.584439] [audmgr.c:audmgr_enable] session 0xc0697a68
+<6>[  158.585288] [audmgr.c:process_audmgr_callback] rpc READY handle=0x00000000
+<6>[  158.587068] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<6>[  158.591311] [audmgr.c:process_audmgr_callback] rpc CODEC_CONFIG volume=0x00000000
+<6>[  158.591363] [adsp.c:msm_adsp_get] opening module AUDPPTASK
+<6>[  158.592201] [adsp.c:msm_adsp_enable] enable 'AUDPPTASK'state[0] id[17227122]
+<6>[  158.593496] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDPPTASK: READY
+<6>[  158.594878] [audpp.c:audpp_dsp_event] ENABLE
+<6>[  158.774424] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  159.344481] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  159.909421] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  160.544424] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  161.084474] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  161.459476] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  161.879434] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<4>[  162.090824] save exit: isCheckpointed 1
+<6>[  162.554474] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  163.224419] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  165.864124] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  165.865436] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  166.310979] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  166.316843] [adsp.c:msm_adsp_get] opening module AUDPREPROCTASK
+<6>[  166.319141] [adsp.c:msm_adsp_get] opening module AUDRECTASK
+<6>[  166.321923] [adsp.c:msm_adsp_put] closing module AUDRECTASK
+<6>[  166.322029] [adsp.c:msm_adsp_put] closing module AUDPREPROCTASK
+<6>[  166.322433] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  166.331264] [snd.c:snd_ioctl] snd_set_device 0 1 0
+<6>[  166.336301] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  166.343181] [snd.c:snd_ioctl] snd_set_device 0 1 0
+<6>[  166.347646] [adsp.c:msm_adsp_get] opening module AUDPREPROCTASK
+<6>[  166.349589] [adsp.c:msm_adsp_get] opening module AUDRECTASK
+<6>[  166.356511] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  166.358771] [snd.c:snd_ioctl] snd_set_device 0 1 0
+<6>[  166.361208] [audmgr.c:audmgr_enable] session 0xc069801c
+<6>[  166.363331] [audmgr.c:process_audmgr_callback] rpc READY handle=0x00000001
+<6>[  166.366314] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<6>[  166.371256] [audmgr.c:process_audmgr_callback] rpc CODEC_CONFIG volume=0x00000000
+<6>[  166.371371] [adsp.c:msm_adsp_enable] enable 'AUDPREPROCTASK'state[0] id[17227132]
+<6>[  166.373696] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDPREPROCTASK: READY
+<6>[  166.373803] [adsp.c:msm_adsp_enable] enable 'AUDRECTASK'state[0] id[17227131]
+<6>[  166.377426] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDRECTASK: READY
+<6>[  166.377581] [audio_in.c:audrec_dsp_event] CFG ENABLED
+<6>[  166.377658] [audio_in.c:audrec_dsp_event] PARAM CFG DONE
+<6>[  166.377748] [audio_in.c:audpre_dsp_event] type 0, status_flag 0
+<6>[  166.377799] [audio_in.c:audpre_dsp_event] type 1, status_flag 0
+<6>[  166.377851] [audio_in.c:audpre_dsp_event] type 2, status_flag 0
+<4>[  168.117308] save exit: isCheckpointed 1
+<6>[  168.177244] [adsp.c:msm_adsp_disable] disable 'AUDRECTASK'
+<6>[  168.177326] [audio_in.c:audrec_dsp_event] CFG SLEEP
+<6>[  168.178931] [adsp.c:msm_adsp_disable] disable 'AUDPREPROCTASK'
+<6>[  168.180259] [audmgr.c:audmgr_disable] session 0xc069801c
+<6>[  168.181811] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<3>[  168.192079] [audmgr.c:process_audmgr_callback] DISABLED
+<6>[  168.192189] [adsp.c:msm_adsp_put] closing module AUDRECTASK
+<6>[  168.192284] [adsp.c:msm_adsp_put] closing module AUDPREPROCTASK
+<6>[  168.192651] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  168.198521] [snd.c:snd_ioctl] snd_set_device 0 1 0
+<6>[  168.207673] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  168.210173] [snd.c:snd_ioctl] snd_set_device 0 1 0
+<6>[  169.204496] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  172.118556] [audpp.c:audpp_dsp_event] DISABLE
+<6>[  172.118674] [audpp.c:audpp_disable] Received CFG_MSG_DISABLE from ADSP
+<6>[  172.118724] [adsp.c:msm_adsp_disable] disable 'AUDPPTASK'
+<6>[  172.121806] [adsp.c:msm_adsp_put] closing module AUDPPTASK
+<6>[  172.121913] [audmgr.c:audmgr_disable] session 0xc0697a68
+<6>[  172.125826] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<3>[  172.136808] [audmgr.c:process_audmgr_callback] DISABLED
+<4>[  174.142873] save exit: isCheckpointed 1
+<4>[  180.142519] save exit: isCheckpointed 1
+<4>[  186.111206] save exit: isCheckpointed 1
+<4>[  192.092023] save exit: isCheckpointed 1
+<4>[  198.152008] save exit: isCheckpointed 1
+<4>[  204.159061] save exit: isCheckpointed 1
+<4>[  210.096123] save exit: isCheckpointed 1
+<6>[  211.672343] request_suspend_state: sleep (0->3) at 211662986721 (2011-09-12 17:23:45.935663354 UTC)
+<6>[  211.672436] early_suspend: early suspend funtion [c0292ecc]
+<6>[  211.672471] early_suspend: early suspend funtion [c02bbfb0]
+<6>[  211.672503] early_suspend: early suspend funtion [c01e5218]
+<6>[  211.672838] early_suspend: early suspend funtion [c028c994]
+<6>[  211.672874] early_suspend: early suspend funtion [c028b5f4]
+<4>[  211.672916] [Touch] ts_set_vreg() onoff:0
+<6>[  211.673038] early_suspend: early suspend funtion [bf001ce4]
+<6>[  211.675671] early_suspend: early suspend funtion [c00c736c]
+<6>[  211.676396] early_suspend: early suspend funtion [c01e7108]
+<6>[  211.676433] early_suspend: early suspend funtion [c01e78a0]
+<6>[  211.921874] early_suspend: early suspend funtion [c01ea1a8]
+<6>[  211.921908] early_suspend: early suspend funtion [c02d91ec]
+<6>[  211.921929] early_suspend: early suspend funtion [c02d91ec]
+<4>[  211.968486] save exit: isCheckpointed 1
+<4>[  216.142006] save exit: isCheckpointed 1
+<4>[  222.093491] save exit: isCheckpointed 1
+<4>[  228.148808] save exit: isCheckpointed 1
+<4>[  232.115971] Enter wl_iw_control_wl_off
+<4>[  232.119126] Exit wl_iw_control_wl_off
+<4>[  234.160488] save exit: isCheckpointed 1
+<4>[  240.142064] save exit: isCheckpointed 1
+<7>[  242.179493] wlan0: no IPv6 routers present
+<4>[  251.871529] save exit: isCheckpointed 1
+<6>[  251.949426] PM: Syncing filesystems ... done.
+<4>[  252.038133] Freezing user space processes ... (elapsed 0.01 seconds) done.
+<4>[  252.054588] Freezing remaining freezable tasks ... (elapsed 0.00 seconds) done.
+<4>[  252.055118] Suspending console(s) (use no_console_suspend to debug)
+<4>[  252.057123] [Accelerometer] accel_power_off() : Power Off
+<4>[  252.057188] [Ecompass] ecom_power_set() : Power Off
+<7>[  252.059709] msmrtc_tod_proc_result: 09/12/2011 17:24:25 (00)
+<7>[  252.061571] msmrtc_tod_proc_result: 09/12/2011 17:24:25 (00)
+<7>[  252.064016] msmrtc_tod_proc_result: 09/12/2011 17:24:25 (00)
+<7>[  252.066279] msmrtc_tod_proc_result: 09/12/2011 17:24:25 (00)
+<6>[  252.068374] LGE: Android Vibrator Driver Suspend
+<7>[  252.068558] <6>[msm_battery] msm_batt_suspend()...
+<3>[  252.077741] [dhd_hostwakeup_isr] HostWakeup Get GPIO 94: 0
+<6>[  252.079293] pecan_pwrsink_suspend_noirq: configure gpio for suspend
+<6>[  252.079549] wakeup wake lock: rpcrotuer_smd_xprt
+<6>[  252.082021] pecan_pwrsink_resume_noirq: configure gpio for resume
+<3>[  252.149773] dhd_late_resume: enter
+<7>[  252.155953] <6>[msm_battery] msm_batt_resume()...
+<6>[  252.157873] LGE: Android Vibrator Driver Resume
+<7>[  252.160333] msmrtc_tod_proc_result: 09/12/2011 17:25:37 (00)
+<7>[  252.161509] msmrtc_tod_proc_result: 09/12/2011 17:25:37 (00)
+<4>[  252.161704] [Ecompass] ecom_power_set() : Power On
+<4>[  252.164906] [Accelerometer] accel_power_on() : Power On
+<4>[  252.171848] Restarting tasks ... 
+<6>[  252.192351] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[  252.212386] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[  252.232416] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[  252.252448] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[  252.272478] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[  252.272524] [LGE] msmsdcc_check_status (last status): old status - 1,  current status - 1
+<4>[  252.298896] done.
+<6>[  252.298944] suspend: exit suspend, ret = 0 (2011-09-12 17:25:37.637343332 UTC)
+<6>[  252.311153] request_suspend_state: wakeup (3->0) at 252302323376 (2011-09-12 17:25:37.649530000 UTC)
+<6>[  252.318689] late_resume: late resume funtion [c02d983c]
+<6>[  252.318721] late_resume: late resume funtion [c02d983c]
+<6>[  252.318738] late_resume: late resume funtion [0]
+<6>[  252.318754] late_resume: late resume funtion [c01e7e88]
+<4>[  252.554786] Exited wl_iw_control_wl_on 
+<6>[  252.886778] late_resume: late resume funtion [c01e7e50]
+<6>[  252.898964] late_resume: late resume funtion [c00c7088]
+<6>[  252.898998] late_resume: late resume funtion [bf001cd4]
+<6>[  252.900874] late_resume: late resume funtion [c028b6a0]
+<4>[  252.900904] [Touch] ts_set_vreg() onoff:1
+<6>[  252.918921] late_resume: late resume funtion [c028c968]
+<6>[  252.919019] late_resume: late resume funtion [c01e54f8]
+<6>[  252.919793] late_resume: late resume funtion [c02bc6d8]
+<7>[  252.919809] msm_batt_late_resume: enter
+<7>[  252.920563] msm_batt_late_resume: exit
+<6>[  252.920583] late_resume: late resume funtion [c0292ee0]
+<4>[  254.871261] STA connect received 1
+<4>[  255.261459] wl_iw_set_hostip: Received IP Address: 192.168.42.224
+<4>[  258.121121] save exit: isCheckpointed 1
+<6>[  258.298136] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  258.326056] [audmgr.c:audmgr_enable] session 0xc0697a68
+<6>[  258.327213] [audmgr.c:process_audmgr_callback] rpc READY handle=0x00000000
+<6>[  258.327301] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<6>[  258.562464] [audmgr.c:process_audmgr_callback] rpc CODEC_CONFIG volume=0x00000000
+<6>[  258.562531] [adsp.c:msm_adsp_get] opening module AUDPPTASK
+<6>[  258.563708] [adsp.c:msm_adsp_enable] enable 'AUDPPTASK'state[0] id[17227122]
+<6>[  258.564819] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDPPTASK: READY
+<6>[  258.566356] [audpp.c:audpp_dsp_event] ENABLE
+<6>[  258.911266] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  259.256274] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  259.631268] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  260.446263] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  261.282233] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  261.631258] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  262.116258] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  262.406258] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<4>[  264.143276] save exit: isCheckpointed 1
+<6>[  264.637846] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  264.639453] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  265.266859] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  265.269416] [adsp.c:msm_adsp_get] opening module AUDPREPROCTASK
+<6>[  265.270198] [adsp.c:msm_adsp_get] opening module AUDRECTASK
+<6>[  265.271121] [adsp.c:msm_adsp_put] closing module AUDRECTASK
+<6>[  265.271161] [adsp.c:msm_adsp_put] closing module AUDPREPROCTASK
+<6>[  265.271298] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  265.272894] [snd.c:snd_ioctl] snd_set_device 0 1 0
+<6>[  265.276936] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  265.278048] [snd.c:snd_ioctl] snd_set_device 0 1 0
+<6>[  265.279728] [adsp.c:msm_adsp_get] opening module AUDPREPROCTASK
+<6>[  265.280463] [adsp.c:msm_adsp_get] opening module AUDRECTASK
+
+<6>[  265.281224] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  265.281948] [snd.c:snd_ioctl] snd_set_device 0 1 0
+<6>[  265.282903] [audmgr.c:audmgr_enable] session 0xc069801c
+<6>[  265.283661] [audmgr.c:process_audmgr_callback] rpc READY handle=0x00000001
+<6>[  265.284079] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<6>[  265.386816] [audmgr.c:process_audmgr_callback] rpc CODEC_CONFIG volume=0x00000000
+<6>[  265.386946] [adsp.c:msm_adsp_enable] enable 'AUDPREPROCTASK'state[0] id[17227132]
+<6>[  265.389293] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDPREPROCTASK: READY
+<6>[  265.389434] [adsp.c:msm_adsp_enable] enable 'AUDRECTASK'state[0] id[17227131]
+<6>[  265.392493] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDRECTASK: READY
+<6>[  265.392651] [audio_in.c:audrec_dsp_event] CFG ENABLED
+<6>[  265.392729] [audio_in.c:audrec_dsp_event] PARAM CFG DONE
+<6>[  265.392819] [audio_in.c:audpre_dsp_event] type 0, status_flag 0
+<6>[  265.392871] [audio_in.c:audpre_dsp_event] type 1, status_flag 0
+<6>[  265.392921] [audio_in.c:audpre_dsp_event] type 2, status_flag 0
+<4>[  270.144703] save exit: isCheckpointed 1
+<4>[  276.163246] save exit: isCheckpointed 1
+<4>[  282.104883] save exit: isCheckpointed 1
+<4>[  288.108118] save exit: isCheckpointed 1
+<4>[  294.110373] save exit: isCheckpointed 1
+<4>[  299.099229] save exit: isCheckpointed 1
+<6>[  317.232603] [adsp.c:msm_adsp_disable] disable 'AUDRECTASK'
+<6>[  317.232686] [audio_in.c:audrec_dsp_event] CFG SLEEP
+<6>[  317.234348] [adsp.c:msm_adsp_disable] disable 'AUDPREPROCTASK'
+<6>[  317.235723] [audmgr.c:audmgr_disable] session 0xc069801c
+<6>[  317.236724] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<3>[  317.247276] [audmgr.c:process_audmgr_callback] DISABLED
+<6>[  317.247361] [adsp.c:msm_adsp_put] closing module AUDRECTASK
+<6>[  317.247434] [adsp.c:msm_adsp_put] closing module AUDPREPROCTASK
+<6>[  317.247818] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  317.254139] [snd.c:snd_ioctl] snd_set_device 0 1 0
+<6>[  317.265646] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  317.268101] [snd.c:snd_ioctl] snd_set_device 0 1 0
+<6>[  318.049578] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  318.291488] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  321.192013] [audpp.c:audpp_dsp_event] DISABLE
+<6>[  321.192058] [audpp.c:audpp_disable] Received CFG_MSG_DISABLE from ADSP
+<6>[  321.192079] [adsp.c:msm_adsp_disable] disable 'AUDPPTASK'
+<6>[  321.193019] [adsp.c:msm_adsp_put] closing module AUDPPTASK
+<6>[  321.193063] [audmgr.c:audmgr_disable] session 0xc0697a68
+<6>[  321.194294] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<3>[  321.204754] [audmgr.c:process_audmgr_callback] DISABLED
+<4>[  322.075326] save exit: isCheckpointed 1
+<4>[  328.079761] save exit: isCheckpointed 1
+<4>[  334.109756] save exit: isCheckpointed 1
+<4>[  340.108693] save exit: isCheckpointed 1
+<6>[  344.770678] msm_otg_resume: usb exited from low power mode
+<6>[  344.772604] VBUS - (OFF)
+<6>[  344.774129] msm_hsusb msm_hsusb: msm72k_udc: ONLINE -> OFFLINE
+<6>[  344.781269] msm_hsusb_phy_reset
+<6>[  344.909004] msm_otg_suspend: usb in low power mode
+<4>[  346.104109] save exit: isCheckpointed 1
+<6>[  349.602183] msm_otg_resume: usb exited from low power mode
+<6>[  349.608628] VBUS - (ON)
+<6>[  349.608983] msm_hsusb msm_hsusb: msm72k_udc: OFFLINE -> ONLINE
+<6>[  349.615919] msm_hsusb_phy_reset
+<6>[  349.762143] msm_hsusb msm_hsusb: suspend
+<6>[  349.976574] msm_hsusb msm_hsusb: reset
+<6>[  349.978853] msm_hsusb msm_hsusb: portchange USB_SPEED_HIGH
+<6>[  350.101456] msm_hsusb msm_hsusb: reset
+<6>[  350.103741] msm_hsusb msm_hsusb: portchange USB_SPEED_HIGH
+<6>[  350.249574] android_usb gadget: high speed config #1: android
+<7>[  350.249726] diag: USB connected
+<6>[  350.258721] SMD: ch 0 0 -> 1
+<6>[  350.258876] SMD: ch 0 1 -> 2
+<3>[  350.396094] init: sys_prop: permission denied uid:2000  name:adb.connected
+<6>[  350.512783] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  350.541454] [audmgr.c:audmgr_enable] session 0xc0697a68
+<6>[  350.542544] [audmgr.c:process_audmgr_callback] rpc READY handle=0x00000000
+<6>[  350.542944] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<6>[  350.758998] do_detect_factory_cable : Using PIF ZIG (0)
+<6>[  350.759729] 
+<6>[  350.759736] Charger Type: STD DOWNSTREAM PORT
+<6>[  350.777773] [audmgr.c:process_audmgr_callback] rpc CODEC_CONFIG volume=0x00000000
+<6>[  350.777836] [adsp.c:msm_adsp_get] opening module AUDPPTASK
+<6>[  350.778734] [adsp.c:msm_adsp_enable] enable 'AUDPPTASK'state[0] id[17227122]
+<6>[  350.780089] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDPPTASK: READY
+<6>[  350.781649] [audpp.c:audpp_dsp_event] ENABLE
+<4>[  352.075876] save exit: isCheckpointed 1
+<6>[  352.730734] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  355.640521] [audpp.c:audpp_dsp_event] DISABLE
+<6>[  355.640576] [audpp.c:audpp_disable] Received CFG_MSG_DISABLE from ADSP
+<6>[  355.640598] [adsp.c:msm_adsp_disable] disable 'AUDPPTASK'
+<6>[  355.641609] [adsp.c:msm_adsp_put] closing module AUDPPTASK
+<6>[  355.641668] [audmgr.c:audmgr_disable] session 0xc0697a68
+<6>[  355.643651] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<3>[  355.653359] [audmgr.c:process_audmgr_callback] DISABLED
+<4>[  358.052764] save exit: isCheckpointed 1
+<4>[  364.067658] save exit: isCheckpointed 1
+<4>[  370.067418] save exit: isCheckpointed 1
+<4>[  376.053443] save exit: isCheckpointed 1
+<6>[  379.903178] request_suspend_state: sleep (0->3) at 379894346732 (2011-09-12 17:27:45.241555022 UTC)
+<6>[  379.904186] early_suspend: early suspend funtion [c0292ecc]
+<6>[  379.904204] early_suspend: early suspend funtion [c02bbfb0]
+<6>[  379.904218] early_suspend: early suspend funtion [c01e5218]
+<6>[  379.904509] early_suspend: early suspend funtion [c028c994]
+<6>[  379.904528] early_suspend: early suspend funtion [c028b5f4]
+<4>[  379.904549] [Touch] ts_set_vreg() onoff:0
+<6>[  379.904651] early_suspend: early suspend funtion [bf001ce4]
+<6>[  379.910816] early_suspend: early suspend funtion [c00c736c]
+<6>[  379.914431] early_suspend: early suspend funtion [c01e7108]
+<6>[  379.914454] early_suspend: early suspend funtion [c01e78a0]
+<6>[  380.172308] early_suspend: early suspend funtion [c01ea1a8]
+<6>[  380.172341] early_suspend: early suspend funtion [c02d91ec]
+<6>[  380.172363] early_suspend: early suspend funtion [c02d91ec]
+<4>[  380.218101] save exit: isCheckpointed 1
+<3>[  381.103398] init: sys_prop: permission denied uid:2000  name:adb.connected
+<3>[  381.103801] init: sys_prop: permission denied uid:2000  name:adb.connected
+<4>[  382.067378] save exit: isCheckpointed 1
+<6>[  385.241974] request_suspend_state: wakeup (3->0) at 385233138389 (2011-09-12 17:27:50.580345013 UTC)
+<6>[  385.242073] late_resume: late resume funtion [c02d983c]
+<6>[  385.242096] late_resume: late resume funtion [c02d983c]
+<6>[  385.242113] late_resume: late resume funtion [0]
+<6>[  385.242128] late_resume: late resume funtion [c01e7e88]
+<6>[  385.656653] late_resume: late resume funtion [c01e7e50]
+<6>[  385.668908] late_resume: late resume funtion [c00c7088]
+<6>[  385.668939] late_resume: late resume funtion [bf001cd4]
+<6>[  385.670881] late_resume: late resume funtion [c028b6a0]
+<4>[  385.670911] [Touch] ts_set_vreg() onoff:1
+<6>[  385.691954] late_resume: late resume funtion [c028c968]
+<6>[  385.692083] late_resume: late resume funtion [c01e54f8]
+<6>[  385.693044] late_resume: late resume funtion [c02bc6d8]
+<7>[  385.693074] msm_batt_late_resume: enter
+<7>[  385.693814] msm_batt_late_resume: exit
+<6>[  385.693874] late_resume: late resume funtion [c0292ee0]
+<4>[  388.069508] save exit: isCheckpointed 1
+<6>[  391.400473] [audmgr.c:audmgr_enable] session 0xc0697a68
+<6>[  391.401539] [audmgr.c:process_audmgr_callback] rpc READY handle=0x00000000
+<6>[  391.401921] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<6>[  391.636891] [audmgr.c:process_audmgr_callback] rpc CODEC_CONFIG volume=0x00000000
+<6>[  391.636993] [adsp.c:msm_adsp_get] opening module AUDPPTASK
+<6>[  391.638144] [adsp.c:msm_adsp_enable] enable 'AUDPPTASK'state[0] id[17227122]
+<6>[  391.639241] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDPPTASK: READY
+<6>[  391.640874] [audpp.c:audpp_dsp_event] ENABLE
+<6>[  391.820691] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  393.695691] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<4>[  394.073458] save exit: isCheckpointed 1
+<6>[  394.090688] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  394.465696] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  394.815681] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<4>[  395.130063] select 1492 (ndroid.settings), adj 7, size 3554, to kill
+<4>[  395.130129] select 1547 (d.process.media), adj 8, size 3887, to kill
+<4>[  395.130179] select 1558 (com.android.mms), adj 8, size 3901, to kill
+<4>[  395.130234] select 1683 (m.android.email), adj 10, size 3825, to kill
+<4>[  395.130288] select 1736 (droid.deskclock), adj 11, size 3616, to kill
+<4>[  395.130363] send sigkill to 1736 (droid.deskclock), adj 11, size 3616
+<4>[  395.133384] select 1492 (ndroid.settings), adj 7, size 3554, to kill
+<4>[  395.133443] select 1547 (d.process.media), adj 8, size 3887, to kill
+<4>[  395.133489] select 1558 (com.android.mms), adj 8, size 3901, to kill
+<4>[  395.133543] select 1683 (m.android.email), adj 10, size 3825, to kill
+<4>[  395.133596] select 1775 (s:FriendService), adj 10, size 3848, to kill
+<4>[  395.133644] select 1795 (equicksearchbox), adj 11, size 3603, to kill
+<4>[  395.133706] send sigkill to 1795 (equicksearchbox), adj 11, size 3603
+<6>[  395.185679] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  395.480689] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  395.830691] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  396.335696] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  396.655691] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  399.079584] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  399.080896] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  399.572913] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  399.578349] [adsp.c:msm_adsp_get] opening module AUDPREPROCTASK
+<6>[  399.579111] [adsp.c:msm_adsp_get] opening module AUDRECTASK
+<6>[  399.580061] [adsp.c:msm_adsp_put] closing module AUDRECTASK
+<6>[  399.580101] [adsp.c:msm_adsp_put] closing module AUDPREPROCTASK
+<6>[  399.580248] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  399.582231] [snd.c:snd_ioctl] snd_set_device 0 1 0
+<6>[  399.589726] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  399.590613] [snd.c:snd_ioctl] snd_set_device 0 1 0
+<6>[  399.593276] [adsp.c:msm_adsp_get] opening module AUDPREPROCTASK
+<6>[  399.593984] [adsp.c:msm_adsp_get] opening module AUDRECTASK
+<6>[  399.594943] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  399.595663] [snd.c:snd_ioctl] snd_set_device 0 1 0
+<6>[  399.596373] [audmgr.c:audmgr_enable] session 0xc069801c
+<6>[  399.597098] [audmgr.c:process_audmgr_callback] rpc READY handle=0x00000001
+<6>[  399.597494] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<6>[  399.699921] [audmgr.c:process_audmgr_callback] rpc CODEC_CONFIG volume=0x00000000
+<6>[  399.700071] [adsp.c:msm_adsp_enable] enable 'AUDPREPROCTASK'state[0] id[17227132]
+<6>[  399.701774] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDPREPROCTASK: READY
+<6>[  399.701889] [adsp.c:msm_adsp_enable] enable 'AUDRECTASK'state[0] id[17227131]
+<6>[  399.703313] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDRECTASK: READY
+<6>[  399.703434] [audio_in.c:audrec_dsp_event] CFG ENABLED
+<6>[  399.703509] [audio_in.c:audrec_dsp_event] PARAM CFG DONE
+<6>[  399.703594] [audio_in.c:audpre_dsp_event] type 0, status_flag 0
+<6>[  399.703646] [audio_in.c:audpre_dsp_event] type 1, status_flag 0
+<6>[  399.703694] [audio_in.c:audpre_dsp_event] type 2, status_flag 0
+<4>[  400.085844] save exit: isCheckpointed 1
+<4>[  406.089088] save exit: isCheckpointed 1
+<4>[  424.062803] save exit: isCheckpointed 1
+<4>[  430.100244] save exit: isCheckpointed 1
+<6>[  439.649234] [adsp.c:msm_adsp_disable] disable 'AUDRECTASK'
+<6>[  439.649306] [audio_in.c:audrec_dsp_event] CFG SLEEP
+<6>[  439.650273] [adsp.c:msm_adsp_disable] disable 'AUDPREPROCTASK'
+<6>[  439.651008] [audmgr.c:audmgr_disable] session 0xc069801c
+<6>[  439.651654] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<3>[  439.661893] [audmgr.c:process_audmgr_callback] DISABLED
+<6>[  439.661986] [adsp.c:msm_adsp_put] closing module AUDRECTASK
+<6>[  439.662051] [adsp.c:msm_adsp_put] closing module AUDPREPROCTASK
+<6>[  439.662366] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  439.664361] [snd.c:snd_ioctl] snd_set_device 0 1 0
+<6>[  439.668544] [snd.c:snd_ioctl] snd_set_device 0 1 1
+<6>[  439.669374] [snd.c:snd_ioctl] snd_set_device 0 1 0
+<6>[  440.330726] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  440.650504] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<4>[  442.087931] save exit: isCheckpointed 1
+<6>[  443.560853] [audpp.c:audpp_dsp_event] DISABLE
+<6>[  443.560893] [audpp.c:audpp_disable] Received CFG_MSG_DISABLE from ADSP
+<6>[  443.560911] [adsp.c:msm_adsp_disable] disable 'AUDPPTASK'
+<6>[  443.563336] [adsp.c:msm_adsp_put] closing module AUDPPTASK
+<6>[  443.563388] [audmgr.c:audmgr_disable] session 0xc0697a68
+<6>[  443.565169] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<3>[  443.575536] [audmgr.c:process_audmgr_callback] DISABLED
+<6>[  445.779068] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  445.807174] [audmgr.c:audmgr_enable] session 0xc0697a68
+<6>[  445.808228] [audmgr.c:process_audmgr_callback] rpc READY handle=0x00000000
+<6>[  445.810171] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<6>[  445.814231] [audmgr.c:process_audmgr_callback] rpc CODEC_CONFIG volume=0x00000000
+<6>[  445.814274] [adsp.c:msm_adsp_get] opening module AUDPPTASK
+<6>[  445.815079] [adsp.c:msm_adsp_enable] enable 'AUDPPTASK'state[0] id[17227122]
+<6>[  445.816183] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDPPTASK: READY
+<6>[  445.817583] [audpp.c:audpp_dsp_event] ENABLE
+<6>[  446.817499] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<4>[  448.072709] save exit: isCheckpointed 1
+<6>[  449.723831] [audpp.c:audpp_dsp_event] DISABLE
+<6>[  449.723904] [audpp.c:audpp_disable] Received CFG_MSG_DISABLE from ADSP
+<6>[  449.723944] [adsp.c:msm_adsp_disable] disable 'AUDPPTASK'
+<6>[  449.724873] [adsp.c:msm_adsp_put] closing module AUDPPTASK
+<6>[  449.724943] [audmgr.c:audmgr_disable] session 0xc0697a68
+<6>[  449.726433] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<3>[  449.736626] [audmgr.c:process_audmgr_callback] DISABLED
+<4>[  454.067541] save exit: isCheckpointed 1
+<4>[  460.054623] save exit: isCheckpointed 1
+<4>[  466.053653] save exit: isCheckpointed 1
+<4>[  472.069704] save exit: isCheckpointed 1
+<4>[  478.070433] save exit: isCheckpointed 1
+<6>[  478.313831] request_suspend_state: sleep (0->3) at 478304995067 (2011-09-12 17:29:23.652201690 UTC)
+<6>[  478.315526] early_suspend: early suspend funtion [c0292ecc]
+<6>[  478.315558] early_suspend: early suspend funtion [c02bbfb0]
+<6>[  478.315579] early_suspend: early suspend funtion [c01e5218]
+<6>[  478.315869] early_suspend: early suspend funtion [c028c994]
+<6>[  478.315896] early_suspend: early suspend funtion [c028b5f4]
+<4>[  478.315926] [Touch] ts_set_vreg() onoff:0
+<6>[  478.316051] early_suspend: early suspend funtion [bf001ce4]
+<6>[  478.324266] early_suspend: early suspend funtion [c00c736c]
+<6>[  478.324796] early_suspend: early suspend funtion [c01e7108]
+<6>[  478.324823] early_suspend: early suspend funtion [c01e78a0]
+<6>[  478.579821] early_suspend: early suspend funtion [c01ea1a8]
+<6>[  478.579856] early_suspend: early suspend funtion [c02d91ec]
+<6>[  478.579878] early_suspend: early suspend funtion [c02d91ec]
+<4>[  478.644036] save exit: isCheckpointed 1
+<4>[  484.056059] save exit: isCheckpointed 1
+<4>[  488.600891] Enter wl_iw_control_wl_off
+<4>[  488.605054] Exit wl_iw_control_wl_off
+<4>[  490.054226] save exit: isCheckpointed 1
+<4>[  496.053729] save exit: isCheckpointed 1
+<7>[  499.508846] wlan0: no IPv6 routers present
+<4>[  514.067459] save exit: isCheckpointed 1
+<4>[  646.068063] save exit: isCheckpointed 1
+<6>[  746.211724] request_suspend_state: wakeup (3->0) at 746202893378 (2011-09-12 17:33:51.550100002 UTC)
+<6>[  746.211784] late_resume: late resume funtion [c02d983c]
+<6>[  746.211804] late_resume: late resume funtion [c02d983c]
+<6>[  746.211821] late_resume: late resume funtion [0]
+<6>[  746.211838] late_resume: late resume funtion [c01e7e88]
+<4>[  746.399019] Exited wl_iw_control_wl_on 
+<6>[  746.634279] late_resume: late resume funtion [c01e7e50]
+<6>[  746.644074] late_resume: late resume funtion [c00c7088]
+<6>[  746.644108] late_resume: late resume funtion [bf001cd4]
+<6>[  746.644796] late_resume: late resume funtion [c028b6a0]
+<4>[  746.644819] [Touch] ts_set_vreg() onoff:1
+<6>[  746.658968] late_resume: late resume funtion [c028c968]
+<6>[  746.659063] late_resume: late resume funtion [c01e54f8]
+<6>[  746.659834] late_resume: late resume funtion [c02bc6d8]
+<7>[  746.659851] msm_batt_late_resume: enter
+<7>[  746.661113] msm_batt_late_resume: exit
+<6>[  746.661136] late_resume: late resume funtion [c0292ee0]
+<4>[  748.100494] save exit: isCheckpointed 1
+<4>[  748.743573] STA connect received 1
+<4>[  749.076993] wl_iw_set_hostip: Received IP Address: 192.168.42.224
+<6>[  753.864959] request_suspend_state: sleep (0->3) at 753856105061 (2011-09-12 17:33:59.203306684 UTC)
+<6>[  753.865091] early_suspend: early suspend funtion [c0292ecc]
+<6>[  753.865134] early_suspend: early suspend funtion [c02bbfb0]
+<6>[  753.865174] early_suspend: early suspend funtion [c01e5218]
+<6>[  753.865548] early_suspend: early suspend funtion [c028c994]
+<6>[  753.865594] early_suspend: early suspend funtion [c028b5f4]
+<4>[  753.865646] [Touch] ts_set_vreg() onoff:0
+<6>[  753.865764] early_suspend: early suspend funtion [bf001ce4]
+<6>[  753.866999] early_suspend: early suspend funtion [c00c736c]
+<6>[  753.867748] early_suspend: early suspend funtion [c01e7108]
+<6>[  753.867796] early_suspend: early suspend funtion [c01e78a0]
+<4>[  754.056714] save exit: isCheckpointed 1
+<6>[  754.317816] early_suspend: early suspend funtion [c01ea1a8]
+<6>[  754.317851] early_suspend: early suspend funtion [c02d91ec]
+<6>[  754.317873] early_suspend: early suspend funtion [c02d91ec]
+<4>[  754.360388] save exit: isCheckpointed 1
+<6>[  754.501259] request_suspend_state: wakeup (3->0) at 754492426735 (2011-09-12 17:33:59.839635025 UTC)
+<6>[  754.509151] late_resume: late resume funtion [c02d983c]
+<6>[  754.509183] late_resume: late resume funtion [c02d983c]
+<6>[  754.509199] late_resume: late resume funtion [0]
+<6>[  754.509214] late_resume: late resume funtion [c01e7e88]
+<6>[  755.017144] late_resume: late resume funtion [c01e7e50]
+<6>[  755.031204] late_resume: late resume funtion [c00c7088]
+<6>[  755.031236] late_resume: late resume funtion [bf001cd4]
+<6>[  755.036621] late_resume: late resume funtion [c028b6a0]
+<4>[  755.036641] [Touch] ts_set_vreg() onoff:1
+<6>[  755.048909] late_resume: late resume funtion [c028c968]
+<6>[  755.049016] late_resume: late resume funtion [c01e54f8]
+<6>[  755.049789] late_resume: late resume funtion [c02bc6d8]
+<7>[  755.049806] msm_batt_late_resume: enter
+<7>[  755.050469] msm_batt_late_resume: exit
+<6>[  755.050488] late_resume: late resume funtion [c0292ee0]
+<4>[  760.052401] save exit: isCheckpointed 1
+<4>[  766.070219] save exit: isCheckpointed 1
+<4>[  772.083704] save exit: isCheckpointed 1
+<4>[  778.111854] save exit: isCheckpointed 1
+<4>[  784.100723] save exit: isCheckpointed 1
+<6>[  784.629201] [audmgr.c:audmgr_enable] session 0xc0697a68
+<6>[  784.630214] [audmgr.c:process_audmgr_callback] rpc READY handle=0x00000000
+<6>[  784.630516] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<6>[  784.867336] [audmgr.c:process_audmgr_callback] rpc CODEC_CONFIG volume=0x00000000
+<6>[  784.867384] [adsp.c:msm_adsp_get] opening module AUDPPTASK
+<6>[  784.868309] [adsp.c:msm_adsp_enable] enable 'AUDPPTASK'state[0] id[17227122]
+<6>[  784.869794] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDPPTASK: READY
+<6>[  784.871343] [audpp.c:audpp_dsp_event] ENABLE
+<6>[  786.030883] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  787.225886] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  788.410888] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  789.465881] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<4>[  790.092568] save exit: isCheckpointed 1
+<6>[  790.300889] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  791.060884] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  791.705881] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  792.130886] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  792.860881] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  793.555879] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[  795.370884] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<4>[  796.055963] save exit: isCheckpointed 1
+<6>[  798.285666] [audpp.c:audpp_dsp_event] DISABLE
+<6>[  798.285733] [audpp.c:audpp_disable] Received CFG_MSG_DISABLE from ADSP
+<6>[  798.285763] [adsp.c:msm_adsp_disable] disable 'AUDPPTASK'
+<6>[  798.286659] [adsp.c:msm_adsp_put] closing module AUDPPTASK
+<6>[  798.286716] [audmgr.c:audmgr_disable] session 0xc0697a68
+<6>[  798.287934] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<3>[  798.298684] [audmgr.c:process_audmgr_callback] DISABLED
+<4>[  802.097659] save exit: isCheckpointed 1
+<4>[  808.097146] save exit: isCheckpointed 1
+<4>[  808.100903] save exit: isCheckpointed 1
+<4>[  810.672426] select 1492 (ndroid.settings), adj 8, size 3476, to kill
+<4>[  810.672461] select 1558 (com.android.mms), adj 9, size 3756, to kill
+<4>[  810.672486] select 1683 (m.android.email), adj 10, size 3707, to kill
+<4>[  810.672509] select 1775 (s:FriendService), adj 11, size 3718, to kill
+<4>[  810.672538] send sigkill to 1775 (s:FriendService), adj 11, size 3718
+<4>[  810.752394] select 1492 (ndroid.settings), adj 8, size 3476, to kill
+<4>[  810.752431] select 1558 (com.android.mms), adj 9, size 3756, to kill
+<4>[  810.752456] select 1683 (m.android.email), adj 10, size 3707, to kill
+<4>[  810.752488] select 1830 (com.lge.lgmits), adj 11, size 3270, to kill
+<4>[  810.752519] send sigkill to 1830 (com.lge.lgmits), adj 11, size 3270
+<4>[  814.073354] save exit: isCheckpointed 1
+<4>[  820.086564] save exit: isCheckpointed 1
+<4>[  825.500888] select 1492 (ndroid.settings), adj 9, size 2838, to kill
+<4>[  825.500924] select 1558 (com.android.mms), adj 10, size 3045, to kill
+<4>[  825.500948] select 1683 (m.android.email), adj 11, size 3005, to kill
+<4>[  825.500979] send sigkill to 1683 (m.android.email), adj 11, size 3005
+<4>[  826.084219] save exit: isCheckpointed 1
+<4>[  832.063208] save exit: isCheckpointed 1
+<6>[  835.549519] request_suspend_state: sleep (0->3) at 835540665077 (2011-09-12 17:35:20.887868367 UTC)
+<6>[  835.549623] early_suspend: early suspend funtion [c0292ecc]
+<6>[  835.549666] early_suspend: early suspend funtion [c02bbfb0]
+<6>[  835.549708] early_suspend: early suspend funtion [c01e5218]
+<6>[  835.550081] early_suspend: early suspend funtion [c028c994]
+<6>[  835.550128] early_suspend: early suspend funtion [c028b5f4]
+<4>[  835.550179] [Touch] ts_set_vreg() onoff:0
+<6>[  835.550316] early_suspend: early suspend funtion [bf001ce4]
+<6>[  835.556464] early_suspend: early suspend funtion [c00c736c]
+<6>[  835.557359] early_suspend: early suspend funtion [c01e7108]
+<6>[  835.557408] early_suspend: early suspend funtion [c01e78a0]
+<6>[  835.819809] early_suspend: early suspend funtion [c01ea1a8]
+<6>[  835.819843] early_suspend: early suspend funtion [c02d91ec]
+<6>[  835.819864] early_suspend: early suspend funtion [c02d91ec]
+<4>[  835.867566] save exit: isCheckpointed 1
+<4>[  835.941053] save exit: isCheckpointed 1
+<4>[  838.057469] save exit: isCheckpointed 1
+<4>[  841.831416] select 1492 (ndroid.settings), adj 7, size 2853, to kill
+<4>[  841.831451] select 1547 (d.process.media), adj 9, size 3222, to kill
+<4>[  841.831473] select 1558 (com.android.mms), adj 10, size 3044, to kill
+<4>[  841.831496] select 1720 (viders.calendar), adj 11, size 2885, to kill
+<4>[  841.831521] select 1836 (android.browser), adj 11, size 2902, to kill
+<4>[  841.831549] send sigkill to 1836 (android.browser), adj 11, size 2902
+<4>[  844.059546] save exit: isCheckpointed 1
+<4>[  850.070488] save exit: isCheckpointed 1
+<4>[  856.070148] save exit: isCheckpointed 1
+<4>[  862.076066] save exit: isCheckpointed 1
+<4>[  865.913924] Enter wl_iw_control_wl_off
+<4>[  865.920918] Exit wl_iw_control_wl_off
+<4>[  865.953568] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[  865.954011] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[  865.966144] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[  865.966633] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[  868.069991] save exit: isCheckpointed 1
+<4>[  874.072074] save exit: isCheckpointed 1
+<7>[  876.498846] wlan0: no IPv6 routers present
+<6>[  901.211406] request_suspend_state: wakeup (3->0) at 901202568406 (2011-09-12 17:36:26.549775029 UTC)
+<6>[  901.211509] late_resume: late resume funtion [c02d983c]
+<6>[  901.211544] late_resume: late resume funtion [c02d983c]
+<6>[  901.211561] late_resume: late resume funtion [0]
+<6>[  901.211576] late_resume: late resume funtion [c01e7e88]
+<4>[  901.404017] Exited wl_iw_control_wl_on 
+<6>[  901.557147] late_resume: late resume funtion [c01e7e50]
+<6>[  901.571059] late_resume: late resume funtion [c00c7088]
+<6>[  901.572166] late_resume: late resume funtion [bf001cd4]
+<6>[  901.573131] late_resume: late resume funtion [c028b6a0]
+<4>[  901.573159] [Touch] ts_set_vreg() onoff:1
+<6>[  901.588872] late_resume: late resume funtion [c028c968]
+<6>[  901.588982] late_resume: late resume funtion [c01e54f8]
+<6>[  901.589791] late_resume: late resume funtion [c02bc6d8]
+<7>[  901.589811] msm_batt_late_resume: enter
+<7>[  901.590531] msm_batt_late_resume: exit
+<6>[  901.590554] late_resume: late resume funtion [c0292ee0]
+<4>[  903.776561] STA connect received 1
+<4>[  904.059017] save exit: isCheckpointed 1
+<4>[  904.152097] wl_iw_set_hostip: Received IP Address: 192.168.42.224
+<4>[  910.108422] save exit: isCheckpointed 1
+<4>[  916.083304] save exit: isCheckpointed 1
+<4>[  922.081024] save exit: isCheckpointed 1
+<4>[  928.128714] save exit: isCheckpointed 1
+<4>[  940.067597] save exit: isCheckpointed 1
+<4>[  946.060491] save exit: isCheckpointed 1
+<4>[  952.084552] save exit: isCheckpointed 1
+<4>[  964.073784] save exit: isCheckpointed 1
+<4>[  976.094551] save exit: isCheckpointed 1
+<4>[  982.082082] save exit: isCheckpointed 1
+<4>[  996.647321] gpiomatrix: key e7, 1-0 (33-38) changed to 1
+<4>[  996.788252] gpiomatrix: key e7, 1-0 (33-38) changed to 0
+<4>[  997.429919] gpiomatrix: key e7, 1-0 (33-38) changed to 1
+<4>[  997.530604] gpiomatrix: key e7, 1-0 (33-38) changed to 0
+<6>[  999.454619] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  999.455994] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[  999.484467] [audmgr.c:audmgr_enable] session 0xc0697a68
+<6>[  999.485392] [audmgr.c:process_audmgr_callback] rpc READY handle=0x00000000
+<6>[  999.485571] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<6>[  999.720479] [audmgr.c:process_audmgr_callback] rpc CODEC_CONFIG volume=0x00000000
+<6>[  999.720581] [adsp.c:msm_adsp_get] opening module AUDPPTASK
+<6>[  999.721706] [adsp.c:msm_adsp_enable] enable 'AUDPPTASK'state[0] id[17227122]
+<6>[  999.722777] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDPPTASK: READY
+<6>[  999.724409] [audpp.c:audpp_dsp_event] ENABLE
+<6>[  999.745884] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<4>[ 1000.081759] save exit: isCheckpointed 1
+<6>[ 1000.258472] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[ 1003.165774] [audpp.c:audpp_dsp_event] DISABLE
+<6>[ 1003.165857] [audpp.c:audpp_disable] Received CFG_MSG_DISABLE from ADSP
+<6>[ 1003.165904] [adsp.c:msm_adsp_disable] disable 'AUDPPTASK'
+<6>[ 1003.166811] [adsp.c:msm_adsp_put] closing module AUDPPTASK
+<6>[ 1003.166884] [audmgr.c:audmgr_disable] session 0xc0697a68
+<6>[ 1003.168124] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<3>[ 1003.179056] [audmgr.c:process_audmgr_callback] DISABLED
+<4>[ 1006.072201] save exit: isCheckpointed 1
+<4>[ 1018.091391] save exit: isCheckpointed 1
+<4>[ 1024.078437] save exit: isCheckpointed 1
+<4>[ 1030.076236] save exit: isCheckpointed 1
+<4>[ 1036.096591] save exit: isCheckpointed 1
+<4>[ 1042.073541] save exit: isCheckpointed 1
+<4>[ 1054.081991] save exit: isCheckpointed 1
+<4>[ 1060.117904] save exit: isCheckpointed 1
+<4>[ 1066.072364] save exit: isCheckpointed 1
+<4>[ 1072.094311] save exit: isCheckpointed 1
+<4>[ 1078.113029] save exit: isCheckpointed 1
+<4>[ 1084.087982] save exit: isCheckpointed 1
+<4>[ 1087.523299] select 1492 (ndroid.settings), adj 7, size 3630, to kill
+<4>[ 1087.523334] select 1547 (d.process.media), adj 8, size 3138, to kill
+<4>[ 1087.523356] select 1558 (com.android.mms), adj 10, size 2958, to kill
+<4>[ 1087.523381] select 1720 (viders.calendar), adj 11, size 2805, to kill
+<4>[ 1087.523412] send sigkill to 1720 (viders.calendar), adj 11, size 2805
+<4>[ 1090.123857] save exit: isCheckpointed 1
+<6>[ 1093.147352] msm_hsusb msm_hsusb: suspend
+<6>[ 1093.157084] VBUS - (OFF)
+<6>[ 1093.157151] msm_hsusb msm_hsusb: msm72k_udc: ONLINE -> OFFLINE
+<6>[ 1093.160147] diag_function_disable
+<7>[ 1093.160597] diag: USB disconnected
+<3>[ 1093.162142] Packet dropped due to bad HDLC coding/CRC errors or partial packet received, packet length = 0
+<3>[ 1093.168117] init: sys_prop: permission denied uid:2000  name:adb.connected
+<6>[ 1093.186994] msm_hsusb_phy_reset
+<6>[ 1093.309052] msm_otg_suspend: usb in low power mode
+<3>[ 1093.372971] init: untracked pid 2280 exited
+<6>[ 1093.671314] smd_close(cd099000)
+<6>[ 1093.671382] smd_close(DS)
+<4>[ 1096.244514] save exit: isCheckpointed 1
+<6>[ 1096.698224] [snd.c:snd_ioctl] snd_set_volume 30 0 3
+<6>[ 1096.728899] [audmgr.c:audmgr_enable] session 0xc0697a68
+<6>[ 1096.729907] [audmgr.c:process_audmgr_callback] rpc READY handle=0x00000000
+<6>[ 1096.730064] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<6>[ 1096.967977] [audmgr.c:process_audmgr_callback] rpc CODEC_CONFIG volume=0x00000000
+<6>[ 1096.968097] [adsp.c:msm_adsp_get] opening module AUDPPTASK
+<6>[ 1096.970724] [adsp.c:msm_adsp_enable] enable 'AUDPPTASK'state[0] id[17227122]
+<6>[ 1096.975012] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDPPTASK: READY
+<6>[ 1096.978499] [audpp.c:audpp_dsp_event] ENABLE
+<6>[ 1098.927994] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<6>[ 1101.844622] [audpp.c:audpp_dsp_event] DISABLE
+<6>[ 1101.844737] [audpp.c:audpp_disable] Received CFG_MSG_DISABLE from ADSP
+<6>[ 1101.844787] [adsp.c:msm_adsp_disable] disable 'AUDPPTASK'
+<6>[ 1101.847969] [adsp.c:msm_adsp_put] closing module AUDPPTASK
+<6>[ 1101.848081] [audmgr.c:audmgr_disable] session 0xc0697a68
+
+<6>[ 1101.851989] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<3>[ 1101.862529] [audmgr.c:process_audmgr_callback] DISABLED
+<4>[ 1102.223606] save exit: isCheckpointed 1
+<4>[ 1108.115489] save exit: isCheckpointed 1
+<4>[ 1120.402067] save exit: isCheckpointed 1
+<4>[ 1126.552797] save exit: isCheckpointed 1
+<4>[ 1132.454037] save exit: isCheckpointed 1
+<4>[ 1138.378422] save exit: isCheckpointed 1
+<4>[ 1144.217826] save exit: isCheckpointed 1
+<4>[ 1150.883909] save exit: isCheckpointed 1
+<4>[ 1156.818199] save exit: isCheckpointed 1
+<4>[ 1162.304162] save exit: isCheckpointed 1
+<4>[ 1168.458627] save exit: isCheckpointed 1
+<4>[ 1174.540162] save exit: isCheckpointed 1
+<6>[ 1180.702536] request_suspend_state: sleep (0->3) at 1180693646740 (2011-09-12 17:41:06.040845030 UTC)
+<6>[ 1180.702686] early_suspend: early suspend funtion [c0292ecc]
+<6>[ 1180.702732] early_suspend: early suspend funtion [c02bbfb0]
+<6>[ 1180.702776] early_suspend: early suspend funtion [c01e5218]
+<6>[ 1180.703204] early_suspend: early suspend funtion [c028c994]
+<6>[ 1180.703261] early_suspend: early suspend funtion [c028b5f4]
+<4>[ 1180.703321] [Touch] ts_set_vreg() onoff:0
+<6>[ 1180.703631] early_suspend: early suspend funtion [bf001ce4]
+<6>[ 1180.709714] early_suspend: early suspend funtion [c00c736c]
+<6>[ 1180.710854] early_suspend: early suspend funtion [c01e7108]
+<6>[ 1180.710906] early_suspend: early suspend funtion [c01e78a0]
+<4>[ 1180.847482] save exit: isCheckpointed 1
+<6>[ 1181.174387] early_suspend: early suspend funtion [c01ea1a8]
+<6>[ 1181.174421] early_suspend: early suspend funtion [c02d91ec]
+<6>[ 1181.174442] early_suspend: early suspend funtion [c02d91ec]
+<4>[ 1181.779684] save exit: isCheckpointed 1
+<4>[ 1182.005534] save exit: isCheckpointed 1
+<4>[ 1186.413407] save exit: isCheckpointed 1
+<4>[ 1191.446434] Enter wl_iw_control_wl_off
+<4>[ 1191.456646] Exit wl_iw_control_wl_off
+<4>[ 1191.490986] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1191.501821] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1191.546449] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1191.546821] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1192.059436] save exit: isCheckpointed 1
+<4>[ 1198.126486] save exit: isCheckpointed 1
+<7>[ 1201.618881] wlan0: no IPv6 routers present
+<4>[ 1204.111516] save exit: isCheckpointed 1
+<4>[ 1210.076504] save exit: isCheckpointed 1
+<4>[ 1211.200842] save exit: isCheckpointed 1
+<6>[ 1211.278941] PM: Syncing filesystems ... done.
+<4>[ 1211.358946] Freezing user space processes ... (elapsed 0.01 seconds) done.
+<4>[ 1211.374457] Freezing remaining freezable tasks ... (elapsed 0.00 seconds) done.
+<4>[ 1211.374997] Suspending console(s) (use no_console_suspend to debug)
+<4>[ 1211.377002] [Accelerometer] accel_power_off() : Power Off
+<4>[ 1211.377071] [Ecompass] ecom_power_set() : Power Off
+<7>[ 1211.379789] msmrtc_tod_proc_result: 09/12/2011 17:41:36 (00)
+<7>[ 1211.382582] msmrtc_tod_proc_result: 09/12/2011 17:41:36 (00)
+<7>[ 1211.384476] msmrtc_tod_proc_result: 09/12/2011 17:41:36 (00)
+<7>[ 1211.386784] msmrtc_tod_proc_result: 09/12/2011 17:41:36 (00)
+<6>[ 1211.388997] LGE: Android Vibrator Driver Suspend
+<7>[ 1211.389197] <6>[msm_battery] msm_batt_suspend()...
+<6>[ 1211.408294] pecan_pwrsink_suspend_noirq: configure gpio for suspend
+<6>[ 1211.408294] wakeup wake lock: rpcrotuer_smd_xprt
+<6>[ 1211.409176] pecan_pwrsink_resume_noirq: configure gpio for resume
+<3>[ 1211.479154] dhd_late_resume: enter
+<7>[ 1211.485377] <6>[msm_battery] msm_batt_resume()...
+<6>[ 1211.486921] LGE: Android Vibrator Driver Resume
+<7>[ 1211.488767] msmrtc_tod_proc_result: 09/12/2011 17:41:49 (00)
+<7>[ 1211.490431] msmrtc_tod_proc_result: 09/12/2011 17:41:49 (00)
+<4>[ 1211.490549] [Ecompass] ecom_power_set() : Power On
+<4>[ 1211.493771] [Accelerometer] accel_power_on() : Power On
+<4>[ 1211.500986] Restarting tasks ... 
+<6>[ 1211.521567] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[ 1211.541602] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[ 1211.561634] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[ 1211.581664] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[ 1211.601696] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[ 1211.601742] [LGE] msmsdcc_check_status (last status): old status - 1,  current status - 1
+<4>[ 1211.618521] done.
+<6>[ 1211.618576] suspend: exit suspend, ret = 0 (2011-09-12 17:41:49.628090000 UTC)
+<6>[ 1211.708341] PM: Syncing filesystems ... done.
+<4>[ 1211.788372] Freezing user space processes ... (elapsed 0.01 seconds) done.
+<4>[ 1211.799882] Freezing remaining freezable tasks ... (elapsed 0.00 seconds) done.
+<4>[ 1211.800319] Suspending console(s) (use no_console_suspend to debug)
+<4>[ 1211.801849] [Accelerometer] accel_power_off() : Power Off
+<4>[ 1211.801909] [Ecompass] ecom_power_set() : Power Off
+<7>[ 1211.803429] msmrtc_tod_proc_result: 09/12/2011 17:41:49 (00)
+<7>[ 1211.804456] msmrtc_tod_proc_result: 09/12/2011 17:41:49 (00)
+<7>[ 1211.805282] msmrtc_tod_proc_result: 09/12/2011 17:41:49 (00)
+<7>[ 1211.806511] msmrtc_tod_proc_result: 09/12/2011 17:41:49 (00)
+<6>[ 1211.807544] LGE: Android Vibrator Driver Suspend
+<7>[ 1211.807652] <6>[msm_battery] msm_batt_suspend()...
+<6>[ 1211.821101] pecan_pwrsink_suspend_noirq: configure gpio for suspend
+<6>[ 1211.821391] pecan_pwrsink_resume_noirq: configure gpio for resume
+<6>[ 1211.822301] msm_otg_resume: usb exited from low power mode
+<6>[ 1211.824161] VBUS - (ON)
+<6>[ 1211.824191] wakeup wake lock: usb_bus_active
+<6>[ 1211.824262] msm_hsusb msm_hsusb: msm72k_udc: OFFLINE -> ONLINE
+<6>[ 1211.830666] msm_hsusb_phy_reset
+<3>[ 1211.888674] dhd_late_resume: enter
+<7>[ 1211.894856] <6>[msm_battery] msm_batt_resume()...
+<6>[ 1211.896079] LGE: Android Vibrator Driver Resume
+<7>[ 1211.898107] msmrtc_tod_proc_result: 09/12/2011 17:41:51 (00)
+<7>[ 1211.899199] msmrtc_tod_proc_result: 09/12/2011 17:41:51 (00)
+<4>[ 1211.899387] [Ecompass] ecom_power_set() : Power On
+<4>[ 1211.902421] [Accelerometer] accel_power_on() : Power On
+<4>[ 1211.909251] Restarting tasks ... 
+<6>[ 1211.929724] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[ 1211.949761] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[ 1211.969791] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[ 1211.989821] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[ 1212.009852] [LGE] msmsdcc_check_status: old status - 1,  current status - 1
+<6>[ 1212.009899] [LGE] msmsdcc_check_status (last status): old status - 1,  current status - 1
+<4>[ 1212.017182] done.
+<6>[ 1212.017239] suspend: exit suspend, ret = 0 (2011-09-12 17:41:51.617949999 UTC)
+<6>[ 1212.051362] msm_hsusb msm_hsusb: suspend
+<6>[ 1212.142751] request_suspend_state: wakeup (3->0) at 1212134931742 (2011-09-12 17:41:51.743436672 UTC)
+<6>[ 1212.142824] late_resume: late resume funtion [c02d983c]
+<6>[ 1212.142849] late_resume: late resume funtion [c02d983c]
+<6>[ 1212.142869] late_resume: late resume funtion [0]
+<6>[ 1212.142889] late_resume: late resume funtion [c01e7e88]
+<6>[ 1212.207699] msm_hsusb msm_hsusb: reset
+<6>[ 1212.209964] msm_hsusb msm_hsusb: portchange USB_SPEED_HIGH
+<6>[ 1212.330222] msm_hsusb msm_hsusb: reset
+<6>[ 1212.332509] msm_hsusb msm_hsusb: portchange USB_SPEED_HIGH
+<4>[ 1212.369067] Exited wl_iw_control_wl_on 
+<6>[ 1212.482591] android_usb gadget: high speed config #1: android
+<7>[ 1212.482732] diag: USB connected
+<6>[ 1212.494394] SMD: ch 0 0 -> 1
+<6>[ 1212.494486] SMD: ch 0 1 -> 2
+<6>[ 1212.712514] [audmgr.c:audmgr_enable] session 0xc0697a68
+<6>[ 1212.713589] [audmgr.c:process_audmgr_callback] rpc READY handle=0x00000000
+<6>[ 1212.713654] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<6>[ 1212.748399] late_resume: late resume funtion [c01e7e50]
+<6>[ 1212.759462] late_resume: late resume funtion [c00c7088]
+<6>[ 1212.759644] late_resume: late resume funtion [bf001cd4]
+<6>[ 1212.760151] late_resume: late resume funtion [c028b6a0]
+<4>[ 1212.760172] [Touch] ts_set_vreg() onoff:1
+<6>[ 1212.779289] late_resume: late resume funtion [c028c968]
+<6>[ 1212.779391] late_resume: late resume funtion [c01e54f8]
+<6>[ 1212.780159] late_resume: late resume funtion [c02bc6d8]
+<7>[ 1212.780172] msm_batt_late_resume: enter
+<7>[ 1212.780892] msm_batt_late_resume: exit
+<6>[ 1212.780906] late_resume: late resume funtion [c0292ee0]
+<6>[ 1212.950266] [audmgr.c:process_audmgr_callback] rpc CODEC_CONFIG volume=0x00000000
+<6>[ 1212.950372] [adsp.c:msm_adsp_get] opening module AUDPPTASK
+<6>[ 1212.951929] [adsp.c:msm_adsp_enable] enable 'AUDPPTASK'state[0] id[17227122]
+<6>[ 1212.953286] [adsp.c:handle_adsp_rtos_mtoa_app] module AUDPPTASK: READY
+<6>[ 1212.954934] [audpp.c:audpp_dsp_event] ENABLE
+<6>[ 1213.048027] do_detect_factory_cable : Using PIF ZIG (0)
+<6>[ 1213.048727] 
+<6>[ 1213.048741] Charger Type: STD DOWNSTREAM PORT
+<4>[ 1214.687422] STA connect received 1
+<6>[ 1214.904501] [audio_out.c:audio_dsp_event] PCMDMAMISSED 32
+<4>[ 1215.204196] wl_iw_set_hostip: Received IP Address: 192.168.42.224
+<4>[ 1216.090897] save exit: isCheckpointed 1
+<3>[ 1217.161231] init: sys_prop: permission denied uid:2000  name:adb.connected
+<6>[ 1217.796151] [audpp.c:audpp_dsp_event] DISABLE
+<6>[ 1217.796239] [audpp.c:audpp_disable] Received CFG_MSG_DISABLE from ADSP
+<6>[ 1217.796284] [adsp.c:msm_adsp_disable] disable 'AUDPPTASK'
+<6>[ 1217.797456] [adsp.c:msm_adsp_put] closing module AUDPPTASK
+<6>[ 1217.797547] [audmgr.c:audmgr_disable] session 0xc0697a68
+<6>[ 1217.798686] [audmgr.c:audmgr_rpc_thread] rpc_reply status 0
+<3>[ 1217.808927] [audmgr.c:process_audmgr_callback] DISABLED
+<4>[ 1222.074399] save exit: isCheckpointed 1
+<4>[ 1234.073896] save exit: isCheckpointed 1
+<4>[ 1240.073614] save exit: isCheckpointed 1
+<6>[ 1242.174589] request_suspend_state: sleep (0->3) at 1242166755081 (2011-09-12 17:42:21.775256678 UTC)
+<6>[ 1242.174701] early_suspend: early suspend funtion [c0292ecc]
+<6>[ 1242.174744] early_suspend: early suspend funtion [c02bbfb0]
+<6>[ 1242.174784] early_suspend: early suspend funtion [c01e5218]
+<6>[ 1242.175156] early_suspend: early suspend funtion [c028c994]
+<6>[ 1242.175202] early_suspend: early suspend funtion [c028b5f4]
+<4>[ 1242.175252] [Touch] ts_set_vreg() onoff:0
+<6>[ 1242.175374] early_suspend: early suspend funtion [bf001ce4]
+<6>[ 1242.181082] early_suspend: early suspend funtion [c00c736c]
+<6>[ 1242.181896] early_suspend: early suspend funtion [c01e7108]
+<6>[ 1242.181944] early_suspend: early suspend funtion [c01e78a0]
+<6>[ 1242.467491] early_suspend: early suspend funtion [c01ea1a8]
+<6>[ 1242.467522] early_suspend: early suspend funtion [c02d91ec]
+<6>[ 1242.467544] early_suspend: early suspend funtion [c02d91ec]
+<4>[ 1252.071399] save exit: isCheckpointed 1
+<4>[ 1252.549826] Enter wl_iw_control_wl_off
+<4>[ 1252.553732] Exit wl_iw_control_wl_off
+<4>[ 1252.600277] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1252.600669] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1252.628366] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1252.628674] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1258.071496] save exit: isCheckpointed 1
+<7>[ 1262.957837] wlan0: no IPv6 routers present
+<4>[ 1264.071696] save exit: isCheckpointed 1
+<6>[ 1268.234912] request_suspend_state: wakeup (3->0) at 1268227091742 (2011-09-12 17:42:47.835598339 UTC)
+<6>[ 1268.235632] late_resume: late resume funtion [c02d983c]
+<6>[ 1268.235657] late_resume: late resume funtion [c02d983c]
+<6>[ 1268.235672] late_resume: late resume funtion [0]
+<6>[ 1268.235689] late_resume: late resume funtion [c01e7e88]
+<4>[ 1268.413364] Exited wl_iw_control_wl_on 
+<6>[ 1268.589111] late_resume: late resume funtion [c01e7e50]
+<6>[ 1268.594877] late_resume: late resume funtion [c00c7088]
+<6>[ 1268.595707] late_resume: late resume funtion [bf001cd4]
+<6>[ 1268.596572] late_resume: late resume funtion [c028b6a0]
+<4>[ 1268.596597] [Touch] ts_set_vreg() onoff:1
+<6>[ 1268.607892] late_resume: late resume funtion [c028c968]
+<6>[ 1268.607981] late_resume: late resume funtion [c01e54f8]
+<6>[ 1268.609019] late_resume: late resume funtion [c02bc6d8]
+<7>[ 1268.609037] msm_batt_late_resume: enter
+<7>[ 1268.609762] msm_batt_late_resume: exit
+<6>[ 1268.609781] late_resume: late resume funtion [c0292ee0]
+<4>[ 1270.802116] STA connect received 1
+<4>[ 1271.138579] wl_iw_set_hostip: Received IP Address: 192.168.42.224
+<4>[ 1276.056641] save exit: isCheckpointed 1
+<4>[ 1282.073532] save exit: isCheckpointed 1
+<6>[ 1302.024899] request_suspend_state: sleep (0->3) at 1302017056745 (2011-09-12 17:43:21.625558341 UTC)
+<6>[ 1302.025007] early_suspend: early suspend funtion [c0292ecc]
+<6>[ 1302.025049] early_suspend: early suspend funtion [c02bbfb0]
+<6>[ 1302.025091] early_suspend: early suspend funtion [c01e5218]
+<6>[ 1302.025462] early_suspend: early suspend funtion [c028c994]
+<6>[ 1302.025509] early_suspend: early suspend funtion [c028b5f4]
+<4>[ 1302.025559] [Touch] ts_set_vreg() onoff:0
+<6>[ 1302.025697] early_suspend: early suspend funtion [bf001ce4]
+<6>[ 1302.031477] early_suspend: early suspend funtion [c00c736c]
+<6>[ 1302.032282] early_suspend: early suspend funtion [c01e7108]
+<6>[ 1302.032329] early_suspend: early suspend funtion [c01e78a0]
+<6>[ 1302.284727] early_suspend: early suspend funtion [c01ea1a8]
+<6>[ 1302.284759] early_suspend: early suspend funtion [c02d91ec]
+<6>[ 1302.284781] early_suspend: early suspend funtion [c02d91ec]
+<4>[ 1302.333111] save exit: isCheckpointed 1
+<4>[ 1306.071252] save exit: isCheckpointed 1
+<4>[ 1312.071349] save exit: isCheckpointed 1
+<4>[ 1312.254257] Enter wl_iw_control_wl_off
+<4>[ 1312.266749] Exit wl_iw_control_wl_off
+<4>[ 1312.319972] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1312.320277] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1312.339321] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1312.339629] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1312.382096] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1312.382841] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1318.071447] save exit: isCheckpointed 1
+<7>[ 1322.657819] wlan0: no IPv6 routers present
+<4>[ 1336.071834] save exit: isCheckpointed 1
+<4>[ 1414.073132] save exit: isCheckpointed 1
+<4>[ 1426.071407] save exit: isCheckpointed 1
+<4>[ 1450.071277] save exit: isCheckpointed 1
+<4>[ 1474.071546] save exit: isCheckpointed 1
+<4>[ 1564.071219] save exit: isCheckpointed 1
+<4>[ 1576.071231] save exit: isCheckpointed 1
+<4>[ 1678.071899] save exit: isCheckpointed 1
+<4>[ 1690.071519] save exit: isCheckpointed 1
+<4>[ 1696.071887] save exit: isCheckpointed 1
+<4>[ 1702.071399] save exit: isCheckpointed 1
+<4>[ 1708.072286] save exit: isCheckpointed 1
+<4>[ 1714.071414] save exit: isCheckpointed 1
+<4>[ 1720.071562] save exit: isCheckpointed 1
+<4>[ 1762.977045] Exited wl_iw_control_wl_on 
+<4>[ 1765.289920] STA connect received 1
+<4>[ 1765.778839] wl_iw_set_hostip: Received IP Address: 192.168.42.224
+<4>[ 1768.073165] save exit: isCheckpointed 1
+<4>[ 1768.260554] Enter wl_iw_control_wl_off
+<4>[ 1768.268284] Exit wl_iw_control_wl_off
+<4>[ 1768.319604] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1768.319915] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1768.329944] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1768.330239] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1768.366087] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1768.366405] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1774.071417] save exit: isCheckpointed 1
+<7>[ 1778.917840] wlan0: no IPv6 routers present
+<4>[ 1780.071555] save exit: isCheckpointed 1
+<4>[ 1792.071855] save exit: isCheckpointed 1
+<4>[ 1804.072362] save exit: isCheckpointed 1
+<4>[ 1834.074487] save exit: isCheckpointed 1
+<4>[ 1846.074515] save exit: isCheckpointed 1
+<4>[ 1876.071537] save exit: isCheckpointed 1
+<4>[ 1882.071155] save exit: isCheckpointed 1
+<4>[ 1918.720970] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1918.721330] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1918.829012] Exited wl_iw_control_wl_on 
+<4>[ 1923.962927] Enter wl_iw_control_wl_off
+<4>[ 1923.985250] Exit wl_iw_control_wl_off
+<4>[ 1924.028255] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1924.028570] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1924.036079] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1924.036369] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1924.086370] save exit: isCheckpointed 1
+<4>[ 1924.093542] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1924.093845] wl_iw_set_priv First IOCTL after stop is NOT START 
+<4>[ 1930.073035] save exit: isCheckpointed 1
+<7>[ 1934.317852] wlan0: no IPv6 routers present
+<4>[ 1935.962329] select 1492 (ndroid.settings), adj 9, size 3407, to kill
+<4>[ 1935.962395] select 1558 (com.android.mms), adj 11, size 2955, to kill
+<4>[ 1935.962469] send sigkill to 1558 (com.android.mms), adj 11, size 2955
+<4>[ 1942.073674] save exit: isCheckpointed 1
+<4>[ 1960.074435] save exit: isCheckpointed 1
+[[/code]]
+
+
++ CyanogenMod
+
+There is a zip file with the CM7 firmware update. I mirrored it in http://filez.zoobab.com/android/cyanogenmod/p350/cm-10.1-20130123-BETA-p350.zip . You can try to load it with the Android SDK fastboot utility:
+
+[[code]]
+zoobab@turmes /home/zoobab/Downloads/adt-bundle-linux-x86_64-20130219/sdk/platform-tools [55]$ ./fastboot update /home/zoobab/soft/lg-p350/cm-10.1-20130123-BETA-p350.zip 
+< waiting for device >
+archive does not contain 'android-info.txt'
+archive does not contain 'android-product.txt'
+error: update package has no android-info.txt or android-product.txt
+[[/code]]

@@ -1,0 +1,39 @@
++ Problem
+
+Multiple pods needs to access a shared common set of files, here in this case a list  jmeter 
+
+How to store data in a Datacontainer instead of a Persistant Volume on Kubernetes.
+
++ Solution
+
+[[code]]
+apiVersion: v1
+kind: Pod
+metadata:
+  name: data2
+spec:
+  initContainers:
+    - name: alpine
+      image: alpine:3.10
+      args:
+      - touch
+      - /data/myfile
+      securityContext:
+        runAsUser: 1 # Any non-root user will do. Match to the workload.
+        allowPrivilegeEscalation: false
+        readOnlyRootFilesystem: true
+      volumeMounts:
+        - name: data
+          mountPath: /data
+  containers:
+    # Replace with your actual workload.
+    - name:  busybox
+      image: busybox
+      args: ['sleep', '100000'] # Do nothing
+      volumeMounts:
+        - name: data
+          mountPath: /datafinal
+  volumes:
+    - name: data
+      emptyDir: {}
+[[/code]]

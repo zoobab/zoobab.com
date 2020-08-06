@@ -1,0 +1,29 @@
++ Bio
+
+Benjamin Henrion is the President of the [http://www.ffii.org FFII.org], a pan-european association that has been fighting against software patents since 1999. He has launched several popular campaigns on the internet, such as the [https://web.archive.org/web/20040610183544/http://petition.eurolinux.org/index_html?NO_COOKIE=true Eurolinux petition against software patents] (400.000 signatures), the August 2003 and June 2005 webdemonstrations against software patents, the [https://web.archive.org/web/20060703073803/http://www.publicgeodata.org/ PublicGeoData.org campaign] for public maps, or the campaign against Microsoft's Office standardisation at ISO (OOXML) ([http://noooxml.wikidot.com/ NoOOXML.org], 100.000 signatures). His interests lies in computers, politics, and mountain biking.
+
+[[=image zoobab-transverdon.jpg size="medium"]]
+
++ Quotes
+
+> //"In July 2005, after several failed attempts to legalise software patents in Europe, the patent establishment changed its strategy. Instead of explicitely seeking to sanction the patentabilitty of software, they are now seeking to create a central European patent court, which would establish and enforce patentability rules in their favor, without any possibility of correction by competing courts or democratically elected legislators."//
+> 
+> -- Hartmut Pïlch, FFII founder
+
+> //"Cycling is trapped in consumerism. [...] I’ve seen how people (myself included) have been trapped in the crescendo of consumption, competition, and exposition. [...] In the quest to reclaim the core sense of cycling, cyclists ought to disobey"//
+> 
+> -- [https://medium.com/@RZapataL/disobey-cycling-dd1ea46258e0 Disobey cycling - Bike resistance in the age of consumerism and self-exposure]
+
+> //"Le domaine du vélo est un domaine ultra compétitif qui cherche constamment à se renouveler et qui rend cette industrie malade à trop pousser notre consommation"//
+>
+> -- [https://www.velovert.com/news/11995/xprezo-a-cesse-son-activite Hugo Bardou, Xprezo dans Velovert: Xprezo a cessé son activité]
+
++ Recent Changes
+
+[[module Feed src="http://zoobab.wikidot.com/feed/site-changes.xml"]]
+**%%date|%Y-%m-%e@%H:%M%%** - %%linked_title%%
+[[/module]]
+
++ Twitter
+
+Twitter disabled RSS streams recently. They are a PITA.

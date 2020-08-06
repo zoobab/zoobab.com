@@ -1,0 +1,34 @@
++ Bike check
+
+
+
+Parts	Brand	Model	Additional info
+Frame	Devinci	Spartan RC	2015
+Rear Shock	RockShox	Monarch Plus RC3	
+Fork	RockShox	Pike RCT3 160mm	travel adjustment 160 to 130
+Headset	FSA		
+Handlebar	Other	Devinci Bar	780mm
+Stem	Race Face	Chester	55mm
+Grips	Other	Devinci lock-ons	
+Brakes	Shimano	SLX	180 Rotors
+Brake Levers	Shimano	SLX	
+Shifters	Shimano	SLX	
+Front Derailleur	SRAM	X.7 Front Derailleur	
+Rear Derailleur	Shimano	SLX Shadow Plus	
+Cranks	SRAM	S1400	
+Chainrings / Sprocket	SRAM	36/22	
+Bottom Bracket	Truvativ	Team GXP Bottom Bracket	
+Chain	Shimano	HG74 Chain 10 Speed	
+Cassette / Rear Cog	Shimano	SLX Cassette 10 Speed HG81	11-36T
+Front Rim	DT Swiss	E1900	
+Rear Rim	DT Swiss	E1900	
+Hubs	DT Swiss	15mm & 12x142mm	
+Front Tire	Schwalbe	Hans Dampf 2.35	
+Rear Tire	Schwalbe	Hans Dampf 2.35	
+Saddle	SDG	Fly RL	
+Seatpost	RockShox	Reverb Stealth 150mm	
+General Info		
+Model Year	2015
+Riding Type	Trail / All-Mountain	
+Weight	32 lb 0 oz (14515 g)
+Additional Info	Come to total sports the bike shop and check this sweet bike out! Also like us on Facebook at https://www.facebook.com/TotalSportsTheBikeShop

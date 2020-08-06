@@ -1,0 +1,105 @@
++ Lsusb
+
+[[code]]
+$ lsusb
+Bus 006 Device 003: ID 2341:8036 Arduino SA Leonardo (CDC ACM, HID)
+[[/code]]
+
++ Run it in 3.3v
+
+Just inject 3.3v from a different power source on the 5v pin.
+
+Put a picture here.
+
+Some of the clones (such as [https://www.olimex.com/Products/Duino/AVR/OLIMEXINO-32U4/ Olimex atmega32u4]) has a switch 3.3v/5v.
+
++ Flash opendous-jtag
+
+[http://code.google.com/p/opendous-jtag/ Opendous-jtag] allows you to transform your Arduino Leonardo into a JTAG cable. Just flash the opendous-jtag-atmeg32u4.hex binary on the Leonardo, with a buspirate. The ICSP pinout matching is available on [http://dangerousprototypes.com/docs/Bus_Pirate_AVR_Programming dangerousprototypes.com webpage].
+
+[[code]]
+zoobab@lehne /home/zoobab/soft/arduino-leonard-jtag/opendous-jtag [15]$ avrdude -c buspirate -P /dev/ttyUSB0 -p atmega32u4 -U flash:w:opendous-jtag-atmeg32u4.hex 
+
+Attempting to initiate BusPirate binary mode...
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e9587
+avrdude: NOTE: "flash" memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: reading input file "opendous-jtag-atmeg32u4.hex"
+avrdude: input file opendous-jtag-atmeg32u4.hex auto detected as Intel Hex
+avrdude: writing flash (4254 bytes):
+
+Writing | ################################################## | 100% 6.90s
+
+avrdude: 4254 bytes of flash written
+avrdude: verifying flash memory against opendous-jtag-atmeg32u4.hex:
+avrdude: load data flash data from input file opendous-jtag-atmeg32u4.hex:
+avrdude: input file opendous-jtag-atmeg32u4.hex auto detected as Intel Hex
+avrdude: input file opendous-jtag-atmeg32u4.hex contains 4254 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 16.27s
+
+avrdude: verifying ...
+avrdude: 4254 bytes of flash verified
+
+avrdude: safemode: Fuses OK (H:CB, E:D8, L:FF)
+
+avrdude done.  Thank you.
+
+zoobab@lehne /home/zoobab/soft/arduino-leonard-jtag/opendous-jtag [16]$ 
+[[/code]]
+
+Now, the Arduino Leonardo will run in 5V while most of the JTAG targets are in 3.3V. There is a need for a level shifter conversion here.
+
+The mapping of the TDI/TDO/TCK/TMS needs to be identified.
+
+The Leonardo pin mapping of the atmega32u4 reads [http://arduino.cc/en/Hacking/PinMapping32u4 as follows]:
+
+http://arduino.cc/en/uploads/Hacking/32U4PinMapping.png
+
+[[=image 32U4PinMapping.png]]
+
+PORTB is used for JTAG communications, with following pins configuration:
+
+||~ Pin ||~ Function ||
+|| PB0 || TDI ||
+|| PB1 || TMS ||
+|| PB2 || TRST ||
+|| PB3 || SRST ||
+|| PB4 || TCK ||
+|| PB5 || TDO ||
+
+Since PB0 is used for the RXLED on the Leornado, and other pins of the PORTB are used for the ICSP header, we need to change the config in jtag-defs.h file to map it to the PORTD pins:
+
+[[code]]
+#ifndef __JTAG_DEFS_H__
+#define __JTAG_DEFS_H__
+
+        //jtag i/o pins
+        #define JTAG_OUT PORTB
+        #define JTAG_IN  PINB
+        #define JTAG_DIR DDRB
+
+        //output pins
+        #define JTAG_PIN_TDI  0
+        #define JTAG_PIN_TMS  1
+        #define JTAG_PIN_TRST 2
+        #define JTAG_PIN_SRST 3
+        #define JTAG_PIN_TCK  4
+        //input pins
+        #define JTAG_PIN_TDO  5
+        #define JTAG_PIN_EMU  6
+        #define JTAG_PIN_RTCK 7
+[[/code]]
+
++ Links 
+
+* http://www.aliexpress.com/snapshot/257049750.html
+* http://petervanhoyweghen.wordpress.com/2012/11/08/using-the-leonardo-as-usb-to-serial-converter/
+* http://petervanhoyweghen.wordpress.com/2013/06/11/arduinoisp-on-the-due/
+* https://www.olimex.com/Products/Duino/AVR/OLIMEXINO-32U4/

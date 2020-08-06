@@ -1,0 +1,20 @@
++ Goal
+
+Test a point2point link between 2 computers with atheros cards 802.11n with dual feeds.
+
++ Ingredients
+
+* 2 sat dishes
+* 2 homemade feeds
+* 2 routers (or computer) with PCI-MiniPCI adaptor
+* 2 wifi N cards with an atheros AR9XXX chipset (like [http://pcengines.ch/dnma92.htm Wistron Dnma92] at PCEngines)
+
++ Pictures
+
+Thanks to Joseph from AWMN.
+
+[[gallery size="medium"]]
+
++ Links
+
+* http://pcengines.ch/dnma92.htm

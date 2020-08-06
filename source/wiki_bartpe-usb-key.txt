@@ -1,0 +1,12 @@
++ Step 1: Download pebuilder
+
++ Step 2: Add your modules to pebuilder
+
+* PartitionMagic
+* DriveImageXML
+
++ Step 3: Generate the image
+
++ Step 4: Put a blank USB key
+
++ Step 5: Move the files to a big SSD USB drive

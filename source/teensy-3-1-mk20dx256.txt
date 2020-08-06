@@ -1,0 +1,24 @@
++ About
+
+Teensy v3.1 MK20DX256 OSH Park Edition.
+
+[[=image teensy-3.1-oshpark.jpg size="medium"]]
+
++ Price
+
+17USD out of shipping costs. 
+
++ Lsusb
+
+Depending on whether or not you press the reset button, the VID/PID is different:
+
+[[code]]
+zoobab@sabayon /home/zoobab [21]$ lsusb | grep 16c0
+Bus 006 Device 004: ID 16c0:0486 Van Ooijen Technische Informatica Teensyduino RawHID
+zoobab@sabayon /home/zoobab [22]$ lsusb | grep 16c0
+Bus 006 Device 005: ID 16c0:0478 Van Ooijen Technische Informatica Teensy Halfkay Bootloader
+[[/code]]
+
++ Links
+
+* http://store.oshpark.com/products/teensy-3-1

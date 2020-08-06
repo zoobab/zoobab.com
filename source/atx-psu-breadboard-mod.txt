@@ -1,0 +1,64 @@
+[[toc]]
+
++ Goal
+
+The goal here is to use an ATX power supply modded for breadboard usage.
+
++ First version: floppy connector with 3.3v modification
+
+Some ATX power supply still ship with a 4 pins connector used for powering old floppy drives. Since floppy drives have mostly disappeared from our towers, this power connector might not be present on some PSUs, but was still present on mine:
+
+[[=image atx-power-supply-fdd-connector.jpg]]
+
+The floppy drive connector is the nearly perfect connector for interfacing with a breadboard, since it fits perfectly with breadboard wires:
+
+[[=image breadboard-wires.jpg size="medium"]]
+
+Since the FDD connector has the following pinout:
+
+* 5v (red)
+* GND (black)
+* GND (black)
+* 12v (yellow)
+
+Unfortunately, tt misses support for 3.3v.
+
+The mod consists in cutting one of the black GND cable, and connecting it to the orange 3.3v cable of either the main ATX Molex connector, or from the SATA power connector, if it has some orange cable (some of them do not have it):
+
+[[=image sata-power-connector.jpg size="medium"]]
+
+Here is the final setup:
+
+[[=image atx-breadboard-fdd-power-1.jpg size="medium"]]
+[[=image atx-breadboard-fdd-power-2.jpg size="medium"]]
+[[=image atx-breadboard-fdd-power-3.jpg size="medium"]]
+
+Another idea is to simply use male headers to connect the connector directly to the breadboard without using those male-male lengthy cables.
+
++ Second version: stripboard and headers
+
+I made a second version for adapting the Molex connector to breadboard using only parts I had around. I did not had an old ATX motherboard where I could salvage the Molex connector, and I found out that a row of 3 pins would fit nearly perfectly to the edges of the Molex connector. Since I needed only 3.3v/5v/12v/GND, and with a spacing of 4 holes between the pins, I just soldered some rows of pins on a prototype stripboard. You can then start the PSU by connecting the Green cable with GND, here with a red cable connecting the two:
+
+[[=image atx-breadboard-connector-0.jpg size="medium"]]
+
+Here I had to cut the lines (with a simple cutter) between each soldering blocks in order to avoid short circuits, and check them with a multimeter:
+
+[[=image atx-breadboard-connector-4.jpg size="medium"]]
+[[=image atx-breadboard-connector-5.jpg size="medium"]]
+[[=image atx-breadboard-connector-6.jpg size="medium"]]
+
+The final setup:
+
+[[=image atx-breadboard-connector-7.jpg size="medium"]]
+
+Here I am powering up an Arduino Leonardo in 3.3v:
+
+[[=image atx-breadboard-connector-3.jpg size="medium"]]
+
++ Third version: salvaged ATX connector from an old motherboard
+
+The third version will involve salvaging an old ATX motherboard molex connector and adapting it to a stripboard.
+
+[[=image P60323-200954.jpg size="medium"]]
+[[=image P60323-201006.jpg size="medium"]]
+[[=image P60323-200949.jpg size="medium"]]

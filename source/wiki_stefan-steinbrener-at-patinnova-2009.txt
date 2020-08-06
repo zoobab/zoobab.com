@@ -1,0 +1,760 @@
+The following is a partial transcript of a presentation by Stefan Steinbrener - Member of the Technical Board of Appeal of the European Patent Office.
+
+Stefan Steinbrener's disclaimer: "This presentation gives the author's personal views"[1]
+
++ The transcript
+
+...EPC 2000, there are also travaux préparatoires, and if you look into these travaux préparatoires, you'll find a very very clear statement .... the point must be made that the patent protection should have a technical field.. this is now clearly stated in the new wording of Article 52.1. In order to be patentable, the subject matter claimed .... technical character, or to be more precise, a technical teaching
+
+how to solve the particular technical problem using the particular technical means
+
+misunderstanding of the
+
+patent
+
+The same configuration applies to the existence of computer programs, but it will remain incumbent on office practice
+
+subject matter claims
+
+has the technical character
+
+an appropriate manner
+
+in light of technical developments and the state of knowledge at the time
+
+a very clear statement .... to be
+
+the invention. If you don't like it
+
+In the light of the conclusion, inventions within the meaning of
+
+technical character.
+
+[1:52]
+
+Now we hit a new problem. If we use this criterion for distinguishing inventions from non-inventions, and this
+
+any of the subject matter
+
+Art 52.2
+
+[2:19]
+
+technical problem solved
+
+technical interactions occur or technical applications are required.
+
+If we use this criterion, then we have to ask ourselves .... technical
+
+no ... has been given to the [European Patent Office?]
+
+European
+
+[2:49]
+
+But, this is a situation which is quite normal in legal systems. There's no reason to succumb to
+
+[3:03]
+
+The meaning of these terms is, in its core area, undisputed. The semantics are important only on the fringes.
+
+You may realise that the new meaning of patent ... employ a general definition of difficult, it will have no limiting effects
+
+I remember a discussion of the German Ministry of Justice at the time of this computer directive was still, ah, living [].
+
+[]different participants coming from different fields and having different interests .... fulfilled the
+
+definition of "technical" from Encyclopedia Britanica, or somewhere, and some general dictionary, and it got such broad[sic] that it included everything, and there was a lot of opposition against that, in certain circles. So, ah, if unintentionally, or unjustifiably restrictive, we would have to
+
+[4:43]
+
+The now retired presiding judge of the federal supreme court, [] German [] definition [].
+
+[laughter]
+
+[5:02]
+
+for cautious ... and, on the other hand, the constructions of
+
+once and for all by any defintion, but necessarily
+
+There's a nice anecdote from the British attorney ... at the time when this computer directive was discussed, the UK IPO arranged workshops and, ah, on one of these workshops the German definition was
+
+this might be helpful, and in this definition the reference to natural forces. And at the end of the workshop, somebody asked, when will be the workshop on "natural forces"?
+
+[laughter]
+
+Okay.
+
+later, a general approach, and a very nice defintion was given by Lord CROSBIN???. He's a high court judge in the court of (criminology?)
+
+he said, the vaste majority of patent applications are perfectly clear about, .... of the monopoly they claim ... never come to court. The borderline cases, however,
+
+[6:36]
+
+would strike another
+
+for unreasonable for third parties. That degree of uncertainty (is?) inherent in any rule
+
+the construction of any document
+
+In principal
+
+doubt
+
+although I shall consider
+
+uncertainty can be
+
+guidelines
+
+structured approach to construction
+
+requirement
+
+[7:32]
+
+the structure approach to construction, as we tried to stake out the grey areas with a series of decisions dealing with the (usual?) aspects. These are the guidelines.
+
+So in fact, some aspects
+
+clarifying the
+
+Definition of the methodology. I would argue that there are five definitions
+
+I don't want to
+
+computer program
+
+controlling
+
+[8:18]
+
+summarised all of that, estimating
+
+activity
+
+What can be concluded from this decision? What, how the methodology defines ... if you look at the first
+
+the examination of, for, the existence of an innovation
+
+novelty, inventive step, and industrial applicability [8:51]
+
+different ... don't believe ... systematically correct
+
+the requirements: novelty, inventive step,
+
+state of the art, the first requirement
+
+ten thousand years, ... not novel
+
+necessary in order to
+
+we have to analyse the features of the claims if they have technical character, and if this is the case, which features specifically
+
+is not necessarily of higher priority
+
+pragmatic approach
+
+either [10:10]
+
+make the analysis
+
+for continuing
+
+inventive step
+
+mixtures of technical and non-technical features are not excluded from patentability. If there's one non-technical aspect, it would not destroy the
+
+Nor is it appropriate to weight the relevance of technical and non-technical features
+
+assessing the invention as a whole, in light of all technical and non-technical features. This means in practice, an apparatus is a concrete technical product
+
+providing that there is
+
+technical character
+
+and methods can have technical characters by virtue of their technical nature
+
+[11:26]
+
+we have
+
+a low standard for the first hurdle
+
+take on board as much as possible, as much as we believe ... will allow
+
+my view is also in line with the TRIPS requirement
+
+But, the
+
+[12:00]
+
+by this classification
+
+subject matter
+
+or subject matter that doesn't necessarily involve technical innovation, methods that do not necessarily use technical means, they are excluded because they lack technical character.
+
+hear the arguments that most of the cases
+
+technical means
+
+overcome the first hurdle
+
+there are many regulations in the EPC which are very well observed by the
+
+[13:00]
+
+so this is not my particular area of knowledge.
+
+if we look at what has been denied ... as technical
+
+you'll find a couple of decisions
+
+technical considerations that do not confer technical character
+
+[13:51]
+
+necessarily involved, even if they're not
+
+again, no technical means are necessarily involved, even if they might be involved, or similar untechnical
+
+necessarily
+
+system
+
+[14:23]
+
+system
+
+Now we come to the second hurdle: the technical quality of invention. And here at least, you must analyse the features ... technical character .. features which made no contribution are not part of the technical ..
+
+[15:04]
+
+One could .. in a simple picture .. we have the same subject matter with a whole???. We have contributions by technical features. We may have contributions by non-technical features, if they interact with the technical features .. interaction .. if they contribute to the solution of the technical problem. .. here today was a question
+
+[15:43]
+
+on the other hand, one could consider
+
+to circumvent a technical problem
+
+used quite often
+
+[16:05]
+
+are very slow, so there's a difference.
+
+So, ah
+
+and we wait for him to
+
+A technical solution might be to change the elevator controls
+
+or the electrical system might be changed
+
+actually
+
+[16:52]
+
+people ... fourth floor are not allowed to use the elevator. These people
+
+circumventing the technical problem
+
+Now, what we have is, you can, you can in fact .. technical features which do not make things .. contributions
+
+[17:29]
+
+approach
+
+do not make a technical contribution
+
+
+So,
+
+technical field, if the invention is based on a non-technical invention with a technical realisation that is novel
+
+and a technical realisation .. non-technical .. as such
+
+once it has been put to him by a
+
+some kind of
+
+[18:23]
+
+Then we come to the statistical
+
+invention
+
+[18:44]
+
+For the other two requirements, we
+
+[19:03]
+
+found that, if no search was made ... may well be justified in the subject matter
+
+unclear
+
+non-technical
+
+carried out
+
+[19:25]
+
+necessary to judge the inventive step is either not
+
+cannot be really
+
+or that there is some .. knowledge which is not accepted
+
+[20:02]
+
+this is on one hand making the
+
+more difficult, but on the other hand, we decided
+
+does not belong to the state of the art
+
+and he would not study documents
+
+financial
+
+[20:40]
+
+With respect to novelty, we have a problem.
+
+is a conflict of photographic
+
+so the existence of any difference would
+
+sufficiant
+
+come back to the hammer. If the hammer had a different colour
+
+different feature
+
+[21:20]
+
+blue hammer
+
+On the other hand, if you say the invention is
+
+by the technical features, there might be a technical concept of novelty.
+
+take account of features that do not contribute to the solution of the technical problem. ... at least they're non-trivial
+
+in my view, one could solve these problems by .. differences which are physically ... physical differences
+
+why should we not
+
+there is no clear, line on that at the moment. We will have, you know
+
+jump to the inventive step because for inventive step, the difference is not sufficient
+
+[22:30]
+
+and you look at these
+
+different colour would certainly not qualify as a non-trivial technical
+
+but, and that's the reason, also, why we avoided, until now, to decide
+
+on novelty
+
+the only prior-art, the only relevant prior-art
+
+[23:14]
+
+then, ah
+
+inventive step, we would like to use the [typical] idea of ... not, to remain as much as possible in
+
+and therefore we would tend to use the
+
+and in order to do that, we have to say that objectives to be achieved in non-technical fields .. framework
+
+they are
+
+constraints to be met by the technical
+
+[24:11]
+
+I would like to, really underline that we do not consider these non-technical .. as belonging to the prior art. But, ah, we consider them as belonging to the conception, motivation phase
+
+[24:37]
+
+invention
+
+technical problem without contributing to
+
+such constraints are often not known. They are not described in the patent application. They are necessarily ... technical
+
+[25:00]
+
+why should I be
+
+motivational
+
+never been taken into account for inventive step, irrespective of whether
+
+[25:17]
+
+and there are a lot of old
+
+and we have also pointed out
+
+argument
+
+where we have pointed out .. investigated .. and investigated it
+
+technical problem.
+
+So, the technical problem must be solved by technical means
+
+circumventing
+
+[25:58]
+
+approach
+
+technical
+
+[26:09]
+
+If I want to try to make a definition of the technical contribution used in the
+
+in the directive, you would say today
+
+as a whole
+
+in particular .. technical products or using technical means, and the combination of those features .. technical character
+
+they must be novel and inventive
+
+[26:53]
+
+some specific aspects of computer programs
+
+computer program product
+
+IBM
+
+and there they found that ... programs have technical character insofar as
+
+in the hardware
+
+so we have difference patents. We have electrical currents. We have transformation of
+
+electrical charges
+
+we must
+
+[27:36]
+
+character, within
+
+but
+
+make all the computer programs patentable.
+
+With the first statement, we are in a dilema. We would on one hand have to patent, or consider all computer programs patentable, so the
+
+[28:10]
+
+On the other hand, one could also say, despite the fact that they are technical, they have be been excluded, so no programs will be patentable
+
+Em, the borderline, or the intermediate position taken by the .. was, to be patentable, they must produce a further technical effect, going beyond the trivial ... and giving rise to the
+
+so we would have to distinguish, to draw the borderline within the computer program
+
+[28:57]
+
+technical effect. It may consist of controlling technical properties of devices. Yesterday we mentioned already the washing machine. If you remember the old mechanical control mechanism for washing machines is (making noises) nobody doubted that they might be patentable. These mechanical controlling devices already include knowhow of the user of the washing machine. Now with the arrival of the microprocessor, you use a system solution. Buying a microprocessor off the shelf and including the knowhow within the software controlling the microcomputer. Now, if
+
+normal, graphic understand of the invention, why people come to the conclusion
+
+software
+
+should also be patentable
+
+and if we allow that, there is another aspect
+
+[30:29]
+
+if somebody copies the software and sells is independently, normally he could only be sued for indirect infringement because the software
+
+kind of software can only be protected when
+
+[30:51]
+
+So, em, what is also accepted, and this is maybe the more difficult aspect, .. that the computer itself needs
+
+software, so, modifying the internal functionality of the computer
+
+the internal functionality
+
+what keeps the computer
+
+running, and keeps it
+
+operating system
+
+[31:34]
+
+computer program or computer data structure program
+
+an extension of this position
+
+computer-implemented method needs to be distinguished from the computer program
+
+actual performance
+
+sequence of computer .. instructions?
+
+[32:07]
+
+run on a computer. So a computer program is not necessarily
+
+technical
+
+further technical effect, whereas a method running on a computer is, according to [hitachi??]
+
+using
+
+computer, and would therefore
+
+[32:49]
+
+consequence
+
+computer
+
+medium, a CD-ROM
+
+the contents of the CD-ROM
+
+we don't have many decisions, apart from those two
+
+dealing with computer programs. We've only a handful, really, dealing with computer programs
+
+[33:27]
+
+a precursor, a precursor, a, uh, phase
+
+intellectual activity
+
+non-invention
+
+so it would in fact be an infringement of his
+
+you quite often find
+
+computer-implemented invention is a mixture of several, so called, non-technical aspects, and it's sometimes difficult to define which one
+
+which one is the core or the most importan
+
+[34:35]
+
+computer implemented methods
+
+an electrical circuit
+
+deny the technical effect merely on the grounds???
+
+the most imporant part of the whole production process
+
+to allow a protection for an intermediary
+
+more and more important technology
+
+[35:27]
+
+one of the marks
+
+300,000 miles
+
+test it virtually one year, and it works
+
+and another crowd have a product
+
+another decision by another board
+
+method of confining optical
+
+first one
+
+now, business methods, financial transactions, abstract economic
+
+do not have technical character and therefore do not overcome this hurdle
+
+technical concepts, which have never been considered
+
+[37:00]
+
+situation UK in 1623 where monopolies were forbidden because they were used as some kind of priveleges which were favourable to the king
+
+but in general, non-technical concepts
+
+enter the technical domain only with the arrival of the computer, so that they may be computer implemented.
+
+concept, with the aid of standard hardware does not overcome the second.
+
+and would allow ... would allow to overcome the first hurdle, an abstract process
+
+[38:08]
+
+overcome the
+
+aspects .. incurring .. excluded aspects of computer related business
+
+hardware, and or software,
+
+which contributes to the technical character of the solution to a technical problem
+
+information, functional data structures .. distinguished from .. content and information that may have technical character
+
+[38:45]
+
+technical system in which it is
+
+graphic user interfaces. And graphic user interfaces, I would say
+
+not
+
+that graphic
+
+implications of internal
+
+of a technical system
+
+OK, I do not want to say more about that
+
+I believe the .. is still under
+
+if any rules are excluded
+
+Now I come, I finally come to the referral
+
+in order to ensure uniform application of the rule
+
+[40:13]
+
+of the European Patent Office
+
+have given different positions on their
+
+the questions, and I want to read them, and you may know them
+
+all of these decisions
+
+how, how it was
+
+in the press communication
+
+on how come the
+
+are to be applied
+
+are mainly have to do with the first hurdle
+
+you may understand that I have not
+
+[41:12]
+
+speculate
+
+what I can
+
+explain
+
+this is all, all of this is controlled by the rules of procedure of the Enlarged Board of Appeal
+
+[41:37]
+
+Take all of their decisions
+
+excluded from the Enlarged Board of Appeal
+
+and two technical members
+
+competition is normally
+
+the Chairman, from Italy, he made after
+
+having informed the other members and heard the other members he may replace
+
+members of the Enlarged Board of Appeal. This has been done
+
+five legal members. There are also five legal members, two have been replaced by external legal members. This is Mr. Sharon??? now presiding judge of the federal court of justice and Mr. Dorin?? a high court judge
+
+[42:42]
+
+These are the two external members. We have
+
+we have Mr. ???? rapporteur
+
+we have Mr. Sythe???? former French judge
+
+[43:03]
+
+the technical members, the permanent technical members have also been replaced
+
+they have been replaced by
+
+from the other computer board, acting as
+
+acting as Chairman, to bring you something
+
+So, what are we doing? We are saying
+
+is internally
+
+on the outcome
+
+[43:59]
+
+question
+
+now, what are the options for the Enlarged Board of Appeal? The options are quite straightforward
+
+because there is no divergence or the divergence is due to
+
+because there is only one board involved or it is not a fundamental question
+
+a legal question
+
+other options would be to look at, ah, very strictly
+
+questions of
+
+have finally
+
+[44:52]
+
+to look at the whole system.
+
+time frame is going to be
+
+we might get a decision by the end of this year.
+
+may take longer.
+
+What will be the impact of the opinion? Of course, the board is, will be obliged to follow the opinion
+
+[45:36]
+
+last board of appeal, which may turn out to be
+
+in this field
+
+of further recall
+
+but, more or less, the
+
+to wait
+
+one may be reminded of an old fairy tale
+
+[quote from Gulliver's travels]

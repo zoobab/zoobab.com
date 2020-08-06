@@ -1,0 +1,49 @@
++ CoLinux support?
+
+The latest colinux kernel snapshot ([http://www.colinux.org/snapshots/devel-coLinux-20100615.exe 2.6.33.5-co-0.7.8-r1480]) does not seem to support LXC.
+
+[[code]]
+
+Linux colinux 2.6.33.5-co-0.7.8-r1480 #1 PREEMPT Tue Jun 15 20:32:16 UTC 2010 i686
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Jun 18 10:18:17 2010 from localhost
+colinux:~# ls
+FILE  FILEW  screenlog.0
+colinux:~# cat /proc/version
+Linux version 2.6.33.5-co-0.7.8-r1480 (hn@hn-lt) (gcc version 4.4.1 [gcc-4_4-branch revision 150839] (SUSE Linux) ) #1 PREEMPT Tue Jun 15 20:32:16 UTC 2010
+colinux:~# lxc-c
+-bash: lxc-c: command not found
+colinux:~# lxc-checkconfig
+--- Namespaces ---
+Namespaces: enabled
+Utsname namespace: disabled
+Ipc namespace: disabled
+Pid namespace: disabled
+User namespace: disabled
+Network namespace: disabled
+Multiple /dev/pts instances: disabled
+
+--- Control groups ---
+Cgroup: disabled
+Cgroup namespace: disabled
+Cgroup device: disabled
+Cgroup sched: disabled
+Cgroup cpu account: disabled
+Cgroup memory controller: disabled
+Cgroup cpuset: disabled
+
+--- Misc ---
+Veth pair device: enabled
+Macvlan: disabled
+Vlan: disabled
+File capabilities: disabled
+colinux:~#
+
+
+[[/code]]

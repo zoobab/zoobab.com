@@ -1,0 +1,28 @@
++  Dmesg
+
+[[code]]
+[ 4917.769093] usb 7-2: new full speed USB device using uhci_hcd and address 2
+[ 4917.964621] usb 7-2: configuration #1 chosen from 1 choice
+[ 4917.996844] Linux video capture interface: v2.00
+[ 4918.002954] gspca: main v2.6.0 registered
+[ 4918.007795] gspca: probing 054c:0155
+[ 4918.196383] ov519: I2C synced in 0 attempt(s)
+[ 4918.196391] ov519: starting OV7xx0 configuration
+[ 4918.208396] ov519: Sensor is an OV7648
+[ 4918.229342] gspca: probe ok
+[ 4918.229387] gspca: probing 054c:0155
+[ 4918.229424] gspca: probing 054c:0155
+[ 4918.229468] usbcore: registered new interface driver ov519
+[ 4918.229475] ov519: registered
+[ 4918.256523] usbcore: registered new interface driver snd-usb-audio
+[ 4939.064143] usb 7-2: USB disconnect, address 2
+[ 4939.064402] gspca: disconnect complete
+[ 4954.409076] usb 7-2: new full speed USB device using uhci_hcd and address 3
+[ 4954.600590] usb 7-2: configuration #1 chosen from 1 choice
+[ 4954.603767] gspca: probing 054c:0155
+[ 4954.792395] ov519: I2C synced in 0 attempt(s)
+[ 4954.792402] ov519: starting OV7xx0 configuration
+[ 4954.804385] ov519: Sensor is an OV7648
+[ 4954.825321] gspca: probe ok
+[ 4954.825449] gspca: probing 054c:0155
+[[/code]]

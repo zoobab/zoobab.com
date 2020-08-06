@@ -1,0 +1,22 @@
++ Files
+
+* [[file xitami_5.0a0-1.dsc]]
+* [[file xitami_5.0a0-1_i386.changes]]
+* [[file xitami_5.0a0-1_i386.deb]]
+* [[file xitami_5.0a0-1.tar.gz]]
+
++ Lintian tests output
+
+Lintian can be used to test the package:
+
+[[code]]
+zoobab@gierek /home/zoobab/soft/testing [81]$ lintian xitami_5.0a0-1_i386.deb 
+W: xitami: binary-without-manpage usr/bin/xitami
+W: xitami: maintainer-script-needs-depends-on-adduser postinst
+E: xitami: copyright-should-refer-to-common-license-file-for-gpl
+W: xitami: copyright-without-copyright-notice
+W: xitami: description-synopsis-might-not-be-phrased-properly
+E: xitami: extended-description-is-empty
+W: xitami: init.d-script-missing-lsb-section /etc/init.d/xitami
+W: xitami: new-package-should-close-itp-bug
+[[/code]]

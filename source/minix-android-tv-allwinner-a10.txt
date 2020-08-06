@@ -1,0 +1,42 @@
++ About
+
+Just bought this device at [http://dx.com/p/mini-android-2-3-hd-1080p-network-media-player-w-wi-fi-hdmi-usb-av-tf-134686 Dealextreme] for 77USD.
+
++ Pictures
+
+[[gallery size="square"]]
+
++ Dump of Nanda partition
+
+You can find here a [[file nanda.gz | dump]] of the nanda partition.
+
+Partitions table was like that:
+
+[[code]]
+zoobab@buzek /media/7A38-2110 [24]$ cat partitions.txt 
+major minor  #blocks  name
+
+  93        0    3891200 nand
+  93        8      16384 nanda
+  93       16      32768 nandb
+  93       24     262144 nandc
+  93       32    1572864 nandd
+  93       40       1024 nande
+  93       48      32768 nandf
+  93       56     131072 nandg
+  93       64       2048 nandh
+  93       72    1839104 nandi
+ 179        0    1982464 mmcblk0
+ 179        1      14336 mmcblk0p1
+ 179        2    1967104 mmcblk0p2
+   8        0    7897088 sda
+   8        1    7897057 sda1
+[[/code]]
+
++ Specifications
+
+* Runs Android 2.3
+* 512MB RAM
+* Remote control
+* WiFi
+* USB host and OTG

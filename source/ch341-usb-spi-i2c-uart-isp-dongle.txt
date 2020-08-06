@@ -1,0 +1,321 @@
+> **Message for Hackaday readers**: while Hackaday is a great blog, I find it nearly impossible to get my comments through their filtering/moderating system. Something needs to change there, this is really annoying. 
+> **Update**: someone on IRC channel #hackaday told me to login with a Wordpress.com account, which I did, and seems to improve the situation, my comments are going through again https://hackaday.com/2019/07/31/reflecting-on-margaret-hamilton/#comment-6168933
+
+[[toc]]
+
+[[=image ch341a-devboard2.jpg size="medium"]]
+[[=image plus-sign.png size="square"]]
+[[=image ch341a-devboard3.jpg size="medium"]]
+
++ I2C-SPI mode
+
+[[code]]
+$ lsusb
+Bus 002 Device 003: ID 1a86:5512 QinHeng Electronics CH341 in EPP/MEM/I2C mode, EPP/I2C adapter
+$ dmesg
+[ 1739.299811] usb 2-1.2: new full-speed USB device number 3 using ehci-pci
+[ 1739.385559] usb 2-1.2: New USB device found, idVendor=1a86, idProduct=5512
+[ 1739.385565] usb 2-1.2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[[/code]]
+
++ UART mode
+
+[[code]]
+$ lsusb
+Bus 002 Device 004: ID 1a86:5523 QinHeng Electronics CH341 in serial mode, usb to serial port converter
+$ dmesg
+[ 1982.227595] usb 2-1.2: new full-speed USB device number 5 using ehci-pci
+[ 1982.313544] usb 2-1.2: New USB device found, idVendor=1a86, idProduct=5523
+[ 1982.313550] usb 2-1.2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[ 1982.314088] ch341 2-1.2:1.0: ch341-uart converter detected
+[ 1982.315989] usb 2-1.2: ch341-uart converter now attached to ttyUSB0
+[[/code]]
+
++ SPI flasher mode
+
+Flashrom has now some support for flash SPI chips https://github.com/flashrom/flashrom/blob/staging/ch341a_spi.c
+
++ Chinese software
+
+There is some chinese winbrol software to toggle the GPIOs, even though none of the datasheets documents those GPIOs.
+
++ BSD driver
+
+Nice quote from the BSD driver:
+
+http://ftp.netbsd.org/pub/NetBSD/NetBSD-release-5/src/sys/dev/usb/uchcom.c
+
+[[code]]
+
+#include <sys/cdefs.h>
+__KERNEL_RCSID(0, "$NetBSD: uchcom.c,v 1.7 2008/10/22 10:35:50 haad Exp $");
+
+/*
+ * driver for WinChipHead CH341/340, the worst USB-serial chip in the world.
+ */
+
+[[/code]]
+
++ GPIO mode
+
+I recently found another linux kernel driver "i2c-ch341-usb" available at https://github.com/gschorcht/i2c-ch341-usb which exposes all the 8 GPIOs in sysfs, and on the Electrodragon board, I successfully tested 6 of them in output mode (D0, D1, D2, D3, D4, D5) while I could not put D6-D7 in output mode. You have to edit "i2c-ch341-usb.c" and put the following config:
+
+[[code]]
+struct ch341_pin_config ch341_board_config[CH341_GPIO_NUM_PINS] =
+{
+    // pin  GPIO mode           GPIO name   hwirq
+    {   15, CH341_PIN_MODE_OUT , "gpio0"    , 0 }, // used as output
+    {   16, CH341_PIN_MODE_OUT , "gpio1"    , 0 }, // used as output
+    {   17, CH341_PIN_MODE_OUT , "gpio2"    , 0 }, // used as output
+    {   18, CH341_PIN_MODE_OUT , "gpio3"    , 0 }, // used as output
+    {   19, CH341_PIN_MODE_OUT , "gpio4"    , 1 }, // used as output with hardware IRQ
+    {   20, CH341_PIN_MODE_OUT , "gpio5"    , 0 }, // used as ouput
+    {   21, CH341_PIN_MODE_IN  , "gpio6"    , 0 }, // used as input
+    {   22, CH341_PIN_MODE_IN  , "gpio7"    , 0 }  // used as input
+};
+[[/code]]
+
+Then do a "make; sudo make install; sudo modprobe i2c-ch341-usb", then you should have those entries "gpio0, gpio1, gpio2, gpio3, gpio4, gpio5" in /sys/class/gpio.
+
+If you want to test them, put a LED with the short leg on GND, and the long leg on D0 for example, and toggle the LED with:
+
+[[code]]
+$ cd /sys/class/gpio/gpio0
+$ while true; do echo 1 > value; sleep 1; echo 0 > value; sleep 1; done
+[[/code]]
+
+Now I need to make some benchmark speed tests to see how fast I can go.
+
+With a simple shell script:
+
+[[code]]
+$ cat speed.sh 
+#!/bin/bash
+x=100000
+while ((x--)); do
+    i=$((i+1))
+    echo 0 > /sys/class/gpio/gpio1/value
+    echo 1 > /sys/class/gpio/gpio1/value
+done
+[[/code]]
+
+You can run:
+
+[[code]]
+$ time sudo ./speed.sh 
+real	0m45.511s
+user	0m12.428s
+sys	0m7.143s
+[[/code]]
+
+Which makes a speed of approx 2.2KHz:
+
+[[code]]
+$ python
+Python 2.7.14 (default, Dec  6 2017, 16:31:20) 
+[GCC 5.4.0] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 100000.0/45.5
+2197.802197802198
+[[/code]]
+
+++ K2000 demo with 6 GPIOs
+
+You can run the following simple script to blink 6 LEDs in a loop:
+
+[[code]]
+#!/bin/bash
+for i in 0 1 2 3 4 5; do
+        echo 0 > /sys/class/gpio/gpio$i/value
+done
+
+while true; do
+  for i in 0 1 2 3 4 5 4 3 2 1; do
+        echo 1 > /sys/class/gpio/gpio$i/value
+        sleep 0.2
+        echo 0 > /sys/class/gpio/gpio$i/value
+  done
+done
+[[/code]]
+
+Save it under "k2000.sh", make it executable with "chmod +x k2000.sh", and then call it with sudo (standard user does not have permissions to access /sys/class/gpio entries):
+
+[[code]]
+$ chmod +x k2000.sh
+$ sudo ./k2000.sh
+[[/code]]
+
+It should give you this:
+
+[[=image ch341a-sysfs-linux-6-gpios.gif]]
+
+++ Libusb blink program
+
+There is now code to blink the CTS pin through a simple libusb program: https://github.com/sarim/ch341a-bitbang-userland
+
+I made a fork to blink the CTS pin, now I need to find the gpiodata values to control the other pins: https://github.com/zoobab/ch341a-bitbang-userland
+
+A small demo here:
+
+[[image https://github.com/zoobab/ch341a-bitbang-userland/raw/master/ch341a-blink-libusb.gif]]
+
+Weird thing is that I managed to toggle some pins, but only between 2.4V and 0V, the LED is shown with less intensity and less current. I tried with the kernel driver, I don't have this problem.
+
++ Ch341a programmer
+
+You can find on Aliexpress or Ebay those cheap ch341a programmers (2USD to 5USD).
+
+[[=image ch341aminiprog.jpg]]
+
+Thanks to the [https://onetransistor.blogspot.be/2017/08/ch341a-mini-programmer-schematic.html OneTransistor blog post] and its schematics, I could find that 3 exposed pins on the yellow header (MOSI, CS, CLK) can be used as GPIOs, but in 5V (not 3.3V!):
+
+[[=image ch341a_miniprogrammer_schematic.png]]
+
+The CS pin is also connected to a LED next to the USB connector, and you can make it blink by using /sys/class/gpio/gpio0. 
+
+You can mod the board to put it in 3.3v, see the discussion on the EEVBlog forum:
+
+http://www.eevblog.com/forum/repair/ch341a-serial-memory-programmer-power-supply-fix/
+
+The hack looks like this:
+
+[[=image ch341a-programmer-3.3v-mod-hack.jpg]]
+
++ Electrodragon board
+
+Electrodragon is now selling a much [http://www.electrodragon.com/product/ch341-usb-convert-flash-board-usb-ttl-iic-spi-etc/ cheaper board] (2.50 USD) based on the same CH341 chip, with all the pins exposed as well, with 5V/3.3V switcher, and UART/SPI switcher:
+
+[[=image ch341-usb-convert-flash-board-usb-ttl-iic-spi-etc-02.jpg size="medium"]]
+
+WARNING: Electrodragon just made a labelling mistake on some of their boards:
+
+[[code]]
+From: Chow He <info@electrodragon.com>
+Date: Wed, 22 Feb 2017 11:42:35 +0800
+Subject: Electrodragon Board Bug Notice
+
+
+Dear customer,
+
+Our current board has a bug, Very sorry for such troubles.
+
+This will inflence usage but not serious not usable, please pay attention
+when you use it.
+
+The board is: CH341 USB Convert Flash Board, USB, TTL, IIC, SPI, etc
+(#DPR1093)
+
+The error is on board silk print "VCC TXD RXD GND" in which VCC and GND
+should be reversed, so it should be "GND TXD RXD VCC". Please notice.
+
+Thank you.
+
+-- 
+Kind regards,
+Chao
+
+Electrodragon Team
+E: info@electrodragon.com
+Web: www.electrodragon.com
+Store: Store.Electrodragon.com
+Blog: Blog.Electrodragon.com
+Twitter <http://twitter.com/Electro_Dragon> | Facebook
+<http://www.facebook.com/Electrodragonfan> | Google+
+<https://plus.google.com/115499262497155375759>
+
+[[/code]]
+
++ CJMCU-CH341 board
+
+CJMCU is also selling a ch341a breakout board similar to the Electrodragon, with a 3.3v/5v pad to be soldered on the back on the board.
+
+[[=image cjmcu-ch341a.jpg]]
+
+You can get it on Aliexpress for around 3EUR.
+
+It has a mini-usb connector, which is considered by many to be stronger then a micro-usb, but the cable is also becoming more rare.
+
++ Future
+
+++ STM32
+
+I am looking to replace this board with an STM32 bluepill board, I would need help from people to help porting the existing code of [https://chromium.googlesource.com/chromiumos/platform/ec/ Chromium EC], which has a userspace tool to drive the GPIOs already. Other STM32 boards are already supported, the patches to the firmware should be minor. Now, there is still some driver to be written kernel-side to support the new /dev/gpiochar interface, and or the legacy sysfs.
+
+Other option is to port [https://github.com/firmata/arduino arduino firmata], or to even to use the [https://www.youtube.com/watch?v=VXsTLzI6idA GPIO support in NuttX].
+
+++ CP2102N
+
+There is a new driver for [https://www.crowdsupply.com/pylo/muart/updates/mart-and-its-linux-contributions CP2102N] available [https://git.kernel.org/pub/scm/linux/kernel/git/johan/usb-serial.git/commit/?h=usb-next&id=c8acfe0aadbeb78f65826959891be15cc0a709a3 here] thanks to the [https://www.crowdsupply.com/pylo/muart uArt project]. The driver might be reused to add support to CP2104?
+
+++ CP2130
+
+The Silabs CP2130 has 11 or 12 GPIOs with a linux kernel sysfs driver: https://github.com/Henneberg-Systemdesign/cp2130
+
+++ CP2104
+
+Cheap USB dongles ([https://fr.aliexpress.com/item/USB-2-0-to-TTL-UART-6PIN-Module-Serial-Converter-CP2104-STC-PRGMR-Than-CP2102/32649865696.html here on Aliexpress for 1.37USD]) based on CP2104 have 4 GPIOs, they might be usable on sysfs with this driver, to be tested: https://github.com/RishiGupta12/SerialPundit/blob/master/drivers/cp210x-silicon-labs/linux/sp_cp210x.c
+
+++ ATtiny85 + GPIO expanders
+
+It is possible to flash those cheap (1EUR) ATtiny85 USB dongles (Digispark clones) with an [https://github.com/harbaum/I2C-Tiny-USB I2C-USB firmware], add some GPIO expanders (MCP23017 has 16 GPIOs, PCF8574 has 8 GPIOs) that can be addressed over I2C, and this setup will work out of the box on most linux machines, as the i2c-tiny-usb kernel module is already precompiled on most distros I checked. The pins are on 5V though, while my target is on 3.3V. I have to see if the onboard voltage regulator can be replaced withh a 3.3V one. Just did a quick check recently, the /sys/class/gpio/gpiodeviceXXX is showing up, but I have problems to identify which pin is what. Stay tuned...
+
+++ ATtiny85 + MCP23017
+
+It seems the kernel driver for the MCP23017 can create /sys/class/gpio entries: http://elektranox.org/2017/05/0018-collabora/ . It would be interesting to make a board out of those 2 chips if the tests are successfull... The idea is to hotglue (with ducktape and zip ties, the best invention ever!) a Digispark board and those cheap chinese MCP23017 modules. Total cost should be less then 2EUR. It would give you 16 GPIOs on a USB dongle, and without any special kernel driver to install, as the i2c-tiny-sub is present/precompiled on most linux distros. See also an interesting page here http://www.faschingbauer.co.at/de/howtos/gpio-mcp23017/
+
+[[=image digispark-attiny85-usb-dongle.jpg size="small"]]
+[[=image plus-sign.png size="square"]]
+[[=image mcp23017-cjmcu.jpg size="small"]]
+
+++ STM32 + GPIO expanders
+
+It is also possible to use stm32 bluepill boards as USB-i2C adaptors with [https://github.com/daniel-thompson/i2c-star I2C-star] firmware.
+
+++ ATmega8 and friends
+
+It is possible to reflash an atmega8 to expose 12 GPIOs:
+
+https://github.com/amitesh-singh/usb-gpio-board
+
+Ideas include:
+
+* port it to a standard arduino atmega328p
+* port it to those atmega8 Lcsoft usbasp http://www.chicoree.fr/w/Le_programmateur_AVR_le_moins_cher_du_monde
+* port it to the Digispark atmega85
+* port it to those cheap Arduino Pro mini https://fr.aliexpress.com/item/ProMini-ATmega328P-3-3V-Compatible-for-Arduino-Pro-Mini/32525927539.html
+* try this userspace tool based with an usbasp flasher http://homes-smart.ru/index.php/oborudovanie/uroki-i-primery/41-usb-kontroller-umnogo-doma
+
++ Links
+
+* http://item.taobao.com/item.htm?spm=2013.1.1998246703.1.JgiNzH&id=14541759710&taskid=934072#
+* http://qiannao.com/ls/usendz/adc954dc/
+* http://home.eeworld.com.cn/home.php?mod=space&uid=45925&do=album&picid=9207
+* http://www.autoitscript.com/forum/topic/103722-ch341-usb-project/
+* http://www.tuzhixiao.com/usendz/14541759710.html
+* http://fruttenboel.verhoeven272.nl/SBC20/ch341.html
+* https://github.com/setarcos/ch341prog
+* https://github.com/stefanct/ch341eepromtool
+* http://www.electrodragon.com/product/ch341-usb-convert-flash-board-usb-ttl-iic-spi-etc/
+* https://github.com/mkschreder/hack-ssd1306-openwrt
+* http://hackaday.com/2014/12/02/finding-a-cheaper-usb-to-serial-chips/
+* https://www.autoitscript.com/forum/topic/103722-ch341-usb-project/
+* https://bitbucket.org/oetelaar/ch341a-relay-board
+* https://github.com/Trel725/chavrprog
+* http://jap.hu/electronic/usbio.html
+* http://wiki.mlab.cz/doku.php?id=en%3Ausbi2c
+* https://github.com/karlp/ch341-py2c
+* https://github.com/zoobab/ch341-parport
+* http://www.360customs.de/en/2015/01/sigmadsp-programmieren-sigma-studio-adau17011401a-eeprom-standalone-self-boot/
+* https://github.com/allanbian1017/i2c-ch341-usb
+* https://github.com/gschorcht/spi-ch341-usb
+* https://github.com/gschorcht/i2c-ch341-usb
+* https://onetransistor.blogspot.be/2017/08/ch341a-mini-programmer-schematic.html
+* https://fr.aliexpress.com/item/CH341A-USB-bus-adapter-module-programming-RS232-RS485-RS422/32797489472.html
+* https://hackaday.com/2018/02/21/linux-adds-ch341-gpio/
+* https://www.cnx-software.com/2018/02/16/wch-ch341-usb-to-serial-chip-gets-linux-driver-to-control-gpios-over-usb/
+* http://saturn.ffzg.hr:8080/lite/page/rot13/ch341a_mini_flash_programmer
+* https://chromium.googlesource.com/chromiumos/platform/ec/
+* https://github.com/amitesh-singh/usb-gpio-board
+* https://github.com/Henneberg-Systemdesign/cp2130
+* https://github.com/RishiGupta12/SerialPundit/blob/master/drivers/cp210x-silicon-labs/linux/sp_cp210x.c
+* https://patrick.ibexcps.com/ch341a-dongle/

@@ -1,0 +1,415 @@
+Download first the x86 image (there should an x64 image in trunk):
+
+[[code]]
+root@turmes /home/zoobab/docker [9]# wget http://downloads.openwrt.org/attitude_adjustment/12.09-rc2/x86/generic/openwrt-x86-generic-rootfs.tar.gz
+--2014-02-13 00:27:19--  http://downloads.openwrt.org/attitude_adjustment/12.09-rc2/x86/generic/openwrt-x86-generic-rootfs.tar.gz
+Resolving downloads.openwrt.org... 78.24.191.177
+Connecting to downloads.openwrt.org|78.24.191.177|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2221396 (2.1M) [application/octet-stream]
+Saving to: ‘openwrt-x86-generic-rootfs.tar.gz’
+
+100%[==========================================================================================================================================================================>] 2,221,396   1.26MB/s   in 1.7s   
+
+2014-02-13 00:27:21 (1.26 MB/s) - ‘openwrt-x86-generic-rootfs.tar.gz’ saved [2221396/2221396]
+[[/code]]
+
+Then import the rootfs.tar.gz into docker via zcat:
+
+[[code]]
+root@turmes /home/zoobab/docker [10]# zcat openwrt-x86-generic-rootfs.tar.gz | docker import - openwrt-x86
+5f284db5c31d
+root@turmes /home/zoobab/docker [11]# docker images
+REPOSITORY          TAG                 ID                  CREATED             SIZE
+openwrt-x86         latest              5f284db5c31d        6 seconds ago       5.705 MB (virtual 5.705 MB)
+openwrt             latest              5782d36f748f        31 minutes ago      5.705 MB (virtual 5.705 MB)
+mygraphite2         latest              13b0bb3a4936        10 weeks ago        12.29 kB (virtual 450.4 MB)
+mygraphite          latest              568a7effc968        10 weeks ago        12.29 kB (virtual 450.4 MB)
+okso/debian         wheezy              3c6ec5dc9622        11 weeks ago        223 MB (virtual 223 MB)
+plabedan/gentoo     latest              4bce81315395        4 months ago        163.9 kB (virtual 1.792 GB)
+ubuntu              12.04               8dbd9e392a96        10 months ago       131.5 MB (virtual 131.5 MB)
+ubuntu              latest              8dbd9e392a96        10 months ago       131.5 MB (virtual 131.5 MB)
+ubuntu              precise             8dbd9e392a96        10 months ago       131.5 MB (virtual 131.5 MB)
+centos              6.4                 539c0211cd76        10 months ago       322.1 MB (virtual 322.1 MB)
+centos              latest              539c0211cd76        10 months ago       322.1 MB (virtual 322.1 MB)
+ubuntu              12.10               b750fe79269d        10 months ago       24.65 kB (virtual 180.1 MB)
+ubuntu              quantal             b750fe79269d        10 months ago       24.65 kB (virtual 180.1 MB)
+busybox             latest              e9aa60c60128        10 months ago       6.825 MB (virtual 6.825 MB)
+[[/code]]
+
+Run a simple cat inside the docker image:
+
+[[code]]
+root@turmes /home/zoobab/docker [14]# docker run -i openwrt-x86 cat /etc/banner
+  _______                     ________        __
+ |       |.-----.-----.-----.|  |  |  |.----.|  |_
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+ |_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+ -----------------------------------------------------
+ ATTITUDE ADJUSTMENT (12.09, r36088)
+ -----------------------------------------------------
+  * 1/4 oz Vodka      Pour all ingredients into mixing
+  * 1/4 oz Gin        tin with ice, strain into glass.
+  * 1/4 oz Amaretto
+  * 1/4 oz Triple sec
+  * 1/4 oz Peach schnapps
+  * 1/4 oz Sour mix
+  * 1 splash Cranberry juice
+ -----------------------------------------------------
+root@turmes /home/zoobab/docker [15]# 
+[[/code]]
+
+Now starting /sbin/init is more problematic:
+
+[[code]]
+root@turmes /home/zoobab/docker [15]# docker run -i openwrt-x86 /sbin/init
+init started: BusyBox v1.19.4 (2013-03-06 20:07:44 UTC)
+sysinit: date: can't set kernel time zone: Operation not permitted
+
+sysinit: Loading defaults
+
+sysinit: Loading synflood protection
+
+sysinit: Adding custom chains
+
+sysinit: Loading zones
+
+sysinit: Loading forwardings
+
+sysinit: Loading rules
+
+sysinit: Loading redirects
+
+sysinit: Loading includes
+
+sysinit: Optimizing conntrack
+
+sysinit: Loading interfaces
+
+sysinit: dnsmasq: failed to seed the random number generator: No such file or directory
+[[/code]]
+
+It seems the needed /dev entries are not present:
+
+[[code]]
+root@turmes /home/zoobab [7]# docker run -i openwrt-x86 busybox ls /dev
+kmsg
+ptmx
+pts
+shm
+[[/code]]
+
+So let's create them in the tar.gz archive:
+
+[[code]]
+root@turmes /home/zoobab/docker [13]# mkdir -pv workdir
+mkdir: created directory ‘workdir’
+root@turmes /home/zoobab/docker [14]# l
+total 4348
+-rw-r--r-- 1 root root 2221396 Apr 11  2013 openwrt-x86-generic-rootfs.tar.gz
+drwxr-xr-x 2 root root    4096 Feb 13 22:04 workdir
+root@turmes /home/zoobab/docker [15]# tar -xzf openwrt-x86-generic-rootfs.tar.gz -C workdir/
+[[/code]]
+
+Dev directory is empty:
+
+[[code]]
+root@turmes /home/zoobab/docker [17]# cd workdir/
+root@turmes /home/zoobab/docker/workdir [18]# l
+total 56
+drwxr-xr-x  2 root root 4096 Mar 23  2013 bin
+drwxr-xr-x  2 root root 4096 Mar 23  2013 dev
+drwxr-xr-x 13 root root 4096 Mar 23  2013 etc
+drwxr-xr-x 14 root root 4096 Mar 23  2013 lib
+drwxr-xr-x  2 root root 4096 Mar 23  2013 mnt
+drwxr-xr-x  2 root root 4096 Mar 23  2013 overlay
+drwxr-xr-x  2 root root 4096 Mar 23  2013 proc
+drwxr-xr-x  2 root root 4096 Mar 23  2013 rom
+drwxr-xr-x  2 root root 4096 Mar 23  2013 root
+drwxr-xr-x  2 root root 4096 Mar 23  2013 sbin
+drwxr-xr-x  2 root root 4096 Mar 23  2013 sys
+drwxrwxrwt  2 root root 4096 Mar 23  2013 tmp
+drwxr-xr-x  6 root root 4096 Mar 23  2013 usr
+lrwxrwxrwx  1 root root    4 Mar 23  2013 var -> /tmp
+drwxr-xr-x  4 root root 4096 Mar 23  2013 www
+root@turmes /home/zoobab/docker/workdir [19]# cd dev/
+root@turmes /home/zoobab/docker/workdir/dev [20]# l
+total 0
+root@turmes /home/zoobab/docker/workdir/dev [21]# 
+[[/code]]
+
+Let's create the entries:
+
+[[code]]
+root@turmes /home/zoobab/docker/workdir/dev [22]# mknod -m 622 console c 5 1
+root@turmes /home/zoobab/docker/workdir/dev [23]# mknod -m 666 null c 1 3
+root@turmes /home/zoobab/docker/workdir/dev [24]# mknod -m 666 zero c 1 5
+root@turmes /home/zoobab/docker/workdir/dev [25]# mknod -m 666 tty c 5 0
+root@turmes /home/zoobab/docker/workdir/dev [26]# mknod -m 444 random c 1 8
+root@turmes /home/zoobab/docker/workdir/dev [27]# mknod -m 444 urandom c 1 9
+root@turmes /home/zoobab/docker/workdir/dev [28]# ls -al
+total 8
+drwxr-xr-x  2 root root 4096 Feb 13 22:11 .
+drwxr-xr-x 16 root root 4096 Mar 23  2013 ..
+crw--w--w-  1 root root 5, 1 Feb 13 22:10 console
+crw-rw-rw-  1 root root 1, 3 Feb 13 22:10 null
+cr--r--r--  1 root root 1, 8 Feb 13 22:10 random
+crw-rw-rw-  1 root root 5, 0 Feb 13 22:10 tty
+cr--r--r--  1 root root 1, 9 Feb 13 22:11 urandom
+crw-rw-rw-  1 root root 1, 5 Feb 13 22:10 zero
+[[/code]]
+
+Now let's make a tar.gz:
+
+[[code]]
+root@turmes /home/zoobab/docker/workdir/dev [29]# cd ..
+root@turmes /home/zoobab/docker/workdir [30]# tar -czf ../openwrt-x86-generic-rootfs+deventries.tar.gz .
+root@turmes /home/zoobab/docker/workdir [31]# cd ..
+root@turmes /home/zoobab/docker [44]# ls -al
+total 4356
+drwxr-xr-x  3 root   root      4096 Feb 13 22:16 .
+drwx------ 36 zoobab zoobab    4096 Feb 13 21:20 ..
+-rw-r--r--  1 root   root   2222094 Feb 13 22:16 openwrt-x86-generic-rootfs+deventries.tar.gz
+-rw-r--r--  1 root   root   2221396 Apr 11  2013 openwrt-x86-generic-rootfs.tar.gz
+drwxr-xr-x 16 root   root      4096 Mar 23  2013 workdir
+[[/code]]
+
+Now we can import this to docker:
+
+[[code]]
+root@turmes /home/zoobab/docker [47]# zcat openwrt-x86-generic-rootfs+deventries.tar.gz | docker import - openwrt-x86-generic-rootfs+deventries
+b9daeeb9a878
+root@turmes /home/zoobab/docker [48]# docker images
+REPOSITORY                               TAG                 ID                  CREATED             SIZE
+openwrt-x86-generic-rootfs+deventries    latest              b9daeeb9a878        2 seconds ago       5.705 MB (virtual 5.705 MB)
+[[/code]]
+
+Let's run a basic command:
+
+[[code]]
+root@turmes /home/zoobab [17]# docker run -i openwrt-x86-generic-rootfs+deventries ifconfig
+eth0      Link encap:Ethernet  HWaddr F2:06:70:1D:D0:65  
+          inet addr:172.17.0.30  Bcast:172.17.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::f006:70ff:fe1d:d065/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+root@turmes /home/zoobab [18]# docker run -i openwrt-x86-generic-rootfs+deventries /sbin/init
+init started: BusyBox v1.19.4 (2013-03-06 20:07:44 UTC)
+sysinit: date: can't set kernel time zone: Operation not permitted
+
+sysinit: Loading defaults
+
+sysinit: Loading synflood protection
+
+sysinit: Adding custom chains
+
+sysinit: Loading zones
+
+sysinit: Loading forwardings
+
+sysinit: Loading rules
+
+sysinit: Loading redirects
+
+sysinit: Loading includes
+
+sysinit: Optimizing conntrack
+
+sysinit: Loading interfaces
+
+
+[[/code]]
+
+You can also run an interactive shell:
+
+[[code]]
+root@turmes /home/zoobab [20]# docker run -i -t openwrt-x86-generic-rootfs+deventries /bin/ash
+
+
+BusyBox v1.19.4 (2013-03-06 20:07:44 UTC) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+/ # ps
+  PID USER       VSZ STAT COMMAND
+    1 root      1248 S    /bin/ash
+    6 root      1248 R    ps
+/ # 
+[[/code]]
+
+There seems to be an issue with /var subdirs not created:
+
+[[code]]
+/ # ifconfig
+eth0      Link encap:Ethernet  HWaddr 02:51:6F:E7:12:0A  
+          inet addr:172.17.0.44  Bcast:172.17.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::51:6fff:fee7:120a/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:25 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:15551 (15.1 KiB)  TX bytes:648 (648.0 B)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+/ # opkg update
+Collected errors:
+ * opkg_conf_load: Could not create lock file /var/lock/opkg.lock: No such file or directory.
+/ # mkdir -p /var/lock
+/ # ls
+bin      dev      etc      lib      mnt      overlay  proc     rom      root     sbin     sys      tmp      usr      var      www
+/ # opkg update
+Downloading http://downloads.openwrt.org/attitude_adjustment/12.09/x86/generic/packages/Packages.gz.
+Updated list of available packages in /var/opkg-lists/attitude_adjustment.
+/ # 
+[[/code]]
+
+Let's change the root password and try to setup dropbear to connect over ssh:
+
+[[code]]
+/ # passwd
+Changing password for root
+New password: 
+Bad password: too weak
+Retype password: 
+Password for root changed by root
+/ # ps
+  PID USER       VSZ STAT COMMAND
+    1 root      1252 S    /bin/ash
+   21 root      1248 R    ps
+/ # /etc/init.d/dropbear restart
+/ # ps
+  PID USER       VSZ STAT COMMAND
+    1 root      1260 S    /bin/ash
+   44 root       960 S    /usr/sbin/dropbear -P /var/run/dropbear.1.pid -p 22
+   45 root      1248 R    ps
+/ #
+[[/code]]
+
+Leave the console OPENED, and in another terminal, try to SSH to the IP address:
+
+[[code]]
+zoobab@turmes /home/zoobab [2]$ ssh root@172.17.0.45
+root@172.17.0.45's password: 
+
+
+BusyBox v1.19.4 (2013-03-06 20:07:44 UTC) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+  _______                     ________        __
+ |       |.-----.-----.-----.|  |  |  |.----.|  |_
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+ |_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+ -----------------------------------------------------
+ ATTITUDE ADJUSTMENT (12.09, r36088)
+ -----------------------------------------------------
+  * 1/4 oz Vodka      Pour all ingredients into mixing
+  * 1/4 oz Gin        tin with ice, strain into glass.
+  * 1/4 oz Amaretto
+  * 1/4 oz Triple sec
+  * 1/4 oz Peach schnapps
+  * 1/4 oz Sour mix
+  * 1 splash Cranberry juice
+ -----------------------------------------------------
+root@17691dbb9d9a:~# 
+[[/code]]
+
+Now let's install one package:
+
+[[code]]
+root@17691dbb9d9a:~# opkg update
+Collected errors:
+ * opkg_conf_load: Could not create lock file /var/lock/opkg.lock: No such file or directory.
+root@17691dbb9d9a:~# mkdir /var/lock
+root@17691dbb9d9a:~# opkg update
+Downloading http://downloads.openwrt.org/attitude_adjustment/12.09/x86/generic/packages/Packages.gz.
+Updated list of available packages in /var/opkg-lists/attitude_adjustment.
+root@17691dbb9d9a:~# opkg install 
+root@17691dbb9d9a:~# ps
+  PID USER       VSZ STAT COMMAND
+    1 root      1260 S    /bin/ash
+   30 root       960 S    /usr/sbin/dropbear -P /var/run/dropbear.1.pid -p 22
+   38 root      1032 S    /usr/sbin/dropbear -P /var/run/dropbear.1.pid -p 22
+   39 root      1256 S    -ash
+   48 root      1248 R    ps
+root@17691dbb9d9a:~# opkg install lighttpd
+Installing lighttpd (1.4.30-2) to root...
+Downloading http://downloads.openwrt.org/attitude_adjustment/12.09/x86/generic/packages/lighttpd_1.4.30-2_x86.ipk.
+Installing libopenssl (1.0.1e-1) to root...
+Downloading http://downloads.openwrt.org/attitude_adjustment/12.09/x86/generic/packages/libopenssl_1.0.1e-1_x86.ipk.
+Installing zlib (1.2.7-1) to root...
+Downloading http://downloads.openwrt.org/attitude_adjustment/12.09/x86/generic/packages/zlib_1.2.7-1_x86.ipk.
+Installing libpcre (8.11-2) to root...
+Downloading http://downloads.openwrt.org/attitude_adjustment/12.09/x86/generic/packages/libpcre_8.11-2_x86.ipk.
+Installing libpthread (0.9.33.2-1) to root...
+Downloading http://downloads.openwrt.org/attitude_adjustment/12.09/x86/generic/packages/libpthread_0.9.33.2-1_x86.ipk.
+Configuring libpthread.
+Configuring libpcre.
+Configuring zlib.
+Configuring libopenssl.
+Configuring lighttpd.
+root@17691dbb9d9a:~#
+[[/code]]
+
+That's it!
+
+In the TODO list:
+* publish a docker image:
+[[code]]
+docker pull  zoobab/openwrt-x86-attitude
+[[/code]]
+
+Example to get a shell:
+[[code]]
+root@turmes /home/zoobab [4]# docker run -i -t zoobab/openwrt-x86-attitude /bin/ash
+
+
+BusyBox v1.19.4 (2013-03-06 20:07:44 UTC) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+/ # ls
+bin      dev      etc      lib      mnt      overlay  proc     rom      root     sbin     sys      tmp      usr      var      www
+/ # ifconfig
+eth0      Link encap:Ethernet  HWaddr E6:7A:80:85:59:68  
+          inet addr:172.17.0.46  Bcast:172.17.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::e47a:80ff:fe85:5968/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:12 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:4 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:7069 (6.9 KiB)  TX bytes:328 (328.0 B)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+/ # 
+[[/code]]
+
+* publish images with interesting profiles (lighttpd dirlist server, ftpd server, ircd server, tor server, etc...)

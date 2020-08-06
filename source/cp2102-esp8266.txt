@@ -1,0 +1,45 @@
++ Goal
+
+The goal is to make an adaptor board for the 3USD ESP8266 wifi module to the CP2102 usb serial converter. While USB is 5V, the ESP8266 is 3.3V, so you would need a voltage converter in between, like an AMS1117-33.
+
+[[=image ams1117-33.jpg]]
+
+Working with the ESP8266 can be a pain sometimes, as you need an ESP8266 module, a 3.3V source, and a USB-serial adaptor. Some solutions like all-in-one boards can be attractive, but not in terms of price. Here the proposed solution is just a cp2102 dongle (1.5EUR), an AMS1117-33 (0.50EUR), and some stripboard, and some female arduino connector.
+
++ Pictures
+
+This is a WIP. The AMS1117-33 is missing (Elak.be does not have any stock of those, so I ordered a roll of 100 pieces for [http://www.aliexpress.com/snapshot/6424471033.html?orderId=65257035035301 4USD at Aliexpress]) and I still need to find out how to map the pins.
+
+[[=image cp2102-esp8266-front.jpg size="medium"]]
+
+I had to add a wire because from the USB5V to the VCC pin, which was **not** providing 5V if I would bridge the 2 pins on the PCB with some solder. By default the VCC pin was left unbridged, so its default voltage was zero.
+
+[[=image cp2102-esp8266-back.jpg size="medium"]]
+
++ Todo
+
+* Do some amps logging to see how much the entire setup consumes (will it hit the 500mW limit?)
+* Bill of materials
+* Do the same with a dongle based on the CH340G, they are way cheaper
+
++ 5 pins header
+
+* CH_PD (which will be next to VCC33, so that a jumper can trigger the bootloader mode)
+* VCC3
+* GND
+* GP0
+* GP1
+
++ Ideas
+
+* Make a simple USB adaptor just for powerin the ESP8266 through USB (still expose the 4 UARTs pins, and even the 5V), to be used with power supplies like those ones:
+
+[[=image universal-usb-eu-plug-charger-ac-power-supply-wall-adapter-adaptor-mp3-charger-for-mobile-phone_002.jpg size="small"]]
+
++ Links
+
+* http://ncrmnt.org/wp/2014/11/04/esp8266-and-pl2303hx-gpio-adventures/
+* http://embedded-lab.com/blog/?p=9854
+* http://www.ianstedman.co.uk/Projects/USB_3_3V_adapter/usb_3_3v_adapter.html
+* http://www.amazon.com/KEDSUM%C2%AE-CP2102-Module-Download-Converter/product-reviews/B009T2ZR6W
+* https://www.tindie.com/products/FemtoCow/esp8266-ftdi-and-breadboard-adapter-with-33v-reg/

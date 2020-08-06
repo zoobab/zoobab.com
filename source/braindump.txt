@@ -1,0 +1,3 @@
+* patch openwrt to do uml32 and uml64: https://dev.openwrt.org/ticket/11253
+* patch openwrt to gen an openvz rootfs
+* avrdude ft2232 support (doc)

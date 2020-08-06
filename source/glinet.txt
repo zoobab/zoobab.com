@@ -1,0 +1,137 @@
++ About
+
+* RAM:16M
+* Flash: 64M
+* CPU: MIPS 400Mhz AR9330
+* ETH: 2x100mbps
+* Wifi 150mbps
+* USB2.0: 1x
+* Serial port TTL 3.3V with 3 pins header (GND, TX, RX)
+* GPIO 2mm (not 2.54mm spacing!) no header soldered
+* Configurable RGB LED
+
++ Advanced settings
+
+You can SSH to the box, it runs an old version of OpenWRT:
+
+[[code]]
+root@GL-iNet:~# cat /etc/banner 
+  _______                     ________        __
+ |       |.-----.-----.-----.|  |  |  |.----.|  |_
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+ |_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+ -----------------------------------------------------
+ BARRIER BREAKER (14.07, r42853)
+ -----------------------------------------------------
+  * 1/2 oz Galliano         Pour all ingredients into
+  * 4 oz cold Coffee        an irish coffee mug filled
+  * 1 1/2 oz Dark Rum       with crushed ice. Stir.
+  * 2 tsp. Creme de Cacao
+ -----------------------------------------------------
+[[/code]]
+
++ SPI flash
+
+[[code]]
+[    0.680000] ath79-spi ath79-spi: master is unqueued, this is deprecated
+[    0.690000] m25p80 spi0.0: found w25q128, expected m25p80
+[    0.690000] m25p80 spi0.0: w25q128 (16384 Kbytes)
+[    0.700000] 5 tp-link partitions found on MTD device spi0.0
+[    0.700000] Creating 5 MTD partitions on "spi0.0":
+[    0.710000] 0x000000000000-0x000000020000 : "u-boot"
+[    0.720000] 0x000000020000-0x000000130024 : "kernel"
+[    0.720000] mtd: partition "kernel" must either start or end on erase block boundary or be smaller than an erase block -- forcing read-only
+[    0.730000] 0x000000130024-0x000000ff0000 : "rootfs"
+[    0.740000] mtd: partition "rootfs" must either start or end on erase block boundary or be smaller than an erase block -- forcing read-only
+[    0.750000] mtd: device 2 (rootfs) set to be root filesystem
+[    0.760000] 1 squashfs-split partitions found on MTD device rootfs
+[    0.760000] 0x000000780000-0x000000ff0000 : "rootfs_data"
+[    0.770000] 0x000000ff0000-0x000001000000 : "art"
+[    0.770000] 0x000000020000-0x000000ff0000 : "firmware"
+[[/code]]
+
++ Cpuinfo
+
+[[code]]
+root@GL-iNet:~# cat /proc/cpuinfo 
+system type             : Atheros AR9330 rev 1
+machine                 : GL-CONNECT INET v1
+processor               : 0
+cpu model               : MIPS 24Kc V7.4
+BogoMIPS                : 265.42
+wait instruction        : yes
+microsecond timers      : yes
+tlb_entries             : 16
+extra interrupt vector  : yes
+hardware watchpoint     : yes, count: 4, address/irw mask: [0x0000, 0x0890, 0x0880, 0x05c0]
+isa                     : mips1 mips2 mips32r1 mips32r2
+ASEs implemented        : mips16
+shadow register sets    : 1
+kscratch registers      : 0
+core                    : 0
+VCED exceptions         : not available
+VCEI exceptions         : not available
+[[/code]]
+
++ Meminfo
+
+[[code]]
+root@GL-iNet:~# cat /proc/meminfo 
+MemTotal:          61332 kB
+MemFree:           20984 kB
+Buffers:            4696 kB
+Cached:            18268 kB
+SwapCached:            0 kB
+Active:            12588 kB
+Inactive:          13052 kB
+Active(anon):       3692 kB
+Inactive(anon):      220 kB
+Active(file):       8896 kB
+Inactive(file):    12832 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:          2696 kB
+Mapped:             2516 kB
+Shmem:              1236 kB
+Slab:               7560 kB
+SReclaimable:       2220 kB
+SUnreclaim:         5340 kB
+KernelStack:         296 kB
+PageTables:          296 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:       30664 kB
+Committed_AS:       7192 kB
+VmallocTotal:    1048372 kB
+VmallocUsed:        1604 kB
+VmallocChunk:    1035676 kB
+[[/code]]
+
++ Df
+
+[[code]]
+root@GL-iNet:~# df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+rootfs                    8640      2320      6320  27% /
+/dev/root                 6656      6656         0 100% /rom
+tmpfs                    30664      1236     29428   4% /tmp
+/dev/mtdblock3            8640      2320      6320  27% /overlay
+overlayfs:/overlay        8640      2320      6320  27% /
+tmpfs                      512         0       512   0% /dev
+root@GL-iNet:~# df -h
+Filesystem                Size      Used Available Use% Mounted on
+rootfs                    8.4M      2.3M      6.2M  27% /
+/dev/root                 6.5M      6.5M         0 100% /rom
+tmpfs                    29.9M      1.2M     28.7M   4% /tmp
+/dev/mtdblock3            8.4M      2.3M      6.2M  27% /overlay
+overlayfs:/overlay        8.4M      2.3M      6.2M  27% /
+tmpfs                   512.0K         0    512.0K   0% /dev
+[[/code]]
+
++ Dmesg

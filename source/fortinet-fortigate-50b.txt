@@ -1,0 +1,19 @@
++ Version
+
+FGT50B3G07504087
+
++ Serial port
+
++ BIOS chip
+
+SST 49LF040B-33-4C-NHE 0629307 ([[file SST-49LF040B-33-4C-NHE-datasheet.pdf |datasheet]])
+
++ Firmware
+
+http://emea.fortinet.net/fortinet/hqipn/FortiGate-50BCP5_HQIP_7403.img
+
++ FCCID
+
++ Links
+
+* http://kokoro.bf1.jp/blog/archives/9117

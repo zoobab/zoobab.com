@@ -1,0 +1,127 @@
++ About
+
+This is the same hardware/software as the Edimax BR-6114WG. You can compile openwrt for it by choosing the profile:
+
+[[=image conceptronic-c54brs4-openwrt-profile.png]]
+
++ Pictures
+
+[[gallery size="thumbnail"]]
+
++ Hardware
+
+||~ Brand ||~ Model ||~ FCC-ID ||~ Flash ||~ RAM ||~ USB ||~ Serial ||~ 4ports ||~ JTAG ||
+|| Conceptronic || C54BRS4v1 || ?????? || 2MB MX 29VL160BBTC-90 || 16MB Hynix 348A Y57V28322OT-7 || N || 4 pins || N || Y ||
+
++ JTAG
+
+[[code]]
+GND 0 0 TMS OR TDI
+GND 0 0 TDO
+GND 0 0 TCK
+GND 0 0 ???
+GND 0 0 GND
+GND 0 0 TDI OR TMS
+GND 0 0 ???
+GND 0 # GND
+[[/code]]
+
++ Serial
+
+* Build a serial adaptor
+* Pinout and speed
+
++ Upload an OpenWRT image via the Xmodem
+
+openwrt-adm5120-br-6114wg-squashfs-xmodem.bin
+
++ Backup
+
+Upload copies of the flash here: [http://zoobab.wikidot.com/local--files/conceptronic-c54brs4/mtd0 mtd0], [http://zoobab.wikidot.com/local--files/conceptronic-c54brs4/mtd1 mtd1], [http://zoobab.wikidot.com/local--files/conceptronic-c54brs4/mtd2 mtd2], [http://zoobab.wikidot.com/local--files/conceptronic-c54brs4/mtd3 mtd3].
+
++ Todo
+
+* Replace the unsupported Improcomm card by a CM9
+* Test 5ghz
+* Test JTAG
+
++ OpenWRT
+
+++ Banner
+
+[[code]]
+
+root@OpenWrt:/# cat /etc/banner
+ _______                     ________        __
+|       |.-----.-----.-----.|  |  |  |.----.|  |_
+|   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+|_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+KAMIKAZE (bleeding edge, r9986) -------------------
+ * 10 oz Vodka       Shake well with ice and strain
+ * 10 oz Triple sec  mixture into 10 shot glasses.
+ * 10 oz lime juice  Salute!
+---------------------------------------------------
+root@OpenWrt:/#
+
+[[/code]]
+
+++ Cpuinfo
+
+[[code]]
+
+root@OpenWrt:~# cat /proc/cpuinfo
+system type             : Generic ADM5120 board
+processor               : 0
+cpu model               : MIPS 4Kc V0.11
+BogoMIPS                : 173.05
+wait instruction        : yes
+microsecond timers      : yes
+tlb_entries             : 16
+extra interrupt vector  : yes
+hardware watchpoint     : yes
+ASEs implemented        :
+VCED exceptions         : not available
+VCEI exceptions         : not available
+
+[[/code]]
+
+++ Memory
+
+[[code]]
+
+root@OpenWrt:~# cat /proc/meminfo
+MemTotal:        13872 kB
+MemFree:          4304 kB
+Buffers:           840 kB
+Cached:           3088 kB
+SwapCached:          0 kB
+Active:           2808 kB
+Inactive:         1868 kB
+SwapTotal:           0 kB
+SwapFree:            0 kB
+Dirty:               0 kB
+Writeback:           0 kB
+AnonPages:         756 kB
+Mapped:            780 kB
+Slab:             3872 kB
+SReclaimable:     1208 kB
+SUnreclaim:       2664 kB
+PageTables:        200 kB
+NFS_Unstable:        0 kB
+Bounce:              0 kB
+CommitLimit:      6936 kB
+Committed_AS:     2788 kB
+VmallocTotal:  1048404 kB
+VmallocUsed:       804 kB
+VmallocChunk:  1047392 kB
+
+[[/code]]
+
+++ Top
+
+[[code]]
+
+Mem: 9588K used, 4284K free, 0K shrd, 840K buff, 3092K cached
+
+[[/code]]

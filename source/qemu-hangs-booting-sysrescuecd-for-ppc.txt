@@ -1,0 +1,11 @@
+I am trying to boot the [http://sourceforge.net/projects/systemrescuecd/files/sysresccd-ppc/0.2.0/sysresccd-ppc-0.2.0.iso/download Sysrescuecd ISO image] for PPC with Qemu-system-ppc:
+
+> /usr/bin/qemu-system-ppc -m 512 -cdrom /home/zoobab/soft/systemrescuecd/sysresccd-ppc-0.2.0.iso -vga std -boot d
+
+It boots with the following OpenFirmware option:
+
+> 0 > boot cd:,\boot\yaboot
+
+Then it starts Yaboot and the kernel, but it hangs:
+
+[[=image qemu-sysrescuecdppc-hangs.png size="large"]]

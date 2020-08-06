@@ -1,0 +1,1331 @@
+Microsoft Windows XP Édition familiale 
+Service Pack 3
+
+CONTRAT DE LICENCE UTILISATEUR FINAL POUR 
+LOGICIEL MICROSOFT
+
+IMPORTANT - À LIRE ATTENTIVEMENT Le présent 
+Contrat de Licence Utilisateur Final (" CLUF 
+") constitue un contrat entre vous (personne 
+physique ou personne unique) et le fabricant 
+(le " Fabricant ") du système informatique ou 
+du composant du système informatique (le " 
+MATÉRIEL ") avec lequel vous avez acquis le 
+ou les produit(s) logiciel(s) Microsoft 
+identifié(s) par le certificat d'authenticité 
+(ou Certificate of Authenticity, " COA ") 
+figurant sur le MATÉRIEL ou sur la 
+documentation du produit associé (le " 
+LOGICIEL "). Le LOGICIEL inclut le logiciel 
+Microsoft et peut inclure des supports 
+associés, des documents imprimés, une 
+documentation électronique ou " en ligne " et 
+des services basés sur Internet. Notez 
+cependant que tout logiciel, documentation ou 
+service Web accompagnant le LOGICIEL ou 
+accessible par l'intermédiaire du LOGICIEL, 
+et faisant l'objet d'un contrat de licence 
+séparé ou de conditions d'utilisation 
+distinctes est régi par ledit contrat, et non 
+par le présent CLUF. Les termes d'un CLUF 
+imprimé sur papier pouvant accompagner le 
+LOGICIEL annulent et remplacent les termes de 
+tout CLUF " en ligne ". Le présent CLUF n'est 
+valable et ne vous concède les droits 
+d'utilisateur final QUE si le LOGICIEL est 
+authentique et qu'un Certificat 
+d'Authenticité du LOGICIEL est inclus avec le 
+LOGICIEL. Pour déterminer l'authenticité de 
+votre logiciel, des informations 
+supplémentaires sont disponibles sur le site 
+http://www.microsoft.com/piracy/howtotell. 
+
+Certains termes ont été modifiés depuis la 
+version initiale de Windows XP Service Pack 2.
+Les modifications incluent :
+
+* des informations supplémentaires sur les 
+fonctions de validation du LOGICIEL qui 
+déterminent si le LOGICIEL est un produit 
+contrefait ou sans licence appropriée, ou 
+s'il n'est pas un produit Windows authentique 
+; et
+
+* des déclarations de confidentialité 
+supplémentaires relatives aux services 
+Internet.
+
+Cette liste présente quelques-unes de ces 
+modifications. Les termes suivants régissent 
+l'utilisation du LOGICIEL.
+
+EN INSTALLANT, EN COPIANT OU EN UTILISANT DE 
+TOUTE AUTRE MANIÈRE LE LOGICIEL, VOUS 
+RECONNAISSEZ ÊTRE LIÉ PAR LES TERMES DU 
+PRÉSENT CLUF. Si vous êtes en désaccord avec 
+les termes du présent CLUF, vous n'avez pas 
+le droit d'utiliser ou de copier le LOGICIEL 
+et vous devez contacter rapidement le 
+Fabricant afin d'obtenir des instructions 
+pour le retour du ou des produits inutilisés 
+et leur remboursement conformément aux 
+conditions de retour du Fabricant.
+
+licence de produit logiciel
+
+Le terme " ORDINATEUR " tel qu'il est 
+utilisé dans les présentes désigne le 
+MATÉRIEL si le MATÉRIEL est un seul système 
+informatique, ou désigne le système 
+informatique avec lequel le MATÉRIEL 
+fonctionne si le MATÉRIEL est un composant de 
+système informatique.
+
+1. CONCESSION DE LICENCE. Le Fabricant vous 
+concède les droits suivants, sous réserve que 
+vous respectiez l'ensemble des termes du 
+présent CLUF :
+
+1.1 Installation et utilisation. Vous êtes 
+autorisé à installer, utiliser, accéder à, 
+afficher ou exécuter un exemplaire du 
+LOGICIEL sur l'ORDINATEUR. Le LOGICIEL ne 
+peut pas être utilisé par plus de deux (2) 
+processeurs en même temps sur l'ORDINATEUR, 
+sauf si un plus grand nombre de processeurs 
+autorisés est mentionné sur le Certificat 
+d'Authenticité. 
+
+1.2 LOGICIEL en tant que composant de 
+l'ORDINATEUR - Transfert. Cette licence ne 
+peut pas être partagée, transférée ou 
+utilisée de manière concomitante sur 
+plusieurs ordinateurs. Le LOGICIEL est 
+concédé sous licence avec l'ORDINATEUR en 
+tant que produit intégré unique et ne peut 
+être utilisé qu'avec l'ORDINATEUR. Si le 
+LOGICIEL n'est pas accompagné du MATÉRIEL, 
+vous n'êtes pas autorisé à utiliser le 
+LOGICIEL. Vous êtes autorisé à transférer, à 
+titre permanent, l'ensemble des droits dont 
+vous bénéficiez au titre du présent CLUF 
+uniquement dans le cadre de la vente ou du 
+transfert permanent de l'ORDINATEUR, à 
+condition que vous ne conserviez aucune copie 
+du LOGICIEL. Ce transfert doit également 
+comprendre l'étiquette de Certificat 
+d'authenticité (" Certificate of Authenticity 
+" ou " COA "). Le transfert ne doit pas être 
+effectué par le biais d'un envoi ou de tout 
+autre transfert indirect. Avant le transfert, 
+le bénéficiaire du LOGICIEL doit accepter de 
+se conformer à tous les termes du présent 
+CLUF.
+
+1.3 Activation obligatoire. L'activation 
+associe l'utilisation du LOGICIEL à un 
+ordinateur spécifique. Pendant l'activation, 
+le LOGICIEL envoie des informations sur le 
+LOGICIEL et l'ORDINATEUR à Microsoft. Ces 
+informations incluent la version, la langue 
+et la clé de produit du LOGICIEL, l'adresse 
+IP de l'ORDINATEUR et des informations 
+dérivées de la configuration matérielle de 
+l'ORDINATEUR. Pour plus d'informations, 
+consultez le site http://go.microsoft.
+com/fwlink/?Linkid=103743. En utilisant le 
+LOGICIEL, vous consentez à la transmission de 
+ces informations. Si la licence du logiciel 
+est valide, vous êtes autorisé à utiliser la 
+version du LOGICIEL installée pendant le 
+processus d'installation jusqu'au terme des 
+30 jours de la période d'activation prévue. À 
+moins que le LOGICIEL ne soit activé, vous 
+n'êtes pas autorisé à utiliser le LOGICIEL au-
+delà de la période d'activation spécifiée. 
+Ceci vise à empêcher son utilisation sans 
+licence. Vous n'êtes pas autorisé à passer 
+outre ou à contourner le processus 
+d'activation. Si l'ORDINATEUR est connecté à 
+Internet, le LOGICIEL peut automatiquement se 
+connecter à Microsoft pour être activé. Vous 
+pouvez également activer le LOGICIEL par 
+Internet ou téléphone. Dans ce cas, des frais 
+de service Internet et téléphonique peuvent 
+s'appliquer. Il est possible que vous deviez 
+réactiver le LOGICIEL si vous modifiez vos 
+composants informatiques ou le LOGICIEL. 
+Celui-ci affichera un rappel d'activation 
+jusqu'à ce qu'il soit activé. 
+
+1.4 Connexion des dispositifs. Vous êtes 
+autorisé à connecter un maximum de cinq (5) 
+ordinateurs ou autres dispositifs 
+électroniques (chacun étant un " Dispositif 
+") à l'ORDINATEUR pour utiliser un ou 
+plusieurs des services suivants du Logiciel : 
+services de fichiers, services d'impression, 
+services d'information Internet, partage de 
+connexions et services de téléphonie. Le 
+nombre maximum de cinq (5) connexions 
+comprend toute connexion indirecte réalisée 
+par le biais de logiciels ou de matériels de 
+" multiplexage ", ou d'autres logiciels ou 
+matériels qui concentrent ou regroupent des 
+connexions. Ce maximum de cinq connexions ne 
+s'applique pas aux autres utilisations du 
+Logiciel telles que la synchronisation des 
+données entre un Dispositif et l'ORDINATEUR, 
+à condition qu'un seul utilisateur utilise, 
+accède, affiche et exécute le Logiciel à tout 
+moment. La présente Section 1.4 ne Vous 
+concède aucun droit d'accès à une session de 
+l'ORDINATEUR depuis un quelconque Dispositif. 
+Une " Session " désigne toute utilisation du 
+Logiciel qui permet une fonctionnalité 
+similaire à celle accessible à un utilisateur 
+final qui interagit avec l'ORDINATEUR via une 
+quelconque combinaison de périphériques 
+d'entrée, de sortie et d'affichage. 
+
+1.5 Assistance à distance/NetMeeting. Le 
+LOGICIEL comprend les technologies Remote 
+Assistance et NetMeeting qui permettent au 
+LOGICIEL ou aux applications installées sur 
+l'ORDINATEUR (parfois désigné sous le nom 
+périphérique hôte) d'être accédés à distance 
+par d'autres Dispositifs. Lorsque Vous 
+utilisez l'Assistance à distance ou 
+NetMeeting (ou d'autres logiciels offrant les 
+mêmes fonctionnalités à des fins similaires), 
+Vous pouvez partager Votre session avec 
+d'autres utilisateurs sans limitation du 
+nombre de connexions de Dispositifs et sans 
+acquérir de licences supplémentaires pour le 
+LOGICIEL. Pour les applications Microsoft et 
+non-Microsoft, Vous êtes invité à consulter 
+le contrat de licence qui accompagne le 
+logiciel d'application ou à contacter le 
+concédant de licence afin de savoir s'il 
+autorise l'utilisation du produit avec 
+l'Assistance à distance ou NetMeeting sans 
+licence supplémentaire. Le présent CLUF 
+n'inclut pas de licence d'utilisation des 
+fonctionnalités Bureau à distance de 
+Microsoft (ou tout autre logiciel offrant les 
+mêmes fonctionnalités à des fins similaires) 
+pour héberger une session de l'ORDINATEUR 
+depuis un quelconque Dispositif. Ces 
+technologies sont disponibles pour les 
+licences de Windows XP Édition 
+Professionnelle. Sauf autorisation contraire 
+par les fonctions NetMeeting et Assistance à 
+distance décrites ci-dessus, une licence du 
+LOGICIEL ne peut être partagée ou utilisée de 
+manière concomitante sur des ordinateurs 
+distincts, tels qu'une station de travail, un 
+terminal ou un autre dispositif.
+
+1.6 Copie de sauvegarde. Vous êtes autorisé 
+à effectuer une (1) seule copie de sauvegarde 
+du logiciel. Cette unique copie de sauvegarde 
+ne peut être utilisée qu'à des fins 
+d'archivage et pour réinstaller le logiciel 
+sur l'ordinateur. Sauf stipulation contraire 
+expresse du présent CLUF ou des lois 
+applicables dans votre pays, vous n'êtes pas 
+autorisé à effectuer d'autres copies du 
+logiciel ni des documents imprimés qui 
+l'accompagnent. Vous n'êtes pas autorisé à 
+prêter, à louer ou à transférer de toute 
+autre manière le CD ou la copie de sauvegarde 
+à un autre utilisateur.
+
+1.7 Validation. Ce LOGICIEL vérifie 
+régulièrement si vous utilisez ou non une 
+copie sous licence du LOGICIEL. Vous serez 
+peut-être obligé de procéder à une validation 
+pour pouvoir télécharger, installer ou 
+utiliser certains logiciels Microsoft. Si 
+vous avez installé une copie sous licence du 
+LOGICIEL, vous bénéficiez d'avantages 
+particuliers, qui sont décrits sur le site 
+http://go.microsoft.com/fwlink/?linkid=39157. 
+Si le logiciel détecte que vous utilisez une 
+copie du LOGICIEL sans licence, une 
+notification et des rappels périodiques vous 
+sont envoyés afin que vous installiez une 
+copie sous licence du LOGICIEL. Pendant ou 
+après une vérification de validation, le 
+LOGICIEL peut envoyer à Microsoft des 
+informations concernant le LOGICIEL et le 
+dispositif ainsi que les résultats de la 
+vérification de validation. Ces informations 
+incluent, notamment, la version et la clé de 
+produit du LOGICIEL, toute modification non 
+autorisée ayant été apportée aux fonctions de 
+validation, de concession de licence ou 
+d'activation du LOGICIEL, tout logiciel 
+malveillant ou non autorisé lié à ces 
+modifications ayant été trouvé ainsi que 
+l'adresse IP du dispositif. Microsoft 
+n'utilise pas ces informations afin de vous 
+identifier ou de vous contacter. En utilisant 
+le LOGICIEL, vous consentez à la transmission 
+de ces informations. Pour plus d'informations 
+sur la validation et les informations 
+envoyées pendant ou après une vérification de 
+validation, consultez le site http://go.
+microsoft.com/fwlink/?Linkid=96551.
+
+2. Services INTERNET. Microsoft fournit des 
+services Internet avec le LOGICIEL. Ces 
+services peuvent être modifiés ou interrompus 
+à tout moment.
+
+2.1 Consentement pour les services Internet. 
+Les fonctionnalités du logiciel décrites ci-
+dessous dans la Section 2.2 et dans la 
+déclaration de confidentialité se connectent 
+aux systèmes informatiques de Microsoft ou de 
+fournisseurs de services via Internet. Dans 
+certains cas, vous ne recevrez pas d'avis de 
+connexion. Vous pouvez désactiver ces 
+fonctionnalités ou ne pas les utiliser. Pour 
+plus d'informations sur ces fonctionnalités, 
+consultez la déclaration de confidentialité 
+sur le site http://go.microsoft.com/fwlink/?
+Linkid=103743. En utilisant ces 
+fonctionnalités, vous consentez à la 
+transmission de ces informations. Microsoft 
+n'utilise pas ces informations afin de vous 
+identifier ou de vous contacter.
+
+2.2 Données informatiques. Cette 
+fonctionnalité utilise des protocoles 
+Internet, qui transmettent des informations 
+aux systèmes appropriés, telles que l'adresse 
+IP, le type de système d'exploitation, le 
+navigateur, le nom et la version du logiciel 
+que vous utilisez, ainsi que le code de 
+langue de l'ORDINATEUR sur lequel vous avez 
+installé le LOGICIEL. Microsoft n'utilise ces 
+informations que dans le but de mettre à 
+votre disposition les services Internet.
+
+· Plug-and-Play. Vous pouvez connecter de 
+nouveaux matériels à votre ORDINATEUR. Votre 
+ORDINATEUR peut ne pas être équipé des 
+pilotes nécessaires pour communiquer avec 
+ledit matériel. Si tel est le cas, la 
+fonctionnalité de mise à jour du LOGICIEL 
+permet d'obtenir le pilote approprié auprès 
+de Microsoft et de l'installer sur votre 
+ORDINATEUR. Cette fonctionnalité peut être 
+désactivée par un administrateur.
+
+· Windows Update. Pour permettre le 
+fonctionnement correct du service Windows 
+Update dans le LOGICIEL (si vous utilisez ce 
+service), des mises à jour et des 
+téléchargements du service Windows Update 
+peuvent occasionnellement être nécessaires, 
+et seront téléchargés et installés sans 
+préavis.
+
+· Fonctionnalités de contenu Web. Dans le 
+cadre de la configuration par défaut du 
+LOGICIEL, si vous êtes connecté à Internet, 
+plusieurs fonctionnalités du LOGICIEL sont 
+activées par défaut pour récupérer et 
+afficher du contenu provenant des systèmes 
+informatiques de Microsoft. Lorsque vous 
+activez une telle fonctionnalité, elle 
+utilise des protocoles Internet standard, qui 
+transmettent le type de système 
+d'exploitation, de navigateur et de code de 
+langue de votre ORDINATEUR au système 
+informatique Microsoft afin que le contenu 
+puisse être correctement visualisé à partir 
+de votre ORDINATEUR. Ces fonctionnalités 
+n'opèrent que lorsque vous les activez, et 
+vous pouvez choisir de les désactiver ou de 
+ne pas les utiliser. Le Catalogue Windows, 
+l'Assistant Recherche, ainsi que les 
+fonctionnalités Actualités et Recherche du 
+Centre d'aide et de support font partie de 
+ces fonctionnalités.
+
+· Certificats numériques. Le LOGICIEL 
+utilise des certificats numériques basés sur 
+la norme x.509. Ceux-ci confirment l'identité 
+des utilisateurs Internet envoyant des 
+informations cryptées selon la norme x.509. 
+Le logiciel extrait ces certificats et met à 
+jour les listes de révocation des certificats.
+Ces fonctionnalités de sécurité se mettent en 
+marche uniquement lorsque vous utilisez 
+Internet.
+
+· Mise à jour automatique des certificats 
+racines. La fonctionnalité Auto Root Update 
+met à jour la liste des Autorités de 
+certification approuvées. Vous pouvez la 
+désactiver.
+
+· Lecteur Windows Media. Certaines 
+fonctionnalités du Lecteur Windows Media 
+contactent automatiquement les systèmes 
+informatiques de Microsoft si vous utilisez 
+le Lecteur Windows Media ou certaines de ses 
+fonctionnalités : les fonctionnalités qui (A) 
+recherchent de nouveaux codecs si votre 
+ORDINATEUR ne dispose pas des codecs 
+appropriés pour le contenu que vous tentez de 
+lire (cette fonctionnalité peut être 
+désactivée) et (B) recherchent de nouvelles 
+versions du Lecteur Windows Media (cette 
+fonctionnalité n'opère que pendant 
+l'utilisation du Lecteur Windows Media).
+
+· Gestion des droits numériques de Windows 
+Media. Les fournisseurs de contenu utilisent 
+la technologie de gestion des droits 
+numériques pour Windows Media (" WM-DRM ", 
+Windows Media Digital Rights Management) 
+contenue dans ce LOGICIEL pour protéger 
+l'intégrité de leur contenu (le " Contenu 
+Sécurisé ") afin d'empêcher toute atteinte à 
+leurs droits de propriété intellectuelle, y 
+compris les droits d'auteur, sur ce contenu. 
+Certaines parties de ce LOGICIEL et des 
+applications tierces telles que des lecteurs 
+multimédias utilisent WM-DRM pour lire du 
+Contenu Sécurisé (le " Logiciel WM-DRM "). Si 
+la sécurité du Logiciel WM-DRM a été 
+compromise, les propriétaires dudit Contenu 
+Sécurisé (les " Propriétaires de Contenu 
+Sécurisé ") peuvent exiger de Microsoft la 
+révocation du droit du Logiciel WM-DRM à 
+copier, afficher et/ou lire le Contenu 
+Sécurisé. Cette révocation n'a aucune 
+incidence sur la capacité du Logiciel WM-DRM 
+à lire du contenu non protégé. Une liste des 
+LOGICIELS WM-DRM révoqués est envoyée à votre 
+ORDINATEUR chaque fois que vous téléchargez à 
+partir d'Internet une licence pour du Contenu 
+Sécurisé. Microsoft peut, en conjonction avec 
+une telle licence, télécharger aussi des 
+listes de révocation sur votre ORDINATEUR de 
+la part des Propriétaires de Contenu Sécurisé.
+Les Propriétaires de Contenu Sécurisé peuvent 
+également exiger de vous que vous mettiez à 
+niveau certains des composants WM-DRM de ce 
+LOGICIEL (les " Mises à niveau WM-DRM ") 
+avant d'accéder à leur contenu. Lorsque vous 
+tenterez de lire un tel contenu, le Logiciel 
+WM-DRM créé par Microsoft vous avertira 
+qu'une Mise à Niveau WM-DRM est requise, puis 
+vous demandera votre accord avant de 
+télécharger la Mise à Niveau WM-DRM. Les 
+Logiciels WM-DRM créés par des tiers peuvent 
+faire de même. Si vous refusez la mise à 
+niveau, vous ne pourrez plus accéder au 
+contenu qui nécessite la Mise à Niveau WM-DRM 
+; vous pourrez toutefois continuer à accéder 
+à du contenu non protégé et à du Contenu 
+Sécurisé ne nécessitant aucune mise à niveau. 
+Les fonctionnalités WM-DRM qui accèdent à 
+Internet, comme l'acquisition de nouvelles 
+licences et/ou l'exécution d'une Mise à 
+Niveau WM-DRM obligatoire, peuvent être 
+désactivées. Lorsque ces fonctionnalités sont 
+désactivées, vous pouvez toujours lire du 
+Contenu Sécurisé si vous disposez d'une 
+licence valide pour un tel contenu déjà 
+stocké sur votre ORDINATEUR.
+
+2.3 Utilisation d'informations. Microsoft 
+peut être amenée à utiliser les informations 
+sur votre ordinateur pour améliorer son 
+logiciel et ses services. Microsoft est 
+également autorisée à les partager avec des 
+tiers, tels que des fournisseurs de matériels 
+et de logiciels. Ceux-ci peuvent utiliser les 
+informations pour améliorer le fonctionnement 
+de leurs produits avec le logiciel Microsoft.
+
+2.4 Utilisation inappropriée des services 
+Internet. Vous n'êtes pas autorisé à utiliser 
+ces services de quelque manière que ce soit 
+qui pourrait leur porter atteinte ou 
+perturber leur utilisation par un autre 
+utilisateur. Vous n'êtes pas autorisé à 
+tenter d'accéder de façon non autorisée aux 
+services, données, comptes ou réseaux de 
+toute autre manière.
+
+3. DROITS RÉSERVÉS ET PROPRIÉTÉ. Tous les 
+droits qui ne vous sont pas expressément 
+concédés par ce CLUF sont réservés par le 
+Fabricant, Microsoft et ses fournisseurs (y 
+compris Microsoft Corporation). Le LOGICIEL 
+est protégé par les lois et les traités 
+internationaux en matière de droit d'auteur 
+et de propriété intellectuelle. Les droits de 
+propriété, droits d'auteur et autres droits 
+de propriété intellectuelle sur le LOGICIEL 
+appartiennent au Fabricant, à Microsoft et 
+ses fournisseurs (y compris Microsoft 
+Corporation). Le LOGICIEL n'est pas vendu 
+mais concédé sous licence.
+
+4. LIMITATIONS RELATIVES À L'INGÉNIERIE À 
+REBOURS, À LA DÉCOMPILATION ET AU 
+DÉSASSEMBLAGE. Vous n'êtes pas autorisé à 
+reconstituer la logique du LOGICIEL, à le 
+décompiler ou à le désassembler, sauf dans la 
+mesure où ces opérations seraient 
+expressément permises par la réglementation 
+applicable nonobstant la présente limitation.
+
+5. INTERDICTION DE LOCATION/D'HÉBERGEMENT À 
+DES FINS COMMERCIALES. Vous n'êtes pas 
+autorisé à prêter ou à louer le LOGICIEL à 
+des tiers.
+
+6. DISSOCIATION DE COMPOSANTS. Le logiciel 
+est concédé sous licence en tant que produit 
+unique. Il n'est pas permis de dissocier ses 
+composants pour les utiliser sur plus d'un 
+ordinateur.
+
+7. Reconnaissance vocale/d'Écriture. Si le 
+LOGICIEL inclut un composant de 
+reconnaissance vocale et/ou un composant de 
+reconnaissance d'écriture, vous devez 
+comprendre que la reconnaissance vocale et la 
+reconnaissance d'écriture sont fondées 
+essentiellement sur des processus 
+statistiques et que des erreurs de 
+reconnaissance sont inhérentes à ces 
+processus. Il est de votre responsabilité 
+d'organiser la gestion de ces erreurs, de 
+contrôler les processus de reconnaissance et 
+de corriger les erreurs. Le Fabricant, 
+Microsoft ou leurs fournisseurs ne pourront 
+être tenus responsables d'aucun préjudice 
+causé par des erreurs découlant des processus 
+de reconnaissance vocale et/ou d'écriture.
+
+8. SÉLECTION D'UNE VERSION LINGUISTIQUE. Il 
+est possible que le Fabricant ait décidé de 
+vous fournir la possibilité de choisir une 
+seule fois entre plusieurs versions 
+linguistiques du LOGICIEL au cours de la 
+procédure d'installation du LOGICIEL. Dans ce 
+cas, vous êtes autorisé à utiliser une seule 
+(1) des versions linguistiques fournies. Une 
+fois que vous avez utilisé une version 
+linguistique, vous n'êtes pas autorisé à 
+utiliser une autre des versions linguistiques 
+incluses par le Fabricant avec l'ORDINATEUR. 
+Nonobstant les stipulations précédentes, si 
+le Fabricant a choisi de vous fournir une 
+interface utilisateur multilingue (la " MUI 
+") (Multilingual User Interface) pour 
+certaines versions linguistiques avec une 
+prise en charge d'autres versions 
+linguistiques du LOGICIEL, la précédente 
+limitation spécifiant de sélectionner et 
+d'utiliser une seule version linguistique du 
+LOGICIEL ne s'applique pas tant que (A) vous 
+reconnaissez que la MUI et la prise en charge 
+linguistique qui y est contenue font partie 
+du LOGICIEL, (B) vous utilisez uniquement la 
+MUI avec le LOGICIEL, et (C) vous respectez 
+l'ensemble des termes du présent CLUF. 
+
+9. CLUF OU CERTIFICATS D'AUTHENTICITÉ 
+MULTIPLES. Le coffret du LOGICIEL peut 
+contenir plusieurs versions du présent CLUF, 
+qui peut exister en différentes langues et/ou 
+figurer sur différents supports (par exemple, 
+dans la documentation utilisateur et dans le 
+logiciel). Dans ce cas, la licence ne vous 
+autorise à utiliser que l'exemplaire du 
+LOGICIEL pour lequel le COA est fourni. Si 
+l'ORDINATEUR est fourni avec plus d'un (1) 
+certificat d'authenticité (COA) de système 
+d'exploitation Microsoft, vous êtes autorisé 
+à utiliser tous les systèmes d'exploitation 
+Microsoft munis de certificat d'authenticité. 
+
+
+10. Marques. Le présent CLUF ne vous concède 
+aucun droit relatif à des marques de fabrique 
+ou de service appartenant au Fabricant, à 
+Microsoft ou à ses fournisseurs (y compris 
+Microsoft Corporation).
+
+11. SUPPORT TECHNIQUE. Le support technique 
+du LOGICIEL n'est pas assuré par Microsoft ou 
+ses affiliés. Pour obtenir un support 
+technique pour le LOGICIEL, référez-vous au 
+numéro correspondant fourni par le Fabricant 
+dans la documentation du MATÉRIEL. Pour toute 
+question relative au présent CLUF, ou si vous 
+souhaitez contacter le Fabricant pour toute 
+autre raison, veuillez vous reporter à 
+l'adresse fournie dans la documentation du 
+MATÉRIEL.
+
+12. LIENS VERS DES SITES TIERS. Vous êtes 
+autorisé à utiliser le LOGICIEL pour accéder 
+à des sites tiers. Les sites tiers ne sont 
+pas sous le contrôle de Microsoft et 
+Microsoft n'est pas responsable du contenu de 
+ces sites, des liens qu'ils contiennent ni 
+des modifications ou mises à jour qui leur 
+sont apportées. Microsoft n'est pas 
+responsable du Webcasting ou de toute autre 
+forme de transmission reçue d'un site tiers. 
+Microsoft fournit ces liens vers des sites 
+tiers pour votre commodité uniquement, et 
+l'insertion de tout lien n'implique pas 
+l'approbation du site en question par 
+Microsoft.
+
+13. LOGICIELS/SERVICES SUPPLÉMENTAIRES. Les 
+termes du présent CLUF s'appliquent aux mises 
+à jour, suppléments, modules complémentaires, 
+service d'assistance du produit ou services 
+Internet du LOGICIEL mis à Votre disposition 
+par le Fabricant, Microsoft ou ses affiliés, 
+après la date à laquelle Vous avez obtenu 
+Votre exemplaire initial du LOGICIEL, à moins 
+que d'autres conditions ne leur soient 
+applicables. Si ces Composants 
+supplémentaires ne sont pas régis par 
+d'autres conditions et vous sont fournis par 
+Microsoft ou ses affiliés, ils vous sont 
+concédés par l'entité en question selon les 
+mêmes termes que ceux du présent CLUF, 
+excepté que (i) Microsoft, ou ses affiliés, 
+qui fournissent les Composants 
+supplémentaires seront le concédant de 
+licence en ce qui concerne ces Composants 
+supplémentaires en lieu et place du " 
+Fabricant " pour les besoins de ce CLUF, et 
+(ii) DANS TOUTE LA MESURE PERMISE PAR LA 
+RÉGLEMENTATION APPLICABLE, LES COMPOSANTS 
+SUPPLÉMENTAIRES ET TOUS LES SERVICES 
+D'ASSISTANCE (S'ILS EXISTENT) RELATIFS AUX 
+COMPOSANTS SUPPLÉMENTAIRES SONT FOURNIS EN 
+L'ÉTAT ET AVEC TOUTES LEURS IMPERFECTIONS. 
+TOUTES AUTRES EXCLUSIONS DE GARANTIE, 
+LIMITATIONS DE RESPONSABILITÉ ET DISPOSITIONS 
+SPÉCIALES PRÉVUES CI-DESSOUS ET/OU FOURNIES 
+DE TOUTE AUTRE MANIÈRE AVEC LE LOGICIEL 
+S'APPLIQUENT AUX COMPOSANTS SUPPLÉMENTAIRES 
+SUSMENTIONNÉS. Microsoft ou ses affiliés se 
+réservent le droit de mettre fin à tout 
+service Internet fourni ou rendu accessible 
+par l'intermédiaire du LOGICIEL.
+
+14. LOGICIEL EN REVENTE INTERDITE (" Not for 
+Resale " ou " NFR "). Si le LOGICIEL porte la 
+mention " Revente interdite " ou " NFR " (Not 
+For Resale), Vous n'êtes pas autorisé à le 
+revendre ou à le transférer à titre onéreux, 
+ni à l'utiliser à des fins autres que de 
+démonstration, de test ou d'évaluation.
+
+15. REMARQUES RELATIVES À LA NORME VISUELLE 
+MPEG-4. Ce LOGICIEL comprend la technologie 
+de décodage visuel MPEG-4. Cette technologie 
+constitue un format de compression de données 
+vidéo. Pour cette technologie, MPEG LA, L.L.C.
+exige la diffusion de l'avertissement suivant 
+: 
+
+L'UTILISATION DE CE PRODUIT CONFORMÉMENT À 
+LA NORME VISUELLE MPEG-4 EST INTERDITE, SAUF 
+S'IL S'AGIT D'UNE UTILISATION DIRECTEMENT 
+LIÉE (A) À DES DONNÉES OU DES INFORMATIONS 
+(i) GÉNÉRÉES PAR UN CONSOMMATEUR QUI N'EST 
+PAS ENGAGÉ DE CE FAIT DANS UNE ACTIVITÉ 
+COMMERCIALE ET OBTENUES GRATUITEMENT DE CELUI-
+CI, ET (ii) POUR UN USAGE STRICTEMENT 
+PERSONNEL ; ET (B) DESTINÉES À D'AUTRES 
+UTILISATIONS FAISANT L'OBJET DE LICENCES 
+SPÉCIFIQUES ET DISTINCTES CONCÉDÉES PAR MPEG 
+LA, L.L.C. 
+
+Si vous avez des questions relatives à cet 
+avertissement, contactez MPEG LA, L.L.C., 250 
+Steele Street, Suite 300, Denver, Colorado 
+80206, U.S.A. ; Téléphone : 303 331.1880 ; 
+Télécopie : 303 331.1879 ; www.mpegla.com.
+
+16. RESTRICTIONS À L'EXPORTATION. Vous 
+reconnaissez que le LOGICIEL est soumis à la 
+réglementation américaine en matière 
+d'exportation. Vous vous engagez à respecter 
+toutes les lois et réglementations nationales 
+et internationales applicables au LOGICIEL, y 
+compris les Export Administration Regulations 
+en vigueur aux États-Unis, ainsi que les 
+restrictions imposées par les gouvernements 
+des États-Unis d'Amérique et d'autres pays 
+concernant les utilisateurs finaux, les 
+utilisations finales et les pays 
+destinataires. Des informations 
+supplémentaires sont disponibles sur le site 
+Internet <http://www.microsoft.
+com/exporting/>.
+
+17. PREUVE DE LICENCE UTILISATEUR FINAL. Si 
+vous avez acquis le LOGICIEL sur un 
+dispositif, ou un disque compact ou sur tout 
+autre support, une étiquette authentique COA 
+" Preuve de licence " de Microsoft avec une 
+copie authentique du LOGICIEL identifie un 
+exemplaire du LOGICIEL acquis sous licence. 
+Pour être valide, l'étiquette doit être 
+apposée sur l'ORDINATEUR ou figurer sur 
+l'emballage du LOGICIEL. Si vous recevez 
+l'étiquette séparément, elle n'est pas 
+valable. Vous devez conserver l'étiquette sur 
+l'ORDINATEUR ou l'emballage pour prouver que 
+Vous êtes autorisé à utiliser le LOGICIEL.
+
+18. RÉSILIATION. Sans préjudice de tous 
+autres droits, le Fabricant ou Microsoft 
+pourra résilier le présent CLUF si vous n'en 
+respectez pas les termes. Dans ce cas, vous 
+devrez détruire tous les exemplaires du 
+LOGICIEL et tous ses composants.
+
+19. Avis relatif à la sécurité. Pour aider à 
+lutter contre les atteintes à la sécurité et 
+les logiciels malveillants, faites 
+régulièrement une copie de sauvegarde de Vos 
+données et informations système, utilisez les 
+fonctionnalités de sécurité, telles que les 
+pare-feu, et installez et utilisez les mises 
+à jour de sécurité.
+
+20. GARANTIE LIMITÉE POUR LE LOGICIEL ACQUIS 
+AUX ÉTATS-UNIS D'AMÉRIQUE ET AU CANADA. 
+
+Le Fabricant garantit que le LOGICIEL sera 
+conforme, pour l'essentiel, à la description 
+qui figure dans la documentation qui 
+l'accompagne pendant une durée de quatre-
+vingt-dix (90) jours à compter de la date de 
+réception de votre licence. 
+
+Si une garantie ou condition implicite est 
+créée par votre pays ou juridiction et qu'une 
+loi de votre pays/province ou une loi 
+fédérale en interdit l'exclusion, vous 
+bénéficiez aussi d'une garantie ou condition 
+implicite, MAIS UNIQUEMENT EN CE QUI CONCERNE 
+LES DÉFAUTS DÉCOUVERTS AU COURS DE CETTE 
+PÉRIODE DE GARANTIE LIMITÉE (QUATRE-VINGT-DIX 
+JOURS). IL N'EXISTE AUCUNE GARANTIE D'AUCUNE 
+SORTE POUR LES DÉFAUTS DÉCOUVERTS APRÈS LA 
+PÉRIODE DE GARANTIE DE QUATRE-VINGT-DIX JOURS.
+Certains pays ou certaines juridictions 
+n'autorisent pas les limitations portant sur 
+la durée d'une garantie implicite, de sorte 
+que la limitation ci-dessus peut ne pas vous 
+être applicable.
+
+Aucune garantie expresse, implicite ou 
+légale ne couvre les suppléments ou mises à 
+jour du LOGICIEL, y compris (le cas échéant), 
+et de façon non exhaustive, tous les Service 
+Packs ou correctifs qui vous sont fournis 
+après la période de Garantie Limitée de 
+quatre-vingt-dix jours.
+
+LIMITATION DES RECOURS ; PAS DE DOMMAGE 
+INDIRECT OU AUTRE. Votre seul recours en cas 
+de violation de cette Garantie Limitée est 
+stipulé ci-dessous. À l'exception de tout 
+remboursement au choix du Fabricant, VOUS NE 
+POUVEZ PRÉTENDRE À AUCUN DOMMAGE, Y COMPRIS, 
+MAIS DE MANIÈRE NON LIMITATIVE, À DES 
+DOMMAGES INDIRECTS, si le LOGICIEL n'est pas 
+conforme à la Garantie Limitée du Fabricant 
+et, dans toute la mesure permise par la 
+réglementation en vigueur, quand bien même un 
+quelconque recours ne produirait pas d'effet. 
+Les termes de la Section 22 (" Exclusion de 
+responsabilité pour les dommages accessoires, 
+indirects et certains autres types de 
+dommages ") sont également intégrés dans 
+cette Garantie Limitée. Certains pays ou 
+certaines juridictions n'autorisent pas 
+l'exclusion ou la limitation de 
+responsabilité pour les dommages indirects ou 
+accessoires, de sorte que la limitation ou 
+l'exclusion ci-dessus peut ne pas vous être 
+applicable. Cette Garantie Limitée vous 
+confère des droits spécifiques. Vous pouvez, 
+en outre, disposer d'autres droits qui 
+varient d'un pays à l'autre et d'une 
+juridiction à l'autre. 
+
+VOTRE RECOURS EXCLUSIF. L'entière 
+responsabilité du Fabricant et de ses 
+fournisseurs (y compris de Microsoft, de ses 
+affiliés et de leurs fournisseurs respectifs) 
+et votre seul recours en cas de violation de 
+cette Garantie Limitée ou du présent CLUF ou 
+de toute autre violation relative au LOGICIEL 
+se limiteront, à la discrétion du Fabricant 
+exercée à l'occasion sous réserve de la 
+réglementation applicable, soit (a) au 
+remboursement du prix payé (le cas échéant) 
+pour le ou les produit(s), conformément aux 
+conditions de retour du Fabricant, soit (b) à 
+la réparation ou au remplacement du LOGICIEL 
+qui n'est pas conforme à cette Garantie 
+Limitée et qui est retourné au Fabricant 
+accompagné du Certificat d'Authenticité et 
+d'une copie de votre justificatif d'achat à 
+l'adresse spécifiée par le Fabricant. Vous 
+recevrez la solution retenue par le Fabricant 
+gratuitement, à l'exception des dépenses 
+spécifiées dans la documentation de recours 
+de garantie du Fabricant. Cette Garantie 
+Limitée ne sera pas applicable si le défaut 
+du LOGICIEL résulte d'un accident, d'un usage 
+ayant entraîné une détérioration, d'une 
+utilisation inappropriée ou d'un virus. Le 
+LOGICIEL de remplacement sera garanti pour 
+une période équivalente à la durée restante 
+de la période de garantie initiale ou pour 
+trente (30) jours, la période la plus longue 
+étant applicable, et le Fabricant s'efforcera,
+autant qu'il lui est commercialement possible,
+de pourvoir à votre recours dans un délai 
+raisonnable sur le plan commercial à partir 
+du moment où vous avez respecté les 
+procédures de recours de garantie du 
+Fabricant. 
+
+21. EXCLUSION DE GARANTIES. La Garantie 
+Limitée indiquée ci-dessus est la seule 
+garantie expresse qui vous soit accordée et 
+est fournie en lieu et place de toute autre 
+garantie expresse (le cas échéant) créée par 
+toute publicité, toute documentation ou tout 
+emballage ou autre communication. À 
+l'exception de la Garantie Limitée et dans 
+toute la mesure permise par la loi applicable,
+le Fabricant et ses fournisseurs (y compris 
+Microsoft, ses affiliés et leurs fournisseurs 
+respectifs) fournissent le LOGICIEL et (le 
+cas échéant) les services d'assistance EN 
+L'ÉTAT ET AVEC TOUTES LEURS IMPERFECTIONS, et 
+excluent par les présentes toute autre 
+garantie et condition expresse, implicite ou 
+légale, relative au LOGICIEL et à la 
+fourniture ou au défaut de fourniture des 
+services d'assistance ou autres services, 
+informations, logiciels et contenus auxquels 
+le LOGICIEL donne accès ou qui sont liés à 
+l'utilisation du LOGICIEL, y compris, mais de 
+manière non limitative, (le cas échéant) 
+toute garantie implicite de qualité, 
+d'adéquation à un usage particulier, de 
+précision ou d'exhaustivité des réponses, des 
+résultats obtenus, d'absence de défaut de 
+fabrication, d'absence de virus et d'absence 
+de négligence. EN OUTRE, IL N'EXISTE AUCUNE 
+GARANTIE DE PROPRIÉTÉ, DE JOUISSANCE PAISIBLE,
+D'ABSENCE DE TROUBLE DE POSSESSION, DE 
+CONFORMITÉ À LA DESCRIPTION OU D'ABSENCE DE 
+CONTREFAÇON, EN CE QUI CONCERNE LE LOGICIEL.
+
+22. EXCLUSION DE RESPONSABILITÉ POUR LES 
+DOMMAGES ACCESSOIRES, INDIRECTS ET CERTAINS 
+AUTRES TYPES DE DOMMAGES. DANS TOUTE LA 
+MESURE PERMISE PAR LA RÉGLEMENTATION 
+APPLICABLE, LE FABRICANT OU SES FOURNISSEURS 
+(Y COMPRIS MICROSOFT, SES AFFILIÉS ET LEURS 
+FOURNISSEURS RESPECTIFS) NE POURRONT EN AUCUN 
+CAS ÊTRE TENUS RESPONSABLES DE TOUT DOMMAGE 
+SPÉCIAL, ACCESSOIRE, INCIDENT OU INDIRECT DE 
+QUELQUE NATURE QUE CE SOIT (NOTAMMENT, MAIS 
+DE MANIÈRE NON LIMITATIVE, LES PERTES DE 
+BÉNÉFICES, PERTES D'INFORMATIONS 
+CONFIDENTIELLES OU AUTRES INFORMATIONS, 
+INTERRUPTIONS D'ACTIVITÉ, PRÉJUDICES 
+CORPORELS, ATTEINTES À LA VIE PRIVÉE, 
+MANQUEMENT À TOUTE OBLIGATION DE BONNE FOI OU 
+DE DILIGENCE, ACTES DE NÉGLIGENCE, ET TOUTE 
+PERTE PÉCUNIAIRE OU AUTRE PERTE), RÉSULTANT 
+DE, OU LIÉ À L'UTILISATION OU À 
+L'IMPOSSIBILITÉ D'UTILISER LE LOGICIEL, À LA 
+FOURNITURE OU AU DÉFAUT DE FOURNITURE DES 
+SERVICES D'ASSISTANCE OU D'AUTRES SERVICES, 
+INFORMATIONS, LOGICIELS ET CONTENUS AUXQUELS 
+LE LOGICIEL DONNE ACCÈS OU QUI SONT LIÉS À 
+L'UTILISATION DU LOGICIEL OU BIEN RÉSULTANT 
+DE OU LIÉ À TOUTE DISPOSITION DE CE CLUF, 
+MÊME EN CAS DE FAUTE, DÉLIT (Y COMPRIS 
+NÉGLIGENCE), FAUSSE DÉCLARATION, 
+RESPONSABILITÉ SANS FAUTE OU RESPONSABILITÉ 
+DU FAIT DES PRODUITS DÉFECTUEUX, 
+RESPONSABILITÉ CONTRACTUELLE OU VIOLATION DE 
+GARANTIE PAR LE FABRICANT OU L'UN DES 
+FOURNISSEURS (Y COMPRIS MICROSOFT, SES 
+AFFILIÉS ET LEURS FOURNISSEURS RESPECTIFS) ET 
+MÊME SI LE FABRICANT OU L'UN DES FOURNISSEURS 
+(Y COMPRIS MICROSOFT, SES AFFILIÉS ET LEURS 
+FOURNISSEURS RESPECTIFS) A ÉTÉ AVISÉ DE 
+L'ÉVENTUALITÉ DE TELS DOMMAGES. 
+
+23. LIMITATION DE RESPONSABILITÉ ET DE 
+RECOURS. NONOBSTANT TOUT DOMMAGE QUE VOUS 
+POURRIEZ SUBIR POUR QUELQUE MOTIF QUE CE SOIT 
+(NOTAMMENT, TOUS LES DOMMAGES ÉNUMÉRÉS CI-
+DESSUS ET TOUS LES DOMMAGES DIRECTS OU 
+GÉNÉRAUX STIPULÉS DANS TOUT CONTRAT OU AUTRE 
+DOCUMENT), L'ENTIÈRE RESPONSABILITÉ DU 
+FABRICANT ET DE L'UN DE SES FOURNISSEURS (Y 
+COMPRIS MICROSOFT, SES AFFILIÉS ET LEURS 
+FOURNISSEURS RESPECTIFS) AU TITRE DE TOUTE 
+STIPULATION DU PRÉSENT CLUF ET VOTRE SEUL 
+RECOURS AU TITRE DES PRÉSENTES (À L'EXCEPTION 
+DE TOUTE RÉPARATION OU DE TOUT REMPLACEMENT 
+ACCORDÉ PAR LE FABRICANT AU TITRE DE LA 
+GARANTIE LIMITÉE) NE SAURAIENT EXCÉDER LE 
+MONTANT QUE VOUS AVEZ EFFECTIVEMENT PAYÉ POUR 
+LE LOGICIEL OU 5 DOLLARS US (US$ 5,00), SI CE 
+MONTANT EST PLUS ÉLEVÉ. LES LIMITATIONS ET 
+EXCLUSIONS PRÉCÉDENTES (Y COMPRIS LES 
+SECTIONS 20, 21 ET 22) DEMEURERONT 
+APPLICABLES DANS TOUTE LA MESURE PERMISE PAR 
+LA RÉGLEMENTATION EN VIGUEUR QUAND BIEN MÊME 
+UN QUELCONQUE RECOURS NE PRODUIRAIT PAS 
+D'EFFET.
+
+24. DROITS DE LICENCE DU GOUVERNEMENT DES 
+ÉTATS-UNIS D'AMÉRIQUE. Tout logiciel fourni 
+par le Gouvernement des États-Unis d'Amérique 
+conformément aux sollicitations émises à 
+compter du 1er décembre 1995 est fourni avec 
+les droits de licence commerciale et 
+restrictions décrits par ailleurs dans cette 
+licence. Tout logiciel fourni par le 
+Gouvernement des États-Unis d'Amérique 
+conformément aux sollicitations émises avant 
+le 1er décembre 1995 est fourni avec les " 
+Droits Restreints (Restricted Rights) " tels 
+que prévus dans l'article FAR, 48 CFR 52.227-
+14 (juin 1987) ou l'article DFAR, 48 CFR 252.
+227-7013 (octobre 1988), selon le cas. 
+
+25. DROIT APPLICABLE. Si vous avez acquis ce 
+LOGICIEL aux États-Unis, le présent CLUF est 
+régi par les lois de l'État de Washington, 
+États-Unis d'Amérique. Si vous avez acquis ce 
+LOGICIEL au Canada, le présent CLUF est régi 
+par les lois en vigueur de la Province 
+d'Ontario, Canada, et vous consentez à ce que 
+tout litige résultant des présentes soit 
+soumis aux tribunaux provinciaux et fédéraux 
+siégeant à Toronto, Ontario. Si vous avez 
+acquis ce LOGICIEL dans l'Union européenne, 
+en Islande, en Norvège ou en Suisse, le droit 
+local s'applique. Si vous avez acquis ce 
+LOGICIEL dans tout autre pays, le droit local 
+pourra, le cas échéant, s'appliquer. 
+
+26. INTÉGRALITÉ DES ACCORDS ; INDÉPENDANCE 
+DES CLAUSES. Le présent CLUF (y compris tout 
+addendum ou avenant au présent CLUF qui est 
+inclus avec le LOGICIEL) constitue 
+l'intégralité des accords entre vous et le 
+Fabricant concernant le LOGICIEL et les 
+services, d'assistance ou autres services 
+(s'ils existent) et annule et remplace toutes 
+les communications, propositions et 
+déclarations antérieures ou présentes, orales 
+ou écrites, relatives au LOGICIEL ou à tout 
+autre objet visé par ce CLUF. Si une 
+quelconque stipulation du présent CLUF est 
+jugée nulle, non valable, illicite ou 
+inapplicable par une juridiction compétente, 
+les autres stipulations du présent CLUF 
+demeureront pleinement applicables. 
+
+Si vous avez acquis le Logiciel au CANADA, 
+la garantie limitée suivante s'applique :
+
+GARANTIE LIMITÉE
+
+Le Fabricant (identifié ci-dessus en anglais 
+comme " Manufacturer ") garantit que le 
+Logiciel fonctionnera substantiellement en 
+conformité avec la documentation qui 
+l'accompagne pour une période de quatre-vingt-
+dix (90) jours suivant la date de réception.
+
+Si une garantie ou condition implicite est 
+créée par votre État ou votre territoire et 
+qu'une loi fédérale ou provinciale ou d'un 
+État en interdit le déni, vous jouissez 
+également d'une garantie ou condition 
+implicite, MAIS UNIQUEMENT POUR LES DÉFAUTS 
+DÉCOUVERTS DURANT LA PÉRIODE DE LA PRÉSENTE 
+GARANTIE LIMITÉE (QUATRE-VINGT-DIX JOURS). IL 
+N'Y A AUCUNE GARANTIE OU CONDITION DE QUELQUE 
+NATURE QUE CE SOIT QUANT AUX DÉFAUTS 
+DÉCOUVERTS APRÈS CETTE PÉRIODE DE QUATRE-
+VINGT-DIX JOURS. Certains États ou 
+territoires ne permettent pas de limiter la 
+durée d'une garantie ou condition implicite 
+de sorte que la limitation ci­dessus peut ne 
+pas s'appliquer à vous.
+
+Tous les suppléments ou toutes les mises à 
+jour relatifs au Logiciel, notamment, les 
+ensembles de services ou les réparations à 
+chaud (le cas échéant) qui vous sont fournis 
+après l'expiration de la période de quatre-
+vingt-dix jours de la garantie limitée ne 
+sont pas couverts par quelque garantie ou 
+condition que ce soit, expresse, implicite ou 
+en vertu de la loi.
+
+LIMITATION DES RECOURS; ABSENCE DE DOMMAGES 
+INDIRECTS OU AUTRES. Votre recours exclusif 
+pour toute violation de la présente garantie 
+limitée est décrit ci­après. Sauf pour tout 
+remboursement au choix du Fabricant et dans 
+la mesure maximale permise par le droit 
+applicable, même si tout recours n'atteint 
+pas son but essentiel, VOUS N'AVEZ DROIT À 
+AUCUNS DOMMAGES, NOTAMMENT DES DOMMAGES 
+INDIRECTS. Les termes de la clause " 
+Exclusion des dommages accessoires, indirects 
+et de certains autres dommages " sont 
+également intégrés à la présente garantie 
+limitée. Certains États ou territoires ne 
+permettent pas l'exclusion ou la limitation 
+des dommages indirects ou accessoires de 
+sorte que la limitation ou l'exclusion 
+ci­dessus peut ne pas s'appliquer à vous. La 
+présente garantie limitée vous donne des 
+droits légaux spécifiques. Vous pouvez avoir 
+d'autres droits qui peuvent varier d'un 
+territoire ou d'un État à un autre.
+
+VOTRE RECOURS EXCLUSIF. La seule 
+responsabilité du Fabricant et de ses 
+fournisseurs (y compris Microsoft Licensing, 
+GP, Microsoft Ireland Operations Limited, 
+Microsoft (China) Co. Limited (" MS ") 
+Microsoft Corporation (y compris leurs 
+filiales) et leurs fournisseurs respectifs) 
+et votre recours exclusif pour toute 
+violation de la présente garantie limitée ou 
+pour toute autre violation du présent contrat 
+ou pour toute autre responsabilité relative 
+au Logiciel seront, selon le choix du 
+Fabricant exercé de temps à autre sous 
+réserve du droit applicable, a) le 
+remboursement du prix payé, le cas échéant, 
+pour le(s) produit(s) conformément aux 
+politiques de retour du Fabricant, ou b) la 
+réparation ou le remplacement du Logiciel qui 
+ne respecte pas la présente garantie limitée 
+et qui est retourné au Fabricant avec le 
+Certificat d'authenticité et une copie de 
+votre reçu à l'adresse spécifiée par le 
+Fabricant. Vous recevrez la compensation 
+choisie par le Fabricant, sans frais, sauf 
+que vous êtes responsable pour toutes 
+dépenses telles que spécifiées dans la 
+documentation du Fabricant concernant les 
+recours en cas de garantie. La présente 
+garantie limitée est nulle si la défectuosité 
+du Logiciel est causée par un accident, un 
+usage abusif, une mauvaise application, un 
+usage anormal ou un virus. Tout Logiciel de 
+remplacement sera garanti pour le reste de la 
+période initiale de la garantie ou pendant 
+trente (30) jours, selon la plus longue entre 
+ces deux périodes, et le Fabricant utilisera 
+des efforts commercialement raisonnables pour 
+vous fournir la compensation choisie dans un 
+délai commercialement raisonnable après que 
+vous vous soyez conformé aux procédures du 
+Fabricant concernant les recours en cas de 
+garantie.
+
+DÉNI DE GARANTIES. La garantie limitée qui 
+apparaît ci-dessus constitue la seule 
+garantie expresse qui vous est donnée et 
+remplace toutes autres garanties expresses ou 
+obligations similaires (s'il en est) créées 
+par une publicité, un document, un emballage 
+ou une autre communication. Sauf en ce qui a 
+trait à la garantie limitée et dans la mesure 
+maximale permise par le droit applicable, le 
+Fabricant et ses fournisseurs (y compris MS, 
+Microsoft Corporation (y compris leurs 
+filiales) et leurs fournisseurs respectifs) 
+fournissent le Logiciel et les services de 
+soutien technique (le cas échéant) TELS QUELS 
+ET AVEC TOUS LES DÉFAUTS et par les présentes 
+ils dénient toutes autres garanties et 
+conditions, expresses, implicites ou en vertu 
+de la loi, notamment, mais sans limitation, 
+(le cas échéant) les garanties, devoirs ou 
+conditions implicites de qualité marchande, 
+d'adaptation à une fin particulière, de 
+fiabilité ou de disponibilité, d'exactitude 
+ou d'exhaustivité des réponses, des résultats,
+des efforts déployés selon les règles de 
+l'art, d'absence de virus et d'absence de 
+négligence, le tout à l'égard du Logiciel et 
+de la prestation ou de l'omission de la 
+prestation des services de soutien technique 
+ou autres services, renseignements, logiciels 
+et contenu qui s'y rapporte grâce au Logiciel 
+ou provenant autrement de l'utilisation du 
+Logiciel. PAR AILLEURS, IL N'Y A AUCUNE 
+GARANTIE OU CONDITION QUANT AU TITRE DE 
+PROPRIÉTÉ, À LA JOUISSANCE OU À LA POSSESSION 
+PAISIBLE, À LA CONCORDANCE À UNE DESCRIPTION 
+NI QUANT À UNE ABSENCE DE CONTREFAÇON 
+CONCERNANT LE LOGICIEL.
+
+EXCLUSION DES DOMMAGES ACCESSOIRES, 
+INDIRECTS ET DE CERTAINS AUTRES DOMMAGES. 
+DANS LA MESURE MAXIMALE PERMISE PAR LE DROIT 
+APPLICABLE, EN AUCUN CAS LE FABRICANT OU SES 
+FOURNISSEURS (Y COMPRIS MS, MICROSOFT 
+CORPORATION (Y COMPRIS LEURS FILIALES) ET 
+LEURS FOURNISSEURS RESPECTIFS) NE SERONT 
+RESPONSABLES DES DOMMAGES SPÉCIAUX, INCIDENTS,
+PUNITIFS, INDIRECTS OU ACCESSOIRES DE QUELQUE 
+NATURE QUE CE SOIT (Y COMPRIS, MAIS SANS 
+LIMITATION, LES DOMMAGES POUR PERTE DE PROFIT 
+OU POUR PERTE DE RENSEIGNEMENTS, 
+CONFIDENTIELS OU AUTRES, POUR L'INTERRUPTION 
+DES ACTIVITÉS, POUR BLESSURES CORPORELLES, 
+VIOLATION DE LA VIE PRIVÉE, OMISSION DE 
+REMPLIR TOUT DEVOIR DE BONNE FOI OU DE SOIN 
+RAISONNABLE, POUR NÉGLIGENCE OU POUR TOUTE 
+AUTRE PERTE PÉCUNIAIRE OU AUTRE PERTE DE 
+QUELQUE NATURE QUE CE SOIT) SE RAPPORTANT DE 
+QUELQUE MANIÈRE QUE CE SOIT À L'UTILISATION 
+DU LOGICIEL OU À L'INCAPACITÉ DE S'EN SERVIR, 
+À LA FOURNITURE OU À L'OMISSION DE FOURNIR 
+DES SERVICES DE SOUTIEN TECHNIQUE OU AUTRES 
+SERVICES, DES RENSEIGNEMENTS, LOGICIELS ET 
+CONTENU QUI S'Y RAPPORTE GRÂCE AU LOGICIEL OU 
+AUTREMENT EN VERTU DES TERMES DE TOUTE 
+DISPOSITION DU PRÉSENT CONTRAT OU 
+RELATIVEMENT À UNE TELLE DISPOSITION, MÊME EN 
+CAS DE FAUTE, DE DÉLIT CIVIL (Y COMPRIS LA 
+NÉGLIGENCE), DE FAUSSE REPRÉSENTATION, DE 
+RESPONSABILITÉ STRICTE, DE VIOLATION DE 
+CONTRAT OU DE VIOLATION DE GARANTIE DU 
+FABRICANT OU DE TOUT FOURNISSEUR (Y COMPRIS 
+MS, MICROSOFT CORPORATION (Y COMPRIS LEURS 
+FILIALES) ET LEURS FOURNISSEURS RESPECTIFS), 
+ET CE, MÊME SI LE FABRICANT OU TOUT 
+FOURNISSEUR (Y COMPRIS MS, MICROSOFT 
+CORPORATION (Y COMPRIS LEURS FILIALES) ET 
+LEURS FOURNISSEURS RESPECTIFS) A ÉTÉ AVISÉ DE 
+LA POSSIBILITÉ DE TELS DOMMAGES.
+
+LIMITATION DE RESPONSABILITÉ ET RECOURS. 
+MALGRÉ LES DOMMAGES QUE VOUS PUISSIEZ SUBIR 
+POUR QUELQUE MOTIF QUE CE SOIT (Y COMPRIS 
+NOTAMMENT, MAIS SANS LIMITATION, TOUS LES 
+DOMMAGES SUSMENTIONNÉS ET TOUS LES DOMMAGES 
+DIRECTS OU GÉNÉRAUX, CONTRACTUELS OU AUTRES), 
+LA SEULE RESPONSABILITÉ DU FABRICANT ET DE 
+L'UN DE SES FOURNISSEURS (Y COMPRIS MS, 
+MICROSOFT CORPORATION (Y COMPRIS LEURS 
+FILIALES) ET LEURS FOURNISSEURS RESPECTIFS) 
+AUX TERMES DE TOUTE DISPOSITION DU PRÉSENT 
+CONTRAT ET VOTRE RECOURS EXCLUSIF EN VERTU 
+DES PRÉSENTES (SAUF EN CE QUI CONCERNE TOUT 
+RECOURS DE RÉPARATION OU DE REMPLACEMENT 
+CHOISI PAR LE FABRICANT À L'ÉGARD DE TOUT 
+MANQUEMENT À LA GARANTIE LIMITÉE) SE LIMITE 
+AU PLUS ÉLEVÉ DES DOMMAGES RÉELS QUE VOUS 
+AVEZ SUBIS EN VOUS FIANT RAISONNABLEMENT SUR 
+LE LOGICIEL JUSQU'À CONCURRENCE DU MONTANT 
+QUE VOUS AVEZ RÉELLEMENT PAYÉ POUR LE 
+LOGICIEL OU 5,00 $US. LES LIMITES, EXCLUSIONS 
+ET DÉNIS QUI PRÉCÈDENT (Y COMPRIS LES CLAUSES 
+CI-DESSUS) S'APPLIQUENT DANS LA MESURE 
+MAXIMALE PERMISE PAR LE DROIT APPLICABLE, 
+MÊME SI TOUT RECOURS N'ATTEINT PAS SON BUT 
+ESSENTIEL.
+
+À moins que cela ne soit prohibé par le 
+droit local applicable, le présent contrat 
+est régi par les lois en vigueur dans la 
+province d'Ontario, Canada. En cas de tout 
+différend qui pourrait surgir en vertu des 
+présentes, vous consentez à la juridiction 
+des tribunaux fédéraux et provinciaux 
+siégeant à Toronto, dans la province 
+d'Ontario.
+
+La GARANTIE du FABRICANT ci-après s'applique 
+si vous avez acquis le LOGICIEL dans tout 
+autre pays : 
+
+La présente garantie n'a aucune incidence 
+sur les droits légaux - La garantie ci-après 
+n'est pas limitée à un quelconque territoire 
+et n'a aucune incidence sur un quelconque 
+droit légal dont vous pourriez bénéficier de 
+la part de votre revendeur ou du Fabricant si 
+vous avez acquis le LOGICIEL directement 
+auprès du Fabricant. Si vous avez acquis le 
+LOGICIEL ou des services d'assistance en 
+Australie, en Nouvelle-Zélande ou en Malaisie,
+consultez la section " Droits des 
+consommateurs " ci-dessous. 
+
+La garantie - Le LOGICIEL est conçu et 
+proposé comme étant un logiciel à usage 
+général et n'est pas destiné à répondre aux 
+besoins particuliers d'un quelconque 
+utilisateur. Vous reconnaissez que le 
+LOGICIEL n'est pas exempt d'erreurs et que 
+nous vous avons fortement recommandé de 
+sauvegarder régulièrement vos fichiers. Sous 
+réserve que vous disposiez d'une licence 
+valable, le Fabricant garantit que (a) le 
+fonctionnement du LOGICIEL sera conforme, 
+pour l'essentiel, à la description qui figure 
+dans la documentation qui accompagne le 
+LOGICIEL, pendant une durée de quatre-vingt-
+dix (90) jours à compter de la date de 
+réception de votre licence d'utilisation du 
+LOGICIEL ou pendant la durée la plus courte 
+autorisée par la réglementation applicable, 
+et que (b) tout service d'assistance fourni 
+par le Fabricant sera conforme, pour 
+l'essentiel, aux indications contenues dans 
+la documentation imprimée applicable fournie 
+par le Fabricant. Dans l'hypothèse où le 
+LOGICIEL ne serait pas conforme à la présente 
+garantie, le Fabricant pourra soit (a) 
+réparer ou remplacer le LOGICIEL, soit (b) 
+rembourser le montant que vous avez payé (le 
+cas échéant) pour le ou les produits, 
+conformément aux conditions de retour du 
+Fabricant. Cette garantie ne sera pas 
+applicable si le défaut du LOGICIEL résulte 
+d'un accident, d'un usage ayant entraîné une 
+détérioration ou d'une utilisation 
+inappropriée. Tout LOGICIEL de remplacement 
+sera garanti soit pour la période de garantie 
+initiale restant à courir, soit pendant 
+trente (30) jours, la période la plus longue 
+étant applicable. Vous reconnaissez que la 
+garantie ci-dessus constitue votre seul 
+recours en ce qui concerne le LOGICIEL et les 
+services d'assistance. 
+
+Exclusion de tous les autres termes - Dans 
+toute la mesure permise par la réglementation 
+applicable et conformément à la garantie ci-
+dessus, le Fabricant et ses fournisseurs (y 
+compris Microsoft, ses affiliés et leurs 
+fournisseurs respectifs) excluent toutes les 
+garanties et autres conditions, expresses ou 
+implicites (par jurisprudence, droit 
+coutumier, secondaire ou autre), y compris, 
+de manière non limitative, toute garantie 
+implicite de qualité et d'adéquation à un 
+usage particulier en ce qui concerne le 
+LOGICIEL et les documents imprimés 
+accompagnant le LOGICIEL. Toutes les 
+garanties implicites qui ne peuvent être 
+exclues sont limitées à quatre-vingt-dix (90) 
+jours ou à la plus courte période permise par 
+la réglementation applicable, la période la 
+plus longue étant applicable.
+
+Limitation de responsabilité - Dans toute la 
+mesure permise par la réglementation 
+applicable et sauf stipulation contraire dans 
+la Garantie du Fabricant, le Fabricant et ses 
+fournisseurs (y compris Microsoft, ses 
+affiliés et leurs fournisseurs respectifs) ne 
+pourront être tenus pour responsables de tout 
+dommage, de quelque nature que ce soit (y 
+compris, mais de manière non limitative, 
+toute perte de bénéfices, interruption 
+d'activité, perte d'informations commerciales 
+ou toute autre perte pécuniaire) résultant de 
+l'utilisation ou de l'impossibilité 
+d'utiliser le LOGICIEL, même si le Fabricant 
+et ses fournisseurs (y compris Microsoft, ses 
+affiliés et leurs fournisseurs respectifs) 
+ont été prévenus de l'éventualité de tels 
+dommages. En tout état de cause, la 
+responsabilité totale du Fabricant et de l'un 
+quelconque de ses fournisseurs (y compris 
+Microsoft, ses affiliés et leurs fournisseurs 
+respectifs) au titre de toute stipulation du 
+présent CLUF ne saurait excéder le montant 
+que vous avez effectivement payé pour le 
+LOGICIEL. Ces limitations ne sont pas 
+applicables à une quelconque responsabilité 
+qui ne peut être exclue ou limitée en vertu 
+des lois en vigueur. 
+
+Droits des consommateurs - Les consommateurs 
+résidant en Australie, en Nouvelle-Zélande ou 
+en Malaisie peuvent bénéficier de certains 
+droits et recours en raison du Trade 
+Practices Act et de lois gouvernementales et 
+territoriales similaires en Australie, du 
+Consumer Guarantees Act en Nouvelle-Zélande 
+et du Consumer Protection Act en Malaisie, en 
+vertu desquels la responsabilité ne peut pas 
+être légalement modifiée ou exclue. Si vous 
+avez acquis le LOGICIEL en Nouvelle-Zélande 
+pour les besoins d'une activité commerciale, 
+vous reconnaissez que le Consumer Guarantees 
+Act ne s'applique pas. Si vous avez acquis le 
+LOGICIEL en Australie et si le Fabricant ne 
+respecte pas une condition ou une garantie 
+implicite au titre d'une réglementation qui 
+ne peut pas légalement être modifiée ou 
+exclue par le présent contrat, alors, dans 
+toute la mesure permise par la réglementation,
+la responsabilité du Fabricant et de l'un 
+quelconque de ses fournisseurs (y compris 
+Microsoft, ses affiliés et leurs fournisseurs 
+respectifs) sera limitée, au choix du 
+Fabricant : (i) dans le cas du LOGICIEL : (a) 
+à la réparation ou au remplacement du 
+LOGICIEL ; ou (b) au coût de ladite 
+réparation ou dudit remplacement ; et (ii) 
+dans le cas de services d'assistance, le cas 
+échéant : (a) au rétablissement de la 
+fourniture des services ; ou (b) au coût 
+dudit rétablissement.
+
+EULAID:XPSP3_RTM_HOM_OEM_FR

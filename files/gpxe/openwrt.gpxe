@@ -1,0 +1,4 @@
+#!gpxe
+kernel http://downloads.openwrt.org/backfire/10.03/x86/openwrt-x86-vmlinuz
+initrd http://downloads.openwrt.org/backfire/10.03/x86/openwrt-x86-squashfs.image
+boot

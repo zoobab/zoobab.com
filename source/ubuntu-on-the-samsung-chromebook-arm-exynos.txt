@@ -1,0 +1,18 @@
++ About
+
++ Installation
+
+I have used this script and the procedure documented here:
+
+http://chromeos-cr48.blogspot.be/2013/05/chrubuntu-one-script-to-rule-them-all_31.html
+
+Unfortunately, after the installation of the script with the "lubuntu-desktop lts" option, I did not had any X server nor wifi configured.
+
+I tried many different options, the only one that worked was "ubuntu-desktop lts".
+
++ Does not work yet
+
+* Sound
+* Webcam
+* Accelerated X server
+* Trackpad unresponsive

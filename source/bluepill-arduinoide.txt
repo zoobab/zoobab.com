@@ -1,0 +1,84 @@
+[[toc]]
+
++ About
+
+This page explains how to blink a LED on the STM32 Bluepill with the Arduino IDE.
+
++ Serial flashing tool: stm32flash instead of stm32loader
+
+To flash the bootloader with a usb-serial dongle, you can prepare 2 bended squared pins and connect them to A9 and A10 by putting them pushed to the jumper connector, so that they do not move, and connect the GND and VCC to the SWD 4 pins connector. Here is a photo of my setup which does not require any soldering:
+
+[[=image bluepill-stm32flash-squaredpins-nosoldering.jpg size="medium"]]
+
+stm32flash seems to give much better results then stm32loader, I never managed to get a proper working bootloader in USB with stm32loader:
+
+[[code]]
+$ ./stm32flash -w generic_boot20_pc13.bin -v -g 0x0 /dev/ttyUSB0
+stm32flash Arduino_STM32_0.9
+
+http://github.com/rogerclarkmelbourne/arduino_stm32
+
+Using Parser : Raw BINARY
+Interface serial_posix: 57600 8E1
+Version      : 0x22
+Option 1     : 0x00
+Option 2     : 0x00
+Device ID    : 0x0410 (Medium-density)
+- RAM        : 20KiB  (512b reserved by bootloader)
+- Flash      : 128KiB (sector size: 4x1024)
+- Option RAM : 16b
+- System RAM : 2KiB
+Write to memory
+Erasing memory
+Wrote and verified address 0x08001ba4 (100.00%) Done.
+
+Starting execution at address 0x08000000... done.
+[[/code]]
+
++ Bootloader waiting half a second
+
+The DFU bootloader only waits one second before switching to another USB PID:
+
+[[code]]
+$ lsusb
+Bus 001 Device 004: ID 2232:1024 Silicon Motion 
+Bus 001 Device 003: ID 8087:07da Intel Corp. 
+Bus 001 Device 002: ID 8087:0024 Intel Corp. Integrated Rate Matching Hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 120: ID 1eaf:0003  
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+[[/code]]
+
+After a second, you can see the USB PID changing from "1eaf:0003" (bootloader mode) to "1eaf:0004" (working mode).
+
+[[code]]
+$ lsusb
+Bus 001 Device 004: ID 2232:1024 Silicon Motion 
+Bus 001 Device 003: ID 8087:07da Intel Corp. 
+Bus 001 Device 002: ID 8087:0024 Intel Corp. Integrated Rate Matching Hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 120: ID 1eaf:0004  
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+[[/code]]
+
+This one second delay is not enough to push the RUN button of the Arduino IDE, so we decided to look how to increase it.
+
+After a while, i decided to increase the bootloader mode from 1s to 10s so that it becomes usable with the arduino ide. I pushed my change and binary bootloaders on github:
+
+https://github.com/zoobab/STM32duino-bootloader/commits/master
+
+With 10s delay, it becomes much more usable!
+
++ Board manager
+
+[[=image bluepill-arduinoide-boardmanager.png size="medium"]]
+
++ Blink
+
+[[=image bluepill-resetbutton-blink-play.png size="medium"]]
+
++ Links
+
+* https://www.onetransistor.eu/2017/11/stm32-bluepill-arduino-ide.html

@@ -1,0 +1,5 @@
+Under Linux, as a user (not root), type on the command line:
+
+> zoobab@gierek /home/zoobab [34]$ vlc -v "http://mfile.akamai.com/3975 /wmv/artegeie.download.akamai.com/39759/mfile/arteprod/A7_SGT_ENC_06_036531-000-A_PG_MQ_FR.wmv?obj=6ab400c9393c928740ee77767d6d1514" --sout "#std{access=file,mux=asf,dst=somefilename.asf}"
+
+You have to replace the URL http://mfile...d6d1514 by the right URL.

@@ -1,0 +1,64 @@
+[[toc]]
+
++ About
+
+It is possible to run the Arduino Duemilanove entirely in 3.3V.
+
+This page explains how to build a modified USB cable, of which the 5V power is forked to be injected into the external power barrel connector of the arduino. When you inject 5V power into the external power connector, the board runs in 3.3v. If you want to run the ATMega328p at 3.3v, some changes in the bootloader might be needed (to be confirmed???).
+
+[[=image arduino-duemilanove.jpg size="medium"]]
+
++ Power sources
+
+About the power sources (USB or external barrel), the [https://www.arduino.cc/en/Main/arduinoBoardDuemilanove Arduino Duemilanove webpage] mentions:
+
+> The Arduino Duemilanove can be powered via the USB connection or with an external power supply. The power source is selected automatically.
+> 
+> External (non-USB) power can come either from an AC-to-DC adapter (wall-wart) or battery. The adapter can be connected by plugging a 2.1mm center-positive plug into the board's power jack. Leads from a battery can be inserted in the Gnd and Vin pin headers of the POWER connector.
+> 
+> The board can operate on an external supply of 6 to 20 volts. If supplied with less than 7V, however, the 5V pin may supply less than five volts and the board may be unstable. If using more than 12V, the voltage regulator may overheat and damage the board. The recommended range is 7 to 12 volts.
+
+This feature is due to the presence of 2 voltage regulators, not 1 like on other boards.
+
++ Applications
+
+++ Serial port in 3.3v
+
+Since the TX and RX pins are in 3.3v, you can use the Arduino Duemilanove FTDI FT232RL chip to communicate with embedded devices in serial TTL 3.3v, such as for example routers running OpenWRT. For this purpose, the ATMega chip has to be disabled by connecting the RESET and the GND pins. You can also remove the ATMega chip to disable it.
+
+++ JTAG pinout detector
+
+Since most of the JTAG pins on embedded routers are at 3.3v, you can use the Arduino Duemilanove to detect JTAG pins on those devices. You could use the great [https://github.com/cyphunk/JTAGenum JTAGenum], and avoid buying bidirectionnal 3.3v-5v level shifters.
+
++ Procedure
+
+In order to run the entire board in 3.3V, you have to salvage a USB cable in two parts:
+* the first part is made of 2 wires for the ground and the voltage (GND and VCC)
+* the second part is made of 2 wires for the data (D+ and D-)
+
+USB cables have 4 wires of different colors:
+
+||~ red ||~ white ||~ green ||~ black ||
+|| VCC +5V  || D- || D+ || GND ||
+
+[[=image arduino-3.3v-03.jpg size="medium"]]
+
+Then you need to have a barrel connector cable to solder to the 2 wires GND and VCC, that will be fed into the barrel connector of the Duemilanove:
+
+[[=image arduino-3.3v-02.jpg size="medium"]]
+
+You will end up with a cable with 3 heads:
+
+[[=image arduino-3.3v-08.jpg size="medium"]]
+
++ FTDI in standalone
+
+One of the usage is to use only the FTDI chip in standalone mode, for example to have serial access to openwrt routers in 3.3V:
+
+[[=image arduino-3.3v-openwrt-serial.jpg]]
+
+The white cable on the picture is connecting GND and RESET in order to disable the chip Atmel Mega328p of talking to the FTDI chip.
+
++ Pictures
+
+[[gallery size="medium"]]

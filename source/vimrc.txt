@@ -1,0 +1,93 @@
+Here is my [[file vimrc | vimrc]] config file, for nice colors:
+
+[[code]]
+syntax on
+set nu
+set nocompatible
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set autoindent
+[[/code]]
+
+Or a longer one:
+
+[[code]]
+
+map µ 
+map! µ 
+map £ 
+map! £ 
+map Q gqq
+set nocompatible        " Use Vim defaults (much better!)
+set bs=2                " allow backspacing over everything in insert mode
+set ai                  " always set autoindenting on
+set nobackup            " keep a backup file
+set viminfo='20,\"50    " read/write a .viminfo 50 lines of registers
+set history=50          " keep 50 lines of command line history
+set ruler               " show the cursor position all the time
+set vb t_vb=            " nobeep
+set tabstop=4           " tab=4
+set shiftwidth=4        " tab=4
+set listchars=tab:»·,trail:·
+set list
+set showmode
+" Only do this part when compiled with support for autocommands
+if has("autocmd")
+  autocmd BufRead *.txt set tw=78
+  autocmd BufReadPost * if line("'\"") | exe "normal '\"" | endif
+endif
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
+"	*Comment	any comment
+" 	*Constant	any constant
+" 	 String		a string constant: "this is a string"
+" 	 Character	a character constant: 'c', '\n'
+" 	 Number		a number constant: 234, 0xff
+" 	 Boolean	a boolean constant: TRUE, false
+" 	 Float		a floating point constant: 2.3e10
+" 	*Identifier	any variable name
+" 	 Function	function name (also: methods for classes)
+" 	*Statement	any statement
+" 	 Conditional	if, then, else, endif, switch, etc.
+" 	 Repeat		for, do, while, etc.
+" 	 Label		case, default, etc.
+" 	 Operator	"sizeof", "+", "*", etc.
+" 	 Keyword	any other keyword
+" 	 Exception	try, catch, throw
+" 	*PreProc	generic Preprocessor
+" 	 Include	preprocessor #include
+" 	 Define		preprocessor #define
+" 	 Macro		same as Define
+" 	 PreCondit	preprocessor #if, #else, #endif, etc.
+" 	*Type		int, long, char, etc.
+" 	 StorageClass	static, register, volatile, etc.
+" 	 Structure	struct, union, enum, etc.
+" 	 Typedef	A typedef
+" 	*Special	any special symbol
+" 	 SpecialChar	special character in a constant
+" 	 Tag		you can use CTRL-] on this
+" 	 SpecialComment	special things inside a comment
+" 	 Debug		debugging statements
+" 	*Ignore		left blank, hidden
+" 0 Black 1 DarkBlue 2 DarkGreen 3 DarkCyan 4 DarkRed 5 DarkMagenta 6 Brown 7 LightGray, LightGrey, Gray, Grey
+" 8 DarkGray, DarkGrey 9 Blue, LightBlue 10 Green, LightGreen 11 Cyan, LightCyan 12 Red, LightRed 13 Magenta, LightMagenta 14 Yellow 15 White 
+
+"hi Comment term=bold ctermfg=Brown
+"hi Identifier term=bold ctermfg=Grey 
+"hi Function term=bold ctermfg=DarkGreen 
+"hi Statement term=italic ctermfg=Green 
+"hi Type term=bold ctermfg=Red 
+"hi Constant term=underline ctermfg=Magenta 
+"hi String term=bold ctermfg=DarkMagenta 
+
+"hi Operator term=bold ctermfg=Cyan 
+"guifg=#80a0ff gui=bold
+let php3_sql_query = 1
+
+[[/code]]

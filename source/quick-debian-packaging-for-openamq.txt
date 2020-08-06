@@ -1,0 +1,451 @@
+[[f>toc]]
+
++ Introduction
+
+This howto explains how to quickly make a debian package, considering that you have already compiled your binaries in advance.
+
++ Step 0: Prepare your binaries
+
+I assume you have already compiled your binaries you want to put in your package.
+
++ Step 1: Create a directory named "quick" in /tmp
+
+> mkdir -p /tmp/quick
+
++ Step 2: Copy your binaries there
+
+In my case, the files amq_server, amq_client and amq_shell are the binaries I want to have on the final system as available under the /usr/bin directory:
+
+> mkdir -p /tmp/quick/usr/bin/
+> cp -v amq_server amq_client amq_shell /tmp/quick/usr/bin/
+
+Copy your [http://zoobab.wikidot.com/local--files/quick-debian-packaging-for-openamq/amq_server_base.cfg amq_server_base.cfg default config file] for the server in /etc/:
+
+> mkdir -p /tmp/quick/etc/openamq/
+> cp -v amq_server_base.cfg /tmp/quick/etc/openamq/
+
++ Step 3: Generate a file with the md5sums
+
+> mkdir -p /tmp/quick/DEBIAN
+> cd /tmp/quick
+> md5sum `find /tmp/quick/ -type f | awk '/.\// { print substr($0, 3) }'` > DEBIAN/md5sums
+
++ Step 4: Create a control file
+
+In my case, the control file looks like:
+
+> Package: openamq
+> Version: 1.2d8
+> Section: net
+> Priority: optional
+> Architecture: i386
+> Depends: libc6 (>= 2.2.4-4)
+> Installed-Size: 7316
+> Maintainer: Benjamin Henrion <bh@udev.org>
+> Description: OpenAMQ is a messaging middleware product.
+
+You can copy this file in the DEBIAN/control file. The Installed-Size is the output of:
+
+> root@erika /tmp/tmp/usr/bin # du -s /tmp/quick/usr/bin
+> 7316    /tmp/quick/usr/bin
+
++ Step 5: Produce the deb
+
+Go to your /tmp directory and ask dpkg-deb to build a *.deb file from the "quick" directory:
+
+> root@erika /tmp # dpkg-deb -b quick openamq_1.2d8_i386.deb 
+> dpkg-deb: building package `openamq' in `openamq_1.2d8_i386.deb'.
+
+Now you have a file called [http://zoobab.wikidot.com/local--files/quick-debian-packaging-for-openamq/openamq_1.2d8_i386.deb openamq_1.2d8_i386.deb].
+
++ Step 6: Test the deb
+
+> root@erika /tmp [203]# dpkg -i openamq_1.2d8_i386.deb 
+> (Reading database ... 112743 files and directories currently installed.)
+> Preparing to replace openamq 1.2d8 (using openamq_1.2d8_i386.deb) ...
+> Unpacking replacement openamq ...
+> Setting up openamq (1.2d8) ...
+> root@erika /tmp [204]# 
+
+Now you can call amq_server from the command line:
+
+> root@erika /etc [151]# amq_server -s /etc/openamq/amq_server_base.cfg 
+> OpenAMQ/1.2d8
+> Production release
+> 
+> Copyright (c) 2007-2008 iMatix Corporation
+> This is free software; see the source for copying conditions.  There is NO
+> warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> 2008-11-07 15:33:07: ipr_config E: 'amq_server_base.cfg' not found
+> 2008-11-07 15:33:07: ipr_config W: Could not find XML file: amq_server_base.cfg
+> 2008-11-07 15:33:07: W: security warning - logins use default passwords
+> 2008-11-07 15:33:07: I: hostname is erika (127.0.1.1)
+> 2008-11-07 15:33:07: I: listening on port 5672, all network interfaces
+> 2008-11-07 15:33:07: I: no failover defined, READY as stand-alone
+> 2008-11-07 15:33:08: I: server ready for incoming AMQ connections
+
+Or amq_client:
+
+> zoobab@erika /home/zoobab [1]$ amq_client 
+> 15:34:06: I: opened 1 connection to OpenAMQ Server/1.2d8
+> 15:34:06: I: (1) sending 1 messages to server...
+> zoobab@erika /home/zoobab [2]$ amq_client -n 10000
+> 15:34:20: I: opened 1 connection to OpenAMQ Server/1.2d8
+> 15:34:20: I: (1) sending 10000 messages to server...
+> zoobab@erika /home/zoobab [3]$
+ 
+ 
+Or amq_shell:
+
+> zoobab@erika /home/zoobab [3]$ amq_shell 
+> amq_shell/1.2d8 - Management Console for OpenAMQ Brokers
+> Copyright (c) 2007-2008 iMatix Corporation
+> 
+> Connected to OpenAMQ Server/1.2d8 on 0.0.0.0:5672
+> 
+>  broker = "OpenAMQ 1.2d8" 
+>  Date, time broker started ............. 2008-11-07T15:33+01:00
+>  Broker is locked? ..................... no
+>  Memory used for all data .............. 0K
+>  Memory used for messages .............. 1K
+>  Number of queued messages ............. 2
+>  Number of queue consumers ............. 1
+>  Number of queue bindings .............. 2
+>  Number of message exchanges ........... 11 [ls exchange]
+>  Number of shared queues ............... 0 [ls queue]
+>  Number of connections ................. 1 [ls connection]
+>  [shutdown] [lock]
+> /0.0.0.0:5672>
+
++ TODO
+
+Put the [http://zoobab.wikidot.com/local--files/quick-debian-packaging-for-openamq/amq_server_base.cfg amq_server_base.cfg] somewhere, ideally it should be in /etc/openamq/amq_server_base.cfg, but I have to find a way to make it by default at the compilation of openamq. There seems to be a problem when the config file is not in the same directory as the server binary.
+
+Example when it is launched from the /tmp directory:
+
+> root@erika /tmp [261]# amq_server -s /etc/openamq/amq_server_base.cfg 
+> OpenAMQ/1.2d8
+> Production release
+> 
+> Copyright (c) 2007-2008 iMatix Corporation
+> This is free software; see the source for copying conditions.  There is NO
+> warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> **2008-11-07 15:40:41: ipr_config E: 'amq_server_base.cfg' not found**
+> **2008-11-07 15:40:41: ipr_config W: Could not find XML file: amq_server_base.cfg**
+> 2008-11-07 15:40:41: W: security warning - logins use default passwords
+> 2008-11-07 15:40:41: I: hostname is erika (127.0.1.1)
+> 2008-11-07 15:40:41: I: listening on port 5672, all network interfaces
+> 2008-11-07 15:40:41: I: no failover defined, READY as stand-alone
+> 2008-11-07 15:40:42: I: server ready for incoming AMQ connections
+
+Example when it is launched from the /etc/openamq/ directory, everything is fine:
+
+> root@erika /etc/openamq [265]# amq_server -s /etc/openamq/amq_server_base.cfg
+> OpenAMQ/1.2d8
+> Production release
+> 
+> Copyright (c) 2007-2008 iMatix Corporation
+> This is free software; see the source for copying conditions.  There is NO
+> warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> 2008-11-07 15:42:08: W: security warning - logins use default passwords
+> 2008-11-07 15:42:08: I: hostname is erika (127.0.1.1)
+> 2008-11-07 15:42:08: I: listening on port 5672, all network interfaces
+> 2008-11-07 15:42:08: I: no failover defined, READY as stand-alone
+> 2008-11-07 15:42:09: I: server ready for incoming AMQ connections
+
+The other problem is that the server seems to create 2 directories "archive" and "logs" in its root (here the server was launched from the /etc/openamq):
+
+> root@erika /etc/openamq/archive [24]# l
+> total 16
+> -rw-r--r-- 1 root root  257 2008-11-07 15:39 alert_5672-20081107-154150.log
+> -rw-r--r-- 1 root root  307 2008-11-07 15:39 daily_5672-20081107-154150.log
+> -rw-r--r-- 1 root root 2737 2008-11-07 15:39 debug_5672-20081107-154150.log
+> -rw-r--r-- 1 root root 2695 2008-11-07 15:41 debug_5672-20081107-154208.log
+> root@erika /etc/openamq/archive [25]# cd ..
+> root@erika /etc/openamq [26]# l
+> total 12
+> -rw-r--r-- 1 root root 2028 2008-11-07 15:28 amq_server_base.cfg
+> drwxr-xr-x 2 root root 4096 2008-11-07 15:42 archive
+> drwxr-xr-x 2 root root 4096 2008-11-07 15:42 logs
+> root@erika /etc/openamq [27]# cd logs/
+> root@erika /etc/openamq/logs [28]# l
+> total 20
+> -rw-r--r-- 1 root root 4667 2008-11-07 16:17 alert_5672.log
+> -rw-r--r-- 1 root root 4717 2008-11-07 16:17 daily_5672.log
+> -rw-r--r-- 1 root root 2737 2008-11-07 16:17 debug_5672.log
+> root@erika /etc/openamq/logs [29]# cd ..
+> root@erika /etc/openamq [30]# l
+> total 12
+> -rw-r--r-- 1 root root 2028 2008-11-07 15:28 amq_server_base.cfg
+> drwxr-xr-x 2 root root 4096 2008-11-07 15:42 archive
+> drwxr-xr-x 2 root root 4096 2008-11-07 15:42 logs
+> root@erika /etc/openamq [31]#
+
+Ideally, all those two directories should go to /var/log/openamq/logs/ and /var/log/openamq/archive/.
+
++ Static binary
+
+Test the big statically linked [http://zoobab.wikidot.com/local--files/quick-debian-packaging-for-openamq/amq_server amq_server here].
+
+Edit the file OpenAMQ-1.4a2/foreign-1.1d8/c/c in order to add the -static gcc option:
+
+> elif [ "$UTYPE" = "Linux" ]; then
+>         STDLIBS="-lm"
+>         CCNAME="${CCNAME:-gcc}"             #   Use gcc if not set
+>         if [ "$CCNAME" = "gcc" ]; then
+>             CCPLUS="${CCPLUS:-g++}"         #   Use g++ if not set
+>             **CCOPTS="-Wall -static"**
+
+Some infos:
+
+> zoobab@warsaw /home/zoobab/soft/OpenAMQ-1.4a2-debian/bin [172]$ file ./amq_server 
+> ./amq_server: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), for GNU/Linux 2.6.8, statically linked, not stripped
+> zoobab@warsaw /home/zoobab/soft/OpenAMQ-1.4a2-debian/bin [173]$ cat /etc/debian_version 
+> lenny/sid
+
+++ Test on DSL 0.7.2
+
+DSL 0.7.2: http://ftp.belnet.be/mirror/damnsmalllinux.org/archive/dsl-0.7.2.iso (seems to be published on the 08-Jul-2004)
+
+Use it with Qemu:
+
+> $ qemu -cdrom dsl-0.7.2.iso
+
+The binary does not work, it says:
+
+> $ ./amq_server
+> FATAL: kernel too old
+> Segmentation fault
+
+See the screenshot:
+
+[[=image amq_server_dsl-0.7.2.png]]
+
+++ Test on DSL 1.3
+
+DSL 1.3: http://ftp.belnet.be/mirror/damnsmalllinux.org/archive/dsl-1.3.1.iso (seems to be published on the 19-Jul-2005)
+
+Use it with Qemu:
+
+> $ qemu -cdrom dsl-1.3.1.iso
+
+The binary does not work, it says:
+
+> $ ./amq_server
+> FATAL: kernel too old
+> Segmentation fault
+
+See the screenshot:
+
+[[=image amq_server_dsl-1.3.png size="medium"]]
+
+++ Test on DamnSmallLinux 0.4.10
+
+DamnSmallLinux 0.4.10: http://ftp.belnet.be/mirror/damnsmalllinux.org/archive/damnsmall-0.4.10.iso (seems to be published on the 16-Oct-2003)
+
++ Deb package for openamq-1.4a2
+
+Available [http://zoobab.wikidot.com/local--files/quick-debian-packaging-for-openamq/openamq_1.4a2_i386.deb here]. For i386 only. Big static binaries (amq_server, amq_client, amq_shell, zyre) with libc6 inside. Problems:
+
+* [http://www.openamq.org/issue:47 Issue47]: Config file needs to be specified by hand on the command line: amq_server -s /etc/openamq/amq_server_base.cfg 
+* [http://www.openamq.org/issue:48 Issue48]: Logs and archive directories are still created in the current directory where you are (execute `pwd` to see where you are)
+
++ Deb package for openamq-1.4b0
+
+Available [http://zoobab.wikidot.com/local--files/quick-debian-packaging-for-openamq/openamq_1.4b0_i386.deb here]. For i386 only. Big static binaries (amq_server, amq_client, amq_shell, zyre, xitami) with libc6 inside. Problems:
+
+* [http://www.openamq.org/issue:48 Issue48]: Logs and archive directories are still created in the current directory where you are (execute `pwd` to see where you are)
+
++ Not so quick debian package
+
+By using the following [http://zoobab.wikidot.com/local--files/quick-debian-packaging-for-openamq/openamq-debian.tar.gz debian files], and putting them in your [http://download.imatix.com/openamq/unstable/OpenAMQ-1.4b0.tar.gz OpenAMQ-1.4b0] directory (first install debhelper with apt-get install debhelper):
+
+[[code]]
+$ debian/rules build
+[[/code]]
+
+works fine on my machine, but
+
+[[code]]
+$ debian/rules binary
+[[/code]]
+
+generates an error:
+
+[[code]]
+root@warsaw /home/zoobab/soft/openamq-1.4b0 [3]# debian/rules binary
+dh_testdir
+dh_clean -k -s 
+dh_installdirs -s
+# Add here commands to install the arch part of the package into 
+# debian/tmp.
+mkdir -p /home/zoobab/soft/openamq-1.4b0/debian/tmp/usr/bin
+mkdir -p /home/zoobab/soft/openamq-1.4b0/debian/tmp/etc/openamq
+#mkdir -p /home/zoobab/soft/openamq-1.4b0/debian/openamq/usr/share/doc/openamq
+cp -a /home/zoobab/soft/openamq-1.4b0/debian/openamq-build/bin/amq_client /home/zoobab/soft/openamq-1.4b0/debian/tmp/usr/bin
+cp -a /home/zoobab/soft/openamq-1.4b0/debian/openamq-build/bin/amq_server /home/zoobab/soft/openamq-1.4b0/debian/tmp/usr/bin
+cp -a /home/zoobab/soft/openamq-1.4b0/debian/openamq-build/bin/amq_shell /home/zoobab/soft/openamq-1.4b0/debian/tmp/usr/bin
+cp -a /home/zoobab/soft/openamq-1.4b0/debian/openamq-build/bin/zyre /home/zoobab/soft/openamq-1.4b0/debian/tmp/usr/bin
+cp -a /home/zoobab/soft/openamq-1.4b0/debian/openamq-build/bin/xitami /home/zoobab/soft/openamq-1.4b0/debian/tmp/usr/bin
+cp -a /home/zoobab/soft/openamq-1.4b0/debian/openamq-build/bin/amq_server_base.cfg /home/zoobab/soft/openamq-1.4b0/debian/tmp/etc/openamq
+#cp -a /home/zoobab/soft/openamq-1.4b0/debian/openamq-build/doc /home/zoobab/soft/openamq-1.4b0/debian/openamq/usr/share/doc/openamq/docs
+dh_install -s
+/usr/bin/make -f debian/rules DH_OPTIONS=-a binary-common
+make[1]: Entering directory `/home/zoobab/soft/openamq-1.4b0'
+dh_testdir
+dh_installchangelogs 
+dh_installdocs
+dh_installexamples
+dh_installinit
+dh_installman
+dh_link
+dh_strip
+dh_compress 
+dh_fixperms
+dh_makeshlibs
+dh_installdeb
+dh_shlibdeps
+dpkg-shlibdeps: warning: dependency on libdl.so.2 could be avoided if "debian/openamq/usr/bin/amq_shell debian/openamq/usr/bin/xitami debian/openamq/usr/bin/zyre debian/openamq/usr/bin/amq_client debian/openamq/usr/bin/amq_server" were not uselessly linked against it (they use none of its symbols).
+dpkg-shlibdeps: warning: dependency on libnsl.so.1 could be avoided if "debian/openamq/usr/bin/amq_shell debian/openamq/usr/bin/xitami debian/openamq/usr/bin/zyre debian/openamq/usr/bin/amq_client debian/openamq/usr/bin/amq_server" were not uselessly linked against it (they use none of its symbols).
+dpkg-shlibdeps: warning: dependency on librt.so.1 could be avoided if "debian/openamq/usr/bin/amq_shell debian/openamq/usr/bin/xitami debian/openamq/usr/bin/zyre debian/openamq/usr/bin/amq_client debian/openamq/usr/bin/amq_server" were not uselessly linked against it (they use none of its symbols).
+dh_gencontrol
+dpkg-gencontrol: error: must specify package since control info has many ()
+dh_gencontrol: command returned error code 65280
+make[1]: *** [binary-common] Error 1
+make[1]: Leaving directory `/home/zoobab/soft/openamq-1.4b0'
+make: *** [binary-arch] Error 2
+root@warsaw /home/zoobab/soft/openamq-1.4b0 [4]# 
+[[/code]]
+
+By googling for those 2 lines, I can only find errors related to the arch in debian/control file. The error code does not seems to be documented in the source code of dpkg-dev. I am stuck for the moment. More later.
+
++ Trying to use Pbuilder
+
+++ Hit a bug
+
+[[code]]
+
+root@warsaw /home/zoobab [1]# pbuilder-user-mode-linux 
+root@warsaw /home/zoobab [2]# pbuilder-user-mode-linux create
+Core dump limits :                                           
+        soft - 0                                             
+        hard - NONE                                          
+Checking that ptrace can change system call numbers...OK     
+Checking syscall emulation patch for ptrace...OK             
+Checking advanced syscall emulation patch for ptrace...OK    
+Checking for tmpfs mount on /dev/shm...OK                    
+Checking PROT_EXEC mmap in /dev/shm/...OK                    
+Checking for the skas3 patch in the host:                    
+  - /proc/mm...not found: No such file or directory          
+  - PTRACE_FAULTINFO...not found                             
+  - PTRACE_LDT...not found                                   
+UML running in SKAS0 mode                                    
+[42949372.960000] Linux version 2.6.22-rc5 (root@vernadsky) (gcc version 4.1.3 20070629 (prerelease) (Ubuntu 4.1.2-13ubuntu2)) #2 Mon Jul 2 10:14:22 GMT 2007                                                                                                                                 
+[42949372.960000] Built 1 zonelists.  Total pages: 8128                                                                                        
+[42949372.960000] Kernel command line: con0=fd:0,fd:1 con=pts root=/dev/root rootflags=/ rootfstype=hostfs ubd1=/home/zoobab/uml-image init=/usr/lib/rootstrap/builder devfs=nomount rsworkdir=/home/zoobab                                                                                   
+[42949372.960000] PID hash table entries: 128 (order: 7, 512 bytes)                                                                            
+[42949372.960000] Dentry cache hash table entries: 4096 (order: 2, 16384 bytes)                                                                
+[42949372.960000] Inode-cache hash table entries: 2048 (order: 1, 8192 bytes)                                                                  
+[42949372.960000] Memory: 29316k available                                                                                                     
+[42949373.410000] Mount-cache hash table entries: 512                                                                                          
+[42949373.410000] Checking for host processor cmov support...Yes                                                                               
+[42949373.410000] Checking for host processor xmm support...No                                                                                 
+[42949373.410000] Checking that host ptys support output SIGIO...Yes                                                                           
+[42949373.410000] Checking that host ptys support SIGIO on close...No, enabling workaround                                                     
+[42949373.410000] Using 2.6 host AIO                                                                                                           
+[42949373.410000] NET: Registered protocol family 16                                                                                           
+[42949373.410000] NET: Registered protocol family 2                                                                                            
+[42949373.530000] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)                                                               
+[42949373.530000] TCP established hash table entries: 1024 (order: 1, 8192 bytes)                                                              
+[42949373.530000] TCP bind hash table entries: 1024 (order: 0, 4096 bytes)                                                                     
+[42949373.530000] TCP: Hash tables configured (established 1024 bind 1024)                                                                     
+[42949373.530000] TCP reno registered                                                                                                          
+[42949373.560000] Checking host MADV_REMOVE support...OK                                                                                       
+[42949373.560000] mconsole (version 2) initialized on /home/zoobab/.uml/rKgNaD/mconsole                                                        
+[42949373.560000] Mapper v0.1                                                                                                                  
+[42949373.560000] mmapper_init - find_iomem failed                                                                                             
+[42949373.560000] UML Watchdog Timer                                                                                                           
+[42949373.560000] Host TLS support detected                                                                                                    
+[42949373.560000] Detected host type: i386                                                                                                     
+[42949373.560000] VFS: Disk quotas dquot_6.5.1                                                                                                 
+[42949373.560000] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)                                                                   
+[42949373.560000] JFS: nTxBlock = 229, nTxLock = 1832                                                                                          
+[42949373.560000] SGI XFS with ACLs, security attributes, realtime, large block numbers, no debug enabled                                      
+[42949373.560000] SGI XFS Quota Management subsystem                                                                                           
+[42949373.560000] io scheduler noop registered                                                                                                 
+[42949373.560000] io scheduler anticipatory registered (default)                                                                               
+[42949373.560000] io scheduler deadline registered                                                                                             
+[42949373.560000] io scheduler cfq registered                                                                                                  
+[42949373.730000] SoftDog: cannot register miscdev on minor=130 (err=-16)                                                                      
+[42949373.740000] TCP cubic registered                                                                                                         
+[42949373.740000] NET: Registered protocol family 1                                                                                            
+[42949373.740000] NET: Registered protocol family 17                                                                                           
+[42949373.740000] Initialized stdio console driver                                                                                             
+[42949373.740000] Console initialized on /dev/tty0                                                                                             
+[42949373.740000] Initializing software serial port version 1                                                                                  
+[42949373.840000] Couldn't stat "root_fs" : err = 2                                                                                            
+[42949373.840000] Failed to initialize ubd device 0 :Couldn't determine size of device's file                                                  
+[42949373.840000]  ubdb: unknown partition table                                                                                               
+[42949373.840000] VFS: Mounted root (hostfs filesystem) readonly.                                                                              
+builder running...                                                                                                                             
+warning: can't open /etc/fstab: No such file or directory                                                                                      
+Using rootstrap module network from:                                                                                                           
+        /usr/lib/rootstrap/modules/network                                                                                                     
+netmask: error fetching interface information: Device not found                                                                                
+/usr/lib/rootstrap/builder:71: DeprecationWarning: raising a string exception is deprecated                                                    
+  (module,status,os.strerror(status))                                                                                                          
+Traceback (most recent call last):                                                                                                             
+  File "/usr/lib/rootstrap/builder", line 93, in <module>                                                                                      
+    dispatch(module, modulevars)                                                                                                               
+  File "/usr/lib/rootstrap/builder", line 71, in dispatch                                                                                      
+    (module,status,os.strerror(status))
+rootstrap: Module 'network' failed, status 1: Operation not permitted
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python2.5/site-packages/apport_python_hook.py", line 74, in apport_excepthook
+    pr.add_user_info()
+  File "/usr/lib/python2.5/site-packages/apport/report.py", line 260, in add_user_info
+    user = pwd.getpwuid(os.getuid()).pw_name
+KeyError: 'getpwuid(): uid not found: 0'
+
+Original exception was:
+Traceback (most recent call last):
+  File "/usr/lib/rootstrap/builder", line 93, in <module>
+    dispatch(module, modulevars)
+  File "/usr/lib/rootstrap/builder", line 71, in dispatch
+    (module,status,os.strerror(status))
+rootstrap: Module 'network' failed, status 1: Operation not permitted
+[42949376.030000] Kernel panic - not syncing: Attempted to kill init!
+[42949376.030000]
+[42949376.030000] EIP: 0073:[<401171d3>] CPU: 0 Not tainted ESP: 007b:bfaa24cc EFLAGS: 00200246
+[42949376.030000]     Not tainted
+[42949376.030000] EAX: ffffffda EBX: 00000001 ECX: 00000001 EDX: 401c00d0
+[42949376.030000] ESI: 00000001 EDI: 401bd28c EBP: bfaa24e8 DS: 007b ES: 007b
+[42949376.030000] 08323e38:  [<0806ce8c>] show_regs+0xb4/0xb9
+[42949376.030000] 08323e64:  [<0805b038>] panic_exit+0x25/0x3f
+[42949376.030000] 08323e78:  [<0807c418>] notifier_call_chain+0x21/0x46
+[42949376.030000] 08323e98:  [<0807c4b3>] __atomic_notifier_call_chain+0x17/0x19
+[42949376.030000] 08323eb4:  [<0807c4ca>] atomic_notifier_call_chain+0x15/0x17
+[42949376.030000] 08323ed0:  [<08071532>] panic+0x52/0xd8
+[42949376.030000] 08323ef0:  [<080737f4>] do_exit+0x6a/0x35d
+[42949376.030000] 08323f10:  [<08073b8a>] sys_exit_group+0x0/0x13
+[42949376.030000] 08323f28:  [<08073b9a>] sys_exit_group+0x10/0x13
+[42949376.030000] 08323f34:  [<0805b81e>] handle_syscall+0x86/0xa0
+[42949376.030000] 08323f80:  [<0806a184>] handle_trap+0xd8/0xe1
+[42949376.030000] 08323f9c:  [<0806a577>] userspace+0x138/0x180
+[42949376.030000] 08323fe8:  [<0805b4b8>] new_thread_handler+0x72/0x7e
+[42949376.030000] 08323ffc:  [<a55a5a5a>] 0xa55a5a5a
+[42949376.030000]
+UML exited with non-zero status, aborting
+                                         root@warsaw /home/zoobab [3]#
+
+[[/code]]
+
+I have submitted a bug report [https://bugs.launchpad.net/bugs/332707 here].
+
++ References
+
+* [http://quietsche-entchen.de/cgi-bin/wiki.cgi/CreatingDebianPackages Quietsche-entchen: Creating Debian Packages]

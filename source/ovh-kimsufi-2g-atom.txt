@@ -1,0 +1,179 @@
++ About
+
+I am now renting a [http://kimsufi.com Kimsufi server 2G] at OVH for 12EUR/month.
+
+OVH seems to be [http://linuxfr.org/forums/linux-general/posts/quel-provider-de-serveur-d%C3%A9di%C3%A9-choisir-pour-15%E2%82%AC-par-mois pretty fuzzy] about the actual processor their put on those machines, since the Intel Atom N2800 CPU should be only available for higher models. 
+
++ Cpuinfo
+
+[[code]]
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 54
+model name	: Intel(R) Atom(TM) CPU N2800   @ 1.86GHz
+stepping	: 1
+microcode	: 0x10d
+cpu MHz		: 1862.000
+cache size	: 512 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts nopl nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl est tm2 ssse3 cx16 xtpr pdcm movbe lahf_lm arat dts
+bogomips	: 3733.91
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 54
+model name	: Intel(R) Atom(TM) CPU N2800   @ 1.86GHz
+stepping	: 1
+microcode	: 0x10d
+cpu MHz		: 1862.000
+cache size	: 512 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts nopl nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl est tm2 ssse3 cx16 xtpr pdcm movbe lahf_lm arat dts
+bogomips	: 3733.43
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 54
+model name	: Intel(R) Atom(TM) CPU N2800   @ 1.86GHz
+stepping	: 1
+microcode	: 0x10d
+cpu MHz		: 1862.000
+cache size	: 512 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts nopl nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl est tm2 ssse3 cx16 xtpr pdcm movbe lahf_lm arat dts
+bogomips	: 3733.49
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 54
+model name	: Intel(R) Atom(TM) CPU N2800   @ 1.86GHz
+stepping	: 1
+microcode	: 0x10d
+cpu MHz		: 1862.000
+cache size	: 512 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts nopl nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl est tm2 ssse3 cx16 xtpr pdcm movbe lahf_lm arat dts
+bogomips	: 3733.47
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+[[/code]]
+
++ Meminfo
+
+[[code]]
+MemTotal:        2028364 kB
+MemFree:         1795576 kB
+Buffers:           25248 kB
+Cached:           118424 kB
+SwapCached:            0 kB
+Active:            63512 kB
+Inactive:          88556 kB
+Active(anon):       8436 kB
+Inactive(anon):      168 kB
+Active(file):      55076 kB
+Inactive(file):    88388 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:          8388 kB
+Mapped:             5744 kB
+Shmem:               216 kB
+Slab:              38160 kB
+SReclaimable:      24384 kB
+SUnreclaim:        13776 kB
+KernelStack:         736 kB
+PageTables:          868 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     1014180 kB
+Committed_AS:      15340 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       82676 kB
+VmallocChunk:   34359653244 kB
+DirectMap4k:        2048 kB
+DirectMap2M:     2078720 kB
+[[/code]]
+
++ Df
+
+[[code]]
+Filesystem      Size  Used Avail Use% Mounted on
+rootfs           10G  1.7G  7.9G  18% /
+/dev/root        10G  1.7G  7.9G  18% /
+proc               0     0     0    - /proc
+tmpfs           991M  168K  991M   1% /run
+rc-svcdir       1.0M   44K  980K   5% /lib64/rc/init.d
+sysfs              0     0     0    - /sys
+configfs           0     0     0    - /sys/kernel/config
+cgroup_root      10M     0   10M   0% /sys/fs/cgroup
+cpuset             0     0     0    - /sys/fs/cgroup/cpuset
+cpuacct            0     0     0    - /sys/fs/cgroup/cpuacct
+memory             0     0     0    - /sys/fs/cgroup/memory
+devices            0     0     0    - /sys/fs/cgroup/devices
+freezer            0     0     0    - /sys/fs/cgroup/freezer
+blkio              0     0     0    - /sys/fs/cgroup/blkio
+/dev            991M     0  991M   0% /dev
+fusectl            0     0     0    - /sys/fs/fuse/connections
+devpts             0     0     0    - /dev/pts
+shm             991M     0  991M   0% /dev/shm
+/dev/sda2       455G  3.6G  429G   1% /home
+binfmt_misc        0     0     0    - /proc/sys/fs/binfmt_misc
+[[/code]]

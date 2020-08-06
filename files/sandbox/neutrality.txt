@@ -1,0 +1,1810 @@
+
+                                                                           PARLEMENT EUROPEEN
+
+        +----------------------------------------------------------+
+        | 2004 |  Your browser may not support display of   | 2009 |
+        |      |                this image.                 |      |
+        +----------------------------------------------------------+
+
+                                                  Commission du marche interieur et de la protection des consommateurs
+
+                                                                                                                                                        2007/0248(COD)
+
+   16.3.2009
+
+        AMENDEMENTS
+
+        104 - 152
+
+        Projet de recommandation pour la deuxieme lecture
+
+        Malcolm Harbour
+
+        (PE421.119v02-00)
+
+        on the Council common position for adopting a directive of the European Parliament and of the Council amending Directive 2002/22/EC on universal service and
+        users' rights relating to electronic communications networks, Directive 2002/58/EC concerning the processing of personal data and the protection of privacy in
+        the electronic communications sector and Regulation (EC) No 2006/2004 on cooperation between national authorities responsible for the enforcement of consumer
+        protection laws
+
+        Position commune du Conseil - acte modificatif
+
+        (16497/1/2008 - C6-0068/2009 and C6-0420/2007 - 2007/0248(COD))
+
+    
+
+   AM_Com_LegRecomm
+
+    
+
+   Amendement 104
+
+   Evelyne Gebhardt
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 3 a (new)
+
+                                                          
+                                      Position commune du Amendement                                                                
+                                      Conseil             
+                                                          (3a) Der Universaldienst ist ein Netz zum Schutz von Personen, deren      
+                                                          finanzielle Ressourcen, geografischer Standort oder besondere soziale     
+                                                          Bedu:rfnisse ihnen keinen Zugang zu den fu:r die grosse Mehrheit der      
+                                                          Bu:rger verfu:gbaren Basisdiensten gestatten. Die in der Richtlinie       
+                                                          2002/22/EG verankerte grundlegende Anforderung an den Universaldienst     
+                                                          besteht darin, den Nutzern auf Antrag einen Anschluss an das o:ffentliche 
+                                                          Telefonnetz an einem festen Standort zu einem erschwinglichen Preis       
+                                                          bereitzustellen. Sie erstreckt sich somit weder auf Mobilfunkdienste noch 
+                                                          auf den Breitbandzugang zum Internet. Dieser grundlegenden Anforderung    
+                                                          stehen nun die Entwicklungen im Bereich der Technologie und des Marktes   
+                                                          gegenu:ber, in deren Rahmen die mobile Kommunikation in vielen Bereichen  
+                                                          die prima:re Form des Zugangs bilden kann und die Netze sich in           
+                                                          zunehmendem Masse der Technologie fu:r die Mobil- und                     
+                                                          Breitbandkommunikation bedienen. Angesichts dieser Entwicklungen muss     
+                                                          bewertet werden, ob die technischen, sozialen und wirtschaftlichen        
+                                                          Bedingungen erfu:llt sind, um die mobile Kommunikation und den            
+                                                          Breitbandzugang in die Universaldienstverpflichtung einzubeziehen, wobei  
+                                                          auch die damit verbundenen Aspekte der Finanzierung zu beru:cksichtigen   
+                                                          sind. Zu diesem Zweck wird die Kommission spa:testens im Herbst 2009 eine 
+                                                          U:berpru:fung des Umfangs der Universaldienstverpflichtung und            
+                                                          Vorschla:ge fu:r eine Reform der Richtlinie 2002/22EG zur Erreichung der  
+                                                          entsprechenden im o:ffentlichen Interesse liegenden Ziele vorlegen. Diese 
+                                                          U:berpru:fung beru:cksichtigt die wirtschaftliche Wettbewerbsfa:higkeit   
+                                                          und schliesst eine Analyse der gesellschaftlichen, wirtschaftlichen und   
+                                                          technischen Entwicklung sowie des Risikos der sozialen Ausgrenzung ein.   
+                                                          Sie geht auch auf die technische Durchfu:hrbarkeit und die                
+                                                          Wirtschaftlichkeit, die voraussichtlichen Kosten, ihre Verteilung und     
+                                                          Finanzierungsmodelle einer neu festgelegten Universaldienstverpflichtung  
+                                                          ein. Da Fragen im Zusammenhang mit dem Umfang der                         
+                                                          Universaldienstverpflichtung daher umfassend in diesem gesonderten        
+                                                          Verfahren behandelt werden, beschra:nkt sich diese Richtlinie auf die     
+                                                          anderen Aspekte der Richtlinie 2002/22/EG.                                
+
+                                                                                                                                                                Or. de
+
+                                                                              Justification
+
+   Der A:nderungsantrag entspricht der Parlamentsposition aus erster Lesung.
+
+   Amendement  105
+
+   Syed Kamall
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 22
+
+                                                                                            
+                                      Position commune du Conseil                           Amendement                              
+                                      (22) Given the increasing importance of electronic    (22) Given the increasing importance of 
+                                      communications for consumers and businesses, users    electronic communications for consumers 
+                                      should be fully informed of the traffic management    and businesses, users should be fully   
+                                      policies of the service and/or network provider with  informed of any relevant limitations    
+                                      which they conclude the contract. Where there is a    imposed on the use of electronic        
+                                      lack of effective competition, national regulatory    communications services by the service  
+                                      authorities should use the remedies available to them and/or network provider with which they 
+                                      under Directive 2002/19/EC (Access Directive) to      conclude the contract.                  
+                                      ensure that users' access to particular types of      
+                                      content or application is not unreasonably            
+                                      restricted.                                           
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   This proposal, combining EP and Council wording, focuses on the aspect of transparency, ensuring transparency is targeted at the relevant restrictions which are
+   the important parameter for the end-user rather than abstract and broad "network management policies". It also no longer mentions the access Directive whereas the
+   current Recital 14 of Council text and 14a of EP text risks creating confusion over the fact that intervention under Directive 2002/19/EC only address network
+   access for electronic communications operators. SMP-remedies do not directly address access to and for content and applications by end-users.
+
+   Amendement  106
+
+   Eva-Britt Svensson
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 22
+
+                                                                           
+                                      Position commune du Conseil          Amendement                                               
+                                      (22) Given the increasing importance (22) End-users should decide what content they require   
+                                      of electronic communications for     to be able to send and receive, and which services,      
+                                      consumers and businesses, users      applications, hardware and software they require to use  
+                                      should be fully informed of the      for such purposes, without prejudice to the need to      
+                                      traffic management policies of the   preserve the integrity and security of networks and      
+                                      service and/or network provider with services. A competitive market with transparent          
+                                      which they conclude the contract.    offerings as provided for in Directive 2002/22/EC should 
+                                      Where there is a lack of effective   ensure that end-users are able to access and distribute  
+                                      competition, national regulatory     any content and to use any applications and/or services  
+                                      authorities should use the remedies  of their choice, as stated in Article 8 of Directive     
+                                      available to them under Directive    2002/21/EC. Given the increasing importance of           
+                                      2002/19/EC (Access Directive) to     electronic communications for consumers and businesses,  
+                                      ensure that users' access to         users should in any case be fully informed of the        
+                                      particular types of content or       traffic management policies of the service and/or        
+                                      application is not unreasonably      network provider with which they conclude the contract.  
+                                      restricted.                          Disclosure should be such that consumers are able to     
+                                                                           make an informed decision, and enable them to choose to  
+                                                                           adjust their behaviour or to switch networks. The        
+                                                                           information on traffic management policies should        
+                                                                           include the criteria and rules implemented by the        
+                                                                           operator for managing traffic, including the thresholds  
+                                                                           that will trigger changes in the users' experience of    
+                                                                           the services. It shall, where necessary, disclose        
+                                                                           specific actions included in the traffic management      
+                                                                           policy. Depending on the technology used, this may       
+                                                                           require user consent under Directive 2002/58/EC.         
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   Telecommunications framework law concerns the regulation of network operators and providers of electronic communications services, and not the regulation of user
+   behaviour. This directive concerns the rights of users and citizens in respect of the purchase of services from such operators. The language concerning
+   `limitations' placed the focus on the user behaviour. This amendment puts the onus back onto the operator behaviour, and tasks the regulators with ensuring the
+   accountability of the operators, as well as allowing operators the necessary flexibility to address congestion.
+
+   Amendement  107
+
+   Bernadette Vergnaud, Cristian Silviu Busoi, Heide Ru:hle
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 22
+
+                                                                             
+                                      Position commune du Conseil            Amendement                                             
+                                      (22) Given the increasing importance   (22) End-users should decide what content they want to 
+                                      of electronic communications for       be able to send and receive, and which services,       
+                                      consumers and businesses, users should applications, hardware and software they want to use   
+                                      be fully informed of the traffic       for such purposes, without prejudice to the need to    
+                                      management policies of the service     preserve the integrity and security of networks and    
+                                      and/or network provider with which     services. A competitive market with transparent        
+                                      they conclude the contract. Where      offerings as provided for in Directive 2002/22/EC      
+                                      there is a lack of effective           should ensure that end-users are able to access and    
+                                      competition, national regulatory       distribute any content and to use any applications     
+                                      authorities should use the remedies    and/or services of their choice, as stated in Article  
+                                      available to them under Directive      8 of Directive 2002/21/EC. Given the increasing        
+                                      2002/19/EC (Access Directive) to       importance of electronic communications for consumers  
+                                      ensure that users' access to           and businesses, users should be fully informed of the  
+                                      particular types of content or         traffic management policies of, and subsequent         
+                                      application is not unreasonably        possible limitations of access to applications or      
+                                      restricted.                            services imposed by, the service and/or network        
+                                                                             provider with which they conclude the contract. Where  
+                                                                             there is a lack of effective competition, national     
+                                                                             regulatory authorities should use the remedies         
+                                                                             available to them under Directive 2002/19/EC (Access   
+                                                                             Directive) to ensure that users' access to particular  
+                                                                             types of content or application is not unreasonably    
+                                                                             restricted.                                            
+
+                                                                                                                                                                Or. en
+
+   Amendement  108
+
+   Malcolm Harbour
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 22 a (new)
+
+                                                                  
+                                      Position commune du Conseil Amendement                                                        
+                                                                  (22a) Traffic management policies should be defined for the       
+                                                                  purposes of disclosure under this Directive. The practices        
+                                                                  embodied in them are fully subject to competition scrutiny.       
+
+                                                                                                                                                                Or. en
+
+   Amendement  109
+
+   Eva-Britt Svensson
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 22 a (new)
+
+                                                          
+                                      Position commune du Amendement                                                                
+                                      Conseil             
+                                                          (22a) Traffic management policies are the rules and guidelines which a    
+                                                          network operator has put in place to handle the flow of traffic on the    
+                                                          network (i.e. bandwidth management), but they may additionally utilise    
+                                                          capabilities installed by the operator to prioritise, block and filter    
+                                                          traffic according to pre-set criteria. These policies must be able to be  
+                                                          justified by a valid technical reasons such as temporary short-term       
+                                                          remedies put in place so as to smooth traffic in cases of acute network   
+                                                          congestion or in response to malicious activity threatening network       
+                                                          security or end-user security. Traffic management policies should be      
+                                                          neutral in respect of content and applications and must not result in the 
+                                                          user not being able to access content, services and applications.         
+                                                          Operators should in all cases respect fundamental rights and freedoms of  
+                                                          users.                                                                    
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   Traffic management systems are being deployed by telecommunications network operators and Internet service providers. They represent the first phase of the
+   next-generation network, and bring in a range of new functionality, including filtering of content and applications, and the delivery of  content on a preferential
+   or discriminatory basis, which has implications for the way services may be delivered and for users. Next generation networks were originally outside the scope of
+   the telecoms review, however, the references to traffic management policies in this directive and in the Framework directive, and the requirement to improve the
+   transparency for users, especially users of the Internet, introduce them into the framework. In this context, "traffic management policies" requires a formal
+   definition (RoP 62 b) and c) apply).
+
+   Amendement  110
+
+   Jacques Toubon
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 22 bis (nouveau)
+
+                                                          
+                                      Position commune du Amendement                                                                
+                                      Conseil             
+                                                          (22 bis) La directive 2002/22/CE n'exige pas des fournisseurs qu'ils      
+                                                          controlent les informations transmises par l'intermediaire de leurs       
+                                                          reseaux, ni qu'ils engagent des poursuites judiciaires `a l'encontre de   
+                                                          leurs clients en raison d'informations transmises, et ne rend pas les     
+                                                          fournisseurs responsables de ces informations. Il appartient aux          
+                                                          autorites competentes d'engager des poursuites penales.                   
+
+                                                                                                                                                                Or. fr
+
+                                                                              Justification
+
+   Il apparait esentiel de laisser la possibilite de mettre en place des mesures preventives autres que penales, telles qu'elles sont envisagees au Royaume-Uni.
+
+   Amendement  111
+
+   Eva-Britt Svensson
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 22 b (new)
+
+                                                          
+                                      Position commune du Amendement                                                                
+                                      Conseil             
+                                                          (22b) Internet users are entitled to an Internet connection to send and   
+                                                          receive content of their own choice, use services and applications of     
+                                                          their own choice, and connect hardware and use software of their own      
+                                                          choice that does not harm the network. Internet users are entitled to a   
+                                                          connection free from discrimination based on type of application, service 
+                                                          or content, or based on sender or receiver address.                       
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   Self explanatory. RoP 62 b) and c) apply.
+
+   Amendement  112
+
+   Malcolm Harbour
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 24
+
+                                                                                      
+                                      Position commune du Conseil                     Amendement                                    
+                                      (24) The availability of transparent,           (24) The availability of transparent,         
+                                      up-to-date and comparable information on offers up-to-date and comparable information on      
+                                      and services is a key element for consumers in  offers and services is a key element for      
+                                      competitive markets where several providers     consumers in competitive markets where        
+                                      offer services. End-users and consumers of      several providers offer services. End-users   
+                                      electronic communications services should be    and consumers of electronic communications    
+                                      able to easily compare the prices of various    services should be able to easily compare the 
+                                      services offered on the market based on         prices of various services offered on the     
+                                      information published in an easily accessible   market based on information published in an   
+                                      form. In order to allow them to make price      easily accessible form. In order to allow     
+                                      comparisons easily, national regulatory         them to make price comparisons easily,        
+                                      authorities should be able to require from      national regulatory authorities should be     
+                                      undertakings providing electronic               able to require from undertakings providing   
+                                      communications networks and/or services greater electronic communications networks and/or     
+                                      transparency as regards information (including  services greater transparency as regards      
+                                      tariffs, consumption patterns and other         information (including tariffs, consumption   
+                                      relevant statistics) and to ensure that third   patterns and other relevant statistics) and   
+                                      parties have the right to use, without charge,  to ensure that third parties have the right   
+                                      publicly available information published by     to use, without charge, publicly available    
+                                      such undertakings. National regulatory          information published by such undertakings.   
+                                      authorities should also be able to make price   National regulatory authorities should also   
+                                      guides available, in particular where the       be able to make price guides available, in    
+                                      market has not provided them free of charge or  particular where the market has not provided  
+                                      at a reasonable price. Undertakings should not  them free of charge or at a reasonable price. 
+                                      be entitled to any remuneration for the use of  Undertakings should not be entitled to any    
+                                      information where it has already been published remuneration for the use of information where 
+                                      and thus belongs in the public domain. In       it has already been published and thus        
+                                      addition, end-users and consumers should be     belongs in the public domain. In addition,    
+                                      adequately informed of the price and the type   end-users and consumers should be adequately  
+                                      of service offered before they purchase a       informed of the price and the type of service 
+                                      service, in particular if a freephone number is offered before they purchase a service, in    
+                                      subject to additional charges. National         particular if a freephone number is subject   
+                                      regulatory authorities should be able to        to additional charges. National regulatory    
+                                      require that such information is provided       authorities should be able to require that    
+                                      generally, and, for certain categories of       such information is provided generally, and,  
+                                      services determined by them, immediately prior  for certain categories of services determined 
+                                      to connecting the call, unless otherwise        by them, immediately prior to connecting the  
+                                      provided for by national law. When determining  call, unless otherwise provided for by        
+                                      the categories of call requiring pricing        national law. When determining the categories 
+                                      information prior to connection, national       of call requiring pricing information prior   
+                                      regulatory authorities should take due account  to connection, national regulatory            
+                                      of the nature of the service, the pricing       authorities should take due account of the    
+                                      conditions which apply to it and whether it is  nature of the service, the pricing conditions 
+                                      offered by a provider who is not a provider of  which apply to it and whether it is offered   
+                                      electronic communications services. Without     by a provider who is not a provider of        
+                                      prejudice to Directive 2000/31/EC (Directive on electronic communications services. Without   
+                                      electronic commerce), undertakings should also, prejudice to Directive 2000/31/EC (Directive  
+                                      if required by Member States, provide           on electronic commerce), undertakings should  
+                                      subscribers with public interest information    also, if required by Member States, provide   
+                                      produced by the relevant public authorities     subscribers with public interest information  
+                                      regarding, inter alia, the most common          produced by the relevant public authorities   
+                                      infringements and their legal consequences.     regarding, inter alia, the most common        
+                                                                                      infringements and their legal consequences.   
+                                                                                      Dissemination of such information should      
+                                                                                      however not create an excessive burden on     
+                                                                                      undertakings and should therefore be subject  
+                                                                                      to agreement on reimbursement of significant  
+                                                                                      additional costs by the public authorities in 
+                                                                                      the event that those authorities require      
+                                                                                      recourse to means of communications other     
+                                                                                      than those used by the undertakings in their  
+                                                                                      ordinary course of business for their         
+                                                                                      communications with subscribers.              
+
+                                                                                                                                                                Or. en
+
+   Amendement  113
+
+   Eva-Britt Svensson
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 24
+
+                                                                                       
+                                      Position commune du Conseil                      Amendement                                   
+                                      (24) The availability of transparent, up-to-date (24) The availability of transparent,        
+                                      and comparable information on offers and         up-to-date and comparable information on     
+                                      services is a key element for consumers in       offers and services is a key element for     
+                                      competitive markets where several providers      consumers in competitive markets where       
+                                      offer services. End-users and consumers of       several providers offer services. End-users  
+                                      electronic communications services should be     and consumers of electronic communications   
+                                      able to easily compare the prices of various     services should be able to easily compare    
+                                      services offered on the market based on          the prices of various services and their     
+                                      information published in an easily accessible    traffic management policies offered on the   
+                                      form. In order to allow them to make price       market based on information published in an  
+                                      comparisons easily, national regulatory          easily accessible form. In order to allow    
+                                      authorities should be able to require from       them to make price comparisons easily,       
+                                      undertakings providing electronic communications national regulatory authorities should be    
+                                      networks and/or services greater transparency as able to require from undertakings providing  
+                                      regards information (including tariffs,          electronic communications networks and/or    
+                                      consumption patterns and other relevant          services greater transparency as regards     
+                                      statistics) and to ensure that third parties     information (including tariffs, consumption  
+                                      have the right to use, without charge, publicly  patterns, and other relevant statistics) and 
+                                      available information published by such          to ensure that third parties have the right  
+                                      undertakings. National regulatory authorities    to use publicly available information        
+                                      should also be able to make price guides         published by such undertakings, without      
+                                      available, in particular where the market has    charge. National regulatory authorities      
+                                      not provided them free of charge or at a         should also be able to make price guides     
+                                      reasonable price. Undertakings should not be     available, in particular where the market    
+                                      entitled to any remuneration for the use of      has not provided them free of charge or at a 
+                                      information where it has already been published  reasonable price. Undertakings should not be 
+                                      and thus belongs in the public domain. In        entitled to any remuneration for the use of  
+                                      addition, end-users and consumers should be      information where it has already been        
+                                      adequately informed of the price and the type of published and thus belongs in the public     
+                                      service offered before they purchase a service,  domain. In addition, end-users and consumers 
+                                      in particular if a freephone number is subject   should be adequately informed of the price   
+                                      to additional charges. National regulatory       and the type of service offered before they  
+                                      authorities should be able to require that such  purchase a service, in particular if a       
+                                      information is provided generally, and, for      freephone number is subject to additional    
+                                      certain categories of services determined by     charges. National regulatory authorities     
+                                      them, immediately prior to connecting the call,  should be able to require that such          
+                                      unless otherwise provided for by national law.   information is provided generally, and, for  
+                                      When determining the categories of call          certain categories of services determined by 
+                                      requiring pricing information prior to           them, immediately prior to connecting the    
+                                      connection, national regulatory authorities      call, unless it is otherwise provided for by 
+                                      should take due account of the nature of the     national law. When determining the           
+                                      service, the pricing conditions which apply to   categories of call requiring pricing         
+                                      it and whether it is offered by a provider who   information prior to connection, national    
+                                      is not a provider of electronic communications   regulatory authorities should take due       
+                                      services. Without prejudice to                   account of the nature of the service, the    
+                                      Directive 2000/31/EC (Directive on electronic    pricing conditions which apply to it and     
+                                      commerce), undertakings should also, if required whether it is offered by a provider who is   
+                                      by Member States, provide subscribers with       not a provider of electronic communications  
+                                      public interest information produced by the      services. Without prejudice to Directive     
+                                      relevant public authorities regarding,           2000/31/EC (Directive on electronic          
+                                      inter alia, the most common infringements and    commerce), undertakings should also, if      
+                                      their legal consequences.                        required by Member States, provide to        
+                                                                                       subscribers with public interest information 
+                                                                                       produced by the relevant public authorities  
+                                                                                       regarding, inter alia, the most common       
+                                                                                       infringements and their legal consequences.  
+                                                                                       Significant additional costs incurred by     
+                                                                                       undertakings for dissemination of such       
+                                                                                       information should be agreed between the     
+                                                                                       undertakings and the relevant authorities    
+                                                                                       and met by those authorities.                
+
+                                                                                                                                                                Or. en
+
+   Amendement  114
+
+   Eva-Britt Svensson
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 24 a (new)
+
+                                                          
+                                      Position commune du Amendement                                                                
+                                      Conseil             
+                                                          (24a) Transparency measures are most effective where disclosure is made   
+                                                          both to users and to regulatory authorities, including the National       
+                                                          Regulatory Authorities and where necessary, to the BERT/GERT. Member      
+                                                          States should ensure therefore that National Regulatory Authorities, the  
+                                                          Commission and BERT/GERT may require disclosure of traffic management     
+                                                          policies and take appropriate measures in cases where operators fail to   
+                                                          disclose their traffic management policies or where the traffic           
+                                                          management  policy does not respect the rights of users to access the     
+                                                          content, applications and services of their choice. Disclosure to         
+                                                          regulators should  include the traffic management equipment installed by  
+                                                          the operator, when it was first commissioned, where in the network it is  
+                                                          deployed, how it is configured, when and under what circumstances it is   
+                                                          used, and the criteria for restrictions or limitations on usage by        
+                                                          end-users including the thresholds that will trigger limits on users'     
+                                                          access. It should, where necessary, disclose specific actions included in 
+                                                          the traffic management policy.                                            
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   The Electronic Communications Framework requires safeguards to be in place to ensure that users can freely access and use the content, services and applications of
+   their choice, at the same time as allowing operators the necessary flexibility to address congestion during peak periods through network management practices that
+   are non-discriminatory. Regulators should be able to look at whether traffic management policies are intended to support a commercial interest, in order to assess
+   whether abusive behaviour is taking place and take appropriate action (RoP 62 b) and c) apply).
+
+   Amendement  115
+
+   Eva-Britt Svensson
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 26
+
+                                                                          
+                                      Position commune du Conseil         Amendement                                                
+                                      (26) A competitive market should    (26) A competitive market should ensure that users enjoy  
+                                      ensure that users enjoy the quality the quality of service they require, but in particular    
+                                      of service they require, but in     cases it may be necessary to ensure that public           
+                                      particular cases it may be          communications networks attain minimum quality levels so  
+                                      necessary to ensure that public     as to prevent degradation of service, the blocking of     
+                                      communications networks attain      access and the slowing of traffic over networks.          
+                                      minimum quality levels so as to     Prioritisation or limitation of traffic must be able to   
+                                      prevent degradation of service, the be justified by a valid technical reason, such as         
+                                      blocking of access and the slowing  temporary short-term remedies put in place so as to       
+                                      of traffic over networks.           smooth traffic in cases of acute network congestion or in 
+                                                                          response to malicious activity threatening network        
+                                                                          security or end-user security, and must not result in the 
+                                                                          user not being able to access content, services and       
+                                                                          applications. A minimum quality of service should ensure  
+                                                                          that users are able to access all content, services and   
+                                                                          applications of their choice without being hindered,      
+                                                                          limited or blocked by the traffic management policies of  
+                                                                          the network operator. Since inconsistent remedies will    
+                                                                          significantly impair the achievement of the internal      
+                                                                          market, the Commission should assess any requirements set 
+                                                                          by national regulatory authorities for possible           
+                                                                          regulatory intervention across the Community and, if      
+                                                                          necessary, adopt technical implementing measures in order 
+                                                                          to achieve consistent application throughout the          
+                                                                          Community.                                                
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   Traffic management systems bring in a range of new functionality for telecoms and Internet networks, including content filtering and preferential or discriminatory
+   delivery of content. Regulators should be able to act using more than one regulatory tool, especially to protect the interests of citizens.
+
+   Amendement  116
+
+   Jacques Toubon
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 26
+
+                                                                                   
+                                      Position commune du Conseil                  Amendement                                       
+                                      (26) A competitive market should ensure that (26) A competitive market should also ensure     
+                                      users enjoy the quality of service they      that users are able to have the quality of       
+                                      require, but in particular cases it may be   service they require, but in particular cases it 
+                                      necessary to ensure that public              may be necessary to ensure that public           
+                                      communications networks attain minimum       communications networks attain minimum quality   
+                                      quality levels so as to prevent degradation  levels  so as to address unjustified degradation 
+                                      of service, the blocking of access and the   of service, usage limitations and slowing of     
+                                      slowing of traffic over networks.            traffic.                                         
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   The current EU legal framework and the new rules on transparency proposed in this Directive in principle already provide for sufficient safeguards to ensure the
+   ability of end-users to access content and applications of their choice. In particular, a competitive market for retail broadband access - where necessary ensured
+   by wholesale ex-ante access obligations under Directive 2002/19/EC - and transparency requirements regarding restrictions of quality of service under this
+   Directive will penalise any undue restrictions of users' ability to access the content of their choice. If NRAs are nevertheless given the power to intervene in
+   quality of services, it should be clarified that this can be done only to address observed harmful practices that are not justified by legitimate interests of
+   network management.
+
+   Amendement  117
+
+   Erika Mann, Edit Herczog
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 26 a (new)
+
+                                                          
+                                      Position commune du Amendement                                                                
+                                      Conseil             
+                                                          (26a) Directive 2002/22/EC is without prejudice to reasonable network     
+                                                          management by providers, for example to address congestion and capacity   
+                                                          constraints, to ensure the security of the network and of users and to    
+                                                          enable reliable performance of individual services. These practices       
+                                                          should not hinder the competitive development of the information society  
+                                                          and should respect the requirements set out in articles 20 and 21 of      
+                                                          Directive 2002/22/EC.                                                     
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   To provide more legal certainty, appropriate and future-proof guidance on the provisions of Directive 2002/22 regarding quality of service requirements and network
+   management should be put in place. The Recital underlines that network management should not distort competition and that operators have to comply with the newly
+   introduced requirements regarding transparency towards end-users on any restrictions of access to services and applications. At the same time, the framework should
+   not restrict network management per se - any exhaustive list of what network management can achieve will be incomplete and thereby limit future innovation. A key
+   objective of network management will be to ensure quality of service for new services (e.g. distant health applications).
+
+   Amendement  118
+
+   Zita Plestinska, Andreas Schwab
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 26 a (new)
+
+                                                          
+                                      Position commune du Amendement                                                                
+                                      Conseil             
+                                                          (26a) Directive 2002/22/EC is without prejudice to reasonable network     
+                                                          management by providers for example to address congestion, capacity       
+                                                          constraints, to ensure the security of the network and of the users and   
+                                                          to enable reliable performance of individual services, as long as this    
+                                                          does not hinder the competitive development of the information society.   
+                                                          Due account should be taken of the right of network and service operators 
+                                                          to diversify their offers to consumers in a competitive environment,      
+                                                          while respecting the requirements set out in articles 20  and 21 of       
+                                                          Directive 2002/22/EC.                                                     
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   To provide more legal certainty, appropriate and future-proof guidance on the provisions of Directive 2002/22 regarding quality of service requirements and network
+   management should be put in place. The Recital underlines that network management should not distort competition and that operators have to comply with the newly
+   introduced requirements regarding transparency towards end-users on any restrictions of access to services and applications. At the same time, the framework should
+   not restrict network management per se - any exhaustive list of what network management can achieve will be incomplete and thereby limit future innovation.
+
+   Amendement  119
+
+   Bernadette Vergnaud
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 30
+
+                                                                                     
+                                      Position commune du Conseil                    Amendement                                     
+                                      (30) Directory enquiry services should be, and (30) Directory enquiry services should be, and 
+                                      frequently are, provided under competitive     frequently are, provided in competition,       
+                                      market conditions, pursuant to Article 5 of    pursuant to Article 5 of Commission Directive  
+                                      Commission Directive 2002/77/EC of             2002/77/EC of 16 September 2002 on competition 
+                                      16 September 2002 on competition in the        in the markets for electronic communications   
+                                      markets for electronic communications networks networks and services. Wholesale measures      
+                                      and services. Measures concerning the          ensuring the inclusion of end-user data (both  
+                                      inclusion of end-user data (held by            fixed and mobile) in databases should comply   
+                                      undertakings that assign telephone numbers to  with the safeguards for the protection of      
+                                      subscribers) in databases should comply with   personal data, including Article 12 of         
+                                      the safeguards for the protection of personal  Directive 2002/58/EC. The cost-oriented supply 
+                                      data, including Article 12 of                  of that data to service providers, with the    
+                                      Directive 2002/58/EC (Directive on privacy and possibility for Member States to establish a   
+                                      electronic communications). The cost-oriented  centralised mechanism for providing            
+                                      supply of that data for the purposes of        comprehensive aggregated information to        
+                                      publicly available directory and directory     directory providers, and the provision of      
+                                      enquiry services should be in place in order   network access in reasonable and transparent   
+                                      to ensure that end-users benefit fully from    conditions, should be in place in order to     
+                                      reasonable and transparent competitive         ensure that end users benefit fully from       
+                                      conditions.                                    competition, with the ultimate aim of enabling 
+                                                                                     the removal of retail regulation from these    
+                                                                                     services and the provision of offers of        
+                                                                                     directory services under reasonable and        
+                                                                                     transparent conditions.                        
+
+                                                                                                                                                                Or. en
+
+   Amendement  120
+
+   Bernadette Vergnaud, Cristian Silviu Busoi, Heide Ru:hle
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 32
+
+                                                                                     
+                                      Position commune du Conseil                    Amendement                                     
+                                      (32) Member States should ensure that          (32) Member States should ensure that          
+                                      undertakings providing end-users with an       undertakings providing end users with an       
+                                      electronic communications service designed for electronic communications service for          
+                                      originating calls through a number or numbers  originating calls through a number or numbers  
+                                      in a national telephone numbering plan provide in a national telephone numbering plan provide 
+                                      access to emergency services with such         reliable and accurate access to emergency      
+                                      accuracy and reliability as is technically     services, taking into account possible lack of 
+                                      feasible for that electronic communications    access in areas not covered by mobile          
+                                      service. Network-independent service providers networks. Network-independent undertakings may 
+                                      may not have control over networks and may not not have control over networks and may not be  
+                                      be able to ensure that emergency calls made    able to ensure that the emergency calls made   
+                                      through their service are routed with the same through their service are routed with the same 
+                                      reliability as traditional integrated          reliability as traditional integrated          
+                                      telephone service providers, as they may not   telephone service providers, as they may not   
+                                      be able to guarantee service availability,     be able to guarantee service availability,     
+                                      given that problems related to infrastructure  given that problems related to the             
+                                      are not under their control. Once              infrastructure are not under the direct        
+                                      internationally-recognised standards ensuring  control of these undertakings.  Once           
+                                      accurate and reliable routing and connection   internationally-recognized standards ensuring  
+                                      to the emergency services are in place,        accurate, reliable routing and connection to   
+                                      network-independent service providers should   the emergency services are in place, all       
+                                      also fulfil the obligations related to access  network-independent service providers should   
+                                      to emergency services at a level comparable to also fulfil the obligations related to access  
+                                      that required of other undertakings.           to emergency services at a level comparable to 
+                                                                                     that required of other undertakings.           
+
+                                                                                                                                                                Or. en
+
+   Amendement  121
+
+   Bernadette Vergnaud, Heide Ru:hle
+
+   Position commune du Conseil - acte modificatif
+
+   Recital 38
+
+                                                                                  
+                                      Position commune du Conseil                 Amendement                                        
+                                      (38) Legal "must-carry" obligations may be  (38) Legal "must-carry" obligations may be        
+                                      applied to specified radio and television   applied to specified radio and audiovisual media  
+                                      broadcast channels and complementary        services and complementary services supplied by a 
+                                      services supplied by a specified media      specified media service provider. Audiovisual     
+                                      service provider. Member States should      media services are defined in Directive           
+                                      provide a clear justification for the "must 2007/65/EC of the European Parliament and of the  
+                                      carry" obligations in their national law so Council of 11 December 2007 amending Council      
+                                      as to ensure that such obligations are      Directive 89/552/EEC on the coordination of       
+                                      transparent, proportionate and properly     certain provisions laid down by law, regulation   
+                                      defined. In that regard, "must carry" rules or administrative action in Member States         
+                                      should be designed in a way which provides  concerning the pursuit of television broadcasting 
+                                      sufficient incentives for efficient         activities. Member States should provide a clear  
+                                      investment in infrastructure. "Must carry"  justification for the "must carry" obligations so 
+                                      rules should be periodically reviewed in    as to ensure that such obligations are            
+                                      order to keep them up-to-date with          transparent, proportionate and properly defined.  
+                                      technological and market evolution and in   In that regard, "must carry" rules should be      
+                                      order to ensure that they continue to be    designed in a way which provides sufficient       
+                                      proportionate to the objectives to be       incentives for efficient investment in            
+                                      achieved. Complementary services include,   infrastructure.  "Must carry" rules should be     
+                                      but are not limited to, services designed   periodically reviewed in order to keep them       
+                                      to improve accessibility for end-users with up-to-date with technological and market          
+                                      disabilities, such as videotext,            evolution in order to ensure that they continue   
+                                      subtitling, audio description and sign      to be proportionate to the objectives to be       
+                                      language.                                   achieved.  Complementary services include, but    
+                                                                                  are not limited to, services designed to improve  
+                                                                                  accessibility for end-users with disabilities,    
+                                                                                  such as videotext, subtitling, audio description  
+                                                                                  and sign language.                                
+
+                                                                                                                                                                Or. en
+
+   Amendement  122
+
+   Bernadette Vergnaud, Cristian Silviu Busoi, Heide Ru:hle
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 1
+
+   Directive 2002/22/EC
+
+   Article 1 - paragraph 1
+
+                                                                                   
+                                      Position commune du Conseil                  Amendement                                       
+                                      1. Within the framework of Directive         1. Within the framework of Directive 2002/21/EC  
+                                      2002/21/EC (Framework Directive), this       (Framework Directive), this Directive concerns   
+                                      Directive concerns the provision of          the provision of electronic communications       
+                                      electronic communications networks and       networks and services to end-users. The aim is   
+                                      services to end-users. The aim is to ensure  to ensure the availability throughout the        
+                                      the availability throughout the Community of Community of good quality publicly available     
+                                      good-quality publicly available services     services through effective competition and       
+                                      through effective competition and choice and choice and to deal with circumstances in which   
+                                      to deal with circumstances in which the      the needs of end users are not satisfactorily    
+                                      needs of end-users are not satisfactorily    met by the market. This Directive also includes  
+                                      met by the market. The Directive also        provisions concerning consumer premises terminal 
+                                      includes provisions concerning certain       equipment, with particular attention being given 
+                                      aspects of terminal equipment intended to    to terminal equipment for users with special     
+                                      facilitate access for disabled end-users.    needs, including the disabled and the elderly.   
+
+                                                                                                                                                                Or. en
+
+   Amendement  123
+
+   Bernadette Vergnaud, Heide Ru:hle
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 2 - point (b)
+
+   Directive 2002/22/EC
+
+   Article 2 - point (c)
+
+                                                                                 
+                                      Position commune du Conseil                Amendement                                         
+                                      (c) "publicly available telephone service" (c) "publicly available telephone service" means a 
+                                      means a service made available to the      service available to the public for originating    
+                                      public for originating and receiving,      and/or receiving, directly or indirectly, national 
+                                      directly or indirectly, national or        and/or international calls and other means of      
+                                      national and international calls through a communication specifically intended for disabled   
+                                      number or numbers in a national or         users using text relay or total conversation       
+                                      international telephone numbering plan;    services through a number or numbers in a national 
+                                                                                 or international telephone numbering plan;         
+
+                                                                                                                                                                Or. en
+
+   Amendement  124
+
+   Malcolm Harbour
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 2 - point (c)
+
+   Directive 2002/22/EC
+
+   Article 2 - point (e)
+
+                                                          
+                                      Position commune du Amendement                                                                
+                                      Conseil             
+                                      point (e) shall be  point (e) shall be replaced by the following:                             
+                                      deleted;            
+                                                          "(e) "traffic management policies" means the procedures put in place by   
+                                                          the provider of a public electronic communications service or network in  
+                                                          order to measure and control traffic on a network link so as to avoid     
+                                                          filling the link to capacity or overfilling the link, which might result  
+                                                          in network congestion and poor performance.";                             
+
+                                                                                                                                                                Or. en
+
+   Amendement  125
+
+   Eva-Britt Svensson
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 20 - paragraph 1 - point (b)
+
+                                                                               
+                                      Position commune du Conseil              Amendement                                           
+                                      (b) the services provided, including in  (b) the services provided, including in particular:  
+                                      particular,                              
+                                      - information on the provider's traffic  - information on the traffic management policies     
+                                      management policies,                     operated by the undertaking such that the subscriber 
+                                                                               is able to make an informed decision as to whether   
+                                                                               to purchase the service, and/or, where necessary,    
+                                                                               adjust their behaviour, deactivate the service,      
+                                                                               alter the service criteria or switch networks.       
+                                                                               Operators shall, where necessary, disclose specific  
+                                                                               actions included in the traffic management policy,   
+                                                                               - whether or not access to emergency services and    
+                                                                               caller location information are being provided       
+                                                                               and/or any limitations for provision of emergency    
+                                                                               services under Article 26,                           
+                                      - the minimum service quality levels     - the minimum service quality levels offered, namely 
+                                      offered, namely the time for the initial the time for the initial connection and, where       
+                                      connection and, where appropriate, other appropriate, other quality of service parameters, as 
+                                      quality of service parameters, as        defined by the national regulatory authorities,      
+                                      defined by the national regulatory       
+                                      authorities,                             
+                                      - the types of maintenance service       - the types of maintenance service offered and       
+                                      offered and customer support services    customer support services provided, as well as the   
+                                      provided, as well as the means of        means of contacting these services,                  
+                                      contacting these services,               
+                                      - any restrictions imposed by the        - any restrictions imposed by the provider on the    
+                                      provider on the use of terminal          use of terminal equipment supplied;                  
+                                      equipment supplied;                      
+
+                                                                                                                                                                Or. en
+
+   Amendement  126
+
+   Jacques Toubon
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 20 - paragraph 1 - point (b) - indent 1
+
+                                                                      
+                                      Position commune du Conseil     Amendement                                                    
+                                      - information on the provider's - information on any relevant limitations imposed by the      
+                                      traffic management policies,    undertaking, in accordance with national law, on a            
+                                                                      subscriber's ability to access, use or distribute information 
+                                                                      or run applications or services,                              
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   What is relevant for the functioning of the retail market is transparent information on the nature of the retail service in terms of restrictions of access to
+   content and applications. The Council proposition to provide information about changes to the "traffic management policies" of operators is not meeting the actual
+   information requirement of customers and as such is both too broad and not helpful and not relevant for end-users.
+
+   Amendement  127
+
+   Bernadette Vergnaud, Heide Ru:hle
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 20 - paragraph 1 - point (b)
+
+                                                                                
+                                      Position commune du Conseil               Amendement                                          
+                                      (b) the services provided, including in   (b) the services provided, including in particular, 
+                                      particular,                               
+                                                                                - whether or not reliable and accurate access to    
+                                                                                emergency services and caller location information  
+                                                                                is being provided and/or any limitations for        
+                                                                                provision of emergency services under Article 26    
+                                                                                and/or the possible lack of access in areas not     
+                                                                                covered by mobile networks,                         
+                                      - information on the provider's traffic   - information on any limitations regarding access   
+                                      management policies,                      to and/or use of services and applications,         
+                                                                                including information on any traffic management     
+                                                                                policies which are essential to prevent degradation 
+                                                                                of service or slowing of traffic over networks and  
+                                                                                on how these may impact on the delivery of the      
+                                                                                service,                                            
+                                      - the minimum service quality levels      - the minimum service quality levels offered,       
+                                      offered, namely the time for the initial  namely the time for the initial connection and,     
+                                      connection and, where appropriate, other  where appropriate, other quality of service         
+                                      quality of service parameters, as defined parameters, as defined by the national regulatory   
+                                      by the national regulatory authorities,   authorities,                                        
+                                      - the types of maintenance service        - the types of maintenance service offered and      
+                                      offered and customer support services     customer support services provided, as well as the  
+                                      provided, as well as the means of         means of contacting these services,                 
+                                      contacting these services,                
+                                      - any restrictions imposed by the         - any restrictions imposed by the provider on the   
+                                      provider on the use of terminal equipment use of terminal equipment supplied;                 
+                                      supplied;                                 
+
+                                                                                                                                                                Or. en
+
+   Amendement  128
+
+   Malcolm Harbour
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 20 - paragraph 1 - point (b)
+
+                                                                                     
+                                      Position commune du Conseil                    Amendement                                     
+                                      b) the services provided, including in         (b) the services provided, including in        
+                                      particular,                                    particular                                     
+                                                                                     - whether or not access to emergency services  
+                                                                                     and caller location information is being       
+                                                                                     provided and/or any limitations for provision  
+                                                                                     of emergency services under Article 26,        
+                                      - information on the provider's traffic        - information on any other limitations         
+                                      management policies,                           regarding access to and/or use of services and 
+                                                                                     applications, where allowed under national     
+                                                                                     law,                                           
+                                      - the minimum service quality levels offered,  - the minimum service quality levels offered,  
+                                      namely the time for the initial connection     namely the time for the initial connection     
+                                      and, where appropriate, other quality of       and, where appropriate, other quality of       
+                                      service parameters, as defined by the national service parameters, as defined by the national 
+                                      regulatory authorities,                        regulatory authorities,                        
+                                                                                     - information on any traffic management        
+                                                                                     policies and on how these may impact on        
+                                                                                     service quality,                               
+                                      - the types of maintenance service offered and - the types of maintenance service offered and 
+                                      customer support services provided, as well as customer support services provided, as well as 
+                                      the means of contacting these services,        the means of contacting these services,        
+                                      - any restrictions imposed by the provider on  - any restrictions imposed by the provider on  
+                                      the use of terminal equipment supplied;        the use of terminal equipment supplied;        
+
+                                                                                                                                                                Or. en
+
+   Amendement  129
+
+   Eva-Britt Svensson
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 21 - paragraph 1
+
+                                                                                 
+                                      Position commune du Conseil                Amendement                                         
+                                      1. Member States shall ensure that         1. Member States shall ensure that undertakings    
+                                      national regulatory authorities are able   providing connection to a public electronic        
+                                      to oblige undertakings providing           communications network and/or electronic           
+                                      electronic communications networks and/or  communications services publish transparent,       
+                                      services to publish transparent,           comparable and up-to-date information on traffic   
+                                      comparable, adequate and up-to-date        management policies, applicable prices and tariffs 
+                                      information, as set out in Annex II, on    and any charges due on termination of a contract   
+                                      applicable prices and tariffs and standard and information on standard terms and conditions   
+                                      terms and conditions in respect of access  in respect of access to, and use of, services      
+                                      to, and use of, services provided by them  provided by them to end-users and consumers in     
+                                      to end-users and consumers. National       accordance with Annex II. Such information shall   
+                                      regulatory authorities may specify         be published in a clear, comprehensive and easily  
+                                      additional requirements regarding the form accessible form and should include when and under  
+                                      in which such information is published to  what circumstances traffic management policies are 
+                                      ensure transparency, comparability,        implemented, and the criteria and rules            
+                                      clarity and accessibility for the benefit  implemented by the operator for managing traffic,  
+                                      of consumers.                              including the thresholds that will trigger changes 
+                                                                                 in the users' experience of the services. National 
+                                                                                 regulatory authorities may specify additional      
+                                                                                 requirements regarding the form in which such      
+                                                                                 information is to be published.                    
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   To clarify the concept of transparency and establish a common understanding of  what it might mean in the context of the new telecommunications environment and the
+   implementation by network operators of `traffic management systems' as defined in Recital 22a (new).
+
+   Amendement  130
+
+   Malcolm Harbour
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 21 - paragraph 3
+
+                                                                                     
+                                      Position commune du Conseil                    Amendement                                     
+                                      3. Member States shall ensure that national    3. Member States shall ensure that national    
+                                      regulatory authorities are able to oblige      regulatory authorities are able to oblige      
+                                      undertakings providing electronic              undertakings providing connection to a public  
+                                      communications services to inter alia:         electronic communications network and/or       
+                                                                                     electronic communications services to inter    
+                                                                                     alia:                                          
+                                      (a) provide applicable tariff information to   (a) provide applicable tariff information to   
+                                      subscribers regarding any number or service    subscribers regarding any number or service    
+                                      subject to particular pricing conditions; with subject to particular pricing conditions; with 
+                                      respect to individual categories of services,  respect to individual categories of services,  
+                                      national regulatory authorities may require    national regulatory authorities may require    
+                                      such information to be provided immediately    such information to be provided immediately    
+                                      prior to connecting the call;                  prior to connecting the call;                  
+                                                                                     (aa) regularly remind subscribers of any lack  
+                                                                                     of reliable access to emergency services or    
+                                                                                     caller location information in the service     
+                                                                                     they have subscribed to;                       
+                                      (b) inform subscribers of any change to the    (b)  inform subscribers of any change to       
+                                      provider's traffic management policies;        limitations regarding access to and/or use of  
+                                                                                     services and applications, where allowed under 
+                                                                                     national law;                                  
+                                                                                     (ba) provide information on any traffic        
+                                                                                     management policies and on how these may       
+                                                                                     impact on service quality;                     
+                                      (c) inform subscribers of their right to       (c) inform subscribers of their right to       
+                                      determine whether or not to include their      determine whether or not to include their      
+                                      personal data in a directory, and of the types personal data in a directory, and of the types 
+                                      of data concerned, in accordance with Article  of data concerned, in accordance with Article  
+                                      12 of Directive 2002/58/EC (Directive on       12 of Directive 2002/58/EC (Directive on       
+                                      privacy and electronic communications); and    privacy and electronic communications); and    
+                                      (d) regularly inform disabled subscribers of   (d) regularly inform disabled subscribers of   
+                                      details of products and services designed for  details of products and services designed for  
+                                      them.                                          them.                                          
+                                      If deemed appropriate, national regulatory     If deemed appropriate, national regulatory     
+                                      authorities may promote self- or co-regulatory authorities may promote self- or co-regulatory 
+                                      measures prior to imposing any obligation.     measures prior to imposing any obligation.     
+
+                                                                                                                                                                Or. en
+
+   Amendement  131
+
+   Eva-Britt Svensson
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 21 - paragraph 3
+
+                                                                                    
+                                      Position commune du Conseil                   Amendement                                      
+                                      3. Member States shall ensure that national   3. Member States shall ensure that national     
+                                      regulatory authorities are able to oblige     regulatory authorities are able to oblige       
+                                      undertakings providing electronic             undertakings providing connection to a public   
+                                      communications services to inter alia:        electronic communications network and/or        
+                                                                                    electronic communications services to inter     
+                                                                                    alia:                                           
+                                      (a) provide applicable tariff information to  (a) provide applicable tariff information to    
+                                      subscribers regarding any number or service   subscribers regarding any number or service     
+                                      subject to particular pricing conditions;     subject to particular pricing conditions; with  
+                                      with respect to individual categories of      respect to individual categories of services,   
+                                      services, national regulatory authorities may national regulatory authorities may require     
+                                      require such information to be provided       such information to be provided immediately     
+                                      immediately prior to connecting the call;     prior to connecting the call;                   
+                                      (b) inform subscribers of any change to the   (b)  inform subscribers of the provider's       
+                                      provider's traffic management policies;       traffic management policies, and any change     
+                                                                                    thereto, so that subscribers are able to make   
+                                                                                    an informed decision as to whether to to        
+                                                                                    purchase the service, and/or, where necessary,  
+                                                                                    adjust their behaviour, deactivate the service, 
+                                                                                    alter the service criteria or switch networks.  
+                                                                                    Operators shall, where necessary, disclose      
+                                                                                    specific actions included in the traffic        
+                                                                                    management policy;                              
+                                                                                    (ba) regularly remind subscribers of any lack   
+                                                                                    of reliable access to emergency services or     
+                                                                                    caller location information in the service to   
+                                                                                    which they have subscribed;                     
+                                      (c) inform subscribers of their right to      (c) inform subscribers of their right to        
+                                      determine whether or not to include their     determine whether or not to include their       
+                                      personal data in a directory, and of the      personal data in a directory, and of the types  
+                                      types of data concerned, in accordance with   of data concerned, in accordance with Article   
+                                      Article 12 of Directive 2002/58/EC (Directive 12 of Directive 2002/58/EC (Directive on        
+                                      on privacy and electronic communications);    privacy and electronic communications); and     
+                                      and                                           
+                                      (d) regularly inform disabled subscribers of  (d) regularly inform disabled subscribers of    
+                                      details of products and services designed for details of products and services designed for   
+                                      them.                                         them.                                           
+                                      If deemed appropriate, national regulatory    If deemed appropriate, national regulatory      
+                                      authorities may promote self- or              authorities may promote self- or co-regulatory  
+                                      co-regulatory measures prior to imposing any  measures prior to imposing any obligation.      
+                                      obligation.                                   
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   Telecommunications  framework law concerns the regulation of network operators and providers of electronic communications services, and not the regulationof user
+   behaviour. This directive concerns the rights of users and citizens in respect of the purchase of services from such operators.  The regulators task is to ensure
+   the accountability of the operators.
+
+   Amendement  132
+
+   Jacques Toubon
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 21 - paragraph 3
+
+                                                                                     
+                                      Position commune du Conseil                    Amendement                                     
+                                      3. Member States shall ensure that national    3. Member States shall ensure that national    
+                                      regulatory authorities are able to oblige      regulatory authorities are able to oblige      
+                                      undertakings providing electronic              undertakings providing connection to a public  
+                                      communications services to inter alia:         electronic communications network and/or       
+                                                                                     electronic communications services to inter    
+                                                                                     alia:                                          
+                                      (a) provide applicable tariff information to   (a) provide applicable tariff information to   
+                                      subscribers regarding any number or service    subscribers regarding any number or service    
+                                      subject to particular pricing conditions; with subject to particular pricing conditions; with 
+                                      respect to individual categories of services,  respect to individual categories of services,  
+                                      national regulatory authorities may require    national regulatory authorities may require    
+                                      such information to be provided immediately    such information to be provided immediately    
+                                      prior to connecting the call;                  prior to connecting the call;                  
+                                      (b) inform subscribers of any change to the    (b) inform subscribers of any change to any    
+                                      provider's traffic management policies;        relevant limitations imposed by the            
+                                                                                     undertaking, in accordance with national law,  
+                                                                                     on a subscriber's ability to access, use or    
+                                                                                     distribute information or run applications or  
+                                                                                     services;                                      
+                                      (c) inform subscribers of their right to       (c) inform subscribers of their right to       
+                                      determine whether or not to include their      determine whether or not to include their      
+                                      personal data in a directory, and of the types personal data in a directory, and of the types 
+                                      of data concerned, in accordance with Article  of data concerned, in accordance with Article  
+                                      12 of Directive 2002/58/EC (Directive on       12 of Directive 2002/58/EC (Directive on       
+                                      privacy and electronic communications); and    privacy and electronic communications); and    
+                                      (d) regularly inform disabled subscribers of   (d) regularly inform disabled subscribers of   
+                                      details of products and services designed for  details of products and services designed for  
+                                      them.                                          them.                                          
+                                      If deemed appropriate, national regulatory     If deemed appropriate, national regulatory     
+                                      authorities may promote self- or co-regulatory authorities may promote self- or co-regulatory 
+                                      measures prior to imposing any obligation.     measures prior to imposing any obligation.     
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   What is relevant for the functioning of the retail market is transparent information on the nature of the retail service in terms of restrictions of access to
+   content and applications. The Council proposition to provide information about changes to the "traffic management policies" of operators is not meeting the actual
+   information requirement of customers and as such is both too broad and not helpful and not relevant for end-users.
+
+   Amendement  133
+
+   Bernadette Vergnaud, Cristian Silviu Busoi, Heide Ru:hle
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 21 - paragraph 3
+
+                                                                                       
+                                      Position commune du Conseil                      Amendement                                   
+                                      3. Member States shall ensure that national      3. Member States shall ensure that national  
+                                      regulatory authorities are able to oblige        regulatory authorities are able to oblige    
+                                      undertakings providing electronic communications undertakings providing connection to a       
+                                      services to inter alia:                          public electronic communications network     
+                                                                                       and/or electronic communications services to 
+                                                                                       inter alia:                                  
+                                      (a) provide applicable tariff information to     (a) provide applicable tariff information to 
+                                      subscribers regarding any number or service      subscribers regarding any number or service  
+                                      subject to particular pricing conditions; with   subject to particular pricing conditions;    
+                                      respect to individual categories of services,    with respect to individual categories of     
+                                      national regulatory authorities may require such services, national regulatory authorities    
+                                      information to be provided immediately prior to  may require such information to be provided  
+                                      connecting the call;                             immediately prior to connecting the call;    
+                                                                                       (aa) regularly remind subscribers of any     
+                                                                                       lack of reliable access to emergency         
+                                                                                       services or caller location information in   
+                                                                                       the service to which they have subscribed;   
+                                      (b) inform subscribers of any change to the      (b) inform subscribers of any relevant       
+                                      provider's traffic management policies;          change to the provider's traffic management  
+                                                                                       policies and subsequent possible limitations 
+                                                                                       of access to applications or services;       
+                                      (c) inform subscribers of their right to         (c) inform subscribers of their right to     
+                                      determine whether or not to include their        determine whether or not to include their    
+                                      personal data in a directory, and of the types   personal data in a directory, and of the     
+                                      of data concerned, in accordance with Article 12 types of data concerned, in accordance with  
+                                      of Directive 2002/58/EC (Directive on privacy    Article 12 of Directive 2002/58/EC           
+                                      and electronic communications); and              (Directive on privacy and electronic         
+                                                                                       communications); and                         
+                                      (d) regularly inform disabled subscribers of     (d) regularly inform disabled subscribers of 
+                                      details of products and services designed for    details of products and services designed    
+                                      them.                                            for them.                                    
+                                      If deemed appropriate, national regulatory       If deemed appropriate, national regulatory   
+                                      authorities may promote self- or co-regulatory   authorities may promote self  or co          
+                                      measures prior to imposing any obligation.       regulatory measures prior to imposing any    
+                                                                                       obligation.                                  
+
+                                                                                                                                                                Or. en
+
+   Amendement  134
+
+   Malcolm Harbour
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 21 - paragraph 4 - introductory wording
+
+                                                                                 
+                                      Position commune du Conseil                Amendement                                         
+                                      4. Member States may require that          4. Member States may require that undertakings     
+                                      undertakings referred to in paragraph 3    referred to in paragraph 3 distribute public       
+                                      distribute public interest information     interest information to existing and new           
+                                      free of charge to existing and new         subscribers, where appropriate, through the same   
+                                      subscribers, where appropriate. In such a  means as those ordinarily used by the undertakings 
+                                      case, that information shall be provided   for their communications with subscribers and free 
+                                      by the relevant public authorities in a    of charge. In such a case, that information shall  
+                                      standardised format and shall, inter alia, be provided by the relevant public authorities in  
+                                      cover the following topics:                a standardised format and shall, inter alia, cover 
+                                                                                 the following topics:                              
+
+                                                                                                                                                                Or. en
+
+   Amendement  135
+
+   Eva-Britt Svensson
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 22 - paragraph 1
+
+                                                                             
+                                      Position commune du Conseil            Amendement                                             
+                                      1. Member States shall ensure that     1. Member States shall ensure that national regulatory 
+                                      national regulatory authorities are,   authorities are, after taking account of the views of  
+                                      after taking account of the views of   interested parties, able to require undertakings that  
+                                      interested parties, able to require    provide publicly available electronic communications   
+                                      undertakings that provide publicly     networks and/or services to publish equivalent,        
+                                      available electronic communications    adequate and up-todate information for end-users on    
+                                      networks and/or services to publish    the quality of their services and measures taken to    
+                                      comparable, adequate and up-to-date    ensure comparable access for disabled end-users and to 
+                                      information for end-users on the       disclose traffic management policies. That information 
+                                      quality of their services and measures shall, on request, be supplied to the national         
+                                      taken to ensure comparable access for  regulatory authority in advance of its publication.    
+                                      disabled end-users. That information   Member States shall ensure that national regulatory    
+                                      shall, on request, be supplied to the  authorities are able to take appropriate measures in   
+                                      national regulatory authority in       cases where operators fail to disclose their traffic   
+                                      advance of its publication.            management policies or where the traffic management    
+                                                                             policy does not respect the rights of users to access  
+                                                                             the content, applications and services of their        
+                                                                             choice. National regulatory authorities shall          
+                                                                             additionally ensure that there is a facility in place  
+                                                                             by which users can monitor and identify any problems   
+                                                                             created by traffic management policies in cases where  
+                                                                             disputes may arise.                                    
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   The Electronic Communications Framework requires safeguards to be in place to ensure that users can freely access and use the content, services and applications of
+   their choice, at the same time as allowing operators the necessary flexibility to address congestion during peak periods through network management practices that
+   are non-discriminatory. Regulators should be able to look at whether traffic management policies are intended to support a commercial interest, in order to assess
+   whether abusive behaviour is taking place, and take appropriate action.
+
+   Amendement  136
+
+   Erika Mann, Edit Herczog
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 22 - paragraph 3
+
+                                                                                       
+                                      Position commune du Conseil                      Amendement                                   
+                                      3. In order to prevent the degradation of        3. In order to address unjustified           
+                                      service and the hindering or slowing down of     degradation of service and hindering or      
+                                      traffic over networks, Member States shall       slowing of traffic over networks, Member     
+                                      ensure that national regulatory authorities are  States shall ensure that national regulatory 
+                                      able to set minimum quality of service           authorities are able to set minimum quality  
+                                      requirements on an undertaking or undertakings   of service requirements on an undertaking or 
+                                      providing public communications networks.        undertakings providing public communications 
+                                                                                       networks.                                    
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   The current EU legal framework and the new rules on transparency proposed in this Directive in principle already provide for sufficient safeguards to ensure the
+   ability of end-users to access content and applications of their choice. In particular, a competitive market for retail broadband access - where necessary ensured
+   by wholesale ex-ante access obligations under Directive 2002/19/EC - and transparency requirements regarding restrictions of quality of service under this
+   Directive will penalise any undue restrictions of users' ability to access the content of their choice. If NRAs are nevertheless given the power to intervene in
+   QoS, it should be clarified that this can be done only to address observed harmful practices that are not justified by legitimate interests of network management.
+
+   Amendement  137
+
+   Zita Plestinska, Andreas Schwab
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 22 - paragraph 3
+
+                                                                                       
+                                      Position commune du Conseil                      Amendement                                   
+                                      3. In order to prevent the degradation of        3. In order to address  unjustified          
+                                      service and the hindering or slowing down of     degradation of service and hindering or      
+                                      traffic over networks, Member States shall       slowing of traffic over networks, Member     
+                                      ensure that national regulatory authorities are  States shall ensure that national regulatory 
+                                      able to set minimum quality of service           authorities are able to set minimum quality  
+                                      requirements on an undertaking or undertakings   of service requirements on an undertaking or 
+                                      providing public communications networks.        undertakings providing public communications 
+                                                                                       networks.                                    
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   The current EU legal framework and the new rules on transparency proposed in this Directive in principle already provide for sufficient safeguards to ensure the
+   ability of end-users to access content and applications of their choice in a competitive market for retail broadband access services. The amendment clarifies that
+   if NRAs are given the power to intervene in quality of service, they should only address actual harmful practices that are not justified by legitimate interests of
+   network management to not unduly limit innovation in the network.
+
+   Amendement  138
+
+   Syed Kamall
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 22 - paragraph 3
+
+                                                                                       
+                                      Position commune du Conseil                      Amendement                                   
+                                      3. In order to prevent the degradation of        3. In order to address unjustified           
+                                      service and the hindering or slowing down of     degradation of service and hindering or      
+                                      traffic over networks, Member States shall       slowing of traffic over networks, Member     
+                                      ensure that national regulatory authorities are  States shall ensure that national regulatory 
+                                      able to set minimum quality of service           authorities are able to set minimum quality  
+                                      requirements on an undertaking or undertakings   of service requirements on an undertaking or 
+                                      providing public communications networks.        undertakings providing public communications 
+                                                                                       networks.                                    
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   The current EU legal framework and the new rules on transparency proposed in this Directive in principle already provide for sufficient safeguards to ensure the
+   ability of end-users to access content and applications of their choice. In particular, a competitive market for retail broadband access - where necessary ensured
+   by wholesale ex-ante access obligations under Directive 2002/19/EC - and transparency requirements regarding restrictions of quality of service under this
+   Directive will penalise any undue restrictions of users' ability to access the content of their choice. If NRAs are nevertheless given the power to intervene in
+   QoS, it should be clarified that this can be done only to address observed harmful practices that are not justified by legitimate interests of network management.
+
+   Amendement  139
+
+   Bernadette Vergnaud, Cristian Silviu Busoi, Heide Ru:hle
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 22 - paragraph 3 a (new)
+
+                                                          
+                                      Position commune du Amendement                                                                
+                                      Conseil             
+                                                          3a. To ensure quality of services, operators may use traffic management   
+                                                          policies, namely the procedures put in place by the provider in order to  
+                                                          measure and control traffic on a network link so as to avoid filling the  
+                                                          link to capacity or overfilling the link, which would result in network   
+                                                          congestion and poor performance.                                          
+
+                                                                                                                                                                Or. en
+
+   Amendement  140
+
+   Cristian Silviu Busoi
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 22 - paragraph 3 b (new)
+
+                                                                  
+                                      Position commune du Conseil Amendement                                                        
+                                                                  3b. These policies are deemed appropriate and reasonable as long  
+                                                                  as it can be proved that they are not anti-competitive and do not 
+                                                                  hinder the competitive development of the information society.    
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   This addition to the article brings some clarifications on what type of procedures are to be considered as appropriate traffic management policies. It provides an
+   important safeguard that traffic management policies are not underpinned by hidden commercial purposes of the network operators and do not constitute
+   anti-competitive behaviour. This way, the development of the information society in a competitive environment is encouraged.
+
+   Amendement  141
+
+   Bernadette Vergnaud, Heide Ru:hle
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 22 - paragraph 3 b (new)
+
+                                                          
+                                      Position commune du Amendement                                                                
+                                      Conseil             
+                                                          3b. Traffic management policies are deemed appropriate and reasonable as  
+                                                          long as it can be proved that they are not anti-competitive or do not     
+                                                          give preferential treatment to the services or applications of the        
+                                                          network operators or their commercial partners over the services and      
+                                                          applications of other providers.                                          
+
+                                                                                                                                                                Or. en
+
+   Amendement  142
+
+   Heide Ru:hle
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 13
+
+   Directive 2002/22/EC
+
+   Article 22 - paragraph 3 c (new)
+
+                                                          
+                                      Position commune du Amendement                                                                
+                                      Conseil             
+                                                          3c. The minimum quality of services requirements may oblige operators to  
+                                                          use traffic management policies, namely the procedures put in place by    
+                                                          the provider in order to measure and control traffic on a network link so 
+                                                          as to avoid filling the link to capacity or overfilling the link, which   
+                                                          would result in network congestion and poor performance.                  
+
+                                                                                                                                                                Or. en
+
+   Amendement  143
+
+   Bernadette Vergnaud
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 15 - point c
+
+   Directive 2002/22/EC
+
+   Article 25 - paragraph 3
+
+                                                                                             
+                                      Position commune du Conseil                            Amendement                             
+                                      3. Member States shall ensure that all end-users       3. Member States shall ensure that all 
+                                      provided with a publicly available telephone service   end-users provided with a publicly     
+                                      can access directory enquiry services. National        available telephone service can access 
+                                      regulatory authorities shall be able to impose         directory enquiry services and that    
+                                      obligations and conditions on undertakings that        operators controlling access to such   
+                                      control access of end-users for the provision of       services provide it on terms which are 
+                                      directory enquiry services in accordance with the      fair, reasonable, objective,           
+                                      provisions of Article 5 of Directive 2002/19/EC        non-discriminatory and transparent.    
+                                      (Access Directive). Such obligations and conditions    
+                                      shall be objective, proportionate, non-discriminatory  
+                                      and transparent.                                       
+
+                                                                                                                                                                Or. en
+
+   Amendement  144
+
+   Bernadette Vergnaud, Cristian Silviu Busoi, Heide Ru:hle
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 16
+
+   Directive 2002/22/EC
+
+   Article 26 - paragraph 5
+
+                                                                                            
+                                      Position commune du Conseil                           Amendement                              
+                                      5. Member States shall ensure that, to the extent     5. Member States shall ensure that      
+                                      technically feasible, undertakings concerned make     undertakings concerned make caller      
+                                      caller location information available free of charge  location information available free of  
+                                      to the authority handling emergency calls as soon as  charge to the authority handling        
+                                      the call reaches that authority. This applies to all  emergency calls as soon as the call     
+                                      calls to the single European emergency call number    reaches that authority. This applies to 
+                                      "112". Member States may extend this obligation to    all calls to the single European        
+                                      cover calls to national emergency numbers. Where      emergency call number "112". Member     
+                                      undertakings referred to in paragraph 2 wish to claim States may extend this obligation to    
+                                      that providing caller location information is not     cover calls to national emergency       
+                                      technically feasible, they shall bear the burden of   numbers.                                
+                                      proving this.                                         
+
+                                                                                                                                                                Or. en
+
+   Amendement  145
+
+   Bernadette Vergnaud, Heide Ru:hle
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 21
+
+   Directive 2002/22/EC
+
+   Article 31 - paragraph 1 - subparagraph 1
+
+                                                                                       
+                                      Position commune du Conseil                      Amendement                                   
+                                      1.Member States may impose reasonable "must      1. Member States may impose reasonable "must 
+                                      carry" obligations, for the transmission of      carry" obligations, for the transmission of  
+                                      specified radio and television broadcast         specified radio and audiovisual media        
+                                      channels and complementary services,             services and  complementary services,        
+                                      particularly accessibility services to enable    particularly accessibility services, on      
+                                      appropriate access for disabled end-users, on    undertakings under their jurisdiction        
+                                      undertakings under their jurisdiction providing  providing electronic communications networks 
+                                      electronic communications networks used for the  used for the distribution of radio or        
+                                      distribution of radio or television broadcast    audiovisual media services to the public     
+                                      channels to the public where a significant       where a significant number of end-users of   
+                                      number of end-users of such networks use them as such networks use them as their principal    
+                                      their principal means to receive radio and       means to receive radio and audiovisual media 
+                                      television broadcast channels. Such obligations  services. Such obligations shall only be     
+                                      shall only be imposed where they are necessary   imposed where they are necessary to meet     
+                                      to meet general interest objectives as clearly   general interest objectives as clearly and   
+                                      defined by each Member State and shall be        specifically defined by each Member State    
+                                      proportionate and transparent.                   and shall be proportionate and transparent.  
+
+                                                                                                                                                                Or. en
+
+   Amendement  146
+
+   Heide Ru:hle
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 21 a (new)
+
+   Directive 2002/22/EC
+
+   Article 32 a (new)
+
+                                                          
+                                      Position commune du Amendement                                                                
+                                      Conseil             
+                                                          (21a) the following Article shall be inserted:                            
+                                                          "Article 32a                                                              
+                                                          Access to content, services and applications                              
+                                                          Member States shall ensure that any restrictions to users' rights to      
+                                                          access content, services and applications, if they are necessary, shall   
+                                                          be implemented by appropriate measures, in accordance with the principles 
+                                                          of proportionality, effectiveness and dissuasiveness. These measures      
+                                                          shall not have the  effect of hindering the development of the            
+                                                          information society, in compliance with Directive 2000/31/EC, and shall   
+                                                          not conflict with citizens' fundamental rights, including the right to    
+                                                          privacy and the right to due process."                                    
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   Takes up Parliament's 1st reading; promotes fundamental principles and rights which should also be respected when it comes to electronic communications.
+
+   Amendement  147
+
+   Jacques Toubon
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 21 a (new)
+
+   Directive 2002/22/EC
+
+   Article 32 a (new)
+
+                                                          
+                                      Position commune du Amendement                                                                
+                                      Conseil             
+                                                          (21a) the following Article shall be inserted:                            
+                                                          "Article 32a                                                              
+                                                          Member States shall ensure that any restrictions on the rights of users   
+                                                          to access content, services and applications, if such restrictions are    
+                                                          necessary, are implemented by appropriate measures, in accordance with    
+                                                          the principles of proportionality, effectiveness and dissuasiveness. The  
+                                                          measures shall be aimed at enhancing the development of the information   
+                                                          society, in compliance with the EC legal order, and shall fully respect   
+                                                          the fundamental rights protected by the Community legal order, including  
+                                                          the right to privacy, the right to property, the right to due process and 
+                                                          the right to an effective remedy."                                        
+
+                                                                                                                                                                Or. en
+
+   Amendement  148
+
+   Eva-Britt Svensson
+
+   Position commune du Conseil - acte modificatif
+
+   Article 1 - point 22 - point b
+
+   Directive 2002/22/EC
+
+   Article 33 - paragraph 3
+
+                                                                                       
+                                      Position commune du Conseil                      Amendement                                   
+                                      3. Without prejudice to national rules in        3. Without prejudice to national rules in    
+                                      conformity with Community law promoting cultural conformity with Community law promoting      
+                                      and media policy objectives, such as cultural    cultural and media policy objectives, such   
+                                      and linguistic diversity and media pluralism,    as cultural and linguistic diversity and     
+                                      national regulatory authorities and other        media pluralism, national regulatory         
+                                      relevant authorities may promote cooperation     authorities and other relevant authorities   
+                                      between undertakings providing electronic        may promote cooperation between undertakings 
+                                      communications networks and/or services and      providing electronic communications networks 
+                                      sectors interested in the promotion of lawful    and/or services and sectors interested in    
+                                      content in electronic communication networks and the promotion of  content in electronic      
+                                      services. That cooperation may also include      communication networks and services. That    
+                                      coordination of the public interest information  cooperation may also include coordination of 
+                                      to be provided pursuant to Article 21(4)(a) and  the public interest information to be        
+                                      Article 20(1).                                   provided pursuant to Article 21(4)(a) and    
+                                                                                       Article 20(1).                               
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   The term "lawful content" implies a judgement whether copyright is breached or not. Such judgement lies outside the scope of the telecoms regulation since it is
+   not about copyright enforcement at all. "Promotion of content" on the other hand is a generic term which allows libraries, user generated content advocates, civil
+   society and traditional copyright holders to find common interests in the development of the information society in the cooperation envisaged in this amendment.
+
+   Amendement  149
+
+   Malcolm Harbour
+
+   Position commune du Conseil - acte modificatif
+
+   Article 2 - point 4 - point b
+
+   Directive 2002/58/EC
+
+   Article 4 - paragraph 4
+
+                                                                               
+                                      Position commune du Conseil              Amendement                                           
+                                      4. Member States shall ensure that the   4. Subject to any technical implementing measures    
+                                      competent national authority is able to  adopted under paragraph 4, the  competent national   
+                                      set detailed rules and, where necessary, authorities may adopt guidelines and,  where         
+                                      issue instructions concerning the        necessary, issue instructions concerning the         
+                                      circumstances in which notification of   circumstances in which  notification by providers of 
+                                      personal data breaches by providers of a personal data breaches is required and the format of 
+                                      publicly available electronic            and procedures for such notification. They shall     
+                                      communications service is necessary, the also monitor whether providers have complied with    
+                                      format applicable to such notification   their notification obligations under this paragraph  
+                                      and the manner in which the notification and impose appropriate sanctions in the event of a   
+                                      is to be made.                           failure to do so.                                    
+                                                                               Providers shall maintain an inventory of personal    
+                                                                               data breaches, comprising the facts surrounding such 
+                                                                               breaches, their effects and the remedial action      
+                                                                               taken, sufficient for the purpose of enabling the    
+                                                                               competent national authorities to verify compliance  
+                                                                               with the provisions of paragraph 3. The inventory    
+                                                                               shall only include the information necessary for     
+                                                                               this purpose.                                        
+
+                                                                                                                                                                Or. en
+
+   Amendement  150
+
+   Eva-Britt Svensson
+
+   Position commune du Conseil - acte modificatif
+
+   Article 2 - point 6 - point c
+
+   Directive 2002/58/EC
+
+   Article 6 - paragraph 7
+
+                                                                                
+                                      Position commune du Conseil               Amendement                                          
+                                      7. Traffic data may be processed to the   7. Traffic data  may  be collected, stored and used 
+                                      extent strictly necessary to ensure       in specific cases to the  extent strictly necessary 
+                                      network and information security, as      to ensure network and information security, as      
+                                      defined by Article 4(c) of                defined by Article 4(c) of Regulation (EC) No       
+                                      Regulation (EC) No 460/2004 of the        460/2004 of the European Parliament and of the      
+                                      European Parliament and of the Council of Council of 10 March 2004 establishing the European  
+                                      10 March 2004 establishing the European   Network and Information Security Agency. Traffic    
+                                      Network and Information Security Agency.  data stored pursuant to this paragraph must not be  
+                                                                                used for any other purpose and must be erased or    
+                                                                                made anonymous no later than seven days after its   
+                                                                                collection.                                         
+
+                                                                                                                                                                Or. en
+
+                                                                              Justification
+
+   The term "processing" covers "disclosure by transmission, dissemination and otherwise making available" of traffic data (see article 2(b) of Directive 95/46/EC)
+   and is too broad to meet the requirements of precision of law necessary to uphold the right to privacy (ART 8 ECHR) and the principle of proportionality. This
+   amendment is following recommendations of the European Data Protection Supervisor (EDPS).
+
+   Amendement  151
+
+   Malcolm Harbour
+
+   Position commune du Conseil - acte modificatif
+
+   Article 2 - point 7 a (new)
+
+   Directive 2002/58/EC
+
+   Article 15 - paragraph 1 b (new)
+
+                                                          
+                                      Position commune du Amendement                                                                
+                                      Conseil             
+                                                          (7a) in Article 15, the following paragraph shall be inserted:            
+                                                          "1b. Providers shall establish internal procedures for responding to      
+                                                          requests for access to users' personal data based on national provisions  
+                                                          adopted pursuant to paragraph 1. They shall provide the competent         
+                                                          national authority, on demand, with information on those procedures, the  
+                                                          number of requests received, the legal justification invoked and the      
+                                                          response by the provider."                                                
+
+                                                                                                                                                                Or. en
+
+   Amendement  152
+
+   Malcolm Harbour
+
+   Position commune du Conseil - acte modificatif
+
+   Annex I - Part A - point e b (new)
+
+                                                          
+                                      Position commune du Amendement                                                                
+                                      Conseil             
+                                                          (eb) Best advice                                                          
+                                                          i.e. the facility whereby an undertaking at least once a year clearly     
+                                                          communicates to subscribers who have requested the facility and consented 
+                                                          to the undertaking retaining the data necessary to provide it,            
+                                                          alternative lower-cost tariffs, if available, on the basis of usage       
+                                                          patterns for the previous twelve months.                                  
+
+                                                                                                                                                                Or. en

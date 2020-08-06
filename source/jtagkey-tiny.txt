@@ -1,0 +1,71 @@
+[[f>toc]]
+
++ About
+
+* Voltage support: 2.8V up to 5V
+
++ Price
+
+30EUR excl VAT
+
++ Lsusb
+
+[[code]]
+# lsusb
+Bus 001 Device 006: ID 0403:cff8 Future Technology Devices International, Ltd
+[[/code]]
+
++ Pictures
+
+[[gallery]]
+
++ Urjtag
+
+[[code]]
+root@warsaw /home/zoobab [2]# jtag 
+
+UrJTAG 0.8 #1067
+Copyright (C) 2002, 2003 ETC s.r.o.
+Copyright (C) 2007, 2008 Kolja Waschk and the respective authors
+
+UrJTAG is free software, covered by the GNU General Public License, and you are
+welcome to change it and/or distribute copies of it under certain conditions.
+There is absolutely no warranty for UrJTAG.
+
+WARNING: UrJTAG may damage your hardware!
+Type "quit" to exit, "help" for help.
+
+jtag> cable JTAGkey ftdi-mpsse 0403:cff8
+Initializing on FTDI device 0403:cff8
+jtag> detect
+Warning: TDO seems to be stuck at 1
+jtag>
+[[/code]]
+
+It seems the connection was not OK, so I rechecked the cables:
+
+[[code]]
+jtag> cable JTAGkey
+Connected to libftdi driver.
+jtag> detect
+IR length: 8
+Chain length: 1
+Device Id: 00010100011100010010000101111111 (0x000000001471217F)
+ Manufacturer: Broadcom
+ Part(0):         BCM4712
+ Stepping:     Ver 1
+ Filename:     /usr/share/urjtag/broadcom/bcm4712/bcm4712
+jtag>
+[[/code]]
+
++ Pinout
+
+Put the pinout here.
+
++ Problems
+
+It seems the GND pin on the connector is not well connected, so I took GND from the second row of female pins
+
++ Tested devices
+
+* WAP54Gv2

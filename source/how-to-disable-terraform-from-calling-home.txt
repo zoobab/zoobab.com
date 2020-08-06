@@ -1,0 +1,29 @@
++ Problem1
+
+Terraform is calling home each time you launch it, for example to check the plugins and updates.
+
+I don't think this is a sane thing to do, as you make your terraform installer dependent on the availability of the internet.
+
+I am running terraform in a disconnected from the internet setup, and it took me ages to find out how to disable this 'calling home' feature.
+
+The documention is pretty obscure and scarce regarding on how to do it.
+
++ Solution1
+
+Use the environment variable 'CHECKPOINT_DISABLE=1', like here:
+
+[[code]]
+$ CHECKPOINT_DISABLE=1 terraform init
+[[/code]]
+
++ Problem2
+
+Terraform is still calling home with the CHECKPOINT_DISABLE=1 variable if the plugins are not set to the right version specified in the .tf files.
+
++ Solution2
+
+The solution is to remove all the precise versions in your code. 
+
++ Links
+
+* https://github.com/hashicorp/terraform/issues/15943

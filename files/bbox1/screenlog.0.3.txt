@@ -1,0 +1,1149 @@
+Flash Checking  Passed.
+Unzipping code at 0x94000000 ... [ZIP 3] [ZIP 2] done
+In C_Entry() function ...
+install_exception 
+sys_irq_init() ...
+Unzip WEB image ...
+found signature: 78h 56h 34h 12h
+ulImgLens=1312337, LENGTH[3]-12=1769460
+length checking OK
+search_signature: image's lens = 1312768
+Unzipping from B0180800 to 95EF0000 ... done
+Uncompressed size = 770531
+Set GPIO
+##### _ftext      = 0x94000000
+##### _fdata      = 0x9442BB00
+##### __bss_start = 0x94509792
+##### end         = 0x953E41A0
+##### Backup Data from 0x9442BB00 to 0x954041A0~0x954E1E32 len 908434
+[INIT] System Log Pool startup ...
+[INIT] MTinitialize ..
+userclk_init() ...
+Runtime code version: 0.89.17
+System startup...
+[INIT] Memory COLOR 0, 1500000 bytes ..
+[INIT] Memory COLOR 1, 600000 bytes ..
+[INIT] Memory COLOR 2, 2028000 bytes ..
+DSL HAL Version: 06.00.01.00
+Ohio250 detected
+set dspfreq 250Mhz
+Ohio clockR
+eJU*U
+R&SIV
+ersion: 01A
+sizeof(struct III_Config_t) is 106756
+manu_id=007F chip_id=2249
+EON EN29LV160AB bottom boot 16-bit mode found
+!!! Invalid wireless channel range 0 ~ 0
+!!! Use default value 1 ~ 13
+backup_hwlan 1 1
+default route: 0.0.0.0
+BufferInit:
+BUF_HDR_SZ=48 BUF_ALIGN_SZ=8 BUFFER_OFFSET=112
+BUF_BUFSZ0=384 BUF_BUFSZ1=1872
+NUM_OF_B0=0 NUM_OF_B1=1800
+BUF_POOL0_SZ=0 BUF_POOL1_SZ=3456000
+sizeof(BUFFER0)=432,sizeof(BUFFER1)=1920
+*BUF0=0x9501c9cc *BUF1=0x94cd0dbc
+Altgn *BUF0=0x9501c9d0 *BUF1=0x94cd0dc0
+End at BUF0:0x9501c9d0, BUF1:0x9501c9c0
+BUF0[0]=0x9501c9d0 BUF1[0]=0x94cd0dc0
+buffer0 pointer init OK!
+buffer1 pointer init OK!
+[qm_lnk_init] CLOCKHZ=1000 ...
+[qm_lnk_init] add if 3 into QM link 0
+[qm_lnk_init] add if 4 into QM link 0
+[qm_lnk_init] add if 5 into QM link 0
+[qm_lnk_init] add if 6 into QM link 0
+[qm_lnk_init] add if 7 into QM link 0
+[qm_lnk_init] add if 8 into QM link 0
+[qm_lnk_init] add if 9 into QM link 0
+[qm_lnk_init] add if 10 into QM link 0
+[qm_lnk_init] add if 11 into QM link 0
+[qm_lnk_init] add if 12 into QM link 0
+[qm_lnk_init] add if 13 into QM link 0
+[qm_lnk_init] add if 14 into QM link 0
+[qm_cbq_enable] no QM attached
+[qm_cbq_detach] no QM is attached at link 0
+f=0/100000, ns_per_byte=65536000/100000
+New cls: id=0, bw=8080 ns/byte, maxd=0 ms,
+         maxb=32, minb=2, avgpktsz=250, maxpktsz=1802,
+         offtime=40, parent=0, borrow=0
+         pri=0, maxidle=31, minidle=-29123,
+         maxq=96, clsfg=17
+f=0/100000, ns_per_byte=4247781376/100000
+New cls: id=1, bw=808080 ns/byte, maxd=0 ms,
+         maxb=16, minb=1, avgpktsz=1802, maxpktsz=1802,
+         offtime=1441745, parent=953ccdb8, borrow=953ccdb8
+         pri=7, maxidle=384166, minidle=-2912323,
+         maxq=48, clsfg=21
+qm_cbq_attach(): cbqp->cbq_res=21
+f=0/100000, ns_per_byte=245104640/100000
+New cls: id=2, bw=8162 ns/byte, maxd=0 ms,
+         maxb=32, minb=4, avgpktsz=250, maxpktsz=1802,
+         offtime=166, parent=953ccdb8, borrow=953ccdb8
+         pri=0, maxidle=31, minidle=-29417,
+         maxq=96, clsfg=21
+f=0/100000, ns_per_byte=0/100000
+[qm_cbq_newcls] warning: bandwidth of the class may be low enough to cause INT overflow
+New cls: id=3, bw=1191722 ns/byte, maxd=0 ms,
+         maxb=16, minb=4, avgpktsz=250, maxpktsz=1802,
+         offtime=1212204, parent=953cb7b8, borrow=953cb7b8
+         pri=0, maxidle=0, minidle=-4294966,
+         maxq=96, clsfg=21
+f=0/100000, ns_per_byte=0/100000
+[qm_cbq_newcls] warning: bandwidth of the class may be low enough to cause INT overflow
+New cls: id=4, bw=1191722 ns/byte, maxd=0 ms,
+         maxb=16, minb=4, avgpktsz=250, maxpktsz=1802,
+         offtime=1212204, parent=953cb7b8, borrow=953cb7b8
+         pri=2, maxidle=0, minidle=-4294966,
+         maxq=48, clsfg=23
+f=0/100000, ns_per_byte=0/100000
+[qm_cbq_newcls] warning: bandwidth of the class may be low enough to cause INT overflow
+New cls: id=5, bw=1191722 ns/byte, maxd=0 ms,
+         maxb=16, minb=4, avgpktsz=250, maxpktsz=1802,
+         offtime=1212204, parent=953cb7b8, borrow=953cb7b8
+         pri=3, maxidle=0, minidle=-4294966,
+         maxq=48, clsfg=23
+f=0/100000, ns_per_byte=0/100000
+[qm_cbq_newcls] warning: bandwidth of the class may be low enough to cause INT overflow
+New cls: id=6, bw=1191722 ns/byte, maxd=0 ms,
+         maxb=16, minb=4, avgpktsz=250, maxpktsz=1802,
+         offtime=1212204, parent=953cb7b8, borrow=953cb7b8
+         pri=4, maxidle=0, minidle=-4294966,
+         maxq=48, clsfg=23
+f=0/100000, ns_per_byte=0/100000
+[qm_cbq_newcls] warning: bandwidth of the class may be low enough to cause INT overflow
+New cls: id=7, bw=1191722 ns/byte, maxd=0 ms,
+         maxb=16, minb=4, avgpktsz=250, maxpktsz=1802,
+         offtime=1212204, parent=953cb7b8, borrow=953cb7b8
+         pri=5, maxidle=0, minidle=-4294966,
+         maxq=48, clsfg=23
+f=0/100000, ns_per_byte=245104640/100000
+New cls: id=8, bw=8162 ns/byte, maxd=0 ms,
+         maxb=16, minb=4, avgpktsz=250, maxpktsz=1802,
+         offtime=166, parent=953cb7b8, borrow=953cb7b8
+         pri=7, maxidle=31, minidle=-29417,
+         maxq=48, clsfg=20
+CLOCKHZ=1000
+time = 08/01/2003, 00:00:00
+TRAP(linkUp) : send ok!
+iput_IpLinkUp(ifno=0)> ifp->add_default_route:0
+Init NAT data structure
+del_virtual_server_by_range> index=0, peer_addr=00000000
+del_virtual_server_by_range> index=0, peer_addr=00000000
+Interface 0 ip = 127.0.0.1
+Memory request 2072 left 297928 ptr 94743CC8
+Call tn7sar_malloc_dma_xfer() addr:B4743CC8 size:2072
+MAC0 [RX=128 TX=1]: External PHY
+MAC Address: 00:1d:19:52:e4:65
+[VLAN] ifno: 1 port: 0 security_reg: 0x0105
+[VLAN] ifno: 1 port: 1 security_reg: 0x0105
+time = 08/01/2003, 00:00:00
+TRAP(linkUp) : send ok!
+iput_IpLinkUp(ifno=1)> ifp->add_default_route:0
+Init NAT data structure
+manu_id=007F chip_id=2249
+EON EN29LV160AB bottom boot 16-bit mode found
+br_MacAddress=00-1D-19-52-E4-65
+Interface 1 ip = 192.168.1.1
+hwlan_init : ifno 2 TIWLANifno = 2
+rt_os_dma_malloc: virt_base=9456E1B0  phys_base=0x1456e1b0  offset=0x80000000
+tiwlan_setupWdsNetDevs() is called
+time = 08/01/2003, 00:00:00
+TRAP(linkUp) : send ok!
+iput_IpLinkUp(ifno=2)> ifp->add_default_route:0
+Init NAT data structure
+hwlan_ioctl(2, 3, 95404080, 2)
+Interface 2 ip = 192.168.1.1
+hwlan_ioctl(2, 3, 954040C0, 2)
+Init SAR ifno:3 chan:0 VPI/VCI:8/35
+Init PDSP ...
+Init PDSP done.
+Memory request 552 left 297376 ptr 947444E0
+Call tn7sar_malloc() addr:B47444E0 size:552
+[aal5->os]2.IsrRegister(OsDev:94509e34, halIsr:941aba44, Interrupt:15)
+[aal5]halControl(HalDev:95347af0, Key:OamMode, Action:Set, Value:9540406c)
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403fb0, OsSetup:00000000)
+  [aal5 Inst 0, Ch 0] Config Dump:
+    TxNumBuffers  :00000128, TxNumQueues :00000002
+    RxNumBuffers  :00000128, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000035, Vpi         :00000008
+    TxVc_CellRate :00015625, TxVc_QosType:00000002
+    TxVc_Mbs      :00015625, TxVc_Pcr    :00015625
+    TxVc_AtmHeader:08389168
+InitTcb(CH:0): tcbsize:48 allsize:6160 num:128
+Memory request 6160 left 291216 ptr 94744708
+Call tn7sar_malloc_dma_xfer() addr:B4744708 size:6160
+Memory request 6160 left 285056 ptr 94745F18
+Call tn7sar_malloc_dma_xfer() addr:B4745F18 size:6160
+InitRcb(CH:0): rcbsize:64 allsize:8208 num:128
+Memory request 8208 left 276848 ptr 94747728
+Call tn7sar_malloc_dma_xfer() addr:B4747728 size:8208
+Call halChannelSetup(), Ch:0
+(HalCh->TxVc_VpOffset)=00000000
+(HalCh->RxVc_VpOffset)=00000000
+Install SAR handler ...
+MAC Address: 00:1d:19:52:e4:66
+Interface 3 ip = 0.0.0.0
+Init SAR ifno:4 chan:1 VPI/VCI:0/32
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 1] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000032, Vpi         :00000000
+    TxVc_CellRate :00015625, TxVc_QosType:00000002
+    TxVc_Mbs      :00015625, TxVc_Pcr    :00015625
+    TxVc_AtmHeader:00000512
+InitTcb(CH:1): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 273760 ptr 94749738
+Call tn7sar_malloc_dma_xfer() addr:B4749738 size:3088
+Memory request 3088 left 270672 ptr 9474A348
+Call tn7sar_malloc_dma_xfer() addr:B474A348 size:3088
+InitRcb(CH:1): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 266560 ptr 9474AF58
+Call tn7sar_malloc_dma_xfer() addr:B474AF58 size:4112
+Call halChannelSetup(), Ch:1
+(HalCh->TxVc_VpOffset)=00000001
+(HalCh->RxVc_VpOffset)=00000001
+MAC Address: 00:1d:19:52:e4:68
+manu_id=007F chip_id=2249
+EON EN29LV160AB bottom boot 16-bit mode found
+br_MacAddress=00-1D-19-52-E4-65
+Interface 4 ip = 192.168.2.1
+Init SAR ifno:5 chan:2 VPI/VCI:1/32
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 2] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000032, Vpi         :00000001
+    TxVc_CellRate :00015625, TxVc_QosType:00000002
+    TxVc_Mbs      :00015625, TxVc_Pcr    :00015625
+    TxVc_AtmHeader:01049088
+InitTcb(CH:2): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 263472 ptr 9474BF68
+Call tn7sar_malloc_dma_xfer() addr:B474BF68 size:3088
+Memory request 3088 left 260384 ptr 9474CB78
+Call tn7sar_malloc_dma_xfer() addr:B474CB78 size:3088
+InitRcb(CH:2): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 256272 ptr 9474D788
+Call tn7sar_malloc_dma_xfer() addr:B474D788 size:4112
+Call halChannelSetup(), Ch:2
+(HalCh->TxVc_VpOffset)=00000002
+(HalCh->RxVc_VpOffset)=00000002
+MAC Address: 00:1d:19:52:e4:69
+Interface 5 ip = 192.168.2.1
+Init SAR ifno:6 chan:3 VPI/VCI:1/33
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 3] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000033, Vpi         :00000001
+    TxVc_CellRate :00015625, TxVc_QosType:00000002
+    TxVc_Mbs      :00015625, TxVc_Pcr    :00015625
+    TxVc_AtmHeader:01049104
+InitTcb(CH:3): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 253184 ptr 9474E798
+Call tn7sar_malloc_dma_xfer() addr:B474E798 size:3088
+Memory request 3088 left 250096 ptr 9474F3A8
+Call tn7sar_malloc_dma_xfer() addr:B474F3A8 size:3088
+InitRcb(CH:3): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 245984 ptr 9474FFB8
+Call tn7sar_malloc_dma_xfer() addr:B474FFB8 size:4112
+Call halChannelSetup(), Ch:3
+(HalCh->TxVc_VpOffset)=00000003
+(HalCh->RxVc_VpOffset)=00000003
+MAC Address: 00:1d:19:52:e4:6a
+Interface 6 ip = 192.168.2.1
+Init SAR ifno:7 chan:4 VPI/VCI:1/34
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 4] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000034, Vpi         :00000001
+    TxVc_CellRate :00015625, TxVc_QosType:00000002
+    TxVc_Mbs      :00015625, TxVc_Pcr    :00015625
+    TxVc_AtmHeader:01049120
+InitTcb(CH:4): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 242896 ptr 94750FC8
+Call tn7sar_malloc_dma_xfer() addr:B4750FC8 size:3088
+Memory request 3088 left 239808 ptr 94751BD8
+Call tn7sar_malloc_dma_xfer() addr:B4751BD8 size:3088
+InitRcb(CH:4): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 235696 ptr 947527E8
+Call tn7sar_malloc_dma_xfer() addr:B47527E8 size:4112
+Call halChannelSetup(), Ch:4
+(HalCh->TxVc_VpOffset)=00000004
+(HalCh->RxVc_VpOffset)=00000004
+MAC Address: 00:1d:19:52:e4:6b
+Interface 7 ip = 192.168.2.1
+Init SAR ifno:8 chan:5 VPI/VCI:1/35
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 5] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000035, Vpi         :00000001
+    TxVc_CellRate :00015625, TxVc_QosType:00000002
+    TxVc_Mbs      :00015625, TxVc_Pcr    :00015625
+    TxVc_AtmHeader:01049136
+InitTcb(CH:5): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 232608 ptr 947537F8
+Call tn7sar_malloc_dma_xfer() addr:B47537F8 size:3088
+Memory request 3088 left 229520 ptr 94754408
+Call tn7sar_malloc_dma_xfer() addr:B4754408 size:3088
+InitRcb(CH:5): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 225408 ptr 94755018
+Call tn7sar_malloc_dma_xfer() addr:B4755018 size:4112
+Call halChannelSetup(), Ch:5
+(HalCh->TxVc_VpOffset)=00000005
+(HalCh->RxVc_VpOffset)=00000005
+MAC Address: 00:1d:19:52:e4:6c
+Interface 8 ip = 192.168.2.1
+Init SAR ifno:9 chan:6 VPI/VCI:1/36
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 6] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000036, Vpi         :00000001
+    TxVc_CellRate :00015625, TxVc_QosType:00000002
+    TxVc_Mbs      :00015625, TxVc_Pcr    :00015625
+    TxVc_AtmHeader:01049152
+InitTcb(CH:6): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 222320 ptr 94756028
+Call tn7sar_malloc_dma_xfer() addr:B4756028 size:3088
+Memory request 3088 left 219232 ptr 94756C38
+Call tn7sar_malloc_dma_xfer() addr:B4756C38 size:3088
+InitRcb(CH:6): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 215120 ptr 94757848
+Call tn7sar_malloc_dma_xfer() addr:B4757848 size:4112
+Call halChannelSetup(), Ch:6
+(HalCh->TxVc_VpOffset)=00000006
+(HalCh->RxVc_VpOffset)=00000006
+MAC Address: 00:1d:19:52:e4:6d
+Interface 9 ip = 192.168.2.1
+Init SAR ifno:10 chan:7 VPI/VCI:1/37
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 7] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000037, Vpi         :00000001
+    TxVc_CellRate :00015625, TxVc_QosType:00000002
+    TxVc_Mbs      :00015625, TxVc_Pcr    :00015625
+    TxVc_AtmHeader:01049168
+InitTcb(CH:7): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 212032 ptr 94758858
+Call tn7sar_malloc_dma_xfer() addr:B4758858 size:3088
+Memory request 3088 left 208944 ptr 94759468
+Call tn7sar_malloc_dma_xfer() addr:B4759468 size:3088
+InitRcb(CH:7): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 204832 ptr 9475A078
+Call tn7sar_malloc_dma_xfer() addr:B475A078 size:4112
+Call halChannelSetup(), Ch:7
+(HalCh->TxVc_VpOffset)=00000007
+(HalCh->RxVc_VpOffset)=00000007
+MAC Address: 00:1d:19:52:e4:6e
+Interface 10 ip = 192.168.2.1
+Init SAR ifno:11 chan:8 VPI/VCI:1/38
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 8] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000038, Vpi         :00000001
+    TxVc_CellRate :00015625, TxVc_QosType:00000002
+    TxVc_Mbs      :00015625, TxVc_Pcr    :00015625
+    TxVc_AtmHeader:01049184
+InitTcb(CH:8): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 201744 ptr 9475B088
+Call tn7sar_malloc_dma_xfer() addr:B475B088 size:3088
+Memory request 3088 left 198656 ptr 9475BC98
+Call tn7sar_malloc_dma_xfer() addr:B475BC98 size:3088
+InitRcb(CH:8): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 194544 ptr 9475C8A8
+Call tn7sar_malloc_dma_xfer() addr:B475C8A8 size:4112
+Call halChannelSetup(), Ch:8
+(HalCh->TxVc_VpOffset)=00000008
+(HalCh->RxVc_VpOffset)=00000008
+MAC Address: 00:1d:19:52:e4:6f
+Interface 11 ip = 192.168.2.1
+Init SAR ifno:12 chan:9 VPI/VCI:1/39
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 9] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000039, Vpi         :00000001
+    TxVc_CellRate :00015625, TxVc_QosType:00000002
+    TxVc_Mbs      :00015625, TxVc_Pcr    :00015625
+    TxVc_AtmHeader:01049200
+InitTcb(CH:9): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 191456 ptr 9475D8B8
+Call tn7sar_malloc_dma_xfer() addr:B475D8B8 size:3088
+Memory request 3088 left 188368 ptr 9475E4C8
+Call tn7sar_malloc_dma_xfer() addr:B475E4C8 size:3088
+InitRcb(CH:9): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 184256 ptr 9475F0D8
+Call tn7sar_malloc_dma_xfer() addr:B475F0D8 size:4112
+Call halChannelSetup(), Ch:9
+(HalCh->TxVc_VpOffset)=00000009
+(HalCh->RxVc_VpOffset)=00000009
+MAC Address: 00:1d:19:52:e4:70
+Interface 12 ip = 192.168.2.1
+Init SAR ifno:13 chan:10 VPI/VCI:0/40
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403fb0, OsSetup:00000000)
+  [aal5 Inst 0, Ch 10] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000040, Vpi         :00000000
+    TxVc_CellRate :00015625, TxVc_QosType:00000002
+    TxVc_Mbs      :00015625, TxVc_Pcr    :00015625
+    TxVc_AtmHeader:00000640
+InitTcb(CH:10): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 181168 ptr 947600E8
+Call tn7sar_malloc_dma_xfer() addr:B47600E8 size:3088
+Memory request 3088 left 178080 ptr 94760CF8
+Call tn7sar_malloc_dma_xfer() addr:B4760CF8 size:3088
+InitRcb(CH:10): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 173968 ptr 94761908
+Call tn7sar_malloc_dma_xfer() addr:B4761908 size:4112
+Call halChannelSetup(), Ch:10
+(HalCh->TxVc_VpOffset)=0000000A
+(HalCh->RxVc_VpOffset)=0000000A
+MAC Address: 00:1d:19:52:e4:71
+Interface 13 ip = 0.0.0.0
+Init SAR ifno:14 chan:11 VPI/VCI:1/41
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 11] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000041, Vpi         :00000001
+    TxVc_CellRate :00015625, TxVc_QosType:00000002
+    TxVc_Mbs      :00015625, TxVc_Pcr    :00015625
+    TxVc_AtmHeader:01049232
+InitTcb(CH:11): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 170880 ptr 94762918
+Call tn7sar_malloc_dma_xfer() addr:B4762918 size:3088
+Memory request 3088 left 167792 ptr 94763528
+Call tn7sar_malloc_dma_xfer() addr:B4763528 size:3088
+InitRcb(CH:11): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 163680 ptr 94764138
+Call tn7sar_malloc_dma_xfer() addr:B4764138 size:4112
+Call halChannelSetup(), Ch:11
+(HalCh->TxVc_VpOffset)=0000000B
+(HalCh->RxVc_VpOffset)=0000000B
+MAC Address: 00:1d:19:52:e4:72
+Interface 14 ip = 192.168.2.1
+IFLNK_PPPOE init : (Linkp)ifno = 15 idx = 2
+IFLNK_PPPOE init : (Driverp)ifno = 15 idx = 3
+Interface 15 ip = 0.0.0.0
+MAC Address: 00:1d:19:52:e4:65
+[VLAN] ifno: 29 port: 2 security_reg: 0x0150
+[VLAN] ifno: 29 port: 3 security_reg: 0x0150
+time = 08/01/2003, 00:00:00
+TRAP(linkUp) : send ok!
+iput_IpLinkUp(ifno=29)> ifp->add_default_route:0
+Init NAT data structure
+Interface 29 ip = 192.168.2.1
+ruleCheck()> Group: 0,  Error: Useless rule index will be truncated
+ruleCheck()> Group: 1,  Error: Useless rule index will be truncated
+ruleCheck()> Group: 2,  Error: Useless rule index will be truncated
+CBAC rule format check succeed !!
+reqCBACBuf()> init match pool, Have: 1000
+Memory Address: 0x9536cb18 ~ 0x95373894
+reqCBACBuf()> init timeGap pool, Have: 10000
+Memory Address: 0x95373894 ~ 0x953a45e8
+reqCBACBuf()> init sameHost pool, Have: 2000
+Memory Address: 0x953a45e8 ~ 0x953b4008
+CBAC rule pool initialized !!
+Init NAT data structure
+RUNTASK id=2 if_task if0...
+RUNTASK id=3 if_task if1...
+RUNTASK id=4 if_task if2...
+RUNTASK id=5 if_task if3...
+RUNTASK id=6 if_task if4...
+RUNTASK id=7 if_task if5...
+RUNTASK id=8 if_task if6...
+RUNTASK id=9 if_task if7...
+RUNTASK id=10 if_task if8...
+RUNTASK id=11 if_task if9...
+RUNTASK id=12 if_task if10...
+RUNTASK id=13 if_task if11...
+RUNTASK id=14 if_task if12...
+RUNTASK id=15 if_task if13...
+RUNTASK id=16 if_task if14...
+RUNTASK id=17 if_task if29...
+RUNTASK id=18 timer_task...
+RUNTASK id=19 conn_mgr...
+RUNTASK id=20 main_8021x...
+Build Day = Sep 17 2007
+RUNTASK id=21 period_task...
+========== ADSL Modem initialization OK ! ======
+InitCommSys: RESOURCE_BASE = 79, NUMRES = 200
+InitCommSys: EVENT_BASE = 158, NUMEVT = 400
+InitCommSys: MAILBOX_BASE = 4, NUMMBX = 8
+RUNTASK id=22 dhcp_daemon...
+RUNTASK id=23 dhcp_clt...on interface 13
+RUNTASK id=24 telnetd_main...
+httpd: listen at 192.168.1.1:80
+httpd: listen at 0.0.0.0:8085
+HTTPD TIMER_RESOURCE:5, FS_RESOURCE:6
+RUNTASK httpd...
+RUNTASK id=28 dnsproxy...
+RUNTASK id=29 snmp_task...
+RUNTASK id=30 rip...
+RUNTASK id=31 ripout...
+RUNTASK id=32 dhcpd_mgmt_task...
+UPnP is enabled
+UPNP Device initialize success! slot=33
+update_device_OUI: OUI_str=001D19
+[0] Allocate mailbox 4
+[0] Allocate mailbox 5
+gConfig.WSC_Mode:2
+RUNTASK id=36 wscmain...
+RUNTASK id=37 wsc_Send_eap_packet...
+RUNTASK id=38 wsc_Send_UPNP_packet...
+RUNTASK id=39 WSC_WaitUserAction_Task...
+gConfig.WSC_Mode:2
+Starting Multitask...
+=======================================================================
+ TI ADSL AR7200(OHIO) Loader 0.72.8 build May 18 2007 17:38:39
+                    Broad Net Technology, INC.
+=======================================================================
+EN29LV160AB bottom boot 16-bit mode found
+Copying boot params.....DONE
+Press Space Bar 3 times to enter command mode ...
+Flash Checking  Passed.
+Unzipping code at 0x94000000 ... [ZIP 3] [ZIP 2] done
+In C_Entry() function ...
+install_exception 
+sys_irq_init() ...
+Unzip WEB image ...
+found signature: 78h 56h 34h 12h
+ulImgLens=1312337, LENGTH[3]-12=1769460
+length checking OK
+search_signature: image's lens = 1312768
+Unzipping from B0180800 to 95EF0000 ... done
+Uncompressed size = 770531
+Set GPIO
+##### _ftext      = 0x94000000
+##### _fdata      = 0x9442BB00
+##### __bss_start = 0x94509792
+##### end         = 0x953E41A0
+##### Backup Data from 0x9442BB00 to 0x954041A0~0x954E1E32 len 908434
+[INIT] System Log Pool startup ...
+[INIT] MTinitialize ..
+userclk_init() ...
+Runtime code version: 0.89.17
+System startup...
+[INIT] Memory COLOR 0, 1500000 bytes ..
+[INIT] Memory COLOR 1, 600000 bytes ..
+[INIT] Memory COLOR 2, 2028000 bytes ..
+DSL HAL Version: 06.00.01.00
+Ohio212(new) detected
+set dspfreq 250Mhz
+SAR_FREQUNCY = 53000000Hz
+manu_id=007F chip_id=2249
+EON EN29LV160AB bottom boot 16-bit mode found
+Set flash memory layout to Boot Parameters found !!!
+Bootcode version: 0.72.8
+Serial number: J749303739
+Hardware version: 01A
+sizeof(struct III_Config_t) is 106756
+manu_id=007F chip_id=2249
+EON EN29LV160AB bottom boot 16-bit mode found
+!!! Invalid wireless channel range 0 ~ 0
+!!! Use default value 1 ~ 13
+backup_hwlan 1 1
+default route: 0.0.0.0
+BufferInit:
+BUF_HDR_SZ=48 BUF_ALIGN_SZ=8 BUFFER_OFFSET=112
+BUF_BUFSZ0=384 BUF_BUFSZ1=1872
+NUM_OF_B0=0 NUM_OF_B1=1800
+BUF_POOL0_SZ=0 BUF_POOL1_SZ=3456000
+sizeof(BUFFER0)=432,sizeof(BUFFER1)=1920
+*BUF0=0x9501c9cc *BUF1=0x94cd0dbc
+Altgn *BUF0=0x9501c9d0 *BUF1=0x94cd0dc0
+End at BUF0:0x9501c9d0, BUF1:0x9501c9c0
+BUF0[0]=0x9501c9d0 BUF1[0]=0x94cd0dc0
+buffer0 pointer init OK!
+buffer1 pointer init OK!
+[qm_lnk_init] CLOCKHZ=1000 ...
+[qm_lnk_init] add if 3 into QM link 0
+[qm_lnk_init] add if 4 into QM link 0
+[qm_lnk_init] add if 5 into QM link 0
+[qm_lnk_init] add if 6 into QM link 0
+[qm_lnk_init] add if 7 into QM link 0
+[qm_lnk_init] add if 8 into QM link 0
+[qm_lnk_init] add if 9 into QM link 0
+[qm_lnk_init] add if 10 into QM link 0
+[qm_lnk_init] add if 11 into QM link 0
+[qm_lnk_init] add if 12 into QM link 0
+[qm_lnk_init] add if 13 into QM link 0
+[qm_lnk_init] add if 14 into QM link 0
+[qm_cbq_enable] no QM attached
+[qm_cbq_detach] no QM is attached at link 0
+f=0/100000, ns_per_byte=65536000/100000
+New cls: id=0, bw=8080 ns/byte, maxd=0 ms,
+         maxb=32, minb=2, avgpktsz=250, maxpktsz=1802,
+         offtime=40, parent=0, borrow=0
+         pri=0, maxidle=31, minidle=-29123,
+         maxq=96, clsfg=17
+f=0/100000, ns_per_byte=4247781376/100000
+New cls: id=1, bw=808080 ns/byte, maxd=0 ms,
+         maxb=16, minb=1, avgpktsz=1802, maxpktsz=1802,
+         offtime=1441745, parent=953ccdb8, borrow=953ccdb8
+         pri=7, maxidle=384166, minidle=-2912323,
+         maxq=48, clsfg=21
+qm_cbq_attach(): cbqp->cbq_res=21
+f=0/100000, ns_per_byte=245104640/100000
+New cls: id=2, bw=8162 ns/byte, maxd=0 ms,
+         maxb=32, minb=4, avgpktsz=250, maxpktsz=1802,
+         offtime=166, parent=953ccdb8, borrow=953ccdb8
+         pri=0, maxidle=31, minidle=-29417,
+         maxq=96, clsfg=21
+f=0/100000, ns_per_byte=0/100000
+[qm_cbq_newcls] warning: bandwidth of the class may be low enough to cause INT overflow
+New cls: id=3, bw=1191722 ns/byte, maxd=0 ms,
+         maxb=16, minb=4, avgpktsz=250, maxpktsz=1802,
+         offtime=1212204, parent=953cb7b8, borrow=953cb7b8
+         pri=0, maxidle=0, minidle=-4294966,
+         maxq=96, clsfg=21
+f=0/100000, ns_per_byte=0/100000
+[qm_cbq_newcls] warning: bandwidth of the class may be low enough to cause INT overflow
+New cls: id=4, bw=1191722 ns/byte, maxd=0 ms,
+         maxb=16, minb=4, avgpktsz=250, maxpktsz=1802,
+         offtime=1212204, parent=953cb7b8, borrow=953cb7b8
+         pri=2, maxidle=0, minidle=-4294966,
+         maxq=48, clsfg=23
+f=0/100000, ns_per_byte=0/100000
+[qm_cbq_newcls] warning: bandwidth of the class may be low enough to cause INT overflow
+New cls: id=5, bw=1191722 ns/byte, maxd=0 ms,
+         maxb=16, minb=4, avgpktsz=250, maxpktsz=1802,
+         offtime=1212204, parent=953cb7b8, borrow=953cb7b8
+         pri=3, maxidle=0, minidle=-4294966,
+         maxq=48, clsfg=23
+f=0/100000, ns_per_byte=0/100000
+[qm_cbq_newcls] warning: bandwidth of the class may be low enough to cause INT overflow
+New cls: id=6, bw=1191722 ns/byte, maxd=0 ms,
+         maxb=16, minb=4, avgpktsz=250, maxpktsz=1802,
+         offtime=1212204, parent=953cb7b8, borrow=953cb7b8
+         pri=4, maxidle=0, minidle=-4294966,
+         maxq=48, clsfg=23
+f=0/100000, ns_per_byte=0/100000
+[qm_cbq_newcls] warning: bandwidth of the class may be low enough to cause INT overflow
+New cls: id=7, bw=1191722 ns/byte, maxd=0 ms,
+         maxb=16, minb=4, avgpktsz=250, maxpktsz=1802,
+         offtime=1212204, parent=953cb7b8, borrow=953cb7b8
+         pri=5, maxidle=0, minidle=-4294966,
+         maxq=48, clsfg=23
+f=0/100000, ns_per_byte=245104640/100000
+New cls: id=8, bw=8162 ns/byte, maxd=0 ms,
+         maxb=16, minb=4, avgpktsz=250, maxpktsz=1802,
+         offtime=166, parent=953cb7b8, borrow=953cb7b8
+         pri=7, maxidle=31, minidle=-29417,
+         maxq=48, clsfg=20
+CLOCKHZ=1000
+time = 08/01/2003, 00:00:00
+TRAP(linkUp) : send ok!
+iput_IpLinkUp(ifno=0)> ifp->add_default_route:0
+Init NAT data structure
+del_virtual_server_by_range> index=0, peer_addr=00000000
+del_virtual_server_by_range> index=0, peer_addr=00000000
+Interface 0 ip = 127.0.0.1
+Memory request 2072 left 297928 ptr 94743CC8
+Call tn7sar_malloc_dma_xfer() addr:B4743CC8 size:2072
+MAC0 [RX=128 TX=1]: External PHY
+MAC Address: 00:1d:19:52:e4:65
+[VLAN] ifno: 1 port: 0 security_reg: 0x0105
+[VLAN] ifno: 1 port: 1 security_reg: 0x0105
+time = 08/01/2003, 00:00:00
+TRAP(linkUp) : send ok!
+iput_IpLinkUp(ifno=1)> ifp->add_default_route:0
+Init NAT data structure
+manu_id=007F chip_id=2249
+EON EN29LV160AB bottom boot 16-bit mode found
+br_MacAddress=00-1D-19-52-E4-65
+Interface 1 ip = 192.168.1.1
+hwlan_init : ifno 2 TIWLANifno = 2
+rt_os_dma_malloc: virt_base=9456E1B0  phys_base=0x1456e1b0  offset=0x80000000
+tiwlan_setupWdsNetDevs() is called
+time = 08/01/2003, 00:00:00
+TRAP(linkUp) : send ok!
+iput_IpLinkUp(ifno=2)> ifp->add_default_route:0
+Init NAT data structure
+hwlan_ioctl(2, 3, 95404080, 2)
+Interface 2 ip = 192.168.1.1
+hwlan_ioctl(2, 3, 954040C0, 2)
+Init SAR ifno:3 chan:0 VPI/VCI:8/35
+Init PDSP ...
+Init PDSP done.
+Memory request 552 left 297376 ptr 947444E0
+Call tn7sar_malloc() addr:B47444E0 size:552
+[aal5->os]2.IsrRegister(OsDev:94509e34, halIsr:941aba44, Interrupt:15)
+[aal5]halControl(HalDev:95347af0, Key:OamMode, Action:Set, Value:9540406c)
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403fb0, OsSetup:00000000)
+  [aal5 Inst 0, Ch 0] Config Dump:
+    TxNumBuffers  :00000128, TxNumQueues :00000002
+    RxNumBuffers  :00000128, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000035, Vpi         :00000008
+    TxVc_CellRate :00013250, TxVc_QosType:00000002
+    TxVc_Mbs      :00013250, TxVc_Pcr    :00013250
+    TxVc_AtmHeader:08389168
+InitTcb(CH:0): tcbsize:48 allsize:6160 num:128
+Memory request 6160 left 291216 ptr 94744708
+Call tn7sar_malloc_dma_xfer() addr:B4744708 size:6160
+Memory request 6160 left 285056 ptr 94745F18
+Call tn7sar_malloc_dma_xfer() addr:B4745F18 size:6160
+InitRcb(CH:0): rcbsize:64 allsize:8208 num:128
+Memory request 8208 left 276848 ptr 94747728
+Call tn7sar_malloc_dma_xfer() addr:B4747728 size:8208
+Call halChannelSetup(), Ch:0
+(HalCh->TxVc_VpOffset)=00000000
+(HalCh->RxVc_VpOffset)=00000000
+Install SAR handler ...
+MAC Address: 00:1d:19:52:e4:66
+Interface 3 ip = 0.0.0.0
+Init SAR ifno:4 chan:1 VPI/VCI:0/32
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 1] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000032, Vpi         :00000000
+    TxVc_CellRate :00013250, TxVc_QosType:00000002
+    TxVc_Mbs      :00013250, TxVc_Pcr    :00013250
+    TxVc_AtmHeader:00000512
+InitTcb(CH:1): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 273760 ptr 94749738
+Call tn7sar_malloc_dma_xfer() addr:B4749738 size:3088
+Memory request 3088 left 270672 ptr 9474A348
+Call tn7sar_malloc_dma_xfer() addr:B474A348 size:3088
+InitRcb(CH:1): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 266560 ptr 9474AF58
+Call tn7sar_malloc_dma_xfer() addr:B474AF58 size:4112
+Call halChannelSetup(), Ch:1
+(HalCh->TxVc_VpOffset)=00000001
+(HalCh->RxVc_VpOffset)=00000001
+MAC Address: 00:1d:19:52:e4:68
+manu_id=007F chip_id=2249
+EON EN29LV160AB bottom boot 16-bit mode found
+br_MacAddress=00-1D-19-52-E4-65
+Interface 4 ip = 192.168.2.1
+Init SAR ifno:5 chan:2 VPI/VCI:1/32
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 2] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000032, Vpi         :00000001
+    TxVc_CellRate :00013250, TxVc_QosType:00000002
+    TxVc_Mbs      :00013250, TxVc_Pcr    :00013250
+    TxVc_AtmHeader:01049088
+InitTcb(CH:2): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 263472 ptr 9474BF68
+Call tn7sar_malloc_dma_xfer() addr:B474BF68 size:3088
+Memory request 3088 left 260384 ptr 9474CB78
+Call tn7sar_malloc_dma_xfer() addr:B474CB78 size:3088
+InitRcb(CH:2): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 256272 ptr 9474D788
+Call tn7sar_malloc_dma_xfer() addr:B474D788 size:4112
+Call halChannelSetup(), Ch:2
+(HalCh->TxVc_VpOffset)=00000002
+(HalCh->RxVc_VpOffset)=00000002
+MAC Address: 00:1d:19:52:e4:69
+Interface 5 ip = 192.168.2.1
+Init SAR ifno:6 chan:3 VPI/VCI:1/33
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 3] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000033, Vpi         :00000001
+    TxVc_CellRate :00013250, TxVc_QosType:00000002
+    TxVc_Mbs      :00013250, TxVc_Pcr    :00013250
+    TxVc_AtmHeader:01049104
+InitTcb(CH:3): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 253184 ptr 9474E798
+Call tn7sar_malloc_dma_xfer() addr:B474E798 size:3088
+Memory request 3088 left 250096 ptr 9474F3A8
+Call tn7sar_malloc_dma_xfer() addr:B474F3A8 size:3088
+InitRcb(CH:3): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 245984 ptr 9474FFB8
+Call tn7sar_malloc_dma_xfer() addr:B474FFB8 size:4112
+Call halChannelSetup(), Ch:3
+(HalCh->TxVc_VpOffset)=00000003
+(HalCh->RxVc_VpOffset)=00000003
+MAC Address: 00:1d:19:52:e4:6a
+Interface 6 ip = 192.168.2.1
+Init SAR ifno:7 chan:4 VPI/VCI:1/34
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 4] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000034, Vpi         :00000001
+    TxVc_CellRate :00013250, TxVc_QosType:00000002
+    TxVc_Mbs      :00013250, TxVc_Pcr    :00013250
+    TxVc_AtmHeader:01049120
+InitTcb(CH:4): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 242896 ptr 94750FC8
+Call tn7sar_malloc_dma_xfer() addr:B4750FC8 size:3088
+Memory request 3088 left 239808 ptr 94751BD8
+Call tn7sar_malloc_dma_xfer() addr:B4751BD8 size:3088
+InitRcb(CH:4): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 235696 ptr 947527E8
+Call tn7sar_malloc_dma_xfer() addr:B47527E8 size:4112
+Call halChannelSetup(), Ch:4
+(HalCh->TxVc_VpOffset)=00000004
+(HalCh->RxVc_VpOffset)=00000004
+MAC Address: 00:1d:19:52:e4:6b
+Interface 7 ip = 192.168.2.1
+Init SAR ifno:8 chan:5 VPI/VCI:1/35
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 5] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000035, Vpi         :00000001
+    TxVc_CellRate :00013250, TxVc_QosType:00000002
+    TxVc_Mbs      :00013250, TxVc_Pcr    :00013250
+    TxVc_AtmHeader:01049136
+InitTcb(CH:5): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 232608 ptr 947537F8
+Call tn7sar_malloc_dma_xfer() addr:B47537F8 size:3088
+Memory request 3088 left 229520 ptr 94754408
+Call tn7sar_malloc_dma_xfer() addr:B4754408 size:3088
+InitRcb(CH:5): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 225408 ptr 94755018
+Call tn7sar_malloc_dma_xfer() addr:B4755018 size:4112
+Call halChannelSetup(), Ch:5
+(HalCh->TxVc_VpOffset)=00000005
+(HalCh->RxVc_VpOffset)=00000005
+MAC Address: 00:1d:19:52:e4:6c
+Interface 8 ip = 192.168.2.1
+Init SAR ifno:9 chan:6 VPI/VCI:1/36
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 6] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000036, Vpi         :00000001
+    TxVc_CellRate :00013250, TxVc_QosType:00000002
+    TxVc_Mbs      :00013250, TxVc_Pcr    :00013250
+    TxVc_AtmHeader:01049152
+InitTcb(CH:6): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 222320 ptr 94756028
+Call tn7sar_malloc_dma_xfer() addr:B4756028 size:3088
+Memory request 3088 left 219232 ptr 94756C38
+Call tn7sar_malloc_dma_xfer() addr:B4756C38 size:3088
+InitRcb(CH:6): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 215120 ptr 94757848
+Call tn7sar_malloc_dma_xfer() addr:B4757848 size:4112
+Call halChannelSetup(), Ch:6
+(HalCh->TxVc_VpOffset)=00000006
+(HalCh->RxVc_VpOffset)=00000006
+MAC Address: 00:1d:19:52:e4:6d
+Interface 9 ip = 192.168.2.1
+Init SAR ifno:10 chan:7 VPI/VCI:1/37
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 7] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000037, Vpi         :00000001
+    TxVc_CellRate :00013250, TxVc_QosType:00000002
+    TxVc_Mbs      :00013250, TxVc_Pcr    :00013250
+    TxVc_AtmHeader:01049168
+InitTcb(CH:7): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 212032 ptr 94758858
+Call tn7sar_malloc_dma_xfer() addr:B4758858 size:3088
+Memory request 3088 left 208944 ptr 94759468
+Call tn7sar_malloc_dma_xfer() addr:B4759468 size:3088
+InitRcb(CH:7): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 204832 ptr 9475A078
+Call tn7sar_malloc_dma_xfer() addr:B475A078 size:4112
+Call halChannelSetup(), Ch:7
+(HalCh->TxVc_VpOffset)=00000007
+(HalCh->RxVc_VpOffset)=00000007
+MAC Address: 00:1d:19:52:e4:6e
+Interface 10 ip = 192.168.2.1
+Init SAR ifno:11 chan:8 VPI/VCI:1/38
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 8] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000038, Vpi         :00000001
+    TxVc_CellRate :00013250, TxVc_QosType:00000002
+    TxVc_Mbs      :00013250, TxVc_Pcr    :00013250
+    TxVc_AtmHeader:01049184
+InitTcb(CH:8): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 201744 ptr 9475B088
+Call tn7sar_malloc_dma_xfer() addr:B475B088 size:3088
+Memory request 3088 left 198656 ptr 9475BC98
+Call tn7sar_malloc_dma_xfer() addr:B475BC98 size:3088
+InitRcb(CH:8): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 194544 ptr 9475C8A8
+Call tn7sar_malloc_dma_xfer() addr:B475C8A8 size:4112
+Call halChannelSetup(), Ch:8
+(HalCh->TxVc_VpOffset)=00000008
+(HalCh->RxVc_VpOffset)=00000008
+MAC Address: 00:1d:19:52:e4:6f
+Interface 11 ip = 192.168.2.1
+Init SAR ifno:12 chan:9 VPI/VCI:1/39
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 9] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000039, Vpi         :00000001
+    TxVc_CellRate :00013250, TxVc_QosType:00000002
+    TxVc_Mbs      :00013250, TxVc_Pcr    :00013250
+    TxVc_AtmHeader:01049200
+InitTcb(CH:9): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 191456 ptr 9475D8B8
+Call tn7sar_malloc_dma_xfer() addr:B475D8B8 size:3088
+Memory request 3088 left 188368 ptr 9475E4C8
+Call tn7sar_malloc_dma_xfer() addr:B475E4C8 size:3088
+InitRcb(CH:9): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 184256 ptr 9475F0D8
+Call tn7sar_malloc_dma_xfer() addr:B475F0D8 size:4112
+Call halChannelSetup(), Ch:9
+(HalCh->TxVc_VpOffset)=00000009
+(HalCh->RxVc_VpOffset)=00000009
+MAC Address: 00:1d:19:52:e4:70
+Interface 12 ip = 192.168.2.1
+Init SAR ifno:13 chan:10 VPI/VCI:0/40
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403fb0, OsSetup:00000000)
+  [aal5 Inst 0, Ch 10] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000040, Vpi         :00000000
+    TxVc_CellRate :00013250, TxVc_QosType:00000002
+    TxVc_Mbs      :00013250, TxVc_Pcr    :00013250
+    TxVc_AtmHeader:00000640
+InitTcb(CH:10): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 181168 ptr 947600E8
+Call tn7sar_malloc_dma_xfer() addr:B47600E8 size:3088
+Memory request 3088 left 178080 ptr 94760CF8
+Call tn7sar_malloc_dma_xfer() addr:B4760CF8 size:3088
+InitRcb(CH:10): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 173968 ptr 94761908
+Call tn7sar_malloc_dma_xfer() addr:B4761908 size:4112
+Call halChannelSetup(), Ch:10
+(HalCh->TxVc_VpOffset)=0000000A
+(HalCh->RxVc_VpOffset)=0000000A
+MAC Address: 00:1d:19:52:e4:71
+Interface 13 ip = 0.0.0.0
+Init SAR ifno:14 chan:11 VPI/VCI:1/41
+[aal5]halChannelSetup(HalDev:95347af0, HalCh:95403f70, OsSetup:00000000)
+  [aal5 Inst 0, Ch 11] Config Dump:
+    TxNumBuffers  :00000064, TxNumQueues :00000002
+    RxNumBuffers  :00000064, RxBufSize   :00001582
+    TxServiceMax  :00000032, RxServiceMax:00000016
+    RxBufferOffset:00000000, DaMask      :00000001
+    CpcsUU        :00000000, Gfc         :00000000
+    Clp           :00000000, Pti         :00000000
+    Priority      :00000002, PktType     :00000000
+    Vci           :00000041, Vpi         :00000001
+    TxVc_CellRate :00013250, TxVc_QosType:00000002
+    TxVc_Mbs      :00013250, TxVc_Pcr    :00013250
+    TxVc_AtmHeader:01049232
+InitTcb(CH:11): tcbsize:48 allsize:3088 num:64
+Memory request 3088 left 170880 ptr 94762918
+Call tn7sar_malloc_dma_xfer() addr:B4762918 size:3088
+Memory request 3088 left 167792 ptr 94763528
+Call tn7sar_malloc_dma_xfer() addr:B4763528 size:3088
+InitRcb(CH:11): rcbsize:64 allsize:4112 num:64
+Memory request 4112 left 163680 ptr 94764138
+Call tn7sar_malloc_dma_xfer() addr:B4764138 size:4112
+Call halChannelSetup(), Ch:11
+(HalCh->TxVc_VpOffset)=0000000B
+(HalCh->RxVc_VpOffset)=0000000B
+MAC Address: 00:1d:19:52:e4:72
+Interface 14 ip = 192.168.2.1
+IFLNK_PPPOE init : (Linkp)ifno = 15 idx = 2
+IFLNK_PPPOE init : (Driverp)ifno = 15 idx = 3
+Interface 15 ip = 0.0.0.0
+MAC Address: 00:1d:19:52:e4:65
+[VLAN] ifno: 29 port: 2 security_reg: 0x0150
+[VLAN] ifno: 29 port: 3 security_reg: 0x0150
+time = 08/01/2003, 00:00:00
+TRAP(linkUp) : send ok!
+iput_IpLinkUp(ifno=29)> ifp->add_default_route:0
+Init NAT data structure
+Interface 29 ip = 192.168.2.1
+ruleCheck()> Group: 0,  Error: Useless rule index will be truncated
+ruleCheck()> Group: 1,  Error: Useless rule index will be truncated
+ruleCheck()> Group: 2,  Error: Useless rule index will be truncated
+CBAC rule format check succeed !!
+reqCBACBuf()> init match pool, Have: 1000
+Memory Address: 0x9536cb18 ~ 0x95373894
+reqCBACBuf()> init timeGap pool, Have: 10000
+Memory Address: 0x95373894 ~ 0x953a45e8
+reqCBACBuf()> init sameHost pool, Have: 2000
+Memory Address: 0x953a45e8 ~ 0x953b4008
+CBAC rule pool initialized !!
+Init NAT data structure
+RUNTASK id=2 if_task if0...
+RUNTASK id=3 if_task if1...
+RUNTASK id=4 if_task if2...
+RUNTASK id=5 if_task if3...
+RUNTASK id=6 if_task if4...
+RUNTASK id=7 if_task if5...
+RUNTASK id=8 if_task if6...
+RUNTASK id=9 if_task if7...
+RUNTASK id=10 if_task if8...
+RUNTASK id=11 if_task if9...
+RUNTASK id=12 if_task if10...
+RUNTASK id=13 if_task if11...
+RUNTASK id=14 if_task if12...
+RUNTASK id=15 if_task if13...
+RUNTASK id=16 if_task if14...
+RUNTASK id=17 if_task if29...
+RUNTASK id=18 timer_task...
+RUNTASK id=19 conn_mgr...
+RUNTASK id=20 main_8021x...
+Build Day = Sep 17 2007
+RUNTASK id=21 period_task...
+========== ADSL Modem initialization OK ! ======
+InitCommSys: RESOURCE_BASE = 79, NUMRES = 200
+InitCommSys: EVENT_BASE = 158, NUMEVT = 400
+InitCommSys: MAILBOX_BASE = 4, NUMMBX = 8
+RUNTASK id=22 dhcp_daemon...
+RUNTASK id=23 dhcp_clt...on interface 13
+RUNTASK id=24 telnetd_main...
+httpd: listen at 192.168.1.1:80
+httpd: listen at 0.0.0.0:8085
+HTTPD TIMER_RESOURCE:5, FS_RESOURCE:6
+RUNTASK httpd...
+RUNTASK id=28 dnsproxy...
+RUNTASK id=29 snmp_task...
+RUNTASK id=30 rip...
+RUNTASK id=31 ripout...
+RUNTASK id=32 dhcpd_mgmt_task...
+UPnP is enabled
+UPNP Device initialize success! slot=33
+update_device_OUI: OUI_str=001D19
+[0] Allocate mailbox 4
+[0] Allocate mailbox 5
+gConfig.WSC_Mode:2
+RUNTASK id=36 wscmain...
+RUNTASK id=37 wsc_Send_eap_packet...
+RUNTASK id=38 wsc_Send_UPNP_packet...
+RUNTASK id=39 WSC_WaitUserAction_Task...
+gConfig.WSC_Mode:2
+Starting Multitask...
+=======================================================================
+ TI ADSL AR7200(OHIO) Loader 0.72.8 build May 18 2007 17:38:39
+                    Broad Net Technology, INC.
+=======================================================================
+EN29LV160AB bottom boot 16-bit mode found
+Copying boot params.....DONE
+Press Space Bar 3 times to enter command mode ...
+Flash Checking  Passed.
+Unzipping code at 0x94000000 ... [ZIP 3] [ZIP 2] 

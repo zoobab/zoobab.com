@@ -1,0 +1,1 @@
+[[module Redirect destination="arduino-miniusb-serial-adaptor"]]

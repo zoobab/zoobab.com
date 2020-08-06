@@ -1,0 +1,44 @@
++ About
+
++ Pictures
+
+[[gallery size="thumbnail"]]
+
++ Hardware
+
+||~ Brand ||~ Model ||~ FCC-ID ||~ Flash ||~ RAM ||~ USB ||~ Serial ||~ 4ports ||~ JTAG ||
+|| DLink || DSL-G604T/SP VA.1 || RRK-2003120028-1 || [http://www.atmel.com/dyn/resources/prod_documents/doc3308.pdf Atmel AT49BV322A (4MB)] || [http://doc.chipfind.ru/pdf/icsi/ic42s168007t(g).pdf SI IC42S16800-7T (16MB)]  || N || 4 pins || N || Y ||
+
++ Backup of the partitions
+
+If you have ssh access, you can easily backup the partitions by starting an HTTP server on the /dev/partitions directory.
+
+Here is the backup of [http://zoobab.wikidot.com/local--files/dlink-dsl-g604t/part0 part0], [http://zoobab.wikidot.com/local--files/dlink-dsl-g604t/part1 part1], [http://zoobab.wikidot.com/local--files/dlink-dsl-g604t/part1 part2], [http://zoobab.wikidot.com/local--files/dlink-dsl-g604t/part3 part3].
+
++ Serial access
+
+++ Pinout
+
+What is the pinout of this 5 pins connector?
+
++ JTAG
+
+++ Pinout
+
+3.3V    Pin 14,13
+GND   Pin 12,11
+GND   Pin 10,9   TCK
+GND   Pin 8,7     TMS
+GND   Pin 6,5     TDO
+GND   Pin 4,3     TDI
+GND   Pin 2,1     TRST
+
++ SSH
+
++ Dmesg
+
+Put the dmesg here
+
++ Cpuinfo
+
+Cat /proc/cpuinfo

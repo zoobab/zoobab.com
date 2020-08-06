@@ -1,0 +1,17 @@
++ Step1: Download CoLinux
+
+URL here
+
++ Step2: Install CoLinux
+
+Use C:\coLinux it will be easier.
+
++ Step3: Install a good text editor
+
+An easy coloured text editor under windows? Joe?
+
+If you are familiar with Vim, install it.
+
++ Step4: Enlarge your partition
+
+Download [http://zoobab.wikidot.com/local--files/compiling-openwrt-under-microsoft-windows-vista-with-colinux/qemu-img.exe qemu-img.exe here].

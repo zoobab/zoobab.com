@@ -1,0 +1,40 @@
+I tried to compile [http://www.creytiv.com/pub/restund-0.4.0.tar.gz restund-0.4.0], but it gives me the following error:
+
+[[code]]
+zoobab@mybox /home/zoobab/soft/restund/0.4/restund-0.4.0 [17]$ make
+  CC [M]  /modules/binding/binding.o
+modules/binding/binding.c:8:16: error: re.h: No such file or directory
+modules/binding/binding.c:9:21: error: restund.h: No such file or directory
+modules/binding/binding.c:22: error: expected declaration specifiers or ‘...’ before ‘bool’
+modules/binding/binding.c:22: error: expected declaration specifiers or ‘...’ before ‘bool’
+modules/binding/binding.c:22: warning: ‘struct sa’ declared inside parameter list
+modules/binding/binding.c:22: warning: its scope is only this definition or declaration, which is probably not what you want
+modules/binding/binding.c: In function ‘get_sock’:
+modules/binding/binding.c:26: error: ‘IPPROTO_UDP’ undeclared (first use in this function)
+modules/binding/binding.c:26: error: (Each undeclared identifier is reported only once
+modules/binding/binding.c:26: error: for each function it appears in.)
+modules/binding/binding.c:27: error: ‘ch_ip’ undeclared (first use in this function)
+modules/binding/binding.c:27: error: ‘ch_port’ undeclared (first use in this function)
+modules/binding/binding.c:29: error: ‘IPPROTO_TCP’ undeclared (first use in this function)
+modules/binding/binding.c: At top level:
+modules/binding/binding.c:38: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘request_handler’
+modules/binding/binding.c:102: error: variable ‘stun’ has initializer but incomplete type
+modules/binding/binding.c:103: error: unknown field ‘reqh’ specified in initializer
+modules/binding/binding.c:103: error: ‘request_handler’ undeclared here (not in a function)
+modules/binding/binding.c:103: warning: excess elements in struct initializer
+modules/binding/binding.c:103: warning: (near initialization for ‘stun’)
+modules/binding/binding.c:127: error: variable ‘exports’ has initializer but incomplete type
+modules/binding/binding.c:128: error: unknown field ‘name’ specified in initializer
+modules/binding/binding.c:128: warning: excess elements in struct initializer
+modules/binding/binding.c:128: warning: (near initialization for ‘exports’)
+modules/binding/binding.c:129: error: unknown field ‘type’ specified in initializer
+modules/binding/binding.c:129: warning: excess elements in struct initializer
+modules/binding/binding.c:129: warning: (near initialization for ‘exports’)
+modules/binding/binding.c:130: error: unknown field ‘init’ specified in initializer
+modules/binding/binding.c:130: warning: excess elements in struct initializer
+modules/binding/binding.c:130: warning: (near initialization for ‘exports’)
+modules/binding/binding.c:131: error: unknown field ‘close’ specified in initializer
+modules/binding/binding.c:131: warning: excess elements in struct initializer
+modules/binding/binding.c:131: warning: (near initialization for ‘exports’)
+make: *** [/modules/binding/binding.o] Error 1
+[[/code]]

@@ -1,0 +1,637 @@
+-------------------------------------------------------------------------------
+-- AMD Am486sc400 Elan BSDL file.
+--
+-- Copyright Advanced Micro Devices 1995. All rights reserved.
+--
+-- This description may be used and freely distributed without 
+-- royalty by users of the AMD ElanSC400(Am486sc400) processor.
+-- Advanced Micro Devices makes no warranty for the use of its 
+-- products and assumes no responsibility for any errors which may
+-- appear in this file nor does it make a commitment to update the
+-- information contained herein.
+--
+-- Note: all of the following is the BSDL entity description for 
+-- ElanSC400.
+-- Do not change the order in which the elements of this file appear.
+-- This file pertains to the rev A ElanSC400, 292-pin BGA.
+--
+-- Written by AMD LPD, Austin, Texas, USA. 
+--
+-- Revision 1.0, 11/1/96
+-- Revision 1.1, 1/17/01 Removed line of ===== from end of file.
+
+entity am486sc400 is           
+  generic (PHYSICAL_PIN_MAP : string := "BGA_292");
+ 
+  port ( -- System interface
+	 SD        : inout   bit_vector(0 to 15);
+	 SA        : out     bit_vector(0 to 25);
+	 ROMWR     : out     bit;
+	 ROMRD     : out     bit;
+	 ROMCS0    : out     bit;
+	 ROMCS1    : out     bit;
+	 IOR       : out     bit;
+	 IOW       : out     bit;
+	 MEMR      : out     bit;
+	 MEMW      : out     bit;
+	 RSTDRV    : out     bit;
+	 -- Memory interface
+	 RAS0      : out     bit;
+	 RAS1      : out     bit;
+	 CASL0     : out     bit;
+	 CASL1     : out     bit;
+	 CASH0     : out     bit;
+	 CASH1     : out     bit;
+	 MA        : out     bit_vector(4 to 11);
+	 MA3       : inout   bit;
+	 MA2       : inout   bit;
+	 MA1       : inout   bit;
+	 MA0       : inout   bit;
+	 D         : inout   bit_vector(0 to 15);
+	 MWE       : out     bit;
+	 -- GPIOs/Parallel port/PC card socket B
+	 GPIO31    : inout   bit;
+	 GPIO30    : inout   bit;
+	 GPIO29    : inout   bit;
+	 GPIO28    : inout   bit;
+	 GPIO27    : inout   bit;
+	 GPIO26    : inout   bit;
+	 GPIO25    : inout   bit;
+	 GPIO24    : inout   bit;
+	 GPIO23    : inout   bit;
+	 GPIO22    : inout   bit;
+	 GPIO21    : inout   bit;
+	 GPIO20    : inout   bit;
+	 GPIO19    : inout   bit;
+	 GPIO18    : inout   bit;
+	 GPIO17    : inout   bit;
+	 GPIO16    : inout   bit;
+	 GPIO15    : inout   bit;
+	 GPIOCS14  : inout   bit;
+	 GPIOCS13  : inout   bit;
+	 -- GPIOs/ISA bus
+	 GPIOCS12  : inout   bit;
+	 GPIOCS11  : inout   bit;
+	 GPIOCS10  : inout   bit;
+	 GPIOCS9   : inout   bit;
+	 GPIOCS8   : inout   bit;
+	 GPIOCS7   : inout   bit;
+	 GPIOCS6   : inout   bit;
+	 GPIOCS5   : inout   bit;
+	 -- GPIOs/SD buffer
+	 GPIOCS4   : inout   bit;
+	 GPIOCS3   : inout   bit;
+	 GPIOCS2   : inout   bit;
+	 -- GPIOs
+	 GPIOCS1   : inout   bit;
+	 GPIOCS0   : inout   bit;
+	 -- Serial port
+	 DTR       : out     bit;
+	 RTS       : out     bit;
+	 SOUT      : out     bit;
+	 CTS       : in      bit;
+	 DCD       : in      bit;
+	 DSR       : in      bit;
+	 RIN       : in      bit;
+	 SIN       : in      bit;
+	 -- IrDA interface
+	 SIROUT    : out     bit;
+	 SIRIN     : in      bit;
+	 -- Keyboard interface
+         KBDCOL    : inout   bit_vector(0 to 7);
+         KBDROW    : inout   bit_vector(0 to 13);
+	 -- PC card socket A
+	 TCK       : in      bit;  -- This is also MCELA, which is an output
+	 TMS       : in      bit;  -- This is also MCEHA, which is an output
+	 TDI       : in      bit;  -- This is also RSTA, which is an output
+	 TDO       : out     bit;  -- This is also REGA, which is an output
+	 CDA       : in      bit;
+         RDYA      : in      bit;
+	 BVD1A     : in      bit;
+	 BVD2A     : in      bit;
+	 WPA       : in      bit;
+	 WAITAB    : in      bit;
+	 OE        : out     bit;
+	 WE        : out     bit;
+	 ICDIR     : out     bit;
+	 -- Graphics controller/VESA local bus control
+	 LCDD0     : out     bit;
+	 LCDD1     : out     bit;
+	 LCDD2     : out     bit;
+	 LCDD3     : out     bit;
+	 LCDD4     : inout   bit;
+	 LCDD5     : out     bit;
+	 LCDD6     : inout   bit;
+	 LCDD7     : out     bit;
+	 M         : out     bit;
+	 LC        : out     bit;
+	 SCK       : out     bit;
+	 FRM       : out     bit;
+	 LVEE      : inout   bit;
+	 LVDD      : out     bit;
+	 -- Miscellaneous
+	 ACIN      : in      bit;
+	 SUSRES    : in      bit;
+	 BL0       : inout   bit;
+	 BL1       : in      bit;
+	 BL2       : in      bit;
+	 T2KXTAL1  : in      bit;  -- is one of these in
+	 T2KXTAL2  : in      bit;  -- and the other one out?
+	 LFINT     : linkage bit;  -- Loop filter connect
+	 LFLS      : linkage bit;  -- Loop filter connect
+	 LFVID     : linkage bit;  -- Loop filter connect
+	 LFHS      : linkage bit;  -- Loop filter connect
+	 RESET     : in      bit;
+	 BBATSEN   : in      bit;  -- Not included in BSr
+	 SPKR      : out     bit;
+	 BNDSCNEN  : in      bit;  -- Not included in BSR
+	 -- Power and ground
+         VCC       : linkage bit_vector(0 to 3);
+	 VCCA      : linkage bit;
+	 VCCBUS    : linkage bit_vector(0 to 3);
+	 VCCCPU    : linkage bit_vector(0 to 6);
+	 VCCLCD    : linkage bit_vector(0 to 1);
+	 VCCMEM    : linkage bit_vector(0 to 5);
+	 VCCPCM    : linkage bit;
+	 VCCPCM2   : linkage bit;
+	 VCCRTC    : linkage bit;
+	 VCCSER    : linkage bit;
+	 VCCSYS    : linkage bit_vector(0 to 5);
+	 GNDA      : linkage bit; -- Analog ground
+	 GND       : linkage bit_vector(0 to 64)
+  );
+
+  use STD_1149_1_1990.all;   
+  -- Get Std 1149.1-1994 attributes and definitions
+ 
+  attribute PIN_MAP of am486sc400 : entity is PHYSICAL_PIN_MAP;
+ 
+  constant BGA_292: PIN_MAP_STRING:=
+	 "SD        : (G3, F2, H3, G2, F1, H2, G1, J2,  " &
+	 "             K3, K2, J1, K1, L1, L2, N1, L3), " &
+	 "SA        : (T20, P19, R20, N18, P20, N19, N20, M18,  " &
+	 "             M20, L19, L18, L20, K20, K19, J20, K18,  " &
+	 "             K17, J19, H20, J18, H19, G20, G19, H18,  " &
+	 "             F20, H17), " &
+	 "ROMWR     : U19, " &
+	 "ROMRD     : V20, " &
+	 "ROMCS0    : R18, " &
+	 "ROMCS1    : T19, " &
+	 "IOR       : U20, " &
+	 "IOW       : R19, " &
+	 "MEMR      : W20, " &
+	 "MEMW      : T18, " &
+	 "RSTDRV    : V12, " &
+	 -- Memory interface
+	 "RAS0      : C15, " &
+	 "RAS1      : D14, " &
+	 "CASL0     : B15, " &
+	 "CASL1     : C14, " &
+	 "CASH0     : D13, " &
+	 "CASH1     : A17, " &
+	 "MA        : (C11, A14, B13, C12, A15, B14, C13, A16),  " &
+	 "MA3       : B12, " &
+	 "MA2       : A12, " &
+	 "MA1       : B11, " &
+	 "MA0       : C10, " &
+	 "D         : (B10, A10, C9, B9, A9, B8, C8, A7,  " &
+	 "             B7, A6, C7, B6, A5, C6, B5, A4),  " &
+	 "MWE       : A11, " &
+	 -- GPIOs/Parallel port/PC card socket B
+	 "GPIO31    : V2, " &
+	 "GPIO30    : W1, " &
+	 "GPIO29    : W3, " &
+	 "GPIO28    : Y2, " &
+	 "GPIO27    : V4, " &
+	 "GPIO26    : W2, " &
+	 "GPIO25    : U2, " &
+	 "GPIO24    : U3, " &
+	 "GPIO23    : U4, " &
+	 "GPIO22    : T3, " &
+	 "GPIO21    : V3, " &
+	 "GPIO20    : G18, " &
+	 "GPIO19    : V14, " &
+	 "GPIO18    : Y14, " &
+	 "GPIO17    : W15, " &
+	 "GPIO16    : V15, " &
+	 "GPIO15    : Y15, " &
+	 "GPIOCS14  : W16, " &
+	 "GPIOCS13  : V16, " &
+	 -- GPIOs/ISA bus
+	 "GPIOCS12  : Y17, " &
+	 "GPIOCS11  : W17, " &
+	 "GPIOCS10  : V17, " &
+	 "GPIOCS9   : Y18, " &
+	 "GPIOCS8   : W18, " &
+	 "GPIOCS7   : Y19, " &
+	 "GPIOCS6   : V18, " &
+	 "GPIOCS5   : W19, " &
+	 -- GPIOs/SD buffer
+	 "GPIOCS4   : C4, " &
+	 "GPIOCS3   : D17, " &
+	 "GPIOCS2   : C18, " &
+	 -- GPIOs
+	 "GPIOCS1   : Y20, " &
+	 "GPIOCS0   : V19, " &
+	 -- Serial port
+	 "DTR       : Y8, " &
+	 "RTS       : W8, " &
+	 "SOUT      : Y10, " &
+	 "CTS       : V10, " &
+	 "DCD       : V9, " &
+	 "DSR       : W10, " &
+	 "RIN       : V11, " &
+	 "SIN       : W11, " &
+	 -- IrDA interface
+	 "SIROUT    : V8, " &
+	 "SIRIN     : Y9, " &
+	 -- Keyboard interface
+   "KBDCOL    : (E2, D1, A2, B3, C3, A1, B2, C5),  " &
+   "KBDROW    : (B19, D16, C17, B18, D15, C16, B17, D3,  " &
+	 "             C2, E3, D2, C1, F3, A3),  " &
+	 -- PC card socket A
+	 "TCK       : P2, " &  -- MCELA
+	 "TMS       : N3, " &  -- MCEHA
+	 "TDI       : R1, " &  -- RSTA
+	 "TDO       : M2, " &  -- REGA
+	 "CDA       : R2, " &
+   "RDYA      : P3, " &
+	 "BVD1A     : V1, " &
+	 "BVD2A     : R3, " &
+	 "WPA       : T2, " &
+	 "WAITAB    : U1, " &
+	 "OE        : P1, " &
+	 "WE        : N2, " &
+	 "ICDIR     : M3, " &
+	 -- Graphics controller/VESA local bus control
+	 "LCDD0     : B20, " &
+	 "LCDD1     : C19, " &
+	 "LCDD2     : D18, " &
+	 "LCDD3     : C20, " &
+	 "LCDD4     : D19, " &
+	 "LCDD5     : E18, " &
+	 "LCDD6     : F17, " &
+	 "LCDD7     : D20, " &
+	 "M         : F18, " &
+	 "LC        : E20, " &
+	 "SCK       : F19, " &
+	 "FRM       : E19, " &
+	 "LVEE      : A20, " &
+	 "LVDD      : A19, " &
+	 -- Miscellaneous
+	 "ACIN      : W12, " &
+	 "SUSRES    : Y12, " &
+	 "BL0       : W14, " &
+	 "BL1       : Y13, " &
+	 "BL2       : W13, " &
+	 "T2KXTAL1  : Y6, " &
+	 "T2KXTAL2  : Y4, " &
+	 "LFINT     : Y3, " &
+	 "LFLS      : W4, " &
+	 "LFVID     : W5, " &
+	 "LFHS      : V5, " &
+	 "RESET     : Y7, " &
+	 "BBATSEN   : V6, " &
+	 "SPKR      : V7, " &
+	 "BNDSCNEN  : Y11, " &
+	 -- Power and ground
+   "VCC       : (P17, N17, M17, L17), " &
+	 "VCCA      : W6, " &
+	 "VCCBUS    : (M1, J3, H1, E1),   " &
+	 "VCCCPU    : (T4, R4, P4, N4, M4, L4, K4),  " &
+	 "VCCLCD    : (G17, E17),  " &
+	 "VCCMEM    : (B16, B4, B1, A18, A13, A8),  " &
+	 "VCCPCM    : T1, " &
+	 "VCCPCM2   : Y1, " &
+	 "VCCRTC    : W7, " &
+	 "VCCSER    : W9, " &
+	 "VCCSYS    : (Y16, V13, U18, P18, M19, J17),  " &
+	 "GNDA      : Y5, " &
+	 "GND       : (N13, N12, N11, N10, N9, N8, M13, M12,   " &
+	 "             M11, M10, M9, M8, L13, L12, L11, L10,   " &
+	 "             L9, L8, K13, K12, K11, K10, K9, K8,  " &
+	 "             J13, J12, J11, J10, J9, J8, H13, H12,   " &
+	 "             H11, H10, H9, H8, D12, U15, U14, U13,   " &
+	 "             U12, U11, U10, U9, U8, U7, U6, U5,   " &
+	 "             T17, R17, J4, H4, G4, F4, E4, D11,   " &
+	 "             D10, D9, D8, D7, U17, D6, D5, D4,    " &
+	 "             U16)";
+
+
+  attribute TAP_SCAN_IN    of TDI : signal is true;
+  attribute TAP_SCAN_MODE  of TMS : signal is true;
+  attribute TAP_SCAN_OUT   of TDO : signal is true; 
+  attribute TAP_SCAN_CLOCK of TCK : signal is (10.0e6, BOTH);
+ 
+  attribute INSTRUCTION_LENGTH of am486sc400 : entity is 4;
+
+  attribute INSTRUCTION_OPCODE of am486sc400 : entity is 
+       "BYPASS (1111),"  &
+       "EXTEST (0000),"  &
+       "SAMPLE (0001),"  &
+       "IDCODE (0010),"  &
+       "HIGHZ  (0011)";  
+
+  attribute INSTRUCTION_CAPTURE of am486sc400 : entity is "0001";	
+
+  attribute IDCODE_REGISTER of am486sc400 : entity is
+       "0000" &              -- Version
+       "0000111111111111" &  -- Part number
+       "00000000001" &       -- Manufacturer Identity
+       "1"; -- Mandatory LSB
+     -- i.d. = 00FFF003
+
+attribute REGISTER_ACCESS of am486sc400 : entity is
+	"BYPASS(HIGHZ)";
+
+  attribute BOUNDARY_CELLS of am486sc400 : entity is "BC_1";
+  attribute BOUNDARY_LENGTH of am486sc400 : entity is 282;
+
+  -- Cell 0 is closest to TD0
+
+  attribute BOUNDARY_REGISTER of am486sc400 : entity is 
+  -- num   cell  port        function  safe [ccell disval rslt]
+  "281  (BC_1, CDA,     input,    X), " & -- CD_A#
+  "280  (BC_1, RDYA,    input,    X), " & -- RDY_A#
+  "279  (BC_1, WAITAB,  input,    X), " & -- WAIT_AB#
+  "278  (BC_1, WPA,     input,    X), " & -- WP_A
+  "277  (BC_1, BVD2A,   input,    X), " & -- BVD2_A
+  "276  (BC_1, BVD1A,   input,    X), " & -- BVD1_A
+  "275  (BC_1, GPIO25,  input,    X), " & -- GPIO25
+  "274  (BC_1, GPIO25,  output3,  X, 0,  0, Z), " &  -- GPIO25
+  "273  (BC_1, GPIO22,  input,    X), " & -- GPIO22
+  "272  (BC_1, GPIO22,  output3,  X, 0,  0, Z), " &  -- GPIO22
+  "271  (BC_1, GPIO30,  input,    X), " & -- GPIO30
+  "270  (BC_1, GPIO30,  output3,  X, 0,  0, Z), " &  -- GPIO30
+  "269  (BC_1, GPIO31,  input,    X), " & -- GPIO31
+  "268  (BC_1, GPIO31,  output3,  X, 0,  0, Z), " &  -- GPIO31
+  "267  (BC_1, GPIO24,  input,    X), " & -- GPIO24
+  "266  (BC_1, GPIO24,  output3,  X, 0,  0, Z), " &  -- GPIO24
+  "265  (BC_1, GPIO26,  input,    X), " & -- GPIO26
+  "264  (BC_1, GPIO26,  output3,  X, 0,  0, Z), " &  -- GPIO26
+  "263  (BC_1, GPIO21,  input,    X), " & -- GPIO21
+  "262  (BC_1, GPIO21,  output3,  X, 0,  0, Z), " &  -- GPIO21
+  "261  (BC_1, GPIO23,  input,    X), " & -- GPIO23
+  "260  (BC_1, GPIO23,  output3,  X, 0,  0, Z), " &  -- GPIO23
+  "259  (BC_1, GPIO29,  input,    X), " & -- GPIO29
+  "258  (BC_1, GPIO29,  output3,  X, 0,  0, Z), " &  -- GPIO29
+  "257  (BC_1, GPIO28,  input,    X), " & -- GPIO28 
+  "256  (BC_1, GPIO28,  output3,  X, 0,  0, Z), " &  -- GPIO28
+  "255  (BC_1, GPIO27,  input,    X), " & -- GPIO27
+  "254  (BC_1, GPIO27,  output3,  X, 0,  0, Z), " &  -- GPIO27
+  "253  (BC_1, *,       control,  0), " & -- Control
+  "252  (BC_1, SPKR,    output3,  X,   253,  0, Z), " &  -- SPKR
+  "251  (BC_1, RESET,   input,    X), " & -- RESET#
+  "250  (BC_1, RTS,     output3,  X,   253,  0, Z), " &  -- RTS#
+  "249  (BC_1, SIROUT,  output3,  X,   253,  0, Z), " &  -- SIROUT
+  "248  (BC_1, DTR,     output3,  X,   253,  0, Z), " &  -- DTR#
+  "247  (BC_1, DCD,     input,    X), " & -- DCD#
+  "246  (BC_1, SIRIN,   input,    X), " & -- SIRIN
+  "245  (BC_1, DSR,     input,    X), " & -- DSR#
+  "244  (BC_1, CTS,     input,    X), " & -- CTS#
+  "243  (BC_1, SOUT,    output3,  X,   253,  0, Z), " &  -- SOUT
+  "242  (BC_1, SIN,     input,    X), " & -- SIN
+  "241  (BC_1, RIN,     input,    X), " & -- RIN
+  "240  (BC_1, ACIN,    input,    X), " & -- ACIN
+  "239  (BC_1, RSTDRV,  output3,  X,   253,  0, Z), " &  -- RSTDRV
+  "238  (BC_1, SUSRES,  input,    X), " & -- SUS_RES
+  "237  (BC_1, BL2,     input,    X), " & -- BL2#
+  "236  (BC_1, BL1,     input,    X), " & -- BL1#
+  "235  (BC_1, BL0,     input,    X), " & -- BL0#
+  "234  (BC_1, BL0,     output3,  X,   253,  0, Z), " &  -- BL0#
+  "233  (BC_1, GPIO19,  input,    X), " & -- GPIO19
+  "232  (BC_1, GPIO19,  output3,  X,   253,  0, Z), " &  -- GPIO19
+  "231  (BC_1, GPIO18,  input,    X), " & -- GPIO18
+  "230  (BC_1, GPIO18,  output3,  X,   253,  0, Z), " &  -- GPIO18
+  "229  (BC_1, GPIO17,  input,    X), " & -- GPIO17
+  "228  (BC_1, GPIO17,  output3,  X,   253,  0, Z), " &  -- GPIO17
+  "227  (BC_1, *,       control,  0), " & -- Control
+  "226  (BC_1, GPIO16,  input,    X), " & -- GPIO16
+  "225  (BC_1, GPIO16,  output3,  X,   227,  0, Z), " &  -- GPIO16
+  "224  (BC_1, GPIO15,  input,    X), " & -- GPIO15
+  "223  (BC_1, GPIO15,  output3,  X,   227,  0, Z), " &  -- GPIO15
+  "222  (BC_1, GPIOCS14,   input,    X), " & -- GPIO_CS14
+  "221  (BC_1, GPIOCS14,   output3,  X,   227,  0, Z), " &  -- GPIO_CS14
+  "220  (BC_1, GPIOCS13,   input,    X), " & -- GPIO_CS13
+  "219  (BC_1, GPIOCS13,   output3,  X,   227,  0, Z), " &  -- GPIO_CS13
+  "218  (BC_1, GPIOCS12,   input,    X), " & -- GPIO_CS12
+  "217  (BC_1, GPIOCS12,   output3,  X,   227,  0, Z), " &  -- GPIO_CS12
+  "216  (BC_1, GPIOCS11,   input,    X), " & -- GPIO_CS11
+  "215  (BC_1, GPIOCS11,   output3,  X,   227,  0, Z), " &  -- GPIO_CS11
+  "214  (BC_1, GPIOCS10,   input,    X), " & -- GPIO_CS10
+  "213  (BC_1, GPIOCS10,   output3,  X,   227,  0, Z), " &  -- GPIO_CS10
+  "212  (BC_1, GPIOCS9,    input,    X), " & -- GPIO_CS9
+  "211  (BC_1, GPIOCS9,    output3,  X,   227,  0, Z), " &  -- GPIO_CS9
+  "210  (BC_1, GPIOCS8,    input,    X), " & -- GPIO_CS8
+  "209  (BC_1, GPIOCS8,    output3,  X,   227,  0, Z), " &  -- GPIO_CS8
+  "208  (BC_1, GPIOCS7,    input,    X), " & -- GPIO_CS7
+  "207  (BC_1, GPIOCS7,    output3,  X,   227,  0, Z), " &  -- GPIO_CS7
+  "206  (BC_1, GPIOCS6,    input,    X), " & -- GPIO_CS6
+  "205  (BC_1, GPIOCS6,    output3,  X,   227,  0, Z), " &  -- GPIO_CS6
+  "204  (BC_1, GPIOCS5,    input,    X), " & -- GPIO_CS5
+  "203  (BC_1, GPIOCS5,    output3,  X,   227,  0, Z), " &  -- GPIO_CS5
+  "202  (BC_1, GPIOCS1,    input,    X), " & -- GPIO_CS1
+  "201  (BC_1, GPIOCS1,    output3,  X,   227,  0, Z), " &  -- GPIO_CS1
+  "200  (BC_1, GPIOCS0,    input,    X), " & -- GPIO_CS0
+  "199  (BC_1, GPIOCS0,    output3,  X,   227,  0, Z), " &  -- GPIO_CS0
+  "198  (BC_1, MEMR,    output3,  X,   227,  0, Z), " &  -- MEMR#
+  "197  (BC_1, MEMW,    output3,  X,   227,  0, Z), " &  -- MEMW#
+  "196  (BC_1, ROMWR,   output3,  X,   227,  0, Z), " &  -- ROMWR#
+  "195  (BC_1, ROMRD,   output3,  X,   227,  0, Z), " &  -- ROMRD#
+  "194  (BC_1, ROMCS0,  output3,  X,   227,  0, Z), " &  -- ROMCS0#
+  "193  (BC_1, ROMCS1,  output3,  X,   227,  0, Z), " &  -- ROMCS1#
+  "192  (BC_1, IOR,     output3,  X,   227,  0, Z), " &  -- IOR#
+  "191  (BC_1, IOW,     output3,  X,   227,  0, Z), " &  -- IOW#
+  "190  (BC_1, *,       control,  0), " & -- Control
+  "189  (BC_1, SA(0),   output3,  X,   190,  0, Z), " &  -- SA0
+  "188  (BC_1, SA(1),   output3,  X,   190,  0, Z), " &  -- SA1
+  "187  (BC_1, SA(2),   output3,  X,   190,  0, Z), " &  -- SA2
+  "186  (BC_1, SA(3),   output3,  X,   190,  0, Z), " &  -- SA3
+  "185  (BC_1, SA(4),   output3,  X,   190,  0, Z), " &  -- SA4
+  "184  (BC_1, SA(5),   output3,  X,   190,  0, Z), " &  -- SA5
+  "183  (BC_1, SA(6),   output3,  X,   190,  0, Z), " &  -- SA6
+  "182  (BC_1, SA(7),   output3,  X,   190,  0, Z), " &  -- SA7
+  "181  (BC_1, SA(8),   output3,  X,   190,  0, Z), " &  -- SA8
+  "180  (BC_1, SA(9),   output3,  X,   190,  0, Z), " &  -- SA9
+  "179  (BC_1, SA(10),  output3,  X,   190,  0, Z), " &  -- SA10
+  "178  (BC_1, SA(11),  output3,  X,   190,  0, Z), " &  -- SA11
+  "177  (BC_1, SA(12),  output3,  X,   190,  0, Z), " &  -- SA12
+  "176  (BC_1, SA(13),  output3,  X,   190,  0, Z), " &  -- SA13
+  "175  (BC_1, SA(14),  output3,  X,   190,  0, Z), " &  -- SA14
+  "174  (BC_1, SA(15),  output3,  X,   190,  0, Z), " &  -- SA15
+  "173  (BC_1, SA(16),  output3,  X,   190,  0, Z), " &  -- SA16
+  "172  (BC_1, SA(17),  output3,  X,   190,  0, Z), " &  -- SA17
+  "171  (BC_1, SA(18),  output3,  X,   190,  0, Z), " &  -- SA18
+  "170  (BC_1, SA(19),  output3,  X,   190,  0, Z), " &  -- SA19
+  "169  (BC_1, SA(20),  output3,  X,   190,  0, Z), " &  -- SA20
+  "168  (BC_1, SA(21),  output3,  X,   190,  0, Z), " &  -- SA21
+  "167  (BC_1, SA(22),  output3,  X,   190,  0, Z), " &  -- SA22
+  "166  (BC_1, SA(23),  output3,  X,   190,  0, Z), " &  -- SA23
+  "165  (BC_1, SA(24),  output3,  X,   190,  0, Z), " &  -- SA24
+  "164  (BC_1, SA(25),  output3,  X,   190,  0, Z), " &  -- SA25
+  "163  (BC_1, GPIO20,  input,    X), " & -- GPIO20
+  "162  (BC_1, GPIO20,  output3,  X,   190,  0, Z), " &  -- GPIO20
+  "161  (BC_1, *,       control,  0), " & -- Control
+  "160  (BC_1, SCK,     output3,  X,   161,  0, Z), " &  -- SCK
+  "159  (BC_1, LC,      output3,  X,   161,  0, Z), " &  -- LC
+  "158  (BC_1, M,       output3,  X,   161,  0, Z), " &  -- M
+  "157  (BC_1, FRM,     output3,  X,   161,  0, Z), " &  -- FRM
+  "156  (BC_1, LCDD7,   output3,  X,   161,  0, Z), " &  -- LCDD7
+  "155  (BC_1, LCDD6,   input,    X), " & -- LCDD6
+  "154  (BC_1, LCDD6,   output3,  X,   161,  0, Z), " &  -- LCDD6
+  "153  (BC_1, LCDD5,   output3,  X,   161,  0, Z), " &  -- LCDD5
+  "152  (BC_1, LCDD4,   input,    X), " & -- LCDD4
+  "151  (BC_1, LCDD4,   output3,  X,   161,  0, Z), " &  -- LCDD4
+  "150  (BC_1, LCDD3,   output3,  X,   161,  0, Z), " &  -- LCDD3
+  "149  (BC_1, LCDD2,   output3,  X,   161,  0, Z), " &  -- LCDD2
+  "148  (BC_1, LCDD1,   output3,  X,   161,  0, Z), " &  -- LCDD1
+  "147  (BC_1, LCDD0,   output3,  X,   161,  0, Z), " &  -- LCDD0
+  "146  (BC_1, LVEE,    input,    X), " & -- LVEE#
+  "145  (BC_1, LVEE,    output3,  X,   161,  0, Z), " &  -- LVEE#
+  "144  (BC_1, LVDD,    output3,  X,   161,  0, Z), " &  -- LVDD#
+  "143  (BC_1, GPIOCS3,    input,    X), " & -- GPIO_CS3
+  "142  (BC_1, GPIOCS3,    output3,  X,   161,  0, Z), " &  -- GPIO_CS3
+  "141  (BC_1, GPIOCS2,    input,    X), " & -- GPIO_CS2
+  "140  (BC_1, GPIOCS2,    output3,  X,   161,  0, Z), " &  -- GPIO_CS2
+  "139  (BC_1, KBDROW(0),  input,    X), " & -- KBD_ROW0
+  "138  (BC_1, KBDROW(0),  output3,  X,   161,  0, Z), " &  -- KBD_ROW0
+  "137  (BC_1, KBDROW(1),  input,    X), " & -- KBD_ROW1
+  "136  (BC_1, KBDROW(1),  output3,  X,   161,  0, Z), " &  -- KBD_ROW1
+  "135  (BC_1, KBDROW(2),  input,    X), " & -- KBD_ROW2
+  "134  (BC_1, KBDROW(2),  output3,  X,   161,  0, Z), " &  -- KBD_ROW2
+  "133  (BC_1, KBDROW(3),  input,    X), " & -- KBD_ROW3
+  "132  (BC_1, KBDROW(3),  output3,  X,   161,  0, Z), " &  -- KBD_ROW3
+  "131  (BC_1, KBDROW(4),  input,    X), " & -- KBD_ROW4
+  "130  (BC_1, KBDROW(4),  output3,  X,   161,  0, Z), " &  -- KBD_ROW4
+  "129  (BC_1, KBDROW(5),  input,    X), " & -- KBD_ROW5
+  "128  (BC_1, KBDROW(5),  output3,  X,   161,  0, Z), " &  -- KBD_ROW5
+  "127  (BC_1, KBDROW(6),  input,    X), " & -- KBD_ROW6
+  "126  (BC_1, KBDROW(6),  output3,  X,   161,  0, Z), " &  -- KBD_ROW6
+  "125  (BC_1, *,       control,  0), " & -- Control
+  "124  (BC_1, RAS1,    output3,  X,   125,  0, Z), " &  -- RAS1#
+  "123  (BC_1, RAS0,    output3,  X,   125,  0, Z), " &  -- RAS0#
+  "122  (BC_1, CASH1,   output3,  X,   125,  0, Z), " &  -- CASH1#
+  "121  (BC_1, CASH0,   output3,  X,   125,  0, Z), " &  -- CASH0#
+  "120  (BC_1, CASL1,   output3,  X,   125,  0, Z), " &  -- CASL1#
+  "119  (BC_1, CASL0,   output3,  X,   125,  0, Z), " &  -- CASL0#
+  "118  (BC_1, MA(11),  output3,  X,   125,  0, Z), " &  -- MA11
+  "117  (BC_1, MA(10),  output3,  X,   125,  0, Z), " &  -- MA10
+  "116  (BC_1, MA(9),   output3,  X,   125,  0, Z), " &  -- MA9
+  "115  (BC_1, MA(8),   output3,  X,   125,  0, Z), " &  -- MA8
+  "114  (BC_1, MA(7),   output3,  X,   125,  0, Z), " &  -- MA7
+  "113  (BC_1, MA(6),   output3,  X,   125,  0, Z), " &  -- MA6
+  "112  (BC_1, MA(5),   output3,  X,   125,  0, Z), " &  -- MA5
+  "111  (BC_1, MA(4),   output3,  X,   125,  0, Z), " &  -- MA4
+  "110  (BC_1, MA3,     input,    X), " & -- MA3
+  "109  (BC_1, MA3,     output3,  X,   125,  0, Z), " &  -- MA3
+  "108  (BC_1, MA2,     input,    X), " & -- MA2
+  "107  (BC_1, MA2,     output3,  X,   125,  0, Z), " &  -- MA2
+  "106  (BC_1, MA1,     input,    X), " & -- MA1
+  "105  (BC_1, MA1,     output3,  X,   125,  0, Z), " &  -- MA1
+  "104  (BC_1, MA0,     input,    X), " & -- MA0
+  "103  (BC_1, MA0,     output3,  X,   125,  0, Z), " &  -- MA0
+  "102  (BC_1, MWE,     output3,  X,   125,  0, Z), " &  -- MWE#
+  "101  (BC_1, *,       control,  0), " & -- Control
+  "100  (BC_1, D(0),    input,    X), " & -- D0
+  "99   (BC_1, D(0),    output3,  X,   101,  0, Z), " &  -- D0
+  "98   (BC_1, D(1),    input,    X), " & -- D1
+  "97   (BC_1, D(1),    output3,  X,   101,  0, Z), " &  -- D1
+  "96   (BC_1, D(2),    input,    X), " & -- D2
+  "95   (BC_1, D(2),    output3,  X,   101,  0, Z), " &  -- D2
+  "94   (BC_1, D(3),    input,    X), " & -- D3
+  "93   (BC_1, D(3),    output3,  X,   101,  0, Z), " &  -- D3
+  "92   (BC_1, D(4),    input,    X), " & -- D4
+  "91   (BC_1, D(4),    output3,  X,   101,  0, Z), " &  -- D4
+  "90   (BC_1, D(5),    input,    X), " & -- D5
+  "89   (BC_1, D(5),    output3,  X,   101,  0, Z), " &  -- D5
+  "88   (BC_1, D(6),    input,    X), " & -- D6
+  "87   (BC_1, D(6),    output3,  X,   101,  0, Z), " &  -- D6
+  "86   (BC_1, D(7),    input,    X), " & -- D7
+  "85   (BC_1, D(7),    output3,  X,   101,  0, Z), " &  -- D7
+  "84   (BC_1, D(8),    input,    X), " & -- D8
+  "83   (BC_1, D(8),    output3,  X,   101,  0, Z), " &  -- D8
+  "82   (BC_1, D(9),    input,    X), " & -- D9
+  "81   (BC_1, D(9),    output3,  X,   101,  0, Z), " &  -- D9
+  "80   (BC_1, D(10),   input,    X), " & -- D10
+  "79   (BC_1, D(10),   output3,  X,   101,  0, Z), " &  -- D10
+  "78   (BC_1, D(11),   input,    X), " & -- D11
+  "77   (BC_1, D(11),   output3,  X,   101,  0, Z), " &  -- D11
+  "76   (BC_1, D(12),   input,    X), " & -- D12
+  "75   (BC_1, D(12),   output3,  X,   101,  0, Z), " &  -- D12
+  "74   (BC_1, D(13),   input,    X), " & -- D13
+  "73   (BC_1, D(13),   output3,  X,   101,  0, Z), " &  -- D13
+  "72   (BC_1, D(14),   input,    X), " & -- D14
+  "71   (BC_1, D(14),   output3,  X,   101,  0, Z), " &  -- D14
+  "70   (BC_1, D(15),   input,    X), " & -- D15
+  "69   (BC_1, D(15),   output3,  X,   101,  0, Z), " &  -- D15
+  "68   (BC_1, KBDCOL(7),  input,    X), " & -- KBD_COL7
+  "67   (BC_1, KBDCOL(7),  output3,  X,   101,  0, Z), " &  -- KBD_COL7
+  "66   (BC_1, GPIOCS4,    input,    X), " & -- GPIO_CS4
+  "65   (BC_1, GPIOCS4,    output3,  X,   101,  0, Z), " &  -- GPIO_CS4
+  "64   (BC_1, KBDROW(13), input,    X), " & -- KBD_ROW13
+  "63   (BC_1, KBDROW(13), output3,  X,   101,  0, Z), " &  -- KBD_ROW13
+  "62   (BC_1, KBDCOL(2),  input,    X), " & -- KBD_COL2
+  "61   (BC_1, KBDCOL(2),  output3,  X,   101,  0, Z), " &  -- KBD_COL2
+  "60   (BC_1, KBDCOL(3),  input,    X), " & -- KBD_COL3
+  "59   (BC_1, KBDCOL(3),  output3,  X,   101,  0, Z), " &  -- KBD_COL3
+  "58   (BC_1, KBDCOL(4),  input,    X), " & -- KBD_COL4
+  "57   (BC_1, KBDCOL(4),  output3,  X,   101,  0, Z), " &  -- KBD_COL4
+  "56   (BC_1, KBDCOL(5),  input,    X), " & -- KBD_COL5
+  "55   (BC_1, KBDCOL(5),  output3,  X,   101,  0, Z), " &  -- KBD_COL5
+  "54   (BC_1, KBDCOL(6),  input,    X), " & -- KBD_COL6
+  "53   (BC_1, KBDCOL(6),  output3,  X,   101,  0, Z), " &  -- KBD_COL6
+  "52   (BC_1, *,       control,  0), " & -- Control
+  "51   (BC_1, KBDROW(7),  input,    X), " & -- KBD_ROW7
+  "50   (BC_1, KBDROW(7),  output3,  X,    52,  0, Z), " &  -- KBD_ROW7
+  "49   (BC_1, KBDROW(8),  input,    X), " & -- KBD_ROW8
+  "48   (BC_1, KBDROW(8),  output3,  X,    52,  0, Z), " &  -- KBD_ROW8
+  "47   (BC_1, KBDROW(9),  input,    X), " & -- KBD_ROW9
+  "46   (BC_1, KBDROW(9),  output3,  X,    52,  0, Z), " &  -- KBD_ROW9
+  "45   (BC_1, KBDROW(10), input,    X), " & -- KBD_ROW10
+  "44   (BC_1, KBDROW(10), output3,  X,    52,  0, Z), " &  -- KBD_ROW10
+  "43   (BC_1, KBDROW(11), input,    X), " & -- KBD_ROW11
+  "42   (BC_1, KBDROW(11), output3,  X,    52,  0, Z), " &  -- KBD_ROW11
+  "41   (BC_1, KBDROW(12), input,    X), " & -- KBD_ROW12
+  "40   (BC_1, KBDROW(12), output3,  X,    52,  0, Z), " &  -- KBD_ROW12
+  "39   (BC_1, KBDCOL(0),  input,    X), " & -- KBD_COL0
+  "38   (BC_1, KBDCOL(0),  output3,  X,    52,  0, Z), " &  -- KBD_COL0
+  "37   (BC_1, KBDCOL(1),  input,    X), " & -- KBD_COL1
+  "36   (BC_1, KBDCOL(1),  output3,  X,    52,  0, Z), " &  -- KBD_COL1
+  "35   (BC_1, SD(0),   input,    X), " & -- SD0
+  "34   (BC_1, SD(0),   output3,  X,    52,  0, Z), " &  -- SD0
+  "33   (BC_1, SD(1),   input,    X), " & -- SD1
+  "32   (BC_1, SD(1),   output3,  X,    52,  0, Z), " &  -- SD1
+  "31   (BC_1, SD(2),   input,    X), " & -- SD2
+  "30   (BC_1, SD(2),   output3,  X,    52,  0, Z), " &  -- SD2
+  "29   (BC_1, SD(3),   input,    X), " & -- SD3
+  "28   (BC_1, SD(3),   output3,  X,    52,  0, Z), " &  -- SD3
+  "27   (BC_1, SD(4),   input,    X), " & -- SD4
+  "26   (BC_1, SD(4),   output3,  X,    52,  0, Z), " &  -- SD4
+  "25   (BC_1, SD(5),   input,    X), " & -- SD5
+  "24   (BC_1, SD(5),   output3,  X,    52,  0, Z), " &  -- SD5
+  "23   (BC_1, SD(6),   input,    X), " & -- SD6
+  "22   (BC_1, SD(6),   output3,  X,    52,  0, Z), " &  -- SD6
+  "21   (BC_1, SD(7),   input,    X), " & -- SD7
+  "20   (BC_1, SD(7),   output3,  X,    52,  0, Z), " &  -- SD7
+  "19   (BC_1, SD(8),   input,    X), " & -- SD8
+  "18   (BC_1, SD(8),   output3,  X,    52,  0, Z), " &  -- SD8
+  "17   (BC_1, SD(9),   input,    X), " & -- SD9
+  "16   (BC_1, SD(9),   output3,  X,    52,  0, Z), " &  -- SD9
+  "15   (BC_1, SD(10),  input,    X), " & -- SD10
+  "14   (BC_1, SD(10),  output3,  X,    52,  0, Z), " &  -- SD10
+  "13   (BC_1, SD(11),  input,    X), " & -- SD11
+  "12   (BC_1, SD(11),  output3,  X,    52,  0, Z), " &  -- SD11
+  "11   (BC_1, SD(12),  input,    X), " & -- SD12
+  "10   (BC_1, SD(12),  output3,  X,    52,  0, Z), " &  -- SD12
+  "9    (BC_1, SD(13),  input,    X), " & -- SD13
+  "8    (BC_1, SD(13),  output3,  X,    52,  0, Z), " &  -- SD13
+  "7    (BC_1, SD(14),  input,    X), " & -- SD14
+  "6    (BC_1, SD(14),  output3,  X,    52,  0, Z), " &  -- SD14
+  "5    (BC_1, SD(15),  input,    X), " & -- SD15
+  "4    (BC_1, SD(15),  output3,  X,    52,  0, Z), " &  -- SD15
+  "3    (BC_1, OE,      output3,  X,    52,  0, Z), " &  -- OE#
+  "2    (BC_1, WE,      output3,  X,    52,  0, Z), " &  -- WE#
+  "1    (BC_1, ICDIR,   output3,  X,    52,  0, Z), " &  -- ICDIR
+  "0    (BC_1, *,       control,  0) ";   -- Control
+
+end am486sc400;

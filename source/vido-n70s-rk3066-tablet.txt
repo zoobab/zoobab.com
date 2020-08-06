@@ -1,0 +1,43 @@
++ ADB shell
+
+Getting ADB to work with this tablet was a bit problematic, you add to [http://linux-rockchip.info/mw/index.php?title=ADB_shell_with_RK3066 add some entries for Udev].
+
++ Lsusb
+
+Lsusb does not show any description, only the VID/PID:
+
+[[code]]
+# lsusb
+Bus 002 Device 016: ID 2207:0010  
+Bus 002 Device 007: ID 413c:8147 Dell Computer Corp. F3507g Mobile Broadband Module
+[...]
+[[/code]]
+
++ Dmesg
+
+[[code]]
+[27117.166243] usb 2-1: USB disconnect, device number 16
+[27119.665079] usb 2-1: new high-speed USB device number 17 using ehci_hcd
+[27119.780383] usb 2-1: New USB device found, idVendor=2207, idProduct=0010
+[27119.780395] usb 2-1: New USB device strings: Mfr=2, Product=3, SerialNumber=4
+[27119.780403] usb 2-1: Product: N70-S
+[27119.780410] usb 2-1: Manufacturer: rockchip
+[27119.780416] usb 2-1: SerialNumber: 0123456789ABCDEF
+[27119.781956] scsi19 : usb-storage 2-1:1.0
+[27120.784908] scsi 19:0:0:0: Direct-Access     N70-S                          PQ: 0 ANSI: 2
+[27120.785506] scsi 19:0:0:1: Direct-Access     N70-S                          PQ: 0 ANSI: 2
+[27120.854708] sd 19:0:0:0: Attached scsi generic sg1 type 0
+[27120.855498] sd 19:0:0:1: Attached scsi generic sg2 type 0
+[27120.862745] sd 19:0:0:0: [sdb] Attached SCSI removable disk
+[27120.864471] sd 19:0:0:1: [sdc] Attached SCSI removable disk
+[[/code]]
+
++ Links
+
+* http://linux-rockchip.info/mw/index.php?title=ADB_shell_with_RK3066
+* http://www.slatedroid.com/topic/41219-connecting-to-a-rk3066-based-board-via-adb-on-linux/
+* http://blog.wholesaleonepiece.com/yuandao-n70s-android-4-1-tablet-review/
+* http://www.youtube.com/watch?v=zs7C1rezXvs
+* http://dx.com/p/vido-n70s-dual-core-7-capacitive-screen-android-4-1-1-tablet-pc-w-wi-fi-tf-hdmi-white-179472
+* https://forum.lowyat.net/topic/2643905/all
+* http://www.tabletmaniak.pl/78785/vido-n70s-czy-vido-n70hd-test-recenzja/

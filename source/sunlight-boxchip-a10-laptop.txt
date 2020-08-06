@@ -1,0 +1,17 @@
++ About
+
+This is an ARM based Android 4.0 laptop, based on the Allwinner A10 processor, sold at 80EUR(!).
+
++ Remarks
+
+* There seems to be a 3.3v serial port on the board
+* There is a hidden USB slave connector (adb shell works over there)
+* The screen is of bad quality compared to the Sanei N10 tablet, claims to display 1280x600, but in fact does only 1024x600, the quality is not great (pixelisation)
+* The keyboard and the trackpad are quite very plastic, better use an external keyboard for intensive use
+* Have not tried video decoding
+* No HDMI connector to connect an external screen, which this is supported by the main SoC
+* The weight of the screen is heavier than the mainboard, so the laptop loose the equilibrium when you push the screen to its maximum, maybe gluing some lead like Peat Sampras was doing on its racket would do the trick;
+
++ Links
+
+* Paul Labedan has taken some pics of the internals here: https://plus.google.com/108524263798865204463/posts/8n9hVq6KgLr

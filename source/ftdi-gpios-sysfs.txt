@@ -1,0 +1,129 @@
++ About
+
+It is possible to export some pins of FTDI chips as GPIOs in sysfs, so that they are accessible on the shell.
+
++ Update 28sep2018
+
+2 days ago a new GPIO sysfs driver for FT230X chips has been posted here: https://git.kernel.org/pub/scm/linux/kernel/git/johan/usb-serial.git/commit/?h=usb-next&id=ba93cc7da8965bd513a7393db0f030e51bff4b60
+
++ Warning
+
+I do not support the policy of FTDI to [http://hackaday.com/2014/10/22/watch-that-windows-update-ftdi-drivers-are-killing-fake-chips/ brick counterfeiting ICs] via their closed-source Windows driver. Please do not use Microsoft Windows, and use only open source drivers that anybody can modify and inspect. This patch was possible because the source code for the driver is freely available. Now you understand why freedom matters.
+
++ Help
+
+If you want to help and have some FTDI adaptors, I am interested to know if you managed to get GPIOs over sysfs working. Please send me [mailto:zoobabATgmailDOTcom an email] with the model of the board, the pins available as GPIOs, and the voltage output.
++ Kernel patch
+
+The kernel patch is here: https://lkml.org/lkml/2014/6/9/406
+Here in plain text: https://lkml.org/lkml/diff/2014/6/9/406/1
+
+I patched my 3.16 kernel with it (patch -p1 < ftdi-gpio.patch).
+
++ JTAGkey Tiny
+
+[[=image amontec-jtagkey-tiny-nogpio.jpg]]
+
+The JTAGkey Tiny is a FT2232C, you can export 8 GPIOS:
+
+[[code]]
+root@sabayon /sys/class/gpio [70]# echo 248 > export 
+root@sabayon /sys/class/gpio [71]# l
+total 0
+--w------- 1 root root 4096 Oct  7 22:57 export
+lrwxrwxrwx 1 root root    0 Oct  7 22:57 gpio248 -> ../../devices/pci0000:00/0000:00:1d.0/usb6/6-1/6-1:1.1/ttyUSB0/gpio/gpio248
+lrwxrwxrwx 1 root root    0 Oct  7 22:57 gpio249 -> ../../devices/pci0000:00/0000:00:1d.0/usb6/6-1/6-1:1.1/ttyUSB0/gpio/gpio249
+lrwxrwxrwx 1 root root    0 Oct  7 22:57 gpio250 -> ../../devices/pci0000:00/0000:00:1d.0/usb6/6-1/6-1:1.1/ttyUSB0/gpio/gpio250
+lrwxrwxrwx 1 root root    0 Oct  7 22:57 gpio251 -> ../../devices/pci0000:00/0000:00:1d.0/usb6/6-1/6-1:1.1/ttyUSB0/gpio/gpio251
+lrwxrwxrwx 1 root root    0 Oct  7 22:57 gpio252 -> ../../devices/pci0000:00/0000:00:1d.0/usb6/6-1/6-1:1.1/ttyUSB0/gpio/gpio252
+lrwxrwxrwx 1 root root    0 Oct  7 22:57 gpio253 -> ../../devices/pci0000:00/0000:00:1d.0/usb6/6-1/6-1:1.1/ttyUSB0/gpio/gpio253
+lrwxrwxrwx 1 root root    0 Oct  7 22:57 gpio254 -> ../../devices/pci0000:00/0000:00:1d.0/usb6/6-1/6-1:1.1/ttyUSB0/gpio/gpio254
+lrwxrwxrwx 1 root root    0 Oct  7 22:57 gpio255 -> ../../devices/pci0000:00/0000:00:1d.0/usb6/6-1/6-1:1.1/ttyUSB0/gpio/gpio255
+lrwxrwxrwx 1 root root    0 Oct  7 22:57 gpiochip248 -> ../../devices/pci0000:00/0000:00:1d.0/usb6/6-1/6-1:1.1/ttyUSB0/gpio/gpiochip248
+--w------- 1 root root 4096 Oct  7 22:55 unexport
+[[/code]]
+
+You have to change the direction to be able to change the value:
+
+[[code]]
+root@sabayon /sys/class/gpio [95]# echo out > gpio252/direction 
+root@sabayon /sys/class/gpio [96]# cat gpio252/value 
+0
+root@sabayon /sys/class/gpio [97]# echo 1 > gpio252/value 
+root@sabayon /sys/class/gpio [98]# cat gpio252/value 
+1
+[[/code]]
+
+The driver is actually ignoring the JTAG pins, and treating them as GPIOs:
+
+[[code]]
+[  121.121077] usb 6-1: new full-speed USB device number 2 using uhci_hcd
+[  121.317060] usb 6-1: New USB device found, idVendor=0403, idProduct=cff8
+[  121.317066] usb 6-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[  121.317070] usb 6-1: Product: Amontec JTAGkey
+[  121.317074] usb 6-1: Manufacturer: Amontec
+[  121.317077] usb 6-1: SerialNumber: T1QSEW77
+[  121.324121] usb 6-1: Ignoring serial port reserved for JTAG
+[[/code]]
+
+I am currently unable to identify any of those GPIO pins!
+
++ Arduino Duemilanove
+
+The Duemilanove has an FTDI FT232R, lsusb -v gives:
+
+[[code]]
+  idVendor           0x0403 Future Technology Devices International, Ltd
+  idProduct          0x6001 FT232 USB-Serial (UART) IC
+  bcdDevice            6.00
+  iManufacturer           1 FTDI
+  iProduct                2 FT232R USB UART
+[[/code]]
+
+It is also possible to get 8 GPIOs, but I identified only 6 of those, 4 of the X3 connector (they are accessible if you solder a 4 pins header on X3, see this [http://make.kosakalab.com/arduino/bootloader/index_en.html japanese webpage]) and 2 on TX RX:
+
+[[=image duemilanove-x3-connector.jpg]]
+
+Those pins are in 5V, but you could get them in 3.3V if you build my special USB cable in order to run the [[[arduino-duemilanove-in-3-3v |Duemilanove in 3.3V]]].
+
++ Moderndevice BUB1
+
+On the Moderndevice BUB1 (based on a FT232R) on I managed to identify 7 pins out of the 8 exported, those are: RX, TX, RTS, RI, DSR, DCD, CTS. You can actually choose the voltage you want out of those pins (3.3V or 5V) if you play with the jumper.
+
+[[=image USB_BUB.jpg size="medium"]]
+
++ Freaduino v1.0
+
+[[=image freaduino.jpg]]
+
+Freaduino is also based on a FT232RL. I was unable to detect any GPIOs. The board is unusable for that purpose, even with the main chip disabled (RST connected to GND).
+
++ MicroFTX
+
+The [http://jim.sh/ftx/ MicroFTX] is based on the FT230XQ. Jim Paris (the creator of the board) has tested the patch and it works fine, as expected.  8 GPIOs show up and 4 are usable.  The first four GPIOs correspond to the TX, RX, RTS, and CTS pins, in that order.
+
+[[=image microftx-quarter.jpg]]
+
+And the four CB0/CB1/CB2/CB3 pins are currently not usable as GPIOs:
+
+[[=image bottom-smaller.png]]
+
++ FTDI UMFT230XB
+
+I bought this dongle based on the FT230XQ chip at [http://be.farnell.com/ftdi/umft230xb-01/ft230xq-usb-to-uart-breakout-board/dp/2081336 Farnell].
+
+Lsusb says:
+
+[[code]]
+Bus 006 Device 002: ID 0403:6015 Future Technology Devices International, Ltd Bridge(I2C/SPI/UART/FIFO)
+[[/code]]
+
+[[=image FTDI-UMFT230XB-01.jpg]]
+
+RX is gpio249, TX is gpio248, RTS is gpio250, CTS is gpio251. I have to investigate on how to use CB0/CB1 as GPIOs, probably by changing their values in the EEPROM.
+
++ Links
+
+* http://www.cnx-software.com/2014/10/20/add-gpios-to-windows-linux-android-computers-and-devices-with-ftdi-usb-adapters-breakout-boards/
+* http://dangerousprototypes.com/2014/11/05/pl2303hx-userspace-gpio-control-tool/
+* https://github.com/nekromant/pl2303gpio

@@ -1,0 +1,45 @@
+Redis Check if the server Master and the server Slave are in sync.
+
+On the master do:
+
+[[code]]
+server1$ redis-cli -a yourpwd
+redis 127.0.0.1:6379> DEBUG digest
+cb8257e4dc342edf66e4f5cd1d2dca29c18cd3d3
+[[/code]]
+
+On the slave do:
+
+[[code]]
+server2$ redis-cli -a yourpwd
+redis 127.0.0.1:6379> DEBUG digest
+cb8257e4dc342edf66e4f5cd1d2dca29c18cd3d3
+[[/code]]
+
+If the hash is the same, they are in sync!
+
+Warning, this method is very CPU consuming, so better do something like write a value on the master DB, and check if it is replicated on the slave by reading this value again:
+
+[[code]]
+#!/bin/bash
+
+if [ $# -lt 2 ]; then
+        echo "Usage: $0 database_server1 database_server2"
+        exit 2
+fi
+
+MASTERDB="master.mydb.com"
+SLAVEDB="slave.mydb.com"
+DATE="`date +'%s'`"
+VALUESET=`redis-cli -h $MASTERDB -a myredispassword -p 6379 set monitoring $DATE`
+VALUEREADMASTER=`redis-cli -h $MASTERDB -a myredispassword -p 6379 get monitoring`
+VALUEREADSLAVE=`redis-cli -h $SLAVEDB -a myredispassword -p 6379 get monitoring`
+
+if [[ $VALUEREADMASTER == $VALUEREADSLAVE ]]; then
+        echo -e "OK - both redis servers are in sync"
+        exit 0
+else
+        echo -e "CRIT - both redis servers (masterdb $MASTERDB and slavedb $SLAVEDB) are not in sync!!!"
+        exit 2
+fi
+[[/code]]

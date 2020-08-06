@@ -1,0 +1,94 @@
++ Firmware location
+
+http://download4.msi.com.tw/files/downloads/frm_exe/linux_gw_v128G.zip
+
++ Extracting
+
+> zoobab@warsaw /home/zoobab [27]$ dd bs=1 skip=$[0x9810] if=linux-gw-v128G.upd of=foo2.bz2
+> 1344514+0 records in
+> 1344514+0 records out
+> 1344514 bytes (1.3 MB) copied, 3.52487 s, 381 kB/s
+> zoobab@warsaw /home/zoobab [28]$ bzip2recover  foo2.bz2 
+> bzip2recover 1.0.4: extracts blocks from damaged .bz2 files.
+> bzip2recover: searching for block boundaries ...
+>    block 1 runs from 80 to 2488327
+>    block 2 runs from 2488376 to 6242936
+>    block 3 runs from 6242985 to 10752580
+>    block 4 runs from 10752629 to 10756112 (incomplete)
+> bzip2recover: splitting into blocks
+>    writing block 1 to `rec00001foo2.bz2' ...
+>    writing block 2 to `rec00002foo2.bz2' ...
+>    writing block 3 to `rec00003foo2.bz2' ...
+> bzip2recover: finished
+> zoobab@warsaw /home/zoobab [29]$
+
+Now a little bit of strings:
+> zoobab@warsaw /home/zoobab [35]$ bunzip2 rec00002foo2.bz2
+> zoobab@warsaw /home/zoobab [36]$ strings rec00002foo2 | grep nux 
+> TERM=linux
+> linuxrc
+> /linuxrc
+> Linux version 2.4.18-MIPS-01.00 (root@localhost.localdomain) (gcc version 3.3.3) #114 Fri Jan 27 13:29:43 IRT 2006
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/dcache.h
+> Linux
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/sched.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/dcache.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/highmem.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/dcache.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/dcache.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/file.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/dcache.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/dcache.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/file.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/dcache.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/dcache.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/file.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/dcache.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/dcache.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/dcache.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/dcache.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/file.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/dcache.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/dcache.h
+> vmlinux
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /home/davidhsu/v1.3/other/linux-2.4.18/include/linux/skbuff.h
+> /home/davidhsu/v1.3/other/linux-2.4.18/include/linux/skbuff.h
+> /home/davidhsu/v1.3/other/linux-2.4.18/include/linux/skbuff.h
+> /home/davidhsu/v1.3/other/linux-2.4.18/include/linux/skbuff.h
+> /home/davidhsu/v1.3/other/linux-2.4.18/include/linux/skbuff.h
+> /home/davidhsu/v1.3/other/linux-2.4.18/include/linux/skbuff.h
+> /home/ken/1.2a/rtl8186/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/file.h
+> <6>Linux NET4.0 for Linux 2.4
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/file.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/net/tcp.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> <6>NET4: Linux TCP/IP 1.0 for NET4.0
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/dcache.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> /Project/Realtek/RTL8186/v1.2.7.msi/rtl8186-sdk-1.2a/rtl8186-linux-1.2a/linux-2.4.18/include/linux/skbuff.h
+> <6>NET4: Unix domain sockets 1.0/SMP for Linux NET4.0.
+> Linux

@@ -1,0 +1,7 @@
++ About
+
+Tronsmart Pavo M9 Hdmi Recorder
+
++ Permanent recording mode (power on/off)
+
+Target of this project is to record all the time, just power on/off the device to start/stop recording.

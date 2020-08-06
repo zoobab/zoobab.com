@@ -1,0 +1,33 @@
++ Introduction
+
+> **Warning: there are 2 solutions to use the FT232R in a standalone mode in 3.3v (serial port on most routers)**:
+> 1. Use a [http://www.zoobab.com/arduino-duemilanove-in-3-3v hacked USB cable] that takes the 5V and GND and put it into the external power connector of the arduino; from there the 5V will power the board in 3.3v, including the FTDI chip and the ATMega chip
+> 2. Use a MAX232 level shifter chip which converts TTL signals from 5V to 3.3v
+
+I was searching on the internet howto use the Arduino as a serial adaptor for accessing the console of OpenWRT routers, such as la fonera. The Arduino has an FTDI FT232RL chip that makes the USB-serial interface between the PC and the ATmega328 chip. This FT232RL can be used in standalone mode if the ATmega chip is removed, or if it is put in RESET mode, thus not operating.
+
+Here are the details how to use such arduino as an adaptor:
+
+* Connect the TX pin of the arduino to the RX pin of your router
+* Connect the RX pin of the arduino to the TX pin of your router
+* Connect the GND pin of the arduino to the GND pin of your router
+* Connect the RESET pin of the arduino to the GND pin of the arduino, in order to avoid the usage of the ATmega328 chip (alternatively you can totally remove the ATmega, but it is easier to just connect a wire between the 2 pins)
+* If your router requires 3.3v voltage, then connect the 3.3V pin of the Arduino to your 3.3v pin of your router (check if it is required to connected to the Fonera).
+* You can then have a console on your router using minicom or screen (example for la fonera: screen /dev/ttyUSB0 9600 8N1)
+
++ Pictures
+
+[[=image 27112009655.jpg size="medium"]]
+[[=image 27112009654b.jpg size="medium"]]
+[[=image 27112009653b.jpg size="medium"]]
+[[=image 27112009651.jpg size="medium"]]
+[[=image 27112009652.jpg size="medium"]]
+[[=image 27112009656.jpg size="medium"]]
+[[=image 27112009657.jpg size="medium"]]
+[[=image 27112009658.jpg size="medium"]]
+
++ Links
+
+* http://echodittolabs.org/hacking-la-fonera-2
+* http://code31.lahaag.org/pipermail/code31/2009-November/000662.html
+* http://www.zoobab.com/arduino-duemilanove-in-3-3v

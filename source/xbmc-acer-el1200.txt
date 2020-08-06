@@ -1,0 +1,3 @@
++ Grub failure
+
+I reported a bug where [http://trac.xbmc.org/ticket/12313 grub fails] to install on the harddisk.

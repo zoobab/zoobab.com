@@ -1,0 +1,39 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Mon, 11 May 2009 15:40:55 +0200
+Source: xitami
+Binary: xitami
+Architecture: source i386
+Version: 5.0a0-1
+Distribution: unstable
+Urgency: low
+Maintainer: Benjamin Henrion <bh@udev.org>
+Changed-By: Benjamin Henrion <bh@udev.org>
+Description: 
+ xitami     - Fast, small, secure, portable web server.
+Changes: 
+ xitami (5.0a0-1) unstable; urgency=low
+ .
+   * First debian package for Xitami.
+Checksums-Sha1: 
+ ab414deeb6c2de1d2c3866f7d6d259d4ad1b6e30 719 xitami_5.0a0-1.dsc
+ d6b76726a7880028eb4d4cf57479b01620499568 5975443 xitami_5.0a0-1.tar.gz
+ 120ec1e6b22adceed8edadb27592404408a21430 371016 xitami_5.0a0-1_i386.deb
+Checksums-Sha256: 
+ 314ef160b8db2c09f3eeae31fa697d383a5afae1a59307bcb00654b7f3bd8af4 719 xitami_5.0a0-1.dsc
+ 642cedd7c6c14a4070e63d3b7b26fc5bd3a296ec7c90c0ecb7ba7560a35da6a6 5975443 xitami_5.0a0-1.tar.gz
+ d8a38c5ba9b0d4b93617b2262e75f285c2323c0e6399473bf56818a97585eebe 371016 xitami_5.0a0-1_i386.deb
+Files: 
+ ce7355eb3d92e9171bb822227d9e4617 719 net optional xitami_5.0a0-1.dsc
+ 74cac160042a39419d51bda9419ea7f5 5975443 net optional xitami_5.0a0-1.tar.gz
+ 72af38ffeec9516a4fb4f4adf6f5b356 371016 net optional xitami_5.0a0-1_i386.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.9 (GNU/Linux)
+
+iEYEARECAAYFAkoK6TEACgkQWUQuybuPKCpUqwCeOBuUfsasY3L7MHkh8wqtbZDh
+nGEAnjohcmvFCvy+xKWDpqUDGxQ7HgBQ
+=7iL1
+-----END PGP SIGNATURE-----

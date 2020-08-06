@@ -1,0 +1,9 @@
+I rescued the cyanogenmod archive (625GB) and donated it recently to archive.org for preservation. 
+
+I don't have the disk space to host a full copy of the archive, but if you are interested in mirroring those on a static file server, feel free to contact me at zoobab AT gmail.com, or at @zoobab on Twitter. 
+
+I put this page here [[file index.html | index.html]] so that it get indexed by search engines. 
+
+Let's pray the links stay 'as is' at Archive.org. 
+
+This page was built from a 'save us' of the [https://ia902908.us.archive.org/tarview.php?tar=/25/items/2016.cyanogenmod.org.snapshot/cyanogenmod.org.snapshop.tar archive.org cyanogenmod.org.snapshop.tar] page.

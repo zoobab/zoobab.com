@@ -1,0 +1,35 @@
+++ A DHCP lease of 15 seconds?
+
+While debugging other things, I had a look at my /var/log/syslog messages, and I saw that my DHCP client was requesting an IP address every 15 seconds!. I assume that this is on purpose, but this is a bit too often to my taste.
+
+[[code]]
+Jun  4 11:58:39 buzek dhclient: DHCPREQUEST of 192.168.182.8 on wlan0 to 192.168.182.1 port 67
+Jun  4 11:58:39 buzek dhclient: DHCPACK of 192.168.182.8 from 192.168.182.1
+Jun  4 11:58:40 buzek dhclient: bound to 192.168.182.8 -- renewal in 12 seconds.
+Jun  4 11:58:52 buzek dhclient: DHCPREQUEST of 192.168.182.8 on wlan0 to 192.168.182.1 port 67
+Jun  4 11:58:52 buzek dhclient: DHCPACK of 192.168.182.8 from 192.168.182.1
+Jun  4 11:58:52 buzek dhclient: bound to 192.168.182.8 -- renewal in 14 seconds.
+Jun  4 11:59:06 buzek dhclient: DHCPREQUEST of 192.168.182.8 on wlan0 to 192.168.182.1 port 67
+Jun  4 11:59:06 buzek dhclient: DHCPACK of 192.168.182.8 from 192.168.182.1
+Jun  4 11:59:06 buzek dhclient: bound to 192.168.182.8 -- renewal in 14 seconds.
+Jun  4 11:59:20 buzek dhclient: DHCPREQUEST of 192.168.182.8 on wlan0 to 192.168.182.1 port 67
+Jun  4 11:59:20 buzek dhclient: DHCPACK of 192.168.182.8 from 192.168.182.1
+Jun  4 11:59:20 buzek dhclient: bound to 192.168.182.8 -- renewal in 14 seconds.
+Jun  4 11:59:34 buzek dhclient: DHCPREQUEST of 192.168.182.8 on wlan0 to 192.168.182.1 port 67
+Jun  4 11:59:34 buzek dhclient: DHCPACK of 192.168.182.8 from 192.168.182.1
+Jun  4 11:59:34 buzek dhclient: bound to 192.168.182.8 -- renewal in 12 seconds.
+Jun  4 11:59:46 buzek dhclient: DHCPREQUEST of 192.168.182.8 on wlan0 to 192.168.182.1 port 67
+Jun  4 11:59:46 buzek dhclient: DHCPACK of 192.168.182.8 from 192.168.182.1
+Jun  4 11:59:46 buzek dhclient: bound to 192.168.182.8 -- renewal in 13 seconds.
+Jun  4 11:59:59 buzek dhclient: DHCPREQUEST of 192.168.182.8 on wlan0 to 192.168.182.1 port 67
+Jun  4 11:59:59 buzek dhclient: DHCPACK of 192.168.182.8 from 192.168.182.1
+Jun  4 11:59:59 buzek dhclient: bound to 192.168.182.8 -- renewal in 15 seconds.
+[[/code]]
+
+++ A captive portal not easy to use on mobile phones, while it is one of the main target
+
+The captive portal page should be one simple page which scales well on mobile phones, or stripped down to the minimum, for both normal browsers and mobile phones versions. People wants something functional, not blinky logos and huge images.
+
+++ The authentication server timeout
+
+The authentication server fails to respond often, resulting in server timeouts.
