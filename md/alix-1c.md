@@ -1,29 +1,22 @@
-
-
 # Pictures
-
 
 [[=image <http://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Alix.1C_board_with_AMD_Geode_LX_800_%28PC_Engines%29.jpg/609px-Alix.1C_board_with_AMD_Geode_LX_800_%28PC_Engines%29.jpg>]]
 
 # JTAG
 
-
 Find out howto JTAG the board and install Comboot on it, together with gPXE, and load an installer over the internet.
 
 # Flash
-
 
 SST 49LF040B 33-4C-NHE 0647008-CA (512KB)
 
 # Coreboot
 
-
 * <http://qa.coreboot.org/binaries/abuild-coreboot-v2-3749/pcengines_alix1c/coreboot.rom>  
-* [[coreboot.rom]](../files/alix-1c/coreboot.rom?raw=true) (md5sum: 54b2c8aa61f0d9cfe1d63ae94ba2f827)
-* [[File flashrom-static]]
+* [coreboot.rom](../files/alix-1c/coreboot.rom?raw=true) (md5sum: 54b2c8aa61f0d9cfe1d63ae94ba2f827)
+* [flashrom-static](../files/alix-1c/flashrom-static?raw=true)
 
 # Problems
-
 
 Once I flashed the coreboot.rom with the flashrom-static binary, I did not get any VGA at boot time, but messages on the serial console:
 
