@@ -19,7 +19,7 @@ SST 49LF040B 33-4C-NHE 0647008-CA (512KB)
 
 
 * <http://qa.coreboot.org/binaries/abuild-coreboot-v2-3749/pcengines_alix1c/coreboot.rom>  
-* [../files/alix-1c/coreboot.rom](coreboot.rom) (md5sum: 54b2c8aa61f0d9cfe1d63ae94ba2f827)
+* [[../files/alix-1c/coreboot.rom]](coreboot.rom) (md5sum: 54b2c8aa61f0d9cfe1d63ae94ba2f827)
 * [[File flashrom-static]]
 
 # Problems
