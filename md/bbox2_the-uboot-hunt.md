@@ -1,0 +1,40 @@
+I have tried to flash the bbox2 with the complete flash dump of the Agif italian router (which is based on the same hardware), it boots with the uboot prompt, but unfortunately, there is no way to have input in there, it goes in a loop which I cannot break with keys entered on the serial port:
+
+
+    U-Boot 1.1.4 for FUSIV chipset by Ikanos(Jun 16 2009 - 15:49:51)                                                                                                                                                                                                               
+    CPU: IKANOS Fusiv 160 Family                                                                                                                                                                                                                                                   
+    Ethernet Switch hardware reset                                                                                                                                                                                                                                                 
+    DRAM:  64 MB
+    Flash: 16 MB
+    *** Warning - bad CRC, using default environment
+    In:    serial
+    Out:   serial
+    Err:   serial
+    Net:   voxEmac
+    Type "h" for HELP. Have fun!
+    factory reset countdown: 15 
+    ******** 4 8 15 16 23 42 *********
+    ... done
+    Erased 3 sectors
+    U-Boot 1.1.4 for FUSIV chipset by Ikanos(Jun 16 2009 - 15:49:51)
+    CPU: IKANOS Fusiv 160 Family
+    Ethernet Switch hardware reset
+    DRAM:  64 MB
+    Flash: 16 MB
+    *** Warning - bad CRC, using default environment
+    In:    serial
+    Out:   serial
+    Err:   serial
+    Net:   voxEmac
+    Type "h" for HELP. Have fun!
+    factory reset countdown: 15
+
+
+I am still hunting for the sources of the uboot for the vx160 chipset, or a router which has a decent uboot which can boot any image.
+
+U-boot itself is GPL, there should be a way to request the sources at Ikanos.
+
+## Comments
+
+
+[[module Comments]]

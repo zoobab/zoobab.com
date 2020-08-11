@@ -1,0 +1,22 @@
+# About
+
+
+This page is about listing android devices that can be or cannot be rooted with the [Cydia Impactor](http://www.cydiaimpactor.com/) tool.
+
+Please help, if you have an android device, you can edit this page at the bottom and contribute! 
+
+# Rootable devices
+
+
+* Cubot P9 mtk6572 (Android 4.?.?)
+* Star i9300 mtk6577 (Android 4.1.1)
+
+# Unrootable devices
+
+
+* Nook HD+
+
+# Bugs
+
+
+For the linux-64 bits version, I had to fix the symlink of libudev to the right place (under Gentoo/Sabayon, you should change the symlink to point to /usr/lib/libudev.so.1). The link should be fine on Debian/Ubuntu based systems, where it is located at /lib/x86_64-linux-gnu/libudev.so.1 .

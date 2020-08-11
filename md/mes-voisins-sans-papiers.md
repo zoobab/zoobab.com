@@ -1,0 +1,13 @@
+Mes voisins sans papiers Rue Dansaert (JT de midi RTBF du 1er Juillet). La police a défoncé la porte à 5h du mat. Les sans-papiers ont fait de la résistance sur mon toit.
+
+# News RTBF
+
+
+[[embedvideo]]
+<object width="560" height="340"><param name="movie" value="<<http://www.youtube.com/v/nBvo0CPJiac&hl=en&fs=1&>  >  "></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/nBvo0CPJiac&hl=en&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="560" height="340"></embed></object>
+[[/embedvideo]]
+
+# Pictures
+
+
+[[gallery]]

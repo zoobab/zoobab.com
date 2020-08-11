@@ -1,0 +1,720 @@
+[[f>toc]]
+
+# What is it?
+
+
+The Belgacom Box 2 (BBOX2) is a router used by Belgacom, the most popular Internet Service Provider (ISP) of Belgium, to provide access to thousands of subscribers in the country. Statistics says that there are more then 300.000 of those boxes in circulation. It runs a modified version of Linux by default (OpenRG), and has 1 USB2.0 ports that allows people to modify it, and extend its features.
+
+# News
+
+
+* **21 Nov 2019**: [BEREC routers consultation, or "Why ISPs should not get their hands on my router"](http://www.zoobab.com/berec-routers-consultation)
+* **25 Mar 2014**: I am looking for brave people to take good pictures of the PCB of the BBOX3, contact me at zoobab at gmail.com if you own one
+* **01 Sep 2013**: [Polish forum with serial logs of a 2.6.18 kernel on Livebox2 with ZTE bootloader](http://eko.one.pl/forum/viewtopic.php?id=2827), see also [here](http://wklej.to/r106b)
+* **04 Jun 2013**: [Belgacom announces the new Bbox3](http://forum.astel.be/showthread.php/211642-Belgacom-nouvelle-B-Box-3)
+* **20 Apr 2012**: [Amtec: Argo55 is another Ikanos vx160 based router](http://lab.algasystems.net/2012/01/amtec-elsagdatamag-argo-5595-take-5-dump-the-flash/)
+* **20 Apr 2012**: [U-Boot sources for the Ikanos vx160 published!](http://foro.seguridadwireless.net/livebox-2/fuentes-para-compilar-u-boot-para-vx160/)
+* **20 Apr 2012**: [Zoobab.dyndns.org server](http://zoobab.dyndns.org) moved from [now paying dyndns.org](http://tech.slashdot.org/story/11/12/17/0141213/dyndns-cuts-back-free-dns-options) to [filez.zoobab.com](http://filez.zoobab.com). Public TFTP server still needs to be migrated.
+* **22 Feb 2012**: [Mailing-list created to discuss Ikanos VX160 hacks, please join!](http://groups.google.com/group/ikanos-vx160)
+* **28 Dec 2011**: [The team LVB2 has managed to make OpenWrt work on Fusiv 160 based routers (Agif, Livebox 2 and BBox 2), albeit without ethernet nor wifi for now](http://foro.seguridadwireless.net/livebox-2/)
+* **14 Nov 2011**: [Firmware hacking blog gives lots of interesting details about the Livebox2](http://fwhacking.blogspot.com/search/label/Livebox%202)
+* **29 Oct 2011**: [Lexra core LX4189 datasheet](http://81.70.242.211/eab1/manual/Component/Lexra/lx4189%201.9%20c20081030%20%5B94%5D.pdf) ([[file lx4189-datasheet-1.9-c20081030.pdf | local copy]]) and [Ikanos ikf6836 datasheet](http://repofulm.dyndns.org/index.php?dir=merlino60/pirelli%20agif/&file=3181_ikf6836_ds_v1.3.pdf)
+* **29 Oct 2011**: [QI Hardware mentions a makefile with LX4189 and Ikanos VX160 and VX180](http://projects.qi-hardware.com/index.php/p/qi-kernel/source/tree/master/drivers/staging/rt2860/config.mk)
+* **29 Oct 2011**: [[[bbox2:the-uboot-hunt | Tried to flash the Bbox2 with a different u-boot]]]
+* **19 Oct 2011**: [http://openlivebox.org/index.php?title=Hardware:FAST3XXX_681420 Openlivebox: pictures of the Livebox2 inside, serial port details]
+* **01 Oct 2011**: [https://hackerspace.be/Belgacom_Box2_(bbox2)_OpenWRT_workshop Bbox2 openwrt workshop at HSB, Brussels, 28-30 october]
+* **09 Feb 2011**: [Dlink DSL-6541k](http://www.shopping01.com/topicdetail.php?f=507&t=1573962&p=3) runs on Ikanos vx180, with uboot+linux2.6.18, [more pictures](http://www.pczone.com.tw/vbb3/thread/73/151064/2/)
+* **07 Feb 2011**: [<http://www.ilpuntotecnicoeadsl.com/wiki/index.php?title=Alice_Gate_VoIP_2_Plus_Wi-Fi_>  (Industrie_Dial_Face) Alice Gate VoIP 2 Plus Wi-Fi (Industrie Dial Face)] is a [similar device](http://test.ninux.org/~claudyus/alice_agif/) hacked by [Ninux](http://wiki.ninux.org/agif) guys (Italy), with normal U-boot (without encryption) and OpenWRT packages, [Github repo](https://github.com/claudyus/linux-2.6/tree/fusiv) for the kernel, Openwrt forum [discussion](https://forum.openwrt.org/viewtopic.php?pid=127397)
+* **23 Jan 2011**: installed a public TFTP server on [zoobab.dyndns.org](http://zoobab.dyndns.org)
+* **24 Oct 2010**: first [[[bbox2:compile-a-first-kernel | kernel compiled]]] with the livebox sources
+
+# Hardware
+
+
+* 1 USB2
+* 2 FXS
+* 1 switch 4 ports
+* 1 serial
+* 1 wifi atheros
+* VDSL2
+* Flash 16MB
+* RAM 64MB
+* 1 JTAG
+
+# Pictures
+
+[[=image <http://tweakers.net/ext/f/lVGW3UM1wYwDietgqqsDyfo2/full.jpg>  ]]
+[[=image <http://tweakers.net/ext/f/Y3AZPlYUIYcbXDOXEa6WnsLQ/full.jpg>  ]]
+[[=image <http://tweakers.net/ext/f/SaXJHYI63V4e0VxzYqEG5pq1/full.jpg>  ]]
+[[=image 27112009663.jpg size="medium"]]
+
+# Gallery
+
+
+[[gallery]]
+
+# Serial port
+
+
+Put here some pictures on where to solder a 4 pins header for obtaining the serial console.
+
+|| GND || TX || NC || RX ||
+
+Put a picture of the pinout here:
+
+[[=image bbox2-serial-pinout-usbbub.jpg]]
+
+# Serial messages
+
+
+
+    Watchdog process control started...
+    dev_if_ad68xx_adsl_status_poll: case 0
+     
+    
+    SAGEM Secure-boot v2.4.8 for ADI chipset
+    
+    CPU: ADI Fusiv 160 Family
+    DRAM:  64 MB
+    Flash: 16 MB
+    Using default environment
+    
+    In:    serial
+    Out:   serial
+    Err:   serial
+    voxEmac
+    _PORT0_PHY_CTRL_REG=12288_good regular firmware
+    partition not moved
+    Launch regular code from flash
+    ## Booting image at bf960140 ...
+       Image Name:   FAST3464_6000G0
+       Created:      2008-07-09  14:59:33 UTC
+       Image Type:   MIPS Linux Kernel Image (gzip compressed)
+       Data Size:    6770449 Bytes =  6.5 MB
+       Load Address: 80010000
+       Entry Point:  80261000
+       Verifying Checksum ... OK
+       Uncompressing Kernel Image ... OK
+    
+    Starting kernel ...
+    
+    Linux version 2.6.15 #34 Wed Jul 9 16:59:28 CEST 2008
+    SDRAM size: 64Mb
+    FLASH size: 16Mb
+    CPU revision is: 6836c400
+    Init USB Host
+    Determined physical RAM map:
+     memory: 04000000 @ 00000000 (usable)
+     memory: 01000000 @ 1f000000 (ROM data)
+    Built 1 zonelists
+    Kernel command line: console=ttyS0,57600 
+    Primary instruction cache 16kB, linesize 32 bytes.
+    Primary data cache 8kB, linesize 32 bytes.
+    Synthesized TLB refill handler (17 instructions).
+    Synthesized TLB load handler fastpath (31 instructions).
+    Synthesized TLB store handler fastpath (31 instructions).
+    Synthesized TLB modify handler fastpath (25 instructions).
+    PID hash table entries: 512 (order: 9, 8192 bytes)
+    Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+    Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+    Memory: 55972k/65536k available (2065k kernel code, 9500k reserved, 306k data, 104k init, 0k highmem)
+    Mount-cache hash table entries: 512
+    Checking for 'wait' instruction...  unavailable.
+    NET: Registered protocol family 16
+    Fusiv PCI: starting...
+    SCSI subsystem initialized
+    usbcore: registered new driver usbfs
+    usbcore: registered new driver hub
+    GPIO Initialisation (led/buttons/relays)
+    JFFS2 version 2.2. (C) 2001-2003 Red Hat, Inc.
+    Initializing Cryptographic API
+    io scheduler noop registered
+    Random: 0xd2b106e5
+    Serial: 8250/16550 driver $Revision: 1.1.4.1.2.1 $ 1 ports, IRQ sharing disabled
+    serial8250: ttyS0 at MMIO 0xb9020000 (irq = 6) is a 16450
+    vox160-ehci-hcd vox160-ehci-hcd.0: Ikanos On-Chip EHCI Host Controller
+    vox160-ehci-hcd vox160-ehci-hcd.0: new USB bus registered, assigned bus number 1
+    vox160-ehci-hcd vox160-ehci-hcd.0: irq 35, io mem 0x19230000
+    vox160-ehci-hcd vox160-ehci-hcd.0: USB 0.0 started, EHCI 1.00, driver 10 Dec 2004
+    hub 1-0:1.0: USB hub found
+    hub 1-0:1.0: 1 port detected
+    vox160-ohci-hcd vox160-ohci-hcd.0: ADI VOX160 OHCI
+    vox160-ohci-hcd vox160-ohci-hcd.0: new USB bus registered, assigned bus number 2
+    vox160-ohci-hcd vox160-ohci-hcd.0: irq 35, io mem 0x19240800
+    hub 2-0:1.0: USB hub found
+    hub 2-0:1.0: 1 port detected
+    usbcore: registered new driver usblp
+    /filer1_vol5/dev_projets2/adsl_adi/fast_3464_vdsl2/dev/soft/pwe/verchere/FR/checkoutdir/openrg/package/rg/os/linux-2.6/drivers/usb/class/usblp.c: v0.13: USB Printer Device Class driver
+    Initializing USB Mass Storage driver...
+    usbcore: registered new driver usb-storage
+    USB Mass Storage support registered.
+    u32 classifier
+        OLD policer on 
+    NET: Registered protocol family 2
+    IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+    TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+    TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+    TCP: Hash tables configured (established 4096 bind 4096)
+    TCP reno registered
+    NET: Registered protocol family 1
+    NET: Registered protocol family 17
+    NET: Registered protocol family 8
+    NET: Registered protocol family 20
+    802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+    All bugs added by David S. Miller <davem@redhat.com>
+    fusiv_flash: Found 1 x16 devices at 0x0 in 16-bit bank
+     Amd/Fujitsu Extended Query Table at 0x0040
+    fusiv_flash: CFI does not contain boot bank location. Assuming top.
+    number of CFI chips: 1
+    cfi_cmdset_0002: Disabling erase-suspend-program due to code brokenness.
+    Creating 2 MTD partitions on "fusiv_flash":
+    0x00000000-0x01000000 : "openrg"
+    0x00180000-0x00280000 : "jffs2"
+    fusiv_flash: detected at 0x1f000000 size 16777216 bytes
+    Freeing unused kernel memory: 104k freed
+    fusiv library initializing...
+    fusiv library initialized SUCCESSFULLY... 
+    periApDriverInit: done
+     *******LOAD firmware to AP:PERI_ID result:0Load into PERI_AP APU Successful !!!
+    
+     Buffer Manager is initializing...
+    Load into BM APU Successful !!!
+     Buffer Manager initialized SUCCESSFULLY...
+    Timers are getting initalized
+    Timers are initilized SUCCESSFULLY...
+    Ethernet Driver is initialized SUCCESSFULLY
+    ADI ATM driver registered, number=0
+    ATM Driver Initialized SUCCESSFULLY...
+    loading license key: 34ab8923211d0b2de5d3d0b527e8e204cf095886cdab51635b07f7222b565eb03491a37a19864f125d3bf8b5838ce291e6cc9907678ec674b5d1cee0a0fbd19115f3bd3d3a0ee7f89b9af02f
+    hardware_read_fs OK for /dev/mtdblock0 !!! It's [b-box2] 
+    hardware_read_fs OK for /dev/mtdblock0 !!! It's [bbox2-5C1C] 
+    leds_setup : Hardware is BBOX!!!
+    ath_hal: 0.9.17.1 (AR5212, RF5111, RF5112, RF2413, RF5413)
+    wlan: 0.8.4.2 (Atheros/multi-bss)
+    ath_rate_atheros: Version 2.0.1
+    Copyright (c) 2001-2004 Atheros Communications, Inc, All Rights Reserved
+    ath_dfs: Version 2.0.0
+    Copyright (c) 2005-2006 Atheros Communications, Inc. All Rights Reserved
+    wlan: mac acl policy registered
+    ath_pci: 0.9.4.5 (Atheros/multi-bss)
+    PCI: Enabling device 0000:00:01.0 (0000 -> 0002)
+    ath_attach: Fast Path Test Code Compiled Jul  9 2008 16:53:56
+    Setting ah_eepromDetach
+    **** Going to ath_hal_readEepromIntoDataset
+    wifi0: 11b rates: 1Mbps 2Mbps 5.5Mbps 11Mbps
+    wifi0: 11g rates: 1Mbps 2Mbps 5.5Mbps 11Mbps 6Mbps 9Mbps 12Mbps 18Mbps 24Mbps 36Mbps 48Mbps 54Mbps
+    wifi0: mac 7.8 phy 4.5 radio 5.6
+    wifi0: Use hw queue 1 for WME_AC_BE traffic
+    wifi0: Use hw queue 0 for WME_AC_BK traffic
+    wifi0: Use hw queue 2 for WME_AC_VI traffic
+    wifi0: Use hw queue 3 for WME_AC_VO traffic
+    wifi0: Use hw queue 8 for CAB traffic
+    wifi0: Use hw queue 9 for beacons
+    wifi0: Atheros 5212: mem=0x1a000000, irq=25
+    Press ESC to enter BOOT MENU mode.
+    ffs: entry:0: successfully mounted dev:/dev/mtdblock1 fs:jffs2 mount point:/mnt/ffs/A.
+    IPV4 device driver registered
+    Initializing Watchdog module
+    Initializing Watchdog module1 
+    Initializing Watchdog module2
+    Initializing Watchdog module3
+    
+    ##################################################
+    
+    # DSP Voice Module Part 1 Loading ...
+    
+    Register /sys/sagem/voice SysCtl ... OK
+    Using: Software Build(voice_2_6 : Thu Dec  8 10:33:40 PST 2005)
+    # DSP Voice Module Part 1 Loading Ok
+    ##################################################
+    ##################################################
+    # DSP Voice Module Part 2 Loading ...
+    Could not find DSP configuration file, setting to defaults
+    Save and reboot the system to effect the Codec Mode : 2
+    Total words found in /dsp/dsp218x_1ch_g729only.dsp Image 31948
+    Registering Call Back Handlers
+     DSP TIME SLOT Assigned:260
+     DSP CLock Assigned:22
+     DSP Codec Type  Assigned:2
+     DSP TIME SLOT Assigned:40
+     DSP CLock Assigned:22
+     DSP Codec Type  Assigned:2
+    ADSP218x DOWNLOAD DONE !!!!
+    DSP Ver No:1.1  
+     Initialization SLIC system
+     Initializing Voice 
+     Initializing SPI Module 
+     Initialization SLIC device
+      Product Code: ff ff
+      Assuming SLIC card as SILABS 
+     Codec[0] => Chip Type [0]  Chip Version [3]
+     BELGIUM SI3216 Initialization. codecNo 0
+     Codec[1] => Chip Type [0]  Chip Version [3]
+     BELGIUM SI3216 Initialization. codecNo 1
+    # DSP Voice Module Part 2 Loading Ok
+    ##################################################
+    ##################################################
+    # RTP Stack Module Loading ...
+    Register /dev/rtp Device ...Register /sys/sagem/rtp SysCtl ...Relay Driver Starting...
+    Ikanos BME  is registered as char device Major No 254
+    Switch Hard Reset
+    Writing GPIO conf file
+    Successfully opened GPIO conf file /mBME Unknown ioctl cmd 540d..
+    nt/ffs/A/gpio.conf
+    Successfully wrote hardware into file
+    Done writing GPIO conf fileVDSL Daemon starting...
+    VDSL Daemon started
+    Atheros Wifi card found.
+    eth2
+    eth3
+    opening reconfentity Entity
+    
+    MAIN AUTOM ID IS 100 warning #1 :new rg_conf entry but not signaled
+    warning #1 :new rg_conf entry but not signaled
+    warning #1 :new rg_conf entry but not signaled
+    warning #1 :new rg_conf entry but not signaled
+    warning #1 :new rg_conf entry but not signaled
+    warning #1 :new rg_conf entry but not signaled
+    warning #1 :new rg_conf entry but not signaled
+    dev_control:50: PPPoE relay ioctl failed - No such device
+    eth1.10: Setting MAC address to  00 1b bf 79 5c 1d.
+    
+    device eth1 entered promiscuous mode
+    
+    eth1.20: Setting MAC address to  00 1b bf 79 5c 1d.
+    
+    
+    ipos system initialized 
+    CreateTimer15Mins(): success 
+    CreateTimer3Mins(): success 
+    start autoRestart from UI Task
+    
+    BME 1 is coming up
+    Fusiv oampBmeStart() ../
+    device eth0 entered promiscuous mode
+    
+    
+    INI RESETHello 2 
+    
+    Downloading BME eth1.10: Setting MAC address to  00 1b bf 79 5c 1d.
+    
+    eth1.20: Setting MAC address to  00 1b bf 79 5c 1d.
+    
+    vendor_id_tmp : Sagem,3664,6000G0,LK08229DP370330DHCP Init : Sagem,3664,6000G0,LK08229DP370330
+    
+    
+    __BEI_mode_hybride:sup_dslmod_main_ok
+    
+    
+    Resetting adsl DSP
+
+
+# Screenlog
+
+
+
+    $ screen /dev/ttyUSB0 57600 8N1
+
+
+The output is [[file screenlog.0.txt| here]] (long).
+
+# Modules
+
+
+
+    # cat /proc/modules 
+    switch_6085 42656 0 - Live 0xc03c1000
+    bmedrv 7024 0 - Live 0xc0265000
+    relay_mod 2256 0 - Live 0xc002b000
+    rtp 62112 2 - Live 0xc03b0000
+    dspvoice 443584 1 rtp, Live 0xc04d3000
+    wlan_scan_ap 13792 0 - Live 0xc0270000
+    clip_mod 13344 0 - Live 0xc026b000
+    qos_ingress 1216 0 - Live 0xc0042000
+    watchdog_mod 3392 0 - Live 0xc000d000
+    ppp 45152 0 - Live 0xc038f000
+    be_pppoa_mod 6384 1 ppp, Live 0xc0257000
+    pppoe_relay 96192 0 - Live 0xc0376000
+    rg_ipv4 1472 0 - Live 0xc0029000
+    rg_dhcp_pktfil 5136 0 - Live 0xc0250000
+    jfw 385072 0 - Live 0xc0473000
+    frag_cache_mod 8768 1 jfw, Live 0xc0245000
+    tcp_mss 2352 0 - Live 0xc0027000
+    rg_bridge 56576 1 - Live 0xc0367000
+    rg_fastpath_bridge 8368 1 rg_bridge, Live 0xc0241000
+    igmp_proxy_mod 30592 1 - Live 0xc025c000
+    rg_fastpath 22736 4 pppoe_relay,jfw,rg_fastpath_bridge,igmp_proxy_mod, Live 0xc0249000
+    log_chardev 10944 7 ppp,pppoe_relay,jfw,frag_cache_mod,rg_bridge,igmp_proxy_mod,rg_fastpath, Live 0xc023d000
+    wl 498576 0 - Live 0xc03f8000
+    ath_pktlog 14672 0 - Live 0xc004f000
+    ath_pci 203216 1 ath_pktlog, Live 0xc027d000
+    wlan_acl 6624 1 - Live 0xc003f000
+    wlan_xauth 1088 0 - Live 0xc0025000
+    wlan_ccmp 9088 0 - Live 0xc003b000
+    wlan_tkip 14016 0 - Live 0xc0036000
+    wlan_wep 6528 0 - Live 0xc0000000
+    ath_dfs 38528 1 ath_pci, Live 0xc0044000
+    ath_rate_atheros 59376 2 ath_pktlog,ath_pci, Live 0xc022d000
+    wlan 273104 13 wlan_scan_ap,pppoe_relay,rg_fastpath_bridge,rg_fastpath,ath_pktlog,ath_pci,wlan_acl,wlan_xauth,wlan_ccmp,wlan_tkip,wlan_wep,ath_rate_atheros, Live 0xc0323000
+    ath_hal 463088 5 ath_pktlog,ath_pci,ath_dfs,ath_rate_atheros, Live 0xc02b0000
+    btn 3632 0 - Live 0xc0003000
+    kleds_mod 6880 0 - Live 0xc0022000
+    kos_lib 83232 27 qos_ingress,watchdog_mod,ppp,pppoe_relay,rg_ipv4,rg_dhcp_pktfil,jfw,frag_cache_mod,tcp_mss,rg_bridge,rg_fastpath_bridge,igmp_proxy_mod,rg_fastpath,log_chardev,btn,kleds_mod, Live 0xc0217000
+    atmdriver_lkm 1840112 2 rg_fastpath_bridge,rg_fastpath, Live 0xc0054000
+    ethdriver_lkm 32128 0 - Live 0xc002d000
+    timers_lkm 6400 1 atmdriver_lkm, Live 0xc001f000
+    sysutil 7280 0 - Live 0xc001c000
+    bmdriver_lkm 12032 1 atmdriver_lkm, Live 0xc0009000
+    peri_ap_lkm 11328 0 - Live 0xc0005000
+    fusivlib_lkm 47264 10 pppoe_relay,rg_fastpath_bridge,rg_fastpath,btn,kleds_mod,atmdriver_lkm,ethdriver_lkm,sysutil,bmdriver_lkm,peri_ap_lkm, Live 0xc000f000
+
+
+# Dump of the flash
+
+
+Via a USB key dd if=/dev/mtdblock0 of=mtdblock0
+
+Files:
+
+* [[file mtdblock0]]
+* [[file mtdblock1]]
+
+# Re-flash via DD and MTD
+
+
+A dump of the 16M flash (via dd=/dev/mtdblock0 of=/tmp/16M) in /tmp allows you to backup the complete flash, but also to reflash the flash chip with the dd command. I tested it on a bbox2, rebooted it, and it works fine.
+
+# Toolchain
+
+
+Thomson has a [Microsoft Word file](http://www.thomson.net/GlobalEnglish/open-software/open-software/DSL-IP-Gateways/Documents/Live%20Box%201%20Open%20SW%20Licenses%20texts%20update.doc) ([http://74.125.77.132/search?q=cache:2yFswUFWpcMJ:www.thomson.net/GlobalEnglish/open-software/open-software/DSL-IP-Gateways/Documents/Live%2520Box%25201%2520Open%2520SW%2520Licenses%2520texts%2520update.doc+sources-toolchain-3.2.2.tar&cd=4&hl=fr&ct=clnk&gl=be Google HTML copy]) where they explain the procedure to get a copy of the toolchain Sources-toolchain-3.2.2.tar:
+
+> Free software released under the GNU Lesser General Public License (LGPL) Version 2.1 (available at <http://www.gnu.org/licenses/lgpl.txt>  );
+> 
+> Vlan
+> Updatedd-1.6
+> Sources-toolchain-3.2.2.tar
+>  
+> Anyone may obtain from us a copy of the source code for the free software packages listed above. The source packages for these programs are available for download at <http://www.thomson.net/open-software.>   Those individuals without Internet access may request that a CD-ROM or DVD containing the source code be sent to them by mail. To reimburse the expenses incurred by creation, handling and postage, we will charge a €12 fee. To request a CD ROM or DVD of the source code, send an e-mail to sylvie.cottret@thomson.net or mail the request, with payment, to Thomson Sylvie Cottret – Open Software Source Code Request, 46 Quai Alphonse Le Gallo 92100 Boulogne-Billancourt, France. 
+
+They [http://74.125.77.132/search?q=cache:z6-gln9li74J:www.livebox-opensource.com/thomson-lb1/docs/thomson/Live%2520Box%25201%2520Open%2520software%2520update%2520%2520list.xls+sources-toolchain-3.2.2.tar&cd=1&hl=fr&ct=clnk&gl=be do not put it] online for download:
+
+> LV24	sources-toolchain-3.2.2.tar	GPL V2	LGPL V2.1	 **Oversized Available on request**
+
+# Compile Helloworld.c
+
+
+# Install the toolchain from Jungo -> done
+# Compile Helloworld.c in static -> done, Hello world works!
+# Compile a busybox in static with OpenWRT external toolchain option -> does not find some includes...
+
+# Compile openwrt packages
+
+
+It is quite easy to cross-compile packages with the OpenWRT "external toolchain" option if you have previously installed the toolchain:
+
+[[=image openwrt-external-toolchain.png]]
+
+Ninux cross-compiled some packages using this method for the bbox2: <http://test.ninux.org/~claudyus/alice_agif/openwrt/ikanos/packages/>  
+
+Put some static binaries here:
+
+* [[File busybox]]
+* [[File dropbear]]
+* [[File iwconfig]]
+
+# Load software with the TFTP client
+
+
+The box has a TFTP client which you can use to download some software. I have setuped a TFTP server with dnsmasq (my [[File dnsmasq.conf]] is here) and created a /tftproot directory where I have put the static busybox. Now you can telnet to your bbox2 and download the static busybox (your bbox2 has to be connected to the internet):
+
+
+    zoobab@buzek /home/zoobab/tmp2 [9]$ telnet 192.168.1.1
+    Trying 192.168.1.1...
+    Connected to 192.168.1.1.
+    Escape character is '^]'.
+    login: admin
+    Password: ********
+    [admin @ home]$ shell
+    
+    
+    BusyBox v1.01 (2010.01.26-12:11+0100) Built-in shell (ash)
+    Enter 'help' for a list of built-in commands.
+    
+    #      
+    # tftp -g -r busybox -l /tmp/busybox zoobab.dyndns.org
+    (NOTE: it takes a while before giving you a shell back...)
+    # ls -lh /tmp/busybox 
+    -rwxr-xr-x    1 0        0          974.0k Apr  5 18:12 /tmp/busybox
+
+
+
+You can create all symlinks to busybox in one command:
+
+
+    /tmp # for i in `./busybox --help | ./grep 'Currently defined functions:' -A30 | ./grep '\s.*,'`; do ln -s busybox `echo $i | ./sed -e 's/,//g'`; done
+
+
+# Kernel sources
+
+
+There seems to be some kernel sources here:
+
+<http://www.livebox-opensource.com/livebox1.2/thomson/src/linux-2.6.12.zip>  
+
+It contains some adi_fusiv directory:
+
+linux-2.6.12.zip#uzip/linux-2.6/arch/mips/adi_fusiv
+
+There seems to be also an interesting patch here:
+
+<http://freetz.mhampicke.de/trunk/make/linux/patches/2.6.19.2/7270_04.76/120-remove_fusiv.patch>  
+
+Trying to find the sources to which the patch relates to...
+
+# FXS interface
+
+
+The [http://209.85.229.132/search?q=cache:vaVCpv0NoeQJ:wiki.villagetelco.org/index.php/Mesh_Potato_Firmware_How_To+si3215+digium&cd=2&hl=es&ct=clnk VillageTelco project] seems to use the same kind of FXS chip (Si3215 instead of the Si3216 inside the bbox2):
+
+
+    ProSLIC module is Si3215
+    Start manual calibration
+    Module 0: Installed -- AUTO FXS
+    Registered mp char driver on major 34
+
+
+Some [interesting code](http://villagetelco.svn.sourceforge.net/viewvc/villagetelco/david/driver/mp.c?revision=182&view=markup&pathrev=204) about the Si Labs 3215 chipset:
+
+
+    /*
+       mp.c
+       David Rowe 17 May 2009
+       
+       Mesh Potato kernel mode driver for the Si Labs 3215 FXS chipset.  A
+       bit bashed SPI interface is constructed using the Atheros AR2317
+       (aka AR5315) SoC GPIO pins.  The SPI port is used for
+       initialisation and signalling of the FXS port, the TDM speech data
+       is transferred through the SoC RS232 port (via a hacked version of
+       8250.c driver).
+    
+       Credits: lots of SPI code and Si labs init code borrowed from
+       Zaptel wcfxs.c driver (Wildcard TDM400P TDM FXS/FXO Interface
+       Driver) written by Mark Spencer and Matthew Fredrickson.
+    */
+
+
+# JTAG
+
+
+[[=image bbox2-jtag-soldering-01.jpg size="medium"]]
+
+[[=image bbox2-jtag-soldering-02.jpg size="medium"]]
+
+## Pinout
+
+
+This is the one of a Philips MIPS 2x10 pins:
+
+|| TRST ||~ 1 ||~ 2 || GND ||
+|| TDI ||~ 3 ||~ 4 || GND ||
+|| TDO ||~ 5 ||~ 6 || GND ||
+|| TMS ||~ 7 ||~ 8 || GND ||
+|| TCK ||~ 9 ||~ 10 || GND ||
+|| SRESET ||~ 11 ||~ 12 || GND ||
+|| NC ||~ 13 ||~ 14 || GND ||
+|| NC ||~ 15 ||~ 16 || GND ||
+|| NC ||~ 17 ||~ 18 || GND ||
+|| NC ||~ 19 ||~ 20 || GND ||
+
+## Urjtag
+
+
+
+    UrJTAG 0.10 #1864
+    Copyright (C) 2002, 2003 ETC s.r.o.
+    Copyright (C) 2007, 2008, 2009 Kolja Waschk and the respective authors
+    
+    UrJTAG is free software, covered by the GNU General Public License, and you are
+    welcome to change it and/or distribute copies of it under certain conditions.
+    There is absolutely no warranty for UrJTAG.
+    
+    jtag.c:518 main() Warning: UrJTAG may damage your hardware!
+    Type "quit" to exit, "help" for help.
+    
+    jtag> cable JTAGkey
+    Connected to libftdi driver.
+    jtag> detect
+    discovery.c:117 urj_tap_detect_register_size() Warning: TDO seems to be stuck at 0
+    Error: parse.c:208 urj_parse_file() no error: Cannot open file '/home/zoobab/.jtag/rc' to parse
+    jtag> detect
+    IR length: 5
+    Chain length: 1
+    Device Id: 00000010011111010011000111001011 (0x027D31CB)
+      Manufacturer: Analog Devices, Inc. (0x1CB)
+      Unknown part! (0010011111010011) (/usr/local/share/urjtag/analog/PARTS)
+    jtag> detect
+    IR length: 5
+    Chain length: 1
+    Device Id: 00000010011111010011000111001011 (0x027D31CB)
+      Manufacturer: Analog Devices, Inc. (0x1CB)
+      Unknown part! (0010011111010011) (/usr/local/share/urjtag/analog/PARTS)
+    jtag> 
+    
+    
+    > jtag> discovery
+    > Detecting IR length ... 5
+    > Detecting DR length for IR 11111 ... 1
+    > Detecting DR length for IR 00000 ... 1
+    > Detecting DR length for IR 00001 ... 671
+    > Detecting DR length for IR 00010 ... 32
+    > Detecting DR length for IR 00011 ... 671
+    > Detecting DR length for IR 00100 ... 1
+    > Detecting DR length for IR 00101 ... 1
+    > Detecting DR length for IR 00110 ... 1
+    > Detecting DR length for IR 00111 ... 306
+    > Detecting DR length for IR 01000 ... 1
+    > Detecting DR length for IR 01001 ... 1
+    > Detecting DR length for IR 01010 ... 1
+    > Detecting DR length for IR 01011 ... 1
+    > Detecting DR length for IR 01100 ... 1
+    > Detecting DR length for IR 01101 ... 1
+    > Detecting DR length for IR 01110 ... 1
+    > Detecting DR length for IR 01111 ... 1
+    > Detecting DR length for IR 10000 ... 1
+    > Detecting DR length for IR 10001 ... 1
+    > Detecting DR length for IR 10010 ... 1
+    > Detecting DR length for IR 10011 ... 1
+    > Detecting DR length for IR 10100 ... 1
+    > Detecting DR length for IR 10101 ... 1
+    > Detecting DR length for IR 10110 ... 1
+    > Detecting DR length for IR 10111 ... 1
+    > Detecting DR length for IR 11000 ... 1
+    > Detecting DR length for IR 11001 ... 1
+    > Detecting DR length for IR 11010 ... 1
+    > Detecting DR length for IR 11011 ... 1
+    > Detecting DR length for IR 11100 ... 1
+    > Detecting DR length for IR 11101 ... 1
+    > Detecting DR length for IR 11110 ... 1
+    > jtag>
+    > jtag> initbus ejtag_dma
+    > Initialized bus 1, active bus 0
+    > jtag> print
+    >  No. Manufacturer              Part                 Stepping Instruction          Register                        
+    >    0                                                         (none)               (none)                          
+    > 
+    > Active bus:
+    > *0: EJTAG compatible bus driver via DMA (JTAG part No. 0)
+    >         start: 0x00000000, length: 0x1E000000, data width: 32 bit, (USEG : User addresses)
+    >         start: 0x1E000000, length: 0x02000000, data width: 16 bit, (FLASH : Addresses in flash (boot=0x1FC000000))
+    >         start: 0x20000000, length: 0x60000000, data width: 32 bit, (USEG : User addresses)
+    >         start: 0x80000000, length: 0x20000000, data width: 32 bit, (KSEG0: Kernel Unmapped Cached)
+    >         start: 0xA0000000, length: 0x20000000, data width: 32 bit, (KSEG1: Kernel Unmapped Uncached)
+    >         start: 0xC0000000, length: 0x20000000, data width: 32 bit, (SSEG : Supervisor Mapped)
+    >         start: 0xE0000000, length: 0x20000000, data width: 32 bit, (KSEG3: Kernel Mapped)
+    > jtag> readmem 0x1FC000000 0x02000000 out.bin
+    > address: 0xFFFFFFFC
+    > length:  0x02000000
+    > reading:
+    > chain.c(149) Part 0 without active instruction
+    > Segmentation fault
+    > root@buzek /home/zoobab [5]#
+
+
+
+# USB key speed test
+
+
+I plugged into the USB slot a USB key formatted in vfat, it seems to be a USB2 port, I have a speed of 2.5MO:
+
+
+    root@buzek /tmp [2]# while true; do wget http://192.168.1.1:631/sda1/10m; done
+    --2010-03-18 20:10:05--  http://192.168.1.1:631/sda1/10m
+    Connecting to 192.168.1.1:631... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 10485760 (10M) [application/octet-stream]
+    Saving to: `10m.4'
+    
+    100%[================================================>] 10,485,760  2.51M/s   in 4.0s    
+    
+    2010-03-18 20:10:09 (2.50 MB/s) - `10m.4' saved [10485760/10485760]
+    
+    --2010-03-18 20:10:09--  http://192.168.1.1:631/sda1/10m
+    Connecting to 192.168.1.1:631... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 10485760 (10M) [application/octet-stream]
+    Saving to: `10m.5'
+    
+    100%[================================================>] 10,485,760  2.54M/s   in 4.0s    
+    
+    2010-03-18 20:10:13 (2.53 MB/s) - `10m.5' saved [10485760/10485760]
+
+
+Files are accessible on hte web interface (<http://192.168.1.1:631/>  ) at port 631.
+
+# Presentation at Hackito Ergo Sum 2010
+
+
+## Slides
+
+
+<<http://www.hackitoergosum.org/2010/HES2010-bhenrion-Hacking-the-Belgacom-Box2.pdf>  >  
+
+## Videos
+
+
+[[embedvideo]]
+<object width="640" height="385"><param name="movie" value="<<http://www.youtube.com/v/yVNfSkFiR2o&hl=en_US&fs=1&>  >  "></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/yVNfSkFiR2o&hl=en_US&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
+[[/embedvideo]]
+
+[[embedvideo]]
+<object width="640" height="385"><param name="movie" value="<<http://www.youtube.com/v/diRG88wJnoc&hl=en_US&fs=1&>  >  "></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/diRG88wJnoc&hl=en_US&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
+[[/embedvideo]]
+
+[[embedvideo]]
+<object width="640" height="385"><param name="movie" value="<<http://www.youtube.com/v/SPBNBpe-Mmk&hl=en_US&fs=1&>  >  "></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/SPBNBpe-Mmk&hl=en_US&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
+[[/embedvideo]]
+
+# Links
+
+
+* <http://livebox-mini.blogspot.com/2008/09/la-livebox-mini-toute-nue-photo-pcb.html>  
+* <<http://web.archive.org/web/20010116172900/www.altera.com/html/mega/m-lx-4180.html>  >  
+* <https://forum.openwrt.org/viewtopic.php?pid=73080>  
+* <http://www.livebox-opensource.com/livebox1.2/index.html>  
+* <http://livebox.forumactif.com/firmware-sagem-f37/nouveau-telnet-192168702-t14098-30.htm>  
+* <http://www.gandf.info/firmware/OPENSOURCE-5G-2006-07-18.tgz>  
+* http://web.archive.org/web/20010116172900/www.altera.com/html/mega/m-lx-4180.html
+* <http://www.linux-mips.org/wiki/Lexra>  
+* <http://jpkg.jungo.com/jpkg/toolchain-lx4189-ulibc.jpkg>  
+* <http://www.eetop.cn/bbs/viewthread.php?tid=195114>  
+* <https://forum.openwrt.org/viewtopic.php?pid=57627>  
+* <http://lafibre.info/index.php?topic=3869.0>  
+* <http://jonahprobell.com/lexra.html>  
+* <http://jonahprobell.com/LX4189PF.pdf>  
+* <http://linuxfr.org/~mat_/29095.html>  
+* <http://www.sunspot.co.uk/Projects/SWEEX/slug/notes/kam_boot_usb.html>  
+* <http://www.nslu2-linux.org/wiki/OpenWrt/HomePage>  
+* <http://www.padesign.com/pages/websites/vp/images/graphics/vp_120.pdf>  
+* <http://wiki.yobi.be/wiki/Modem_BBox-2>  
+* <http://trac.freetz.org/browser/trunk/make/linux/patches/2.6.19.2/7270_04.67/120-remove_fusiv.patch?rev=2919>  
+* <<http://wildcat.espix.org/doc/bbox2/>  >  
+* http://www.ilpuntotecnicoeadsl.com/wiki/index.php?title=Alice_Gate_VoIP_2_Plus_Wi-Fi_(Industrie_Dial_Face)
+* <http://stijn.tintel.eu/blog/2009/11/04/sagem-fst-3464-vs-gpl>  
+* <http://trac.freetz.org/ticket/673>  
+* <http://yagati.com/vasavya/cv/Vasavya_Embedded-Telecom-8yrExp-20090209.pdf>  
+* <http://www.belgacom.com/group/gallery/content/shared/PressRelease/2009_06_17_gtb_award_en.pdf>  
+* <http://patrick.vande-walle.eu/internet/faille-de-securite-dans-500k-modems-belgacom/#more-741>  
+* <http://www.youtube.com/watch?v=zyVUg1EnPBQ>  
+* <<<http://www.ilpuntotecnicoeadsl.com/forum/index.php?topic=11260.0>  ;wap2>  >  
+* <http://cpe.mirrors.skynet.be/>  
+* <http://www.jungo.com/openrg/doc/4.8/installation_guide/html/html_ikanos/ch02.html>  
+* http://www.ilpuntotecnicoeadsl.com/forum/index.php?topic=11260.0;wap2
+* http://www.ilpuntotecnicoeadsl.com/forum/index.php?topic=11260.0
+* http://wildcat.espix.org/doc/bbox2/
+* http://www.hackitoergosum.org/2010/HES2010-bhenrion-Hacking-the-Belgacom-Box2.pdf
+
+# Comments
+
+
+[[module Comments]]

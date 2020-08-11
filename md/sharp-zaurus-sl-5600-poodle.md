@@ -1,0 +1,157 @@
+# Dmesg
+
+
+
+    <5>Linux version 2.6.24 (koen@bitbake) (gcc version 4.1.2) #1 PREEMPT Sun Aug 3 20:28:43 CEST 2008
+    <4>CPU: XScale-PXA250 [69052904] revision 4 (ARMv5TE), cr=0000397f
+    <4>Machine: SHARP Poodle
+    <4>Ignoring unrecognised tag 0x00000000
+    <4>Memory policy: ECC disabled, Data cache writeback
+    <7>On node 0 totalpages: 8192
+    <7>  DMA zone: 64 pages used for memmap
+    <7>  DMA zone: 0 pages reserved
+    <7>  DMA zone: 8128 pages, LIFO batch:0
+    <7>  Normal zone: 0 pages used for memmap
+    <7>  Movable zone: 0 pages used for memmap
+    <6>Memory clock: 99.53MHz (*27)
+    <6>Run Mode clock: 199.07MHz (*2)
+    <6>Turbo Mode clock: 398.13MHz (*2.0, active)
+    <4>CPU0: D VIVT undefined 5 cache
+    <4>CPU0: I cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+    <4>CPU0: D cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+    <4>Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 8128
+    <5>Kernel command line: console=ttyS0,115200n8 console=tty1 noinitrd root=/dev/mtdblock2 rootfstype=jffs2  fbcon=rotate:1 dyntick=enable quiet
+    <4>PID hash table entries: 128 (order: 7, 512 bytes)
+    <4>Console: colour dummy device 80x30
+    <6>console [tty1] enabled
+    <6>Dentry cache hash table entries: 4096 (order: 2, 16384 bytes)
+    <6>Inode-cache hash table entries: 2048 (order: 1, 8192 bytes)
+    <6>Memory: 32MB = 32MB total
+    <5>Memory: 29856KB available (2276K code, 237K data, 76K init)
+    <7>Calibrating delay loop... 397.31 BogoMIPS (lpj=1986560)
+    <4>Mount-cache hash table entries: 512
+    <6>CPU: Testing write buffer coherency: ok
+    <6>net_namespace: 64 bytes
+    <6>NET: Registered protocol family 16
+    <4>Sharp Scoop Device found at 0x10800000 -> 0xc2800000
+    <6>NET: Registered protocol family 2
+    <6>Time: oscr0 clocksource has been installed.
+    <7>Switched to high resolution mode on CPU 0
+    <6>IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+    <6>TCP established hash table entries: 1024 (order: 1, 8192 bytes)
+    <6>TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+    <6>TCP: Hash tables configured (established 1024 bind 1024)
+    <6>TCP reno registered
+    <6>LoCoMo Chip: 7649
+    <6>pxa25x: CPU frequency change support initialized (powersave tables)
+    <6>JFFS2 version 2.2. (NAND) (SUMMARY)  Â© 2001-2006 Red Hat, Inc.
+    <6>io scheduler noop registered
+    <6>io scheduler anticipatory registered (default)
+    <4>Console: switching to colour frame buffer device 60x53
+    <6>pxa2xx-uart.0: ttyS0 at MMIO 0x40100000 (irq = 22) is a FFUART
+    <6>console [ttyS0] enabled
+    <6>pxa2xx-uart.1: ttyS1 at MMIO 0x40200000 (irq = 21) is a BTUART
+    <6>pxa2xx-uart.2: ttyS2 at MMIO 0x40700000 (irq = 20) is a STUART
+    <6>pxa2xx-uart.3: ttyS3 at MMIO 0x41600000 (irq = 7) is a HWUART
+    <6>loop: module loaded
+    <5>Sharp SL series flash device: 800000 at 0
+    <5>Using static partision definition
+    <5>Creating 1 MTD partitions on "sharpsl-flash":
+    <5>0x00120000-0x007f0000 : "Boot PROM Filesystem"
+    <6>NAND device: Manufacturer ID: 0x98, Chip ID: 0x76 (Toshiba NAND 64MiB 3,3V 8-bit)
+    <6>Scanning device for bad blocks
+    <5>Creating 3 MTD partitions on "sharpsl-nand":
+    <5>0x00000000-0x00700000 : "System Area"
+    <5>0x00700000-0x01d00000 : "Root Filesystem"
+    <5>0x01d00000-0x04000000 : "Home Filesystem"
+    <6>pxa2xx_udc: version 30-June-2007
+    <4>WARNING: at arch/arm/mach-pxa/clock.c:69 clk_disable()
+    <4>[<c001ff28>] (dump_stack+0x0/0x14) from [<c002737c>] (clk_disable+0x34/0xb0)
+    <4>[<c0027348>] (clk_disable+0x0/0xb0) from [<c015674c>] (udc_disable+0x54/0x68)
+    <4> r5:c02699b0 r4:f2600000
+    <4>[<c01566f8>] (udc_disable+0x0/0x68) from [<c0015328>] (pxa2xx_udc_probe+0x164/0x25c)
+    <4> r5:c0258880 r4:c02699b0
+    <4>[<c00151c4>] (pxa2xx_udc_probe+0x0/0x25c) from [<c0146438>] (platform_drv_probe+0x20/0x24)
+    <4>[<c0146418>] (platform_drv_probe+0x0/0x24) from [<c0144b34>] (driver_probe_device+0x100/0x1b8)
+    <4>[<c0144a34>] (driver_probe_device+0x0/0x1b8) from [<c0144d4c>] (__driver_attach+0x84/0xe4)
+    <4> r7:c026993c r6:c0144cc8 r5:c0258880 r4:c0258924
+    <4>[<c0144cc8>] (__driver_attach+0x0/0xe4) from [<c0143e38>] (bus_for_each_dev+0x48/0x80)
+    <4> r5:c1c17ed4 r4:00000000
+    <4>[<c0143df0>] (bus_for_each_dev+0x0/0x80) from [<c0144950>] (driver_attach+0x20/0x28)
+    <4> r7:00000000 r6:00000000 r5:c0269944 r4:c026993c
+    <4>[<c0144930>] (driver_attach+0x0/0x28) from [<c01441f0>] (bus_add_driver+0x74/0x1c4)
+    <4>[<c014417c>] (bus_add_driver+0x0/0x1c4) from [<c0145038>] (driver_register+0x84/0x8c)
+    <4> r8:c1c16000 r7:00000000 r6:c0018870 r5:00000000 r4:c026993c
+    <4>[<c0144fb4>] (driver_register+0x0/0x8c) from [<c01466d4>] (platform_driver_register+0x6c/0x88)
+    <4> r4:c0269920
+    <4>[<c0146668>] (platform_driver_register+0x0/0x88) from [<c0146c68>] (platform_driver_probe+0x1c/0xa4)
+    <4>[<c0146c4c>] (platform_driver_probe+0x0/0xa4) from [<c00151ac>] (udc_init+0x28/0x40)
+    <4> r6:c0018870 r5:00000000 r4:c0019404
+    <4>[<c0015184>] (udc_init+0x0/0x40) from [<c00087d0>] (kernel_init+0xb4/0x27c)
+    <4>[<c000871c>] (kernel_init+0x0/0x27c) from [<c0034888>] (do_exit+0x0/0x7f8)
+    <6>input: LoCoMo keyboard as /class/input/input0
+    <6>input: Corgi Touchscreen as /class/input/input1
+    <6>power.c: Adding power management to input layer
+    <6>sa1100-rtc sa1100-rtc: rtc core: registered sa1100-rtc as rtc0
+    <6>I2C: i2c-0: PXA I2C adapter
+    <7>min dma period: 1157600 ps, new clock 398131 kHz
+    <7>min dma period: 1157600 ps, new clock 398131 kHz
+    <6>Registered led device: locomo:amber
+    <6>Registered led device: locomo:green
+    <6>TCP cubic registered
+    <6>NET: Registered protocol family 1
+    <6>XScale DSP coprocessor detected.
+    <6>sa1100-rtc sa1100-rtc: setting system clock to 1970-01-01 00:00:04 UTC (4)
+    <4>VFS: Mounted root (jffs2 filesystem) readonly.
+    <6>Freeing init memory: 76K
+    <4>mmc0: unrecognised SCR structure version 1
+    <6>mmc0: new SD card at address 3b49
+    <6>mmcblk0: mmc0:3b49 SD512 490496KiB 
+    <6> mmcblk0: p1
+    <4>Empty flash at 0x0012e3fc ends at 0x0012e400
+    <4>Empty flash at 0x010d31f8 ends at 0x010d3200
+    <6>Bluetooth: Core ver 2.11
+    <6>NET: Registered protocol family 31
+    <6>Bluetooth: HCI device and connection manager initialized
+    <6>Bluetooth: HCI socket layer initialized
+    <6>Bluetooth: L2CAP ver 2.9
+    <6>Bluetooth: L2CAP socket layer initialized
+    <6>Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+    <6>NET: Registered protocol family 23
+    <6>IrCOMM protocol (Dag Brattli)
+    <6>Bluetooth: RFCOMM socket layer initialized
+    <6>Bluetooth: RFCOMM TTY layer initialized
+    <6>Bluetooth: RFCOMM ver 1.8
+    <6>ASoC version 0.13.1
+    <6>wm8731: WM8731 Audio Codec 0.13
+    <6>asoc: WM8731 <-> pxa2xx-i2s mapping ok
+
+
+# Cpuinfo
+
+
+
+    Processor	: XScale-PXA250 rev 4 (v5l)
+    BogoMIPS	: 397.31
+    Features	: swp half thumb fastmult edsp 
+    CPU implementer	: 0x69
+    CPU architecture: 5TE
+    CPU variant	: 0x0
+    CPU part	: 0x290
+    CPU revision	: 4
+    Cache type	: undefined 5
+    Cache clean	: undefined 5
+    Cache lockdown	: undefined 5
+    Cache format	: Harvard
+    I size		: 32768
+    I assoc		: 32
+    I line length	: 32
+    I sets		: 32
+    D size		: 32768
+    D assoc		: 32
+    D line length	: 32
+    D sets		: 32
+    
+    Hardware	: SHARP Poodle
+    Revision	: 0000
+    Serial		: 0000000000000000

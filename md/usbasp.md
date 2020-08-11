@@ -1,0 +1,71 @@
+[[=image wholesale-new-usbasp-usbisp-avr-programmer-usb-atmega8-atmega128.jpg]]
+
+# Price
+
+
+4.55USD on [Aliexpress](http://www.aliexpress.com/snapshot/6090013561.html)
+
+# Reflashing mode
+
+
+There is a 2 holes connector, which seems to be J2, which is for reflashing the firmware.
+
+[[=image betemcu_detail_front.jpg size="medium"]]
+
+# Lsusb
+
+
+
+    Bus 007 Device 006: ID 16c0:05dc Van Ooijen Technische Informatica shared ID for use with libusb
+
+
+# Lsusb -v
+
+
+
+    Bus 007 Device 006: ID 16c0:05dc Van Ooijen Technische Informatica shared ID for use with libusb
+    Device Descriptor:
+      bLength                18
+      bDescriptorType         1
+      bcdUSB               1.10
+      bDeviceClass          255 Vendor Specific Class
+      bDeviceSubClass         0 
+      bDeviceProtocol         0 
+      bMaxPacketSize0         8
+      idVendor           0x16c0 Van Ooijen Technische Informatica
+      idProduct          0x05dc shared ID for use with libusb
+      bcdDevice            1.02
+      iManufacturer           1 www.fischl.de
+      iProduct                2 USBasp
+      iSerial                 0 
+      bNumConfigurations      1
+      Configuration Descriptor:
+        bLength                 9
+        bDescriptorType         2
+        wTotalLength           18
+        bNumInterfaces          1
+        bConfigurationValue     1
+        iConfiguration          0 
+        bmAttributes         0x80
+          (Bus Powered)
+        MaxPower               50mA
+        Interface Descriptor:
+          bLength                 9
+          bDescriptorType         4
+          bInterfaceNumber        0
+          bAlternateSetting       0
+          bNumEndpoints           0
+          bInterfaceClass         0 (Defined at Interface level)
+          bInterfaceSubClass      0 
+          bInterfaceProtocol      0 
+          iInterface              0 
+    Device Status:     0x0000
+      (Bus Powered)
+
+
+# Links
+
+
+* <http://hackaday.com/2010/06/03/usbasp-avr-programmer-based-on-atmega8/>  
+* <http://jethomson.wordpress.com/2011/08/18/project-ouroboros-reflashing-a-betemcu-usbasp-programmer/>  
+* <http://www.chicoree.fr/w/Le_programmateur_AVR_le_moins_cher_du_monde>  

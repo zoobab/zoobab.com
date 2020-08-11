@@ -1,0 +1,38 @@
+# About
+
+
+The idea is to use a webcam filming the screen of a multimeter is order to log the data. Afterwards, the pictures are OCRed and reduced to text.
+
+# Use mplayer to crop and dump
+
+
+View it:
+
+
+    mplayer tv:// -tv driver=v4l2:width=640:height=480:device=/dev/video0 -vf crop=360:190:75:120 -vo x11
+
+
+Record it as jpg:
+
+
+    mplayer tv:// -tv driver=v4l2:width=640:height=480:device=/dev/video0 -vf crop=360:190:75:120 -vo jpeg
+
+
+# Examples of LCD captures
+
+
+[[=image lcd-multimeter-008.jpg]]
+
+[[=image lcd-multimeter-202.jpg]]
+
+[[=image lcd-multimeter-899.jpg]]
+
+# Convert to B&W
+
+
+[[=image lcd-multimeter-040-bw.jpg]]
+
+# OCR the LCD
+
+
+TODO

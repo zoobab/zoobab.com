@@ -1,0 +1,19 @@
+I was installing Firefox on my Sabayon distro, and I got this message:
+
+
+    ╠  +++ >>>  (3/3) www-client/firefox-41.0.2
+    ╠    ## Unpacking: www-client:firefox-41.0.2.a8662b1bbaf4b2f7a7bb0fef570ca934690665e2~0.tbz2
+    ╠    ## Package phase: setup
+     * 
+     * You are enabling official branding. You may not redistribute this build
+     * to any users on your network or the internet. Doing so puts yourself into
+     * a legal problem with Mozilla Foundation
+     * You can disable it by emerging firefox _with_ the bindist USE-flag
+    ╠    ## Package phase: preinstall
+    ╠    ## Installing package: www-client/firefox-41.0.2
+    ╠    ## [Firefox Web Browser]
+    ╠    ## Updating installed packages repository: www-client/firefox-41.0.2
+    ╠    ## Package phase: postinstall
+
+
+After DRM, non-free services such as Pocket, supporting patented and royalty bearing video codecs such as MPEG4, and even filing software patents, Firefox really need a boycott.

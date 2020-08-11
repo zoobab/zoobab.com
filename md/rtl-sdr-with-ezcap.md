@@ -1,0 +1,89 @@
+# About
+
+
+I bought this [device (Ezcap EZTV668 DVB-T Digital TV USB 2.0 Dongle with FM/DAB/Remote Controller)](http://www.dealextreme.com/p/mini-dvb-t-digital-tv-usb-2-0-dongle-with-fm-dab-remote-controller-92096) from Dealextreme.
+
+# Lsusb
+
+
+
+    Bus 002 Device 003: ID 0bda:2838 Realtek Semiconductor Corp. 
+    Device Descriptor:
+      bLength                18
+      bDescriptorType         1
+      bcdUSB               2.00
+      bDeviceClass            0 (Defined at Interface level)
+      bDeviceSubClass         0 
+      bDeviceProtocol         0 
+      bMaxPacketSize0        64
+      idVendor           0x0bda Realtek Semiconductor Corp.
+      idProduct          0x2838 
+      bcdDevice            1.00
+      iManufacturer           1 Realtek
+      iProduct                2 RTL2838UHIDIR
+      iSerial                 0 
+      bNumConfigurations      1
+      Configuration Descriptor:
+        bLength                 9
+        bDescriptorType         2
+        wTotalLength           34
+        bNumInterfaces          2
+        bConfigurationValue     1
+        iConfiguration          4 USB2.0-Bulk&Iso
+        bmAttributes         0x80
+          (Bus Powered)
+        MaxPower              500mA
+        Interface Descriptor:
+          bLength                 9
+          bDescriptorType         4
+          bInterfaceNumber        0
+          bAlternateSetting       0
+          bNumEndpoints           1
+          bInterfaceClass       255 Vendor Specific Class
+          bInterfaceSubClass    255 Vendor Specific Subclass
+          bInterfaceProtocol    255 Vendor Specific Protocol
+          iInterface              5 Bulk-In, Interface
+          Endpoint Descriptor:
+            bLength                 7
+            bDescriptorType         5
+            bEndpointAddress     0x81  EP 1 IN
+            bmAttributes            2
+              Transfer Type            Bulk
+              Synch Type               None
+              Usage Type               Data
+            wMaxPacketSize     0x0200  1x 512 bytes
+            bInterval               0
+        Interface Descriptor:
+          bLength                 9
+          bDescriptorType         4
+          bInterfaceNumber        1
+          bAlternateSetting       0
+          bNumEndpoints           0
+          bInterfaceClass       255 Vendor Specific Class
+          bInterfaceSubClass    255 Vendor Specific Subclass
+          bInterfaceProtocol    255 Vendor Specific Protocol
+          iInterface              5 Bulk-In, Interface
+    Device Qualifier (for other device speed):
+      bLength                10
+      bDescriptorType         6
+      bcdUSB               2.00
+      bDeviceClass            0 (Defined at Interface level)
+      bDeviceSubClass         0 
+      bDeviceProtocol         0 
+      bMaxPacketSize0        64
+      bNumConfigurations      2
+    Device Status:     0x0000
+      (Bus Powered)
+
+
+# 
+
+
+
+
+
+# Links
+
+
+* <http://sdr.osmocom.org/trac/wiki/rtl-sdr>  
+* <http://www.reddit.com/r/rtlsdr>  

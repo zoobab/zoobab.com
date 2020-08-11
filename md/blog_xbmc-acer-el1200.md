@@ -1,0 +1,3 @@
+Two years ago, I bought for 200EUR (VAT incl.) an Acer EL1200 desktop (1GB RAM, 160GB disk) with a 15 LCD screen, a keyboard and a mouse. While I mainly use my laptop to work, I used this box once upon a time, notably to flash hundreds of USB keys for the OLPC project.
+
+Now, I have decided to use this box as a media center and home server, I have upgraded it with a 1TB harddisk, and tried XBMC live on it. I have tried to install XBMC on it, but I hit an error with grub refusing to install on the disk.

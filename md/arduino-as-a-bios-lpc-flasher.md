@@ -1,0 +1,112 @@
+# Arduino in 3.3v
+
+
+I used my special USB cable in order to run the Arduino in 3.3v mode:
+
+<http://www.zoobab.com/arduino-duemilanove-in-3-3v>  
+
+# Detecting the arduino
+
+
+At the moment, I cannot detect the chip:
+
+
+    root@buzek /home/zoobab/soft/alix1c [1]# flashrom -p serprog:/dev/ttyUSB0:115200
+    flashrom v0.9.2-r1028 on Linux 2.6.35-27-generic (x86_64), built with libpci 3.0.0, GCC 4.4.4, little endian
+    flashrom is free software, get the source code at http://www.flashrom.org
+    
+    Calibrating delay loop... OK.
+    serprog:Programmer name "ATMega88 LPC   "
+    No EEPROM/flash device found.
+    Note: flashrom can never write if the flash chip isn't found automatically.
+
+
+# Alix 1C LPC connector pinout
+
+
+[[=image alix-1c-lpc-pinout-sst-flash.jpg size="medium"]]
+
+From the coreboot website:
+
+
+    1  LCLK0   LPC clock (33 MHz)
+    2  GND     ground
+    3  LAD0    LPC data 0
+    4  GND     ground
+    5  LAD1    LPC data 1
+    6  GND     ground
+    7  LAD2    LPC data 2
+    8  GND     ground
+    9  LAD3    LPC data 3
+    10 GND     ground
+    11 LFRAME# LPC frame
+    12 GND     ground
+    13 PCIRST# reset (active low)
+    14 NC      reserved
+    15 ISP     high to use LPC flash, low to use on-board flash, pulled low by resistor
+    16 VCC     +5V supply
+    17 GND     ground
+    18 V3      +3.3V supply
+    19 SERIRQ  serial interrupt
+    20 LDRQ#   LPC DMA request
+
+
+The correspondence with the board.h is:
+
+
+    #define LED_PORT                        PORTB
+    #define LED0                            PB0
+    #define LED1                            PB1
+    
+    #define LPC_PORT                        PORTC
+    #define LPC_DDR                         DDRC
+    #define LPC_PIN                         PINC
+    #define LPC_nLFRAM                      PC4
+    #define LPC_CLK                         PC5
+    
+    #define LPC_RESET_PORT                  PORTB
+    #define LPC_nRESET                      PB2
+
+
+I asked the Mike Stirling what was his pinout of his steup:
+
+
+    CLK - PORTC[5] - ATMEGA88 (DIL) pin 28
+    /LFRAM - PORTC[4] - ATMEGA88 (DIL) pin 27
+    LAD[3] - PORTC[3] - ATMEGA88 (DIL) pin 26
+    LAD[2] - PORTC[2] - ATMEGA88 (DIL) pin 25
+    LAD[1] - PORTC[1] - ATMEGA88 (DIL) pin 24
+    LAD[0] - PORTC[0] - ATMEGA88 (DIL) pin 23
+    
+    /WP, /TBL, /INIT all tied high
+    Any other pins, e.g. MODE and ID pins, are no connect.
+
+
+Correspondence matrix:
+
+||~ pinLPC ||~ pinArduino ||
+|| LAD0 (pin3) || analog0 ||
+|| LAD1 (pin5) || analog1 ||
+|| LAD2 (pin7) || analog2 ||
+|| LAD3 (pin9) || analog3 ||
+|| LFRAME (pin11) || analog4 ||
+|| LCLK0 (pin1) || analog5 ||
+
+Arduino pin mapping:
+[[=image <<http://www.pololu.com/picture/0J735.600.png>  >  ]]
+
+# Status
+
+
+Right now it does not work, need to try with an arduino mega which runs in 3.3v for sure.
+
+# Links
+
+
+* <http://mikestirling.co.uk/2010/08/programming-an-lpc-flash-with-an-avr-and-flashrom/>  
+* <http://code.google.com/p/arduino/issues/attachmentText?id=257&aid=-2825390903252843532&name=boards.txt&token=92e06ae1e60a10a8c39f016729c2809f>  
+* <http://www.coreboot.org/FlexyICE>  
+* http://www.pololu.com/picture/0J735.600.png
+* <http://www.coldelectrons.com/blog/?page_id=165>  
+* <https://web.archive.org/web/20120801025050/http>  ://www.coldelectrons.com/blog/wp-content/uploads/2010/05/flashprg.txt
+* <http://rex.xbox-scene.com/LPC2/LPC2.html>  

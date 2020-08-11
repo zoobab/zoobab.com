@@ -1,0 +1,111 @@
+# About
+
+
+The Waveshare E-paper is a low power e-ink screen.
+
+Those e-ink are kind of magic since they can display text without consuming any energy!
+
+This is a serial interface E-Ink display module, 4.3inch, 800×600 resolution, with embedded font libraries, ultra low power consumption.
+
+# Pictures
+
+
+[[=image waveshare-e-ink-arduino-01.jpg size="medium"]]
+
+[[=image waveshare-e-ink-arduino-02.jpg size="medium"]]
+
+[[=image waveshare-e-ink-arduino-03.jpg size="medium"]]
+
+[[=image waveshare-e-ink-arduino-04.jpg size="medium"]]
+
+[[=image waveshare-e-ink-arduino-05.jpg size="medium"]]
+
+[[=image waveshare-e-ink-arduino-06.jpg size="medium"]]
+
+# Arduino
+
+
+You can drive the screen with an external Arduino, as described by Jarzebski.pl [<http://www.jarzebski.pl/arduino/komponenty/e-papier-waveshare-4-3.html>   here].
+
+The screen needs 4 typical pins (5V, GND, TX,  RX) of the Arduino, plus 2 digital pins (2 and 3 on the Arduino), which means you would need to occupy 2 GPIOs for an eventual RaspberryPi/Openwrt port.
+
+You need to upload the epd library first, it took a while to get the path right, as the original ZIP file provided by jarzebski.pl would not load automatically in the Arduino IDE. I have repackaged the ZIP library [[file ArduinoEpd.zip | ArduinoEpd.zip]] so that it loads automatically in the Arduino IDE menu:
+
+[[=image arduino-sketch-include-library-zip-file.png]]
+
+You can paste the following code in the Arduino IDE:
+
+
+    #include <epd.h>
+     
+    void tekst(void)
+    {
+      // bufor tekstu dla znakw chinskich
+      char buff[] = {'G', 'B', 'K', '3', '2', ':', ' ', 0xc4, 0xe3, 0xba, 0xc3, 0xca, 0xc0, 0xbd, 0xe7, 0};
+     
+      epd_set_color(BLACK, WHITE); // czarne litery, biale tlo
+     
+      epd_clear(); // czyszczenie ekranu
+     
+      epd_set_ch_font(GBK32); // ustawiamy czcionki chinskie o rozmiarze 32
+      epd_set_en_font(ASCII32); // uastawiamy czcionki zwykle o rozmiarze 32
+     
+      epd_disp_string(buff, 0, 0); // wyswietlamy tekst z bufora
+      epd_disp_string("I am testing here the length of characters that you can print", 0, 0); // wyswietlamy powitanie
+      epd_disp_string("I am testing here the length of characters that you can print", 0, 50); // wyswietlamy powitanie
+      epd_disp_string("I am testing here the length of characters that you can print", 0, 100); // wyswietlamy powitanie
+     
+     
+      epd_set_ch_font(GBK48); // ustawiamy czcionki chinskie o rozmiarze 48
+      epd_set_en_font(ASCII48); // uastawiamy czcionki zwykle o rozmiarze 48
+     
+      buff[3] = '4'; // podmieniamy zawartosc bufora
+      buff[4] = '8'; // podmieniamy zawartosc bufora
+     
+      epd_disp_string(buff, -10, -10); // wyswietlamy tekst z bufora
+      epd_disp_string("WWW.ZOOBAB.COM", 250, 250); // wyswietlamy powitanie
+     
+      epd_set_ch_font(GBK64); // ustawiamy czcionki chinskie o rozmiarze 64
+      epd_set_en_font(ASCII64); // uastawiamy czcionki zwykle o rozmiarze 64
+     
+      buff[3] = '6'; // podmieniamy zawartosc bufora
+      buff[4] = '4'; // podmieniamy zawartosc bufora
+     
+    //  epd_disp_string(buff, 0, 160); // wyswietlamy tekst z bufora
+    //  epd_disp_string("ZOOBAB.COM", 0, 450); // wyswietlamy powitanie
+     
+      epd_udpate();
+    }
+     
+    void setup(void)
+    {
+      epd_init();                // inicjalizacja
+      epd_wakeup();              // pobudka
+      epd_set_memory(MEM_NAND);  // wybor pamieci NAND
+    }
+     
+    void loop(void)
+    {
+      tekst();
+     
+      while (1) {}
+    }
+
+
+# Todo
+
+
+* Port the whole thing to a standard Linux machine with a USB-serial port and 2 GPIOs
+* Make it work on RaspberryPi/Openwrt/Allwinner boards
+* Make a product for doctors/meetingrooms/etc like this <https://twitter.com/pwavrobot/status/859102351851999235>  
+
+# Links
+
+
+* <http://www.waveshare.com/4.3inch-e-paper.htm>  
+* http://www.jarzebski.pl/arduino/komponenty/e-papier-waveshare-4-3.html
+* <http://www.instructables.com/id/E-paper-Display-With-ArduinoESP8266/>  
+* <https://github.com/sabas1080/LibraryEPD>  
+* <http://hackaday.com/2016/06/12/an-improved-wifi-connected-e-ink-display/>  
+* <https://github.com/davidgfnet/wifi_display>  
+* <https://davidgf.net/page/41/e-ink-wifi-display>  

@@ -1,0 +1,330 @@
+# Serial output
+
+
+
+    U-Boot 1.1.1 (Jun 22 2005 - 13:29:30)
+    
+    Board: Mood 300 Series
+    CPU: Au1550, id: 0x02, rev: 0x00
+    DRAM:  128 MB
+    Flash:	2 MB
+    NAND:  64 MB
+    Using default environment
+    
+    No debug adapter present - disabling input
+    
+    In:    No input devices available!
+    Out:   serial
+    Err:   serial
+    Net:   Au1X00 ETHERNET
+    Hit any key to stop autoboot:  0
+    
+    Loading from device 0: NAND 64MiB 3,3V 8-bit at 0xbfb00000 (offset 0x0)
+       Image Name:
+       Created:	 2006-12-14   9:54:46 UTC
+       Image Type:	 MIPS Linux Kernel Image (gzip compressed)
+       Data Size:	 3205001 Bytes =  3.1 MB
+       Load Address: 80100000
+       Entry Point:  802d4040
+    ## Booting image at 81000000 ...
+       Image Name:
+       Created:	 2006-12-14   9:54:46 UTC
+       Image Type:	 MIPS Linux Kernel Image (gzip compressed)
+       Data Size:	 3205001 Bytes =  3.1 MB
+       Load Address: 80100000
+       Entry Point:  802d4040
+       Verifying Checksum ... OK
+       Uncompressing Kernel Image ... OK
+    
+    Starting kernel ...
+    
+    CPU revision is: 03030200
+    Primary instruction cache 16kB, physically tagged, 4-way, linesize 32 bytes.
+    Primary data cache 16kB, 4-way, linesize 32 bytes.
+    Linux version 2.4.30 (mar@mar) (gcc version 3.3.6) #1 Thu Dec 14 10:52:32 CET 2006
+    I3 Micro Technology Mood 300 STB
+    Au1550 AA (PRId 03030200) @ 324MHZ
+    BCLK switching enabled!
+    Determined physical RAM map:
+     memory: 08000000 @ 00000000 (usable)
+    Initial ramdisk at: 0x80310000 (2342912 bytes)
+    On node 0 totalpages: 32768
+    zone(0): 32768 pages.
+    zone(1): 0 pages.
+    zone(2): 0 pages.
+    Kernel command line: root=/dev/ram0 rw console=ttyS0,115200 usb_ohci=base:0x14020000,len:0x100000,irq:26
+    calculating r4koff... 00317040(3240000)
+    Using 324.000 MHz high precision timer.
+    Console: colour dummy device 80x25
+    Calibrating delay loop... 323.58 BogoMIPS
+    Memory: 121728k/131072k available (1857k kernel code, 9344k reserved, 2408k data, 112k init, 0k highmem)
+    Dentry cache hash table entries: 16384 (order: 5, 131072 bytes)
+    Inode cache hash table entries: 8192 (order: 4, 65536 bytes)
+    Mount cache hash table entries: 512 (order: 0, 4096 bytes)
+    Buffer cache hash table entries: 8192 (order: 3, 32768 bytes)
+    Page-cache hash table entries: 32768 (order: 5, 131072 bytes)
+    Checking for 'wait' instruction...  unavailable.
+    POSIX conformance testing by UNIFIX
+    Autoconfig PCI channel 0x8030f3a8
+    Scanning bus 00, I/O 0x00000300:0x00100000, Mem 0x40000000:0x50000000
+    00:05.0 Class 0000: 104c:9065 (rev 01)
+    	Mem at 0x40000000 [size=0x400000]
+    	Mem at 0x40800000 [size=0x800000]
+    	I/O at 0x00000300 [size=0x10]
+    Non-coherent PCI accesses enabled
+    Linux NET4.0 for Linux 2.4
+    Based upon Swansea University Computer Society NET3.039
+    Initializing RT netlink socket
+    Starting kswapd
+    Journalled Block Device driver loaded
+    devfs: v1.12c (20020818) Richard Gooch (rgooch@atnf.csiro.au)
+    devfs: boot_options: 0x0
+    JFFS2 version 2.2. (NAND) (C) 2001-2003 Red Hat, Inc.
+    i2c-core.o: i2c core module version 2.6.1 (20010830)
+    i2c-dev.o: i2c /dev entries driver module version 2.6.1 (20010830)
+    i2c-proc.o version 2.6.1 (20010830)
+    Serial driver version 1.01 (2001-02-08) with no serial options enabled
+    ttyS00 at 0xb1100000 (irq = 0) is a 16550
+    ttyS01 at 0xb1200000 (irq = 8) is a 16550
+    ttyS02 at 0xb1400000 (irq = 9) is a 16550
+    AMD Alchemy Au1550 RTC Driver v0.6, initialized.
+    Au1550 SPI driver
+    RAMDISK driver initialized: 16 RAM disks of 10240K size 1024 blocksize
+    au1000eth.c:1.4 ppopov@mvista.com
+    eth0: Au1x Ethernet found at 0xb0500000, irq 27
+    ethaddr not set in boot prom
+    eth0: No mac address found
+    eth0: Micrel KS8721b/BT 10/100 Base Tx/Fx PHY at phy address 1
+    ks8721m_init - phy = 1
+    eth0: Using Micrel KS8721b/BT 10/100 Base Tx/Fx PHY as default
+    Uniform Multi-Platform E-IDE driver Revision: 7.00beta4-2.4
+    ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx
+    
+    hda: probing with STATUS(0x50) instead of ALTSTATUS(0x08)
+    hda: WDC WD800UE-22HCT0, ATA DISK drive
+    hdb: probing with STATUS(0x00) instead of ALTSTATUS(0xb0)
+    hdb: probing with STATUS(0x00) instead of ALTSTATUS(0xb0)
+    ide0 at 0xc0174000-0xc0174007,0xc01741c0 on irq 62
+    hda: attached ide-disk driver.
+    hda: 156301488 sectors (80026 MB) w/2048KiB Cache, CHS=155061/16/63, (U)DMA
+    Partition check:
+     /dev/ide/host0/bus0/target0/lun0: p1 p2 p3
+    ac97_codec: AC97 Audio codec, id: VIA97 (Unknown)
+    Au1550 psc audio: AC'97 Base/Extended ID = 6d50/0205
+    physmap flash device: 4000000 at 8000000
+    Mood 300 flash: probing 16-bit flash bus
+    ioremap(0x1fc00000, 0x00400000) = 0xbfc00000
+    Mood 300 flash: Found 1 x16 devices at 0x0 in 16-bit bank
+     Amd/Fujitsu Extended Query Table at 0x0040
+    Mood 300 flash: JEDEC Device ID is 0xC4. Assuming broken CFI table.
+    Mood 300 flash: Swapping erase regions for broken CFI table.
+    number of CFI chips: 1
+    cfi_cmdset_0002: Disabling erase-suspend-program due to code brokenness.
+    Creating 5 MTD partitions on "Mood 300 flash":
+    0x00000000-0x00050000 : "all"
+    0x00000000-0x00030000 : "uboot"
+    0x00030000-0x00040000 : "parameters"
+    0x00040000-0x00050000 : "parameters-sysdef"
+    0x00050000-0x00200000 : "misc"
+    yxa: 0xec:0x76
+    NAND device: Manufacturer ID: 0xec, Chip ID: 0x76 (Samsung NAND 64MiB 3,3V 8-bit)
+    Scanning device for bad blocks
+    Creating 2 MTD partitions on "NAND 64MiB 3,3V 8-bit":
+    0x00000000-0x00400000 : "Mood 300 NAND FS 0"
+    0x00400000-0x04000000 : "Mood 300 NAND FS 1"
+    usb.c: registered new driver usbdevfs
+    usb.c: registered new driver hub
+    host/usb-ohci.c: USB OHCI at membase 0xb4020000, IRQ 26
+    host/usb-ohci.c: usb-builtin.OHC, non-PCI OHCI
+    usb.c: new USB bus registered, assigned bus number 1
+    Product: USB OHCI Root Hub
+    SerialNumber: b4020000
+    hub.c: USB hub found
+    hub.c: 2 ports detected
+    NET4: Linux TCP/IP 1.0 for NET4.0
+    IP Protocols: ICMP, UDP, TCP, IGMP
+    IP: routing cache hash table of 1024 buckets, 8Kbytes
+    TCP: Hash tables configured (established 8192 bind 16384)
+    NET4: Unix domain sockets 1.0/SMP for Linux NET4.0.
+    RAMDISK: Compressed image found at block 0
+    Freeing initrd memory: 2288k freed
+    VFS: Mounted root (ext2 filesystem).
+    Freeing unused kernel memory: 112k freed
+    Algorithmics/MIPS FPU Emulator v1.5
+    INIT: version 2.84 booting
+    Setting hostname to "MH02K546R1A00000375143":done.
+    SERIAL: MH02K546R1A0-0000375143
+    MAC: 00:02:61:0d:f2:df
+    Extracting flash files: done.
+    |S00sysctl| Setting sysctl parameters: done.
+    |S05norfs| Mounting NOR flash filesystem:
+    |S05norfs| done.
+    Configuring OSS mixer settings: done.
+    Probing hardware devices:
+     >> dm642pci_fxn_probe called
+    Writing Warm Reset (WARMRESET) to HDCR
+    enable_irq(1) unbalanced from c017a1b8
+    Setting PNX8510 video dacs to sleep...
+    Basic Coff Parser and Loader Example for DM642 EVM
+    Opening DM642 PCI driver...
+    The DM642 EVM device was opened successfully.
+    Loading Program ...
+    Issuing Run...
+    Let's wait for the dsp to settle down........
+    modprobe i3mmbfb system=PAL fb0=720,576,32,0,0 fb1=720,576,8,0,0
+    
+     >> PCILINK: Initializing...
+     >> PCILINK: Init completed!
+    mmbfb: Using DSP image version 4.18
+    mmbfb: Define DSP fb0 720x576+0+0@32
+    mmbfb: Define DSP fb1 720x576+0+0@8
+    mmbfb: Setting DSP system = PAL
+    mmbfb: Initializing framebuffer 0 (of 2)...
+    mmbfb:	 DSP addr: 0x8026a000
+    mmbfb:	 DSP reported size: 720x576x32
+    mmbfb:	 FB uses 1658880 bytes (line length: 2880, xres: 720, yres: 576, available: 1658880)
+    Console: switching to colour frame buffer device 90x36
+    mmbfb: Initializing framebuffer 1 (of 2)...
+    mmbfb:	 DSP addr: 0x80204000
+    mmbfb:	 DSP reported size: 720x576x8
+    mmbfb:	 FB uses 414720 bytes (line length: 720, xres: 720, yres: 576, available: 414720)
+    <managerd>
+    managerd:main: MANAGERD-> started
+    ipclib:ipc_init: ipclib-managerd: init IPCLIB 2.0
+    <fade>
+    fade:main: Fade daemon started. (c) 2004, i3 micro technology ab
+    Fade hardware: Philips PNX8510
+    ipclib:ipc_init: ipclib-fade: init IPCLIB 2.0
+    |S16hdfs_system|  starting...
+    Checking if we have a disk
+    Disk found
+    ipclib:ipc_send_msg: ipc_send_msg: Can't open FIFO device /dev/playtv.fifo
+    ipc_send_msg: No such file or directory
+    ipclib:ipc_send_msg: ipc_send_msg: Can't open FIFO device /dev/playtv.fifo
+    ipc_send_msg: No such file or directory
+    Setting spindown time
+    e2fsck 1.34 (25-Jul-2003)
+    /dev/hda2: recovering journal
+    /dev/hda2: clean, 531/131328 files, 21327/262144 blocks
+    kjournald starting.  Commit interval 2 seconds
+    EXT3 FS 2.4-0.9.19, 19 August 2002 on ide0(3,2), internal journal
+    EXT3-fs: mounted filesystem with ordered data mode.
+    |S16hdfs_system| done
+    |hdfs_user|  starting...
+    Checking if disk is available/usable
+    |hdfs_user| done
+    Checking if system partition is mounted
+    user devices:  hda3
+    FB_TEXTBOX -> Message,
+    
+    HET ONDERHOUD VAN DE SCHIJF IS BEZIG
+    
+    GELIEVE  ENKELE   MINUTEN  TE
+    WACHTEN  TOT  HET  ONDERHOUD
+    VOLTOOID IS, ZONDER DE BOX UIT EN AAN TE ZETTEN.
+    e2fsck 1.34 (25-Jul-2003)
+    /dev/hda3: recovering journal
+    /dev/hda3: clean, 12/9519104 files, 307173/19013264 blocks
+    FB_TEXTBOX -> Message,
+    
+    HET ONDERHOUD VAN DE SCHIJF IS VOLTOOID.
+    tune2fs 1.34 (25-Jul-2003)
+    The filesystem already has a journal.
+    kjournald starting.  Commit interval 2 seconds
+    EXT3 FS 2.4-0.9.19, 19 August 2002 on ide0(3,3), internal journal
+    EXT3-fs: mounted filesystem with ordered data mode.
+    Mounted  hda3
+    |hdfs_user| done
+    <hdmonitor>
+    Starting hdmonitor with timeout=60
+    |hwdetect| using HDD
+    |nandfs| System partition is harddisk, doing nothing
+    JKW /media/hdd/AUX
+    |S21persist| setting persistant storage root to '/media/hdd/AUX/persist/'
+    |S21persist| done
+    Bootimage: Showing bootimage: /media/persist/bootimage/boot.bmp.gz
+    |S40networking| starting...
+    |bootprogress| *** 250 ***
+    |S40networking| /etc/init.d/dhcp
+    Getting network parameters (DHCP) :
+    udhcp client (v0.9.8) started
+    Sending discover...
+    Sending discover...
+    Sending discover...
+    No lease, failing.
+    Getting network parameters (DHCP) :
+    udhcp client (v0.9.8) started
+    Sending discover...
+    Sending discover...
+    Sending discover...
+    No lease, failing.
+    Getting network parameters (DHCP) :
+    udhcp client (v0.9.8) started
+    Sending discover...
+    Sending discover...
+    Sending discover...
+    No lease, failing.
+    |S40networking| 1
+    |S50recon| no network, exiting
+    |appfs| not configured - aborting!
+    |getsoftware| started
+    cat: /tmp/bootmethod: No such file or directory
+    |getsoftware| getbootmethod
+    |getsoftware| boot method = recon
+    |getsoftware| ERROR: filesystems not mounted!
+    INIT: No network, switching to runlevel 1
+    INIT: Entering runlevel: 1
+    cat: /tmp/bootmethod: No such file or directory
+    |S99background-networking| getbootmethod
+    retrying in 22 seconds
+    |S99background-networking| Retrying network configuration
+    |networking| starting...
+    |bootprogress| *** 250 ***
+    |networking| /etc/init.d/dhcp
+    Getting network parameters (DHCP) :
+    udhcp client (v0.9.8) started
+    Sending discover...
+    Sending discover...
+    Sending discover...
+    No lease, failing.
+    Getting network parameters (DHCP) :
+    udhcp client (v0.9.8) started
+    Sending discover...
+    Sending discover...
+    Sending discover...
+    No lease, failing.
+    Getting network parameters (DHCP) :
+    udhcp client (v0.9.8) started
+    Sending discover...
+    Sending discover...
+    Sending discover...
+    No lease, failing.
+    |networking| 1
+    cat: /tmp/bootmethod: No such file or directory
+    |S99background-networking| getbootmethod
+    retrying in 108 seconds
+    |networking| starting...
+    |bootprogress| *** 250 ***
+    |networking| /etc/init.d/dhcp
+    Getting network parameters (DHCP) :
+    udhcp client (v0.9.8) started
+    Sending discover...
+    Sending discover...
+    Sending discover...
+    No lease, failing.
+    Getting network parameters (DHCP) :
+    udhcp client (v0.9.8) started
+    Sending discover...
+    Sending discover...
+    Sending discover...
+    No lease, failing.
+    Getting network parameters (DHCP) :
+    udhcp client (v0.9.8) started
+    Sending discover...
+    Sending discover...
+    Sending discover...
+    No lease, failing.
+    |networking| 1
+    cat: /tmp/bootmethod: No such file or directory
+    |S99background-networking| getbootmethod
+    retrying in 558 seconds

@@ -1,0 +1,71 @@
+# Videos
+
+
+## Source
+
+
+<http://ftp.belnet.be/mirror/FOSDEM/2009/maintracks/openamq.ogv>   [271M]
+<http://ftp.belnet.be/mirror/FOSDEM/2009/maintracks/openamq.xvid.avi>   [248M]
+
+## Part1
+
+
+[[embed]]
+<object width="480" height="295"><param name="movie" value="<<http://www.youtube.com/v/toWfjNllUVc&hl=en&fs=1>  >  "></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/toWfjNllUVc&hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="295"></embed></object>
+[[/embed]]
+
+## Part2
+
+
+[[embed]]
+<object width="480" height="295"><param name="movie" value="<<http://www.youtube.com/v/iVxhLAg7vVU&hl=en&fs=1>  >  "></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/iVxhLAg7vVU&hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="295"></embed></object>
+[[/embed]]
+
+## Part3
+
+
+[[embed]]
+<object width="480" height="295"><param name="movie" value="<<http://www.youtube.com/v/c8y9i7baZP4&hl=en&fs=1>  >  "></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/c8y9i7baZP4&hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="295"></embed></object>
+[[/embed]]
+
+## Part4
+
+
+[[embed]]
+<object width="480" height="295"><param name="movie" value="<<http://www.youtube.com/v/26FvnyDGd0o&hl=en&fs=1>  >  "></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/26FvnyDGd0o&hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="295"></embed></object>
+[[/embed]]
+
+## Part5
+
+
+[[embed]]
+<object width="480" height="295"><param name="movie" value="<<http://www.youtube.com/v/s9iAE2LYkw8&hl=en&fs=1>  >  "></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/s9iAE2LYkw8&hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="295"></embed></object>
+[[/embed]]
+
+# Slides
+
+
+I have problems embedding slides from Slideshare in Wikidot. Example of code that works for the [Brevets Logiciels v3.0](http://www.slideshare.net/zoobab/software-patents-v30) presentation:
+
+
+    [[embedvideo]]
+    <object type="application/x-shockwave-flash" data="http://s3.amazonaws.com/slideshare/ssplayer.swf?id=125364&doc=software-patents-v304170" width="425" height="348"><param name="movie" value="http://s3.amazonaws.com/slideshare/ssplayer.swf?id=125364&doc=software-patents-v304170" /></object>
+    [[/embedvideo]]
+
+
+
+[[embedvideo]]
+<object type="application/x-shockwave-flash" data="<<http://s3.amazonaws.com/slideshare/ssplayer.swf?id=125364&doc=software-patents-v304170>  >  " width="425" height="348"><param name="movie" value="http://s3.amazonaws.com/slideshare/ssplayer.swf?id=125364&doc=software-patents-v304170" /></object>
+[[/embedvideo]]
+
+But the following code does not work:
+
+
+    [[embedvideo]]
+    <object type="application/x-shockwave-flash" data="http://static.slideshare.net/swf/ssplayer2.swf?doc=fosdem2009-1234004141404240-2&rel=0&stripped_title=fosdem-2009" width="425" height="348"><param name="movie" value="http://static.slideshare.net/swf/ssplayer2.swf?doc=fosdem2009-1234004141404240-2&rel=0&stripped_title=fosdem-2009" /></object>
+    [[/embedvideo]]
+
+
+[[embedvideo]]
+<object type="application/x-shockwave-flash" data="<<http://static.slideshare.net/swf/ssplayer2.swf?doc=fosdem2009-1234004141404240-2&rel=0&stripped_title=fosdem-2009>  >  " width="425" height="348"><param name="movie" value="http://static.slideshare.net/swf/ssplayer2.swf?doc=fosdem2009-1234004141404240-2&rel=0&stripped_title=fosdem-2009" /></object>
+[[/embedvideo]]

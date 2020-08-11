@@ -1,0 +1,4 @@
+# About
+
+
+Build my own steel bike frame.

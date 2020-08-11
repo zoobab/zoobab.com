@@ -1,0 +1,31 @@
+# Introduction
+
+
+The Wyse WT3235LE is a Thin client terminal. It should run Linux without too many problems.
+
+# Pictures
+
+
+# Hardware
+
+
+# Links
+
+
+* <http://web.archive.org/web/20080407133601/http>  ://thunderlord.net.pl/evo/
+* <http://web.archive.org/web/20051231194304/http>  ://www.kazak.ws/evo/
+* <http://open-evot20.sourceforge.net/wiki/>  
+* <http://www.penguin.cz/novinky-view.php?id=1137&showc=1>  
+* <http://baszerr.org/doku.php?id=prjs>  :t-20_evo:t-20_evo
+* <http://mowson.org/karl/evo_t20/>  
+* <http://www.parkytowers.me.uk/thin/Wyse3235LE/>  
+* <http://www.wlug.org.nz/CompaqEvoT20Notes>  
+* <https://fjallfoss.fcc.gov/prod/oet/forms/blobs/retrieve.cgi?attachment_id=167844&native_or_pdf=native>  
+* <http://rayer.ic.cz/hardware/evo-t20.htm>  
+* <https://fjallfoss.fcc.gov/prod/oet/forms/blobs/retrieve.cgi?attachment_id=167846&native_or_pdf=pdf>  
+* <http://web.archive.org/web/20070903105508/http>  ://www.petervdbosch.nl/EvoT20
+* <http://www.haxordbox.com/index.php?option=content&task=view&id=40&catid=31&Itemid=52>  
+* <http://colbaip.blogspot.com/2008/02/linux-en-compaq-evo-t20.html>  
+* <http://muzso.hu/evo_t20>  
+* <http://www.convolutedtheory.com/netxfer-linux-howto/>  
+* <http://www.pug.org/mediawiki/index.php/Thin_Client_evo_T20>  

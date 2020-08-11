@@ -1,0 +1,12 @@
+# Support under Linux
+
+
+gphoto2:
+
+> command here
+
+# Disadvantages
+
+
+* Battery
+* Non-standard USB cable

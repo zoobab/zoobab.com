@@ -1,0 +1,16 @@
+# About
+
+
+This page is about listing android devices that can be or cannot be rooted with the [Cydia Impactor](http://www.cydiaimpactor.com/) tool.
+
+# Rootable devices
+
+
+* Cubot P9 mtk6572 (Android 4.?.?)
+* Star i9300 mtk6577 (Android 4.1.1)
+* Lenovo S960 (Android 4.4.3)
+* 
+# Unrootable devices
+
+
+* Nook HD+

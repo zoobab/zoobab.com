@@ -1,0 +1,29 @@
+# Pictures
+
+
+[[=image cable-ftdi-232-3.3V.jpg]]
+
+# Datasheet
+
+
+[[file DS_TTL232R3V3.pdf]]
+
+# Pinout
+
+
+1 = Black = GND
+2 = Brown = CTS#
+3 = Red = VCC
+4 = Orange = TX 
+5 = Yellow = RX
+6 = Green = RTS#
+
+# Price
+
+
+Seems to be around 20EUR.
+
+# Links
+
+
+* <http://be.farnell.com/ftdi/ttl-232r-3v3/cable-usb-to-ttl-level-seri-converter/dp/1329311>  

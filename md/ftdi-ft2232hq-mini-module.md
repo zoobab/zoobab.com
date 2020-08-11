@@ -1,0 +1,81 @@
+# Picture
+
+
+[[=image ft2232hq-module.jpg]]
+
+# Pinout
+
+
+[[=image ftdi2232hq.jpg]]
+
+# Price
+
+
+I paid around 35EUR TVAC and shipping costs included. I ordered via the FTDI webshop.
+
+# Datasheets
+
+
+* <http://www.ftdichip.com/Documents/DataSheets/Modules/DS_FT2232H_Mini_Module.pdf>  
+* <http://www.ftdichip.com/Documents/DataSheets/DS_FT2232H_V206.pdf>  
+
+# First step
+
+
+The module needs to have a jumper between **CN3-pin 1** and **CN3-pin 3** in order to have the device appear in the kernel messages:
+
+
+    [73484.596065] usb 2-1: new high speed USB device using ehci_hcd and address 16
+    [73484.728472] usb 2-1: config 1 interface 1 altsetting 0 bulk endpoint 0x83 has invalid maxpacket 64
+    [73484.728480] usb 2-1: config 1 interface 1 altsetting 0 bulk endpoint 0x4 has invalid maxpacket 64
+    [73484.728945] usb 2-1: configuration #1 chosen from 1 choice
+    [73484.729682] ftdi_sio 2-1:1.0: FTDI USB Serial Device converter detected
+    [73484.729708] usb 2-1: Detected FT4232H
+    [73484.729710] usb 2-1: Number of endpoints 2
+    [73484.729713] usb 2-1: Endpoint 1 MaxPacketSize 512
+    [73484.729715] usb 2-1: Endpoint 2 MaxPacketSize 512
+    [73484.729717] usb 2-1: Setting MaxPacketSize 512
+    [73484.729895] usb 2-1: FTDI USB Serial Device converter now attached to ttyUSB0
+    [73484.730144] ftdi_sio 2-1:1.1: FTDI USB Serial Device converter detected
+    [73484.730167] usb 2-1: Detected FT4232H
+    [73484.730169] usb 2-1: Number of endpoints 2
+    [73484.730172] usb 2-1: Endpoint 1 MaxPacketSize 64
+    [73484.730174] usb 2-1: Endpoint 2 MaxPacketSize 64
+    [73484.730176] usb 2-1: Setting MaxPacketSize 64
+    [73484.730350] usb 2-1: FTDI USB Serial Device converter now attached to ttyUSB1
+    [73484.730504] ftdi_sio 2-1:1.2: FTDI USB Serial Device converter detected
+    [73484.730527] usb 2-1: Detected FT4232H
+    [73484.730529] usb 2-1: Number of endpoints 2
+    [73484.730531] usb 2-1: Endpoint 1 MaxPacketSize 512
+    [73484.730534] usb 2-1: Endpoint 2 MaxPacketSize 512
+    [73484.730536] usb 2-1: Setting MaxPacketSize 512
+    [73484.730768] usb 2-1: FTDI USB Serial Device converter now attached to ttyUSB2
+    [73484.731873] ftdi_sio 2-1:1.3: FTDI USB Serial Device converter detected
+    [73484.731898] usb 2-1: Detected FT4232H
+    [73484.731900] usb 2-1: Number of endpoints 2
+    [73484.731903] usb 2-1: Endpoint 1 MaxPacketSize 512
+    [73484.731905] usb 2-1: Endpoint 2 MaxPacketSize 512
+    [73484.731907] usb 2-1: Setting MaxPacketSize 512
+    [73484.736132] usb 2-1: FTDI USB Serial Device converter now attached to ttyUSB3
+
+
+Lsusb says:
+
+
+    Bus 003 Device 010: ID 0403:6010 Future Technology Devices International, Ltd FT2232C Dual USB-UART/FIFO IC
+
+
+# JTAG mode
+
+
+Document here.
+
+# Serial mode
+
+
+Document here.
+
+# Links 
+
+
+* <http://techwithdave.blogspot.be/2013/07/openocd-ft2232h-based-jtag-adapters.html>  

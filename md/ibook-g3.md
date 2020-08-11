@@ -1,0 +1,6 @@
+# About
+
+
+It has a broken screen, the harddisk is also dead.
+
+Trying to netboot it with kernel messages over the network.

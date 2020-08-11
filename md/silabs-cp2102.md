@@ -1,0 +1,23 @@
+# Picture
+
+
+[[=image cp2102.jpg]]
+
+# Lsusb
+
+
+
+    [26675.501303] usb 7-2: new full-speed USB device number 2 using uhci_hcd
+    [26675.647540] usb 7-2: New USB device found, idVendor=10c4, idProduct=ea60
+    [26675.647552] usb 7-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+    [26675.647561] usb 7-2: Product: CP2102 USB to UART Bridge Controller
+    [26675.647568] usb 7-2: Manufacturer: Silicon Labs
+    [26675.647575] usb 7-2: SerialNumber: 0001
+    [26675.665041] usbcore: registered new interface driver usbserial
+    [26675.665278] usbcore: registered new interface driver usbserial_generic
+    [26675.665384] usbserial: USB Serial support registered for generic
+    [26675.667495] usbcore: registered new interface driver cp210x
+    [26675.667641] usbserial: USB Serial support registered for cp210x
+    [26675.667763] cp210x 7-2:1.0: cp210x converter detected
+    [26675.769317] usb 7-2: reset full-speed USB device number 2 using uhci_hcd
+    [26675.901835] usb 7-2: cp210x converter now attached to ttyUSB0

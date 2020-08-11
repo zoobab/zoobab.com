@@ -1,0 +1,753 @@
+[[f>toc]]
+
+# Get and compile OpenWrt
+
+
+Compile yourself the OpenWrt with UML support.
+
+# Binaries
+
+
+It is easier to download the UML binaries (the OpenWrt do not provide them on their downloads.openwrt.org website):
+
+[[file openwrt-uml-vmlinux]] (3MB) and [[file openwrt-uml-ext2.img.bz2]] (1.28MB)
+
+# Usage
+
+
+## Step 1: Download the 2 files
+
+
+Download the 2 files in the same folder (let's say /tmp/openwrtuml/):
+
+
+    zoobab@gierek /tmp/openwrtuml [135]$ wget http://zoobab.wikidot.com/local--files/openwrt-and-user-mode-linux/openwrt-uml-vmlinux http://zoobab.wikidot.com/local--files/openwrt-and-user-mode-linux/openwrt-uml-ext2.img.bz2
+    --2009-04-26 14:40:07--  http://zoobab.wikidot.com/local--files/openwrt-and-user-mode-linux/openwrt-uml-vmlinux
+    Resolving zoobab.wikidot.com... 67.228.37.26
+    Connecting to zoobab.wikidot.com|67.228.37.26|:80... connected.
+    HTTP request sent, awaiting response... 301 Moved Permanently
+    Location: http://zoobab.wdfiles.com/local--files/openwrt-and-user-mode-linux/openwrt-uml-vmlinux [following]
+    --2009-04-26 14:40:08--  http://zoobab.wdfiles.com/local--files/openwrt-and-user-mode-linux/openwrt-uml-vmlinux
+    Resolving zoobab.wdfiles.com... 67.228.37.28
+    Connecting to zoobab.wdfiles.com|67.228.37.28|:80... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 3095074 (3.0M) [application/x-executable, for GNU/Linux 2.6.8, statically linked, for GNU/Linux 2.6.8, not stripped]
+    Saving to: `openwrt-uml-vmlinux'
+    
+    100%[===============================================================================================================================>] 3,095,074    319K/s   in 9.6s    
+    
+    2009-04-26 14:40:21 (314 KB/s) - `openwrt-uml-vmlinux' saved [3095074/3095074]
+    
+    --2009-04-26 14:40:21--  http://zoobab.wikidot.com/local--files/openwrt-and-user-mode-linux/openwrt-uml-ext2.img.bz2
+    Connecting to zoobab.wikidot.com|67.228.37.26|:80... connected.
+    HTTP request sent, awaiting response... 301 Moved Permanently
+    Location: http://zoobab.wdfiles.com/local--files/openwrt-and-user-mode-linux/openwrt-uml-ext2.img.bz2 [following]
+    --2009-04-26 14:40:21--  http://zoobab.wdfiles.com/local--files/openwrt-and-user-mode-linux/openwrt-uml-ext2.img.bz2
+    Connecting to zoobab.wdfiles.com|67.228.37.28|:80... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 1337894 (1.3M) [application/x-bzip2]
+    Saving to: `openwrt-uml-ext2.img.bz2'
+    
+    100%[===============================================================================================================================>] 1,337,894    317K/s   in 4.7s    
+    
+    2009-04-26 14:40:26 (277 KB/s) - `openwrt-uml-ext2.img.bz2' saved [1337894/1337894]
+    
+    FINISHED --2009-04-26 14:40:26--
+    Downloaded: 2 files, 4.2M in 14s (302 KB/s)
+
+
+## Step 2: Bunzip the root filesystem
+
+
+
+    zoobab@gierek /tmp/openwrtuml [136]$ bunzip2 openwrt-uml-ext2.img.bz2
+
+
+## Step 3: Make openwrt-uml-vmlinux executable
+
+
+
+    zoobab@gierek /tmp/openwrtuml [137]$ chmod +x openwrt-uml-vmlinux
+
+
+## Step 4: Launch it
+
+
+
+    zoobab@gierek /tmp/openwrtuml [138]$ ./openwrt-uml-vmlinux ubd0=openwrt-uml-ext2.img con=null ssl=null ssl0=fd:0,fd:1 con0=null,fd:2 init=/etc/preinit                                                                          
+    Locating the bottom of the address space ... 0x10000                                                           
+    Locating the top of the address space ... 0xc0000000                                                           
+    Core dump limits :                                                                                             
+            soft - 0                                                                                               
+            hard - NONE                                                                                            
+    Checking that ptrace can change system call numbers...OK                                                       
+    Checking syscall emulation patch for ptrace...OK                                                               
+    Checking advanced syscall emulation patch for ptrace...OK                                                      
+    Checking for tmpfs mount on /dev/shm...OK                                                                      
+    Checking PROT_EXEC mmap in /dev/shm/...OK                                                                      
+    Checking for the skas3 patch in the host:                                                                      
+      - /proc/mm...not found: No such file or directory                                                            
+      - PTRACE_FAULTINFO...not found                                                                               
+      - PTRACE_LDT...not found                                                                                     
+    UML running in SKAS0 mode                                                                                      
+    Adding 14561280 bytes to physical memory to account for exec-shield gap                                        
+    Linux version 2.6.28.8 (zoobab@gierek) (gcc version 4.3.2 (Ubuntu 4.3.2-1ubuntu12) ) #8 Sun Apr 26 11:59:47 CEST 2009                                                                                                         
+    Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 11655                                     
+    Kernel command line: ubd0=openwrt-uml-ext2.img con=null ssl=null ssl0=fd:0,fd:1 con0=null,fd:2 init=/etc/preinit root=98:0                                                                                                    
+    PID hash table entries: 256 (order: 8, 1024 bytes)                                                             
+    Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)                                                  
+    Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)                                                   
+    Memory: 29468k available                                                                                       
+    Calibrating delay loop... 1900.54 BogoMIPS (lpj=9502720)                                                       
+    Mount-cache hash table entries: 512                                                                            
+    Checking for host processor cmov support...Yes                                                                 
+    Checking that host ptys support output SIGIO...Yes                                                             
+    Checking that host ptys support SIGIO on close...No, enabling workaround                                       
+    net_namespace: 480 bytes                                                                                       
+    Using 2.6 host AIO                                                                                             
+    NET: Registered protocol family 16                                                                             
+    NET: Registered protocol family 2                                                                              
+    IP route cache hash table entries: 1024 (order: 0, 4096 bytes)                                                 
+    TCP established hash table entries: 2048 (order: 2, 16384 bytes)                                               
+    TCP bind hash table entries: 2048 (order: 1, 8192 bytes)                                                       
+    TCP: Hash tables configured (established 2048 bind 2048)                                                       
+    TCP reno registered                                                                                            
+    NET: Registered protocol family 1                                                                              
+    mconsole (version 2) initialized on /home/zoobab/.uml/1W4Qdv/mconsole                                          
+    Checking host MADV_REMOVE support...OK                                                                         
+    ubd: Synchronous mode                                                                                          
+    Host TLS support detected                                                                                      
+    Detected host type: i386 (GDT indexes 6 to 9)                                                                  
+    VFS: Disk quotas dquot_6.5.1                                                                                   
+    Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)                                                     
+    squashfs: version 3.0 (2006/03/15) Phillip Lougher                                                             
+    msgmni has been set to 57                                                                                      
+    io scheduler noop registered                                                                                   
+    io scheduler anticipatory registered (default)                                                                 
+    io scheduler deadline registered                                                                               
+    io scheduler cfq registered                                                                                    
+    TCP vegas registered                                                                                           
+    NET: Registered protocol family 17                                                                             
+    802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>                                                  
+    All bugs added by David S. Miller <davem@redhat.com>                                                           
+    Initialized stdio console driver                                                                               
+    Console initialized on /dev/tty0                                                                               
+    console [tty0] enabled                                                                                         
+    Initializing software serial port version 1                                                                    
+    console [mc-1] enabled                                                                                         
+     ubda: unknown partition table                                                                                 
+    VFS: Mounted root (ext2 filesystem) readonly.                                                                  
+    Please be patient, while OpenWrt loads ...                                                                     
+    - preinit -                                                                                                    
+    Press CTRL-C for failsafe                                                                                      
+    EXT2-fs warning: mounting unchecked fs, running e2fsck is recommended                                          
+    - init -                                                                                                       
+    line_ioctl: tty0: unknown ioctl: 0x541e                                                                        
+    
+    Please press Enter to activate this console. 
+    
+    
+    BusyBox v1.11.3 (2009-03-23 20:07:37 CET) built-in shell (ash)
+    Enter 'help' for a list of built-in commands.                 
+    
+      _______                     ________        __
+     |       |.-----.-----.-----.|  |  |  |.----.|  |_
+     |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+     |_______||   __|_____|__|__||________||__|  |____|
+              |__| W I R E L E S S   F R E E D O M
+     KAMIKAZE (bleeding edge, r14993) -------------------
+      * 10 oz Vodka       Shake well with ice and strain
+      * 10 oz Triple sec  mixture into 10 shot glasses.
+      * 10 oz lime juice  Salute!
+     ---------------------------------------------------
+    root@OpenWrt:/# cfg80211: Using static regulatory domain info
+    cfg80211: Regulatory domain: US
+            (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+            (2402000 KHz - 2472000 KHz @ 40000 KHz), (600 mBi, 2700 mBm)
+            (5170000 KHz - 5190000 KHz @ 40000 KHz), (600 mBi, 2300 mBm)
+            (5190000 KHz - 5210000 KHz @ 40000 KHz), (600 mBi, 2300 mBm)
+            (5210000 KHz - 5230000 KHz @ 40000 KHz), (600 mBi, 2300 mBm)
+            (5230000 KHz - 5330000 KHz @ 40000 KHz), (600 mBi, 2300 mBm)
+            (5735000 KHz - 5835000 KHz @ 40000 KHz), (600 mBi, 3000 mBm)
+    cfg80211: Calling CRDA for country: US
+    PPP generic driver version 2.4.2
+    ip_tables: (C) 2000-2006 Netfilter Core Team
+    nf_conntrack version 0.5.0 (460 buckets, 1840 max)
+
+
+# Test with ad-hoc mode and virtual wireless interfaces (hwsim)
+
+
+
+    zoobab@gierek /home/zoobab/soft/trunk [5]$ bin/openwrt-uml-vmlinux ubd0=bin/openwrt-uml-ext2.img con=null ssl=null ssl0=fd:0,fd:1 con0=null,fd:2 init=/etc/preinit                                                            
+    Locating the bottom of the address space ... 0x10000                                                           
+    Locating the top of the address space ... 0xc0000000                                                           
+    Core dump limits :                                                                                             
+            soft - 0                                                                                               
+            hard - NONE                                                                                            
+    Checking that ptrace can change system call numbers...OK                                                       
+    Checking syscall emulation patch for ptrace...OK                                                               
+    Checking advanced syscall emulation patch for ptrace...OK                                                      
+    Checking for tmpfs mount on /dev/shm...OK                                                                      
+    Checking PROT_EXEC mmap in /dev/shm/...OK                                                                      
+    Checking for the skas3 patch in the host:                                                                      
+      - /proc/mm...not found: No such file or directory                                                            
+      - PTRACE_FAULTINFO...not found                                                                               
+      - PTRACE_LDT...not found                                                                                     
+    UML running in SKAS0 mode                                                                                      
+    Adding 15396864 bytes to physical memory to account for exec-shield gap                                        
+    Linux version 2.6.28.8 (zoobab@gierek) (gcc version 4.3.2 (Ubuntu 4.3.2-1ubuntu12) ) #8 Sun Apr 26 11:59:47 CEST 2009                                                                                                         
+    Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 11857                                     
+    Kernel command line: ubd0=bin/openwrt-uml-ext2.img con=null ssl=null ssl0=fd:0,fd:1 con0=null,fd:2 init=/etc/preinit root=98:0                                                                                                
+    PID hash table entries: 256 (order: 8, 1024 bytes)                                                             
+    Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)                                                  
+    Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)                                                   
+    Memory: 29460k available                                                                                       
+    Calibrating delay loop... 2516.58 BogoMIPS (lpj=12582912)                                                      
+    Mount-cache hash table entries: 512                                                                            
+    Checking for host processor cmov support...Yes                                                                 
+    Checking that host ptys support output SIGIO...Yes                                                             
+    Checking that host ptys support SIGIO on close...No, enabling workaround                                       
+    net_namespace: 480 bytes                                                                                       
+    Using 2.6 host AIO                                                                                             
+    NET: Registered protocol family 16                                                                             
+    NET: Registered protocol family 2                                                                              
+    IP route cache hash table entries: 1024 (order: 0, 4096 bytes)                                                 
+    TCP established hash table entries: 2048 (order: 2, 16384 bytes)                                               
+    TCP bind hash table entries: 2048 (order: 1, 8192 bytes)                                                       
+    TCP: Hash tables configured (established 2048 bind 2048)                                                       
+    TCP reno registered                                                                                            
+    NET: Registered protocol family 1                                                                              
+    mconsole (version 2) initialized on /home/zoobab/.uml/w04NtS/mconsole                                          
+    Checking host MADV_REMOVE support...OK                                                                         
+    ubd: Synchronous mode                                                                                          
+    Host TLS support detected                                                                                      
+    Detected host type: i386 (GDT indexes 6 to 9)                                                                  
+    VFS: Disk quotas dquot_6.5.1                                                                                   
+    Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)                                                     
+    squashfs: version 3.0 (2006/03/15) Phillip Lougher                                                             
+    msgmni has been set to 57                                                                                      
+    io scheduler noop registered                                                                                   
+    io scheduler anticipatory registered (default)                                                                 
+    io scheduler deadline registered                                                                               
+    io scheduler cfq registered                                                                                    
+    TCP vegas registered                                                                                           
+    NET: Registered protocol family 17                                                                             
+    802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>                                                  
+    All bugs added by David S. Miller <davem@redhat.com>                                                           
+    Initialized stdio console driver                                                                               
+    Console initialized on /dev/tty0                                                                               
+    console [tty0] enabled                                                                                         
+    Initializing software serial port version 1                                                                    
+    console [mc-1] enabled                                                                                         
+     ubda: unknown partition table                                                                                 
+    VFS: Mounted root (ext2 filesystem) readonly.                                                                  
+    Please be patient, while OpenWrt loads ...                                                                     
+    - preinit -                                                                                                    
+    Press CTRL-C for failsafe                                                                                      
+    EXT2-fs warning: mounting unchecked fs, running e2fsck is recommended                                          
+    - init -                                                                                                       
+    line_ioctl: tty0: unknown ioctl: 0x541e                                                                        
+    
+    Please press Enter to activate this console. 
+    
+    
+    BusyBox v1.11.3 (2009-03-23 20:07:37 CET) built-in shell (ash)
+    Enter 'help' for a list of built-in commands.                 
+    
+      _______                     ________        __
+     |       |.-----.-----.-----.|  |  |  |.----.|  |_
+     |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+     |_______||   __|_____|__|__||________||__|  |____|
+              |__| W I R E L E S S   F R E E D O M     
+     KAMIKAZE (bleeding edge, r14993) -------------------
+      * 10 oz Vodka       Shake well with ice and strain 
+      * 10 oz Triple sec  mixture into 10 shot glasses.  
+      * 10 oz lime juice  Salute!                        
+     --------------------------------------------------- 
+    root@OpenWrt:/# cfg80211: Using static regulatory domain info
+    cfg80211: Regulatory domain: US                              
+            (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+            (2402000 KHz - 2472000 KHz @ 40000 KHz), (600 mBi, 2700 mBm)     
+            (5170000 KHz - 5190000 KHz @ 40000 KHz), (600 mBi, 2300 mBm)     
+            (5190000 KHz - 5210000 KHz @ 40000 KHz), (600 mBi, 2300 mBm)     
+            (5210000 KHz - 5230000 KHz @ 40000 KHz), (600 mBi, 2300 mBm)     
+            (5230000 KHz - 5330000 KHz @ 40000 KHz), (600 mBi, 2300 mBm)     
+            (5735000 KHz - 5835000 KHz @ 40000 KHz), (600 mBi, 3000 mBm)     
+    cfg80211: Calling CRDA for country: US                                   
+    PPP generic driver version 2.4.2                                         
+    ip_tables: (C) 2000-2006 Netfilter Core Team                             
+    nf_conntrack version 0.5.0 (460 buckets, 1840 max)                       
+    
+    root@OpenWrt:/# iwconfig
+    lo        no wireless extensions.
+    
+    wmaster0  no wireless extensions.
+    
+    wlan0     IEEE 802.11abgn  ESSID:""  
+              Mode:Managed  Frequency:2.412 GHz  Access Point: Not-Associated   
+              Tx-Power=0 dBm                                                    
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B             
+              Encryption key:off                                                
+              Power Management:off                                              
+              Link Quality:0  Signal level:0  Noise level:0                     
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0          
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0          
+    
+    wmaster1  no wireless extensions.
+    
+    wlan1     IEEE 802.11abgn  ESSID:""  
+              Mode:Managed  Frequency:2.412 GHz  Access Point: Not-Associated   
+              Tx-Power=0 dBm                                                    
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B             
+              Encryption key:off                                                
+              Power Management:off                                              
+              Link Quality:0  Signal level:0  Noise level:0                     
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0          
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0          
+    
+    hwsim0    no wireless extensions.
+    
+    root@OpenWrt:/# iwconfig wlan1 essid bombolong channel 1 mode ad-hoc
+    root@OpenWrt:/# iwconfig                                            
+    lo        no wireless extensions.                                   
+    
+    wmaster0  no wireless extensions.
+    
+    wlan0     IEEE 802.11abgn  ESSID:""  
+              Mode:Managed  Frequency:2.412 GHz  Access Point: Not-Associated   
+              Tx-Power=0 dBm                                                    
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B             
+              Encryption key:off                                                
+              Power Management:off                                              
+              Link Quality:0  Signal level:0  Noise level:0                     
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0          
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0          
+    
+    wmaster1  no wireless extensions.
+    
+    wlan1     IEEE 802.11abgn  ESSID:""  
+              Mode:Ad-Hoc  Frequency:2.412 GHz  Cell: Not-Associated   
+              Tx-Power=20 dBm                                          
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B    
+              Encryption key:off                                       
+              Power Management:off                                     
+              Link Quality:0  Signal level:0  Noise level:0            
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0 
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0 
+    
+    hwsim0    no wireless extensions.
+    
+    root@OpenWrt:/# iwconfig
+    lo        no wireless extensions.
+    
+    wmaster0  no wireless extensions.
+    
+    wlan0     IEEE 802.11abgn  ESSID:""  
+              Mode:Managed  Frequency:2.412 GHz  Access Point: Not-Associated   
+              Tx-Power=0 dBm                                                    
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B             
+              Encryption key:off                                                
+              Power Management:off                                              
+              Link Quality:0  Signal level:0  Noise level:0                     
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0          
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0          
+    
+    wmaster1  no wireless extensions.
+    
+    wlan1     IEEE 802.11abgn  ESSID:""  
+              Mode:Ad-Hoc  Frequency:2.412 GHz  Cell: Not-Associated   
+              Tx-Power=20 dBm                                          
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B    
+              Encryption key:off                                       
+              Power Management:off                                     
+              Link Quality:0  Signal level:0  Noise level:0            
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0 
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0 
+    
+    hwsim0    no wireless extensions.
+    
+    root@OpenWrt:/# ifconfig wlan1 10.0.0.1
+    root@OpenWrt:/# iwconfig               
+    lo        no wireless extensions.      
+    
+    wmaster0  no wireless extensions.
+    
+    wlan0     IEEE 802.11abgn  ESSID:""  
+              Mode:Managed  Frequency:2.412 GHz  Access Point: Not-Associated   
+              Tx-Power=0 dBm                                                    
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B             
+              Encryption key:off                                                
+              Power Management:off                                              
+              Link Quality:0  Signal level:0  Noise level:0                     
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0          
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0          
+    
+    wmaster1  no wireless extensions.
+    
+    wlan1     IEEE 802.11abgn  ESSID:""  
+              Mode:Ad-Hoc  Frequency:2.412 GHz  Cell: Not-Associated   
+              Tx-Power=20 dBm                                          
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B    
+              Encryption key:off                                       
+              Power Management:off                                     
+              Link Quality:0  Signal level:0  Noise level:0            
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0 
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0 
+    
+    hwsim0    no wireless extensions.
+    
+    root@OpenWrt:/# iwconfig
+    lo        no wireless extensions.
+    
+    wmaster0  no wireless extensions.
+    
+    wlan0     IEEE 802.11abgn  ESSID:""  
+              Mode:Managed  Frequency:2.412 GHz  Access Point: Not-Associated   
+              Tx-Power=0 dBm                                                    
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B             
+              Encryption key:off                                                
+              Power Management:off                                              
+              Link Quality:0  Signal level:0  Noise level:0                     
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0          
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0          
+    
+    wmaster1  no wireless extensions.
+    
+    wlan1     IEEE 802.11abgn  ESSID:""  
+              Mode:Ad-Hoc  Frequency:2.412 GHz  Cell: Not-Associated   
+              Tx-Power=20 dBm                                          
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B    
+              Encryption key:off                                       
+              Power Management:off                                     
+              Link Quality:0  Signal level:0  Noise level:0            
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0 
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0 
+    
+    hwsim0    no wireless extensions.
+    
+    root@OpenWrt:/# ifconfig wlan1 up
+    root@OpenWrt:/# iwconfig
+    lo        no wireless extensions.
+    
+    wmaster0  no wireless extensions.
+    
+    wlan0     IEEE 802.11abgn  ESSID:""  
+              Mode:Managed  Frequency:2.412 GHz  Access Point: Not-Associated   
+              Tx-Power=0 dBm                                                    
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B             
+              Encryption key:off                                                
+              Power Management:off                                              
+              Link Quality:0  Signal level:0  Noise level:0                     
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0          
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0          
+    
+    wmaster1  no wireless extensions.
+    
+    wlan1     IEEE 802.11abgn  ESSID:""  
+              Mode:Ad-Hoc  Frequency:2.412 GHz  Cell: Not-Associated   
+              Tx-Power=20 dBm                                          
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B    
+              Encryption key:off                                       
+              Power Management:off                                     
+              Link Quality:0  Signal level:0  Noise level:0            
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0 
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0 
+    
+    hwsim0    no wireless extensions.
+    
+    root@OpenWrt:/# iwconfig
+    lo        no wireless extensions.
+    
+    wmaster0  no wireless extensions.
+    
+    wlan0     IEEE 802.11abgn  ESSID:""  
+              Mode:Managed  Frequency:2.412 GHz  Access Point: Not-Associated   
+              Tx-Power=0 dBm                                                    
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B             
+              Encryption key:off                                                
+              Power Management:off                                              
+              Link Quality:0  Signal level:0  Noise level:0                     
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0          
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0          
+    
+    wmaster1  no wireless extensions.
+    
+    wlan1     IEEE 802.11abgn  ESSID:""  
+              Mode:Ad-Hoc  Frequency:2.412 GHz  Cell: Not-Associated   
+              Tx-Power=20 dBm                                          
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B    
+              Encryption key:off                                       
+              Power Management:off                                     
+              Link Quality:0  Signal level:0  Noise level:0            
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0 
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0 
+    
+    hwsim0    no wireless extensions.
+    
+    root@OpenWrt:/# iwconfig wlan1 essid bombolong channel 1 mode ad-hoc
+    Error for wireless request "Set Mode" (8B06) :                      
+        SET failed on device wlan1 ; Device or resource busy.           
+    root@OpenWrt:/# iwconfig wlan1 essid bombolong channel 1 mode ad-hoc
+    Error for wireless request "Set Mode" (8B06) :                      
+        SET failed on device wlan1 ; Device or resource busy.           
+    root@OpenWrt:/# iwconfig
+    lo        no wireless extensions.
+    
+    wmaster0  no wireless extensions.
+    
+    wlan0     IEEE 802.11abgn  ESSID:""  
+              Mode:Managed  Frequency:2.412 GHz  Access Point: Not-Associated   
+              Tx-Power=0 dBm                                                    
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B             
+              Encryption key:off                                                
+              Power Management:off                                              
+              Link Quality:0  Signal level:0  Noise level:0                     
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0          
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0          
+    
+    wmaster1  no wireless extensions.
+    
+    wlan1     IEEE 802.11abgn  ESSID:"bombolong"  
+              Mode:Ad-Hoc  Frequency:2.412 GHz  Cell: Not-Associated   
+              Tx-Power=20 dBm                                          
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B    
+              Encryption key:off                                       
+              Power Management:off                                     
+              Link Quality:0  Signal level:0  Noise level:0            
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0 
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0 
+    
+    hwsim0    no wireless extensions.
+    
+    root@OpenWrt:/# iwconfig
+    lo        no wireless extensions.
+    
+    wmaster0  no wireless extensions.
+    
+    wlan0     IEEE 802.11abgn  ESSID:""  
+              Mode:Managed  Frequency:2.412 GHz  Access Point: Not-Associated   
+              Tx-Power=0 dBm                                                    
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B             
+              Encryption key:off                                                
+              Power Management:off                                              
+              Link Quality:0  Signal level:0  Noise level:0                     
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0          
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0          
+    
+    wmaster1  no wireless extensions.
+    
+    wlan1     IEEE 802.11abgn  ESSID:"bombolong"  
+              Mode:Ad-Hoc  Frequency:2.412 GHz  Cell: Not-Associated   
+              Tx-Power=20 dBm                                          
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B    
+              Encryption key:off                                       
+              Power Management:off                                     
+              Link Quality:0  Signal level:0  Noise level:0            
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0 
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0 
+    
+    hwsim0    no wireless extensions.
+    
+    root@OpenWrt:/# iwconfig
+    lo        no wireless extensions.
+    
+    wmaster0  no wireless extensions.
+    
+    wlan0     IEEE 802.11abgn  ESSID:""
+              Mode:Managed  Frequency:2.412 GHz  Access Point: Not-Associated
+              Tx-Power=0 dBm
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B
+              Encryption key:off
+              Power Management:off
+              Link Quality:0  Signal level:0  Noise level:0
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0
+    
+    wmaster1  no wireless extensions.
+    
+    wlan1     IEEE 802.11abgn  ESSID:"bombolong"
+              Mode:Ad-Hoc  Frequency:2.412 GHz  Cell: Not-Associated
+              Tx-Power=20 dBm
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B
+              Encryption key:off
+              Power Management:off
+              Link Quality:0  Signal level:0  Noise level:0
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0
+    
+    hwsim0    no wireless extensions.
+    
+    root@OpenWrt:/#
+
+
+# Test under Windows Vista and Pubuntu (CoLinux)
+
+
+Under Windows Vista, I have installed [Pubuntu](http://portableubuntu.demonccc.cloudius.com.ar/), which is a distribution based on Ubuntu Hardy with a [CoLinux](http://colinux.org/) kernel. Now I run [User Mode Linux](http://user-mode-linux.sourceforge.net/) on top of CoLinux on top of Vista:
+
+
+    zoobab@gierek /home/zoobab [1]$ ssh zoobab@212.76.232.103
+    zoobab@212.76.232.103's password:                        
+    Linux pubuntu 2.6.22.18-co-0.7.3 #1 PREEMPT Sat May 24 22:27:30 UTC 2008 i686
+    
+    The programs included with the Ubuntu system are free software;
+    the exact distribution terms for each program are described in the
+    individual files in /usr/share/doc/*/copyright.                   
+    
+    Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+    applicable law.                                                     
+    
+    To access official Ubuntu documentation, please visit:
+    http://help.ubuntu.com/                               
+    Last login: Wed May 20 09:33:14 2009 from vic.ffii.org
+    zoobab@pubuntu /home/zoobab [1]$ screen bash          
+    [screen is terminating]                               
+    zoobab@pubuntu /home/zoobab [2]$ cd openwrt-uml/
+    zoobab@pubuntu /home/zoobab/openwrt-uml [3]$ l  
+    total 8616                                      
+    -rw-r--r-- 1 zoobab zoobab 50331648 2009-05-20 09:44 openwrt-uml-ext2.img
+    -rwxr-xr-x 1 zoobab zoobab  3095074 2009-05-20 09:35 openwrt-uml-vmlinux 
+    zoobab@pubuntu /home/zoobab/openwrt-uml [4]$ cd Users/Angela/
+    zoobab@pubuntu /home/zoobab/openwrt-uml [4]$                 
+    zoobab@pubuntu /home/zoobab/openwrt-uml [4]$                 
+    zoobab@pubuntu /home/zoobab/openwrt-uml [4]$                 
+    zoobab@pubuntu /home/zoobab/openwrt-uml [4]$                 
+    zoobab@pubuntu /home/zoobab/openwrt-uml [4]$                 
+    zoobab@pubuntu /home/zoobab/openwrt-uml [4]$                 
+    zoobab@pubuntu /home/zoobab/openwrt-uml [4]$ ./openwrt-uml-vmlinux ubd0=openwrt-uml-ext2.img con=null ssl=null ssl0=fd:0,fd:1 con0=null,fd:2 init=/etc/preinit                                                                
+    Locating the bottom of the address space ... 0x0                                                               
+    Locating the top of the address space ... 0xc0000000                                                           
+    Core dump limits :                                                                                             
+            soft - 0                                                                                               
+            hard - NONE                                                                                            
+    Checking that ptrace can change system call numbers...OK                                                       
+    Checking syscall emulation patch for ptrace...OK                                                               
+    Checking advanced syscall emulation patch for ptrace...OK                                                      
+    Checking for tmpfs mount on /dev/shm...OK                                                                      
+    Checking PROT_EXEC mmap in /dev/shm/...OK                                                                      
+    Checking for the skas3 patch in the host:                                                                      
+      - /proc/mm...not found: No such file or directory                                                            
+      - PTRACE_FAULTINFO...not found                                                                               
+      - PTRACE_LDT...not found                                                                                     
+    UML running in SKAS0 mode                                                                                      
+    Linux version 2.6.28.8 (zoobab@gierek) (gcc version 4.3.2 (Ubuntu 4.3.2-1ubuntu12) ) #8 Sun Apr 26 11:59:47 CEST 2009                                                                                                         
+    Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 8128                                      
+    Kernel command line: ubd0=openwrt-uml-ext2.img con=null ssl=null ssl0=fd:0,fd:1 con0=null,fd:2 init=/etc/preinit root=98:0                                                                                                    
+    PID hash table entries: 128 (order: 7, 512 bytes)                                                              
+    Dentry cache hash table entries: 4096 (order: 2, 16384 bytes)                                                  
+    Inode-cache hash table entries: 2048 (order: 1, 8192 bytes)                                                    
+    Memory: 29608k available                                                                                       
+    Calibrating delay loop... 7444.88 BogoMIPS (lpj=37224448)                                                      
+    Mount-cache hash table entries: 512                                                                            
+    Checking for host processor cmov support...Yes                                                                 
+    Checking that host ptys support output SIGIO...Yes                                                             
+    Checking that host ptys support SIGIO on close...No, enabling workaround                                       
+    net_namespace: 480 bytes                                                                                       
+    Using 2.6 host AIO                                                                                             
+    NET: Registered protocol family 16                                                                             
+    NET: Registered protocol family 2                                                                              
+    IP route cache hash table entries: 1024 (order: 0, 4096 bytes)                                                 
+    TCP established hash table entries: 1024 (order: 1, 8192 bytes)                                                
+    TCP bind hash table entries: 1024 (order: 0, 4096 bytes)                                                       
+    TCP: Hash tables configured (established 1024 bind 1024)                                                       
+    TCP reno registered                                                                                            
+    NET: Registered protocol family 1                                                                              
+    mconsole (version 2) initialized on /home/zoobab/.uml/nhiJQB/mconsole                                          
+    Checking host MADV_REMOVE support...OK                                                                         
+    ubd: Synchronous mode                                                                                          
+    Host TLS support detected                                                                                      
+    Detected host type: i386 (GDT indexes 6 to 9)                                                                  
+    VFS: Disk quotas dquot_6.5.1                                                                                   
+    Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)                                                     
+    squashfs: version 3.0 (2006/03/15) Phillip Lougher                                                             
+    msgmni has been set to 57                                                                                      
+    io scheduler noop registered                                                                                   
+    io scheduler anticipatory registered (default)                                                                 
+    io scheduler deadline registered                                                                               
+    io scheduler cfq registered                                                                                    
+    TCP vegas registered                                                                                           
+    NET: Registered protocol family 17                                                                             
+    802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>                                                  
+    All bugs added by David S. Miller <davem@redhat.com>                                                           
+    Initialized stdio console driver                                                                               
+    Console initialized on /dev/tty0                                                                               
+    console [tty0] enabled                                                                                         
+    Initializing software serial port version 1                                                                    
+    console [mc-1] enabled                                                                                         
+     ubda: unknown partition table                                                                                 
+    VFS: Mounted root (ext2 filesystem) readonly.                                                                  
+    Please be patient, while OpenWrt loads ...                                                                     
+    - preinit -                                                                                                    
+    Press CTRL-C for failsafe                                                                                      
+    EXT2-fs warning: mounting unchecked fs, running e2fsck is recommended                                          
+    - init -                                                                                                       
+    line_ioctl: tty0: unknown ioctl: 0x541e                                                                        
+    
+    Please press Enter to activate this console. cfg80211: Using static regulatory domain info
+    cfg80211: Regulatory domain: US                                                           
+            (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)                 
+            (2402000 KHz - 2472000 KHz @ 40000 KHz), (600 mBi, 2700 mBm)                      
+            (5170000 KHz - 5190000 KHz @ 40000 KHz), (600 mBi, 2300 mBm)                      
+            (5190000 KHz - 5210000 KHz @ 40000 KHz), (600 mBi, 2300 mBm)                      
+            (5210000 KHz - 5230000 KHz @ 40000 KHz), (600 mBi, 2300 mBm)                      
+            (5230000 KHz - 5330000 KHz @ 40000 KHz), (600 mBi, 2300 mBm)                      
+            (5735000 KHz - 5835000 KHz @ 40000 KHz), (600 mBi, 3000 mBm)                      
+    cfg80211: Calling CRDA for country: US                                                    
+    PPP generic driver version 2.4.2                                                          
+    ip_tables: (C) 2000-2006 Netfilter Core Team                                              
+    nf_conntrack version 0.5.0 (462 buckets, 1848 max)                                        
+    
+    
+    
+    BusyBox v1.11.3 (2009-03-23 20:07:37 CET) built-in shell (ash)
+    Enter 'help' for a list of built-in commands.                 
+    
+      _______                     ________        __
+     |       |.-----.-----.-----.|  |  |  |.----.|  |_
+     |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+     |_______||   __|_____|__|__||________||__|  |____|
+              |__| W I R E L E S S   F R E E D O M     
+     KAMIKAZE (bleeding edge, r14993) -------------------
+      * 10 oz Vodka       Shake well with ice and strain 
+      * 10 oz Triple sec  mixture into 10 shot glasses.  
+      * 10 oz lime juice  Salute!                        
+     --------------------------------------------------- 
+    root@OpenWrt:/# iwconfig                             
+    lo        no wireless extensions.                    
+    
+    wmaster0  no wireless extensions.
+    
+    wlan0     IEEE 802.11abgn  ESSID:""  
+              Mode:Managed  Frequency:2.412 GHz  Access Point: Not-Associated
+              Tx-Power=0 dBm
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B
+              Encryption key:off
+              Power Management:off
+              Link Quality:0  Signal level:0  Noise level:0
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0
+    
+    wmaster1  no wireless extensions.
+    
+    wlan1     IEEE 802.11abgn  ESSID:""
+              Mode:Managed  Frequency:2.412 GHz  Access Point: Not-Associated
+              Tx-Power=0 dBm
+              Retry min limit:7   RTS thr:off   Fragment thr=2352 B
+              Encryption key:off
+              Power Management:off
+              Link Quality:0  Signal level:0  Noise level:0
+              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+              Tx excessive retries:0  Invalid misc:0   Missed beacon:0
+    
+    hwsim0    no wireless extensions.
+    
+    root@OpenWrt:/#
+
+
+# Next steps
+
+
+# Provide a public webserver with all the packages
+# Put a copy of the sources somewhere
+# Networking with the host

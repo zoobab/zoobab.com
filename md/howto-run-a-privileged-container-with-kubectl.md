@@ -1,0 +1,48 @@
+# About
+
+
+It took me a while to find how to run a privileged container with the "kubectl run" oneliner, so I document it here:
+
+
+    $ kubectl run babeld --image=zoobab/babeld-in-docker --replicas=10 --overrides='{"spec": {"template": {"spec": {"containers": [{"name": "babeld", "image": "zoobab/babeld-in-docker", "securityContext": {"privileged": true} }]}}}}'
+
+
+There is a need to simplify it, and for example document how to run it on Openshift.
+
+# Run Docker-in-Docker inside Kubernetes
+
+
+Example how to run my personal version of DinD:
+
+
+    $ kubectl run dind --image=zoobab/dind --overrides='{"spec": {"template": {"spec": {"containers": [{"name": "dind", "image": "zoobab/dind", "securityContext": {"privileged": true} }]}}}}'
+    deployment.apps/mycountry created
+    $ kubectl  get pods
+    dind-57f6bdfc87-m9n4z        1/1       Running            0          10s
+    $ kubectl  logs dind-57f6bdfc87-m9n4z
+    Launching sshd...OK
+    Launching docker...OK
+    REPONAME is not defined, sleeping forever...
+    $ kubectl exec -it dind-57f6bdfc87-m9n4z /bin/sh
+    / # docker ps
+    CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+    / # docker version
+    Client:
+     Version:           18.06.1-ce
+     API version:       1.38
+     Go version:        go1.10.1
+     Git commit:        d72f525745
+     Built:             Wed Sep  5 20:39:22 2018
+     OS/Arch:           linux/amd64
+     Experimental:      false
+    
+    Server:
+     Engine:
+      Version:          18.06.1-ce
+      API version:      1.38 (minimum version 1.12)
+      Go version:       go1.10.1
+      Git commit:       v18.06.1-ce
+      Built:            Wed Sep  5 20:38:41 2018
+      OS/Arch:          linux/amd64
+      Experimental:     false
+    / #

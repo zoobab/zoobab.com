@@ -1,0 +1,7 @@
+1. **Advertisement:** the whole frontpages are totally spammed by advertisement (up to 5 boxes with advertisements); mailing-lists are also polluted with lenghty ads in the footer;
+2. **Download:** there are no direct links to files, you need to click multiple times to arrive to a tar.gz or zip file to download
+3. **No Code base**: since its creation 10 years ago, the source code running behind SourceForge has always been a mystery and controvery
+4. **CVS:** SourceForge still does not provide modern code versioning tools, such as Subversion, GIT or Mercurial
+5. **Default Home Page:** Sourceforge does not provide any default website for projects. The current wiki system is poor in functionalities compared to moden wiki systems
+6. **Mirroring:** mirroring Sourceforge is hard, no fast rsync servers, nor mechanisms for decentralised trees
+7. **Hosting in the United States:** the hosting of Sourceforge in the United States makes it prone to anti-innovation US legislation, such as aggressive software patent threats, DMCA take down notices, etc. A better jurisdiction recognising the non-patentability of software and having no DMCA provisions would be better. Other laws (Foreign Assets Control sanction list) for encryption of boycott of developers and users in Iran, North Korea, Syria, Sudan and Cuba.

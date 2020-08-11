@@ -1,0 +1,62 @@
+I wanted to make a quick package for the [DeMidi software](https://github.com/ZyreApps/DeMidi) released as v1.0. This has been released on Github, with the following download URL for the tar.gz archive:
+
+
+    https://github.com/ZyreApps/DeMidi/archive/v1.0.tar.gz
+
+
+When doing wget over the URL, it first does a 302 redirect to another URL:
+
+
+    zoobab@sabayonx86-64 /home/zoobab/tmp/1 [161]$ wget  https://codeload.github.com/ZyreApps/DeMidi/tar.gz/v1.0
+    --2016-02-05 13:57:34--  https://codeload.github.com/ZyreApps/DeMidi/tar.gz/v1.0
+    Resolving codeload.github.com... 192.30.252.162
+    Connecting to codeload.github.com|192.30.252.162|:443... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 49860 (49K) [application/x-gzip]
+    Saving to: ‘v1.0’
+    
+    v1.0                                                 100%[========================================================================================================================>]  48.69K   242KB/s   in 0.2s   
+    
+    2016-02-05 13:57:35 (242 KB/s) - ‘v1.0’ saved [49860/49860]
+    
+    zoobab@sabayonx86-64 /home/zoobab/tmp/1 [162]$ l
+    total 52
+    -rw-r--r-- 1 zoobab users 49860 Feb  5 13:57 v1.0
+    zoobab@sabayonx86-64 /home/zoobab/tmp/1 [163]$ file v1.0 
+    v1.0: gzip compressed data, from Unix
+
+
+And saves it to a weird file name "v1.0". I would have expected "DeMidi-1.0.tar.gz", which is the filename that Firefox or Chrome downloads when you click on the link.
+
+I could not find any alternative URL, until I debugged the query with Firefox -> Tools -> WebDeveloper -> Network, which displayed a weird HTTP Header named "Content-Disposition":
+
+[[=image github-not-wget-friendly.png size="large"]]
+
+For anybody who has been doing packaging for Redhat, Debian or Gentoo, you should be used to weird filenames for tarballs, but this one is annoying, since in your tarballs directory you have to deal with 2 tarballs v1.0 that comes from github and you are screwed.
+
+There is a wget option that tries to interpret this "Content-Disposition" header:
+
+
+    zoobab@sabayonx86-64 /home/zoobab/tmp [157]$ wget --content-disposition https://codeload.github.com/ZyreApps/DeMidi/tar.gz/v1.0
+    --2016-02-05 13:54:28--  https://codeload.github.com/ZyreApps/DeMidi/tar.gz/v1.0
+    Resolving codeload.github.com... 192.30.252.160
+    Connecting to codeload.github.com|192.30.252.160|:443... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 49860 (49K) [application/x-gzip]
+    Saving to: ‘DeMidi-1.0.tar.gz’
+    
+    DeMidi-1.0.tar.gz                                    100%[========================================================================================================================>]  48.69K   201KB/s   in 0.2s   
+    
+    2016-02-05 13:54:29 (201 KB/s) - ‘DeMidi-1.0.tar.gz’ saved [49860/49860]
+
+
+This write the right filename to disk, but this option is a nogo for most linux distributions.
+
+Github is made by HTTP API nazis that makes mirroring hard. Where are the good old days of FTP mirrors and tar.gz's?
+
+# Links
+
+
+* <http://stackoverflow.com/questions/27254312/download-github-build-artifact-release-using-wget-curl>  
+* <https://www.drupal.org/node/2304983>  
+* <http://stackoverflow.com/questions/8377081/github-api-download-zip-or-tarball-link>  

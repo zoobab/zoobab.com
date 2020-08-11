@@ -1,0 +1,9 @@
+I was trying to book a flight with the [Brussels Airlines website](http://www.brusselsairlines.com/com/default.aspx), but unfortunately, they do not use standards of the web, so they are loosing customers:
+
+For example, flash apparently is creating an overlay layer where you cannot choose the day you want to travel:
+
+[[=image flysn2.png]]
+
+When I tried to find out where to complain about this bug on their website, I did not found any email address to write to. They had a webform to send an email, but no functionality to attach a picture. So I sent an email to info@brusselsairlines.com and webmaster@brusselsairlines.com. Let's see how long they take to solve the bug.
+
+Furthermore, their frontpage does not seem to be [http://validator.w3.org/check?uri=http%3A%2F%2Fwww.brusselsairlines.com%2Fcom%2Fdefault.aspx&charset=(detect+automatically)&doctype=Inline&group=0&user-agent=W3C_Validator%2F1.606 very W3C compliant] (120 Errors, 47 warning(s)).

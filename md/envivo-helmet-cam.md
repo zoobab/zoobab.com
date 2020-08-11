@@ -1,0 +1,121 @@
+# About
+
+
+I bought this camera for 30EUR at Aldi Belgium, a rebate offer for this Saturday 16 June 2012.
+
+# Picture
+
+
+[[=image envivo-helmet-cam.jpg]]
+
+# Lsusb
+
+
+
+    Bus 002 Device 013: ID 04fc:1528 Sunplus Technology Co., Ltd SPCA1527A/SPCA1528 SD card camera (webcam mode)
+
+
+# v4l-info
+
+
+
+    zoobab@buzek /home/zoobab [13]$ v4l-info 
+    
+    ### v4l2 device info [/dev/video0] ###
+    general info
+        VIDIOC_QUERYCAP
+            driver                  : "spca1528"
+            card                    : "General Image Devic"
+            bus_info                : "usb-0000:00:1d.7-1"
+            version                 : 2.13.0
+            capabilities            : 0x5000001 [VIDEO_CAPTURE,READWRITE,STREAMING]
+    
+    standards
+    
+    inputs
+        VIDIOC_ENUMINPUT(0)
+            index                   : 0
+            name                    : "spca1528"
+            type                    : CAMERA
+            audioset                : 0
+            tuner                   : 0
+            std                     : 0x0 []
+            status                  : 0x0 []
+    
+    video capture
+        VIDIOC_ENUM_FMT(0,VIDEO_CAPTURE)
+            index                   : 0
+            type                    : VIDEO_CAPTURE
+            flags                   : 1
+            description             : "JPEG"
+            pixelformat             : 0x4745504a [JPEG]
+        VIDIOC_G_FMT(VIDEO_CAPTURE)
+            type                    : VIDEO_CAPTURE
+            fmt.pix.width           : 320
+            fmt.pix.height          : 240
+            fmt.pix.pixelformat     : 0x4745504a [JPEG]
+            fmt.pix.field           : NONE
+            fmt.pix.bytesperline    : 320
+            fmt.pix.sizeimage       : 38990
+            fmt.pix.colorspace      : JPEG
+            fmt.pix.priv            : 2
+    
+    controls
+        VIDIOC_QUERYCTRL(BASE+0)
+            id                      : 9963776
+            type                    : INTEGER
+            name                    : "Brightness"
+            minimum                 : 0
+            maximum                 : 255
+            step                    : 1
+            default_value           : 128
+            flags                   : 0
+        VIDIOC_QUERYCTRL(BASE+1)
+            id                      : 9963777
+            type                    : INTEGER
+            name                    : "Contrast"
+            minimum                 : 0
+            maximum                 : 8
+            step                    : 1
+            default_value           : 1
+            flags                   : 0
+        VIDIOC_QUERYCTRL(BASE+2)
+            id                      : 9963778
+            type                    : INTEGER
+            name                    : "Saturation"
+            minimum                 : 0
+            maximum                 : 8
+            step                    : 1
+            default_value           : 1
+            flags                   : 0
+        VIDIOC_QUERYCTRL(BASE+3)
+            id                      : 9963779
+            type                    : INTEGER
+            name                    : "Hue"
+            minimum                 : 0
+            maximum                 : 255
+            step                    : 1
+            default_value           : 0
+            flags                   : 0
+
+
+# Webcam mode
+
+
+Here is a snapshot of the camera in webcam mode, it captures in 640x480:
+
+[[=image vlcsnap-2012-06-18-13h13m04s207.png]]
+
+# Battery problems
+
+
+Even after some 12 hours of charge, the cam does not want to power on.
+
+# Links
+
+
+* <http://www.dealextreme.com/p/mini-2-0m-pixels-cmos-dv-video-camera-tf-slot-48636?item=26>  
+* <http://www.aircommandrockets.com/md80clone.htm>  
+* <https://github.com/mandl/808MicroCam>  
+* <http://www.chucklohr.com/808/MD80/>  
+* <http://tmp2tmp.at.ua/>  

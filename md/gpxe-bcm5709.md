@@ -1,0 +1,6 @@
+# Bug
+
+
+gPXE fails to load after a while.
+
+[[=image gpxe.png]]

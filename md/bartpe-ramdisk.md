@@ -1,0 +1,4 @@
+# Links
+
+
+* <ftp://ftp2.ie.freesbie.org/pub/sourceforge/p/project/pe/pebuild-plugins/PQMagic%208.0%20plugin/PQMagic%208.0%20plugin%20v1.0/pqmagic.cab>  

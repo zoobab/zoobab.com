@@ -1,0 +1,126 @@
+# Root shell
+
+
+# Static busybox
+
+
+Download a [[file busybox | static busybox here]].
+
+# Cpuinfo
+
+
+
+    # ./cat /proc/cpuinfo 
+    Processor       : ARMv6-compatible processor rev 2 (v6l)
+    BogoMIPS        : 244.94
+    Features        : swp half thumb fastmult edsp java 
+    CPU implementer : 0x41
+    CPU architecture: 6TEJ
+    CPU variant     : 0x1
+    CPU part        : 0xb36
+    CPU revision    : 2
+    
+    Hardware        : buzz
+    Revision        : 0081
+    Serial          : 0000000000000000
+
+
+# Meminfo
+
+
+
+    # ./cat /proc/meminfo
+    MemTotal:         321328 kB
+    MemFree:           41520 kB
+    Buffers:            2292 kB
+    Cached:           100296 kB
+    SwapCached:            0 kB
+    Active:           175420 kB
+    Inactive:          69104 kB
+    Active(anon):      94596 kB
+    Inactive(anon):    56184 kB
+    Active(file):      80824 kB
+    Inactive(file):    12920 kB
+    Unevictable:        5860 kB
+    Mlocked:            5572 kB
+    SwapTotal:             0 kB
+    SwapFree:              0 kB
+    Dirty:                 0 kB
+    Writeback:             0 kB
+    AnonPages:        147824 kB
+    Mapped:            66368 kB
+    Slab:               9876 kB
+    SReclaimable:       2312 kB
+    SUnreclaim:         7564 kB
+    PageTables:        13264 kB
+    NFS_Unstable:          0 kB
+    Bounce:                0 kB
+    WritebackTmp:          0 kB
+    CommitLimit:      160664 kB
+    Committed_AS:    4105760 kB
+    VmallocTotal:     319488 kB
+    VmallocUsed:       68332 kB
+    VmallocChunk:     241668 kB
+
+
+# Available Busybox commands
+
+
+
+    # ../busybox
+    BusyBox v1.16.0 (2010-03-22 20:28:28 MST) multi-call binary.
+    Copyright (C) 1998-2009 Erik Andersen, Rob Landley, Denys Vlasenko
+    and others. Licensed under GPLv2.
+    See source distribution for full notice.
+    
+    Usage: busybox [function] [arguments]...
+       or: function [arguments]...
+    
+            BusyBox is a multi-call binary that combines many common Unix
+            utilities into a single executable.  Most people will create a
+            link to busybox for each function they wish to use and BusyBox
+            will act like whatever it was invoked as.
+    
+    Currently defined functions:
+            [, [[, addgroup, adduser, adjtimex, ar, arp, arping, ash, awk,
+            basename, beep, blkid, brctl, bunzip2, bzcat, bzip2, cal, cat, catv,
+            chat, chattr, chgrp, chmod, chown, chpasswd, chpst, chroot, chrt, chvt,
+            cksum, clear, cmp, comm, cp, cpio, crond, crontab, cryptpw, cttyhack,
+            cut, date, dc, dd, deallocvt, delgroup, deluser, depmod, devmem, df,
+            dhcprelay, diff, dirname, dmesg, dnsd, dnsdomainname, dos2unix, du,
+            dumpkmap, dumpleases, echo, ed, egrep, eject, env, envdir, envuidgid,
+            ether-wake, expand, expr, fakeidentd, false, fbset, fbsplash, fdflush,
+            fdformat, fdisk, fgrep, find, findfs, fold, free, freeramdisk, fsck,
+            fsck.minix, fsync, ftpd, ftpget, ftpput, fuser, getopt, getty, grep,
+            gunzip, gzip, halt, hd, hdparm, head, hexdump, hostid, hostname, httpd,
+            hush, hwclock, id, ifconfig, ifdown, ifenslave, ifplugd, ifup, inetd,
+            init, insmod, install, ionice, ip, ipaddr, ipcalc, ipcrm, ipcs, iplink,
+            iproute, iprule, iptunnel, kbd_mode, kill, killall, killall5, klogd,
+            last, length, less, linux32, linux64, linuxrc, ln, loadfont, loadkmap,
+            logger, login, logname, logread, losetup, ls, lsattr, lsmod, lspci,
+            lsusb, lzmacat, lzop, lzopcat, makedevs, man, md5sum, mdev, mesg,
+            microcom, mkdir, mkdosfs, mkfifo, mkfs.minix, mkfs.vfat, mknod,
+            mkpasswd, mkswap, mktemp, modprobe, more, mount, mountpoint, msh, mt,
+            mv, nameif, nc, netstat, nice, nmeter, nohup, nslookup, od, openvt,
+            passwd, patch, pgrep, pidof, ping, ping6, pipe_progress, pivot_root,
+            pkill, poweroff, printenv, printf, ps, pscan, pwd, raidautorun, rdate,
+            rdev, readahead, readlink, readprofile, realpath, reboot, renice,
+            reset, resize, rm, rmdir, rmmod, route, rtcwake, run-parts, runlevel,
+            runsv, runsvdir, rx, script, scriptreplay, sed, seq, setarch,
+            setconsole, setfont, setkeycodes, setlogcons, setsid, setuidgid, sh,
+            sha1sum, sha256sum, sha512sum, showkey, slattach, sleep, softlimit,
+            sort, split, start-stop-daemon, stat, strings, stty, su, sulogin, sum,
+            sv, svlogd, swapoff, swapon, switch_root, sync, sysctl, syslogd, tac,
+            tail, tar, tcpsvd, tee, telnet, telnetd, test, tftp, tftpd, time,
+            timeout, top, touch, tr, traceroute, true, tty, ttysize, tunctl,
+            udhcpc, udhcpd, udpsvd, umount, uname, uncompress, unexpand, uniq,
+            unix2dos, unlzma, unlzop, unzip, uptime, usleep, uudecode, uuencode,
+            vconfig, vi, vlock, volname, wall, watch, watchdog, wc, wget, which,
+            who, whoami, xargs, yes, zcat, zcip
+
+
+# Create all symlinks for busybox
+
+
+
+    # for i in `../busybox --help | ./grep 'Currently defined functions:' -A30 | ./grep '^\s.*,' | ./tr , '\n'`; do ./ln -s ../busybox /sqlite_stmt_journals/newbin4/$i; done

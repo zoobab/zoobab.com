@@ -1,0 +1,305 @@
+# JSON output
+
+
+Here is some JSON output (example file [[File iperf3-sample-output.json]]), which is now used in iperf3 instead of the simple CSV output used in iperf2:
+
+
+    {
+    	"start":	{
+    		"connected":	[{
+    				"socket":	4,
+    				"local_host":	"192.168.1.102",
+    				"local_port":	58376,
+    				"remote_host":	"192.168.1.103",
+    				"remote_port":	5201
+    			}],
+    		"version":	"iperf 3.0.10",
+    		"system_info":	"Linux sabayon 3.17.0-sabayon #1 SMP Mon Nov 24 03:33:59 UTC 2014 x86_64 Intel(R) Core(TM) i5 CPU M 520 @ 2.40GHz GenuineIntel GNU/Linux\n",
+    		"timestamp":	{
+    			"time":	"Mon, 19 Jan 2015 15:30:57 GMT",
+    			"timesecs":	1421681457
+    		},
+    		"connecting_to":	{
+    			"host":	"server01.lan",
+    			"port":	5201
+    		},
+    		"cookie":	"sabayon.1421681457.034228.6559afdb24",
+    		"tcp_mss_default":	1448,
+    		"test_start":	{
+    			"protocol":	"TCP",
+    			"num_streams":	1,
+    			"blksize":	131072,
+    			"omit":	0,
+    			"duration":	10,
+    			"bytes":	0,
+    			"blocks":	0,
+    			"reverse":	0
+    		}
+    	},
+    	"intervals":	[{
+    			"streams":	[{
+    					"socket":	4,
+    					"start":	0,
+    					"end":	1.00013,
+    					"seconds":	1.00013,
+    					"bytes":	11103264,
+    					"bits_per_second":	8.8815e+07,
+    					"retransmits":	233,
+    					"snd_cwnd":	236024,
+    					"omitted":	false
+    				}],
+    			"sum":	{
+    				"start":	0,
+    				"end":	1.00013,
+    				"seconds":	1.00013,
+    				"bytes":	11103264,
+    				"bits_per_second":	8.8815e+07,
+    				"retransmits":	233,
+    				"omitted":	false
+    			}
+    		}, {
+    			"streams":	[{
+    					"socket":	4,
+    					"start":	1.00013,
+    					"end":	2.0001,
+    					"seconds":	0.99997,
+    					"bytes":	10579088,
+    					"bits_per_second":	8.46352e+07,
+    					"retransmits":	0,
+    					"snd_cwnd":	291048,
+    					"omitted":	false
+    				}],
+    			"sum":	{
+    				"start":	1.00013,
+    				"end":	2.0001,
+    				"seconds":	0.99997,
+    				"bytes":	10579088,
+    				"bits_per_second":	8.46352e+07,
+    				"retransmits":	0,
+    				"omitted":	false
+    			}
+    		}, {
+    			"streams":	[{
+    					"socket":	4,
+    					"start":	2.0001,
+    					"end":	3.00011,
+    					"seconds":	1.00001,
+    					"bytes":	10764432,
+    					"bits_per_second":	8.61146e+07,
+    					"retransmits":	2,
+    					"snd_cwnd":	364896,
+    					"omitted":	false
+    				}],
+    			"sum":	{
+    				"start":	2.0001,
+    				"end":	3.00011,
+    				"seconds":	1.00001,
+    				"bytes":	10764432,
+    				"bits_per_second":	8.61146e+07,
+    				"retransmits":	2,
+    				"omitted":	false
+    			}
+    		}, {
+    			"streams":	[{
+    					"socket":	4,
+    					"start":	3.00011,
+    					"end":	4.00013,
+    					"seconds":	1.00002,
+    					"bytes":	10744160,
+    					"bits_per_second":	8.59514e+07,
+    					"retransmits":	0,
+    					"snd_cwnd":	376480,
+    					"omitted":	false
+    				}],
+    			"sum":	{
+    				"start":	3.00011,
+    				"end":	4.00013,
+    				"seconds":	1.00002,
+    				"bytes":	10744160,
+    				"bits_per_second":	8.59514e+07,
+    				"retransmits":	0,
+    				"omitted":	false
+    			}
+    		}, {
+    			"streams":	[{
+    					"socket":	4,
+    					"start":	4.00013,
+    					"end":	5.0001,
+    					"seconds":	0.999977,
+    					"bytes":	11646264,
+    					"bits_per_second":	9.31722e+07,
+    					"retransmits":	36,
+    					"snd_cwnd":	375032,
+    					"omitted":	false
+    				}],
+    			"sum":	{
+    				"start":	4.00013,
+    				"end":	5.0001,
+    				"seconds":	0.999977,
+    				"bytes":	11646264,
+    				"bits_per_second":	9.31722e+07,
+    				"retransmits":	36,
+    				"omitted":	false
+    			}
+    		}, {
+    			"streams":	[{
+    					"socket":	4,
+    					"start":	5.0001,
+    					"end":	6.00012,
+    					"seconds":	1.00001,
+    					"bytes":	10690584,
+    					"bits_per_second":	8.55236e+07,
+    					"retransmits":	5,
+    					"snd_cwnd":	333040,
+    					"omitted":	false
+    				}],
+    			"sum":	{
+    				"start":	5.0001,
+    				"end":	6.00012,
+    				"seconds":	1.00001,
+    				"bytes":	10690584,
+    				"bits_per_second":	8.55236e+07,
+    				"retransmits":	5,
+    				"omitted":	false
+    			}
+    		}, {
+    			"streams":	[{
+    					"socket":	4,
+    					"start":	6.00012,
+    					"end":	7.00011,
+    					"seconds":	0.999991,
+    					"bytes":	10615288,
+    					"bits_per_second":	8.49231e+07,
+    					"retransmits":	2,
+    					"snd_cwnd":	296840,
+    					"omitted":	false
+    				}],
+    			"sum":	{
+    				"start":	6.00012,
+    				"end":	7.00011,
+    				"seconds":	0.999991,
+    				"bytes":	10615288,
+    				"bits_per_second":	8.49231e+07,
+    				"retransmits":	2,
+    				"omitted":	false
+    			}
+    		}, {
+    			"streams":	[{
+    					"socket":	4,
+    					"start":	7.00011,
+    					"end":	8.00012,
+    					"seconds":	1.00001,
+    					"bytes":	10739816,
+    					"bits_per_second":	8.59177e+07,
+    					"retransmits":	0,
+    					"snd_cwnd":	330144,
+    					"omitted":	false
+    				}],
+    			"sum":	{
+    				"start":	7.00011,
+    				"end":	8.00012,
+    				"seconds":	1.00001,
+    				"bytes":	10739816,
+    				"bits_per_second":	8.59177e+07,
+    				"retransmits":	0,
+    				"omitted":	false
+    			}
+    		}, {
+    			"streams":	[{
+    					"socket":	4,
+    					"start":	8.00012,
+    					"end":	9.00013,
+    					"seconds":	1.00001,
+    					"bytes":	10710856,
+    					"bits_per_second":	8.56859e+07,
+    					"retransmits":	15,
+    					"snd_cwnd":	432952,
+    					"omitted":	false
+    				}],
+    			"sum":	{
+    				"start":	8.00012,
+    				"end":	9.00013,
+    				"seconds":	1.00001,
+    				"bytes":	10710856,
+    				"bits_per_second":	8.56859e+07,
+    				"retransmits":	15,
+    				"omitted":	false
+    			}
+    		}, {
+    			"streams":	[{
+    					"socket":	4,
+    					"start":	9.00013,
+    					"end":	10.0001,
+    					"seconds":	0.999988,
+    					"bytes":	10793392,
+    					"bits_per_second":	8.63482e+07,
+    					"retransmits":	49,
+    					"snd_cwnd":	283808,
+    					"omitted":	false
+    				}],
+    			"sum":	{
+    				"start":	9.00013,
+    				"end":	10.0001,
+    				"seconds":	0.999988,
+    				"bytes":	10793392,
+    				"bits_per_second":	8.63482e+07,
+    				"retransmits":	49,
+    				"omitted":	false
+    			}
+    		}],
+    	"end":	{
+    		"streams":	[{
+    				"sender":	{
+    					"socket":	4,
+    					"start":	0,
+    					"end":	10.0001,
+    					"seconds":	10.0001,
+    					"bytes":	108387144,
+    					"bits_per_second":	8.67087e+07,
+    					"retransmits":	342
+    				},
+    				"receiver":	{
+    					"socket":	4,
+    					"start":	0,
+    					"end":	10.0001,
+    					"seconds":	10.0001,
+    					"bytes":	106207904,
+    					"bits_per_second":	8.49653e+07
+    				}
+    			}],
+    		"sum_sent":	{
+    			"start":	0,
+    			"end":	10.0001,
+    			"seconds":	10.0001,
+    			"bytes":	108387144,
+    			"bits_per_second":	8.67087e+07,
+    			"retransmits":	342
+    		},
+    		"sum_received":	{
+    			"start":	0,
+    			"end":	10.0001,
+    			"seconds":	10.0001,
+    			"bytes":	106207904,
+    			"bits_per_second":	8.49653e+07
+    		},
+    		"cpu_utilization_percent":	{
+    			"host_total":	0.788852,
+    			"host_user":	0.108467,
+    			"host_system":	0.709967,
+    			"remote_total":	5.88868,
+    			"remote_user":	1.12585,
+    			"remote_system":	4.72856
+    		}
+    	}
+    }
+
+
+# Convert it to CSV?
+
+
+I am still hunting for a simple CLI tool that can do the conversion.
+
+# Links 
+
+
+* <http://konklone.io/json/>  

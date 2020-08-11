@@ -1,0 +1,29 @@
+# Setup
+
+
+<http://battlemesh.org/BattleMeshV3.3/HorseTests>  
+
+# Nodes
+
+
+[[=image pole.jpg size="medium"]]
+
+# Cardebug
+
+
+[[=image cardebug.jpg size="medium"]]
+
+# Car
+
+
+[[=image car.jpg size="medium"]]
+
+# Mud
+
+
+[[=image shoes.jpg size="medium"]]
+
+# Speed tests
+
+
+<http://battlemesh.org/BattleMeshV3.3/HorseTests?action=AttachFile&do=get&target=shell-download.txt>  

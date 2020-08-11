@@ -1,0 +1,37 @@
+# Picture
+
+
+[[=image realtek-rtl8188-cus.jpg]]
+
+# Lsusb
+
+
+
+    Bus 002 Device 007: ID 0bda:8176 Realtek Semiconductor Corp. RTL8188CUS 802.11n WLAN Adapter
+
+
+Lsusb -v gives:
+
+
+    Bus 002 Device 007: ID 0bda:8176 Realtek Semiconductor Corp. RTL8188CUS 802.11n WLAN Adapter
+    Device Descriptor:
+      bLength                18
+      bDescriptorType         1
+      bcdUSB               2.00
+      bDeviceClass            0 (Defined at Interface level)
+      bDeviceSubClass         0 
+      bDeviceProtocol         0 
+      bMaxPacketSize0        64
+      idVendor           0x0bda Realtek Semiconductor Corp.
+      idProduct          0x8176 RTL8188CUS 802.11n WLAN Adapter
+      bcdDevice            2.00
+      iManufacturer           1 Realtek
+      iProduct                2 802.11n WLAN Adapter
+      iSerial                 3 00e04c000001
+      bNumConfigurations      1
+
+
+# Price
+
+
+You can find this dongle in several brands, and around 4USD.

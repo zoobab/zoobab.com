@@ -1,0 +1,16 @@
+# Linux
+
+
+# Booting
+
+
+* BIOS does not support booting from the USB port
+* Booting from the network does not work with the PCMCIA card I have (it needs a cardbus network card)
+* Booting is possible from the floppy drive of the harddrive (noisy)
+
+# Links
+
+
+* <http://www.stanford.edu/~loening/linux-3800/redhat_6.2.html>  
+* <http://www.math.ucla.edu/~jimc/inspir3800.html>  
+* <http://web.archive.org/web/20010303180529/www.cns.nyu.edu/~masmith/inspiron/>  

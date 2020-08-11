@@ -1,0 +1,9 @@
+Last week-end, I organised a [Babel workshop](https://hackerspace.be/Babel_Wireless_Routing_Protocol_Workshop) at [Hacker Space Brussels (HSB)](https://hackerspace.be/), and the main author of [Babel](http://www.pps.jussieu.fr/~jch/software/babel/) and friend [Juliusz Chroboczek](http://www.pps.jussieu.fr/~jch/) came to the event. We had a lot of fun to test the latest version of Babel 1.2.0, with the -z parameter to see if the routing protocol was taking the best route over multiple radio channels.
+
+When they asked me where to sleep, I recommended them the hotel Ibis next to my place, where I knew several other people slept well during last [FOSDEM](http://www.fosdem.org). So Juliusz booked a room well in advance, but it seems that this brand of [Hotel Ibis Sainte Catherine](http://www.ibishotel.com/fr/hotel-1454-ibis-brussels-centre-ste-catherine/index.shtml) does not really offer professional services, [here is his story](http://www.pps.jussieu.fr/~jch/ibis-sainte-catherine.html):
+
+> J'ai d'abord été informé que je n'avais pas de réservation. Lorsque j'ai proposé de montrer ma confirmation, j'ai été informé que **certes, il y avait eu une réservation, mais qu'elle avait été annulée**. Lorsque je me suis énervé, on m'a informé que les réservations ne sont pas garanties, et que « d'habitude, les clients savent lire les conditions ».
+
+If Ibis hotels cannot guarantee reservations, what are reservations for? They should simply not allow reservations if reservations are cancellable at any time by them.
+
+Really this is inacceptable, and I will make sure none of my friends will never go to this hotel again.

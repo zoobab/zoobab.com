@@ -1,0 +1,484 @@
+# About
+
+
+Two years ago, I bought for 200EUR (VAT incl.) an Acer EL1200 desktop (1GB RAM, 160GB disk) with a 15 inches LCD screen, a keyboard and a mouse. The desktop was sold at that price because it was shipped with Ubuntu preinstalled, thus not including the Microsoft tax. While I mainly use my laptop to work, I used this box once upon a time, notably to flash hundreds of USB keys for the OLPC project.
+
+Now, I have decided to use this box as a media center and home server, I have upgraded it with a 1TB harddisk, and tried XBMC live on it. I have tried to install XBMC on it, but I hit an error with grub refusing to install on the disk.
+
+# Flashing a more recent BIOS with flashrom
+
+
+
+    root@el1200 /home/zoobab [2]# flashrom 
+    flashrom v0.9.4-r1394 on Linux 3.0.0-14-generic (x86_64), built with libpci 3.1.7, GCC 4.6.1, little endian
+    flashrom is free software, get the source code at http://www.flashrom.org
+    
+    Calibrating delay loop... OK.
+    Found chipset "NVIDIA MCP61". 
+    This chipset is marked as untested. If you are using an up-to-date version
+    of flashrom please email a report to flashrom@flashrom.org including a
+    verbose (-V) log. Thank you!
+    Enabling flash write... This chipset is not really supported yet. Guesswork...
+    SPI on this chipset is WIP. Please report any success or failure by mailing us the verbose output to flashrom@flashrom.org, thanks!
+    Mapping NVIDIA MCP6x SPI at 0xfec80000, unaligned size 0x544.
+    Please send the output of "flashrom -V" to flashrom@flashrom.org with
+    your board name: flashrom -V as the subject to help us finish support for your
+    chipset. Thanks.
+    OK.
+    This chipset supports the following protocols: SPI.
+    Found Macronix flash chip "MX25L8005" (1024 kB, SPI) at physical address 0xfff00000.
+    No operations were specified.
+
+
+Flashing a more recent BIOS with R01A2.BIN to see if this version supports more graphic cards:
+
+
+    root@sabayon /home/zoobab [8]# flashrom -w R01A2.BIN
+    flashrom v0.9.4-r1395 on Linux 3.1.0-sabayon (i686), built with libpci 3.1.7, GCC 4.6.2, little endian
+    flashrom is free software, get the source code at http://www.flashrom.org
+    
+    Calibrating delay loop... OK.
+    Found chipset "NVIDIA MCP61". 
+    This chipset is marked as untested. If you are using an up-to-date version
+    of flashrom please email a report to flashrom@flashrom.org including a
+    verbose (-V) log. Thank you!
+    Enabling flash write... This chipset is not really supported yet. Guesswork...
+    SPI on this chipset is WIP. Please report any success or failure by mailing us the verbose output to flashrom@flashrom.org, thanks!
+    Mapping NVIDIA MCP6x SPI at 0xfec80000, unaligned size 0x544.
+    Please send the output of "flashrom -V" to flashrom@flashrom.org with
+    your board name: flashrom -V as the subject to help us finish support for your
+    chipset. Thanks.
+    OK.
+    This chipset supports the following protocols: SPI.
+    Found Macronix flash chip "MX25L8005" (1024 kB, SPI) at physical address 0xfff00000.
+    Flash image seems to be a legacy BIOS. Disabling coreboot-related checks.
+    Reading old flash chip contents... done.
+    Erasing and writing flash chip... Erase/write done.
+    Verifying flash... VERIFIED.          
+    root@sabayon /home/zoobab [9]# flashrom -r bios-v2.bin
+    flashrom v0.9.4-r1395 on Linux 3.1.0-sabayon (i686), built with libpci 3.1.7, GCC 4.6.2, little endian
+    flashrom is free software, get the source code at http://www.flashrom.org
+    
+    Calibrating delay loop... OK.
+    Found chipset "NVIDIA MCP61". 
+    This chipset is marked as untested. If you are using an up-to-date version
+    of flashrom please email a report to flashrom@flashrom.org including a
+    verbose (-V) log. Thank you!
+    Enabling flash write... This chipset is not really supported yet. Guesswork...
+    SPI on this chipset is WIP. Please report any success or failure by mailing us the verbose output to flashrom@flashrom.org, thanks!
+    Mapping NVIDIA MCP6x SPI at 0xfec80000, unaligned size 0x544.
+    Please send the output of "flashrom -V" to flashrom@flashrom.org with
+    your board name: flashrom -V as the subject to help us finish support for your
+    chipset. Thanks.
+    OK.
+    This chipset supports the following protocols: SPI.
+    Found Macronix flash chip "MX25L8005" (1024 kB, SPI) at physical address 0xfff00000.
+    Reading flash... done.
+    root@sabayon /home/zoobab [10]# l
+    total 3080
+    -rw-r--r-- 1 zoobab zoobab    3519 Jan  2 02:48 2cards.txt
+    -rw-r--r-- 1 root   root   1048576 Jan  2 14:35 bios-backup.bin
+    -rw-r--r-- 1 root   root   1048576 Jan  2 14:39 bios-v2.bin
+    drwxr-xr-x 2 zoobab zoobab    4096 Jan  2 00:58 Desktop
+    -rw-r--r-- 1 zoobab zoobab 1048576 Jan  2 13:48 R01A2.BIN
+    root@sabayon /home/zoobab [11]# md5sum bios-v2.bin
+    d3c0fcfc479047bf77f626143d49028e  bios-v2.bin
+    root@sabayon /home/zoobab [12]# md5sum R01A2.BIN 
+    d3c0fcfc479047bf77f626143d49028e  R01A2.BIN
+    root@sabayon /home/zoobab [13]#
+
+
+# Lshw
+
+
+
+    el1200
+        description: Desktop Computer
+        product: EL1200 ()
+        vendor: eMachines
+        version: R01-A0
+        serial: 9VY2D7ZEF0842040CA3001
+        width: 64 bits
+        capabilities: smbios-2.5 dmi-2.5 vsyscall64 vsyscall32
+        configuration: administrator_password=disabled boot=normal chassis=desktop power-on_password=disabled uuid=00000000-0000-0000-0807-060504030201
+      *-core
+           description: Motherboard
+           product: WMCP61M
+           vendor: eMachines
+           physical id: 0
+           serial: 0000000000000000000000
+         *-firmware
+              description: BIOS
+              vendor: Phoenix Technologies, LTD
+              physical id: 0
+              version: R01-A0L
+              date: 09/17/2008
+              size: 128KiB
+              capacity: 960KiB
+              capabilities: isa pci pnp apm upgrade shadowing cdboot bootselect socketedrom edd int13floppy360 int13floppy1200 int13floppy720 int13floppy2880 int5printscreen int9keyboard int14serial int17printer int10video acpi usb ls120boot zipboot biosbootspecification netboot
+         *-cpu
+              description: CPU
+              product: AMD Athlon(tm) Processor LE-1600
+              vendor: Hynix Semiconductor (Hyundai Electronics)
+              physical id: 3
+              bus info: cpu@0
+              version: AMD Athlon(tm) Processor LE-1600
+              slot: Socket AM2
+              size: 2200MHz
+              capacity: 2200MHz
+              width: 64 bits
+              clock: 201MHz
+              capabilities: x86-64 fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt rdtscp 3dnowext 3dnow up rep_good nopl extd_apicid pni cx16 lahf_lm svm extapic cr8_legacy cpufreq
+              configuration: cores=1 enabledcores=1 threads=1
+            *-cache:0
+                 description: L1 cache
+                 physical id: 8
+                 slot: Internal Cache
+                 size: 128KiB
+                 capacity: 128KiB
+                 capabilities: synchronous internal write-back
+            *-cache:1
+                 description: L2 cache
+                 physical id: 9
+                 slot: External Cache
+                 size: 1MiB
+                 capacity: 1MiB
+                 capabilities: synchronous internal write-back
+         *-memory:0
+              description: System Memory
+              physical id: 13
+              slot: System board or motherboard
+              size: 1GiB
+            *-bank:0
+                 description: DIMM DDR2 2048 MHz (0.5 ns)
+                 product: None
+                 vendor: None
+                 physical id: 0
+                 serial: None
+                 slot: A0
+                 size: 1GiB
+                 width: 64 bits
+                 clock: 2048MHz (0.5ns)
+            *-bank:1
+                 description: DIMM DDR2 2048 MHz (0.5 ns) [empty]
+                 product: None
+                 vendor: None
+                 physical id: 1
+                 serial: None
+                 slot: A1
+                 width: 64 bits
+                 clock: 2048MHz (0.5ns)
+         *-memory:1 UNCLAIMED
+              description: RAM memory
+              product: MCP61 Memory Controller
+              vendor: nVidia Corporation
+              physical id: 4
+              bus info: pci@0000:00:00.0
+              version: a1
+              width: 32 bits
+              clock: 66MHz (15.2ns)
+              capabilities: ht bus_master cap_list
+              configuration: latency=0
+         *-isa
+              description: ISA bridge
+              product: MCP61 LPC Bridge
+              vendor: nVidia Corporation
+              physical id: 1
+              bus info: pci@0000:00:01.0
+              version: a2
+              width: 32 bits
+              clock: 66MHz
+              capabilities: isa bus_master
+              configuration: latency=0
+              resources: ioport:800(size=256)
+         *-serial
+              description: SMBus
+              product: MCP61 SMBus
+              vendor: nVidia Corporation
+              physical id: 1.1
+              bus info: pci@0000:00:01.1
+              version: a2
+              width: 32 bits
+              clock: 66MHz
+              capabilities: pm cap_list
+              configuration: driver=nForce2_smbus latency=0
+              resources: irq:10 ioport:fc00(size=64) ioport:1c00(size=64) ioport:f400(size=64)
+         *-memory:2 UNCLAIMED
+              description: RAM memory
+              product: MCP61 Memory Controller
+              vendor: nVidia Corporation
+              physical id: 1.2
+              bus info: pci@0000:00:01.2
+              version: a2
+              width: 32 bits
+              clock: 66MHz (15.2ns)
+              configuration: latency=0
+         *-usb:0
+              description: USB Controller
+              product: MCP61 USB Controller
+              vendor: nVidia Corporation
+              physical id: 2
+              bus info: pci@0000:00:02.0
+              version: a3
+              width: 32 bits
+              clock: 66MHz
+              capabilities: pm ohci bus_master cap_list
+              configuration: driver=ohci_hcd latency=0 maxlatency=1 mingnt=3
+              resources: irq:21 memory:fe02f000-fe02ffff
+         *-usb:1
+              description: USB Controller
+              product: MCP61 USB Controller
+              vendor: nVidia Corporation
+              physical id: 2.1
+              bus info: pci@0000:00:02.1
+              version: a3
+              width: 32 bits
+              clock: 66MHz
+              capabilities: debug pm ehci bus_master cap_list
+              configuration: driver=ehci_hcd latency=0 maxlatency=1 mingnt=3
+              resources: irq:22 memory:fe02e000-fe02e0ff
+         *-pci:0
+              description: PCI bridge
+              product: MCP61 PCI bridge
+              vendor: nVidia Corporation
+              physical id: 100
+              bus info: pci@0000:00:04.0
+              version: a1
+              width: 32 bits
+              clock: 66MHz
+              capabilities: pci ht subtractive_decode bus_master cap_list
+              resources: ioport:b000(size=4096) memory:fda00000-fdafffff memory:fdf00000-fdffffff
+         *-multimedia
+              description: Audio device
+              product: MCP61 High Definition Audio
+              vendor: nVidia Corporation
+              physical id: 5
+              bus info: pci@0000:00:05.0
+              version: a2
+              width: 32 bits
+              clock: 66MHz
+              capabilities: pm msi ht bus_master cap_list
+              configuration: driver=HDA Intel latency=0 maxlatency=5 mingnt=2
+              resources: irq:22 memory:fe024000-fe027fff
+         *-ide:0
+              description: IDE interface
+              product: MCP61 IDE
+              vendor: nVidia Corporation
+              physical id: 6
+              bus info: pci@0000:00:06.0
+              version: a2
+              width: 32 bits
+              clock: 66MHz
+              capabilities: ide pm bus_master cap_list
+              configuration: driver=pata_amd latency=0 maxlatency=1 mingnt=3
+              resources: irq:0 ioport:1f0(size=8) ioport:3f6 ioport:170(size=8) ioport:376 ioport:f000(size=16)
+         *-bridge
+              description: Ethernet interface
+              product: MCP61 Ethernet
+              vendor: nVidia Corporation
+              physical id: 7
+              bus info: pci@0000:00:07.0
+              logical name: eth0
+              version: a2
+              serial: 00:1d:72:aa:96:ba
+              size: 1000000000
+              capacity: 1000000000
+              width: 32 bits
+              clock: 66MHz
+              capabilities: bridge pm msi ht bus_master cap_list ethernet physical mii 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+              configuration: autonegotiation=on broadcast=yes driver=forcedeth driverversion=0.64 duplex=full ip=10.20.30.105 latency=0 link=yes maxlatency=20 mingnt=1 multicast=yes port=MII speed=1Gbit/s
+              resources: irq:43 memory:fe02d000-fe02dfff ioport:ec00(size=8)
+         *-ide:1
+              description: IDE interface
+              product: MCP61 SATA Controller
+              vendor: nVidia Corporation
+              physical id: 8
+              bus info: pci@0000:00:08.0
+              logical name: scsi3
+              version: a2
+              width: 32 bits
+              clock: 66MHz
+              capabilities: ide pm msi ht bus_master cap_list emulated
+              configuration: driver=sata_nv latency=0 maxlatency=1 mingnt=3
+              resources: irq:23 ioport:9f0(size=8) ioport:bf0(size=4) ioport:970(size=8) ioport:b70(size=4) ioport:d800(size=16) memory:fe02c000-fe02cfff
+            *-disk
+                 description: ATA Disk
+                 product: ST31000528AS
+                 vendor: Seagate
+                 physical id: 0.0.0
+                 bus info: scsi@3:0.0.0
+                 logical name: /dev/sda
+                 version: CC38
+                 serial: 6VP3KJ95
+                 size: 931GiB (1TB)
+                 capabilities: partitioned partitioned:dos
+                 configuration: ansiversion=5 signature=0008f483
+               *-volume:0
+                    description: EXT4 volume
+                    vendor: Linux
+                    physical id: 1
+                    bus info: scsi@3:0.0.0,1
+                    logical name: /dev/sda1
+                    logical name: /
+                    version: 1.0
+                    serial: a3e14c26-1282-4549-a4e9-e35a9dd0738a
+                    size: 930GiB
+                    capacity: 930GiB
+                    capabilities: primary bootable journaled extended_attributes large_files huge_files dir_nlink recover extents ext4 ext2 initialized
+                    configuration: created=2011-12-22 14:26:44 filesystem=ext4 lastmountpoint=/ modified=2011-12-22 14:35:00 mount.fstype=ext4 mount.options=rw,relatime,errors=remount-ro,user_xattr,acl,barrier=1,data=ordered mounted=2012-01-01 19:11:26 state=mounted
+               *-volume:1
+                    description: Extended partition
+                    physical id: 2
+                    bus info: scsi@3:0.0.0,2
+                    logical name: /dev/sda2
+                    size: 765MiB
+                    capacity: 765MiB
+                    capabilities: primary extended partitioned partitioned:extended
+                  *-logicalvolume
+                       description: Linux swap / Solaris partition
+                       physical id: 5
+                       logical name: /dev/sda5
+                       capacity: 765MiB
+                       capabilities: nofs
+         *-ide:2
+              description: IDE interface
+              product: MCP61 SATA Controller
+              vendor: nVidia Corporation
+              physical id: 8.1
+              bus info: pci@0000:00:08.1
+              version: a2
+              width: 32 bits
+              clock: 66MHz
+              capabilities: ide pm msi ht bus_master cap_list
+              configuration: driver=sata_nv latency=0 maxlatency=1 mingnt=3
+              resources: irq:23 ioport:9e0(size=8) ioport:be0(size=4) ioport:960(size=8) ioport:b60(size=4) ioport:c400(size=16) memory:fe02b000-fe02bfff
+         *-pci:1
+              description: PCI bridge
+              product: MCP61 PCI Express bridge
+              vendor: nVidia Corporation
+              physical id: 9
+              bus info: pci@0000:00:09.0
+              version: a2
+              width: 32 bits
+              clock: 33MHz
+              capabilities: pci pm msi ht pciexpress normal_decode bus_master cap_list
+              configuration: driver=pcieport
+              resources: irq:40 ioport:a000(size=4096) memory:fde00000-fdefffff ioport:fdd00000(size=1048576)
+         *-pci:2
+              description: PCI bridge
+              product: MCP61 PCI Express bridge
+              vendor: nVidia Corporation
+              physical id: b
+              bus info: pci@0000:00:0b.0
+              version: a2
+              width: 32 bits
+              clock: 33MHz
+              capabilities: pci pm msi ht pciexpress normal_decode bus_master cap_list
+              configuration: driver=pcieport
+              resources: irq:41 ioport:9000(size=4096) memory:f9000000-faffffff ioport:d0000000(size=536870912)
+            *-display
+                 description: VGA compatible controller
+                 product: GT218 [ION]
+                 vendor: nVidia Corporation
+                 physical id: 0
+                 bus info: pci@0000:03:00.0
+                 version: a2
+                 width: 64 bits
+                 clock: 33MHz
+                 capabilities: pm msi pciexpress vga_controller bus_master cap_list rom
+                 configuration: driver=nvidia latency=0
+                 resources: irq:16 memory:f9000000-f9ffffff memory:d0000000-dfffffff memory:ee000000-efffffff ioport:9c00(size=128) memory:e0000000-e007ffff
+            *-multimedia
+                 description: Audio device
+                 product: High Definition Audio Controller
+                 vendor: nVidia Corporation
+                 physical id: 0.1
+                 bus info: pci@0000:03:00.1
+                 version: a1
+                 width: 32 bits
+                 clock: 33MHz
+                 capabilities: pm msi pciexpress bus_master cap_list
+                 configuration: driver=HDA Intel latency=0
+                 resources: irq:16 memory:faffc000-faffffff
+         *-pci:3
+              description: PCI bridge
+              product: MCP61 PCI Express bridge
+              vendor: nVidia Corporation
+              physical id: c
+              bus info: pci@0000:00:0c.0
+              version: a2
+              width: 32 bits
+              clock: 33MHz
+              capabilities: pci pm msi ht pciexpress normal_decode bus_master cap_list
+              configuration: driver=pcieport
+              resources: irq:42 ioport:8000(size=4096) memory:fdc00000-fdcfffff ioport:fdb00000(size=1048576)
+         *-display
+              description: VGA compatible controller
+              product: C61 [GeForce 6150SE nForce 430]
+              vendor: nVidia Corporation
+              physical id: d
+              bus info: pci@0000:00:0d.0
+              version: a2
+              width: 64 bits
+              clock: 66MHz
+              capabilities: pm msi vga_controller bus_master cap_list rom
+              configuration: driver=nvidia latency=0
+              resources: irq:21 memory:fc000000-fcffffff memory:c0000000-cfffffff memory:fb000000-fbffffff memory:40000000-4001ffff
+         *-pci:4
+              description: Host bridge
+              product: K8 [Athlon64/Opteron] HyperTransport Technology Configuration
+              vendor: Hynix Semiconductor (Hyundai Electronics)
+              physical id: 101
+              bus info: pci@0000:00:18.0
+              version: 00
+              width: 32 bits
+              clock: 33MHz
+         *-pci:5
+              description: Host bridge
+              product: K8 [Athlon64/Opteron] Address Map
+              vendor: Hynix Semiconductor (Hyundai Electronics)
+              physical id: 102
+              bus info: pci@0000:00:18.1
+              version: 00
+              width: 32 bits
+              clock: 33MHz
+         *-pci:6
+              description: Host bridge
+              product: K8 [Athlon64/Opteron] DRAM Controller
+              vendor: Hynix Semiconductor (Hyundai Electronics)
+              physical id: 103
+              bus info: pci@0000:00:18.2
+              version: 00
+              width: 32 bits
+              clock: 33MHz
+         *-pci:7
+              description: Host bridge
+              product: K8 [Athlon64/Opteron] Miscellaneous Control
+              vendor: Hynix Semiconductor (Hyundai Electronics)
+              physical id: 104
+              bus info: pci@0000:00:18.3
+              version: 00
+              width: 32 bits
+              clock: 33MHz
+              configuration: driver=k8temp
+              resources: irq:0
+         *-scsi
+              physical id: a
+              bus info: usb@1:8
+              logical name: scsi6
+              capabilities: emulated scsi-host
+              configuration: driver=usb-storage
+            *-disk
+                 description: SCSI Disk
+                 physical id: 0.0.0
+                 bus info: scsi@6:0.0.0
+                 logical name: /dev/sdb
+
+
+# Links
+
+
+* <http://blog.kademar.org/2008/12/emachines-el1200-k-demar-certified/comment-page-1/#comments>  
+* <http://www.flickr.com/photos/armk/3424527151/>  
+* <http://mxdtr.com/boxer-61-mb-da061l-dao61l-motherboard-driver-drivers-audio-sound-lan-chipset-emachines/>  
+* <http://www.tigerdirect.com/applications/SearchTools/item-details.asp?EdpNo=5279675&CatId=4926>  

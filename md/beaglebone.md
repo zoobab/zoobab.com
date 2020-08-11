@@ -1,0 +1,850 @@
+
+
+# Serial port
+
+
+You can access the serial port with screen:
+
+
+    $ modprobe ftdi_sio vendor=0x0403 product=0xa6d0
+    $ screen /dev/ttyUSB1 115200
+
+
+# Buildroot
+
+
+I found the [buildroot-beaglebone project](https://github.com/fhunleth/buildroot-beaglebone) on Github, I compiled it, and the output is:
+
+
+    root@buzek /home/zoobab/soft/beaglebone/buildroot/images [24]# l
+    total 6000
+    -rw-r--r-- 1 zoobab zoobab   37440 2012-02-09 20:43 MLO
+    -rw-r--r-- 1 zoobab zoobab 3307520 2012-02-09 20:43 rootfs.ext2
+    -rw-r--r-- 1 zoobab zoobab  231280 2012-02-09 20:43 u-boot.img
+    -rw-r--r-- 1 zoobab zoobab 2525344 2012-02-09 20:43 uImage
+
+
+## Download
+
+
+You can download the compiled binary files [[file MLO|MLO]], [[file rootfs.ext2|rootfs.ext2]], [[file u-boot.img|u-boot.img]] and [[file uImage|uImage]].
+
+## Create an sd card
+
+
+
+    Creating a BeagleBone MicroSD card
+    ----------------------------------
+    
+    The MicroSD card that comes with the BeagleBone is partitioned properly for the BuildRoot image.
+    To format a new MicroSD card, the following will work:
+    
+    sudo sfdisk -H 255 -S 63 /dev/XXXXXX << EOF
+    0,9,c,*
+    ,124
+    EOF
+     
+    sudo mkfs.vfat /dev/XXXXXX -n boot
+    
+    Then copy the built images to the SD Card:
+    
+    # Copy the bootloads and the Linux kernel
+    cp MLO u-boot.img uImage /media/boot
+    
+    # Copy the root file system (replace sdd2 with the second partition of right
+    # device)
+    sudo dd if=rootfs.ext2 of=/dev/sdd2 bs=128k
+
+
+## Bootlog
+
+
+Here is an example of the bootlog:
+
+
+    Nodisabling fr/MMC: 0
+    reading reading
+    -Boot 2011.09-00000-g97bfad5 (Feb 01 2012 - 142C:   ready
+    No daugresent
+    NAND selected
+    nand_get_f device: Manufacturer ID: 0x11, Chip ID: 0x11
+    !
+    0 MiB
+    MMC:   OMAP S readenv() failed, usin
+    Net:   key to stop autoboot:   0 
+    nd on devicreading uEnv.txt
+    
+    ** Unable to read "uEnv.txt" from mmc 0:1 **
+    read
+    
+    2525344 bytes reing kernel from Legacy 007fc0 ...
+       Image Name:   Linux-3.1.0
+       Image Type:   ARM Linux Kernel Image (uncompressed)
+       Da2525280 Bytes = 2.4 MiB
+       Load Address: 80008000
+       Entry Point:  80008000
+      Checksum ... OK
+       XIP Kernel ImageOK
+    
+    Starting kernel ...
+    
+    Uncompressing Linux... done, booting the kernel.
+    [    0.000000] Linux version 3.1.0 (zoobab@ci) (gcc version 4.5.3 (Buildroot 2012.02-git-g97bfad5) ) #1 Wed Feb 1 14:34:47 GMT 2012
+    [    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c53c7f
+    [    0.000000] CPU: VIPT nonaliasing data cache, VIPT aliasing instruction cache
+    [    0.000000] Machine: am335xevm
+    [    0.000000] Memory policy: ECC disabled, Data cache writeback
+    [    0.000000] AM335X ES1.0 (neon )
+    [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 65024
+    [    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/mmcblk0p2 ro rootfstype=ext2 rootwait ip=none
+    [    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+    [    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+    [    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+    [    0.000000] Memory: 256MB = 256MB total
+    [    0.000000] Memory: 254704k/254704k available, 7440k reserved, 0K highmem
+    [    0.000000] Virtual kernel memory layout:
+    [    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    [    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    [    0.000000]     DMA     : 0xffa00000 - 0xffe00000   (   4 MB)
+    [    0.000000]     vmalloc : 0xd0800000 - 0xf8000000   ( 632 MB)
+    [    0.000000]     lowmem  : 0xc0000000 - 0xd0000000   ( 256 MB)
+    [    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+    [    0.000000]       .text : 0xc0008000 - 0xc0471000   (4516 kB)
+    [    0.000000]       .init : 0xc0471000 - 0xc04a1000   ( 192 kB)
+    [    0.000000]       .data : 0xc04a2000 - 0xc04e58e0   ( 271 kB)
+    [    0.000000]        .bss : 0xc04e5904 - 0xc0508b98   ( 141 kB)
+    [    0.000000] NR_IRQS:396
+    [    0.000000] IRQ: Found an INTC at 0xfa200000 (revision 5.0) with 128 interrupts
+    [    0.000000] Total of 128 interrupts on 1 active controller
+    [    0.000000] OMAP clockevent source: GPTIMER1 at 24000000 Hz
+    [    0.000000] OMAP clocksource: GPTIMER2 at 24000000 Hz
+    [    0.000000] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 178956ms
+    [    0.000000] Console: colour dummy device 80x30
+    [    0.000239] Calibrating delay loop... 498.89 BogoMIPS (lpj=2494464)
+    [    0.058630] pid_max: default: 32768 minimum: 301
+    [    0.058847] Mount-cache hash table entries: 512
+    [    0.059279] CPU: Testing write buffer coherency: ok
+    [    0.060291] devtmpfs: initialized
+    [    0.065112] print_constraints: dummy: 
+    [    0.065538] NET: Registered protocol family 16
+    [    0.065920] GPMC revision 6.0
+    [    0.068379] OMAP GPIO hardware version 0.1
+    [    0.071088] omap_l3_smx omap_l3_smx.0: couldn't find resource
+    [    0.071447] omap_mux_init: Add partition: #1: core, flags: 0
+    [    0.075073]  omap_i2c.1: alias fck already exists
+    [    0.076859]  omap2_mcspi.1: alias fck already exists
+    [    0.077135]  omap2_mcspi.2: alias fck already exists
+    [    0.101484] bio: create slab <bio-0> at 0
+    [    0.103531] SCSI subsystem initialized
+    [    0.105482] usbcore: registered new interface driver usbfs
+    [    0.105862] usbcore: registered new interface driver hub
+    [    0.106115] usbcore: registered new device driver usb
+    [    0.106520] registerd cppi-dma Intr @ IRQ 17
+    [    0.106540] Cppi41 Init Done Qmgr-base(d083a000) dma-base(d0838000)
+    [    0.106553] Cppi41 Init Done
+    [    0.118795] omap_i2c omap_i2c.1: bus 1 rev4.0 at 100 kHz
+    [    0.121120] Advanced Linux Sound Architecture Driver Version 1.0.24.
+    [    0.121979] Switching to clocksource gp timer
+    [    0.128709] Switched to NOHz mode on CPU #0
+    [    0.145373] musb-hdrc: version 6.0, ?dma?, otg (peripheral+host)
+    [    0.145594] musb-hdrc musb-hdrc.0: dma type: dma-cppi41
+    [    0.146916] musb-hdrc musb-hdrc.0: USB OTG mode controller at d080a000 using DMA, IRQ 18
+    [    0.147116] musb-hdrc musb-hdrc.1: dma type: dma-cppi41
+    [    0.148320] musb-hdrc musb-hdrc.1: USB OTG mode controller at d080c800 using DMA, IRQ 19
+    [    0.148806] NET: Registered protocol family 2
+    [    0.149045] IP route cache hash table entries: 2048 (order: 1, 8192 bytes)
+    [    0.149418] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+    [    0.149640] TCP bind hash table entries: 8192 (order: 3, 32768 bytes)
+    [    0.149775] TCP: Hash tables configured (established 8192 bind 8192)
+    [    0.149792] TCP reno registered
+    [    0.149809] UDP hash table entries: 256 (order: 0, 4096 bytes)
+    [    0.149842] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+    [    0.150080] NET: Registered protocol family 1
+    [    0.150402] RPC: Registered named UNIX socket transport module.
+    [    0.150420] RPC: Registered udp transport module.
+    [    0.150433] RPC: Registered tcp transport module.
+    [    0.150445] RPC: Registered tcp NFSv4.1 backchannel transport module.
+    [    0.150692] NetWinder Floating Point Emulator V0.97 (double precision)
+    [    0.150775] omap_init_opp_table: no hwmod or odev for iva, [8] cannot add OPPs.
+    [    0.164304] msgmni has been set to 497
+    [    0.165210] io scheduler noop registered
+    [    0.165230] io scheduler deadline registered
+    [    0.165308] io scheduler cfq registered (default)
+    [    0.166327] Could not set LED4 to fully on
+    [    0.168307] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+    [    0.170569] omap_uart.0: ttyO0 at MMIO 0x44e09000 (irq = 72) is a OMAP UART0
+    [    0.653381] console [ttyO0] enabled
+    [    0.657815] omap_uart.1: ttyO1 at MMIO 0x48022000 (irq = 73) is a OMAP UART1
+    [    0.665804] omap_uart.2: ttyO2 at MMIO 0x48024000 (irq = 74) is a OMAP UART2
+    [    0.673717] omap_uart.3: ttyO3 at MMIO 0x481a6000 (irq = 44) is a OMAP UART3
+    [    0.681558] omap_uart.4: ttyO4 at MMIO 0x481a8000 (irq = 45) is a OMAP UART4
+    [    0.689457] omap_uart.5: ttyO5 at MMIO 0x481aa000 (irq = 46) is a OMAP UART5
+    [    0.709267] brd: module loaded
+    [    0.719218] loop: module loaded
+    [    0.722687] at24 1-0051: 32768 byte 24c256 EEPROM, writable, 64 bytes/write
+    [    0.782032] No daughter card found
+    [    0.785677] at24 1-0050: 32768 byte 24c256 EEPROM, writable, 64 bytes/write
+    [    0.800973] Board name: A335BONE
+    [    0.804386] Board version: 00A3
+    [    0.807686] The board is a AM335x Beaglebone.
+    [    0.813485] da8xx_lcdc da8xx_lcdc.0: GLCD: Found 1024x768@60 panel
+    [    0.838625] Console: switching to colour frame buffer device 128x48
+    [    0.855088]  omap_i2c.3: alias fck already exists
+    [    0.872081] omap_i2c omap_i2c.3: bus 3 rev4.0 at 100 kHz
+    [    0.878425]  omap_hsmmc.0: alias fck already exists
+    [    0.884162] _omap_mux_get_by_name: Could not find signal leds-gpio
+    [    0.942053] davinci_mdio davinci_mdio.0: davinci mdio revision 1.6
+    [    0.948564] davinci_mdio davinci_mdio.0: detected phy mask fffffffe
+    [    0.955916] davinci_mdio.0: probed
+    [    0.959503] davinci_mdio davinci_mdio.0: phy[0]: device 0:00, driver SMSC LAN8710/LAN8720
+    [    0.968960] usbcore: registered new interface driver cdc_ether
+    [    0.975353] usbcore: registered new interface driver cdc_subset
+    [    0.981632] Initializing USB Mass Storage driver...
+    [    0.987031] usbcore: registered new interface driver usb-storage
+    [    0.993376] USB Mass Storage support registered.
+    [    0.998289] musb-hdrc musb-hdrc.1: MUSB HDRC host driver
+    [    1.004041] musb-hdrc musb-hdrc.1: new USB bus registered, assigned bus number 1
+    [    1.011961] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+    [    1.019133] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+    [    1.026757] usb usb1: Product: MUSB HDRC host driver
+    [    1.031978] usb usb1: Manufacturer: Linux 3.1.0 musb-hcd
+    [    1.037576] usb usb1: SerialNumber: musb-hdrc.1
+    [    1.043650] hub 1-0:1.0: USB hub found
+    [    1.047620] hub 1-0:1.0: 1 port detected
+    [    1.053260] mousedev: PS/2 mouse device common for all mice
+    [    1.059791] dev addr = c04bd3f8
+    [    1.063143] pdev addr = c04bd3f0
+    [    1.067524] omap_rtc omap_rtc: rtc core: registered omap_rtc as rtc0
+    [    1.074287] omap_rtc: already running
+    [    1.078381] i2c /dev entries driver
+    [    1.083792] OMAP Watchdog Timer Rev 0x01: initial timeout 60 sec
+    [    1.094472] usbcore: registered new interface driver usbhid
+    [    1.100338] usbhid: USB HID core driver
+    [    1.105619] usbcore: registered new interface driver snd-usb-audio
+    [    1.114148] ALSA device list:
+    [    1.117272]   No soundcards found.
+    [    1.120855] nf_conntrack version 0.5.0 (3979 buckets, 15916 max)
+    [    1.127826] ip_tables: (C) 2000-2006 Netfilter Core Team
+    [    1.133600] TCP cubic registered
+    [    1.136999] NET: Registered protocol family 17
+    [    1.141735] Registering the dns_resolver key type
+    [    1.146802] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+    [    1.154895] ThumbEE CPU extension supported.
+    [    1.160292] omap2_set_init_voltage: unable to get clk dpll1_ck
+    [    1.166477] omap2_set_init_voltage: unable to set vdd_mpu_iva
+    [    1.172550] omap2_set_init_voltage: unable to get clk l3_ick
+    [    1.178505] omap2_set_init_voltage: unable to set vdd_core
+    [    1.189353] Detected MACID=d4:94:a1:2b:c1:40
+    [    1.195560] omap_rtc omap_rtc: setting system clock to 2000-01-01 00:00:53 UTC (946684853)
+    [    1.205037] Waiting for root device /dev/mmcblk0p2...
+    [    1.243172] mmc0: host does not support reading read-only switch. assuming write-enable.
+    [    1.254226] mmc0: new high speed SDHC card at address 1234
+    [    1.260775] mmcblk0: mmc0:1234 SA04G 3.63 GiB 
+    [    1.268172]  mmcblk0: p1 p2
+    [    1.315697] VFS: Mounted root (ext2 filesystem) readonly on device 179:2.
+    [    1.325247] devtmpfs: mounted
+    [    1.328776] Freeing init memory: 192K
+    Starting logging: OK
+    Starting mdev...
+    Initializing random number generator... read-only file system detected...done
+    Starting network...
+    
+    
+    Welcome to Buildroot
+    
+    beaglebone login: root
+    # ps
+    PID   USER     COMMAND
+        1 root     init
+        2 root     [kthreadd]
+        3 root     [ksoftirqd/0]
+        4 root     [kworker/0:0]
+        5 root     [kworker/u:0]
+        6 root     [rcu_kthread]
+        7 root     [khelper]
+        8 root     [kdevtmpfs]
+        9 root     [netns]
+       10 root     [kworker/u:1]
+       41 root     [irq/72-serial i]
+       43 root     [irq/73-serial i]
+       45 root     [irq/74-serial i]
+       47 root     [irq/44-serial i]
+       49 root     [irq/45-serial i]
+       51 root     [irq/46-serial i]
+      193 root     [sync_supers]
+      195 root     [bdi-default]
+      197 root     [kblockd]
+      205 root     [omap2_mcspi]
+      216 root     [khubd]
+      322 root     [musb-hdrc.0]
+      325 root     [musb-hdrc.1]
+      327 root     [rpciod]
+      329 root     [kworker/0:1]
+      334 root     [kswapd0]
+      335 root     [fsnotify_mark]
+      336 root     [nfsiod]
+      337 root     [crypto]
+      450 root     [kpsmoused]
+      463 root     [kworker/u:2]
+      491 root     [mmcqd/0]
+      504 root     /sbin/syslogd -m 0
+      506 root     /sbin/klogd
+      526 root     -sh
+      530 root     ps
+    # ifconfig
+    lo        Link encap:Local Loopback  
+              inet addr:127.0.0.1  Mask:255.0.0.0
+              UP LOOPBACK RUNNING  MTU:16436  Metric:1
+              RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:0 
+              RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+    
+    # ps aux
+    PID   USER     COMMAND
+        1 root     init
+        2 root     [kthreadd]
+        3 root     [ksoftirqd/0]
+        4 root     [kworker/0:0]
+        5 root     [kworker/u:0]
+        6 root     [rcu_kthread]
+        7 root     [khelper]
+        8 root     [kdevtmpfs]
+        9 root     [netns]
+       10 root     [kworker/u:1]
+       41 root     [irq/72-serial i]
+       43 root     [irq/73-serial i]
+       45 root     [irq/74-serial i]
+       47 root     [irq/44-serial i]
+       49 root     [irq/45-serial i]
+       51 root     [irq/46-serial i]
+      193 root     [sync_supers]
+      195 root     [bdi-default]
+      197 root     [kblockd]
+      205 root     [omap2_mcspi]
+      216 root     [khubd]
+      322 root     [musb-hdrc.0]
+      325 root     [musb-hdrc.1]
+      327 root     [rpciod]
+      329 root     [kworker/0:1]
+      334 root     [kswapd0]
+      335 root     [fsnotify_mark]
+      336 root     [nfsiod]
+      337 root     [crypto]
+      450 root     [kpsmoused]
+      463 root     [kworker/u:2]
+      491 root     [mmcqd/0]
+      504 root     /sbin/syslogd -m 0
+      506 root     /sbin/klogd
+      526 root     -sh
+      532 root     ps aux
+    # ps aux
+    PID   USER     COMMAND
+        1 root     init
+        2 root     [kthreadd]
+        3 root     [ksoftirqd/0]
+        4 root     [kworker/0:0]
+        5 root     [kworker/u:0]
+        6 root     [rcu_kthread]
+        7 root     [khelper]
+        8 root     [kdevtmpfs]
+        9 root     [netns]
+       10 root     [kworker/u:1]
+       41 root     [irq/72-serial i]
+       43 root     [irq/73-serial i]
+       45 root     [irq/74-serial i]
+       47 root     [irq/44-serial i]
+       49 root     [irq/45-serial i]
+       51 root     [irq/46-serial i]
+      193 root     [sync_supers]
+      195 root     [bdi-default]
+      197 root     [kblockd]
+      205 root     [omap2_mcspi]
+      216 root     [khubd]
+      322 root     [musb-hdrc.0]
+      325 root     [musb-hdrc.1]
+      327 root     [rpciod]
+      329 root     [kworker/0:1]
+      334 root     [kswapd0]
+      335 root     [fsnotify_mark]
+      336 root     [nfsiod]
+      337 root     [crypto]
+      450 root     [kpsmoused]
+      463 root     [kworker/u:2]
+      491 root     [mmcqd/0]
+      504 root     /sbin/syslogd -m 0
+      506 root     /sbin/klogd
+      526 root     -sh
+      533 root     ps aux
+    # ls
+    # mount
+    rootfs on / type rootfs (rw)
+    /dev/root on / type ext2 (ro,relatime)
+    devtmpfs on /dev type devtmpfs (rw,relatime,size=127352k,nr_inodes=31838,mode=755)
+    proc on /proc type proc (rw,relatime)
+    devpts on /dev/pts type devpts (rw,relatime,gid=5,mode=620)
+    tmpfs on /dev/shm type tmpfs (rw,relatime,mode=777)
+    tmpfs on /tmp type tmpfs (rw,relatime)
+    sysfs on /sys type sysfs (rw,relatime)
+    # help
+    -sh: help: not found
+    # bus
+    # busybox [J
+    BusyBox v1.19.3 (2012-02-01 14:20:32 GMT) multi-call binary.
+    Copyright (C) 1998-2011 Erik Andersen, Rob Landley, Denys Vlasenko
+    and others. Licensed under GPLv2.
+    See source distribution for full notice.
+    
+    Usage: busybox [function] [arguments]...
+       or: busybox --list[-full]
+       or: function [arguments]...
+    
+    	BusyBox is a multi-call binary that combines many common Unix
+    	utilities into a single executable.  Most people will create a
+    	link to busybox for each function they wish to use and BusyBox
+    	will act like whatever it was invoked as.
+    
+    Currently defined functions:
+    	[, [[, addgroup, adduser, ar, arping, ash, awk, basename, blkid,
+    	bunzip2, bzcat, cat, catv, chattr, chgrp, chmod, chown, chroot, chrt,
+    	chvt, cksum, clear, cmp, cp, cpio, crond, crontab, cut, date, dc, dd,
+    	deallocvt, delgroup, deluser, devmem, df, diff, dirname, dmesg, dnsd,
+    	dnsdomainname, dos2unix, du, dumpkmap, echo, egrep, eject, env,
+    	ether-wake, expr, false, fdflush, fdformat, fgrep, find, fold, free,
+    	freeramdisk, fsck, fuser, getopt, getty, grep, gunzip, gzip, halt,
+    	hdparm, head, hexdump, hostid, hostname, hwclock, id, ifconfig, ifdown,
+    	ifup, inetd, init, insmod, install, ip, ipaddr, ipcrm, ipcs, iplink,
+    	iproute, iprule, iptunnel, kill, killall, killall5, klogd, last, less,
+    	linux32, linux64, linuxrc, ln, loadfont, loadkmap, logger, login,
+    	logname, losetup, ls, lsattr, lsmod, lspci, lsusb, lzcat, lzma,
+    	makedevs, md5sum, mdev, mesg, microcom, mkdir, mkfifo, mknod, mkswap,
+    	mktemp, modprobe, more, mount, mountpoint, mt, mv, nameif, netstat,
+    	nice, nohup, nslookup, od, openvt, passwd, patch, pidof, ping,
+    	pipe_progress, pivot_root, poweroff, printenv, printf, ps, pwd, rdate,
+    	readlink, readprofile, realpath, reboot, renice, reset, resize, rm,
+    	rmdir, rmmod, route, run-parts, runlevel, sed, seq, setarch,
+    	setconsole, setkeycodes, setlogcons, setserial, setsid, sh, sha1sum,
+    	sha256sum, sha512sum, sleep, sort, start-stop-daemon, strings, stty,
+    	su, sulogin, swapoff, swapon, switch_root, sync, sysctl, syslogd, tail,
+    	tar, tee, telnet, test, tftp, time, top, touch, tr, traceroute, true,
+    	tty, udhcpc, umount, uname, uniq, unix2dos, unlzma, unxz, unzip,
+    	uptime, usleep, uudecode, uuencode, vconfig, vi, vlock, watch,
+    	watchdog, wc, wget, which, who, whoami, xargs, xz, xzcat, yes, zcat
+    
+    # ifconfig
+    lo        Link encap:Local Loopback  
+              inet addr:127.0.0.1  Mask:255.0.0.0
+              UP LOOPBACK RUNNING  MTU:16436  Metric:1
+              RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:0 
+              RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+    
+    # 
+    # ifconfig[J -a
+    eth0      Link encap:Ethernet  HWaddr D4:94:A1:2B:C1:40  
+              BROADCAST MULTICAST  MTU:1500  Metric:1
+              RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:1000 
+              RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+              Interrupt:40 
+    
+    lo        Link encap:Local Loopback  
+              inet addr:127.0.0.1  Mask:255.0.0.0
+              UP LOOPBACK RUNNING  MTU:16436  Metric:1
+              RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:0 
+              RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+    
+    # 
+    # 
+    # 
+    # 
+    
+    Welcome to Buildroot
+    
+    beaglebone login: root
+    # 
+    # 
+    # 
+    # cat /pro
+    # cat /proc/[Jcpu
+    # cat /proc/cpu[J
+    cat: read error: Is a directory
+    # 
+    # cat /proc/cpu[Jin
+    # cat /proc/cpuinfo [J
+    Processor	: ARMv7 Processor rev 2 (v7l)
+    BogoMIPS	: 498.89
+    Features	: swp half thumb fastmult vfp edsp thumbee neon vfpv3 tls 
+    CPU implementer	: 0x41
+    CPU architecture: 7
+    CPU variant	: 0x3
+    CPU part	: 0xc08
+    CPU revision	: 2
+    
+    Hardware	: am335xevm
+    Revision	: 0000
+    Serial		: 0000000000000000
+    # 
+    # cat /proc/cpuinfo [J
+    Processor	: ARMv7 Processor rev 2 (v7l)
+    BogoMIPS	: 498.89
+    Features	: swp half thumb fastmult vfp edsp thumbee neon vfpv3 tls 
+    CPU implementer	: 0x41
+    CPU architecture: 7
+    CPU variant	: 0x3
+    CPU part	: 0xc08
+    CPU revision	: 2
+    
+    Hardware	: am335xevm
+    Revision	: 0000
+    Serial		: 0000000000000000
+    # 
+    
+    Welcome to Buildroot
+    
+    beaglebone login: 
+    
+    Welcome to Buildroot
+    
+    beaglebone login: 
+    
+    Welcome to Buildroot
+    
+    beaglebone login: 
+    
+    Welcome to Buildroot
+    
+    beaglebone login: 
+    
+    Welcome to Buildroot
+    
+    beaglebone login: 
+    
+    Welcome to Buildroot
+    
+    beaglebone login: 
+    
+    Welcome to Buildroot
+    
+    beaglebone login: 
+    
+    Welcome to Buildroot
+    
+    beaglebone login: 
+    
+    Welcome to Buildroot
+    
+    beaglebone login: root    root
+    # ci
+    -sh: ci: not found
+    # os[J[Jps
+    PID   USER     COMMAND
+        1 root     init
+        2 root     [kthreadd]
+        3 root     [ksoftirqd/0]
+        4 root     [kworker/0:0]
+        5 root     [kworker/u:0]
+        6 root     [rcu_kthread]
+        7 root     [khelper]
+        8 root     [kdevtmpfs]
+        9 root     [netns]
+       10 root     [kworker/u:1]
+       41 root     [irq/72-serial i]
+       43 root     [irq/73-serial i]
+       45 root     [irq/74-serial i]
+       47 root     [irq/44-serial i]
+       49 root     [irq/45-serial i]
+       51 root     [irq/46-serial i]
+      193 root     [sync_supers]
+      195 root     [bdi-default]
+      197 root     [kblockd]
+      205 root     [omap2_mcspi]
+      216 root     [khubd]
+      322 root     [musb-hdrc.0]
+      325 root     [musb-hdrc.1]
+      327 root     [rpciod]
+      329 root     [kworker/0:1]
+      334 root     [kswapd0]
+      335 root     [fsnotify_mark]
+      336 root     [nfsiod]
+      337 root     [crypto]
+      450 root     [kpsmoused]
+      463 root     [kworker/u:2]
+      491 root     [mmcqd/0]
+      504 root     /sbin/syslogd -m 0
+      506 root     /sbin/klogd
+      547 root     -sh
+      551 root     ps
+    # reboot
+    # 
+    The system is going down NOW!
+    
+    Sent SIGTERM to all processes
+    
+    Sent SIGKILL to all processes
+    
+    Requesting system reboot
+    [   58.419204] Restarting system.
+    
+    U-Boot SPL 2011.09-00000-g97bfad5 (Feb 01 2012 - 14:21:22)
+    Texas Instruments Revision detection unimplemented
+    No AC power, disabling frequency switch
+    OMAP SD/MMC: 0
+    reading u-boot.img
+    reading u-boot.img
+    
+    
+    U-Boot 2011.09-00000-g97bfad5 (Feb 01 2012 - 14:21:22)
+    
+    I2C:   ready
+    DRAM:  256 MiB
+    No daughter card present
+    NAND:  HW ECC Hamming Code selected
+    nand_get_flash_type: unknown NAND device: Manufacturer ID: 0x11, Chip ID: 0x11
+    No NAND device found!!!
+    0 MiB
+    MMC:   OMAP SD/MMC: 0
+    *** Warning - readenv() failed, using default environment
+    
+    Net:   cpsw
+    Hit any key to stop autoboot:  1  0 
+    SD/MMC found on device 0
+    reading uEnv.txt
+    
+    ** Unable to read "uEnv.txt" from mmc 0:1 **
+    reading uImage
+    
+    2525344 bytes read
+    ## Booting kernel from Legacy Image at 80007fc0 ...
+       Image Name:   Linux-3.1.0
+       Image Type:   ARM Linux Kernel Image (uncompressed)
+       Data Size:    2525280 Bytes = 2.4 MiB
+       Load Address: 80008000
+       Entry Point:  80008000
+       Verifying Checksum ... OK
+       XIP Kernel Image ... OK
+    OK
+    
+    Starting kernel ...
+    
+    Uncompressing Linux... done, booting the kernel.
+    [    0.000000] Linux version 3.1.0 (zoobab@ci) (gcc version 4.5.3 (Buildroot 2012.02-git-g97bfad5) ) #1 Wed Feb 1 14:34:47 GMT 2012
+    [    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c53c7f
+    [    0.000000] CPU: VIPT nonaliasing data cache, VIPT aliasing instruction cache
+    [    0.000000] Machine: am335xevm
+    [    0.000000] Memory policy: ECC disabled, Data cache writeback
+    [    0.000000] AM335X ES1.0 (neon )
+    [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 65024
+    [    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/mmcblk0p2 ro rootfstype=ext2 rootwait ip=none
+    [    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+    [    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+    [    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+    [    0.000000] Memory: 256MB = 256MB total
+    [    0.000000] Memory: 254704k/254704k available, 7440k reserved, 0K highmem
+    [    0.000000] Virtual kernel memory layout:
+    [    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    [    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    [    0.000000]     DMA     : 0xffa00000 - 0xffe00000   (   4 MB)
+    [    0.000000]     vmalloc : 0xd0800000 - 0xf8000000   ( 632 MB)
+    [    0.000000]     lowmem  : 0xc0000000 - 0xd0000000   ( 256 MB)
+    [    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+    [    0.000000]       .text : 0xc0008000 - 0xc0471000   (4516 kB)
+    [    0.000000]       .init : 0xc0471000 - 0xc04a1000   ( 192 kB)
+    [    0.000000]       .data : 0xc04a2000 - 0xc04e58e0   ( 271 kB)
+    [    0.000000]        .bss : 0xc04e5904 - 0xc0508b98   ( 141 kB)
+    [    0.000000] NR_IRQS:396
+    [    0.000000] IRQ: Found an INTC at 0xfa200000 (revision 5.0) with 128 interrupts
+    [    0.000000] Total of 128 interrupts on 1 active controller
+    [    0.000000] OMAP clockevent source: GPTIMER1 at 24000000 Hz
+    [    0.000000] OMAP clocksource: GPTIMER2 at 24000000 Hz
+    [    0.000000] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 178956ms
+    [    0.000000] Console: colour dummy device 80x30
+    [    0.000239] Calibrating delay loop... 498.89 BogoMIPS (lpj=2494464)
+    [    0.058635] pid_max: default: 32768 minimum: 301
+    [    0.058843] Mount-cache hash table entries: 512
+    [    0.059281] CPU: Testing write buffer coherency: ok
+    [    0.060279] devtmpfs: initialized
+    [    0.065105] print_constraints: dummy: 
+    [    0.065525] NET: Registered protocol family 16
+    [    0.065903] GPMC revision 6.0
+    [    0.068371] OMAP GPIO hardware version 0.1
+    [    0.071094] omap_l3_smx omap_l3_smx.0: couldn't find resource
+    [    0.071453] omap_mux_init: Add partition: #1: core, flags: 0
+    [    0.075052]  omap_i2c.1: alias fck already exists
+    [    0.076851]  omap2_mcspi.1: alias fck already exists
+    [    0.077132]  omap2_mcspi.2: alias fck already exists
+    [    0.101466] bio: create slab <bio-0> at 0
+    [    0.103527] SCSI subsystem initialized
+    [    0.105476] usbcore: registered new interface driver usbfs
+    [    0.105853] usbcore: registered new interface driver hub
+    [    0.106107] usbcore: registered new device driver usb
+    [    0.106507] registerd cppi-dma Intr @ IRQ 17
+    [    0.106527] Cppi41 Init Done Qmgr-base(d083a000) dma-base(d0838000)
+    [    0.106540] Cppi41 Init Done
+    [    0.118795] omap_i2c omap_i2c.1: bus 1 rev4.0 at 100 kHz
+    [    0.121118] Advanced Linux Sound Architecture Driver Version 1.0.24.
+    [    0.121965] Switching to clocksource gp timer
+    [    0.128706] Switched to NOHz mode on CPU #0
+    [    0.145368] musb-hdrc: version 6.0, ?dma?, otg (peripheral+host)
+    [    0.145588] musb-hdrc musb-hdrc.0: dma type: dma-cppi41
+    [    0.146910] musb-hdrc musb-hdrc.0: USB OTG mode controller at d080a000 using DMA, IRQ 18
+    [    0.147116] musb-hdrc musb-hdrc.1: dma type: dma-cppi41
+    [    0.148330] musb-hdrc musb-hdrc.1: USB OTG mode controller at d080c800 using DMA, IRQ 19
+    [    0.148813] NET: Registered protocol family 2
+    [    0.149055] IP route cache hash table entries: 2048 (order: 1, 8192 bytes)
+    [    0.149433] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+    [    0.149656] TCP bind hash table entries: 8192 (order: 3, 32768 bytes)
+    [    0.149792] TCP: Hash tables configured (established 8192 bind 8192)
+    [    0.149809] TCP reno registered
+    [    0.149826] UDP hash table entries: 256 (order: 0, 4096 bytes)
+    [    0.149858] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+    [    0.150102] NET: Registered protocol family 1
+    [    0.150427] RPC: Registered named UNIX socket transport module.
+    [    0.150445] RPC: Registered udp transport module.
+    [    0.150458] RPC: Registered tcp transport module.
+    [    0.150471] RPC: Registered tcp NFSv4.1 backchannel transport module.
+    [    0.150719] NetWinder Floating Point Emulator V0.97 (double precision)
+    [    0.150801] omap_init_opp_table: no hwmod or odev for iva, [8] cannot add OPPs.
+    [    0.164333] msgmni has been set to 497
+    [    0.165236] io scheduler noop registered
+    [    0.165255] io scheduler deadline registered
+    [    0.165330] io scheduler cfq registered (default)
+    [    0.166367] Could not set LED4 to fully on
+    [    0.168356] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+    [    0.170628] omap_uart.0: ttyO0 at MMIO 0x44e09000 (irq = 72) is a OMAP UART0
+    [    0.653435] console [ttyO0] enabled
+    [    0.657874] omap_uart.1: ttyO1 at MMIO 0x48022000 (irq = 73) is a OMAP UART1
+    [    0.665872] omap_uart.2: ttyO2 at MMIO 0x48024000 (irq = 74) is a OMAP UART2
+    [    0.673783] omap_uart.3: ttyO3 at MMIO 0x481a6000 (irq = 44) is a OMAP UART3
+    [    0.681625] omap_uart.4: ttyO4 at MMIO 0x481a8000 (irq = 45) is a OMAP UART4
+    [    0.689519] omap_uart.5: ttyO5 at MMIO 0x481aa000 (irq = 46) is a OMAP UART5
+    [    0.709295] brd: module loaded
+    [    0.719260] loop: module loaded
+    [    0.722736] at24 1-0051: 32768 byte 24c256 EEPROM, writable, 64 bytes/write
+    [    0.782018] No daughter card found
+    [    0.785663] at24 1-0050: 32768 byte 24c256 EEPROM, writable, 64 bytes/write
+    [    0.800957] Board name: A335BONE
+    [    0.804370] Board version: 00A3
+    [    0.807670] The board is a AM335x Beaglebone.
+    [    0.813478] da8xx_lcdc da8xx_lcdc.0: GLCD: Found 1024x768@60 panel
+    [    0.838622] Console: switching to colour frame buffer device 128x48
+    [    0.855090]  omap_i2c.3: alias fck already exists
+    [    0.872069] omap_i2c omap_i2c.3: bus 3 rev4.0 at 100 kHz
+    [    0.878416]  omap_hsmmc.0: alias fck already exists
+    [    0.884147] _omap_mux_get_by_name: Could not find signal leds-gpio
+    [    0.942035] davinci_mdio davinci_mdio.0: davinci mdio revision 1.6
+    [    0.948547] davinci_mdio davinci_mdio.0: detected phy mask fffffffe
+    [    0.955864] davinci_mdio.0: probed
+    [    0.959446] davinci_mdio davinci_mdio.0: phy[0]: device 0:00, driver SMSC LAN8710/LAN8720
+    [    0.968917] usbcore: registered new interface driver cdc_ether
+    [    0.975319] usbcore: registered new interface driver cdc_subset
+    [    0.981598] Initializing USB Mass Storage driver...
+    [    0.986990] usbcore: registered new interface driver usb-storage
+    [    0.993334] USB Mass Storage support registered.
+    [    0.998247] musb-hdrc musb-hdrc.1: MUSB HDRC host driver
+    [    1.004000] musb-hdrc musb-hdrc.1: new USB bus registered, assigned bus number 1
+    [    1.011921] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+    [    1.019092] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+    [    1.026714] usb usb1: Product: MUSB HDRC host driver
+    [    1.031935] usb usb1: Manufacturer: Linux 3.1.0 musb-hcd
+    [    1.037533] usb usb1: SerialNumber: musb-hdrc.1
+    [    1.043619] hub 1-0:1.0: USB hub found
+    [    1.047591] hub 1-0:1.0: 1 port detected
+    [    1.053234] mousedev: PS/2 mouse device common for all mice
+    [    1.059776] dev addr = c04bd3f8
+    [    1.063132] pdev addr = c04bd3f0
+    [    1.067512] omap_rtc omap_rtc: rtc core: registered omap_rtc as rtc0
+    [    1.074278] omap_rtc: already running
+    [    1.078379] i2c /dev entries driver
+    [    1.083791] OMAP Watchdog Timer Rev 0x01: initial timeout 60 sec
+    [    1.094472] usbcore: registered new interface driver usbhid
+    [    1.100335] usbhid: USB HID core driver
+    [    1.105618] usbcore: registered new interface driver snd-usb-audio
+    [    1.114147] ALSA device list:
+    [    1.117273]   No soundcards found.
+    [    1.120857] nf_conntrack version 0.5.0 (3979 buckets, 15916 max)
+    [    1.127829] ip_tables: (C) 2000-2006 Netfilter Core Team
+    [    1.133604] TCP cubic registered
+    [    1.137002] NET: Registered protocol family 17
+    [    1.141736] Registering the dns_resolver key type
+    [    1.146798] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+    [    1.154886] ThumbEE CPU extension supported.
+    [    1.160278] omap2_set_init_voltage: unable to get clk dpll1_ck
+    [    1.166460] omap2_set_init_voltage: unable to set vdd_mpu_iva
+    [    1.172533] omap2_set_init_voltage: unable to get clk l3_ick
+    [    1.178487] omap2_set_init_voltage: unable to set vdd_core
+    [    1.189336] Detected MACID=d4:94:a1:2b:c1:40
+    [    1.195546] omap_rtc omap_rtc: setting system clock to 2000-01-01 00:01:55 UTC (946684915)
+    [    1.205019] Waiting for root device /dev/mmcblk0p2...
+    [    1.243161] mmc0: host does not support reading read-only switch. assuming write-enable.
+    [    1.254213] mmc0: new high speed SDHC card at address 1234
+    [    1.260747] mmcblk0: mmc0:1234 SA04G 3.63 GiB 
+    [    1.268135]  mmcblk0: p1 p2
+    [    1.315692] VFS: Mounted root (ext2 filesystem) readonly on device 179:2.
+    [    1.325245] devtmpfs: mounted
+    [    1.328777] Freeing init memory: 192K
+    Starting logging: OK
+    Starting mdev...
+    Initializing random number generator... read-only file system detected...done
+    Starting network...
+    
+    
+    Welcome to Buildroot
+    
+    beaglebone login: root
+    # ps
+    PID   USER     COMMAND
+        1 root     init
+        2 root     [kthreadd]
+        3 root     [ksoftirqd/0]
+        4 root     [kworker/0:0]
+        5 root     [kworker/u:0]
+        6 root     [rcu_kthread]
+        7 root     [khelper]
+        8 root     [kdevtmpfs]
+        9 root     [netns]
+       10 root     [kworker/u:1]
+       41 root     [irq/72-serial i]
+       43 root     [irq/73-serial i]
+       45 root     [irq/74-serial i]
+       47 root     [irq/44-serial i]
+       49 root     [irq/45-serial i]
+       51 root     [irq/46-serial i]
+      193 root     [sync_supers]
+      195 root     [bdi-default]
+      197 root     [kblockd]
+      205 root     [omap2_mcspi]
+      216 root     [khubd]
+      322 root     [musb-hdrc.0]
+      325 root     [musb-hdrc.1]
+      327 root     [rpciod]
+      329 root     [kworker/0:1]
+      334 root     [kswapd0]
+      335 root     [fsnotify_mark]
+      336 root     [nfsiod]
+      337 root     [crypto]
+      450 root     [kpsmoused]
+      463 root     [kworker/u:2]
+      491 root     [mmcqd/0]
+      504 root     /sbin/syslogd -m 0
+      506 root     /sbin/klogd
+      526 root     -sh
+      530 root     ps
+    # 
+    
+    Welcome to Buildroot
+
+
+# Sabayon
+
+
+Install sabayon and crossdev.
+
+# Links
+
+
+* [http://wiki.sabayon.org/index.php?title=Hitchhikers_Guide_to_the_BeagleBone_(and_ARMv7a) Sabayon Wiki: Hitchhikers Guide to the BeagleBone (and_ARMv7a)]

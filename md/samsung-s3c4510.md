@@ -1,0 +1,5 @@
+# Links
+
+
+* <http://x226.org/ap.html>  
+* <http://replay.web.archive.org/20070429060629/http>  ://www.seattlewireless.net/SamSung4510

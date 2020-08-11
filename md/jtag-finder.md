@@ -1,0 +1,14 @@
+# Code
+
+
+The hunz.org server was down, so I put it [here](http://zoobab.wikidot.com/local--files/jtag-finder/jtagscan.tar.bz2).
+
+# Arduino
+
+
+Porting the code to Arduino ATMega168?
+
+# Website
+
+
+<http://www.c3a.de/wiki/index.php/JTAG_Finder>  

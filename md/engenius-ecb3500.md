@@ -1,0 +1,152 @@
+# Description
+
+
+An access point with 600mW transmit power, running Atheros SoC inside, with two 5 db antennas with RP-TNC connectors.
+
+[[=image engenius_senao_ecb-3500_2.jpg]]
+[[=image engenius_senao_ecb-3500_wifi_-_dd-wrt_logo_500x375.jpg]]
+
+# Serial console
+
+
+
+    $ screen /dev/ttyUSB0 9600
+    +Ethernet eth0: MAC address 00:02:6f:58:39:7c
+    IP: 192.168.1.1/255.255.255.0, Gateway: 0.0.0.0
+    Default server: 0.0.0.0
+    
+    RedBoot(tm) bootstrap and debug environment [ROMRAM]
+    Non-certified release, version 1.1 - built 13:40:18, Jan 22 2009
+    
+    Copyright (C) 2000, 2001, 2002, 2003, 2004 Red Hat, Inc.
+    
+    Board: ap51
+    RAM: 0x80000000-0x82000000, [0x80040f30-0x80fe1000] available
+    FLASH: 0xa8000000 - 0xa87f0000, 128 blocks of 0x00010000 bytes each.
+    == Executing boot script in 2.000 seconds - enter ^C to abort
+    RedBoot> fis load -l linux
+    too long file.
+    lzma_decode failed. res=1
+    RedBoot> exec
+    Now booting linux kernel:
+     Base address 0x80030000 Entry 0x80041000
+     Cmdline :
+    +Ethernet eth0: MAC address 00:02:6f:58:39:7c
+    IP: 192.168.1.1/255.255.255.0, Gateway: 0.0.0.0
+    Default server: 0.0.0.0
+    
+    RedBoot(tm) bootstrap and debug environment [ROMRAM]
+    Non-certified release, version 1.1 - built 13:40:18, Jan 22 2009
+    
+    Copyright (C) 2000, 2001, 2002, 2003, 2004 Red Hat, Inc.
+    
+    Board: ap51
+    RAM: 0x80000000-0x82000000, [0x80040f30-0x80fe1000] available
+    FLASH: 0xa8000000 - 0xa87f0000, 128 blocks of 0x00010000 bytes each.
+    == Executing boot script in 2.000 seconds - enter ^C to abort
+
+
+# Reflashing
+
+
+## With ap51 tool
+
+
+With the ap51 tool (OpenWRT rootfs and vmlinux, backfire release):
+
+
+    root@buzek /home/zoobab/soft/fonera [11]# ./ap51-flash-1.0-42 eth0 openwrt-atheros-root.jffs2-64k openwrt-atheros-vmlinux.lzma
+    Reading rootfs file openwrt-atheros-root.jffs2-64k with 2359296 bytes...
+    Reading kernel file openwrt-atheros-vmlinux.lzma with 786432 bytes...
+    rootfs(0x006e0000) + kernel(0x000c0000) + nvram(0x00000000) sums up to 0x007a000
+    No packet.
+    No packet.
+    No packet.
+    No packet.
+    No packet.
+    No packet.
+    No packet.
+    No packet.
+    Peer MAC: 00:02:6f:58:39:7c
+    Peer IP : 192.168.1.1
+    Your MAC: 00:ba:be:ca:ff:ee
+    Your IP : 192.168.1.0
+    Setting IP address...
+    Loading rootfs...
+    Sending rootfs, 4608 blocks...
+    Initializing partitions...
+    Rootfs partition size now 0x006f0000
+    Flashing rootfs...
+
+
+## Screenshot
+
+
+[[=image engenius-ecb3500-ap51.png]]
+
+## OpenWRT
+
+
+
+    root@OpenWrt:/# cat /proc/cpuinfo 
+    system type             : Atheros AR2315
+    processor               : 0
+    cpu model               : MIPS 4KEc V6.4
+    BogoMIPS                : 183.50
+    wait instruction        : yes
+    microsecond timers      : yes
+    tlb_entries             : 16
+    extra interrupt vector  : yes
+    hardware watchpoint     : no
+    ASEs implemented        :
+    shadow register sets    : 1
+    core                    : 0
+    VCED exceptions         : not available
+    VCEI exceptions         : not available
+    
+    root@OpenWrt:/# cat /proc/meminfo 
+    MemTotal:          29404 kB
+    MemFree:           20720 kB
+    Buffers:               0 kB
+    Cached:             3748 kB
+    SwapCached:            0 kB
+    Active:             2304 kB
+    Inactive:           2228 kB
+    Active(anon):        836 kB
+    Inactive(anon):        0 kB
+    Active(file):       1468 kB
+    Inactive(file):     2228 kB
+    SwapTotal:             0 kB
+    SwapFree:              0 kB
+    Dirty:                 0 kB
+    Writeback:             0 kB
+    AnonPages:           800 kB
+    Mapped:              768 kB
+    Slab:               2508 kB
+    SReclaimable:        412 kB
+    SUnreclaim:         2096 kB
+    PageTables:          144 kB
+    NFS_Unstable:          0 kB
+    Bounce:                0 kB
+    WritebackTmp:          0 kB
+    CommitLimit:       14700 kB
+    Committed_AS:       2856 kB
+    VmallocTotal:    1048404 kB
+    VmallocUsed:        1416 kB
+    VmallocChunk:    1040264 kB
+    root@OpenWrt:/# cat /proc/version 
+    Linux version 2.6.30.10 (openwrt@wrt1.marcant.net) (gcc version 4.3.3 (GCC) ) #24 Tue Apr 6 14:59:59 CEST 2010
+    root@OpenWrt:/# cat /etc/banner
+    /etc/banner      /etc/banner.rej
+    root@OpenWrt:/# cat /etc/banner
+      _______                     ________        __
+     |       |.-----.-----.-----.|  |  |  |.----.|  |_
+     |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+     |_______||   __|_____|__|__||________||__|  |____|
+              |__| W I R E L E S S   F R E E D O M
+     Backfire (10.03, r20728) --------------------------
+      * 1/3 shot Kahlua    In a shot glass, layer Kahlua 
+      * 1/3 shot Bailey's  on the bottom, then Bailey's, 
+      * 1/3 shot Vodka     then Vodka.
+     ---------------------------------------------------
+    root@OpenWrt:/#

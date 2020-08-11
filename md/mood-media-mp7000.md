@@ -1,0 +1,396 @@
+# Pictures
+
+
+here
+
+# Serial output
+
+
+115200
+
+
+    U-Boot 1.1.2 (Jun  7 2005 - 09:16:44)
+    U-Boot code: C0700000 -> C0718CD0  BSS: -> C071D304
+    CPU: Cirrus Logic <unknown> (ID 0x9213 - Rev. E0)
+    RAM Configuration:
+    Bank #0: c0000000 32 MB
+    Flash:  4 MB
+    *** Warning - bad CRC, using default environment
+    In:    serial
+    Out:   serial
+    Err:   serial
+    Hit any key to stop autoboot:  1 
+    ## Booting image at 00020000 ...
+       Image Name:   Linux Kernel Image
+       Image Type:   ARM Linux Kernel Image (gzip compressed)
+       Data Size:    718308 Bytes = 701.5 kB
+       Load Address: c0008000
+       Entry Point:  c0008000
+       Verifying Checksum ... OK
+       Uncompressing Kernel Image ... OK
+    Starting kernel ...
+    Linux version 2.4.27-vrs1-crus142 (mp7000@DevptMP7000) (gcc version 3.3) #5 ven jun 2 12:22:16 CEST 2006
+    CPU: Arm920Tid(wb) revision 0
+    Machine: edb9312
+    Examining tag list @0xc0000100 ...Ok.
+    parsing command line... ok.
+    bootmem_init... ok.
+    paging_init... On node 0 totalpages: 8192
+    zone(0): 8192 pages.
+    zone(1): 0 pages.
+    zone(2): 0 pages.
+    requesting resources... ok.
+    Kernel command line: root=1f02 console=ttyAM0 mtdparts=phys_mapped_flash:128k(Uboot)ro,1024k(kernel)ro,1024k(cramfs)ro,-(jffs2)
+    Calibrating delay loop... 99.36 BogoMIPS
+    Before waiting loop for hard drive
+    After waiting loop for hard drive
+    Memory: 32MB = 32MB total
+    Memory: 30676KB available (1311K code, 340K data, 44K init)
+    Dentry cache hash table entries: 4096 (order: 3, 32768 bytes)
+    Inode cache hash table entries: 2048 (order: 2, 16384 bytes)
+    Mount cache hash table entries: 512 (order: 0, 4096 bytes)
+    Buffer cache hash table entries: 1024 (order: 0, 4096 bytes)
+    Page-cache hash table entries: 8192 (order: 3, 32768 bytes)
+    CPU: Testing write buffer: pass
+    POSIX conformance testing by UNIFIX
+    Linux NET4.0 for Linux 2.4
+    Based upon Swansea University Computer Society NET3.039
+    Initializing RT netlink socket
+    GPIO port C initialised 
+    GPIO port B initialised 
+    Starting kswapd
+    JFFS2 version 2.1. (C) 2001 Red Hat, Inc., designed by Axis Communications AB.
+    ttyAM0 at MMIO 0xff8c0000 (irq = 52) is a AMBA
+    ttyAM1 at MMIO 0xff8d0000 (irq = 54) is a AMBA
+    ttyAM2 at MMIO 0xff8e0000 (irq = 55) is a AMBA
+    pty: 256 Unix98 ptys configured
+    ep93xx_eth() version: ep93xx_eth.c: V1.0 09/04/2003 Cirrus Logic
+    Dma memory allocated : 1164 @ 0xc287e000
+    ep93xx_ethernet #0 at 0xff010000 IRQ:39 MAC:00:ba:d0:0b:ad:00
+    Uniform Multi-Platform E-IDE driver Revision: 7.00beta4-2.4
+    ide: Assuming 50MHz system bus speed for PIO modes; override with idebus=xx
+    Probing IDE interface ide0...
+    hda: SONY DVD-ROM DDU1615, ATAPI CD/DVD-ROM drive
+    hdb: Maxtor 6L080P0, ATA DISK drive
+    ide0 at 0x800-0x807,0x406 on irq 40
+    hdb: attached ide-disk driver.
+    hdb: host protected area => 1
+    hdb: 160086528 sectors (81964 MB) w/8192KiB Cache, CHS=158816/16/63, UDMA 2 
+    hda: attached ide-cdrom driver.
+    hda: ATAPI 40X DVD-ROM drive, 254kB Cache, UDMA 2 
+    Uniform CD-ROM driver Revision: 3.12
+    Partition check:
+     hdb: hdb1 hdb2
+    SCSI subsystem driver Revision: 1.00
+    EDB9312-NOR:0x00800000 at 0x00000000
+    Unknown command : 0xff
+    Unknown command : 0xff
+     Amd/Fujitsu Extended Query Table v1.1 at 0x0040
+    NOR flash on EDB9312: Swapping erase regions for broken CFI table.
+    number of CFI chips: 1
+    cfi_cmdset_0002: Disabling fast programming due to code brokenness.
+    mtd: Giving out device 0 to NOR flash on EDB9312
+    EDB9312-NOR:using edb9312 partition definition
+    Creating 3 MTD partitions on "NOR flash on EDB9312":
+    0x00000000-0x00120000 : "zImage"
+    mtd: Giving out device 1 to zImage
+    0x00120000-0x00220000 : "CRAMFS"
+    mtd: Giving out device 2 to CRAMFS
+    0x00220000-0x007e0000 : "JFFS2"
+    mtd: Giving out device 3 to JFFS2
+    EDB9312-NOR:no partition info available
+    i2c-core.o: i2c core module version 2.6.1 (20010830)
+    Initialising first I2C bus
+    Initialising second I2C bus
+    usb.c: registered new driver hub
+    host/usb-ohci.c: USB OHCI at membase 0xff020000, IRQ 56
+    usb.c: new USB bus registered, assigned bus number 1
+    hub.c: USB hub found
+    hub.c: 3 ports detected
+    Initializing USB Mass Storage driver...
+    usb.c: registered new driver usb-storage
+    USB Mass Storage support registered.
+    NET4: Linux TCP/IP 1.0 for NET4.0
+    IP Protocols: ICMP, UDP, TCP
+    IP: routing cache hash table of 512 buckets, 4Kbytes
+    TCP: Hash tables configured (established 2048 bind 4096)
+    NET4: Unix domain sockets 1.0/SMP for Linux NET4.0.
+    NetWinder Floating Point Emulator V0.97 (double precision)
+    VFS: Mounted root (cramfs filesystem) readonly.
+    Freeing init memory: 44K
+    init started:  BusyBox v1.00 (2006.06.14-15:05+0000) multi-call binary
+    Using /modules/mood_screen.o
+    U-Boot 1.1.2 (Jun  7 2005 - 09:16:44)
+    U-Boot code: C0700000 -> C0718CD0  BSS: -> C071D304
+    CPU: Cirrus Logic <unknown> (ID 0x9213 - Rev. E0)
+    RAM Configuration:
+    Bank #0: c0000000 32 MB
+    Flash:  4 MB
+    *** Warning - bad CRC, using default environment
+    In:    serial
+    Out:   serial
+    Err:   serial
+    Hit any key to stop autoboot:  1 
+    EDB9312> 
+    EDB9312> <INTERRUPT>
+    EDB9312> <INTERRUPT>
+    EDB9312> <INTERRUPT>
+    EDB9312> <INTERRUPT>
+    EDB9312> <INTERRUPT>
+    EDB9312> <INTERRUPT>
+    EDB9312> <INTERRUPT>
+    EDB9312> help
+    ?       - alias for 'help'
+    autoscr - run script from memory
+    base    - print or set address offset
+    bdinfo  - print Board Info structure
+    boot    - boot default, i.e., run 'bootcmd'
+    bootd   - boot default, i.e., run 'bootcmd'
+    bootm   - boot application image from memory
+    bootp	- boot image via network using BootP/TFTP protocol
+    cmp     - memory compare
+    coninfo - print console devices and information
+    cp      - memory copy
+    crc32   - checksum calculation
+    echo    - echo args to console
+    erase   - erase FLASH memory
+    flinfo  - print FLASH memory information
+    fsinfo	- print information about filesystems
+    fsload	- load binary file from a filesystem image
+    go      - start application at address 'addr'
+    help    - print online help
+    iminfo  - print header information for application image
+    imls    - list all images found in flash
+    itest	- return true/false on integer compare
+    loadb   - load binary file over serial line (kermit mode)
+    loads   - load S-Record file over serial line
+    loop    - infinite loop on address range
+    ls	- list files in a directory (default /)
+    md      - memory display
+    mm      - memory modify (auto-incrementing)
+    mtest   - simple RAM test
+    mw      - memory write (fill)
+    nfs	- boot image via network using NFS protocol
+    nm      - memory modify (constant address)
+    printenv- print environment variables
+    protect - enable or disable FLASH write protection
+    rarpboot- boot image via network using RARP/TFTP protocol
+    reset   - Perform RESET of the CPU
+    run     - run commands in an environment variable
+    saveenv - save environment variables to persistent storage
+    setenv  - set environment variables
+    sleep   - delay execution for some time
+    tftpboot- boot image via network using TFTP protocol
+    version - print monitor version
+    EDB9312> tftpboot
+    *** ERROR: `serverip' not set
+    EDB9312> server
+    help
+    ?       - alias for 'help'
+    autoscr - run script from memory
+    base    - print or set address offset
+    bdinfo  - print Board Info structure
+    boot    - boot default, i.e., run 'bootcmd'
+    bootd   - boot default, i.e., run 'bootcmd'
+    bootm   - boot application image from memory
+    bootp	- boot image via network using BootP/TFTP protocol
+    cmp     - memory compare
+    coninfo - print console devices and information
+    cp      - memory copy
+    crc32   - checksum calculation
+    echo    - echo args to console
+    erase   - erase FLASH memory
+    flinfo  - print FLASH memory information
+    fsinfo	- print information about filesystems
+    fsload	- load binary file from a filesystem image
+    go      - start application at address 'addr'
+    help    - print online help
+    iminfo  - print header information for application image
+    imls    - list all images found in flash
+    itest	- return true/false on integer compare
+    loadb   - load binary file over serial line (kermit mode)
+    loads   - load S-Record file over serial line
+    loop    - infinite loop on address range
+    ls	- list files in a directory (default /)
+    md      - memory display
+    mm      - memory modify (auto-incrementing)
+    mtest   - simple RAM test
+    mw      - memory write (fill)
+    nfs	- boot image via network using NFS protocol
+    nm      - memory modify (constant address)
+    printenv- print environment variables
+    protect - enable or disable FLASH write protection
+    rarpboot- boot image via network using RARP/TFTP protocol
+    reset   - Perform RESET of the CPU
+    run     - run commands in an environment variable
+    saveenv - save environment variables to persistent storage
+    setenv  - set environment variables
+    sleep   - delay execution for some time
+    tftpboot- boot image via network using TFTP protocol
+    version - print monitor version
+    EDB9312> d
+    bdinfo
+    arch_number = 0x000001C3
+    env_t       = 0x00000000
+    boot_params = 0xC0000100
+    DRAM bank   = 0x00000000
+    -> start    = 0xC0000000
+    -> size     = 0x02000000
+    ethaddr     = 08:00:3E:26:0A:5B
+    ip_addr     = 0.0.0.0
+    baudrate    = 115200 bps
+    EDB9312> flinfo
+    Bank # 1: Intel: 28F128J3 (128Mbit)
+      Size: 4 MB in 128 Sectors
+      Sector Start Addresses:
+        00000000      00020000      00040000      00060000      00080000     
+        000A0000      000C0000      000E0000      00100000      00120000     
+        00140000      00160000      00180000      001A0000      001C0000     
+        001E0000      00200000      00220000      00240000      00260000     
+        00280000      002A0000      002C0000      002E0000      00300000     
+        00320000      00340000      00360000      00380000      003A0000     
+        003C0000      003E0000      00400000      00420000      00440000     
+        00460000      00480000      004A0000      004C0000      004E0000     
+        00500000      00520000      00540000      00560000      00580000     
+        005A0000      005C0000      005E0000      00600000      00620000     
+        00640000      00660000      00680000      006A0000      006C0000     
+        006E0000      00700000      00720000      00740000      00760000     
+        00780000      007A0000      007C0000      007E0000      00800000     
+        00820000      00840000      00860000      00880000      008A0000     
+        008C0000      008E0000      00900000      00920000      00940000     
+        00960000      00980000      009A0000      009C0000      009E0000     
+        00A00000      00A20000      00A40000      00A60000      00A80000     
+        00AA0000      00AC0000      00AE0000      00B00000      00B20000     
+        00B40000      00B60000      00B80000      00BA0000      00BC0000     
+        00BE0000      00C00000      00C20000      00C40000      00C60000     
+        00C80000      00CA0000      00CC0000      00CE0000      00D00000     
+        00D20000      00D40000      00D60000      00D80000      00DA0000     
+        00DC0000      00DE0000      00E00000      00E20000      00E40000     
+        00E60000      00E80000      00EA0000      00EC0000      00EE0000     
+        00F00000      00F20000      00F40000      00F60000      00F80000     
+        00FA0000      00FC0000      00FE0000     
+    EDB9312> coninfo
+    List of available devices:
+    serial   80000003 SIO stdin stdout stderr 
+    EDB9312> ls
+    Scanning JFFS2 FS:   
+     done.
+    EDB9312> md
+    Usage:
+    md      - memory display
+    EDB9312> printenv
+    bootargs=root=1f02 console=ttyAM0 mtdparts=phys_mapped_flash:128k(Uboot)ro,1024k(kernel)ro,1024k(cramfs)ro,-(jffs2)
+    bootcmd=bootm 0x20000
+    bootdelay=1
+    baudrate=115200
+    ethaddr=08:00:3e:26:0a:5b
+    stdin=serial
+    stdout=serial
+    stderr=serial
+    Environment size: 233/262140 bytes
+    EDB9312> version
+    U-Boot 1.1.2 (Jun  7 2005 - 09:16:44)
+    EDB9312> iminfo
+    ## Checking Image at 01000000 ...
+       Bad Magic Number
+    EDB9312> boot
+    ## Booting image at 00020000 ...
+       Image Name:   Linux Kernel Image
+       Image Type:   ARM Linux Kernel Image (gzip compressed)
+       Data Size:    718308 Bytes = 701.5 kB
+       Load Address: c0008000
+       Entry Point:  c0008000
+       Verifying Checksum ... OK
+       Uncompressing Kernel Image ... OK
+    Starting kernel ...
+    Linux version 2.4.27-vrs1-crus142 (mp7000@DevptMP7000) (gcc version 3.3) #5 ven jun 2 12:22:16 CEST 2006
+    CPU: Arm920Tid(wb) revision 0
+    Machine: edb9312
+    Examining tag list @0xc0000100 ...Ok.
+    parsing command line... ok.
+    bootmem_init... ok.
+    paging_init... On node 0 totalpages: 8192
+    zone(0): 8192 pages.
+    zone(1): 0 pages.
+    zone(2): 0 pages.
+    requesting resources... ok.
+    Kernel command line: root=1f02 console=ttyAM0 mtdparts=phys_mapped_flash:128k(Uboot)ro,1024k(kernel)ro,1024k(cramfs)ro,-(jffs2)
+    Calibrating delay loop... 99.35 BogoMIPS
+    Before waiting loop for hard drive
+    After waiting loop for hard drive
+    Memory: 32MB = 32MB total
+    Memory: 30676KB available (1311K code, 340K data, 44K init)
+    Dentry cache hash table entries: 4096 (order: 3, 32768 bytes)
+    Inode cache hash table entries: 2048 (order: 2, 16384 bytes)
+    Mount cache hash table entries: 512 (order: 0, 4096 bytes)
+    Buffer cache hash table entries: 1024 (order: 0, 4096 bytes)
+    Page-cache hash table entries: 8192 (order: 3, 32768 bytes)
+    CPU: Testing write buffer: pass
+    POSIX conformance testing by UNIFIX
+    Linux NET4.0 for Linux 2.4
+    Based upon Swansea University Computer Society NET3.039
+    Initializing RT netlink socket
+    GPIO port C initialised 
+    GPIO port B initialised 
+    Starting kswapd
+    JFFS2 version 2.1. (C) 2001 Red Hat, Inc., designed by Axis Communications AB.
+    ttyAM0 at MMIO 0xff8c0000 (irq = 52) is a AMBA
+    ttyAM1 at MMIO 0xff8d0000 (irq = 54) is a AMBA
+    ttyAM2 at MMIO 0xff8e0000 (irq = 55) is a AMBA
+    pty: 256 Unix98 ptys configured
+    ep93xx_eth() version: ep93xx_eth.c: V1.0 09/04/2003 Cirrus Logic
+    Dma memory allocated : 1164 @ 0xc287e000
+    ep93xx_ethernet #0 at 0xff010000 IRQ:39 MAC:00:ba:d0:0b:ad:00
+    Uniform Multi-Platform E-IDE driver Revision: 7.00beta4-2.4
+    ide: Assuming 50MHz system bus speed for PIO modes; override with idebus=xx
+    Probing IDE interface ide0...
+    hda: SONY DVD-ROM DDU1615, ATAPI CD/DVD-ROM drive
+    hdb: Maxtor 6L080P0, ATA DISK drive
+    ide0 at 0x800-0x807,0x406 on irq 40
+    hdb: attached ide-disk driver.
+    hdb: host protected area => 1
+    hdb: 160086528 sectors (81964 MB) w/8192KiB Cache, CHS=158816/16/63, UDMA 2 
+    hda: attached ide-cdrom driver.
+    hda: ATAPI 40X DVD-ROM drive, 254kB Cache, UDMA 2 
+    Uniform CD-ROM driver Revision: 3.12
+    Partition check:
+     hdb: hdb1 hdb2
+    SCSI subsystem driver Revision: 1.00
+    EDB9312-NOR:0x00800000 at 0x00000000
+    Unknown command : 0xff
+    Unknown command : 0xff
+     Amd/Fujitsu Extended Query Table v1.1 at 0x0040
+    NOR flash on EDB9312: Swapping erase regions for broken CFI table.
+    number of CFI chips: 1
+    cfi_cmdset_0002: Disabling fast programming due to code brokenness.
+    mtd: Giving out device 0 to NOR flash on EDB9312
+    EDB9312-NOR:using edb9312 partition definition
+    Creating 3 MTD partitions on "NOR flash on EDB9312":
+    0x00000000-0x00120000 : "zImage"
+    mtd: Giving out device 1 to zImage
+    0x00120000-0x00220000 : "CRAMFS"
+    mtd: Giving out device 2 to CRAMFS
+    0x00220000-0x007e0000 : "JFFS2"
+    mtd: Giving out device 3 to JFFS2
+    EDB9312-NOR:no partition info available
+    i2c-core.o: i2c core module version 2.6.1 (20010830)
+    Initialising first I2C bus
+    Initialising second I2C bus
+    usb.c: registered new driver hub
+    host/usb-ohci.c: USB OHCI at membase 0xff020000, IRQ 56
+    usb.c: new USB bus registered, assigned bus number 1
+    hub.c: USB hub found
+    hub.c: 3 ports detected
+    Initializing USB Mass Storage driver...
+    usb.c: registered new driver usb-storage
+    USB Mass Storage support registered.
+    NET4: Linux TCP/IP 1.0 for NET4.0
+    IP Protocols: ICMP, UDP, TCP
+    IP: routing cache hash table of 512 buckets, 4Kbytes
+    TCP: Hash tables configured (established 2048 bind 4096)
+    NET4: Unix domain sockets 1.0/SMP for Linux NET4.0.
+    NetWinder Floating Point Emulator V0.97 (double precision)
+    VFS: Mounted root (cramfs filesystem) readonly.
+    Freeing init memory: 44K
+    init started:  BusyBox v1.00 (2006.06.14-15:05+0000) multi-call binary
+    Using /modules/mood_screen.o

@@ -1,0 +1,75 @@
+
+    _____________________________________________________________________________
+       IP            At MAC Address      Count  Len   MAC Vendor                   
+     ----------------------------------------------------------------------------- 
+    *** buffer overflow detected ***: netdiscover terminated
+    ======= Backtrace: =========
+    /lib/tls/i686/cmov/libc.so.6(__fortify_fail+0x48)[0xb7eee558]
+    /lib/tls/i686/cmov/libc.so.6[0xb7eec680]
+    /lib/tls/i686/cmov/libc.so.6[0xb7eebd68]
+    /lib/tls/i686/cmov/libc.so.6(_IO_default_xsputn+0xc8)[0xb7e61a18]
+    /lib/tls/i686/cmov/libc.so.6(_IO_vfprintf+0xf4a)[0xb7e348da]
+    /lib/tls/i686/cmov/libc.so.6(__vsprintf_chk+0xa7)[0xb7eebe17]
+    /lib/tls/i686/cmov/libc.so.6(__sprintf_chk+0x2d)[0xb7eebd5d]
+    netdiscover[0x804ad65]
+    netdiscover[0x8049f53]
+    netdiscover[0x8049e21]
+    /usr/lib/libpcap.so.0.8[0xb7f6cea9]
+    /usr/lib/libpcap.so.0.8(pcap_loop+0x6b)[0xb7f6efbb]
+    netdiscover[0x8049a2e]
+    /lib/tls/i686/cmov/libpthread.so.0[0xb7f9950f]
+    /lib/tls/i686/cmov/libc.so.6(clone+0x5e)[0xb7ed57ee]
+    ======= Memory map: ========
+    08048000-08085000 r-xp 00000000 08:01 1041027    /usr/sbin/netdiscover
+    08085000-08086000 r--p 0003c000 08:01 1041027    /usr/sbin/netdiscover
+    08086000-08097000 rw-p 0003d000 08:01 1041027    /usr/sbin/netdiscover
+    08097000-080d9000 rw-p 08097000 00:00 0          [heap]
+    b5def000-b5df0000 ---p b5def000 00:00 0 
+    b5df0000-b65f0000 rw-p b5df0000 00:00 0 
+    b65f0000-b65f1000 ---p b65f0000 00:00 0 
+    b65f1000-b6df1000 rw-p b65f1000 00:00 0 
+    b6df1000-b6df2000 ---p b6df1000 00:00 0 
+    b6df2000-b75f2000 rw-p b6df2000 00:00 0 
+    b75f2000-b75f3000 ---p b75f2000 00:00 0 
+    b75f3000-b7df4000 rw-p b75f3000 00:00 0 
+    b7df4000-b7f4c000 r-xp 00000000 08:01 2180087    /lib/tls/i686/cmov/libc-2.8.90.so
+    b7f4c000-b7f4e000 r--p 00158000 08:01 2180087    /lib/tls/i686/cmov/libc-2.8.90.so
+    b7f4e000-b7f4f000 rw-p 0015a000 08:01 2180087    /lib/tls/i686/cmov/libc-2.8.90.so
+    b7f4f000-b7f52000 rw-p b7f4f000 00:00 0 
+    b7f52000-b7f65000 r-xp 00000000 08:01 2901910    /usr/lib/libnet.so.1.3.0
+    b7f65000-b7f66000 rw-p 00013000 08:01 2901910    /usr/lib/libnet.so.1.3.0
+    b7f66000-b7f68000 rw-p b7f66000 00:00 0 
+    b7f68000-b7f91000 r-xp 00000000 08:01 1033238    /usr/lib/libpcap.so.0.9.8
+    b7f91000-b7f92000 r--p 00028000 08:01 1033238    /usr/lib/libpcap.so.0.9.8
+    b7f92000-b7f93000 rw-p 00029000 08:01 1033238    /usr/lib/libpcap.so.0.9.8
+    b7f93000-b7fa8000 r-xp 00000000 08:01 2180325    /lib/tls/i686/cmov/libpthread-2.8.90.so
+    b7fa8000-b7fa9000 r--p 00014000 08:01 2180325    /lib/tls/i686/cmov/libpthread-2.8.90.so
+    b7fa9000-b7faa000 rw-p 00015000 08:01 2180325    /lib/tls/i686/cmov/libpthread-2.8.90.so
+    b7faa000-b7fac000 rw-p b7faa000 00:00 0 
+    b7fb7000-b7fc4000 r-xp 00000000 08:01 2981999    /lib/libgcc_s.so.1
+    b7fc4000-b7fc5000 r--p 0000c000 08:01 2981999    /lib/libgcc_s.so.1
+    b7fc5000-b7fc6000 rw-p 0000d000 08:01 2981999    /lib/libgcc_s.so.1
+    b7fc6000-b7fca000 rw-p b7fc6000 00:00 0 
+    b7fca000-b7fe4000 r-xp 00000000 08:01 2981911    /lib/ld-2.8.90.so
+    b7fe4000-b7fe5000 r-xp b7fe4000 00:00 0          [vdso]
+    b7fe5000-b7fe6000 r--p 0001a000 08:01 2981911    /lib/ld-2.8.90.so
+    b7fe6000-b7fe7000 rw-p 0001b000 08:01 2981911    /lib/ld-2.8.90.so
+    bfc84000-bfc99000 rw-p bffeb000 00:00 0          [stack]
+    zoobab@warsaw /home/zoobab [21]$ 
+    
+    zoobab@warsaw /home/zoobab [23]$ sudo netdiscover -h
+    Netdiscover 0.3-beta6 [Active/passive arp reconnaissance tool]
+    Written by: Jaime Penalba <jpenalbae@gmail.com>
+    
+    Usage: netdiscover [-i device] [-r range | -p] [-s time] [-n node] [-c count] [-f] [-S]
+      -i device: your network device
+      -r range: scan a given range instead of auto scan. 192.168.6.0/24,/16,/8
+      -p passive mode do not send anything, only sniff
+      -s time: time to sleep between each arp request (miliseconds)
+      -c count: number of times to send each arp reques (for nets with packet loss)
+      -n node: last ip octet used for scanning (from 2 to 253)
+      -S enable sleep time supression betwen each request (hardcore mode)
+      -f enable fastmode scan, saves a lot of time, recommended for auto
+    
+    If -p or -r arent enabled, netdiscover will scan for common lan addresses
+    zoobab@warsaw /home/zoobab [24]$

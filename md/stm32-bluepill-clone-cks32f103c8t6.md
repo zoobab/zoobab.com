@@ -1,0 +1,34 @@
+# About
+
+
+I ordered an STM32 bluepill clone with a CKS chip.
+
+# Labels
+
+
+As written on the chip:
+
+
+    CKS32F
+    103C8T6
+    NK1MS
+    1845 E
+
+
+This is confusing, as the product description on the Aliexpress page said "CS32F103C8T6".
+
+# Adding a USB bootloader with a usb-serial dongle
+
+
+TODO
+
+# Links
+
+
+* <https://www.cnx-software.com/2019/02/10/cs32-mcu-stm32-clone-bluepill-board/>  
+* <https://www.aliexpress.com/item/Free-Shipping-STM32F103C8T6-ARM-STM32-Minimum-System-Development-Board-Module-Forarduino/32525208361.html>  
+* <http://www.zoobab.com/bluepill-arduinoide>  
+* <http://www.ckscup.com/material.aspx>  
+* <https://www.stm32duino.com/viewtopic.php?f=3&t=4522&sid=885ab2a6366f1fffc82e762ba44f3f15&start=30>  
+* <https://opensimhardware.wordpress.com/pedal-button-controller/>  
+* <https://github.com/texane/stlink/issues/756>  

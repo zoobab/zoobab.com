@@ -1,0 +1,35 @@
+# Create a 5GB file
+
+
+here
+
+# Commands
+
+
+
+    519  dd if=/dev/zero of=vol1.img bs=1M count=100
+      520  dd if=/dev/zero of=vol2.img bs=1M count=100
+      521  man losetup 
+      522  losetup -f
+      523  losetup -f /dev/loop1 vol1.img
+      524  losetup /dev/loop1 vol1.img
+      525  losetup -f
+      526  losetup /dev/loop2 vol2.img
+      527  pvcreate /dev/loop1 /dev/loop2
+      528  vgcreate fastgroup /dev/loop1 /dev/loop2
+      529  lvcreate -i2 -l 2 -n fastvol fastgroup
+      530  mount /dev/fastgroup/fastvol 
+      531  mount /dev/fastgroup/fastvol /mnt
+      532  mount -t lvm /dev/fastgroup/fastvol /mnt
+      533  mount -t ext3 /dev/fastgroup/fastvol /mnt
+      534  file /dev/fastgroup/fastvol 
+      535  file /dev/mapper/fastgroup-fastvol 
+      536  cfdisk /dev/mapper/fastgroup-fastvol 
+      537  mkfs.ext3 -v /dev/mapper/fastgroup-fastvol
+      538  mount -t ext3 /dev/fastgroup/fastvol /mnt
+      539  cd /mnt
+      540  l
+      541  df -lha
+      542  dd if=/dev/zero of=8M bs=1M count=8
+      543  dd if=/dev/zero of=8M bs=1M count=7
+      544  dd if=/dev/zero of=8M bs=1M count=6

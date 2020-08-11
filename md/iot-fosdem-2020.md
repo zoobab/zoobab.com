@@ -1,0 +1,121 @@
+
+
+# What?
+
+
+Internet Of Things (IOT) devroom at FOSDEM 2020
+
+[[=image <https://pbs.twimg.com/media/CZ-idxfWEAAdU68?format=jpg&name=small>  ]]
+
+# When?
+
+
+Sunday 02 Feb 2020, from 9AM to 6PM
+
+# Where?
+
+
+FOSDEM, ULB, Brussels, Room UD2.218A, 363 seats
+
+# Chat
+
+
+An IRC room is available on freenode #fosdem-iot.
+
+# Call for proposals
+
+
+# Goal
+
+
+We're calling for presentations on Internet of Things (IOT) at FOSDEM 2020 devroom.
+
+As Helen Duce said:
+
+> "We have a clear vision: to create a world where every object - from jumbo jets to sewing needles - is linked to the Internet."
+
+Do you have an interesting IOT project to show, like this one?
+
+<https://twitter.com/zoobab/status/693451533170692097/photo/1>  
+
+This will be the 5th year for the IOT devroom, and we will dedicate an hour for "Super Lightning Talks (SLT)", where you will have 5 minutes to show your IOT pet project.
+
+# Deadlines
+
+
+Proposals should be submitted by the 15 Dec 2019, 23H59, Brussels time.
+
+# Scope
+
+
+We're looking for talks that cover FLOSS solutions for:
+
+* machine-to-machine (M2M) communication on small embedded devices
+* distributed applications in any field of interest for autonomous/self-controlled devices, (e.g. domotics, automotive, etc)
+* networking: TCP/IP, mesh networking, message queuing, cross-layer solutions
+* Real-life problematics such as
+  * Out of grid communications
+  * Resilianc
+  * Security
+  * Cost of maintenance
+  * Power Management 
+  * Reachability
+  * Containers
+* Interoperability solutions for heterogeneous applications, devices, protocols, media
+
+All presentations must be fully FLOSS, and related to software development.
+
+# Format
+
+
+The devroom will last one day, approx from 10.30 until 18:00. Talks will last 25 minutes each, starting on the hour, with a 5-minute break between talks. There will be no break for lunch.
+
+Speakers should respect the following talk format:
+
+  1. Live demo: a 5 to 10 minutes (live demo preferred over pre-recorded)
+  2. Explanation:  5 to 10 minutes
+  3. Q&A: 5 minutes
+
+Make sure you stick to your 25 minute time slot. All talks are recorded and streamed live, and by submitting a talk you agree to this.
+
+We want to make this devroom as interesting and diverse as possible, which means we will favor talks that contrast each other.
+
+# When?
+
+
+The IoT devroom will be on Sunday 2nd February 2020.
+
+# How to Submit a Proposal
+
+
+If you have an IoT project you'd like to present, please submit it via FOSDEM's Pentabarf web tool:
+
+<https://penta.fosdem.org/submission/FOSDEM20>  
+
+You will create an account (if you don't have one from a previous year), and select the "Internet of Things devroom" as the track. Every submission received will be reviewed and we’ll then make a selection from all the submitted proposals.
+
+# How to Submit a Super Lighting Talk?
+
+
+And the end of the day, we will reserve an hour to show 12 different projects, in Super Lighting Talks of 5 minutes each. Try to submit them via Pentabarf, if it fails submit them via email.
+
+# About FOSDEM
+
+
+FOSDEM (Free and Open source Software Developers' European Meeting) is a non-commercial, volunteer organized European event centered around free and open source software development. It is aimed at developers and anyone interested in the free and open source software movement. It aims to enable developers to meet and to promote the awareness and use of free and open source software. More infos at <http://www.fosdem.org>  
+
+# Contact
+
+
+* Benjamin HENRION <zoobab AT gmail.com> +32-484-566109
+* Maxime Vincent <maxime.vince AT gmail.com>
+
+# Fun
+
+
+Internet of Shit: "How many servers could it take to turn on a light bulb LOL" <https://twitter.com/internetofshit/status/986006653605687296>  
+
+[[=image <https://pbs.twimg.com/media/Da7_0YsW4AEM4sr?format=jpg&name=small>  ]]
+
+> *"Our new cloud "maintains a permanent, open socket connection into every Hue home, 24x7, everywhere in the world to obtain real-time performance"*
+> *- Holy fcking what?*

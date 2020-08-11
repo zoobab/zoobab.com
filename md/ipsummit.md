@@ -1,0 +1,56 @@
+Quotes:
+
+Presentation about your companies, products, etc...
+
+# Software is not pharma
+
+
+PHARMA = few patents (typically 1 to 5 patents per product)
+SOFTWARE = large number of patents (typically from 100 up to 1000 patents per product)
+
+"Technology products typically consist of hundreds or thousands of patented components."  —Business Software Alliance, Amicus Brief to the Supreme Court in eBay Vs MercExchange
+
+ It therefore is impossible for technology companies to investigate all of the patents, and pending patent applications that may be relevant to a new invention (product), notwithstanding their best efforts to do so."
+
+# Software patents as liabilities, not assets
+
+
+> "The current “patent thicket,” in which anyone who writes a successful software programme is sued for alleged patent infringement, highlights the current IP system’s failure to encourage innovation" —Pr Joseph Stiglitz (Nobel Laureate in Economics), IP-Watch
+
+> Small enterprises generally adopt a rather **negative position** towards the current increasing granting of patents for software and algorithms because they fear that these will **hamper or eventually even impede their work (**more than 85%**)**.
+
+-- German Federal Ministry of Education and Research (BMBF), Study of the Innovation Performance of German Software Companies, 2006, p. 86
+
+# Patent bubble and patent inflation
+
+
+<http://stopsoftwarepatents.org/forum/t-93114/will-the-patent-system-trigger-financial-collapse-in-2008>  
+
+> What does this mean for the patent system? David Martin points out that three separate bubbles are about to pop at the same time: consumer debt, mortgage debt, and patent debt. Each of these bubbles will cause enormous damage to those institutions who were over-committed, and most certainly to those who helped create the bubble. The patent offices will not go unrewarded for helping to create another Great Depression, by printing trillions of Euro worth of funny money.
+
+> So we have this giant conundrum of "we don't have the data, we don't understand the research, we don't understand the economic consequences of intellectual property", however, we're going to have the incentive to understand it (smile). And the incentive is: the illiquidity of our banking system.
+
+Kahin:
+
+<http://www.huffingtonpost.com/brian-kahin/the-patent-bubble-still-g_b_129232.html>  
+
+<http://www.researchoninnovation.org/WordPress/?p=108>  
+
+# IPFW
+
+
+IPFW
+====
+iptables -t nat -A POSTROUTING -o ppp0 -j MASQUERADE
+modprobe ipt_MASQUERADE
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+# Japanese study on services/product ratio in the software industry
+
+
+<http://zoobab.wikidot.com/local--files/ipsummit/ownsoftware-japan.pdf>  
+
+# EPO corruption
+
+
+<http://stopsoftwarepatents.org/forum/t-105735/chocolate-coins-for-epo-cash-cow>  

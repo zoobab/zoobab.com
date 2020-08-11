@@ -1,0 +1,1 @@
+[[module FlickrGallery tags="Eupaco1" user="zoobab" tagMode="all" perPage="100"]]

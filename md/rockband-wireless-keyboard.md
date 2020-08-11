@@ -1,0 +1,262 @@
+
+
+# About
+
+
+The Rockband Wireless Keyboard for the Wii is an affordable keyboard for musicians. It has a 2.4Ghz USB-wireless dongle that you can connect to a computer.
+
+[[=image Rock_Band_3_Wireless_Pro_Keyboard_PS3.jpg size="medium"]]
+
+# Problems
+
+
+Some white keys are not mapped, I cannot see the events with jstest --event on /dev/input/events13 device.
+
+With usbmon, I can see that the USB messages corresponding to the missing keys are well sent to the machine.
+
+So it might me a mapping problem on /dev/input/events13 device.
+
+Also, cat /dev/hidraw0 sees all the events from the missing keys.
+
+After installing this [sdl-jstest](https://github.com/Grumbel/sdl-jstest), I can see some events for some keys only (only some of the white/black keys are not mapped):
+
+
+    zoobab@chuchu /home/zoobab/soft/sdl-jstest/build [79]$ sudo ./sdl2-jstest -e 0
+    Joystick Name:     'Licensed by Nintendo of America  Harmonix RB3 Keyboard for Nintendo Wii'
+    Joystick GUID:     03000000ad1b00003033000001010000
+    Joystick Number:    0
+    Number of Axes:     4
+    Number of Buttons: 13
+    Number of Hats:     1
+    Number of Balls:    0
+    GameController:
+      not a gamepad
+    
+    Entering joystick test loop, press Ctrl-c to exit
+    SDL_JOYDEVICEADDED which:0
+    SDL_JOYAXISMOTION: joystick: 0 axis: 2 value: -32768
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -32768
+    SDL_JOYAXISMOTION: joystick: 0 axis: 2 value: 0
+    SDL_JOYAXISMOTION: joystick: 0 axis: 2 value: -32768
+    SDL_JOYAXISMOTION: joystick: 0 axis: 2 value: -27055
+    SDL_JOYAXISMOTION: joystick: 0 axis: 2 value: -32768
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -16300
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -32768
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -16300
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -32768
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -32432
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -32768
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -32432
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -32768
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -29744
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -32432
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -29744
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -32432
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -32768
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -32432
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -32768
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -32432
+    SDL_JOYAXISMOTION: joystick: 0 axis: 3 value: -32768
+
+
+# Roland USB UM-ONE
+
+
+You can attach a USB2MIDI converter brand [Roland UM-ONE](http://www.roland.com/products/um-one/) to the MIDI-OUT connector of the keyboard:
+
+[[=image um-one_mk2_angle_gal.jpg size="medium"]]
+
+
+    root@chuchu /home/zoobab [29]# lsusb | grep Roland
+    Bus 001 Device 007: ID 0582:012a Roland Corp. UM-ONE
+
+
+Now, you can see a device with amidi:
+
+
+    root@chuchu /home/zoobab [30]# amidi -l
+    Dir Device    Name
+    IO  hw:1,0,0  UM-ONE MIDI 1
+
+
+And you can dump the raw keyboard pressings like this (here key30 and key31 are pressed once):
+
+
+    root@chuchu /home/zoobab [32]# amidi -p hw:1,0,0 --dump
+    
+    90 30 74
+    80 30 77
+    90 31 74
+    80 31 78
+
+
+# Dmesg
+
+
+
+    [14815.818587] usb 1-1: New USB device found, idVendor=040b, idProduct=410a
+    [14815.818600] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+    [14815.820449] hub 1-1:1.0: USB hub found
+    [14815.822361] hub 1-1:1.0: 3 ports detected
+    [14816.099605] usb 1-1.1: new full-speed USB device number 5 using uhci_hcd
+    [14816.234576] usb 1-1.1: New USB device found, idVendor=1bad, idProduct=3330
+    [14816.234589] usb 1-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+    [14816.234597] usb 1-1.1: Product: Harmonix RB3 Keyboard for Nintendo Wii
+    [14816.234605] usb 1-1.1: Manufacturer: Licensed by Nintendo of America 
+    [14816.243563] input: Licensed by Nintendo of America  Harmonix RB3 Keyboard for Nintendo Wii as /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.1/1-1.1:1.0/input/input15
+    [14816.243967] hid-generic 0003:1BAD:3330.0002: input,hidraw0: USB HID v1.01 Gamepad [Licensed by Nintendo of America  Harmonix RB3 Keyboard for Nintendo Wii] on usb-0000:00:1a.0-1.1/input0
+
+
+# Lsusb
+
+
+
+    Bus 001 Device 007: ID 1bad:3330 Harmonix Music 
+    Bus 001 Device 006: ID 040b:410a Weltrend Semiconductor
+
+
+# Lsusb -v
+
+
+
+    Bus 001 Device 005: ID 1bad:3330 Harmonix Music 
+    Device Descriptor:
+      bLength                18
+      bDescriptorType         1
+      bcdUSB               1.10
+      bDeviceClass            0 (Defined at Interface level)
+      bDeviceSubClass         0 
+      bDeviceProtocol         0 
+      bMaxPacketSize0         8
+      idVendor           0x1bad Harmonix Music
+      idProduct          0x3330 
+      bcdDevice            0.05
+      iManufacturer           1 Licensed by Nintendo of America 
+      iProduct                2 Harmonix RB3 Keyboard for Nintendo Wii
+      iSerial                 0 
+      bNumConfigurations      1
+      Configuration Descriptor:
+        bLength                 9
+        bDescriptorType         2
+        wTotalLength           41
+        bNumInterfaces          1
+        bConfigurationValue     1
+        iConfiguration          0 
+        bmAttributes         0x80
+          (Bus Powered)
+        MaxPower              100mA
+        Interface Descriptor:
+          bLength                 9
+          bDescriptorType         4
+          bInterfaceNumber        0
+          bAlternateSetting       0
+          bNumEndpoints           2
+          bInterfaceClass         3 Human Interface Device
+          bInterfaceSubClass      0 No Subclass
+          bInterfaceProtocol      0 None
+          iInterface              0 
+            HID Device Descriptor:
+              bLength                 9
+              bDescriptorType        33
+              bcdHID               1.01
+              bCountryCode            0 Not supported
+              bNumDescriptors         1
+              bDescriptorType        34 Report
+              wDescriptorLength     137
+             Report Descriptors: 
+               ** UNAVAILABLE **
+          Endpoint Descriptor:
+            bLength                 7
+            bDescriptorType         5
+            bEndpointAddress     0x81  EP 1 IN
+            bmAttributes            3
+              Transfer Type            Interrupt
+              Synch Type               None
+              Usage Type               Data
+            wMaxPacketSize     0x0040  1x 64 bytes
+            bInterval              10
+          Endpoint Descriptor:
+            bLength                 7
+            bDescriptorType         5
+            bEndpointAddress     0x02  EP 2 OUT
+            bmAttributes            3
+              Transfer Type            Interrupt
+              Synch Type               None
+              Usage Type               Data
+            wMaxPacketSize     0x0040  1x 64 bytes
+            bInterval               1
+    Device Status:     0x0000
+      (Bus Powered)
+    
+    Bus 001 Device 006: ID 040b:410a Weltrend Semiconductor 
+    Device Descriptor:
+      bLength                18
+      bDescriptorType         1
+      bcdUSB               1.10
+      bDeviceClass            9 Hub
+      bDeviceSubClass         1 
+      bDeviceProtocol         0 
+      bMaxPacketSize0         8
+      idVendor           0x040b Weltrend Semiconductor
+      idProduct          0x410a 
+      bcdDevice            2.00
+      iManufacturer           0 
+      iProduct                0 
+      iSerial                 0 
+      bNumConfigurations      1
+      Configuration Descriptor:
+        bLength                 9
+        bDescriptorType         2
+        wTotalLength           25
+        bNumInterfaces          1
+        bConfigurationValue     1
+        iConfiguration          0 
+        bmAttributes         0x80
+          (Bus Powered)
+        MaxPower              100mA
+        Interface Descriptor:
+          bLength                 9
+          bDescriptorType         4
+          bInterfaceNumber        0
+          bAlternateSetting       0
+          bNumEndpoints           1
+          bInterfaceClass         9 Hub
+          bInterfaceSubClass      1 
+          bInterfaceProtocol      0 
+          iInterface              0 
+          Endpoint Descriptor:
+            bLength                 7
+            bDescriptorType         5
+            bEndpointAddress     0x81  EP 1 IN
+            bmAttributes            3
+              Transfer Type            Interrupt
+              Synch Type               None
+              Usage Type               Data
+            wMaxPacketSize     0x0001  1x 1 bytes
+            bInterval             255
+    
+    Hub Descriptor:
+      bLength               9
+      bDescriptorType      41
+      nNbrPorts             3
+      wHubCharacteristic 0x0004
+        Ganged power switching
+        Compound device
+        Ganged overcurrent protection
+      bPwrOn2PwrGood       32 * 2 milli seconds
+      bHubContrCurrent     20 milli Ampere
+      DeviceRemovable    0xfe
+      PortPwrCtrlMask    0xff
+     Hub Port Status:
+       Port 1: 0000.0103 power enable connect
+       Port 2: 0000.0100 power
+       Port 3: 0000.0100 power
+    Device Status:     0x0000
+      (Bus Powered)
+
+
+# Links
+
+
+* <http://www.linuxjournal.com/magazine/hack-and-wii-will-rock-linux>  
+* <http://www.amazon.com/Rock-Band-Wireless-Keyboard-Xbox-360/dp/B003RS19N4>  

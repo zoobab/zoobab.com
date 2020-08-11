@@ -1,0 +1,40 @@
+First time I used the docker network feature, it seemed crashy to me:
+
+
+    $ docker network ls
+    NETWORK ID          NAME                DRIVER
+    0f1996fc51c9        pi03                overlay
+    c402c8bb702a        cola                overlay
+    6206dd571256        bridge              bridge
+    e44d22850387        none                null
+    7f1bb85d989f        host                host
+    HypriotOS: root@pi02 in ~
+    $ docker network rm c402c8bb702a
+    Error response from daemon: network c402c8bb702a not found
+    HypriotOS: root@pi02 in ~
+    $ docker network rm cola
+    Error response from daemon: network cola not found
+    HypriotOS: root@pi02 in ~
+    $ docker network ls
+    NETWORK ID          NAME                DRIVER
+    6206dd571256        bridge              bridge
+    e44d22850387        none                null
+    7f1bb85d989f        host                host
+    HypriotOS: root@pi02 in ~
+    $
+    
+    
+    HypriotOS: root@pi02 in ~
+    $ docker ps
+    
+    malloc: unknown:0: assertion botched
+    free: called with already freed block argument
+    last command: docker network create --driver=overlay cola
+    Aborting...debug1: client_input_channel_req: channel 0 rtype exit-signal reply 0
+    debug1: client_input_channel_req: channel 0 rtype eow@openssh.com reply 0
+    debug1: channel 0: free: client-session, nchannels 1
+    Connection to pi02.local closed.
+    Transferred: sent 52376, received 265460 bytes, in 1928.5 seconds
+    Bytes per second: sent 27.2, received 137.7
+    debug1: Exit status -1
+    zoobab@sabayonx86-64 /home/zoobab [7]$

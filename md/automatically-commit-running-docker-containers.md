@@ -1,0 +1,26 @@
+You can have a cron job or a script that automatically commit the running containers, for backup purposes for example:
+
+
+    root@sabayon /home/zoobab [24]# for i in `docker ps | awk '{ print $1"|"$2 }' | grep -v CONTAINER `; do docker commit `echo $i | cut -d '|' -f1` `echo $i | cut -d '|' -f2`-`date +"%m%d%y_%H%M%S"`; done
+    db502fa1574214df8b14eb93a932b5e640fc25cce0c8f571da228b910d8e8093
+    4c3e9ac393de5e673a9c028b2393498615b759b8a57507dd52c6d8f84e04af6a
+    root@sabayon /home/zoobab [25]# docker images
+    REPOSITORY          TAG                        IMAGE ID            CREATED             VIRTUAL SIZE
+    debian              wheezydev4-022715_120827   4c3e9ac393de        2 minutes ago       2.539 GB
+    debian              jessie-022715_120737       db502fa15742        3 minutes ago       940.2 MB
+    debian              jessiedev                  eed1493a9c15        19 hours ago        857.9 MB
+    debian              wheezydev5                 82271b99be73        20 hours ago        1.114 GB
+    debian              wheezydev4                 aec0de1d40af        25 hours ago        637.4 MB
+    debian              wheezydev3                 1abd21429b5f        41 hours ago        627.1 MB
+    debian              wheezydev                  c59d41e948d6        42 hours ago        122.2 MB
+    debian              wheezydev2                 c59d41e948d6        42 hours ago        122.2 MB
+    debian              wheezydev1                 c326496fda90        43 hours ago        118.6 MB
+    debian              wheezy                     c90d655b99b2        4 weeks ago         85.12 MB
+    debian              jessie                     0e30e84e9513        4 weeks ago         122.8 MB
+    root@sabayon /home/zoobab [26]# docker ps
+    CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+    f9141aec92b6        debian:jessie       "/bin/bash"         21 hours ago        Up 21 hours                             pensive_kowalevski   
+    0d55d0a73fa3        debian:wheezydev4   "/bin/bash"         25 hours ago        Up 25 hours                             modest_yalow
+
+
+I made a script here instead: <https://github.com/zoobab/docker-save-running-containers>  

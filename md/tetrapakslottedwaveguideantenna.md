@@ -1,0 +1,70 @@
+# Pictures
+
+
+[!--
+
+[[module FlickrGallery photosetId="72157605699229114"]]
+
+--]
+
+[[image flickr:125185053]]
+
+[[image flickr:125185966]]
+
+[[image flickr:125185671]]
+
+[[image flickr:125185561]]
+
+[[image flickr:125185618]]
+
+[[image flickr:125185437]]
+
+[[image flickr:125185501]]
+
+[[image flickr:125185375]]
+
+[[image flickr:125185284]]
+
+# Dimensions
+
+
+Calculate the dimensions with the [XLS file here](http://zoobab.wikidot.com/local--files/tetrapakslottedwaveguideantenna/WaveguideCalculator.xls).
+
+# N connector
+
+
+Put an N connector to it.
+
+# Aluminium tape
+
+
+Put aluminium tape to connect the boxes.
+
+[[=image <http://www.tapes-direct.co.uk/images/large/s013_LRG.jpg>  ]]
+
+# Weather resistant
+
+
+Put it in a plastic bag. Or even PVC tube.
+
+# Fixation
+
+
+Fiber glass mast at 5EUR.
+
+# Other versions
+
+
+See my other prototype made out of printing offset aluminium sheets:
+
+[[=image <http://farm1.static.flickr.com/123/341385980_f64a90085d.jpg>  ]]
+
+[[=image <http://www.bde.es/img/galeria/impresionoffset.jpg>   width="400px"]]
+
+A [french radio-amateur](http://pagesperso-orange.fr/jf.fourcadier/antennes/fentes/fentes_e.htm) is putting the tape in the middle of the guide, where the impact on the performance is minimal:
+
+[[=image <http://pagesperso-orange.fr/jf.fourcadier/antennes/fentes/colle.jpg>  ]]
+
+Check also this [one made in Thailand](http://www.adslthailand.com/forum/viewtopic.php?t=60803&highlight=slotwave) (64 slots, 27 dBi), crazzy stuff:
+
+[[=image <http://i158.photobucket.com/albums/t88/kasetpong/64ss6.jpg>   width="400px"]]

@@ -1,0 +1,83 @@
+# About
+
+
+BEREC is running a public consultation on the freedom to use your own router to connect the internet.
+
+See <<https://fsfe.org/news/2019/news-20191120-01.html>  >  
+
+# Submission
+
+
+> Dear Sir,
+> 
+> Thanks first of all to organize this public consultation on terminal
+> equipment required to access the public internet, also known as
+> "modems" or "routers".
+> 
+> Over the last 20 years, I have worked on FLOSS software projects which
+> "controls" those consumer routers, such as cable modems, ADSL modems,
+> or just simple routers.
+> 
+> You will find an extensible list of my contributions through my
+> personal website:
+> 
+> <<http://www.zoobab.com>  >  
+> <http://www.zoobab.com/bbox2>  
+> <http://www.zoobab.com/bbox3>  
+> <http://www.zoobab.com/search>  :site/q/openwrt
+> 
+> I have wrote custom software and adapted existing FLOSS and non-FLOSS
+> software for widely deployed VDSL modems in Belgium, such as the
+> Belgacom Box 1, 2, 3 and 3+.
+> 
+> In 2010, I found several severe security flaws in the BBOX2 (open
+> wifi, open telnet, same publicly known login+password on all those
+> boxes), where malicious users could get an administrator shell on the
+> router from the street.
+> 
+> This vulnerability was most probably used to gather thousands of PPP
+> credentials from end users around Brussels:
+> 
+> <https://www.lalibre.be/belgique/vendetta-le-hacker-de-belgacom-interpelle-51b8b387e4b0de6db9b924b7>  
+> 
+> I made a presentation of my findings at a security conference Hackito
+> Ergo Sum in Paris, and Belgacom was notified at the time of the
+> security flaws:
+> 
+> <http://www.zoobab.com/bbox2#toc21>  
+> 
+> But it took them more then 2 years to fix those obvious security
+> problems, despite my communications with their security experts
+> decorated with many certifications on its Linkedin profile.
+> 
+> My conclusion is that we cannot trust some third parties, such as
+> ISPs, to have the control of the software in our homes, as it creates
+> an insecure point in the network which is being used by malicious
+> actors to spy on users, compromise their privacy, and spread malware
+> such as miners.
+> 
+> It is why I urge you to refuse any pressure from the ISPs to put their
+> dirty hands on our routers located in our homes.
+> 
+> Best regards,
+> 
+> --
+> Benjamin Henrion (zoobab)
+> Email: zoobab at gmail.com
+> Mobile: +32-484-566109
+> Web: http://www.zoobab.com
+> FFII.org Brussels
+> "In July 2005, after several failed attempts to legalise software
+> patents in Europe, the patent establishment changed its strategy.
+> Instead of explicitly seeking to sanction the patentability of
+> software, they are now seeking to create a central European patent
+> court, which would establish and enforce patentability rules in their
+> favor, without any possibility of correction by competing courts or
+> democratically elected legislators."
+
+# Links
+
+
+* <http://www.hackitoergosum.org/2010/HES2010-bhenrion-Hacking-the-Belgacom-Box2.pdf>  
+* https://fsfe.org/news/2019/news-20191120-01.html
+* <https://download.fsfe.org/policy/routers/8821-draft-berec-guidelines-on-common-approac_0.pdf>  

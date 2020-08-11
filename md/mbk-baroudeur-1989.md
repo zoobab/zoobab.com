@@ -1,0 +1,40 @@
+# About
+
+
+The MBK Baroudeur 1989 was my first mountain bike.
+
+It was more called an ATB (All Terrain Bike) at the time.
+
+[[=image mbk-baroudeur.jpg]]
+
+[[=image mbk-baroudeur-leboncoin.jpg]]
+
+# Specifications
+
+
+* Shimano SIS 3x8 speed
+* Steel 2040 tubing
+* Around 16000BEF (400EUR)
+* Cantilever brakes
+
+# Project
+
+
+Keep the frame, throw everything else away.
+
+# Derailleur
+
+
+I ordered an adaptor to install a decent derailleur: <https://fr.aliexpress.com/item/33042827071.html>  
+
+[[=image 1PC-cadre-de-v-lo-fer-queue-crochet-v-lo-arri-re-d-railleur-cintre-avec.jpg size="small"]]
+
+# Links
+
+
+* <http://forum.velovert.com/topic/166283-vieux-velo-mbk-baroudeur-quels-composants/>  
+* <http://forum.velotaf.com/topic/5274-remplacement-de-freins-sur-un-cadre-mbk/>  
+* <https://lh6.googleusercontent.com/proxy/JjcvFHQD5GudEuRzIsh3hZ_YXeLt_826V9yg6ERN3ps5uw4ybkCBE4ugpiGLbApxeUwO4MUSyxo>  
+* <https://www.gumtree.com/p/bicycles/mbk-baroudeur-18-frame-26-wheels-18speed/1327849057>  
+* <http://forum.velotaf.com/topic/17904-restaurer-mbk-baroudeur-tres-fatigue/>  
+* <https://fr.wikipedia.org/wiki/MBK_industrie>  

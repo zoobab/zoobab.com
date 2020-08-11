@@ -1,0 +1,7 @@
+# Debian
+
+
+# Missing network firmware
+
+
+bnx2-mips-09-5.0.0.j3.fw

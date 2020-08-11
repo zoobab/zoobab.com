@@ -1,0 +1,135 @@
+# Serial bootlog
+
+
+It is booting Android by default on the serial console:
+
+
+    HELLO! BOOT0 is starting!
+    boot0 version : 2.0.0
+    read dram para.
+    dram driver version: 1.15
+    dram size =1024MB
+    0xeaeeefb3
+    super_standby_flag = 0
+    Succeed in opening nand flash.
+    block from 2 to 6
+    deal block 2
+    Succeed in reading Boot1 file head.
+    The size of Boot1 is 0x00068000.
+    The file stored in 0x00000000 of block 2 is perfect.
+    Check is correct.
+    Ready to disable icache.
+    Succeed in loading Boot1.
+    Jump to Boot1.
+    [       0.148] boot1 version : 2.0.0
+    [       0.157] script installed early ok
+    [       0.157] pmu type = 3
+    [       0.159] bat vol = 0 mv
+    [       0.175] axi:ahb:apb=4:2:2
+    [       0.175] set dcdc2=1400mv, clock=912M successed
+    [       0.177] key
+    [       0.189] no key found
+    [       0.189] flash init start
+    [       0.189] NB1 : enter NFB_Init
+    [       0.192] NB1 : enter phy init
+    [       0.195] [NAND] nand driver(b) version: 0x0x00000002, 0x0x00000012, data: 0x20130325
+    [       0.205] get the good blk ratio from hwscan : 944 
+    [       0.208] NB1 : nand phy init ok
+    [       2.026] _RepairLogBlkTbl start
+    [       2.555] Log Block Index 0x00000000, LogicBlockNum: 0x00000090, LogBlockType: 0x00000001
+    [       2.558] log0: 0x00000385, Log1: 0x00000384, WriteIndex: 0x00000001
+    [       2.564] datablock: 0x000003a1, lastusedpage: 0x00000026
+    [       2.572] [DUBG], check free block 0x000003f9 ok!
+    [       3.101] Log Block Index 0x00000001, LogicBlockNum: 0x00000150, LogBlockType: 0x00000001
+    [       3.104] log0: 0x0000039b, Log1: 0x000003f9, WriteIndex: 0x00000000
+    [       3.111] datablock: 0x00000372, lastusedpage: 0x00000027
+    [       3.118] [DUBG], check free block 0x000003f8 ok!
+    [       3.654] Log Block Index 0x00000002, LogicBlockNum: 0x00000170, LogBlockType: 0x00000001
+    [       3.657] log0: 0x0000039d, Log1: 0x000003f8, WriteIndex: 0x00000000
+    [       3.663] datablock: 0x00000361, lastusedpage: 0x0000001f
+    [       3.671] [DUBG], check free block 0x000003f5 ok!
+    [       4.196] Log Block Index 0x00000003, LogicBlockNum: 0x000000f0, LogBlockType: 0x00000001
+    [       4.199] log0: 0x000003b0, Log1: 0x000003f5, WriteIndex: 0x00000000
+    [       4.206] datablock: 0x0000035e, lastusedpage: 0x0000002e
+    [       4.211] _RepairLogBlkTbl end
+    [       4.267] NB1 : init ok
+    [       4.267] flash init finish
+    [       4.292] fs init ok
+    [       4.293] fattype FAT16
+    [       4.293] fs mount ok
+    [       4.298] nand good_block_ratio=944
+    [       4.298] storage_type=0
+    [       4.343] 0
+    [       4.493] WRN:L232(Common/ui/display_interface/display_interface.c):fetch script data boot_disp.output_type fail
+    [       4.498] WRN:L268(Common/ui/display_interface/display_interface.c):fetch script data boot_disp.output_mode fail
+    [       4.508] WRN:L288(Common/ui/display_interface/display_interface.c):fetch script data boot_disp.auto_hpd fail
+    [       4.518] lcd0_para.lcd_used=0
+    [       4.521] 0
+    [       4.724] 1
+    [       4.925] 2
+    [       5.126] 3
+    [       5.327] 4
+    [       5.528] 5
+    [       5.729] tv detect, ret = 0
+    [       5.729] no device plug
+    [       5.729] key value = 0
+    [       5.732] recovery key high 6, low 4
+    [       5.833] show pic finish
+    [       5.833] load kernel start
+    [       5.863] load kernel successed
+    [       5.863] start address = 0x4a000000
+    [       6.665] jump to
+    U-Boot 2011.09-rc1 (Dec 26 2013 - 19:07:02) Allwinner Technology 
+    CPU:   SUNXI Family
+    Board: SUN7I-EVB
+    DRAM:  1 GiB
+    NAND:  [NAND] set nand_good_block_ratio 944 
+    3776 MiB
+    In:    serial
+    Out:   serial
+    Err:   serial
+    --------fastboot partitions--------
+    -total partitions:11-
+    -name-        -start-       -size-      
+    bootloader  : 8000          8000        
+    env         : 10000         8000        
+    boot        : 18000         8000        
+    system      : 20000         100000      
+    data        : 120000        200000      
+    misc        : 320000        8000        
+    recovery    : 328000        10000       
+    cache       : 338000        a0000       
+    private     : 3d8000        8000        
+    databk      : 3e0000        80000       
+    UDISK       : 460000        300000      
+    -----------------------------------
+    bootcmd set setargs_nand
+    Hit any key to stop autoboot:  1 
+    Starting kernel ...
+    [    0.767124] aw_pm_init: not support super standby. 
+    [    1.058063] ctp_fetch_sysconfig_para: ctp_unused. 
+    [    1.098485] [+++BLUESLEEP+++]bluesleep_probe: bluesleep_probe line 639
+    [    1.098493] 
+    [    1.109482] [fantasy] err get cpu normal frequency from sysconfig failed
+    [    2.264635] init: start e2fsck listening...
+    [    2.647901] init: to sleep 1 seconds.
+    [    3.652079] init: has waken up.
+    [    3.655666] init: [william] hdmistatus = 0!
+    [    3.660331] init: [william] tvstatus = 0!
+    [    3.665324] init: width = 1280
+    [    3.668731] init: height = 720
+    [    3.672134] init: s.st_size = 3686400
+    [    4.312024] init: do_umount: /data 
+    [    4.615805] init: do_umount: /cache 
+    [    4.723734] init: dont need format /dev/block/UDISK
+    [    4.730607] init: dont need format /dev/block/private
+    [    4.751768] init: do_umount: /databk 
+    [    4.920270] init: cannot find '/system/etc/install-recovery.sh', disabling 'flash_recovery'
+    [    5.269475] init: C_IN_START
+    [    5.272525] init: path = /dev/block/data
+    [    5.277420] init: C_IN_START
+    [    5.281133] init: path = /dev/block/cache
+    [    5.844099] android_usb: already disabled
+    [    5.848970] init: using deprecated syntax for specifying property 'sys.usb.config', use ${name} instead
+    [    5.860817] init: using deprecated syntax for specifying property 'sys.usb.config', use ${name} instead
+    [   23.631301] init: sys_prop: permission denied uid:1003  name:service.bootanim.exit

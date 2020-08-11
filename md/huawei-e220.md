@@ -1,0 +1,359 @@
+# Pictures
+
+
+[[=image <<http://2.bp.blogspot.com/_gSZJCFsppMw/S8ahH5dak_I/AAAAAAAAABc/_5vCWsndyys/s1600/huawei-220.jpg>  >  ]]
+
+Source: http://2.bp.blogspot.com/_gSZJCFsppMw/S8ahH5dak_I/AAAAAAAAABc/_5vCWsndyys/s1600/huawei-220.jpg
+Source: <http://ekowindacompany.blogspot.com/2010/04/paket-modem-huawei-e220-plus-perdana.html>  
+
+# Dmesg
+
+
+
+    [ 2183.684087] usb 6-1: new full speed USB device using uhci_hcd and address 2
+    [ 2183.839476] usb 6-1: New USB device found, idVendor=12d1, idProduct=1003
+    [ 2183.839488] usb 6-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+    [ 2183.839497] usb 6-1: Product: HUAWEI Mobile
+    [ 2183.839504] usb 6-1: Manufacturer: HUAWEI Technologies
+    [ 2183.839703] usb 6-1: configuration #1 chosen from 1 choice
+    [ 2183.871731] Initializing USB Mass Storage driver...
+    [ 2183.873490] scsi6 : SCSI emulation for USB Mass Storage devices
+    [ 2183.873623] usbcore: registered new interface driver usb-storage
+    [ 2183.873628] USB Mass Storage support registered.
+    [ 2183.874778] usb-storage: device found at 2
+    [ 2183.874782] usb-storage: waiting for device to settle before scanning
+    [ 2184.212149] usb 6-1: USB disconnect, address 2
+    [ 2184.452063] usb 6-1: new full speed USB device using uhci_hcd and address 3
+    [ 2184.610452] usb 6-1: New USB device found, idVendor=12d1, idProduct=1003
+    [ 2184.610465] usb 6-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+    [ 2184.610474] usb 6-1: Product: HUAWEI Mobile
+    [ 2184.610480] usb 6-1: Manufacturer: HUAWEI Technologies
+    [ 2184.610681] usb 6-1: configuration #1 chosen from 1 choice
+    [ 2184.620502] scsi9 : SCSI emulation for USB Mass Storage devices
+    [ 2184.621233] usb-storage: device found at 3
+    [ 2184.621240] usb-storage: waiting for device to settle before scanning
+    [ 2184.647910] usbcore: registered new interface driver usbserial
+    [ 2184.647982] USB Serial support registered for generic
+    [ 2184.648086] usbcore: registered new interface driver usbserial_generic
+    [ 2184.648090] usbserial: USB Serial Driver core
+    [ 2184.651841] USB Serial support registered for GSM modem (1-port)
+    [ 2184.652205] option 6-1:1.0: GSM modem (1-port) converter detected
+    [ 2184.652369] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+    [ 2184.652384] option 6-1:1.1: GSM modem (1-port) converter detected
+    [ 2184.652502] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+    [ 2184.652526] usbcore: registered new interface driver option
+    [ 2184.652530] option: v0.7.2:USB Driver for GSM modems
+    [ 2189.620618] usb-storage: device scan complete
+    [ 2189.623768] scsi 9:0:0:0: CD-ROM            HUAWEI   Mass Storage     2.31 PQ: 0 ANSI: 2
+    [ 2189.625388] scsi 9:0:0:0: Attached scsi generic sg1 type 5
+    [ 2189.668536] sr0: scsi-1 drive
+    [ 2189.668548] Uniform CD-ROM driver Revision: 3.20
+    [ 2189.668799] sr 9:0:0:0: Attached scsi CD-ROM sr0
+    [ 2199.873480] sr0: CDROM (ioctl) error, command: Xpwrite, Read disk info 51 00 00 00 00 00 00 00 02 00
+    [ 2199.873512] sr: Sense Key : Hardware Error [current] 
+    [ 2199.873523] sr: Add. Sense: No additional sense information
+    [ 2201.897504] sr0: CDROM (ioctl) error, command: Get configuration 46 00 00 00 00 00 00 00 20 00
+    [ 2201.897536] sr: Sense Key : Hardware Error [current] 
+    [ 2201.897547] sr: Add. Sense: No additional sense information
+    [ 2202.116532] sr0: CDROM (ioctl) error, command: Get configuration 46 00 00 00 00 00 00 00 20 00
+    [ 2202.116562] sr: Sense Key : Hardware Error [current] 
+    [ 2202.116573] sr: Add. Sense: No additional sense information
+    [ 2202.245434] option: option_instat_callback: error -108
+    [ 2202.245719] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+    [ 2202.245782] option 6-1:1.0: device disconnected
+    [ 2202.245974] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+    [ 2202.246020] option 6-1:1.1: device disconnected
+    [ 2202.356089] usb 6-1: reset full speed USB device using uhci_hcd and address 3
+    [ 2202.498744] option 6-1:1.1: GSM modem (1-port) converter detected
+    [ 2202.498928] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+    [ 2202.499047] option 6-1:1.0: GSM modem (1-port) converter detected
+    [ 2202.499188] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+    [ 2202.896458] option: option_instat_callback: error -108
+    [ 2202.897855] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+    [ 2202.897899] option 6-1:1.0: device disconnected
+    [ 2202.898114] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+    [ 2202.898159] option 6-1:1.1: device disconnected
+    [ 2203.013131] usb 6-1: USB disconnect, address 3
+    [ 2203.084070] hub 6-0:1.0: unable to enumerate USB device on port 1
+    [ 2220.252084] usb 6-1: new full speed USB device using uhci_hcd and address 5
+    [ 2220.411102] usb 6-1: New USB device found, idVendor=12d1, idProduct=1003
+    [ 2220.411113] usb 6-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+    [ 2220.411123] usb 6-1: Product: HUAWEI Mobile
+    [ 2220.411130] usb 6-1: Manufacturer: HUAWEI Technologies
+    [ 2220.411332] usb 6-1: configuration #1 chosen from 1 choice
+    [ 2220.417265] option 6-1:1.0: GSM modem (1-port) converter detected
+    [ 2220.417419] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+    [ 2220.419276] option 6-1:1.1: GSM modem (1-port) converter detected
+    [ 2220.419424] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+    [ 2220.420724] scsi14 : SCSI emulation for USB Mass Storage devices
+    [ 2220.421631] usb-storage: device found at 5
+    [ 2220.421637] usb-storage: waiting for device to settle before scanning
+    [ 2225.422450] usb-storage: device scan complete
+    [ 2246.002106] option: option_instat_callback: error -108
+    [ 2246.002420] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+    [ 2246.002478] option 6-1:1.0: device disconnected
+    [ 2246.003408] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+    [ 2246.003447] option 6-1:1.1: device disconnected
+    [ 2246.112119] usb 6-1: reset full speed USB device using uhci_hcd and address 5
+    [ 2246.259660] option 6-1:1.1: GSM modem (1-port) converter detected
+    [ 2246.259863] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+    [ 2246.260002] option 6-1:1.0: GSM modem (1-port) converter detected
+    [ 2246.260151] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+    [ 2246.274105] scsi 14:0:0:0: CD-ROM            HUAWEI   Mass Storage     2.31 PQ: 0 ANSI: 2
+    [ 2246.297128] sr0: scsi-1 drive
+    [ 2246.297296] sr 14:0:0:0: Attached scsi CD-ROM sr0
+    [ 2246.297400] sr 14:0:0:0: Attached scsi generic sg1 type 5
+    [ 2254.872244] sr0: CDROM (ioctl) error, command: Xpwrite, Read disk info 51 00 00 00 00 00 00 00 02 00
+    [ 2254.872275] sr: Sense Key : Hardware Error [current] 
+    [ 2254.872287] sr: Add. Sense: No additional sense information
+    [ 2256.897389] sr0: CDROM (ioctl) error, command: Get configuration 46 00 00 00 00 00 00 00 20 00
+    [ 2256.897421] sr: Sense Key : Hardware Error [current] 
+    [ 2256.897432] sr: Add. Sense: No additional sense information
+    [ 2257.139138] sr0: CDROM (ioctl) error, command: Get configuration 46 00 00 00 00 00 00 00 20 00
+    [ 2257.139168] sr: Sense Key : Hardware Error [current] 
+    [ 2257.139180] sr: Add. Sense: No additional sense information
+    [ 2257.281100] option: option_instat_callback: error -108
+    [ 2257.282475] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+    [ 2257.282514] option 6-1:1.0: device disconnected
+    [ 2257.282703] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+    [ 2257.282750] option 6-1:1.1: device disconnected
+    [ 2257.392295] usb 6-1: reset full speed USB device using uhci_hcd and address 5
+    [ 2257.539604] option 6-1:1.1: GSM modem (1-port) converter detected
+    [ 2257.539790] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+    [ 2257.539954] option 6-1:1.0: GSM modem (1-port) converter detected
+    [ 2257.540116] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+    [ 2257.937078] option: option_instat_callback: error -108
+    [ 2257.938444] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+    [ 2257.938484] option 6-1:1.0: device disconnected
+    [ 2257.938673] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+    [ 2257.938719] option 6-1:1.1: device disconnected
+    [ 2258.048307] usb 6-1: reset full speed USB device using uhci_hcd and address 5
+    [ 2258.168078] usb 6-1: device descriptor read/64, error -71
+    [ 2258.336178] usb 6-1: USB disconnect, address 5
+    [ 2275.348104] usb 6-1: new full speed USB device using uhci_hcd and address 6
+    [ 2275.508168] usb 6-1: New USB device found, idVendor=12d1, idProduct=1003
+    [ 2275.508181] usb 6-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+    [ 2275.508190] usb 6-1: Product: HUAWEI Mobile
+    [ 2275.508197] usb 6-1: Manufacturer: HUAWEI Technologies
+    [ 2275.508391] usb 6-1: configuration #1 chosen from 1 choice
+    [ 2275.514315] option 6-1:1.0: GSM modem (1-port) converter detected
+    [ 2275.514472] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+    [ 2275.516795] option 6-1:1.1: GSM modem (1-port) converter detected
+    [ 2275.516931] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+    [ 2275.518190] scsi21 : SCSI emulation for USB Mass Storage devices
+    [ 2275.518435] usb-storage: device found at 6
+    [ 2275.518441] usb-storage: waiting for device to settle before scanning
+    [ 2280.518497] usb-storage: device scan complete
+    [ 2302.003166] option: option_instat_callback: error -108
+    [ 2302.003450] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+    [ 2302.003503] option 6-1:1.0: device disconnected
+    [ 2302.003699] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+    [ 2302.003741] option 6-1:1.1: device disconnected
+    [ 2302.112102] usb 6-1: reset full speed USB device using uhci_hcd and address 6
+    [ 2302.259656] option 6-1:1.1: GSM modem (1-port) converter detected
+    [ 2302.259847] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+    [ 2302.260049] option 6-1:1.0: GSM modem (1-port) converter detected
+    [ 2302.260197] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+    [ 2302.275151] scsi 21:0:0:0: CD-ROM            HUAWEI   Mass Storage     2.31 PQ: 0 ANSI: 2
+    [ 2302.298192] sr0: scsi-1 drive
+    [ 2302.298421] sr 21:0:0:0: Attached scsi CD-ROM sr0
+    [ 2302.298567] sr 21:0:0:0: Attached scsi generic sg1 type 5
+    [ 2310.871408] sr0: CDROM (ioctl) error, command: Xpwrite, Read disk info 51 00 00 00 00 00 00 00 02 00
+    [ 2310.871439] sr: Sense Key : Hardware Error [current] 
+    [ 2310.871451] sr: Add. Sense: No additional sense information
+    [ 2312.899245] sr0: CDROM (ioctl) error, command: Get configuration 46 00 00 00 00 00 00 00 20 00
+    [ 2312.899276] sr: Sense Key : Hardware Error [current] 
+    [ 2312.899287] sr: Add. Sense: No additional sense information
+    [ 2313.141195] sr0: CDROM (ioctl) error, command: Get configuration 46 00 00 00 00 00 00 00 20 00
+    [ 2313.141226] sr: Sense Key : Hardware Error [current] 
+    [ 2313.141237] sr: Add. Sense: No additional sense information
+    [ 2313.295132] option: option_instat_callback: error -108
+    [ 2313.296509] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+    [ 2313.296549] option 6-1:1.0: device disconnected
+    [ 2313.296735] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+    [ 2313.296781] option 6-1:1.1: device disconnected
+    [ 2313.408077] usb 6-1: reset full speed USB device using uhci_hcd and address 6
+    [ 2313.552402] option 6-1:1.1: GSM modem (1-port) converter detected
+    [ 2313.552585] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+    [ 2313.553397] option 6-1:1.0: GSM modem (1-port) converter detected
+    [ 2313.553546] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+    [ 2313.952147] option: option_instat_callback: error -108
+    [ 2313.958839] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+    [ 2313.958880] option 6-1:1.0: device disconnected
+    [ 2313.959067] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+    [ 2313.959112] option 6-1:1.1: device disconnected
+    [ 2314.068032] usb 6-1: reset full speed USB device using uhci_hcd and address 6
+    [ 2314.189079] usb 6-1: device descriptor read/64, error -71
+    [ 2314.357152] usb 6-1: USB disconnect, address 6
+    [ 2331.308063] usb 6-1: new full speed USB device using uhci_hcd and address 7
+    [ 2331.470135] usb 6-1: New USB device found, idVendor=12d1, idProduct=1003
+    [ 2331.470148] usb 6-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+    [ 2331.470158] usb 6-1: Product: HUAWEI Mobile
+    [ 2331.470165] usb 6-1: Manufacturer: HUAWEI Technologies
+    [ 2331.470396] usb 6-1: configuration #1 chosen from 1 choice
+    [ 2331.475849] option 6-1:1.0: GSM modem (1-port) converter detected
+    [ 2331.476043] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+    [ 2331.478248] option 6-1:1.1: GSM modem (1-port) converter detected
+    [ 2331.478378] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+    [ 2331.480697] scsi28 : SCSI emulation for USB Mass Storage devices
+    [ 2331.481488] usb-storage: device found at 7
+    [ 2331.481495] usb-storage: waiting for device to settle before scanning
+    [ 2336.481434] usb-storage: device scan complete
+    [ 2356.991086] option: option_instat_callback: error -108
+    [ 2356.991378] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+    [ 2356.991437] option 6-1:1.0: device disconnected
+    [ 2356.993247] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+    [ 2356.993285] option 6-1:1.1: device disconnected
+    [ 2357.105112] usb 6-1: reset full speed USB device using uhci_hcd and address 7
+    [ 2357.251344] option 6-1:1.1: GSM modem (1-port) converter detected
+    [ 2357.251538] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+    [ 2357.251659] option 6-1:1.0: GSM modem (1-port) converter detected
+    [ 2357.251806] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+    [ 2357.267104] scsi 28:0:0:0: CD-ROM            HUAWEI   Mass Storage     2.31 PQ: 0 ANSI: 2
+    [ 2357.290121] sr0: scsi-1 drive
+    [ 2357.290245] sr 28:0:0:0: Attached scsi CD-ROM sr0
+    [ 2357.290336] sr 28:0:0:0: Attached scsi generic sg1 type 5
+    [ 2365.872171] sr0: CDROM (ioctl) error, command: Xpwrite, Read disk info 51 00 00 00 00 00 00 00 02 00
+    [ 2365.872201] sr: Sense Key : Hardware Error [current] 
+    [ 2365.872213] sr: Add. Sense: No additional sense information
+    [ 2367.896483] sr0: CDROM (ioctl) error, command: Get configuration 46 00 00 00 00 00 00 00 20 00
+    [ 2367.896512] sr: Sense Key : Hardware Error [current] 
+    [ 2367.896523] sr: Add. Sense: No additional sense information
+    [ 2368.131082] sr0: CDROM (ioctl) error, command: Get configuration 46 00 00 00 00 00 00 00 20 00
+    [ 2368.131098] sr: Sense Key : Hardware Error [current] 
+    [ 2368.131103] sr: Add. Sense: No additional sense information
+    [ 2368.284058] option: option_instat_callback: error -108
+    [ 2368.285336] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+    [ 2368.285357] option 6-1:1.0: device disconnected
+    [ 2368.285460] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+    [ 2368.285484] option 6-1:1.1: device disconnected
+    [ 2368.396090] usb 6-1: reset full speed USB device using uhci_hcd and address 7
+    [ 2368.543318] option 6-1:1.1: GSM modem (1-port) converter detected
+    [ 2368.543516] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+    [ 2368.543971] option 6-1:1.0: GSM modem (1-port) converter detected
+    [ 2368.545123] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+    [ 2368.943072] option: option_instat_callback: error -108
+    [ 2368.944735] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+    [ 2368.944775] option 6-1:1.0: device disconnected
+    [ 2368.944971] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+    [ 2368.948158] option 6-1:1.1: device disconnected
+    [ 2369.060078] usb 6-1: reset full speed USB device using uhci_hcd and address 7
+    [ 2369.180084] usb 6-1: device descriptor read/64, error -71
+    [ 2369.348370] usb 6-1: USB disconnect, address 7
+    [ 2386.296098] usb 6-1: new full speed USB device using uhci_hcd and address 8
+    [ 2386.457120] usb 6-1: New USB device found, idVendor=12d1, idProduct=1003
+    [ 2386.457132] usb 6-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+    [ 2386.457142] usb 6-1: Product: HUAWEI Mobile
+    [ 2386.457149] usb 6-1: Manufacturer: HUAWEI Technologies
+    [ 2386.457352] usb 6-1: configuration #1 chosen from 1 choice
+    [ 2386.462278] option 6-1:1.0: GSM modem (1-port) converter detected
+    [ 2386.462437] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+    [ 2386.464244] option 6-1:1.1: GSM modem (1-port) converter detected
+    [ 2386.464377] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+    [ 2386.465134] scsi35 : SCSI emulation for USB Mass Storage devices
+    [ 2386.465474] usb-storage: device found at 8
+    [ 2386.465482] usb-storage: waiting for device to settle before scanning
+    [ 2391.465219] usb-storage: device scan complete
+    [ 2412.003099] option: option_instat_callback: error -108
+    [ 2412.003404] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+    [ 2412.003463] option 6-1:1.0: device disconnected
+    [ 2412.003665] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+    [ 2412.003717] option 6-1:1.1: device disconnected
+    [ 2412.112112] usb 6-1: reset full speed USB device using uhci_hcd and address 8
+    [ 2412.258608] option 6-1:1.1: GSM modem (1-port) converter detected
+    [ 2412.258806] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+    [ 2412.259010] option 6-1:1.0: GSM modem (1-port) converter detected
+    [ 2412.259170] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+    [ 2412.276522] scsi 35:0:0:0: CD-ROM            HUAWEI   Mass Storage     2.31 PQ: 0 ANSI: 2
+    [ 2412.300142] sr0: scsi-1 drive
+    [ 2412.300296] sr 35:0:0:0: Attached scsi CD-ROM sr0
+    [ 2412.300395] sr 35:0:0:0: Attached scsi generic sg1 type 5
+    [ 2420.871120] sr0: CDROM (ioctl) error, command: Xpwrite, Read disk info 51 00 00 00 00 00 00 00 02 00
+    [ 2420.871150] sr: Sense Key : Hardware Error [current] 
+    [ 2420.871162] sr: Add. Sense: No additional sense information
+    [ 2422.896186] sr0: CDROM (ioctl) error, command: Get configuration 46 00 00 00 00 00 00 00 20 00
+    [ 2422.896217] sr: Sense Key : Hardware Error [current] 
+    [ 2422.896228] sr: Add. Sense: No additional sense information
+    [ 2423.166177] sr0: CDROM (ioctl) error, command: Get configuration 46 00 00 00 00 00 00 00 20 00
+    [ 2423.166209] sr: Sense Key : Hardware Error [current] 
+    [ 2423.166219] sr: Add. Sense: No additional sense information
+    [ 2423.302076] option: option_instat_callback: error -108
+    [ 2423.303488] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+    [ 2423.303525] option 6-1:1.0: device disconnected
+    [ 2423.305593] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+    [ 2423.305629] option 6-1:1.1: device disconnected
+    [ 2423.416084] usb 6-1: reset full speed USB device using uhci_hcd and address 8
+    [ 2423.562369] option 6-1:1.1: GSM modem (1-port) converter detected
+    [ 2423.562557] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+    [ 2423.562704] option 6-1:1.0: GSM modem (1-port) converter detected
+    [ 2423.562847] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+    [ 2423.959099] option: option_instat_callback: error -108
+    [ 2423.959388] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+    [ 2423.959441] option 6-1:1.0: device disconnected
+    [ 2423.961256] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+    [ 2423.961295] option 6-1:1.1: device disconnected
+    [ 2424.073103] usb 6-1: reset full speed USB device using uhci_hcd and address 8
+    [ 2424.196142] usb 6-1: device descriptor read/64, error -71
+    [ 2424.364411] usb 6-1: USB disconnect, address 8
+    [ 2441.312084] usb 6-1: new full speed USB device using uhci_hcd and address 9
+    [ 2441.466383] usb 6-1: New USB device found, idVendor=12d1, idProduct=1003
+    [ 2441.466395] usb 6-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+    [ 2441.466405] usb 6-1: Product: HUAWEI Mobile
+    [ 2441.466412] usb 6-1: Manufacturer: HUAWEI Technologies
+    [ 2441.466614] usb 6-1: configuration #1 chosen from 1 choice
+    [ 2441.472341] option 6-1:1.0: GSM modem (1-port) converter detected
+    [ 2441.472498] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+    [ 2441.474371] option 6-1:1.1: GSM modem (1-port) converter detected
+    [ 2441.474513] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+    [ 2441.475211] scsi42 : SCSI emulation for USB Mass Storage devices
+    [ 2441.475449] usb-storage: device found at 9
+    [ 2441.475455] usb-storage: waiting for device to settle before scanning
+    [ 2446.473506] usb-storage: device scan complete
+    [ 2466.991353] option: option_instat_callback: error -108
+    [ 2466.991712] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+    [ 2466.991780] option 6-1:1.0: device disconnected
+    [ 2466.992091] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+    [ 2466.992144] option 6-1:1.1: device disconnected
+    [ 2467.104111] usb 6-1: reset full speed USB device using uhci_hcd and address 9
+    [ 2467.250492] option 6-1:1.1: GSM modem (1-port) converter detected
+    [ 2467.250683] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+    [ 2467.250804] option 6-1:1.0: GSM modem (1-port) converter detected
+    [ 2467.250945] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+    [ 2467.266177] scsi 42:0:0:0: CD-ROM            HUAWEI   Mass Storage     2.31 PQ: 0 ANSI: 2
+    [ 2467.295186] sr0: scsi-1 drive
+    [ 2467.295359] sr 42:0:0:0: Attached scsi CD-ROM sr0
+    [ 2467.295469] sr 42:0:0:0: Attached scsi generic sg1 type 5
+    [ 2475.872187] sr0: CDROM (ioctl) error, command: Xpwrite, Read disk info 51 00 00 00 00 00 00 00 02 00
+    [ 2475.872218] sr: Sense Key : Hardware Error [current] 
+    [ 2475.872230] sr: Add. Sense: No additional sense information
+    [ 2477.897252] sr0: CDROM (ioctl) error, command: Get configuration 46 00 00 00 00 00 00 00 20 00
+    [ 2477.897282] sr: Sense Key : Hardware Error [current] 
+    [ 2477.897293] sr: Add. Sense: No additional sense information
+    [ 2478.138268] sr0: CDROM (ioctl) error, command: Get configuration 46 00 00 00 00 00 00 00 20 00
+    [ 2478.138300] sr: Sense Key : Hardware Error [current] 
+    [ 2478.138310] sr: Add. Sense: No additional sense information
+    [ 2478.270169] option: option_instat_callback: error -108
+    [ 2478.271512] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+    [ 2478.271552] option 6-1:1.0: device disconnected
+    [ 2478.271741] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+    [ 2478.271786] option 6-1:1.1: device disconnected
+    [ 2478.380056] usb 6-1: reset full speed USB device using uhci_hcd and address 9
+    [ 2478.523408] option 6-1:1.1: GSM modem (1-port) converter detected
+    [ 2478.523598] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+    [ 2478.523717] option 6-1:1.0: GSM modem (1-port) converter detected
+    [ 2478.523847] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+    [ 2478.922174] option: option_instat_callback: error -108
+    [ 2478.923520] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+    [ 2478.923558] option 6-1:1.0: device disconnected
+    [ 2478.923753] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+    [ 2478.923799] option 6-1:1.1: device disconnected
+    [ 2479.040111] usb 6-1: reset full speed USB device using uhci_hcd and address 9
+    [ 2479.160112] usb 6-1: device descriptor read/64, error -71
+    [ 2479.328114] usb 6-1: USB disconnect, address 9
+
+
+# Links
+
+
+* <http://worldofazzurri.wordpress.com/2008/07/12/how-to-config-huawei-e220-modem-in-ubuntu/>  
+* <http://0110.be/artikels/lees/Caller_ID_with_Linux_and_Huawei_e220>  
