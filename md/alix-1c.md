@@ -3,7 +3,7 @@
 # Pictures
 
 
-[[=image <http://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Alix.1C_board_with_AMD_Geode_LX_800_%28PC_Engines%29.jpg/609px-Alix.1C_board_with_AMD_Geode_LX_800_%28PC_Engines%29.jpg>  ]]
+[[=image <http://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Alix.1C_board_with_AMD_Geode_LX_800_%28PC_Engines%29.jpg/609px-Alix.1C_board_with_AMD_Geode_LX_800_%28PC_Engines%29.jpg>]]
 
 # JTAG
 
