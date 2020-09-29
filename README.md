@@ -1,5 +1,3 @@
-+ blah
-
 ![Demo](demo.png)
 
 {{< rawhtml >}}
