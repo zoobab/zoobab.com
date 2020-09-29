@@ -1,5 +1,7 @@
 + blah
 
+![Demo](demo.png)
+
 {{< rawhtml >}}
 
    <style type="text/css">
