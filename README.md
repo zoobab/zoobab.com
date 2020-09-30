@@ -3,62 +3,13 @@
 <div align="center">
 
 <style type="text/css">
-      body {
-      background: #222;
-      font-family: Arial, Helvetica, sans-serif;
-      }
-
-      h1 {
-      color: red;
-      font-size: 300%;
-      margin-top: 0.3em;
-      margin-bottom: 0.3em;
-
-      margin-left: 5%;
-      margin-right: 5%;
-      text-align: center;
-      }
-
-      h2 {
-      color: red;
-      font-size: 150%;
-      font-style: italic;
-      font-weight: bold;
-      margin-top: 0.3em;
-      margin-bottom: 0.3em;
-
-      margin-left: 15%;
-      margin-right: 15%;
-      text-align: center;
-      }
-
-      a {
-      color: red;
-      font-weight: bold;
-      outline: none;
-      text-decoration: none;
-      }
-      
-	  a:hover {
-      text-decoration: underline;
-	  }
-
-      #content {
-      background: #eee;
-
-      padding: 1em;
-      border: 2px solid #ff8a00;
-
-      margin-left: 15%;
-      margin-right: 15%;
-      }
-
-      #footer {
-      color: white;
-      font-style: italic;
-      font-size: smaller;
-      text-align: center;
-      }
+body { background: #222; font-family: Arial, Helvetica, sans-serif;}
+h1 { color: red; font-size: 300%; margin-top: 0.3em; margin-bottom: 0.3em; margin-left: 5%; margin-right: 5%; text-align: center; }
+h2 { color: red; font-size: 150%; font-style: italic; font-weight: bold; margin-top: 0.3em; margin-bottom: 0.3em; margin-left: 15%; margin-right: 15%; text-align: center; }
+a  { color: red; font-weight: bold; outline: none; text-decoration: none; }
+a:hover { text-decoration: underline; }
+#content { background: #eee; padding: 1em; border: 2px solid #ff8a00; margin-left: 15%; margin-right: 15%; }
+#footer { color: white; font-style: italic; font-size: smaller; text-align: center; }
 </style>
 
 <h1>NO Software Patents in Europe</h1>
