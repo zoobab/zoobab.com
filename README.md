@@ -22,8 +22,8 @@
 
 <div align="center">
 
-<h1>NO Software Patents in Europe</h1>
-<h2>10 days of web strike Vs 20 years of patent nightmare</h2>
+<h1>NO Software Patents in Europe via the UPC</h1>
+<h2></h2>
 
 <style type="text/css">
 body { background: #222; font-family: Arial, Helvetica, sans-serif;}
@@ -35,15 +35,13 @@ a:hover { text-decoration: underline; }
 #footer { color: white; font-style: italic; font-size: smaller; text-align: center; }
 </style>
 
-<div id="content">
+<div id="content" >
 <p>
-We are protesting against <a href="http://webshop.ffii.org/">software patents</a> in Europe.
+We are protesting against <a href="http://webshop.ffii.org/">software patents</a> in Europe via the Unified Patent Court (UPC).
 </p>
 
 <p>
-Most software will become <a href="http://swpat.ffii.org/papers/europarl0309/cons0401/index.en.html">illega
-to use in Europe</a> if this dangerous directive is adopted without proper
-amending.
+Most software will become <a href="http://swpat.ffii.org/papers/europarl0309/cons0401/index.en.html">illegal to use in Europe</a> if this dangerous directive is adopted without proper amending.
 </p>
 
 <p>
